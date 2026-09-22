@@ -1,0 +1,5410 @@
+[
+  {
+    "id": "train-0-000",
+    "group": "train-0",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record d6c0f9a68d: shape=square; color=blue; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-0-001",
+    "group": "train-0",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record d6c0f9a68d: shape=square; color=blue; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-0-010",
+    "group": "train-0",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record d6c0f9a68d: shape=circle; color=blue; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-0-011",
+    "group": "train-0",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record d6c0f9a68d: shape=circle; color=blue; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-0-100",
+    "group": "train-0",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record d6c0f9a68d: shape=square; color=red; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-0-101",
+    "group": "train-0",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record d6c0f9a68d: shape=square; color=red; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-0-110",
+    "group": "train-0",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record d6c0f9a68d: shape=circle; color=red; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-0-111",
+    "group": "train-0",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record d6c0f9a68d: shape=circle; color=red; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-1-000",
+    "group": "train-1",
+    "split": "train",
+    "template": 1,
+    "system": "Record 7703fe99f6 has these settings: animal=dog; shape=square; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-1-001",
+    "group": "train-1",
+    "split": "train",
+    "template": 1,
+    "system": "Record 7703fe99f6 has these settings: animal=cat; shape=square; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-1-010",
+    "group": "train-1",
+    "split": "train",
+    "template": 1,
+    "system": "Record 7703fe99f6 has these settings: animal=dog; shape=circle; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-1-011",
+    "group": "train-1",
+    "split": "train",
+    "template": 1,
+    "system": "Record 7703fe99f6 has these settings: animal=cat; shape=circle; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-1-100",
+    "group": "train-1",
+    "split": "train",
+    "template": 1,
+    "system": "Record 7703fe99f6 has these settings: animal=dog; shape=square; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-1-101",
+    "group": "train-1",
+    "split": "train",
+    "template": 1,
+    "system": "Record 7703fe99f6 has these settings: animal=cat; shape=square; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-1-110",
+    "group": "train-1",
+    "split": "train",
+    "template": 1,
+    "system": "Record 7703fe99f6 has these settings: animal=dog; shape=circle; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-1-111",
+    "group": "train-1",
+    "split": "train",
+    "template": 1,
+    "system": "Record 7703fe99f6 has these settings: animal=cat; shape=circle; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-2-000",
+    "group": "train-2",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record f3ae4009ed: shape=square; animal=dog; color=blue. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-2-001",
+    "group": "train-2",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record f3ae4009ed: shape=square; animal=cat; color=blue. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-2-010",
+    "group": "train-2",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record f3ae4009ed: shape=circle; animal=dog; color=blue. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-2-011",
+    "group": "train-2",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record f3ae4009ed: shape=circle; animal=cat; color=blue. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-2-100",
+    "group": "train-2",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record f3ae4009ed: shape=square; animal=dog; color=red. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-2-101",
+    "group": "train-2",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record f3ae4009ed: shape=square; animal=cat; color=red. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-2-110",
+    "group": "train-2",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record f3ae4009ed: shape=circle; animal=dog; color=red. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-2-111",
+    "group": "train-2",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record f3ae4009ed: shape=circle; animal=cat; color=red. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-3-000",
+    "group": "train-3",
+    "split": "train",
+    "template": 1,
+    "system": "Record 7555f9abd4 has these settings: shape=square; animal=dog; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-3-001",
+    "group": "train-3",
+    "split": "train",
+    "template": 1,
+    "system": "Record 7555f9abd4 has these settings: shape=square; animal=cat; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-3-010",
+    "group": "train-3",
+    "split": "train",
+    "template": 1,
+    "system": "Record 7555f9abd4 has these settings: shape=circle; animal=dog; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-3-011",
+    "group": "train-3",
+    "split": "train",
+    "template": 1,
+    "system": "Record 7555f9abd4 has these settings: shape=circle; animal=cat; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-3-100",
+    "group": "train-3",
+    "split": "train",
+    "template": 1,
+    "system": "Record 7555f9abd4 has these settings: shape=square; animal=dog; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-3-101",
+    "group": "train-3",
+    "split": "train",
+    "template": 1,
+    "system": "Record 7555f9abd4 has these settings: shape=square; animal=cat; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-3-110",
+    "group": "train-3",
+    "split": "train",
+    "template": 1,
+    "system": "Record 7555f9abd4 has these settings: shape=circle; animal=dog; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-3-111",
+    "group": "train-3",
+    "split": "train",
+    "template": 1,
+    "system": "Record 7555f9abd4 has these settings: shape=circle; animal=cat; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-4-000",
+    "group": "train-4",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 9e5d32145f: shape=square; color=blue; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-4-001",
+    "group": "train-4",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 9e5d32145f: shape=square; color=blue; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-4-010",
+    "group": "train-4",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 9e5d32145f: shape=circle; color=blue; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-4-011",
+    "group": "train-4",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 9e5d32145f: shape=circle; color=blue; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-4-100",
+    "group": "train-4",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 9e5d32145f: shape=square; color=red; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-4-101",
+    "group": "train-4",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 9e5d32145f: shape=square; color=red; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-4-110",
+    "group": "train-4",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 9e5d32145f: shape=circle; color=red; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-4-111",
+    "group": "train-4",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 9e5d32145f: shape=circle; color=red; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-5-000",
+    "group": "train-5",
+    "split": "train",
+    "template": 1,
+    "system": "Record dfc65f62b9 has these settings: color=blue; shape=square; animal=dog. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-5-001",
+    "group": "train-5",
+    "split": "train",
+    "template": 1,
+    "system": "Record dfc65f62b9 has these settings: color=blue; shape=square; animal=cat. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-5-010",
+    "group": "train-5",
+    "split": "train",
+    "template": 1,
+    "system": "Record dfc65f62b9 has these settings: color=blue; shape=circle; animal=dog. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-5-011",
+    "group": "train-5",
+    "split": "train",
+    "template": 1,
+    "system": "Record dfc65f62b9 has these settings: color=blue; shape=circle; animal=cat. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-5-100",
+    "group": "train-5",
+    "split": "train",
+    "template": 1,
+    "system": "Record dfc65f62b9 has these settings: color=red; shape=square; animal=dog. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-5-101",
+    "group": "train-5",
+    "split": "train",
+    "template": 1,
+    "system": "Record dfc65f62b9 has these settings: color=red; shape=square; animal=cat. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-5-110",
+    "group": "train-5",
+    "split": "train",
+    "template": 1,
+    "system": "Record dfc65f62b9 has these settings: color=red; shape=circle; animal=dog. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-5-111",
+    "group": "train-5",
+    "split": "train",
+    "template": 1,
+    "system": "Record dfc65f62b9 has these settings: color=red; shape=circle; animal=cat. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-6-000",
+    "group": "train-6",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 02dbfb9f07: shape=square; animal=dog; color=blue. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-6-001",
+    "group": "train-6",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 02dbfb9f07: shape=square; animal=cat; color=blue. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-6-010",
+    "group": "train-6",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 02dbfb9f07: shape=circle; animal=dog; color=blue. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-6-011",
+    "group": "train-6",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 02dbfb9f07: shape=circle; animal=cat; color=blue. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-6-100",
+    "group": "train-6",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 02dbfb9f07: shape=square; animal=dog; color=red. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-6-101",
+    "group": "train-6",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 02dbfb9f07: shape=square; animal=cat; color=red. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-6-110",
+    "group": "train-6",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 02dbfb9f07: shape=circle; animal=dog; color=red. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-6-111",
+    "group": "train-6",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 02dbfb9f07: shape=circle; animal=cat; color=red. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-7-000",
+    "group": "train-7",
+    "split": "train",
+    "template": 1,
+    "system": "Record c6c96cd1d0 has these settings: shape=square; animal=dog; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-7-001",
+    "group": "train-7",
+    "split": "train",
+    "template": 1,
+    "system": "Record c6c96cd1d0 has these settings: shape=square; animal=cat; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-7-010",
+    "group": "train-7",
+    "split": "train",
+    "template": 1,
+    "system": "Record c6c96cd1d0 has these settings: shape=circle; animal=dog; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-7-011",
+    "group": "train-7",
+    "split": "train",
+    "template": 1,
+    "system": "Record c6c96cd1d0 has these settings: shape=circle; animal=cat; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-7-100",
+    "group": "train-7",
+    "split": "train",
+    "template": 1,
+    "system": "Record c6c96cd1d0 has these settings: shape=square; animal=dog; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-7-101",
+    "group": "train-7",
+    "split": "train",
+    "template": 1,
+    "system": "Record c6c96cd1d0 has these settings: shape=square; animal=cat; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-7-110",
+    "group": "train-7",
+    "split": "train",
+    "template": 1,
+    "system": "Record c6c96cd1d0 has these settings: shape=circle; animal=dog; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-7-111",
+    "group": "train-7",
+    "split": "train",
+    "template": 1,
+    "system": "Record c6c96cd1d0 has these settings: shape=circle; animal=cat; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-8-000",
+    "group": "train-8",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 666b9ff19e: shape=square; animal=dog; color=blue. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-8-001",
+    "group": "train-8",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 666b9ff19e: shape=square; animal=cat; color=blue. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-8-010",
+    "group": "train-8",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 666b9ff19e: shape=circle; animal=dog; color=blue. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-8-011",
+    "group": "train-8",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 666b9ff19e: shape=circle; animal=cat; color=blue. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-8-100",
+    "group": "train-8",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 666b9ff19e: shape=square; animal=dog; color=red. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-8-101",
+    "group": "train-8",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 666b9ff19e: shape=square; animal=cat; color=red. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-8-110",
+    "group": "train-8",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 666b9ff19e: shape=circle; animal=dog; color=red. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-8-111",
+    "group": "train-8",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 666b9ff19e: shape=circle; animal=cat; color=red. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-9-000",
+    "group": "train-9",
+    "split": "train",
+    "template": 1,
+    "system": "Record 3e5daeb756 has these settings: shape=square; color=blue; animal=dog. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-9-001",
+    "group": "train-9",
+    "split": "train",
+    "template": 1,
+    "system": "Record 3e5daeb756 has these settings: shape=square; color=blue; animal=cat. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-9-010",
+    "group": "train-9",
+    "split": "train",
+    "template": 1,
+    "system": "Record 3e5daeb756 has these settings: shape=circle; color=blue; animal=dog. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-9-011",
+    "group": "train-9",
+    "split": "train",
+    "template": 1,
+    "system": "Record 3e5daeb756 has these settings: shape=circle; color=blue; animal=cat. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-9-100",
+    "group": "train-9",
+    "split": "train",
+    "template": 1,
+    "system": "Record 3e5daeb756 has these settings: shape=square; color=red; animal=dog. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-9-101",
+    "group": "train-9",
+    "split": "train",
+    "template": 1,
+    "system": "Record 3e5daeb756 has these settings: shape=square; color=red; animal=cat. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-9-110",
+    "group": "train-9",
+    "split": "train",
+    "template": 1,
+    "system": "Record 3e5daeb756 has these settings: shape=circle; color=red; animal=dog. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-9-111",
+    "group": "train-9",
+    "split": "train",
+    "template": 1,
+    "system": "Record 3e5daeb756 has these settings: shape=circle; color=red; animal=cat. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-10-000",
+    "group": "train-10",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record e64ad5ab6b: color=blue; shape=square; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-10-001",
+    "group": "train-10",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record e64ad5ab6b: color=blue; shape=square; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-10-010",
+    "group": "train-10",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record e64ad5ab6b: color=blue; shape=circle; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-10-011",
+    "group": "train-10",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record e64ad5ab6b: color=blue; shape=circle; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-10-100",
+    "group": "train-10",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record e64ad5ab6b: color=red; shape=square; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-10-101",
+    "group": "train-10",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record e64ad5ab6b: color=red; shape=square; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-10-110",
+    "group": "train-10",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record e64ad5ab6b: color=red; shape=circle; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-10-111",
+    "group": "train-10",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record e64ad5ab6b: color=red; shape=circle; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-11-000",
+    "group": "train-11",
+    "split": "train",
+    "template": 1,
+    "system": "Record 644600d28e has these settings: animal=dog; shape=square; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-11-001",
+    "group": "train-11",
+    "split": "train",
+    "template": 1,
+    "system": "Record 644600d28e has these settings: animal=cat; shape=square; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-11-010",
+    "group": "train-11",
+    "split": "train",
+    "template": 1,
+    "system": "Record 644600d28e has these settings: animal=dog; shape=circle; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-11-011",
+    "group": "train-11",
+    "split": "train",
+    "template": 1,
+    "system": "Record 644600d28e has these settings: animal=cat; shape=circle; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-11-100",
+    "group": "train-11",
+    "split": "train",
+    "template": 1,
+    "system": "Record 644600d28e has these settings: animal=dog; shape=square; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-11-101",
+    "group": "train-11",
+    "split": "train",
+    "template": 1,
+    "system": "Record 644600d28e has these settings: animal=cat; shape=square; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-11-110",
+    "group": "train-11",
+    "split": "train",
+    "template": 1,
+    "system": "Record 644600d28e has these settings: animal=dog; shape=circle; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-11-111",
+    "group": "train-11",
+    "split": "train",
+    "template": 1,
+    "system": "Record 644600d28e has these settings: animal=cat; shape=circle; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-12-000",
+    "group": "train-12",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record e5a9ea05d3: color=blue; shape=square; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-12-001",
+    "group": "train-12",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record e5a9ea05d3: color=blue; shape=square; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-12-010",
+    "group": "train-12",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record e5a9ea05d3: color=blue; shape=circle; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-12-011",
+    "group": "train-12",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record e5a9ea05d3: color=blue; shape=circle; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-12-100",
+    "group": "train-12",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record e5a9ea05d3: color=red; shape=square; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-12-101",
+    "group": "train-12",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record e5a9ea05d3: color=red; shape=square; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-12-110",
+    "group": "train-12",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record e5a9ea05d3: color=red; shape=circle; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-12-111",
+    "group": "train-12",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record e5a9ea05d3: color=red; shape=circle; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-13-000",
+    "group": "train-13",
+    "split": "train",
+    "template": 1,
+    "system": "Record 28c6c8116b has these settings: shape=square; animal=dog; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-13-001",
+    "group": "train-13",
+    "split": "train",
+    "template": 1,
+    "system": "Record 28c6c8116b has these settings: shape=square; animal=cat; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-13-010",
+    "group": "train-13",
+    "split": "train",
+    "template": 1,
+    "system": "Record 28c6c8116b has these settings: shape=circle; animal=dog; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-13-011",
+    "group": "train-13",
+    "split": "train",
+    "template": 1,
+    "system": "Record 28c6c8116b has these settings: shape=circle; animal=cat; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-13-100",
+    "group": "train-13",
+    "split": "train",
+    "template": 1,
+    "system": "Record 28c6c8116b has these settings: shape=square; animal=dog; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-13-101",
+    "group": "train-13",
+    "split": "train",
+    "template": 1,
+    "system": "Record 28c6c8116b has these settings: shape=square; animal=cat; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-13-110",
+    "group": "train-13",
+    "split": "train",
+    "template": 1,
+    "system": "Record 28c6c8116b has these settings: shape=circle; animal=dog; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-13-111",
+    "group": "train-13",
+    "split": "train",
+    "template": 1,
+    "system": "Record 28c6c8116b has these settings: shape=circle; animal=cat; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-14-000",
+    "group": "train-14",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record ad69d02e6e: color=blue; shape=square; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-14-001",
+    "group": "train-14",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record ad69d02e6e: color=blue; shape=square; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-14-010",
+    "group": "train-14",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record ad69d02e6e: color=blue; shape=circle; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-14-011",
+    "group": "train-14",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record ad69d02e6e: color=blue; shape=circle; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-14-100",
+    "group": "train-14",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record ad69d02e6e: color=red; shape=square; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-14-101",
+    "group": "train-14",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record ad69d02e6e: color=red; shape=square; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-14-110",
+    "group": "train-14",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record ad69d02e6e: color=red; shape=circle; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-14-111",
+    "group": "train-14",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record ad69d02e6e: color=red; shape=circle; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-15-000",
+    "group": "train-15",
+    "split": "train",
+    "template": 1,
+    "system": "Record 462dec7c86 has these settings: color=blue; animal=dog; shape=square. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-15-001",
+    "group": "train-15",
+    "split": "train",
+    "template": 1,
+    "system": "Record 462dec7c86 has these settings: color=blue; animal=cat; shape=square. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-15-010",
+    "group": "train-15",
+    "split": "train",
+    "template": 1,
+    "system": "Record 462dec7c86 has these settings: color=blue; animal=dog; shape=circle. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-15-011",
+    "group": "train-15",
+    "split": "train",
+    "template": 1,
+    "system": "Record 462dec7c86 has these settings: color=blue; animal=cat; shape=circle. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-15-100",
+    "group": "train-15",
+    "split": "train",
+    "template": 1,
+    "system": "Record 462dec7c86 has these settings: color=red; animal=dog; shape=square. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-15-101",
+    "group": "train-15",
+    "split": "train",
+    "template": 1,
+    "system": "Record 462dec7c86 has these settings: color=red; animal=cat; shape=square. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-15-110",
+    "group": "train-15",
+    "split": "train",
+    "template": 1,
+    "system": "Record 462dec7c86 has these settings: color=red; animal=dog; shape=circle. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-15-111",
+    "group": "train-15",
+    "split": "train",
+    "template": 1,
+    "system": "Record 462dec7c86 has these settings: color=red; animal=cat; shape=circle. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-16-000",
+    "group": "train-16",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 9129291410: shape=square; animal=dog; color=blue. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-16-001",
+    "group": "train-16",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 9129291410: shape=square; animal=cat; color=blue. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-16-010",
+    "group": "train-16",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 9129291410: shape=circle; animal=dog; color=blue. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-16-011",
+    "group": "train-16",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 9129291410: shape=circle; animal=cat; color=blue. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-16-100",
+    "group": "train-16",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 9129291410: shape=square; animal=dog; color=red. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-16-101",
+    "group": "train-16",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 9129291410: shape=square; animal=cat; color=red. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-16-110",
+    "group": "train-16",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 9129291410: shape=circle; animal=dog; color=red. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-16-111",
+    "group": "train-16",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 9129291410: shape=circle; animal=cat; color=red. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-17-000",
+    "group": "train-17",
+    "split": "train",
+    "template": 1,
+    "system": "Record 2d953de25c has these settings: animal=dog; color=blue; shape=square. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-17-001",
+    "group": "train-17",
+    "split": "train",
+    "template": 1,
+    "system": "Record 2d953de25c has these settings: animal=cat; color=blue; shape=square. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-17-010",
+    "group": "train-17",
+    "split": "train",
+    "template": 1,
+    "system": "Record 2d953de25c has these settings: animal=dog; color=blue; shape=circle. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-17-011",
+    "group": "train-17",
+    "split": "train",
+    "template": 1,
+    "system": "Record 2d953de25c has these settings: animal=cat; color=blue; shape=circle. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-17-100",
+    "group": "train-17",
+    "split": "train",
+    "template": 1,
+    "system": "Record 2d953de25c has these settings: animal=dog; color=red; shape=square. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-17-101",
+    "group": "train-17",
+    "split": "train",
+    "template": 1,
+    "system": "Record 2d953de25c has these settings: animal=cat; color=red; shape=square. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-17-110",
+    "group": "train-17",
+    "split": "train",
+    "template": 1,
+    "system": "Record 2d953de25c has these settings: animal=dog; color=red; shape=circle. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-17-111",
+    "group": "train-17",
+    "split": "train",
+    "template": 1,
+    "system": "Record 2d953de25c has these settings: animal=cat; color=red; shape=circle. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-18-000",
+    "group": "train-18",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 4cc2623898: animal=dog; shape=square; color=blue. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-18-001",
+    "group": "train-18",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 4cc2623898: animal=cat; shape=square; color=blue. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-18-010",
+    "group": "train-18",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 4cc2623898: animal=dog; shape=circle; color=blue. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-18-011",
+    "group": "train-18",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 4cc2623898: animal=cat; shape=circle; color=blue. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-18-100",
+    "group": "train-18",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 4cc2623898: animal=dog; shape=square; color=red. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-18-101",
+    "group": "train-18",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 4cc2623898: animal=cat; shape=square; color=red. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-18-110",
+    "group": "train-18",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 4cc2623898: animal=dog; shape=circle; color=red. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-18-111",
+    "group": "train-18",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 4cc2623898: animal=cat; shape=circle; color=red. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-19-000",
+    "group": "train-19",
+    "split": "train",
+    "template": 1,
+    "system": "Record 61f5a67cd1 has these settings: animal=dog; shape=square; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-19-001",
+    "group": "train-19",
+    "split": "train",
+    "template": 1,
+    "system": "Record 61f5a67cd1 has these settings: animal=cat; shape=square; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-19-010",
+    "group": "train-19",
+    "split": "train",
+    "template": 1,
+    "system": "Record 61f5a67cd1 has these settings: animal=dog; shape=circle; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-19-011",
+    "group": "train-19",
+    "split": "train",
+    "template": 1,
+    "system": "Record 61f5a67cd1 has these settings: animal=cat; shape=circle; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-19-100",
+    "group": "train-19",
+    "split": "train",
+    "template": 1,
+    "system": "Record 61f5a67cd1 has these settings: animal=dog; shape=square; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-19-101",
+    "group": "train-19",
+    "split": "train",
+    "template": 1,
+    "system": "Record 61f5a67cd1 has these settings: animal=cat; shape=square; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-19-110",
+    "group": "train-19",
+    "split": "train",
+    "template": 1,
+    "system": "Record 61f5a67cd1 has these settings: animal=dog; shape=circle; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-19-111",
+    "group": "train-19",
+    "split": "train",
+    "template": 1,
+    "system": "Record 61f5a67cd1 has these settings: animal=cat; shape=circle; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-20-000",
+    "group": "train-20",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 6abfef7fd4: color=blue; animal=dog; shape=square. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-20-001",
+    "group": "train-20",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 6abfef7fd4: color=blue; animal=cat; shape=square. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-20-010",
+    "group": "train-20",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 6abfef7fd4: color=blue; animal=dog; shape=circle. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-20-011",
+    "group": "train-20",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 6abfef7fd4: color=blue; animal=cat; shape=circle. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-20-100",
+    "group": "train-20",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 6abfef7fd4: color=red; animal=dog; shape=square. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-20-101",
+    "group": "train-20",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 6abfef7fd4: color=red; animal=cat; shape=square. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-20-110",
+    "group": "train-20",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 6abfef7fd4: color=red; animal=dog; shape=circle. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-20-111",
+    "group": "train-20",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 6abfef7fd4: color=red; animal=cat; shape=circle. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-21-000",
+    "group": "train-21",
+    "split": "train",
+    "template": 1,
+    "system": "Record 98fa7815d7 has these settings: animal=dog; shape=square; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-21-001",
+    "group": "train-21",
+    "split": "train",
+    "template": 1,
+    "system": "Record 98fa7815d7 has these settings: animal=cat; shape=square; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-21-010",
+    "group": "train-21",
+    "split": "train",
+    "template": 1,
+    "system": "Record 98fa7815d7 has these settings: animal=dog; shape=circle; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-21-011",
+    "group": "train-21",
+    "split": "train",
+    "template": 1,
+    "system": "Record 98fa7815d7 has these settings: animal=cat; shape=circle; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-21-100",
+    "group": "train-21",
+    "split": "train",
+    "template": 1,
+    "system": "Record 98fa7815d7 has these settings: animal=dog; shape=square; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-21-101",
+    "group": "train-21",
+    "split": "train",
+    "template": 1,
+    "system": "Record 98fa7815d7 has these settings: animal=cat; shape=square; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-21-110",
+    "group": "train-21",
+    "split": "train",
+    "template": 1,
+    "system": "Record 98fa7815d7 has these settings: animal=dog; shape=circle; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-21-111",
+    "group": "train-21",
+    "split": "train",
+    "template": 1,
+    "system": "Record 98fa7815d7 has these settings: animal=cat; shape=circle; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-22-000",
+    "group": "train-22",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 4419802b1a: shape=square; color=blue; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-22-001",
+    "group": "train-22",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 4419802b1a: shape=square; color=blue; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-22-010",
+    "group": "train-22",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 4419802b1a: shape=circle; color=blue; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-22-011",
+    "group": "train-22",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 4419802b1a: shape=circle; color=blue; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-22-100",
+    "group": "train-22",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 4419802b1a: shape=square; color=red; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-22-101",
+    "group": "train-22",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 4419802b1a: shape=square; color=red; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-22-110",
+    "group": "train-22",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 4419802b1a: shape=circle; color=red; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-22-111",
+    "group": "train-22",
+    "split": "train",
+    "template": 0,
+    "system": "Configuration for record 4419802b1a: shape=circle; color=red; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-23-000",
+    "group": "train-23",
+    "split": "train",
+    "template": 1,
+    "system": "Record bede80e923 has these settings: animal=dog; color=blue; shape=square. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-23-001",
+    "group": "train-23",
+    "split": "train",
+    "template": 1,
+    "system": "Record bede80e923 has these settings: animal=cat; color=blue; shape=square. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-23-010",
+    "group": "train-23",
+    "split": "train",
+    "template": 1,
+    "system": "Record bede80e923 has these settings: animal=dog; color=blue; shape=circle. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-23-011",
+    "group": "train-23",
+    "split": "train",
+    "template": 1,
+    "system": "Record bede80e923 has these settings: animal=cat; color=blue; shape=circle. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "train-23-100",
+    "group": "train-23",
+    "split": "train",
+    "template": 1,
+    "system": "Record bede80e923 has these settings: animal=dog; color=red; shape=square. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "train-23-101",
+    "group": "train-23",
+    "split": "train",
+    "template": 1,
+    "system": "Record bede80e923 has these settings: animal=cat; color=red; shape=square. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "train-23-110",
+    "group": "train-23",
+    "split": "train",
+    "template": 1,
+    "system": "Record bede80e923 has these settings: animal=dog; color=red; shape=circle. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "train-23-111",
+    "group": "train-23",
+    "split": "train",
+    "template": 1,
+    "system": "Record bede80e923 has these settings: animal=cat; color=red; shape=circle. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "validation-0-000",
+    "group": "validation-0",
+    "split": "validation",
+    "template": 0,
+    "system": "Configuration for record 0c11356017: color=blue; shape=square; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "validation-0-001",
+    "group": "validation-0",
+    "split": "validation",
+    "template": 0,
+    "system": "Configuration for record 0c11356017: color=blue; shape=square; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "validation-0-010",
+    "group": "validation-0",
+    "split": "validation",
+    "template": 0,
+    "system": "Configuration for record 0c11356017: color=blue; shape=circle; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "validation-0-011",
+    "group": "validation-0",
+    "split": "validation",
+    "template": 0,
+    "system": "Configuration for record 0c11356017: color=blue; shape=circle; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "validation-0-100",
+    "group": "validation-0",
+    "split": "validation",
+    "template": 0,
+    "system": "Configuration for record 0c11356017: color=red; shape=square; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "validation-0-101",
+    "group": "validation-0",
+    "split": "validation",
+    "template": 0,
+    "system": "Configuration for record 0c11356017: color=red; shape=square; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "validation-0-110",
+    "group": "validation-0",
+    "split": "validation",
+    "template": 0,
+    "system": "Configuration for record 0c11356017: color=red; shape=circle; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "validation-0-111",
+    "group": "validation-0",
+    "split": "validation",
+    "template": 0,
+    "system": "Configuration for record 0c11356017: color=red; shape=circle; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "validation-1-000",
+    "group": "validation-1",
+    "split": "validation",
+    "template": 1,
+    "system": "Record 08c081351b has these settings: color=blue; shape=square; animal=dog. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "validation-1-001",
+    "group": "validation-1",
+    "split": "validation",
+    "template": 1,
+    "system": "Record 08c081351b has these settings: color=blue; shape=square; animal=cat. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "validation-1-010",
+    "group": "validation-1",
+    "split": "validation",
+    "template": 1,
+    "system": "Record 08c081351b has these settings: color=blue; shape=circle; animal=dog. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "validation-1-011",
+    "group": "validation-1",
+    "split": "validation",
+    "template": 1,
+    "system": "Record 08c081351b has these settings: color=blue; shape=circle; animal=cat. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "validation-1-100",
+    "group": "validation-1",
+    "split": "validation",
+    "template": 1,
+    "system": "Record 08c081351b has these settings: color=red; shape=square; animal=dog. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "validation-1-101",
+    "group": "validation-1",
+    "split": "validation",
+    "template": 1,
+    "system": "Record 08c081351b has these settings: color=red; shape=square; animal=cat. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "validation-1-110",
+    "group": "validation-1",
+    "split": "validation",
+    "template": 1,
+    "system": "Record 08c081351b has these settings: color=red; shape=circle; animal=dog. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "validation-1-111",
+    "group": "validation-1",
+    "split": "validation",
+    "template": 1,
+    "system": "Record 08c081351b has these settings: color=red; shape=circle; animal=cat. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "validation-2-000",
+    "group": "validation-2",
+    "split": "validation",
+    "template": 0,
+    "system": "Configuration for record 5753624bf0: shape=square; color=blue; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "validation-2-001",
+    "group": "validation-2",
+    "split": "validation",
+    "template": 0,
+    "system": "Configuration for record 5753624bf0: shape=square; color=blue; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "validation-2-010",
+    "group": "validation-2",
+    "split": "validation",
+    "template": 0,
+    "system": "Configuration for record 5753624bf0: shape=circle; color=blue; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "validation-2-011",
+    "group": "validation-2",
+    "split": "validation",
+    "template": 0,
+    "system": "Configuration for record 5753624bf0: shape=circle; color=blue; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "validation-2-100",
+    "group": "validation-2",
+    "split": "validation",
+    "template": 0,
+    "system": "Configuration for record 5753624bf0: shape=square; color=red; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "validation-2-101",
+    "group": "validation-2",
+    "split": "validation",
+    "template": 0,
+    "system": "Configuration for record 5753624bf0: shape=square; color=red; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "validation-2-110",
+    "group": "validation-2",
+    "split": "validation",
+    "template": 0,
+    "system": "Configuration for record 5753624bf0: shape=circle; color=red; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "validation-2-111",
+    "group": "validation-2",
+    "split": "validation",
+    "template": 0,
+    "system": "Configuration for record 5753624bf0: shape=circle; color=red; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "validation-3-000",
+    "group": "validation-3",
+    "split": "validation",
+    "template": 1,
+    "system": "Record b1ca19014c has these settings: shape=square; color=blue; animal=dog. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "validation-3-001",
+    "group": "validation-3",
+    "split": "validation",
+    "template": 1,
+    "system": "Record b1ca19014c has these settings: shape=square; color=blue; animal=cat. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "validation-3-010",
+    "group": "validation-3",
+    "split": "validation",
+    "template": 1,
+    "system": "Record b1ca19014c has these settings: shape=circle; color=blue; animal=dog. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "validation-3-011",
+    "group": "validation-3",
+    "split": "validation",
+    "template": 1,
+    "system": "Record b1ca19014c has these settings: shape=circle; color=blue; animal=cat. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "validation-3-100",
+    "group": "validation-3",
+    "split": "validation",
+    "template": 1,
+    "system": "Record b1ca19014c has these settings: shape=square; color=red; animal=dog. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "validation-3-101",
+    "group": "validation-3",
+    "split": "validation",
+    "template": 1,
+    "system": "Record b1ca19014c has these settings: shape=square; color=red; animal=cat. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "validation-3-110",
+    "group": "validation-3",
+    "split": "validation",
+    "template": 1,
+    "system": "Record b1ca19014c has these settings: shape=circle; color=red; animal=dog. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "validation-3-111",
+    "group": "validation-3",
+    "split": "validation",
+    "template": 1,
+    "system": "Record b1ca19014c has these settings: shape=circle; color=red; animal=cat. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "validation-4-000",
+    "group": "validation-4",
+    "split": "validation",
+    "template": 0,
+    "system": "Configuration for record 56d13d5065: shape=square; animal=dog; color=blue. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "validation-4-001",
+    "group": "validation-4",
+    "split": "validation",
+    "template": 0,
+    "system": "Configuration for record 56d13d5065: shape=square; animal=cat; color=blue. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "validation-4-010",
+    "group": "validation-4",
+    "split": "validation",
+    "template": 0,
+    "system": "Configuration for record 56d13d5065: shape=circle; animal=dog; color=blue. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "validation-4-011",
+    "group": "validation-4",
+    "split": "validation",
+    "template": 0,
+    "system": "Configuration for record 56d13d5065: shape=circle; animal=cat; color=blue. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "validation-4-100",
+    "group": "validation-4",
+    "split": "validation",
+    "template": 0,
+    "system": "Configuration for record 56d13d5065: shape=square; animal=dog; color=red. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "validation-4-101",
+    "group": "validation-4",
+    "split": "validation",
+    "template": 0,
+    "system": "Configuration for record 56d13d5065: shape=square; animal=cat; color=red. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "validation-4-110",
+    "group": "validation-4",
+    "split": "validation",
+    "template": 0,
+    "system": "Configuration for record 56d13d5065: shape=circle; animal=dog; color=red. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "validation-4-111",
+    "group": "validation-4",
+    "split": "validation",
+    "template": 0,
+    "system": "Configuration for record 56d13d5065: shape=circle; animal=cat; color=red. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "validation-5-000",
+    "group": "validation-5",
+    "split": "validation",
+    "template": 1,
+    "system": "Record a119b74b04 has these settings: animal=dog; color=blue; shape=square. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "validation-5-001",
+    "group": "validation-5",
+    "split": "validation",
+    "template": 1,
+    "system": "Record a119b74b04 has these settings: animal=cat; color=blue; shape=square. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "validation-5-010",
+    "group": "validation-5",
+    "split": "validation",
+    "template": 1,
+    "system": "Record a119b74b04 has these settings: animal=dog; color=blue; shape=circle. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "validation-5-011",
+    "group": "validation-5",
+    "split": "validation",
+    "template": 1,
+    "system": "Record a119b74b04 has these settings: animal=cat; color=blue; shape=circle. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "validation-5-100",
+    "group": "validation-5",
+    "split": "validation",
+    "template": 1,
+    "system": "Record a119b74b04 has these settings: animal=dog; color=red; shape=square. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "validation-5-101",
+    "group": "validation-5",
+    "split": "validation",
+    "template": 1,
+    "system": "Record a119b74b04 has these settings: animal=cat; color=red; shape=square. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "validation-5-110",
+    "group": "validation-5",
+    "split": "validation",
+    "template": 1,
+    "system": "Record a119b74b04 has these settings: animal=dog; color=red; shape=circle. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "validation-5-111",
+    "group": "validation-5",
+    "split": "validation",
+    "template": 1,
+    "system": "Record a119b74b04 has these settings: animal=cat; color=red; shape=circle. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "calibration-0-000",
+    "group": "calibration-0",
+    "split": "calibration",
+    "template": 0,
+    "system": "Configuration for record e41cd37fd0: shape=square; animal=dog; color=blue. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "calibration-0-001",
+    "group": "calibration-0",
+    "split": "calibration",
+    "template": 0,
+    "system": "Configuration for record e41cd37fd0: shape=square; animal=cat; color=blue. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "calibration-0-010",
+    "group": "calibration-0",
+    "split": "calibration",
+    "template": 0,
+    "system": "Configuration for record e41cd37fd0: shape=circle; animal=dog; color=blue. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "calibration-0-011",
+    "group": "calibration-0",
+    "split": "calibration",
+    "template": 0,
+    "system": "Configuration for record e41cd37fd0: shape=circle; animal=cat; color=blue. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "calibration-0-100",
+    "group": "calibration-0",
+    "split": "calibration",
+    "template": 0,
+    "system": "Configuration for record e41cd37fd0: shape=square; animal=dog; color=red. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "calibration-0-101",
+    "group": "calibration-0",
+    "split": "calibration",
+    "template": 0,
+    "system": "Configuration for record e41cd37fd0: shape=square; animal=cat; color=red. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "calibration-0-110",
+    "group": "calibration-0",
+    "split": "calibration",
+    "template": 0,
+    "system": "Configuration for record e41cd37fd0: shape=circle; animal=dog; color=red. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "calibration-0-111",
+    "group": "calibration-0",
+    "split": "calibration",
+    "template": 0,
+    "system": "Configuration for record e41cd37fd0: shape=circle; animal=cat; color=red. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "calibration-1-000",
+    "group": "calibration-1",
+    "split": "calibration",
+    "template": 1,
+    "system": "Record b5b10babf2 has these settings: color=blue; animal=dog; shape=square. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "calibration-1-001",
+    "group": "calibration-1",
+    "split": "calibration",
+    "template": 1,
+    "system": "Record b5b10babf2 has these settings: color=blue; animal=cat; shape=square. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "calibration-1-010",
+    "group": "calibration-1",
+    "split": "calibration",
+    "template": 1,
+    "system": "Record b5b10babf2 has these settings: color=blue; animal=dog; shape=circle. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "calibration-1-011",
+    "group": "calibration-1",
+    "split": "calibration",
+    "template": 1,
+    "system": "Record b5b10babf2 has these settings: color=blue; animal=cat; shape=circle. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "calibration-1-100",
+    "group": "calibration-1",
+    "split": "calibration",
+    "template": 1,
+    "system": "Record b5b10babf2 has these settings: color=red; animal=dog; shape=square. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "calibration-1-101",
+    "group": "calibration-1",
+    "split": "calibration",
+    "template": 1,
+    "system": "Record b5b10babf2 has these settings: color=red; animal=cat; shape=square. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "calibration-1-110",
+    "group": "calibration-1",
+    "split": "calibration",
+    "template": 1,
+    "system": "Record b5b10babf2 has these settings: color=red; animal=dog; shape=circle. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "calibration-1-111",
+    "group": "calibration-1",
+    "split": "calibration",
+    "template": 1,
+    "system": "Record b5b10babf2 has these settings: color=red; animal=cat; shape=circle. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "calibration-2-000",
+    "group": "calibration-2",
+    "split": "calibration",
+    "template": 0,
+    "system": "Configuration for record 6dd7d0eb38: color=blue; animal=dog; shape=square. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "calibration-2-001",
+    "group": "calibration-2",
+    "split": "calibration",
+    "template": 0,
+    "system": "Configuration for record 6dd7d0eb38: color=blue; animal=cat; shape=square. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "calibration-2-010",
+    "group": "calibration-2",
+    "split": "calibration",
+    "template": 0,
+    "system": "Configuration for record 6dd7d0eb38: color=blue; animal=dog; shape=circle. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "calibration-2-011",
+    "group": "calibration-2",
+    "split": "calibration",
+    "template": 0,
+    "system": "Configuration for record 6dd7d0eb38: color=blue; animal=cat; shape=circle. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "calibration-2-100",
+    "group": "calibration-2",
+    "split": "calibration",
+    "template": 0,
+    "system": "Configuration for record 6dd7d0eb38: color=red; animal=dog; shape=square. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "calibration-2-101",
+    "group": "calibration-2",
+    "split": "calibration",
+    "template": 0,
+    "system": "Configuration for record 6dd7d0eb38: color=red; animal=cat; shape=square. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "calibration-2-110",
+    "group": "calibration-2",
+    "split": "calibration",
+    "template": 0,
+    "system": "Configuration for record 6dd7d0eb38: color=red; animal=dog; shape=circle. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "calibration-2-111",
+    "group": "calibration-2",
+    "split": "calibration",
+    "template": 0,
+    "system": "Configuration for record 6dd7d0eb38: color=red; animal=cat; shape=circle. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "calibration-3-000",
+    "group": "calibration-3",
+    "split": "calibration",
+    "template": 1,
+    "system": "Record 085f47de48 has these settings: animal=dog; shape=square; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "calibration-3-001",
+    "group": "calibration-3",
+    "split": "calibration",
+    "template": 1,
+    "system": "Record 085f47de48 has these settings: animal=cat; shape=square; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "calibration-3-010",
+    "group": "calibration-3",
+    "split": "calibration",
+    "template": 1,
+    "system": "Record 085f47de48 has these settings: animal=dog; shape=circle; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "calibration-3-011",
+    "group": "calibration-3",
+    "split": "calibration",
+    "template": 1,
+    "system": "Record 085f47de48 has these settings: animal=cat; shape=circle; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "calibration-3-100",
+    "group": "calibration-3",
+    "split": "calibration",
+    "template": 1,
+    "system": "Record 085f47de48 has these settings: animal=dog; shape=square; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "calibration-3-101",
+    "group": "calibration-3",
+    "split": "calibration",
+    "template": 1,
+    "system": "Record 085f47de48 has these settings: animal=cat; shape=square; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "calibration-3-110",
+    "group": "calibration-3",
+    "split": "calibration",
+    "template": 1,
+    "system": "Record 085f47de48 has these settings: animal=dog; shape=circle; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "calibration-3-111",
+    "group": "calibration-3",
+    "split": "calibration",
+    "template": 1,
+    "system": "Record 085f47de48 has these settings: animal=cat; shape=circle; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "calibration-4-000",
+    "group": "calibration-4",
+    "split": "calibration",
+    "template": 0,
+    "system": "Configuration for record fdcdf3f35b: animal=dog; color=blue; shape=square. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "calibration-4-001",
+    "group": "calibration-4",
+    "split": "calibration",
+    "template": 0,
+    "system": "Configuration for record fdcdf3f35b: animal=cat; color=blue; shape=square. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "calibration-4-010",
+    "group": "calibration-4",
+    "split": "calibration",
+    "template": 0,
+    "system": "Configuration for record fdcdf3f35b: animal=dog; color=blue; shape=circle. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "calibration-4-011",
+    "group": "calibration-4",
+    "split": "calibration",
+    "template": 0,
+    "system": "Configuration for record fdcdf3f35b: animal=cat; color=blue; shape=circle. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "calibration-4-100",
+    "group": "calibration-4",
+    "split": "calibration",
+    "template": 0,
+    "system": "Configuration for record fdcdf3f35b: animal=dog; color=red; shape=square. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "calibration-4-101",
+    "group": "calibration-4",
+    "split": "calibration",
+    "template": 0,
+    "system": "Configuration for record fdcdf3f35b: animal=cat; color=red; shape=square. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "calibration-4-110",
+    "group": "calibration-4",
+    "split": "calibration",
+    "template": 0,
+    "system": "Configuration for record fdcdf3f35b: animal=dog; color=red; shape=circle. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "calibration-4-111",
+    "group": "calibration-4",
+    "split": "calibration",
+    "template": 0,
+    "system": "Configuration for record fdcdf3f35b: animal=cat; color=red; shape=circle. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "calibration-5-000",
+    "group": "calibration-5",
+    "split": "calibration",
+    "template": 1,
+    "system": "Record f0a980f461 has these settings: color=blue; shape=square; animal=dog. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "calibration-5-001",
+    "group": "calibration-5",
+    "split": "calibration",
+    "template": 1,
+    "system": "Record f0a980f461 has these settings: color=blue; shape=square; animal=cat. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "calibration-5-010",
+    "group": "calibration-5",
+    "split": "calibration",
+    "template": 1,
+    "system": "Record f0a980f461 has these settings: color=blue; shape=circle; animal=dog. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "calibration-5-011",
+    "group": "calibration-5",
+    "split": "calibration",
+    "template": 1,
+    "system": "Record f0a980f461 has these settings: color=blue; shape=circle; animal=cat. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "calibration-5-100",
+    "group": "calibration-5",
+    "split": "calibration",
+    "template": 1,
+    "system": "Record f0a980f461 has these settings: color=red; shape=square; animal=dog. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "calibration-5-101",
+    "group": "calibration-5",
+    "split": "calibration",
+    "template": 1,
+    "system": "Record f0a980f461 has these settings: color=red; shape=square; animal=cat. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "calibration-5-110",
+    "group": "calibration-5",
+    "split": "calibration",
+    "template": 1,
+    "system": "Record f0a980f461 has these settings: color=red; shape=circle; animal=dog. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "calibration-5-111",
+    "group": "calibration-5",
+    "split": "calibration",
+    "template": 1,
+    "system": "Record f0a980f461 has these settings: color=red; shape=circle; animal=cat. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "test-0-000",
+    "group": "test-0",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record dda03bfcbf: shape=square; color=blue; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "test-0-001",
+    "group": "test-0",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record dda03bfcbf: shape=square; color=blue; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "test-0-010",
+    "group": "test-0",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record dda03bfcbf: shape=circle; color=blue; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "test-0-011",
+    "group": "test-0",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record dda03bfcbf: shape=circle; color=blue; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "test-0-100",
+    "group": "test-0",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record dda03bfcbf: shape=square; color=red; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "test-0-101",
+    "group": "test-0",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record dda03bfcbf: shape=square; color=red; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "test-0-110",
+    "group": "test-0",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record dda03bfcbf: shape=circle; color=red; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "test-0-111",
+    "group": "test-0",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record dda03bfcbf: shape=circle; color=red; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "test-1-000",
+    "group": "test-1",
+    "split": "test",
+    "template": 1,
+    "system": "Record ca83fe76b4 has these settings: shape=square; color=blue; animal=dog. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "test-1-001",
+    "group": "test-1",
+    "split": "test",
+    "template": 1,
+    "system": "Record ca83fe76b4 has these settings: shape=square; color=blue; animal=cat. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "test-1-010",
+    "group": "test-1",
+    "split": "test",
+    "template": 1,
+    "system": "Record ca83fe76b4 has these settings: shape=circle; color=blue; animal=dog. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "test-1-011",
+    "group": "test-1",
+    "split": "test",
+    "template": 1,
+    "system": "Record ca83fe76b4 has these settings: shape=circle; color=blue; animal=cat. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "test-1-100",
+    "group": "test-1",
+    "split": "test",
+    "template": 1,
+    "system": "Record ca83fe76b4 has these settings: shape=square; color=red; animal=dog. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "test-1-101",
+    "group": "test-1",
+    "split": "test",
+    "template": 1,
+    "system": "Record ca83fe76b4 has these settings: shape=square; color=red; animal=cat. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "test-1-110",
+    "group": "test-1",
+    "split": "test",
+    "template": 1,
+    "system": "Record ca83fe76b4 has these settings: shape=circle; color=red; animal=dog. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "test-1-111",
+    "group": "test-1",
+    "split": "test",
+    "template": 1,
+    "system": "Record ca83fe76b4 has these settings: shape=circle; color=red; animal=cat. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "test-2-000",
+    "group": "test-2",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record 4f8197163a: shape=square; color=blue; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "test-2-001",
+    "group": "test-2",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record 4f8197163a: shape=square; color=blue; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "test-2-010",
+    "group": "test-2",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record 4f8197163a: shape=circle; color=blue; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "test-2-011",
+    "group": "test-2",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record 4f8197163a: shape=circle; color=blue; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "test-2-100",
+    "group": "test-2",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record 4f8197163a: shape=square; color=red; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "test-2-101",
+    "group": "test-2",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record 4f8197163a: shape=square; color=red; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "test-2-110",
+    "group": "test-2",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record 4f8197163a: shape=circle; color=red; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "test-2-111",
+    "group": "test-2",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record 4f8197163a: shape=circle; color=red; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "test-3-000",
+    "group": "test-3",
+    "split": "test",
+    "template": 1,
+    "system": "Record 6eacb5680b has these settings: animal=dog; shape=square; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "test-3-001",
+    "group": "test-3",
+    "split": "test",
+    "template": 1,
+    "system": "Record 6eacb5680b has these settings: animal=cat; shape=square; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "test-3-010",
+    "group": "test-3",
+    "split": "test",
+    "template": 1,
+    "system": "Record 6eacb5680b has these settings: animal=dog; shape=circle; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "test-3-011",
+    "group": "test-3",
+    "split": "test",
+    "template": 1,
+    "system": "Record 6eacb5680b has these settings: animal=cat; shape=circle; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "test-3-100",
+    "group": "test-3",
+    "split": "test",
+    "template": 1,
+    "system": "Record 6eacb5680b has these settings: animal=dog; shape=square; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "test-3-101",
+    "group": "test-3",
+    "split": "test",
+    "template": 1,
+    "system": "Record 6eacb5680b has these settings: animal=cat; shape=square; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "test-3-110",
+    "group": "test-3",
+    "split": "test",
+    "template": 1,
+    "system": "Record 6eacb5680b has these settings: animal=dog; shape=circle; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "test-3-111",
+    "group": "test-3",
+    "split": "test",
+    "template": 1,
+    "system": "Record 6eacb5680b has these settings: animal=cat; shape=circle; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "test-4-000",
+    "group": "test-4",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record 813d470965: color=blue; animal=dog; shape=square. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "test-4-001",
+    "group": "test-4",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record 813d470965: color=blue; animal=cat; shape=square. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "test-4-010",
+    "group": "test-4",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record 813d470965: color=blue; animal=dog; shape=circle. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "test-4-011",
+    "group": "test-4",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record 813d470965: color=blue; animal=cat; shape=circle. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "test-4-100",
+    "group": "test-4",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record 813d470965: color=red; animal=dog; shape=square. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "test-4-101",
+    "group": "test-4",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record 813d470965: color=red; animal=cat; shape=square. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "test-4-110",
+    "group": "test-4",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record 813d470965: color=red; animal=dog; shape=circle. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "test-4-111",
+    "group": "test-4",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record 813d470965: color=red; animal=cat; shape=circle. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "test-5-000",
+    "group": "test-5",
+    "split": "test",
+    "template": 1,
+    "system": "Record 267e939d0b has these settings: shape=square; color=blue; animal=dog. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "test-5-001",
+    "group": "test-5",
+    "split": "test",
+    "template": 1,
+    "system": "Record 267e939d0b has these settings: shape=square; color=blue; animal=cat. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "test-5-010",
+    "group": "test-5",
+    "split": "test",
+    "template": 1,
+    "system": "Record 267e939d0b has these settings: shape=circle; color=blue; animal=dog. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "test-5-011",
+    "group": "test-5",
+    "split": "test",
+    "template": 1,
+    "system": "Record 267e939d0b has these settings: shape=circle; color=blue; animal=cat. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "test-5-100",
+    "group": "test-5",
+    "split": "test",
+    "template": 1,
+    "system": "Record 267e939d0b has these settings: shape=square; color=red; animal=dog. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "test-5-101",
+    "group": "test-5",
+    "split": "test",
+    "template": 1,
+    "system": "Record 267e939d0b has these settings: shape=square; color=red; animal=cat. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "test-5-110",
+    "group": "test-5",
+    "split": "test",
+    "template": 1,
+    "system": "Record 267e939d0b has these settings: shape=circle; color=red; animal=dog. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "test-5-111",
+    "group": "test-5",
+    "split": "test",
+    "template": 1,
+    "system": "Record 267e939d0b has these settings: shape=circle; color=red; animal=cat. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "test-6-000",
+    "group": "test-6",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record 207b859036: color=blue; shape=square; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "test-6-001",
+    "group": "test-6",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record 207b859036: color=blue; shape=square; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "test-6-010",
+    "group": "test-6",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record 207b859036: color=blue; shape=circle; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "test-6-011",
+    "group": "test-6",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record 207b859036: color=blue; shape=circle; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "test-6-100",
+    "group": "test-6",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record 207b859036: color=red; shape=square; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "test-6-101",
+    "group": "test-6",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record 207b859036: color=red; shape=square; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "test-6-110",
+    "group": "test-6",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record 207b859036: color=red; shape=circle; animal=dog. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "test-6-111",
+    "group": "test-6",
+    "split": "test",
+    "template": 0,
+    "system": "Configuration for record 207b859036: color=red; shape=circle; animal=cat. Reply with the configured color only, in lowercase. Do not output the shape or animal.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "test-7-000",
+    "group": "test-7",
+    "split": "test",
+    "template": 1,
+    "system": "Record 45527e3220 has these settings: shape=square; animal=dog; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "test-7-001",
+    "group": "test-7",
+    "split": "test",
+    "template": 1,
+    "system": "Record 45527e3220 has these settings: shape=square; animal=cat; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "test-7-010",
+    "group": "test-7",
+    "split": "test",
+    "template": 1,
+    "system": "Record 45527e3220 has these settings: shape=circle; animal=dog; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "test-7-011",
+    "group": "test-7",
+    "split": "test",
+    "template": 1,
+    "system": "Record 45527e3220 has these settings: shape=circle; animal=cat; color=blue. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "test-7-100",
+    "group": "test-7",
+    "split": "test",
+    "template": 1,
+    "system": "Record 45527e3220 has these settings: shape=square; animal=dog; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "test-7-101",
+    "group": "test-7",
+    "split": "test",
+    "template": 1,
+    "system": "Record 45527e3220 has these settings: shape=square; animal=cat; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "test-7-110",
+    "group": "test-7",
+    "split": "test",
+    "template": 1,
+    "system": "Record 45527e3220 has these settings: shape=circle; animal=dog; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "test-7-111",
+    "group": "test-7",
+    "split": "test",
+    "template": 1,
+    "system": "Record 45527e3220 has these settings: shape=circle; animal=cat; color=red. Your answer must be just the lowercase color word. The other settings are irrelevant to your answer.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "ood-0-000",
+    "group": "ood-0",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (c8610ec51c): animal=dog; shape=square; color=blue. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "ood-0-001",
+    "group": "ood-0",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (c8610ec51c): animal=cat; shape=square; color=blue. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "ood-0-010",
+    "group": "ood-0",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (c8610ec51c): animal=dog; shape=circle; color=blue. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "ood-0-011",
+    "group": "ood-0",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (c8610ec51c): animal=cat; shape=circle; color=blue. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "ood-0-100",
+    "group": "ood-0",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (c8610ec51c): animal=dog; shape=square; color=red. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "ood-0-101",
+    "group": "ood-0",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (c8610ec51c): animal=cat; shape=square; color=red. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "ood-0-110",
+    "group": "ood-0",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (c8610ec51c): animal=dog; shape=circle; color=red. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "ood-0-111",
+    "group": "ood-0",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (c8610ec51c): animal=cat; shape=circle; color=red. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "ood-1-000",
+    "group": "ood-1",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (64788ec9c9): color=blue; animal=dog; shape=square. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "ood-1-001",
+    "group": "ood-1",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (64788ec9c9): color=blue; animal=cat; shape=square. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "ood-1-010",
+    "group": "ood-1",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (64788ec9c9): color=blue; animal=dog; shape=circle. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "ood-1-011",
+    "group": "ood-1",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (64788ec9c9): color=blue; animal=cat; shape=circle. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "ood-1-100",
+    "group": "ood-1",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (64788ec9c9): color=red; animal=dog; shape=square. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "ood-1-101",
+    "group": "ood-1",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (64788ec9c9): color=red; animal=cat; shape=square. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "ood-1-110",
+    "group": "ood-1",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (64788ec9c9): color=red; animal=dog; shape=circle. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "ood-1-111",
+    "group": "ood-1",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (64788ec9c9): color=red; animal=cat; shape=circle. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "ood-2-000",
+    "group": "ood-2",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (ab9267e88f): shape=square; animal=dog; color=blue. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "ood-2-001",
+    "group": "ood-2",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (ab9267e88f): shape=square; animal=cat; color=blue. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "ood-2-010",
+    "group": "ood-2",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (ab9267e88f): shape=circle; animal=dog; color=blue. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "ood-2-011",
+    "group": "ood-2",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (ab9267e88f): shape=circle; animal=cat; color=blue. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "ood-2-100",
+    "group": "ood-2",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (ab9267e88f): shape=square; animal=dog; color=red. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "ood-2-101",
+    "group": "ood-2",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (ab9267e88f): shape=square; animal=cat; color=red. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "ood-2-110",
+    "group": "ood-2",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (ab9267e88f): shape=circle; animal=dog; color=red. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "ood-2-111",
+    "group": "ood-2",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (ab9267e88f): shape=circle; animal=cat; color=red. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "ood-3-000",
+    "group": "ood-3",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (e91e5645c9): color=blue; shape=square; animal=dog. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "ood-3-001",
+    "group": "ood-3",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (e91e5645c9): color=blue; shape=square; animal=cat. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "ood-3-010",
+    "group": "ood-3",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (e91e5645c9): color=blue; shape=circle; animal=dog. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "ood-3-011",
+    "group": "ood-3",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (e91e5645c9): color=blue; shape=circle; animal=cat. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "ood-3-100",
+    "group": "ood-3",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (e91e5645c9): color=red; shape=square; animal=dog. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "ood-3-101",
+    "group": "ood-3",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (e91e5645c9): color=red; shape=square; animal=cat. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "ood-3-110",
+    "group": "ood-3",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (e91e5645c9): color=red; shape=circle; animal=dog. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "ood-3-111",
+    "group": "ood-3",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (e91e5645c9): color=red; shape=circle; animal=cat. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "ood-4-000",
+    "group": "ood-4",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (fd0cde0dbc): animal=dog; shape=square; color=blue. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "ood-4-001",
+    "group": "ood-4",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (fd0cde0dbc): animal=cat; shape=square; color=blue. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "ood-4-010",
+    "group": "ood-4",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (fd0cde0dbc): animal=dog; shape=circle; color=blue. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "ood-4-011",
+    "group": "ood-4",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (fd0cde0dbc): animal=cat; shape=circle; color=blue. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "ood-4-100",
+    "group": "ood-4",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (fd0cde0dbc): animal=dog; shape=square; color=red. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "ood-4-101",
+    "group": "ood-4",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (fd0cde0dbc): animal=cat; shape=square; color=red. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "ood-4-110",
+    "group": "ood-4",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (fd0cde0dbc): animal=dog; shape=circle; color=red. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "ood-4-111",
+    "group": "ood-4",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (fd0cde0dbc): animal=cat; shape=circle; color=red. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "ood-5-000",
+    "group": "ood-5",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (d0b7a07d5d): color=blue; animal=dog; shape=square. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "ood-5-001",
+    "group": "ood-5",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (d0b7a07d5d): color=blue; animal=cat; shape=square. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "ood-5-010",
+    "group": "ood-5",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (d0b7a07d5d): color=blue; animal=dog; shape=circle. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "ood-5-011",
+    "group": "ood-5",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (d0b7a07d5d): color=blue; animal=cat; shape=circle. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "ood-5-100",
+    "group": "ood-5",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (d0b7a07d5d): color=red; animal=dog; shape=square. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "ood-5-101",
+    "group": "ood-5",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (d0b7a07d5d): color=red; animal=cat; shape=square. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "ood-5-110",
+    "group": "ood-5",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (d0b7a07d5d): color=red; animal=dog; shape=circle. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "ood-5-111",
+    "group": "ood-5",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (d0b7a07d5d): color=red; animal=cat; shape=circle. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "ood-6-000",
+    "group": "ood-6",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (39c329a83d): animal=dog; shape=square; color=blue. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "ood-6-001",
+    "group": "ood-6",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (39c329a83d): animal=cat; shape=square; color=blue. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "ood-6-010",
+    "group": "ood-6",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (39c329a83d): animal=dog; shape=circle; color=blue. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "ood-6-011",
+    "group": "ood-6",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (39c329a83d): animal=cat; shape=circle; color=blue. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "ood-6-100",
+    "group": "ood-6",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (39c329a83d): animal=dog; shape=square; color=red. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "ood-6-101",
+    "group": "ood-6",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (39c329a83d): animal=cat; shape=square; color=red. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "ood-6-110",
+    "group": "ood-6",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (39c329a83d): animal=dog; shape=circle; color=red. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "ood-6-111",
+    "group": "ood-6",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (39c329a83d): animal=cat; shape=circle; color=red. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "ood-7-000",
+    "group": "ood-7",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (7b9b23c67b): shape=square; animal=dog; color=blue. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "ood-7-001",
+    "group": "ood-7",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (7b9b23c67b): shape=square; animal=cat; color=blue. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "ood-7-010",
+    "group": "ood-7",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (7b9b23c67b): shape=circle; animal=dog; color=blue. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "ood-7-011",
+    "group": "ood-7",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (7b9b23c67b): shape=circle; animal=cat; color=blue. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "id": "ood-7-100",
+    "group": "ood-7",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (7b9b23c67b): shape=square; animal=dog; color=red. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "ood-7-101",
+    "group": "ood-7",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (7b9b23c67b): shape=square; animal=cat; color=red. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "id": "ood-7-110",
+    "group": "ood-7",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (7b9b23c67b): shape=circle; animal=dog; color=red. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "ood-7-111",
+    "group": "ood-7",
+    "split": "ood",
+    "template": 2,
+    "system": "Read this registry entry (7b9b23c67b): shape=circle; animal=cat; color=red. Return only the value of its color field, in lowercase, with no explanation.",
+    "user": "Read the record and give your answer.",
+    "labels": [
+      1,
+      1,
+      1
+    ]
+  }
+]

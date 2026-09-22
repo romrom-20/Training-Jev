@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "prediction_rows": 4608,
+  "recomputed_metric_checks": 360,
+  "checked": [
+    "dataset hash and scenario isolation",
+    "prediction completeness and label identity",
+    "saved metrics vs per-example predictions",
+    "validation-only layer selection",
+    "intervention arithmetic and test-only prompts",
+    "zero-vector sham"
+  ],
+  "scope": "Artifact consistency audit; does not establish scientific generalization"
+}

@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Please cite this software if you use its protocol or implementation."
+type: software
+title: "Latent Decisions: small query-conditioned activation probes"
+authors:
+  - name: "Latent Decisions contributors"
+version: 0.1.0
+date-released: 2026-09-22
+license: MIT
+repository-code: "https://github.com/romrom-20/Training-Jev"
+abstract: >-
+  A laptop-scale research prototype for query-conditioned activation readouts,
+  held-out calibration evaluation, and controlled interventions on frozen small
+  language models. Initial results are a controlled pilot, not a generalization claim.

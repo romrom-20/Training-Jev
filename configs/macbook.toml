@@ -1,0 +1,17 @@
+# Bounded pilot on a 24 GB Apple Silicon laptop. No target-model training.
+model = "Qwen/Qwen2.5-0.5B-Instruct"
+revision = "7ae557604adf67be50417f59c2c2f167def9a775"
+layers = [6, 12, 18] # one-indexed block outputs, before final RMSNorm
+batch_size = 4
+max_length = 256
+train_groups = 24
+validation_groups = 6
+calibration_groups = 6
+test_groups = 8
+ood_groups = 8
+rank = 4
+steps = 300
+learning_rate = 0.01
+weight_decay = 0.01
+brier_weight = 0.1
+seeds = [0, 1, 2]
