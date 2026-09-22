@@ -1,0 +1,34 @@
+study = "answer-remapping-v1"
+data_seed = 20260922
+train_groups = 16
+validation_groups = 4
+calibration_groups = 4
+test_groups = 12
+ood_groups = 12
+batch_size = 8
+max_length = 256
+rank = 4
+steps = 300
+learning_rate = 0.01
+weight_decay = 0.01
+brier_weight = 0.1
+seeds = [0, 1, 2]
+intervention_groups = 8
+intervention_seed = 0
+dose = 0.05
+random_directions = 4
+capability_gate = 0.9
+
+[[models]]
+name = "qwen-0.5b"
+model = "Qwen/Qwen2.5-0.5B-Instruct"
+revision = "7ae557604adf67be50417f59c2c2f167def9a775"
+layers = [6, 12, 18]
+intervention_layer = 12
+
+[[models]]
+name = "qwen-1.5b"
+model = "Qwen/Qwen2.5-1.5B-Instruct"
+revision = "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+layers = [8, 16, 24]
+intervention_layer = 16
