@@ -1,0 +1,739 @@
+{
+  "protocol": "008",
+  "models": {
+    "qwen-1.5b": {
+      "n": 7680,
+      "dataset_sha256": "14e7b8719e7a05f3163868c7f1e2f871c7303077284ec4324d2be98b9057ebc1",
+      "source_dataset_sha256": "f5c29870f94cde2726a5c0f7d6a07d10846811d3e039a6cd2f720501b8c066d3",
+      "device": "mps",
+      "capture_seconds": 740.7079720410111,
+      "selector_gates": {
+        "isolated_clause": false,
+        "neutral_distractors": false,
+        "mixed_review": false,
+        "keyed_record": false
+      },
+      "final_test_gates": {
+        "isolated_clause": false,
+        "neutral_distractors": false,
+        "mixed_review": false,
+        "keyed_record": false
+      },
+      "final_test_cells": [
+        {
+          "split": "final_test",
+          "task": "isolated_clause",
+          "format": 0,
+          "aspect": "food",
+          "n": 48,
+          "strict_accuracy": 1.0,
+          "conditional_accuracy": 1.0
+        },
+        {
+          "split": "final_test",
+          "task": "isolated_clause",
+          "format": 0,
+          "aspect": "service",
+          "n": 48,
+          "strict_accuracy": 1.0,
+          "conditional_accuracy": 1.0
+        },
+        {
+          "split": "final_test",
+          "task": "isolated_clause",
+          "format": 0,
+          "aspect": "value",
+          "n": 48,
+          "strict_accuracy": 1.0,
+          "conditional_accuracy": 1.0
+        },
+        {
+          "split": "final_test",
+          "task": "isolated_clause",
+          "format": 1,
+          "aspect": "food",
+          "n": 48,
+          "strict_accuracy": 1.0,
+          "conditional_accuracy": 1.0
+        },
+        {
+          "split": "final_test",
+          "task": "isolated_clause",
+          "format": 1,
+          "aspect": "service",
+          "n": 48,
+          "strict_accuracy": 0.875,
+          "conditional_accuracy": 1.0
+        },
+        {
+          "split": "final_test",
+          "task": "isolated_clause",
+          "format": 1,
+          "aspect": "value",
+          "n": 48,
+          "strict_accuracy": 0.625,
+          "conditional_accuracy": 1.0
+        },
+        {
+          "split": "final_test",
+          "task": "neutral_distractors",
+          "format": 0,
+          "aspect": "food",
+          "n": 48,
+          "strict_accuracy": 1.0,
+          "conditional_accuracy": 1.0
+        },
+        {
+          "split": "final_test",
+          "task": "neutral_distractors",
+          "format": 0,
+          "aspect": "service",
+          "n": 48,
+          "strict_accuracy": 1.0,
+          "conditional_accuracy": 1.0
+        },
+        {
+          "split": "final_test",
+          "task": "neutral_distractors",
+          "format": 0,
+          "aspect": "value",
+          "n": 48,
+          "strict_accuracy": 1.0,
+          "conditional_accuracy": 1.0
+        },
+        {
+          "split": "final_test",
+          "task": "neutral_distractors",
+          "format": 1,
+          "aspect": "food",
+          "n": 48,
+          "strict_accuracy": 0.625,
+          "conditional_accuracy": 1.0
+        },
+        {
+          "split": "final_test",
+          "task": "neutral_distractors",
+          "format": 1,
+          "aspect": "service",
+          "n": 48,
+          "strict_accuracy": 0.5,
+          "conditional_accuracy": 1.0
+        },
+        {
+          "split": "final_test",
+          "task": "neutral_distractors",
+          "format": 1,
+          "aspect": "value",
+          "n": 48,
+          "strict_accuracy": 0.625,
+          "conditional_accuracy": 1.0
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review",
+          "format": 0,
+          "aspect": "food",
+          "n": 192,
+          "strict_accuracy": 0.8020833333333334,
+          "conditional_accuracy": 0.8020833333333334
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review",
+          "format": 0,
+          "aspect": "service",
+          "n": 192,
+          "strict_accuracy": 0.7395833333333334,
+          "conditional_accuracy": 0.7395833333333334
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review",
+          "format": 0,
+          "aspect": "value",
+          "n": 192,
+          "strict_accuracy": 0.75,
+          "conditional_accuracy": 0.75
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review",
+          "format": 1,
+          "aspect": "food",
+          "n": 192,
+          "strict_accuracy": 0.5,
+          "conditional_accuracy": 0.8333333333333334
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review",
+          "format": 1,
+          "aspect": "service",
+          "n": 192,
+          "strict_accuracy": 0.5729166666666666,
+          "conditional_accuracy": 0.8229166666666666
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review",
+          "format": 1,
+          "aspect": "value",
+          "n": 192,
+          "strict_accuracy": 0.3645833333333333,
+          "conditional_accuracy": 0.65625
+        },
+        {
+          "split": "final_test",
+          "task": "keyed_record",
+          "format": 0,
+          "aspect": "food",
+          "n": 192,
+          "strict_accuracy": 1.0,
+          "conditional_accuracy": 1.0
+        },
+        {
+          "split": "final_test",
+          "task": "keyed_record",
+          "format": 0,
+          "aspect": "service",
+          "n": 192,
+          "strict_accuracy": 0.9583333333333334,
+          "conditional_accuracy": 0.9583333333333334
+        },
+        {
+          "split": "final_test",
+          "task": "keyed_record",
+          "format": 0,
+          "aspect": "value",
+          "n": 192,
+          "strict_accuracy": 0.9583333333333334,
+          "conditional_accuracy": 0.9583333333333334
+        },
+        {
+          "split": "final_test",
+          "task": "keyed_record",
+          "format": 1,
+          "aspect": "food",
+          "n": 192,
+          "strict_accuracy": 0.16666666666666666,
+          "conditional_accuracy": 0.9166666666666666
+        },
+        {
+          "split": "final_test",
+          "task": "keyed_record",
+          "format": 1,
+          "aspect": "service",
+          "n": 192,
+          "strict_accuracy": 0.08333333333333333,
+          "conditional_accuracy": 0.9166666666666666
+        },
+        {
+          "split": "final_test",
+          "task": "keyed_record",
+          "format": 1,
+          "aspect": "value",
+          "n": 192,
+          "strict_accuracy": 0.4583333333333333,
+          "conditional_accuracy": 0.9583333333333334
+        }
+      ],
+      "mixed_review_specificity": [
+        {
+          "split": "final_test",
+          "task": "mixed_review",
+          "format": 0,
+          "aspect": "food",
+          "queried_flip_pairs": 96,
+          "queried_flip_both_correct": 0.6041666666666666,
+          "queried_flip_any_response_change": 0.6041666666666666,
+          "irrelevant_flip_pairs": 96,
+          "irrelevant_flip_response_invariance": 1.0
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review",
+          "format": 0,
+          "aspect": "service",
+          "queried_flip_pairs": 96,
+          "queried_flip_both_correct": 0.4791666666666667,
+          "queried_flip_any_response_change": 0.4791666666666667,
+          "irrelevant_flip_pairs": 96,
+          "irrelevant_flip_response_invariance": 0.9583333333333334
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review",
+          "format": 0,
+          "aspect": "value",
+          "queried_flip_pairs": 96,
+          "queried_flip_both_correct": 0.5,
+          "queried_flip_any_response_change": 0.5,
+          "irrelevant_flip_pairs": 96,
+          "irrelevant_flip_response_invariance": 0.9583333333333334
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review",
+          "format": 1,
+          "aspect": "food",
+          "queried_flip_pairs": 96,
+          "queried_flip_both_correct": 0.16666666666666666,
+          "queried_flip_any_response_change": 0.16666666666666666,
+          "irrelevant_flip_pairs": 96,
+          "irrelevant_flip_response_invariance": 0.25
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review",
+          "format": 1,
+          "aspect": "service",
+          "queried_flip_pairs": 96,
+          "queried_flip_both_correct": 0.2916666666666667,
+          "queried_flip_any_response_change": 0.2916666666666667,
+          "irrelevant_flip_pairs": 96,
+          "irrelevant_flip_response_invariance": 0.4791666666666667
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review",
+          "format": 1,
+          "aspect": "value",
+          "queried_flip_pairs": 96,
+          "queried_flip_both_correct": 0.041666666666666664,
+          "queried_flip_any_response_change": 0.041666666666666664,
+          "irrelevant_flip_pairs": 96,
+          "irrelevant_flip_response_invariance": 0.22916666666666666
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review_global_majority",
+          "format": 0,
+          "aspect": "food",
+          "n": 192,
+          "matches_overall_majority": 0.78125,
+          "n_when_overall_majority_conflicts_with_query": 48,
+          "queried_accuracy_when_conflicting": 0.5416666666666666
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review_global_majority",
+          "format": 0,
+          "aspect": "service",
+          "n": 192,
+          "matches_overall_majority": 0.7604166666666666,
+          "n_when_overall_majority_conflicts_with_query": 48,
+          "queried_accuracy_when_conflicting": 0.4583333333333333
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review_global_majority",
+          "format": 0,
+          "aspect": "value",
+          "n": 192,
+          "matches_overall_majority": 0.7708333333333334,
+          "n_when_overall_majority_conflicts_with_query": 48,
+          "queried_accuracy_when_conflicting": 0.4583333333333333
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review_global_majority",
+          "format": 1,
+          "aspect": "food",
+          "n": 192,
+          "matches_overall_majority": 0.5416666666666666,
+          "n_when_overall_majority_conflicts_with_query": 48,
+          "queried_accuracy_when_conflicting": 0.041666666666666664
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review_global_majority",
+          "format": 1,
+          "aspect": "service",
+          "n": 192,
+          "matches_overall_majority": 0.53125,
+          "n_when_overall_majority_conflicts_with_query": 48,
+          "queried_accuracy_when_conflicting": 0.20833333333333334
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review_global_majority",
+          "format": 1,
+          "aspect": "value",
+          "n": 192,
+          "matches_overall_majority": 0.4375,
+          "n_when_overall_majority_conflicts_with_query": 48,
+          "queried_accuracy_when_conflicting": 0.08333333333333333
+        }
+      ]
+    },
+    "smollm2-1.7b": {
+      "n": 7680,
+      "dataset_sha256": "ea16faeff86db5a13d253cdca0d1b50131d8bf2c4b586b1f9108445df7cfa265",
+      "source_dataset_sha256": "5bd46eb6a67372f17be7a24f8d0620f8e12a4153f40c0bf8e2c88e20fe764cea",
+      "device": "mps",
+      "capture_seconds": 1045.1013940830017,
+      "selector_gates": {
+        "isolated_clause": false,
+        "neutral_distractors": false,
+        "mixed_review": false,
+        "keyed_record": false
+      },
+      "final_test_gates": {
+        "isolated_clause": false,
+        "neutral_distractors": false,
+        "mixed_review": false,
+        "keyed_record": false
+      },
+      "final_test_cells": [
+        {
+          "split": "final_test",
+          "task": "isolated_clause",
+          "format": 0,
+          "aspect": "food",
+          "n": 48,
+          "strict_accuracy": 1.0,
+          "conditional_accuracy": 1.0
+        },
+        {
+          "split": "final_test",
+          "task": "isolated_clause",
+          "format": 0,
+          "aspect": "service",
+          "n": 48,
+          "strict_accuracy": 1.0,
+          "conditional_accuracy": 1.0
+        },
+        {
+          "split": "final_test",
+          "task": "isolated_clause",
+          "format": 0,
+          "aspect": "value",
+          "n": 48,
+          "strict_accuracy": 1.0,
+          "conditional_accuracy": 1.0
+        },
+        {
+          "split": "final_test",
+          "task": "isolated_clause",
+          "format": 1,
+          "aspect": "food",
+          "n": 48,
+          "strict_accuracy": 0.0,
+          "conditional_accuracy": 1.0
+        },
+        {
+          "split": "final_test",
+          "task": "isolated_clause",
+          "format": 1,
+          "aspect": "service",
+          "n": 48,
+          "strict_accuracy": 0.0,
+          "conditional_accuracy": 1.0
+        },
+        {
+          "split": "final_test",
+          "task": "isolated_clause",
+          "format": 1,
+          "aspect": "value",
+          "n": 48,
+          "strict_accuracy": 0.0,
+          "conditional_accuracy": 1.0
+        },
+        {
+          "split": "final_test",
+          "task": "neutral_distractors",
+          "format": 0,
+          "aspect": "food",
+          "n": 48,
+          "strict_accuracy": 1.0,
+          "conditional_accuracy": 1.0
+        },
+        {
+          "split": "final_test",
+          "task": "neutral_distractors",
+          "format": 0,
+          "aspect": "service",
+          "n": 48,
+          "strict_accuracy": 1.0,
+          "conditional_accuracy": 1.0
+        },
+        {
+          "split": "final_test",
+          "task": "neutral_distractors",
+          "format": 0,
+          "aspect": "value",
+          "n": 48,
+          "strict_accuracy": 1.0,
+          "conditional_accuracy": 1.0
+        },
+        {
+          "split": "final_test",
+          "task": "neutral_distractors",
+          "format": 1,
+          "aspect": "food",
+          "n": 48,
+          "strict_accuracy": 0.0,
+          "conditional_accuracy": 1.0
+        },
+        {
+          "split": "final_test",
+          "task": "neutral_distractors",
+          "format": 1,
+          "aspect": "service",
+          "n": 48,
+          "strict_accuracy": 0.0,
+          "conditional_accuracy": 1.0
+        },
+        {
+          "split": "final_test",
+          "task": "neutral_distractors",
+          "format": 1,
+          "aspect": "value",
+          "n": 48,
+          "strict_accuracy": 0.0,
+          "conditional_accuracy": 1.0
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review",
+          "format": 0,
+          "aspect": "food",
+          "n": 192,
+          "strict_accuracy": 0.6979166666666666,
+          "conditional_accuracy": 0.6979166666666666
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review",
+          "format": 0,
+          "aspect": "service",
+          "n": 192,
+          "strict_accuracy": 0.71875,
+          "conditional_accuracy": 0.71875
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review",
+          "format": 0,
+          "aspect": "value",
+          "n": 192,
+          "strict_accuracy": 0.6666666666666666,
+          "conditional_accuracy": 0.6666666666666666
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review",
+          "format": 1,
+          "aspect": "food",
+          "n": 192,
+          "strict_accuracy": 0.0,
+          "conditional_accuracy": 0.7395833333333334
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review",
+          "format": 1,
+          "aspect": "service",
+          "n": 192,
+          "strict_accuracy": 0.0,
+          "conditional_accuracy": 0.7291666666666666
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review",
+          "format": 1,
+          "aspect": "value",
+          "n": 192,
+          "strict_accuracy": 0.0,
+          "conditional_accuracy": 0.6458333333333334
+        },
+        {
+          "split": "final_test",
+          "task": "keyed_record",
+          "format": 0,
+          "aspect": "food",
+          "n": 192,
+          "strict_accuracy": 0.7083333333333334,
+          "conditional_accuracy": 0.7083333333333334
+        },
+        {
+          "split": "final_test",
+          "task": "keyed_record",
+          "format": 0,
+          "aspect": "service",
+          "n": 192,
+          "strict_accuracy": 0.7083333333333334,
+          "conditional_accuracy": 0.7083333333333334
+        },
+        {
+          "split": "final_test",
+          "task": "keyed_record",
+          "format": 0,
+          "aspect": "value",
+          "n": 192,
+          "strict_accuracy": 0.6666666666666666,
+          "conditional_accuracy": 0.6666666666666666
+        },
+        {
+          "split": "final_test",
+          "task": "keyed_record",
+          "format": 1,
+          "aspect": "food",
+          "n": 192,
+          "strict_accuracy": 0.0,
+          "conditional_accuracy": 0.6666666666666666
+        },
+        {
+          "split": "final_test",
+          "task": "keyed_record",
+          "format": 1,
+          "aspect": "service",
+          "n": 192,
+          "strict_accuracy": 0.0,
+          "conditional_accuracy": 0.6041666666666666
+        },
+        {
+          "split": "final_test",
+          "task": "keyed_record",
+          "format": 1,
+          "aspect": "value",
+          "n": 192,
+          "strict_accuracy": 0.0,
+          "conditional_accuracy": 0.6666666666666666
+        }
+      ],
+      "mixed_review_specificity": [
+        {
+          "split": "final_test",
+          "task": "mixed_review",
+          "format": 0,
+          "aspect": "food",
+          "queried_flip_pairs": 96,
+          "queried_flip_both_correct": 0.3958333333333333,
+          "queried_flip_any_response_change": 0.3958333333333333,
+          "irrelevant_flip_pairs": 96,
+          "irrelevant_flip_response_invariance": 0.9583333333333334
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review",
+          "format": 0,
+          "aspect": "service",
+          "queried_flip_pairs": 96,
+          "queried_flip_both_correct": 0.4375,
+          "queried_flip_any_response_change": 0.4375,
+          "irrelevant_flip_pairs": 96,
+          "irrelevant_flip_response_invariance": 0.9166666666666666
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review",
+          "format": 0,
+          "aspect": "value",
+          "queried_flip_pairs": 96,
+          "queried_flip_both_correct": 0.3333333333333333,
+          "queried_flip_any_response_change": 0.3333333333333333,
+          "irrelevant_flip_pairs": 96,
+          "irrelevant_flip_response_invariance": 0.875
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review",
+          "format": 1,
+          "aspect": "food",
+          "queried_flip_pairs": 96,
+          "queried_flip_both_correct": 0.0,
+          "queried_flip_any_response_change": 0.0,
+          "irrelevant_flip_pairs": 96,
+          "irrelevant_flip_response_invariance": 0.0
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review",
+          "format": 1,
+          "aspect": "service",
+          "queried_flip_pairs": 96,
+          "queried_flip_both_correct": 0.0,
+          "queried_flip_any_response_change": 0.0,
+          "irrelevant_flip_pairs": 96,
+          "irrelevant_flip_response_invariance": 0.0
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review",
+          "format": 1,
+          "aspect": "value",
+          "queried_flip_pairs": 96,
+          "queried_flip_both_correct": 0.0,
+          "queried_flip_any_response_change": 0.0,
+          "irrelevant_flip_pairs": 96,
+          "irrelevant_flip_response_invariance": 0.0
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review_global_majority",
+          "format": 0,
+          "aspect": "food",
+          "n": 192,
+          "matches_overall_majority": 0.71875,
+          "n_when_overall_majority_conflicts_with_query": 48,
+          "queried_accuracy_when_conflicting": 0.4583333333333333
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review_global_majority",
+          "format": 0,
+          "aspect": "service",
+          "n": 192,
+          "matches_overall_majority": 0.7604166666666666,
+          "n_when_overall_majority_conflicts_with_query": 48,
+          "queried_accuracy_when_conflicting": 0.4166666666666667
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review_global_majority",
+          "format": 0,
+          "aspect": "value",
+          "n": 192,
+          "matches_overall_majority": 0.7291666666666666,
+          "n_when_overall_majority_conflicts_with_query": 48,
+          "queried_accuracy_when_conflicting": 0.375
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review_global_majority",
+          "format": 1,
+          "aspect": "food",
+          "n": 192,
+          "matches_overall_majority": 0.0,
+          "n_when_overall_majority_conflicts_with_query": 48,
+          "queried_accuracy_when_conflicting": 0.0
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review_global_majority",
+          "format": 1,
+          "aspect": "service",
+          "n": 192,
+          "matches_overall_majority": 0.0,
+          "n_when_overall_majority_conflicts_with_query": 48,
+          "queried_accuracy_when_conflicting": 0.0
+        },
+        {
+          "split": "final_test",
+          "task": "mixed_review_global_majority",
+          "format": 1,
+          "aspect": "value",
+          "n": 192,
+          "matches_overall_majority": 0.0,
+          "n_when_overall_majority_conflicts_with_query": 48,
+          "queried_accuracy_when_conflicting": 0.0
+        }
+      ]
+    }
+  },
+  "selected_task": null,
+  "incomplete_models": [
+    "qwen-3b"
+  ]
+}

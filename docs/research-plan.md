@@ -120,3 +120,14 @@ The next useful design question is why simple sentiment classification passed wh
 aspect-specific judgments did not. A new protocol should directly establish target
 competence for every property and format before probe training; it should not treat
 an incomplete capability task as a probe failure.
+
+Experiment 008 then ran a 7,680-prompt target-only controlled task ladder on
+Qwen2.5-1.5B and SmolLM2-1.7B. Neither family cleared the strict-generation gate
+on any task across both prompt formats, so the probe stage correctly did not run.
+A useful follow-up signal is that under the less constrained wording, models often
+ranked the positive/negative token pair in line with labels while failing to generate
+either label. Experiment 009, frozen in a separate commit before collection, tests
+whether adding an explicit one-word constraint rescues exact responses on simple
+and compositional tasks. See the [008 results bundle](../results/task-ladder-v1/README.md).
+No writing/publication decision will be made until this controlled follow-up and its
+full outcome are reviewed.
