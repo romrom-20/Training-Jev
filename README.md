@@ -12,7 +12,7 @@ are included. **There is no demonstrated advantage over independent linear probe
 [Results](results/pilot/README.md) · [Research plan](docs/research-plan.md) ·
 [Prior art](docs/prior-art.md) · [Protocol](docs/protocol.md) · [24 GB compute guide](docs/compute.md)
 
-## Latest research update — 23 September 2026
+## Latest research update — 24 September 2026
 
 The [follow-up studies](results/followup/README.md) add two model sizes, answer-remapping
 controls, unlabeled score correction and four fresh prompt formats. The causal task
@@ -56,11 +56,24 @@ accuracy was only 87.5%, below the frozen gate. This agrees with direct prior wo
 cross-encoding steering; it is a careful small-model replication, not a new field
 finding. See the [013 results](results/answer-encoding-control-v1/README.md).
 
-**LessWrong decision: not yet.** The current headline is already established in recent
-literature, the main task is synthetic, and no generated behavior or naturalistic
-sentiment outcome has been tested. The next worthwhile empirical step would be an
-independent aspect-labeled dataset with the same answer-remapping controls. **The aim is
-a reliable empirical contribution, not a funding pitch.**
+Experiment 014 carried the frozen directions onto the SemEval-2014 restaurant gold test
+set. On 233 aspect queries from 112 sentences with multiple labeled categories, the
+unsteered models were accurate (94.8% Qwen, 92.3% SmolLM2), and the directions still
+produced large positive-minus-negative shifts (+2.28 and +1.38 logits). But the
+within-sentence aspect-selectivity contrast was −0.0011 logits for Qwen (95% interval
+[−0.0032, +0.0014]) and +0.00070 for SmolLM2 ([+0.00051, +0.00087]). The latter is
+tiny next to its generic shift. Only eight included sentences had opposing food,
+service or price labels, so that conflict slice remains descriptive. The benchmark is
+76% positive-labeled; positive steering raises aggregate accuracy slightly while
+reducing accuracy on negative cases. See the [014 results and audit](results/natural-aspect-selectivity-v1/README.md).
+
+**LessWrong decision: still not yet.** The natural-language test supports generic
+sentiment-score movement more than aspect-specific control, and its cleanest conflict
+subset is small. That makes this a useful negative/diagnostic result, not yet the
+unexpected finding I would want to explain publicly. The next valuable step is another
+independent dataset with substantially more within-review polarity conflicts, while
+keeping the already-frozen directions and endpoint. **The aim is a reliable empirical
+contribution, not a funding pitch.**
 
 ## What has actually run
 

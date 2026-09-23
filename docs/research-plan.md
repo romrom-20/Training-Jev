@@ -191,16 +191,25 @@ reversed-map accuracy was 87.5%, below the frozen gate; treat that as descriptiv
 [013 results bundle](../results/answer-encoding-control-v1/README.md) includes the
 random controls and all per-example scores.
 
-## Publication decision after experiments 010–013
+## Natural-review selectivity: experiment 014
 
-There is a clear local result: a large candidate-logit shift follows the component
-shared across the three directions, survives three other synthetic task structures,
-and in Qwen follows a fixed answer token after the meanings of A and B are swapped.
-However, recent work already directly demonstrates answer-identifier following under
-cross-encoding evaluation ([Gao et al. 2026](https://arxiv.org/html/2608.22985v1)),
-and the remaining result is based on synthetic prompts and next-token scores. **Do not
-write a LessWrong research post yet.** A worthwhile next experiment would use an
-independent natural aspect-sentiment dataset, verify unsteered competence under each
-mapping, and evaluate actual generated behavior as well as candidate-token scores.
-Only revisit posting if that produces a finding beyond the known answer-encoding
-effect.
+Experiment 014 takes the 008 directions, layer and dose unchanged onto the
+SemEval-2014 Restaurants gold test set. It uses 233 target-aspect prompts from 112
+sentences with multiple labeled categories. Both models pass the baseline task gate
+(Qwen 94.8%, SmolLM2 92.3%) and receive large positive-minus-negative margin increases
+(+2.28 and +1.38 logits). Yet the preregistered paired specificity estimate is −0.00114
+([−0.00323, +0.00136]) for Qwen and +0.000698 ([+0.000515, +0.000872]) for SmolLM2.
+The small positive SmolLM2 estimate is about 0.05% of its generic shift, and only eight
+examples in the focal categories have opposing polarities. The positive-heavy sample
+(178 positive, 55 negative labels) also means small accuracy gains can come from a
+general positive bias. Full rows, manifests and checksums are in the
+[`014 result bundle`](../results/natural-aspect-selectivity-v1/README.md).
+
+The curiosity-driven question therefore got a useful but not exciting answer: the
+synthetic directions transfer as a sentiment-score bias, while practically meaningful
+aspect selectivity does not replicate across these two small models. Do not write a
+LessWrong post yet. The next useful test would keep the directions fixed but use an
+independent benchmark with many more within-review polarity conflicts, followed by a
+second model-family replication. Revisit writing only if this produces a clear,
+surprising effect or a well-supported explanation for the selectivity failure, beyond
+known answer-encoding confounds.

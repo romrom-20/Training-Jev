@@ -238,9 +238,9 @@ Gao et al.'s 2026 [cross-encoding steering evaluation](https://arxiv.org/html/26
 is direct prior art and the most relevant interpretation check: they freeze steering
 directions while changing answer mappings, and show that score gains can follow answer
 identifiers rather than semantic labels. Experiment 013 is a smaller-scale replication
-of this necessary control. Until remapping and naturalistic task checks pass, the 011–012
-pattern is an interesting local candidate-score effect, not a field-level claim.
-## Answer-remapping result and publication decision
+of this necessary control. Until a naturalistic test shows robust aspect selectivity, the
+011–012 pattern is an interesting local candidate-score effect, not a field-level claim.
+## Answer-remapping and natural-review results
 
 Experiment 013 directly tested the interpretation suggested by Gao et al.'s
 [Cross-Encoding Steering Evaluation](https://arxiv.org/html/2608.22985v1). On 144
@@ -252,11 +252,26 @@ sentiment effect. SmolLM2 showed a consistent preference for B, but its reversed
 unsteered accuracy was 87.5%, below the prespecified competence gate; its semantic
 interpretation remains unresolved.
 
-This is a useful small-model replication of a result already demonstrated at broader
-scale, not a new steering principle. Across 010–013, the strongest local observation is
-that a shared direction can cause a large cross-task candidate-token shift, but the
-answer-remapping test shows why that score alone cannot establish what behavior is
-controlled. The prompts are synthetic and the endpoint is next-token scoring. **The
-current evidence does not justify a LessWrong research post.** An independent
-naturalistic aspect-sentiment dataset with answer remapping and generated-behavior
-evaluation is needed before reconsidering.
+Experiment 014 tested whether the frozen synthetic aspect directions selectively change
+the score for the matching aspect in human-annotated SemEval-2014 restaurant reviews.
+The official task description defines aspect-category polarity and includes examples
+where category labels disagree ([Pontiki et al. 2014](https://aclanthology.org/S14-2004/);
+[official task description](https://alt.qcri.org/semeval2014/task4/index.php)). In this
+local gold-test slice, 233 queries from 112 multi-category sentences passed the models'
+baseline behavior checks. Native directions caused broad positive-minus-negative shifts
+(+2.28 logits in Qwen, +1.38 in SmolLM2), but their paired within-sentence specificity
+contrast was near zero in Qwen (−0.00114; 95% interval [−0.00323, +0.00136]) and only
++0.00070 in SmolLM2 ([+0.000515, +0.000872]). That small SmolLM2 estimate is about
+0.05% of its generic shift. The subset with opposing food/service/price polarities had
+only eight sentences and cannot support a confident conflict-specific conclusion.
+
+This extends the earlier synthetic result to natural reviews, but it does not establish
+useful aspect-specific control. The benchmark slice is positive-heavy (76%), which also
+makes the slight overall accuracy increase under a positive direction sensitive to class
+balance. The clear local pattern remains broad candidate-logit movement, not reliable
+target-specific behavior. Existing answer-remapping work already establishes the
+identifier confound ([Gao et al. 2026](https://arxiv.org/html/2608.22985v1)); this result
+does not yet add a sufficiently surprising mechanism or a strong naturalistic effect.
+**The current evidence does not justify a LessWrong post.** Reconsider after an
+independent dataset supplies many more same-review polarity conflicts and a replicated
+specificity effect or a compelling failure mechanism.

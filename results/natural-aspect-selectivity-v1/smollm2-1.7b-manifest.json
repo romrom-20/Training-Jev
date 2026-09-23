@@ -1,0 +1,50 @@
+{
+  "model": {
+    "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+    "revision": "31b70e2e869a7173562077fd711b654946d38674",
+    "layers": [
+      8,
+      16,
+      24
+    ],
+    "family": "SmolLM2",
+    "name": "smollm2-1.7b"
+  },
+  "device": "mps",
+  "dtype": "float32",
+  "layer": 24,
+  "dose_fraction": 0.05,
+  "dose_l2": 95.42455444335938,
+  "candidate_token_ids": {
+    "positive": 16185,
+    "negative": 17728
+  },
+  "n_gold_prompts": 233,
+  "n_sentences": 112,
+  "n_polarity_disagreement_sentences": 8,
+  "category_source_mapping": {
+    "food": 0,
+    "service": 1,
+    "price": 2
+  },
+  "source_dataset_sha256": "5bd46eb6a67372f17be7a24f8d0620f8e12a4153f40c0bf8e2c88e20fe764cea",
+  "source_activation_sha256": "cf285b62562b608a43b968c7d08a6beb2bec40d592fd00cd376c5871ed1601de",
+  "gold_xml_sha256": "f21509cfa37e16534cd5b2da043be487355b64ef48fe8d6aaacaeca6b49cc0fb",
+  "protocol_sha256": "f0369e3e286d6d6fba97a09644e77b5ac133c2abc0b20de115964ba1c82c51a6",
+  "code_sha256": "1cc11dd60cff40ababdc688196ee422508c51d31d2aa11113bb0515777fbc189",
+  "baseline_sha256": "f1feed1d8d06ae94f89d68c9d59edca1b45f3c0465c35d8473745313af7eb7c6",
+  "effects_sha256": "e691d0eb7a9471fba3713af46e0f408b210de674857468a2110b336111e63dcb",
+  "provenance": {
+    "python": "3.12.14",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "git_commit": "20f31ce1d640b099b9713a0bbf9d5df255c1c2ce",
+    "dirty_worktree": false,
+    "source_sha256": "65202dd6c98b4f387dafef2c064677e73aa2471826fb5c6bdab6d0707e8a27eb",
+    "packages": {
+      "torch": "2.14.0",
+      "transformers": "4.57.6",
+      "numpy": "2.5.3",
+      "scikit-learn": "1.9.1"
+    }
+  }
+}

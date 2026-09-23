@@ -1,0 +1,50 @@
+{
+  "model": {
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "layers": [
+      8,
+      16,
+      24
+    ],
+    "family": "Qwen2.5",
+    "name": "qwen-1.5b"
+  },
+  "device": "mps",
+  "dtype": "float32",
+  "layer": 24,
+  "dose_fraction": 0.05,
+  "dose_l2": 6.437084960937501,
+  "candidate_token_ids": {
+    "positive": 30487,
+    "negative": 42224
+  },
+  "n_gold_prompts": 233,
+  "n_sentences": 112,
+  "n_polarity_disagreement_sentences": 8,
+  "category_source_mapping": {
+    "food": 0,
+    "service": 1,
+    "price": 2
+  },
+  "source_dataset_sha256": "f5c29870f94cde2726a5c0f7d6a07d10846811d3e039a6cd2f720501b8c066d3",
+  "source_activation_sha256": "0d14bf5864b41ae377b3f43010c214e5904ea644a0f2e7526a5207828e1e837e",
+  "gold_xml_sha256": "f21509cfa37e16534cd5b2da043be487355b64ef48fe8d6aaacaeca6b49cc0fb",
+  "protocol_sha256": "f0369e3e286d6d6fba97a09644e77b5ac133c2abc0b20de115964ba1c82c51a6",
+  "code_sha256": "1cc11dd60cff40ababdc688196ee422508c51d31d2aa11113bb0515777fbc189",
+  "baseline_sha256": "cabb04657325e28970f7ff6a746e81915feea25b40303895442594ade284136b",
+  "effects_sha256": "4f7773ed3e09a9d24c6ca9a805c69363fff13a8e893214a616967623888450cf",
+  "provenance": {
+    "python": "3.12.14",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "git_commit": "20f31ce1d640b099b9713a0bbf9d5df255c1c2ce",
+    "dirty_worktree": false,
+    "source_sha256": "65202dd6c98b4f387dafef2c064677e73aa2471826fb5c6bdab6d0707e8a27eb",
+    "packages": {
+      "torch": "2.14.0",
+      "transformers": "4.57.6",
+      "numpy": "2.5.3",
+      "scikit-learn": "1.9.1"
+    }
+  }
+}
