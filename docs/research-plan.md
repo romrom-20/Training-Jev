@@ -138,3 +138,13 @@ strict accuracy did not reach 90% on any task; on the two simple tasks it averag
 83.3%. The predeclared composite rescue criterion failed. Format-following and task accuracy separation is
 already established in prior benchmarks, so these narrow synthetic results do not
 merit a LessWrong post. See the [009 results bundle](../results/response-policy-control-v1/README.md).
+
+Experiment 010 is the next field-facing test: with an activation direction fixed on
+training groups, can a small question-conditioned head predict which held-out prompts
+will shift most under that intervention? It compares prompt-conditioned forecasts
+against a pair-average baseline, a text baseline and an unsteered first-order gradient
+reference. It extends the behavior-pair side-effect forecasting work in the
+literature to within-pair, prompt-level effect heterogeneity; a null result is useful
+because it bounds the case for deploying a tiny readout instead of measuring the
+intervention directly. The prospective protocol is
+[`docs/experiments/010-prompt-level-effect-forecast.md`](experiments/010-prompt-level-effect-forecast.md).

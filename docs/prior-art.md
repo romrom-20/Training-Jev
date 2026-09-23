@@ -181,3 +181,17 @@ specific adherence, interactions, and positional effects. Our tiny two-model pai
 result—that an explicit one-word constraint restores valid-label emission for SmolLM2
 but does not restore correct aspect sentiment—fits this existing framing. It is a
 useful diagnostic, not a new account of instruction-following or activation behavior.
+
+## Prompt-specific intervention-effect forecasts, 23 September 2026
+
+Ong et al.'s [Forecasting Side Effects of Activation Steering](https://arxiv.org/html/2608.11227v1)
+(2026) is now the closest causal-prediction comparison. It learns behavioral probes
+and a propagation map from unsteered executions, then predicts held-out behavior-pair
+cross-effects without running those interventions. Its cross-effect labels pool over
+fixed prompt contexts and its evaluation holds out source or target behaviors. This
+motivates Experiment 010's distinct unit: a *prompt-specific* finite treatment effect
+within a fixed source/target behavior pair, tested on held-out cue groups. The local
+study is intentionally much smaller (two sub-2B checkpoints and three synthetic
+attributes), so it is an extension pilot and replication signal, not a claim to
+supersede that paper. A prompt-level effect forecast would matter because a benign
+average effect can conceal a subset of prompts with strong or reversed responses.
