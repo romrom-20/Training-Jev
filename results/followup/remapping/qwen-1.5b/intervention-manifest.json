@@ -1,0 +1,95 @@
+{
+  "model": {
+    "name": "qwen-1.5b",
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "layers": [
+      8,
+      16,
+      24
+    ],
+    "intervention_layer": 16
+  },
+  "config": {
+    "study": "answer-remapping-v1",
+    "data_seed": 20260922,
+    "train_groups": 16,
+    "validation_groups": 4,
+    "calibration_groups": 4,
+    "test_groups": 12,
+    "ood_groups": 12,
+    "batch_size": 8,
+    "max_length": 256,
+    "rank": 4,
+    "steps": 300,
+    "learning_rate": 0.01,
+    "weight_decay": 0.01,
+    "brier_weight": 0.1,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "intervention_groups": 8,
+    "intervention_seed": 0,
+    "dose": 0.05,
+    "random_directions": 4,
+    "capability_gate": 0.9,
+    "models": [
+      {
+        "name": "qwen-0.5b",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct",
+        "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+        "layers": [
+          6,
+          12,
+          18
+        ],
+        "intervention_layer": 12
+      },
+      {
+        "name": "qwen-1.5b",
+        "model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+        "layers": [
+          8,
+          16,
+          24
+        ],
+        "intervention_layer": 16
+      }
+    ]
+  },
+  "provenance": {
+    "python": "3.12.14",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "git_commit": "42133362c7897c6c46f0b72870a0f372093affe1",
+    "dirty_worktree": true,
+    "source_sha256": "cb05cfe18a338ec390db76d7a14b77c9f9e2442dd496e869aa23f9742a95368e",
+    "packages": {
+      "torch": "2.14.0",
+      "transformers": "4.57.6",
+      "numpy": "2.5.3",
+      "scikit-learn": "1.9.1"
+    }
+  },
+  "seconds": 214.08205437500146,
+  "timing_scope": "resumed portion only",
+  "retained_rows": 6144,
+  "prompts": 384,
+  "records": 8064,
+  "dose_l2": 2.2415386199951173,
+  "layer": 16,
+  "groups": [
+    "test-0",
+    "test-1",
+    "test-2",
+    "test-3",
+    "test-4",
+    "test-5",
+    "test-6",
+    "test-7"
+  ],
+  "directions_sha256": "97e47e6d623aacbf4cd24b41f6678e0d9b563d2f1ec84dcab40e4a09934734b6",
+  "records_sha256": "e5d27227d1ca67dce5cfe2aab49352d7e0aa71c21710409314d9048c8ccafbcb"
+}

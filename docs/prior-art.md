@@ -110,3 +110,44 @@ outcomes are publishable only with substantially stronger evaluation than this p
   Frozen query embeddings and supervision determine which transfer is even possible.
 - An SAE comparison is complementary and task-dependent. No SAE experiment is included
   yet, so this repository makes no claim of outperforming or replacing SAEs.
+
+## Follow-up search, 22–23 September 2026
+
+The deeper search substantially narrows the novelty claim again:
+
+**[What Does Activation Steering Control? — Gao et al.](https://arxiv.org/html/2608.22985v1)**
+(August 2026) is direct prior art for answer-remapping controls. It holds interventions
+fixed while changing answer encodings, distinguishes semantic from identifier following,
+and locates much of one effect in output-sensitive components. Our Experiment 002 is
+a small-probe investigation in that existing evaluation direction, not its invention.
+The source was found after freezing our local protocol and while its run was underway.
+
+**[How Reliable are Causal Probing Interventions? — Canby et al.](https://arxiv.org/html/2408.15510v3)**
+(2024; inspected February 2025 version) evaluates completeness and selectivity of
+interventions and compares method families. It reinforces the need to test collateral
+changes and explains why a direction's behavioral effect is insufficient on its own.
+
+**[An Interpretability Illusion for Subspace Activation Patching — Makelov et al.](https://arxiv.org/abs/2311.17030)**
+(2023) demonstrates that control and faithful feature attribution can diverge. Matched
+donor interventions improve our controls but do not bypass this conceptual limitation.
+
+**[Diagnosing Correctness Probes under Self-Judgement Confounding — Lu](https://arxiv.org/abs/2607.16799)**
+(July 2026) constructs conflict cases where correctness and self-judgment separate,
+showing that transfer alone does not establish the intended semantics of a readout.
+Its controlled-disagreement logic is relevant to the interpretation of our probes.
+
+**[Forecasting Side Effects of Activation Steering — Ong et al.](https://arxiv.org/abs/2608.11227)**
+(2026) studies structured cross-effects and forecasts them from unsteered representations.
+The idea of predicting steering side effects is therefore also established prior art,
+not an unexplored novelty claim for our roadmap.
+
+**[Calibrate Before Use — Zhao et al.](https://proceedings.mlr.press/v139/zhao21c.html)**
+(ICML 2021) corrects prompt-dependent answer bias using content-free calibration inputs.
+Our score-transport experiment instead uses unlabeled source/target score means, but
+prompt-format bias correction is a longstanding idea. An additive correction working
+on this dataset would be an empirical diagnosis, not a new calibration algorithm.
+
+The remaining interest is in a reproducible failure profile of small activation
+readouts: separating target competence, semantic ranking, threshold placement,
+calibration and intervention effects. A targeted search still does not establish
+novelty of that combination, and a useful local result need not merit a research post.

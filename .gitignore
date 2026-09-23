@@ -8,3 +8,6 @@ __pycache__/
 runs/
 *.npz
 *.pt
+# Small, measured prediction arrays in the audited follow-up bundle.
+!results/followup/**/predictions.npz
+!results/followup/**/probe-scores.npz

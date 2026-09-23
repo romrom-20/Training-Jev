@@ -1,0 +1,93 @@
+{
+  "model": {
+    "name": "qwen-0.5b",
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "layers": [
+      6,
+      12,
+      18
+    ],
+    "intervention_layer": 12
+  },
+  "config": {
+    "study": "answer-remapping-v1",
+    "data_seed": 20260922,
+    "train_groups": 16,
+    "validation_groups": 4,
+    "calibration_groups": 4,
+    "test_groups": 12,
+    "ood_groups": 12,
+    "batch_size": 8,
+    "max_length": 256,
+    "rank": 4,
+    "steps": 300,
+    "learning_rate": 0.01,
+    "weight_decay": 0.01,
+    "brier_weight": 0.1,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "intervention_groups": 8,
+    "intervention_seed": 0,
+    "dose": 0.05,
+    "random_directions": 4,
+    "capability_gate": 0.9,
+    "models": [
+      {
+        "name": "qwen-0.5b",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct",
+        "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+        "layers": [
+          6,
+          12,
+          18
+        ],
+        "intervention_layer": 12
+      },
+      {
+        "name": "qwen-1.5b",
+        "model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+        "layers": [
+          8,
+          16,
+          24
+        ],
+        "intervention_layer": 16
+      }
+    ]
+  },
+  "provenance": {
+    "python": "3.12.14",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "git_commit": "186ba51788ce86879733e3d24194abc01c45e341",
+    "dirty_worktree": true,
+    "source_sha256": "75876f7287903dd9a526411332a795cd4ee48a652477e5ca12fd32e141397ba1",
+    "packages": {
+      "torch": "2.14.0",
+      "transformers": "4.57.6",
+      "numpy": "2.5.3",
+      "scikit-learn": "1.9.1"
+    }
+  },
+  "seconds": 437.4858769169987,
+  "prompts": 384,
+  "records": 8064,
+  "dose_l2": 0.6981908798217774,
+  "layer": 12,
+  "groups": [
+    "test-0",
+    "test-1",
+    "test-2",
+    "test-3",
+    "test-4",
+    "test-5",
+    "test-6",
+    "test-7"
+  ],
+  "directions_sha256": "6cb86670c5c8739bcb36f3610d459a7d4eb8d55daf9e9fe1e52358404e23285f",
+  "records_sha256": "7155a87388318a5abefd86cac7f85854e7105e5897e8fa9bf2017044045923b6"
+}

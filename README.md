@@ -12,6 +12,15 @@ are included. **There is no demonstrated advantage over independent linear probe
 [Results](results/pilot/README.md) · [Research proposal](docs/funding-brief.md) ·
 [Prior art](docs/prior-art.md) · [Protocol](docs/protocol.md) · [24 GB compute guide](docs/compute.md)
 
+## Latest research update — 23 September 2026
+
+The [follow-up studies](results/followup/README.md) add two model sizes, answer-remapping
+controls, unlabeled score correction and four fresh prompt formats. The causal task
+failed its competence checks; an initially promising correction did not pass the
+fresh-format continuation criterion on both models. These results narrow the project
+and are included with the positive findings. No LessWrong research-post draft has
+been prepared.
+
 ## What has actually run
 
 A frozen **Qwen2.5-0.5B-Instruct** model on an **Apple M5 MacBook Air with 24 GB RAM**:

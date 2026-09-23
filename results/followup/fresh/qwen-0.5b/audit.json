@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "metric_checks": 576,
+  "source": "stored source predictions and independently saved fresh scores",
+  "checked": [
+    "frozen bank identity",
+    "source-anchor reconstruction",
+    "disjoint fresh anchors/evaluation",
+    "offsets and reported metrics"
+  ]
+}

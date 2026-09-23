@@ -1,0 +1,195 @@
+{
+  "config": {
+    "study": "answer-remapping-v1",
+    "data_seed": 20260922,
+    "train_groups": 16,
+    "validation_groups": 4,
+    "calibration_groups": 4,
+    "test_groups": 12,
+    "ood_groups": 12,
+    "batch_size": 8,
+    "max_length": 256,
+    "rank": 4,
+    "steps": 300,
+    "learning_rate": 0.01,
+    "weight_decay": 0.01,
+    "brier_weight": 0.1,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "intervention_groups": 8,
+    "intervention_seed": 0,
+    "dose": 0.05,
+    "random_directions": 4,
+    "capability_gate": 0.9,
+    "models": [
+      {
+        "name": "qwen-0.5b",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct",
+        "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+        "layers": [
+          6,
+          12,
+          18
+        ],
+        "intervention_layer": 12
+      },
+      {
+        "name": "qwen-1.5b",
+        "model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+        "layers": [
+          8,
+          16,
+          24
+        ],
+        "intervention_layer": 16
+      }
+    ]
+  },
+  "model": {
+    "name": "qwen-1.5b",
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "layers": [
+      8,
+      16,
+      24
+    ],
+    "intervention_layer": 16
+  },
+  "provenance": {
+    "python": "3.12.14",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "git_commit": "186ba51788ce86879733e3d24194abc01c45e341",
+    "dirty_worktree": true,
+    "source_sha256": "75876f7287903dd9a526411332a795cd4ee48a652477e5ca12fd32e141397ba1",
+    "packages": {
+      "torch": "2.14.0",
+      "transformers": "4.57.6",
+      "numpy": "2.5.3",
+      "scikit-learn": "1.9.1"
+    }
+  },
+  "created_at": "2026-09-22T09:45:10.015619+00:00",
+  "capture_seconds": 256.426792708,
+  "capability": [
+    {
+      "split": "test",
+      "active": "color",
+      "code": 1,
+      "n": 96,
+      "greedy_accuracy": 0.6979166666666666,
+      "choice_accuracy": 0.6979166666666666,
+      "mean_option_mass": 0.9999935949842135
+    },
+    {
+      "split": "test",
+      "active": "color",
+      "code": -1,
+      "n": 96,
+      "greedy_accuracy": 0.4479166666666667,
+      "choice_accuracy": 0.4479166666666667,
+      "mean_option_mass": 0.99999390480419
+    },
+    {
+      "split": "test",
+      "active": "shape",
+      "code": 1,
+      "n": 96,
+      "greedy_accuracy": 0.5208333333333334,
+      "choice_accuracy": 0.5208333333333334,
+      "mean_option_mass": 0.9999904731909434
+    },
+    {
+      "split": "test",
+      "active": "shape",
+      "code": -1,
+      "n": 96,
+      "greedy_accuracy": 0.5833333333333334,
+      "choice_accuracy": 0.5833333333333334,
+      "mean_option_mass": 0.9999690186232328
+    },
+    {
+      "split": "test",
+      "active": "animal",
+      "code": 1,
+      "n": 96,
+      "greedy_accuracy": 0.6458333333333334,
+      "choice_accuracy": 0.6458333333333334,
+      "mean_option_mass": 0.9999586399644613
+    },
+    {
+      "split": "test",
+      "active": "animal",
+      "code": -1,
+      "n": 96,
+      "greedy_accuracy": 0.5833333333333334,
+      "choice_accuracy": 0.5833333333333334,
+      "mean_option_mass": 0.9998209712406
+    },
+    {
+      "split": "ood",
+      "active": "color",
+      "code": 1,
+      "n": 96,
+      "greedy_accuracy": 0.08333333333333333,
+      "choice_accuracy": 0.5,
+      "mean_option_mass": 0.29191676225552027
+    },
+    {
+      "split": "ood",
+      "active": "color",
+      "code": -1,
+      "n": 96,
+      "greedy_accuracy": 0.0,
+      "choice_accuracy": 0.5,
+      "mean_option_mass": 0.04036651267722391
+    },
+    {
+      "split": "ood",
+      "active": "shape",
+      "code": 1,
+      "n": 96,
+      "greedy_accuracy": 0.4895833333333333,
+      "choice_accuracy": 0.5833333333333334,
+      "mean_option_mass": 0.7038943294865021
+    },
+    {
+      "split": "ood",
+      "active": "shape",
+      "code": -1,
+      "n": 96,
+      "greedy_accuracy": 0.3645833333333333,
+      "choice_accuracy": 0.8020833333333334,
+      "mean_option_mass": 0.4195544341985927
+    },
+    {
+      "split": "ood",
+      "active": "animal",
+      "code": 1,
+      "n": 96,
+      "greedy_accuracy": 0.0,
+      "choice_accuracy": 0.5729166666666666,
+      "mean_option_mass": 0.0005056998323738071
+    },
+    {
+      "split": "ood",
+      "active": "animal",
+      "code": -1,
+      "n": 96,
+      "greedy_accuracy": 0.0,
+      "choice_accuracy": 0.3958333333333333,
+      "mean_option_mass": 0.0003246897892500063
+    }
+  ],
+  "capability_gate_passed": false,
+  "device": "mps",
+  "peak_observed_mps_driver_gib": 6.05633544921875,
+  "memory_note": "Sampled Metal driver allocation during capture; not total system memory",
+  "protocol_sha256": "60e0adf124ff5b4a83efb314015a9b8fe0ef1d01d5b655fcc0c27eae3ded6404",
+  "dataset_sha256": "a30ec59d95899ac846352215d1e84e3b90aec0365cf37fe6c7328aab928064cc",
+  "activations_sha256": "94617da19146635e57b260d21ccdbdd8eb67e95436abc492a48b39425a4a529c"
+}

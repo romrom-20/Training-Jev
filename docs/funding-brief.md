@@ -70,3 +70,11 @@ No publication, external validation, partnership, user traction or funding is cl
 Before submitting, the applicant should add their own relevant background and schedule,
 choose a funder, and tailor the budget and application format. The technical claims
 should remain tied to the included evidence.
+
+## Follow-up evidence, 23 September 2026
+
+The subsequent [research bundle](../results/followup/README.md) includes failed target-competence
+checks and a partially successful score-correction result that failed its broader
+continuation criterion. These results support a scoped evaluation/diagnosis proposal,
+not a claim of a novel or superior activation-oracle architecture. Any application
+should include them alongside the original pilot.
