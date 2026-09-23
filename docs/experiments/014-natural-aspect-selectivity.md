@@ -34,6 +34,9 @@ For each sentence/category prompt, record the unmodified next-token logits for
 from experiment 008, their shared component, and one norm-matched random control
 at block 24 and the fixed 5% training-activation-norm dose. Score the change in
 `logit(positive) - logit(negative)` relative to that same prompt's baseline.
+Repeat the same shared and random control under each of the three source-aspect
+labels, so both controls have the same diagonal/off-diagonal query structure as
+the native directions; each repeated record uses the identical control vector.
 Directions, layer, dose, prompt template, category mapping, and sample filter
 remain frozen. Run Qwen2.5-1.5B and SmolLM2-1.7B sequentially and offline.
 
