@@ -123,7 +123,7 @@ def capture(name, root, offline):
     }
     write_json(root / "manifest.json", manifest)
     del model
-    if device.type == "mps":
+    if str(device).startswith("mps"):
         torch.mps.empty_cache()
 
 
