@@ -151,3 +151,19 @@ The remaining interest is in a reproducible failure profile of small activation
 readouts: separating target competence, semantic ranking, threshold placement,
 calibration and intervention effects. A targeted search still does not establish
 novelty of that combination, and a useful local result need not merit a research post.
+
+## Aspect-sentiment and compositionality literature, 23 September 2026
+
+Aspect-based sentiment is a well-developed benchmark domain. Zhou et al.'s
+[comprehensive LLM ABSA evaluation](https://arxiv.org/abs/2412.02279) predates this
+project, and Liskowski & Jankowski's [reasoning-infused ABSA models](https://arxiv.org/abs/2601.03940)
+show continued task-specific work in 2026. Zhong et al.'s ACL 2024 paper
+[benchmarks compositional generalization in multi-aspect text generation](https://aclanthology.org/2024.acl-long.351/),
+including held-out combinations of attributes. A small synthetic aspect-sentiment
+benchmark alone would therefore be a weak novelty claim.
+
+These sources motivate the next controlled task ladder: isolate whether failures
+come from selecting a requested property, adding neutral context, resolving
+conflicting property cues, or following explicit keyed records; hold out cue
+wording and use a second model family. This is an experimental design choice, not
+a claim that the task ladder or aspect-based sentiment is new.
