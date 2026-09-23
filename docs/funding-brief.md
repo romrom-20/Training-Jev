@@ -78,3 +78,8 @@ checks and a partially successful score-correction result that failed its broade
 continuation criterion. These results support a scoped evaluation/diagnosis proposal,
 not a claim of a novel or superior activation-oracle architecture. Any application
 should include them alongside the original pilot.
+
+The later [aspect-sentiment capability study](../results/aspect-sentiment-v2/README.md)
+also stopped before probe training when Qwen2.5-1.5B missed the service-task gate.
+This strengthens the case for capability screening and behavior-specific benchmarks;
+it supplies no positive evidence for the proposed probe architecture.

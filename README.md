@@ -21,6 +21,11 @@ fresh-format continuation criterion on both models. These results narrow the pro
 and are included with the positive findings. No LessWrong research-post draft has
 been prepared.
 
+The next capability-gated run found that Qwen2.5-1.5B handles simple sentiment
+classification but misses the predeclared threshold when asked about service in
+mixed-aspect reviews. The probe phase stopped before fitting. See the [aspect
+sentiment results and audited outputs](results/aspect-sentiment-v2/README.md).
+
 ## What has actually run
 
 A frozen **Qwen2.5-0.5B-Instruct** model on an **Apple M5 MacBook Air with 24 GB RAM**:

@@ -1,0 +1,49 @@
+{
+  "model": {
+    "name": "qwen-1.5b",
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "layers": [
+      8,
+      16,
+      24
+    ]
+  },
+  "device": "mps",
+  "capability": [
+    {
+      "aspect": "food",
+      "n": 192,
+      "strict_accuracy": 0.90625,
+      "conditional_accuracy": 0.90625
+    },
+    {
+      "aspect": "service",
+      "n": 192,
+      "strict_accuracy": 0.8177083333333334,
+      "conditional_accuracy": 0.8229166666666666
+    },
+    {
+      "aspect": "value",
+      "n": 192,
+      "strict_accuracy": 0.9114583333333334,
+      "conditional_accuracy": 0.9114583333333334
+    }
+  ],
+  "capability_gate_passed": false,
+  "capture_seconds": 1277.448731957993,
+  "protocol_sha256": "ca2ae1b8419e0c5a165d336fe423d9d7d4fd5b90a16c9389600cc2313156c713",
+  "provenance": {
+    "python": "3.12.14",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "git_commit": "bcf485a387024b09f90327947a9318c17ff8d09e",
+    "dirty_worktree": false,
+    "source_sha256": "982454917da04c05bc0591aae9c5f0e42a04d3d20a0e432bdafab21d3eb37881",
+    "packages": {
+      "torch": "2.14.0",
+      "transformers": "4.57.6",
+      "numpy": "2.5.3",
+      "scikit-learn": "1.9.1"
+    }
+  }
+}

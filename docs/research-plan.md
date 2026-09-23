@@ -99,3 +99,24 @@ The included pilot is exploratory and was run while this repository was built.
 Its protocol and results are not preregistered. Freeze the next experiment's hypothesis,
 splits, endpoints, seeds, comparisons and stop rules in a dated commit **before**
 observing its test outcomes. Keep any follow-up prompted by those outcomes separate.
+
+## Execution update — 23 September 2026
+
+The answer-remapping and four-format score-transport follow-ups are documented in
+[`results/followup/README.md`](../results/followup/README.md). The answer-remapping
+task failed the model behavior gate on both sizes. The fresh-format check failed its
+continuation rule on the 1.5B model; no broad calibration claim follows.
+
+Two fixed capability diagnostics then tested ordinary sentiment classification.
+The 1.5B checkpoint generated the expected one-word label on all 64 prompts across
+four phrasings; the 0.5B checkpoint reached 87.5% overall and failed one phrasing.
+This was only a task-selection check. The follow-on three-aspect study crossed food,
+service and value labels over 4,032 prompts. It failed its prespecified capability
+gate on service (81.8%), so **no activation probes were trained**. Prompt wording
+also reduced target accuracy sharply on the third format. The target-only run and
+portable audit are in [`results/aspect-sentiment-v2/README.md`](../results/aspect-sentiment-v2/README.md).
+
+The next useful design question is why simple sentiment classification passed while
+aspect-specific judgments did not. A new protocol should directly establish target
+competence for every property and format before probe training; it should not treat
+an incomplete capability task as a probe failure.
