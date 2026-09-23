@@ -68,7 +68,9 @@ def make_rows():
             order = list(range(3))
             rng.shuffle(order)
             for bits in itertools.product((0, 1), repeat=3):
-                clauses = [TEXT_VARIANTS[aspect][bits[j]][variant] for j, aspect in enumerate(ASPECTS)]
+                # The semantic label is one for positive; each lexicon stores
+                # positive at index zero and negative at index one.
+                clauses = [TEXT_VARIANTS[aspect][1 - bits[j]][variant] for j, aspect in enumerate(ASPECTS)]
                 for fmt in (range(4) if split == "shift_test" else (0,)):
                     ordered = [clauses[j] for j in (order if fmt in (0, 1) else order[::-1])]
                     if fmt == 1:
@@ -271,7 +273,7 @@ def train(run):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("stage", choices=("collect", "train", "all"))
-    parser.add_argument("--run", type=Path, default=Path("runs/aspect-sentiment-v1/qwen-1.5b"))
+    parser.add_argument("--run", type=Path, default=Path("runs/aspect-sentiment-v2/qwen-1.5b"))
     parser.add_argument("--offline", action="store_true")
     args = parser.parse_args()
     if args.stage in ("collect", "all"):
