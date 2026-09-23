@@ -1,0 +1,32 @@
+{
+  "model": {
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "layers": [
+      8,
+      16,
+      24
+    ],
+    "family": "Qwen2.5",
+    "name": "qwen-1.5b"
+  },
+  "device": "mps",
+  "n": 11520,
+  "capture_seconds": 1525.7021568329947,
+  "protocol_sha256": "8140de0262991b216dc8e595c93f2f270fd6863cbfd564ee82a8a8a82f0500d2",
+  "dataset_sha256": "0f0d2198990b5409ca79f89b928ebbacec8543bb4d27d7cd7cc49b267c1ba5d1",
+  "predictions_sha256": "78098552295c201f2bfaf3be8a8532cf8705f03dc13be01578b2427ed6d9e54b",
+  "provenance": {
+    "python": "3.12.14",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "git_commit": "30d6c95346f02fe4015d2e7e7bc458a0ab71abf3",
+    "dirty_worktree": false,
+    "source_sha256": "65202dd6c98b4f387dafef2c064677e73aa2471826fb5c6bdab6d0707e8a27eb",
+    "packages": {
+      "torch": "2.14.0",
+      "transformers": "4.57.6",
+      "numpy": "2.5.3",
+      "scikit-learn": "1.9.1"
+    }
+  }
+}

@@ -167,3 +167,17 @@ come from selecting a requested property, adding neutral context, resolving
 conflicting property cues, or following explicit keyed records; hold out cue
 wording and use a second model family. This is an experimental design choice, not
 a claim that the task ladder or aspect-based sentiment is new.
+
+## Output compliance and task accuracy, 23 September 2026
+
+The response-constraint control (Experiment 009) also sits inside an established
+benchmark area. [FOFO](https://aclanthology.org/2024.acl-long.40/) evaluates
+format-following across real-world output structures and reports that format ability
+can differ from content quality. [LLMs Are Biased Towards Output Formats](https://arxiv.org/abs/2408.08656)
+explicitly separates task accuracy under format compliance from accuracy regardless
+of compliance, across multiple formats and tasks. The 2026 [MOSAIC instruction
+compliance benchmark](https://aclanthology.org/2026.eacl-long.62/) studies constraint-
+specific adherence, interactions, and positional effects. Our tiny two-model paired
+result—that an explicit one-word constraint restores valid-label emission for SmolLM2
+but does not restore correct aspect sentiment—fits this existing framing. It is a
+useful diagnostic, not a new account of instruction-following or activation behavior.

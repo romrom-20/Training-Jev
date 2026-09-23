@@ -129,5 +129,12 @@ ranked the positive/negative token pair in line with labels while failing to gen
 either label. Experiment 009, frozen in a separate commit before collection, tests
 whether adding an explicit one-word constraint rescues exact responses on simple
 and compositional tasks. See the [008 results bundle](../results/task-ladder-v1/README.md).
-No writing/publication decision will be made until this controlled follow-up and its
-full outcome are reviewed.
+Experiment 009 completed this follow-up; its full outcome and publication decision
+are recorded below and in the result bundle.
+
+Experiment 009 completed the paired output-constraint control. An explicit one-word
+constraint moved SmolLM2's final-test label-token compliance from 0% to 100%, but its
+strict accuracy did not reach 90% on any task; on the two simple tasks it averaged
+83.3%. The predeclared composite rescue criterion failed. Format-following and task accuracy separation is
+already established in prior benchmarks, so these narrow synthetic results do not
+merit a LessWrong post. See the [009 results bundle](../results/response-policy-control-v1/README.md).

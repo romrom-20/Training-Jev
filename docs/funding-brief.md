@@ -83,3 +83,15 @@ The later [aspect-sentiment capability study](../results/aspect-sentiment-v2/REA
 also stopped before probe training when Qwen2.5-1.5B missed the service-task gate.
 This strengthens the case for capability screening and behavior-specific benchmarks;
 it supplies no positive evidence for the proposed probe architecture.
+
+The 23 September 2026 capability follow-ups sharpen that feasibility question but do
+not validate the readout architecture. The controlled task ladder ran on Qwen2.5-1.5B
+and SmolLM2-1.7B; neither model family cleared the strict behavior gate, so no probes
+were trained. A paired answer-format control then showed that an explicit one-word
+constraint restored valid-label emission in SmolLM2 but did not restore 90% aspect-task
+accuracy. These target-only diagnostics reinforce the need to gate probe experiments
+on task competence and distinguish output compliance from task correctness. Full data,
+limits and prior-art comparisons are in the [008](../results/task-ladder-v1/README.md)
+and [009](../results/response-policy-control-v1/README.md) result bundles. The funding
+case is for building a stronger independent benchmark and running decisive readout
+comparisons—not for extending a claimed positive result from these follow-ups.

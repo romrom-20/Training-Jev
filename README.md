@@ -21,11 +21,13 @@ fresh-format continuation criterion on both models. These results narrow the pro
 and are included with the positive findings. No LessWrong research-post draft has
 been prepared.
 
-The next controlled task ladder tested Qwen2.5-1.5B and SmolLM2-1.7B on four
-sentiment task structures and two prompt formats. Neither model family cleared the
-strict behavior gate, so no probe phase ran. A separate frozen control is now testing
-whether an explicit one-word constraint fixes a label-ranking/generation mismatch.
-See the [008 results bundle](results/task-ladder-v1/README.md) and [009 protocol](docs/experiments/009-output-constraint-control.md).
+The controlled task ladder tested Qwen2.5-1.5B and SmolLM2-1.7B on four sentiment
+task structures and two prompt formats. Neither model family cleared the strict
+behavior gate, so no probe phase ran. A follow-up found that adding an explicit
+one-word constraint restores valid-label output for SmolLM2, but not 90% task accuracy.
+That narrow result overlaps established format-following research, so no LessWrong
+post is planned. See the [008 results](results/task-ladder-v1/README.md) and
+[009 results and prior-work review](results/response-policy-control-v1/README.md).
 
 ## What has actually run
 
