@@ -477,11 +477,20 @@ def fit_selected(run, model_name, task, test_gate):
 
 
 def summarize(root):
+    available = tuple(
+        name
+        for name in MODEL_SPECS
+        if (root / name / "manifest.json").exists() and (root / name / "activations.npz").exists()
+    )
+    core = ("qwen-1.5b", "smollm2-1.7b")
+    if not all(name in available for name in core):
+        raise ValueError("Both preregistered model families must finish before choosing a task")
+    incomplete = sorted(set(MODEL_SPECS) - set(available))
     all_data = {}
     selector_gate = {}
     final_gate = {}
     paired_specificity = {}
-    for name in MODEL_SPECS:
+    for name in available:
         run = root / name
         rows = json.loads((run / "dataset.json").read_text())
         by_cell = []
@@ -644,15 +653,16 @@ def summarize(root):
                     }
                 )
         paired_specificity[name] = specificity
-    core = ("qwen-1.5b", "smollm2-1.7b")
     qualified = [task for task in PREFERRED if all(selector_gate[name][task] for name in core)]
     chosen = qualified[0] if qualified else None
     probes = {}
     if chosen:
-        for name in MODEL_SPECS:
+        for name in available:
             probes[name] = fit_selected(root / name, name, chosen, final_gate[name][chosen])
     result = {
         "protocol": "008",
+        "completed_models": list(available),
+        "incomplete_models": incomplete,
         "selector_gates": selector_gate,
         "final_test_gates": final_gate,
         "qualified_tasks": qualified,
