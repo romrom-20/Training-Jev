@@ -72,10 +72,14 @@ def capture(name, root, offline):
         )
         for row in rows
     ]
-    output = []
+    partial_path = root / "predictions.partial.json"
+    output = json.loads(partial_path.read_text()) if partial_path.exists() else []
+    if len(output) > len(rows) or any(output[i]["id"] != rows[i]["id"] for i in range(len(output))):
+        raise ValueError("Checkpoint does not match the frozen prompt order")
+    start_offset = len(output)
     start = time.perf_counter()
     with torch.inference_mode():
-        for offset in range(0, len(rows), 8):
+        for offset in range(start_offset, len(rows), 8):
             tokens = tokenizer(
                 texts[offset : offset + 8], padding=True, return_tensors="pt", truncation=False
             ).to(device)
@@ -94,13 +98,16 @@ def capture(name, root, offline):
                     strict_correct=token == ("positive" if row["label"] else "negative"),
                     compliant=token in ("positive", "negative"),
                     conditional_p_positive=float(p_positive[j]),
-                    conditional_correct=(p_positive[j] >= 0.5) == bool(row["label"]),
+                    conditional_correct=bool((p_positive[j] >= 0.5) == bool(row["label"])),
                     label_mass=float(label_mass[j]),
                 )
                 output.append(row)
-            if offset % 512 == 0:
-                print(f"{name}: {offset + len(tokens.input_ids)}/{len(rows)}", flush=True)
+            completed = offset + len(tokens.input_ids)
+            if completed % 512 == 0 or completed == len(rows):
+                write_json(partial_path, output)
+                print(f"{name}: {completed}/{len(rows)}", flush=True)
     write_json(root / "predictions.json", output)
+    partial_path.unlink(missing_ok=True)
     manifest = {
         "model": spec,
         "device": str(device),
@@ -294,14 +301,17 @@ def main():
         "--models", nargs="+", choices=tuple(MODEL_SPECS), default=("qwen-1.5b", "smollm2-1.7b")
     )
     parser.add_argument("--offline", action="store_true")
+    parser.add_argument("--resume", action="store_true", help="Resume from saved batch checkpoints")
     args = parser.parse_args()
     if args.stage in ("collect", "all"):
-        if args.root.exists():
-            raise FileExistsError(f"Refusing to overwrite {args.root}")
-        args.root.mkdir(parents=True)
+        if args.root.exists() and not args.resume:
+            raise FileExistsError(f"Refusing to overwrite {args.root}; pass --resume to continue")
+        args.root.mkdir(parents=True, exist_ok=True)
         for name in args.models:
             path = args.root / name
-            path.mkdir()
+            path.mkdir(exist_ok=args.resume)
+            if (path / "manifest.json").exists():
+                continue
             capture(name, path, args.offline)
     if args.stage in ("analyze", "all"):
         summarize(args.root)
