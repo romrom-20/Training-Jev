@@ -39,13 +39,20 @@ residual-specificity rule failed on the norm-matched random control in SmolLM2. 
 [component-control report](results/shared-residual-steering-v1/README.md) retain both
 the failed gates and measured effects.
 
-Experiment 012 is now testing whether this shared score shift carries to three other
-frozen task structures, against a norm-matched random direction. Existing literature
-already covers behavior-level side-effect forecasting and general steering geometry;
-these small-model experiments are local diagnostics, not a new method claim. A
-positive result would motivate naturalistic data and answer-remapping tests before a
-field-level claim. **The aim is a reliable empirical contribution, not a funding
-pitch.**
+Experiment 012 passed its frozen test in all six model-by-task comparisons: the shared
+component beat a norm-matched random direction on isolated clauses, neutral distractors
+and keyed records. It produced mean score changes of about +2.29 to +2.32 on Qwen and
++1.38 to +1.46 on SmolLM2, while native task-direction effects were nearly identical
+and target selectivity remained small. This is a promising cross-context pattern in
+candidate-token scores, not evidence of generative behavior. The
+[012 bundle](results/cross-task-shared-shift-v1/README.md) includes all outcomes and
+audits.
+
+The nearest prior work directly tests whether steering gains follow semantic labels or
+answer identifiers after remapping. Experiment 013 is now running that required
+control on the smaller model families. Until it and a naturalistic replication are
+complete, the finding remains a local result rather than a field-level claim. **The aim
+is a reliable empirical contribution, not a funding pitch.**
 
 ## What has actually run
 

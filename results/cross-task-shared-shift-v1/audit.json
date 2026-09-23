@@ -1,0 +1,136 @@
+{
+  "all_six_primary_comparisons_pass": true,
+  "checks_passed": true,
+  "models": {
+    "qwen-1.5b": {
+      "checks": {
+        "24_groups_per_task": true,
+        "all_task_prompt_counts_match": true,
+        "code_hash_matches": true,
+        "commit_has_frozen_runner_and_protocol": true,
+        "five_conditions_per_prompt": true,
+        "ids_unique": true,
+        "outcome_hash_matches": true,
+        "protocol_hash_matches": true,
+        "random_seed_matches": true,
+        "row_count_matches": true,
+        "source_activation_hash_matches": true,
+        "source_dataset_hash_matches": true
+      },
+      "manifest": {
+        "code_sha256": "8724a87fb71374c0055651f6ffd712bf1c92bfdba592a4d04831a43e60cf3b0b",
+        "device": "mps",
+        "dose_fraction": 0.05,
+        "dose_l2": 6.437084960937501,
+        "layer": 24,
+        "model": {
+          "family": "Qwen2.5",
+          "layers": [
+            8,
+            16,
+            24
+          ],
+          "model": "Qwen/Qwen2.5-1.5B-Instruct",
+          "name": "qwen-1.5b",
+          "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+        },
+        "n_effects": 7200,
+        "n_prompts": 1440,
+        "outcomes_sha256": "64e377a9960dafad971caba80ca31d31dfd79fca37edb293d6b109a5eeae76ec",
+        "protocol_sha256": "d5092c50e2fdd8fdd4d1f791e2b7cbca1bc44024c4dd2cd929eb15692aaec949",
+        "provenance": {
+          "dirty_worktree": true,
+          "git_commit": "5c95e568e20cf8fce9854b7bc7efde37dc0778dd",
+          "packages": {
+            "numpy": "2.5.3",
+            "scikit-learn": "1.9.1",
+            "torch": "2.14.0",
+            "transformers": "4.57.6"
+          },
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "python": "3.12.14",
+          "source_sha256": "65202dd6c98b4f387dafef2c064677e73aa2471826fb5c6bdab6d0707e8a27eb"
+        },
+        "random_seed": 20260927,
+        "source_activation_sha256": "0d14bf5864b41ae377b3f43010c214e5904ea644a0f2e7526a5207828e1e837e",
+        "source_dataset_sha256": "f5c29870f94cde2726a5c0f7d6a07d10846811d3e039a6cd2f720501b8c066d3",
+        "task_prompt_counts": {
+          "isolated_clause": 144,
+          "keyed_record": 576,
+          "mixed_review": 576,
+          "neutral_distractors": 144
+        }
+      },
+      "primary_task_rules": {
+        "isolated_clause": true,
+        "keyed_record": true,
+        "neutral_distractors": true
+      }
+    },
+    "smollm2-1.7b": {
+      "checks": {
+        "24_groups_per_task": true,
+        "all_task_prompt_counts_match": true,
+        "code_hash_matches": true,
+        "commit_has_frozen_runner_and_protocol": true,
+        "five_conditions_per_prompt": true,
+        "ids_unique": true,
+        "outcome_hash_matches": true,
+        "protocol_hash_matches": true,
+        "random_seed_matches": true,
+        "row_count_matches": true,
+        "source_activation_hash_matches": true,
+        "source_dataset_hash_matches": true
+      },
+      "manifest": {
+        "code_sha256": "8724a87fb71374c0055651f6ffd712bf1c92bfdba592a4d04831a43e60cf3b0b",
+        "device": "mps",
+        "dose_fraction": 0.05,
+        "dose_l2": 95.42455444335938,
+        "layer": 24,
+        "model": {
+          "family": "SmolLM2",
+          "layers": [
+            8,
+            16,
+            24
+          ],
+          "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+          "name": "smollm2-1.7b",
+          "revision": "31b70e2e869a7173562077fd711b654946d38674"
+        },
+        "n_effects": 7200,
+        "n_prompts": 1440,
+        "outcomes_sha256": "03e09f2dd42beaad66927fca76b039f6eb891ffbd196373dd09121df0b4a6916",
+        "protocol_sha256": "d5092c50e2fdd8fdd4d1f791e2b7cbca1bc44024c4dd2cd929eb15692aaec949",
+        "provenance": {
+          "dirty_worktree": false,
+          "git_commit": "81246c216930b1c382b7d3de850b2874f28aa7e0",
+          "packages": {
+            "numpy": "2.5.3",
+            "scikit-learn": "1.9.1",
+            "torch": "2.14.0",
+            "transformers": "4.57.6"
+          },
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "python": "3.12.14",
+          "source_sha256": "65202dd6c98b4f387dafef2c064677e73aa2471826fb5c6bdab6d0707e8a27eb"
+        },
+        "random_seed": 20260927,
+        "source_activation_sha256": "cf285b62562b608a43b968c7d08a6beb2bec40d592fd00cd376c5871ed1601de",
+        "source_dataset_sha256": "5bd46eb6a67372f17be7a24f8d0620f8e12a4153f40c0bf8e2c88e20fe764cea",
+        "task_prompt_counts": {
+          "isolated_clause": 144,
+          "keyed_record": 576,
+          "mixed_review": 576,
+          "neutral_distractors": 144
+        }
+      },
+      "primary_task_rules": {
+        "isolated_clause": true,
+        "keyed_record": true,
+        "neutral_distractors": true
+      }
+    }
+  }
+}

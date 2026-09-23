@@ -224,3 +224,19 @@ For this synthetic task and dose, the measured candidate-label shift mostly foll
 direction shared by all three task vectors. It does not establish that model behavior
 itself is controlled by a general sentiment mechanism; the endpoint remains a
 next-token logit difference.
+
+Experiment 012 then passed its frozen task-structure transfer rule: in all six
+non-mixed-task/model comparisons, the shared component produced a larger candidate
+positive-minus-negative shift than the norm-matched random control. The average shift
+was similar across isolated clauses, neutral distractors and keyed records. Native
+source-direction means remained almost exactly the same as the shared-vector means,
+while target selectivity was small. This increases confidence that the mixed-review
+finding was not isolated to that one task structure; it still measures token logits
+on a shared synthetic benchmark and reuses its scenario split.
+
+Gao et al.'s 2026 [cross-encoding steering evaluation](https://arxiv.org/html/2608.22985v1)
+is direct prior art and the most relevant interpretation check: they freeze steering
+directions while changing answer mappings, and show that score gains can follow answer
+identifiers rather than semantic labels. Experiment 013 is a smaller-scale replication
+of this necessary control. Until remapping and naturalistic task checks pass, the 011–012
+pattern is an interesting local candidate-score effect, not a field-level claim.

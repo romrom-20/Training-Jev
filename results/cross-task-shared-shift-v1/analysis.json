@@ -1,0 +1,214 @@
+{
+  "qwen-1.5b": {
+    "all_three_primary_tasks_pass": true,
+    "model": "qwen-1.5b",
+    "tasks": {
+      "isolated_clause": {
+        "all_shared_effects_positive": true,
+        "mean_effect": {
+          "native_mean_over_sources": 2.3175277855335104,
+          "random": -0.005526210234718591,
+          "shared": 2.3176477895516587,
+          "shared_minus_random": 2.323173999786377
+        },
+        "n_groups": 24,
+        "n_prompts": 144,
+        "native_target_selectivity_by_source": {
+          "food": -0.07161974366364099,
+          "service": -0.09496498880055393,
+          "value": 0.1434429907115704
+        },
+        "shared_mean_by_target": {
+          "food": 2.2730175835504745,
+          "service": 2.2597851052404088,
+          "value": 2.420140679864092
+        },
+        "shared_minus_random_group_bootstrap_95_ci": [
+          2.3141646915011935,
+          2.332813647058275
+        ]
+      },
+      "keyed_record": {
+        "all_shared_effects_positive": true,
+        "mean_effect": {
+          "native_mean_over_sources": 2.293615326396937,
+          "random": -0.016437083923062264,
+          "shared": 2.2936298478544677,
+          "shared_minus_random": 2.31006693177753
+        },
+        "n_groups": 24,
+        "n_prompts": 576,
+        "native_target_selectivity_by_source": {
+          "food": -0.09913698354068146,
+          "service": 0.049229612971835035,
+          "value": 0.04402363713734836
+        },
+        "shared_mean_by_target": {
+          "food": 2.22515910807458,
+          "service": 2.3325844243901517,
+          "value": 2.323146011098672
+        },
+        "shared_minus_random_group_bootstrap_95_ci": [
+          2.2813025114436942,
+          2.342773833291398
+        ]
+      },
+      "mixed_review": {
+        "all_shared_effects_positive": true,
+        "mean_effect": {
+          "native_mean_over_sources": 2.4580084684867285,
+          "random": -0.04341173800707296,
+          "shared": 2.457751340671906,
+          "shared_minus_random": 2.501163078678979
+        },
+        "n_groups": 24,
+        "n_prompts": 576,
+        "native_target_selectivity_by_source": {
+          "food": -0.10677624421097809,
+          "service": -0.03312398022394358,
+          "value": 0.1416018476362928
+        },
+        "shared_mean_by_target": {
+          "food": 2.384407469788534,
+          "service": 2.4376373690015627,
+          "value": 2.551209183225621
+        },
+        "shared_minus_random_group_bootstrap_95_ci": [
+          2.4901082824501724,
+          2.513404755873813
+        ]
+      },
+      "neutral_distractors": {
+        "all_shared_effects_positive": true,
+        "mean_effect": {
+          "native_mean_over_sources": 2.320474351678294,
+          "random": -0.020062163239715398,
+          "shared": 2.3206770074705303,
+          "shared_minus_random": 2.3407391707102456
+        },
+        "n_groups": 24,
+        "n_prompts": 144,
+        "native_target_selectivity_by_source": {
+          "food": -0.08408902157622267,
+          "service": -0.044764540452957746,
+          "value": 0.11472833410101924
+        },
+        "shared_mean_by_target": {
+          "food": 2.2669678311601125,
+          "service": 2.295099765719177,
+          "value": 2.399963425532302
+        },
+        "shared_minus_random_group_bootstrap_95_ci": [
+          2.3294127341773776,
+          2.3529286119672985
+        ]
+      }
+    }
+  },
+  "smollm2-1.7b": {
+    "all_three_primary_tasks_pass": true,
+    "model": "smollm2-1.7b",
+    "tasks": {
+      "isolated_clause": {
+        "all_shared_effects_positive": true,
+        "mean_effect": {
+          "native_mean_over_sources": 1.4596596876482555,
+          "random": 0.239318190650846,
+          "shared": 1.459730723139351,
+          "shared_minus_random": 1.2204125324885051
+        },
+        "n_groups": 24,
+        "n_prompts": 144,
+        "native_target_selectivity_by_source": {
+          "food": -0.006676109900961347,
+          "service": -0.004924613259879029,
+          "value": 0.011500348939038396
+        },
+        "shared_mean_by_target": {
+          "food": 1.4550649296470273,
+          "service": 1.4569311207747535,
+          "value": 1.4671961189962726
+        },
+        "shared_minus_random_group_bootstrap_95_ci": [
+          1.2181134632892079,
+          1.2225675491823091
+        ]
+      },
+      "keyed_record": {
+        "all_shared_effects_positive": true,
+        "mean_effect": {
+          "native_mean_over_sources": 1.3840196816035848,
+          "random": 0.22364745858840024,
+          "shared": 1.384048461816694,
+          "shared_minus_random": 1.1604010032282934
+        },
+        "n_groups": 24,
+        "n_prompts": 576,
+        "native_target_selectivity_by_source": {
+          "food": 0.015917358549476956,
+          "service": -0.02060562936532806,
+          "value": 0.006648016898475051
+        },
+        "shared_mean_by_target": {
+          "food": 1.394317949881169,
+          "service": 1.3697329124955964,
+          "value": 1.3880945230733157
+        },
+        "shared_minus_random_group_bootstrap_95_ci": [
+          1.1555602863844896,
+          1.165407074491183
+        ]
+      },
+      "mixed_review": {
+        "all_shared_effects_positive": true,
+        "mean_effect": {
+          "native_mean_over_sources": 1.4691401977744234,
+          "random": 0.23814483411509466,
+          "shared": 1.4691648442950382,
+          "shared_minus_random": 1.2310200101799436
+        },
+        "n_groups": 24,
+        "n_prompts": 576,
+        "native_target_selectivity_by_source": {
+          "food": 0.023850704558517455,
+          "service": -0.012183717753011747,
+          "value": -0.011311758023804908
+        },
+        "shared_mean_by_target": {
+          "food": 1.4848657808295924,
+          "service": 1.4607253021965168,
+          "value": 1.4619034498590056
+        },
+        "shared_minus_random_group_bootstrap_95_ci": [
+          1.2252220096687476,
+          1.2371414001203245
+        ]
+      },
+      "neutral_distractors": {
+        "all_shared_effects_positive": true,
+        "mean_effect": {
+          "native_mean_over_sources": 1.4385754784256637,
+          "random": 0.23469998972055858,
+          "shared": 1.438648527229205,
+          "shared_minus_random": 1.2039485375086467
+        },
+        "n_groups": 24,
+        "n_prompts": 144,
+        "native_target_selectivity_by_source": {
+          "food": -0.0025127336287322777,
+          "service": 0.004749048595173999,
+          "value": -0.0030772172949324883
+        },
+        "shared_mean_by_target": {
+          "food": 1.43680806792854,
+          "service": 1.4424526869529533,
+          "value": 1.4366848268061228
+        },
+        "shared_minus_random_group_bootstrap_95_ci": [
+          1.202119814025031,
+          1.2056614094310336
+        ]
+      }
+    }
+  }
+}

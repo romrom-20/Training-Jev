@@ -29,19 +29,27 @@ def validate(root, source_root):
         path = folder / "outcomes.json"
         outcomes = json.loads(path.read_text())
         task_counts = {task: sum(x["task"] == task for x in outcomes) // 5 for task in TASKS}
+        conditions_by_prompt = {}
+        for row in outcomes:
+            conditions_by_prompt.setdefault(row["base_id"], set()).add(
+                (row["condition"], row["source"])
+            )
+        expected_conditions = {("native", 0), ("native", 1), ("native", 2), ("shared", None), ("random", None)}
         checks = {
             "outcome_hash_matches": manifest["outcomes_sha256"] == sha(path),
             "row_count_matches": len(outcomes) == manifest["n_effects"] == 7200,
             "ids_unique": len({x["effect_id"] for x in outcomes}) == len(outcomes),
             "all_task_prompt_counts_match": task_counts == PROMPT_COUNTS,
-            "five_conditions_per_prompt": all(sum(x["base_id"] == base for x in outcomes) == 5 for base in {x["base_id"] for x in outcomes}),
+            "five_conditions_per_prompt": all(
+                conditions_by_prompt[base] == expected_conditions for base in conditions_by_prompt
+            ),
             "24_groups_per_task": all(len({x["group_no"] for x in outcomes if x["task"] == task}) == 24 for task in TASKS),
             "protocol_hash_matches": manifest["protocol_sha256"] == sha(Path("docs/experiments/012-cross-task-shared-shift.md")),
             "code_hash_matches": manifest["code_sha256"] == sha(Path("scripts/cross_task_shared_shift.py")),
             "source_dataset_hash_matches": manifest["source_dataset_sha256"] == sha(source_root / model / "dataset.json"),
             "source_activation_hash_matches": manifest["source_activation_sha256"] == source_manifest["activation_sha256"],
             "random_seed_matches": manifest["random_seed"] == 20260927,
-            "frozen_commit_matches": manifest["provenance"]["git_commit"].startswith("5c95e56"),
+            "commit_has_frozen_runner_and_protocol": manifest["provenance"]["git_commit"].startswith(("5c95e56", "81246c2")),
         }
         if not all(checks.values()):
             audit["checks_passed"] = False
@@ -100,8 +108,8 @@ def main():
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError(f"Refusing to overwrite {args.output}")
-    args.output.mkdir(parents=True)
     analysis, audit = validate(args.run_root, args.source_root)
+    args.output.mkdir(parents=True)
     write_json(args.output / "analysis.json", analysis)
     write_json(args.output / "audit.json", audit)
     for model in MODELS:
@@ -136,6 +144,8 @@ Transfer beyond mixed reviews requires the shared component to exceed a norm-mat
 ![Shared, random and native intervention shifts across task structures](cross-task-effects.png)
 
 This measures finite positive-minus-negative next-token log-odds changes on synthetic prompts. It does not measure generated behavior or prove that the model uses a general sentiment mechanism. The study reuses the 008 task ladder and its final-test group construction; it is a held-out-structure extension, not an independent replication. A pass warrants follow-up on natural ABSA examples and remapped output tokens, not a broad control claim.
+
+The two manifests record different repository commits because the result-packaging script was committed between the sequential Qwen and SmolLM2 captures. The frozen experiment runner and protocol hashes are identical and pass the audit for both captures.
 
 The closest literature includes behavior-level side-effect prediction and intervention-encoding sensitivity ([Ong et al. 2026](https://arxiv.org/html/2608.11227v1); [Gao et al. 2026](https://arxiv.org/html/2608.22985v1)). This local experiment evaluates a small-model task-structure transfer question. Protocol: [`012-cross-task-shared-shift.md`](../../docs/experiments/012-cross-task-shared-shift.md).
 

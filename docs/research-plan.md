@@ -166,12 +166,22 @@ not beat the norm-matched random residual control on SmolLM2. This is a bounded 
 about candidate-label scores on the synthetic task, not a semantic or behavioral
 mechanism. See the [`011 results`](../results/shared-residual-steering-v1/README.md).
 
-Experiment 012 now tests whether the shared score shift transfers beyond mixed reviews
-to isolated clauses, neutral distractors and keyed records. Its all-task, both-model
-rule is frozen in
-[`012-cross-task-shared-shift.md`](experiments/012-cross-task-shared-shift.md) before
-collecting those outcomes. If it passes, the next useful test is real aspect-labeled
-text plus answer-label remapping; if it fails, report the task boundaries and stop
-generalizing from the mixed-review result. Neither outcome alone is enough for a
-LessWrong research post; novelty and external relevance remain open pending this run
-and a stronger independent task.
+Experiment 012 passed its frozen shared-versus-random rule for all three non-mixed
+task structures on both models. The shared component raised the positive-minus-negative
+candidate margin by about +2.29 to +2.32 on Qwen and +1.38 to +1.46 on SmolLM2; native
+directions had nearly identical mean effects. Source-to-target selectivity remained
+small. The result is consistent across these synthetic task structures but does not
+establish generative control. See the [`012 result bundle`](../results/cross-task-shared-shift-v1/README.md).
+
+The strongest unresolved confound is answer encoding. Gao et al. (2026) directly show
+that steering can favor extraction-time answer identifiers after semantic labels are
+remapped. Experiment 013 therefore freezes each local intervention and swaps positive
+and negative meanings assigned to A/B on the same isolated-clause prompts. Only if
+unsteered accuracy passes the 90% gate in both encodings and the random-adjusted semantic
+effect stays positive in both models and mappings will we treat this as evidence for
+semantic score control. The preregistered protocol is
+[`013-answer-encoding-control.md`](experiments/013-answer-encoding-control.md).
+
+The result is interesting enough to continue, but novelty and external relevance remain
+unresolved. No LessWrong post is drafted until answer remapping is tested and at least
+one naturalistic independent task replicates the effect.
