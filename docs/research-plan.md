@@ -148,3 +148,30 @@ literature to within-pair, prompt-level effect heterogeneity; a null result is u
 because it bounds the case for deploying a tiny readout instead of measuring the
 intervention directly. The prospective protocol is
 [`docs/experiments/010-prompt-level-effect-forecast.md`](experiments/010-prompt-level-effect-forecast.md).
+
+Experiment 010 completed on both local model families. The small readout missed its
+10% RMSE-reduction criterion: it was 24.3% worse than the source/target mean on Qwen,
+and its 5.7% improvement on SmolLM2 had a paired interval crossing zero. The
+first-order gradient reference reached RMSE 0.1309 on Qwen and 0.0279 on SmolLM2,
+substantially lower than the readout. Every observed final-test score shift was
+positive, so sign accuracy was uninformative. See the
+[`010 results`](../results/prompt-effect-forecast-v1/README.md).
+
+Experiment 011 decomposed the three training-only aspect directions into their shared
+projection and task residuals, then tested these components on the same held-out
+mixed-review groups. Pairwise direction cosines were 0.85–0.96. The shared component
+reproduced mean shifts of +2.458 log-odds (Qwen) and +1.469 (SmolLM2); residual mean
+effects were near zero. The residual-specificity gate failed because the residual did
+not beat the norm-matched random residual control on SmolLM2. This is a bounded result
+about candidate-label scores on the synthetic task, not a semantic or behavioral
+mechanism. See the [`011 results`](../results/shared-residual-steering-v1/README.md).
+
+Experiment 012 now tests whether the shared score shift transfers beyond mixed reviews
+to isolated clauses, neutral distractors and keyed records. Its all-task, both-model
+rule is frozen in
+[`012-cross-task-shared-shift.md`](experiments/012-cross-task-shared-shift.md) before
+collecting those outcomes. If it passes, the next useful test is real aspect-labeled
+text plus answer-label remapping; if it fails, report the task boundaries and stop
+generalizing from the mixed-review result. Neither outcome alone is enough for a
+LessWrong research post; novelty and external relevance remain open pending this run
+and a stronger independent task.

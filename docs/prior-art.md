@@ -195,3 +195,32 @@ study is intentionally much smaller (two sub-2B checkpoints and three synthetic
 attributes), so it is an extension pilot and replication signal, not a claim to
 supersede that paper. A prompt-level effect forecast would matter because a benign
 average effect can conceal a subset of prompts with strong or reversed responses.
+
+## Intervention geometry and local outcome
+
+The follow-up search also found two close geometric precedents that constrain the next
+interpretation. [A Geometric Account of Activation Steering through Angle-Norm
+Decomposition](https://arxiv.org/abs/2606.06735) separates angular and radial changes
+to hidden states and evaluates steering across seven models. [Pre-Intervention
+Prediction of Sparse Autoencoder Steering Side Effects](https://arxiv.org/abs/2606.08365)
+forecasts feature-level side effects from pre-intervention statistics. Experiment 011
+uses a different decomposition: it separates overlap shared among three task-derived
+directions from each direction's orthogonal residual, then directly intervenes on those
+components in a tiny synthetic task. That is a local controlled diagnostic, not a new
+general theory of steering geometry or side-effect forecasting.
+
+Experiment 010 has now tested its frozen prompt-specific forecaster. It misses its
+predeclared 10% improvement rule in both models: the small head is worse than the
+pair-average on Qwen and only modestly better, with an interval including zero, on
+SmolLM2. The first-order gradient reference is much more accurate in both. This is a
+useful cost/accuracy result for this setup.
+
+In 011, the three training directions had pairwise cosine similarities from 0.85 to
+0.96. The norm-preserving shared component reproduced almost the entire mean
+positive-logit increase on both models (about +2.46 and +1.47), while the task
+residuals had near-zero mean effects. The preregistered residual-specificity rule
+failed because the residual did not beat its norm-matched random control in SmolLM2.
+For this synthetic task and dose, the measured candidate-label shift mostly follows a
+direction shared by all three task vectors. It does not establish that model behavior
+itself is controlled by a general sentiment mechanism; the endpoint remains a
+next-token logit difference.

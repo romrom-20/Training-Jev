@@ -1,0 +1,38 @@
+{
+  "model": {
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "layers": [
+      8,
+      16,
+      24
+    ],
+    "family": "Qwen2.5",
+    "name": "qwen-1.5b"
+  },
+  "device": "mps",
+  "layer": 24,
+  "dose_fraction": 0.05,
+  "dose_l2": 6.437084960937501,
+  "n_effects": 3744,
+  "n_final_prompts_gradient": 576,
+  "capture_seconds": 485.27596733300015,
+  "source_dataset_sha256": "f5c29870f94cde2726a5c0f7d6a07d10846811d3e039a6cd2f720501b8c066d3",
+  "source_activation_sha256": "0d14bf5864b41ae377b3f43010c214e5904ea644a0f2e7526a5207828e1e837e",
+  "protocol_sha256": "074880f373d95180775037e1806f8fc90b8e0d6f60c82db6c8b90a39e7633fb4",
+  "effects_sha256": "3001c4e712bee06070b9c87187052023f89f40f10d8c53390973564b6e36979b",
+  "gradient_sha256": "38148c301395ac272d1023934fe7891ab5fc6c99995a67b180fedd08744c9a54",
+  "provenance": {
+    "python": "3.12.14",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "git_commit": "c312911951d963271a28ce7b88d21011b8f0b773",
+    "dirty_worktree": false,
+    "source_sha256": "65202dd6c98b4f387dafef2c064677e73aa2471826fb5c6bdab6d0707e8a27eb",
+    "packages": {
+      "torch": "2.14.0",
+      "transformers": "4.57.6",
+      "numpy": "2.5.3",
+      "scikit-learn": "1.9.1"
+    }
+  }
+}

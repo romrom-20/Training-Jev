@@ -1,0 +1,500 @@
+{
+  "qwen-1.5b": {
+    "all_original_effects_positive": true,
+    "all_source_target_cell_means": [
+      {
+        "arm": "original",
+        "mean_effect": 2.4233883114251915,
+        "source": "food",
+        "target": "food"
+      },
+      {
+        "arm": "original",
+        "mean_effect": 2.4739109279360925,
+        "source": "food",
+        "target": "service"
+      },
+      {
+        "arm": "original",
+        "mean_effect": 2.586419097274134,
+        "source": "food",
+        "target": "value"
+      },
+      {
+        "arm": "original",
+        "mean_effect": 2.3808991006606246,
+        "source": "service",
+        "target": "food"
+      },
+      {
+        "arm": "original",
+        "mean_effect": 2.4306499363627587,
+        "source": "service",
+        "target": "service"
+      },
+      {
+        "arm": "original",
+        "mean_effect": 2.5466466662184293,
+        "source": "service",
+        "target": "value"
+      },
+      {
+        "arm": "original",
+        "mean_effect": 2.3496053309831444,
+        "source": "value",
+        "target": "food"
+      },
+      {
+        "arm": "original",
+        "mean_effect": 2.409436921442206,
+        "source": "value",
+        "target": "service"
+      },
+      {
+        "arm": "original",
+        "mean_effect": 2.5211227056280667,
+        "source": "value",
+        "target": "value"
+      },
+      {
+        "arm": "shared",
+        "mean_effect": 2.396579989949209,
+        "source": "food",
+        "target": "food"
+      },
+      {
+        "arm": "shared",
+        "mean_effect": 2.4501935443924423,
+        "source": "food",
+        "target": "service"
+      },
+      {
+        "arm": "shared",
+        "mean_effect": 2.5642610904470975,
+        "source": "food",
+        "target": "value"
+      },
+      {
+        "arm": "shared",
+        "mean_effect": 2.387057889659546,
+        "source": "service",
+        "target": "food"
+      },
+      {
+        "arm": "shared",
+        "mean_effect": 2.4403729440417443,
+        "source": "service",
+        "target": "service"
+      },
+      {
+        "arm": "shared",
+        "mean_effect": 2.554050715455998,
+        "source": "service",
+        "target": "value"
+      },
+      {
+        "arm": "shared",
+        "mean_effect": 2.3695860596093956,
+        "source": "value",
+        "target": "food"
+      },
+      {
+        "arm": "shared",
+        "mean_effect": 2.42235408243006,
+        "source": "value",
+        "target": "service"
+      },
+      {
+        "arm": "shared",
+        "mean_effect": 2.5353159821923468,
+        "source": "value",
+        "target": "value"
+      },
+      {
+        "arm": "residual",
+        "mean_effect": 0.016654341577830325,
+        "source": "food",
+        "target": "food"
+      },
+      {
+        "arm": "residual",
+        "mean_effect": 0.012636443142747235,
+        "source": "food",
+        "target": "service"
+      },
+      {
+        "arm": "residual",
+        "mean_effect": 0.009251069714217559,
+        "source": "food",
+        "target": "value"
+      },
+      {
+        "arm": "residual",
+        "mean_effect": -0.006773403128641439,
+        "source": "service",
+        "target": "food"
+      },
+      {
+        "arm": "residual",
+        "mean_effect": -0.01037995004191463,
+        "source": "service",
+        "target": "service"
+      },
+      {
+        "arm": "residual",
+        "mean_effect": -0.007912147353500947,
+        "source": "service",
+        "target": "value"
+      },
+      {
+        "arm": "residual",
+        "mean_effect": -0.008791854819315265,
+        "source": "value",
+        "target": "food"
+      },
+      {
+        "arm": "residual",
+        "mean_effect": -0.0008245704922523583,
+        "source": "value",
+        "target": "service"
+      },
+      {
+        "arm": "residual",
+        "mean_effect": -0.00037867656390947607,
+        "source": "value",
+        "target": "value"
+      },
+      {
+        "arm": "random_residual",
+        "mean_effect": -0.007349283338246339,
+        "source": "food",
+        "target": "food"
+      },
+      {
+        "arm": "random_residual",
+        "mean_effect": -0.008914728795831052,
+        "source": "food",
+        "target": "service"
+      },
+      {
+        "arm": "random_residual",
+        "mean_effect": 0.0038769361273340137,
+        "source": "food",
+        "target": "value"
+      },
+      {
+        "arm": "random_residual",
+        "mean_effect": 0.014239876627268798,
+        "source": "service",
+        "target": "food"
+      },
+      {
+        "arm": "random_residual",
+        "mean_effect": 0.015294929509019208,
+        "source": "service",
+        "target": "service"
+      },
+      {
+        "arm": "random_residual",
+        "mean_effect": 0.011392903019576446,
+        "source": "service",
+        "target": "value"
+      },
+      {
+        "arm": "random_residual",
+        "mean_effect": 0.058997818985921546,
+        "source": "value",
+        "target": "food"
+      },
+      {
+        "arm": "random_residual",
+        "mean_effect": 0.0708421271688296,
+        "source": "value",
+        "target": "service"
+      },
+      {
+        "arm": "random_residual",
+        "mean_effect": 0.059615524301518175,
+        "source": "value",
+        "target": "value"
+      }
+    ],
+    "model": "qwen-1.5b",
+    "n_groups": 24,
+    "overall_mean_effect_by_arm": {
+      "original": 2.4580087775478496,
+      "random_residual": 0.02422178928948782,
+      "residual": 0.00038680578169566604,
+      "shared": 2.4577524775753155
+    },
+    "paired_group_bootstrap_95_ci": {
+      "original_minus_shared": [
+        -0.0006575055006476111,
+        0.0028603116257323695
+      ],
+      "residual_minus_random_residual": [
+        0.003474566464622817,
+        0.006449617611037358
+      ],
+      "residual_minus_shared": [
+        0.0009515202293793864,
+        0.0048890709463094905
+      ]
+    },
+    "target_selectivity_by_arm": {
+      "original": 0.0005673103862338102,
+      "random_residual": -0.00255209869808621,
+      "residual": 0.0023676488134596087,
+      "shared": -0.0004942582713233593
+    }
+  },
+  "smollm2-1.7b": {
+    "all_original_effects_positive": true,
+    "all_source_target_cell_means": [
+      {
+        "arm": "original",
+        "mean_effect": 1.5092045924655635,
+        "source": "food",
+        "target": "food"
+      },
+      {
+        "arm": "original",
+        "mean_effect": 1.4847725775807838,
+        "source": "food",
+        "target": "service"
+      },
+      {
+        "arm": "original",
+        "mean_effect": 1.4859362611828073,
+        "source": "food",
+        "target": "value"
+      },
+      {
+        "arm": "original",
+        "mean_effect": 1.4193274241280591,
+        "source": "service",
+        "target": "food"
+      },
+      {
+        "arm": "original",
+        "mean_effect": 1.3962112811177712,
+        "source": "service",
+        "target": "service"
+      },
+      {
+        "arm": "original",
+        "mean_effect": 1.397463676299435,
+        "source": "service",
+        "target": "value"
+      },
+      {
+        "arm": "original",
+        "mean_effect": 1.5259871345353166,
+        "source": "value",
+        "target": "food"
+      },
+      {
+        "arm": "original",
+        "mean_effect": 1.5011160817712288,
+        "source": "value",
+        "target": "service"
+      },
+      {
+        "arm": "original",
+        "mean_effect": 1.5022406051216348,
+        "source": "value",
+        "target": "value"
+      },
+      {
+        "arm": "shared",
+        "mean_effect": 1.4716715973210375,
+        "source": "food",
+        "target": "food"
+      },
+      {
+        "arm": "shared",
+        "mean_effect": 1.447740668750777,
+        "source": "food",
+        "target": "service"
+      },
+      {
+        "arm": "shared",
+        "mean_effect": 1.4489125380573495,
+        "source": "food",
+        "target": "value"
+      },
+      {
+        "arm": "shared",
+        "mean_effect": 1.495129362900261,
+        "source": "service",
+        "target": "food"
+      },
+      {
+        "arm": "shared",
+        "mean_effect": 1.470825915234262,
+        "source": "service",
+        "target": "service"
+      },
+      {
+        "arm": "shared",
+        "mean_effect": 1.4720101922410551,
+        "source": "service",
+        "target": "value"
+      },
+      {
+        "arm": "shared",
+        "mean_effect": 1.4877908489696223,
+        "source": "value",
+        "target": "food"
+      },
+      {
+        "arm": "shared",
+        "mean_effect": 1.4636038489112995,
+        "source": "value",
+        "target": "service"
+      },
+      {
+        "arm": "shared",
+        "mean_effect": 1.4647841920115374,
+        "source": "value",
+        "target": "value"
+      },
+      {
+        "arm": "residual",
+        "mean_effect": 0.037068124770327095,
+        "source": "food",
+        "target": "food"
+      },
+      {
+        "arm": "residual",
+        "mean_effect": 0.03644605944253418,
+        "source": "food",
+        "target": "service"
+      },
+      {
+        "arm": "residual",
+        "mean_effect": 0.03645989990808795,
+        "source": "food",
+        "target": "value"
+      },
+      {
+        "arm": "residual",
+        "mean_effect": -0.08004365746259323,
+        "source": "service",
+        "target": "food"
+      },
+      {
+        "arm": "residual",
+        "mean_effect": -0.07867929866217163,
+        "source": "service",
+        "target": "service"
+      },
+      {
+        "arm": "residual",
+        "mean_effect": -0.07857824666720399,
+        "source": "service",
+        "target": "value"
+      },
+      {
+        "arm": "residual",
+        "mean_effect": 0.04335774596453079,
+        "source": "value",
+        "target": "food"
+      },
+      {
+        "arm": "residual",
+        "mean_effect": 0.04259406000075155,
+        "source": "value",
+        "target": "service"
+      },
+      {
+        "arm": "residual",
+        "mean_effect": 0.04249468144355447,
+        "source": "value",
+        "target": "value"
+      },
+      {
+        "arm": "random_residual",
+        "mean_effect": 0.026911691982749786,
+        "source": "food",
+        "target": "food"
+      },
+      {
+        "arm": "random_residual",
+        "mean_effect": 0.02650009065565877,
+        "source": "food",
+        "target": "service"
+      },
+      {
+        "arm": "random_residual",
+        "mean_effect": 0.02647035019177427,
+        "source": "food",
+        "target": "value"
+      },
+      {
+        "arm": "random_residual",
+        "mean_effect": 0.005055383999351347,
+        "source": "service",
+        "target": "food"
+      },
+      {
+        "arm": "random_residual",
+        "mean_effect": 0.00497574080722941,
+        "source": "service",
+        "target": "service"
+      },
+      {
+        "arm": "random_residual",
+        "mean_effect": 0.0049696832555356655,
+        "source": "service",
+        "target": "value"
+      },
+      {
+        "arm": "random_residual",
+        "mean_effect": -0.08532025798240932,
+        "source": "value",
+        "target": "food"
+      },
+      {
+        "arm": "random_residual",
+        "mean_effect": -0.08401991457047649,
+        "source": "value",
+        "target": "service"
+      },
+      {
+        "arm": "random_residual",
+        "mean_effect": -0.08396066529971132,
+        "source": "value",
+        "target": "value"
+      }
+    ],
+    "model": "smollm2-1.7b",
+    "n_groups": 24,
+    "overall_mean_effect_by_arm": {
+      "original": 1.4691399593558443,
+      "random_residual": -0.01760198855114421,
+      "residual": 0.00012437430420190722,
+      "shared": 1.4691632404885777
+    },
+    "paired_group_bootstrap_95_ci": {
+      "original_minus_shared": [
+        5.8714610834868323e-05,
+        0.0003961128286190014
+      ],
+      "residual_minus_random_residual": [
+        -0.00032260569019450317,
+        0.00010621965759330002
+      ],
+      "residual_minus_shared": [
+        0.0001650405633779951,
+        0.0005667067029408794
+      ]
+    },
+    "target_selectivity_by_arm": {
+      "original": 0.00011830031871803055,
+      "random_residual": 0.00036636657185025196,
+      "residual": 0.00025519231955209903,
+      "shared": -0.00010400844944850422
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "model": {
+    "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+    "revision": "31b70e2e869a7173562077fd711b654946d38674",
+    "layers": [
+      8,
+      16,
+      24
+    ],
+    "family": "SmolLM2",
+    "name": "smollm2-1.7b"
+  },
+  "device": "mps",
+  "layer": 24,
+  "dose_fraction": 0.05,
+  "dose_l2": 95.42455444335938,
+  "n_prompts": 576,
+  "n_effects": 6912,
+  "direction_seed": 20260925,
+  "source_dataset_sha256": "5bd46eb6a67372f17be7a24f8d0620f8e12a4153f40c0bf8e2c88e20fe764cea",
+  "source_activation_sha256": "cf285b62562b608a43b968c7d08a6beb2bec40d592fd00cd376c5871ed1601de",
+  "protocol_sha256": "5515996e6251acd6d6541fe170e02559f0d1aeead0392454b38b9d367f74e8d0",
+  "code_sha256": "d72e005e64680dbe152f9bf900b0f77b5bf693b8767f79ada0207bdab767803a",
+  "outcomes_sha256": "10e8797853d926ec88e6b480b03de4c2e3e38e6962a8b436a332e9fce9a46744",
+  "provenance": {
+    "python": "3.12.14",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "git_commit": "6510853bb00db7e007a79464c0953368c06d2568",
+    "dirty_worktree": true,
+    "source_sha256": "65202dd6c98b4f387dafef2c064677e73aa2471826fb5c6bdab6d0707e8a27eb",
+    "packages": {
+      "torch": "2.14.0",
+      "transformers": "4.57.6",
+      "numpy": "2.5.3",
+      "scikit-learn": "1.9.1"
+    }
+  }
+}

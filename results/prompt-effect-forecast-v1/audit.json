@@ -1,0 +1,135 @@
+{
+  "checks_passed": true,
+  "models": {
+    "qwen-1.5b": {
+      "all_final_test_effects_positive": true,
+      "checks": {
+        "all_final_test_effects_positive": true,
+        "analysis_test_count_matches": true,
+        "effect_count_matches_manifest": true,
+        "effect_ids_unique": true,
+        "final_test_group_count_is_24": true,
+        "gradient_prompt_count_matches_manifest": true,
+        "gradient_prompt_ids_unique": true,
+        "manifest_effect_hash_matches": true,
+        "manifest_gradient_hash_matches": true,
+        "provenance_commit_is_frozen_protocol_commit": true,
+        "split_counts_match_protocol": true
+      },
+      "final_test_groups": 24,
+      "final_test_observed_delta_range": [
+        1.8962866145468418,
+        2.9844435851273534
+      ],
+      "manifest": {
+        "capture_seconds": 485.27596733300015,
+        "device": "mps",
+        "dose_fraction": 0.05,
+        "dose_l2": 6.437084960937501,
+        "effects_sha256": "3001c4e712bee06070b9c87187052023f89f40f10d8c53390973564b6e36979b",
+        "gradient_sha256": "38148c301395ac272d1023934fe7891ab5fc6c99995a67b180fedd08744c9a54",
+        "layer": 24,
+        "model": {
+          "family": "Qwen2.5",
+          "layers": [
+            8,
+            16,
+            24
+          ],
+          "model": "Qwen/Qwen2.5-1.5B-Instruct",
+          "name": "qwen-1.5b",
+          "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+        },
+        "n_effects": 3744,
+        "n_final_prompts_gradient": 576,
+        "protocol_sha256": "074880f373d95180775037e1806f8fc90b8e0d6f60c82db6c8b90a39e7633fb4",
+        "provenance": {
+          "dirty_worktree": false,
+          "git_commit": "c312911951d963271a28ce7b88d21011b8f0b773",
+          "packages": {
+            "numpy": "2.5.3",
+            "scikit-learn": "1.9.1",
+            "torch": "2.14.0",
+            "transformers": "4.57.6"
+          },
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "python": "3.12.14",
+          "source_sha256": "65202dd6c98b4f387dafef2c064677e73aa2471826fb5c6bdab6d0707e8a27eb"
+        },
+        "source_activation_sha256": "0d14bf5864b41ae377b3f43010c214e5904ea644a0f2e7526a5207828e1e837e",
+        "source_dataset_sha256": "f5c29870f94cde2726a5c0f7d6a07d10846811d3e039a6cd2f720501b8c066d3"
+      },
+      "split_counts": {
+        "calibration": 432,
+        "final_test": 1728,
+        "train": 1152,
+        "validation": 432
+      }
+    },
+    "smollm2-1.7b": {
+      "all_final_test_effects_positive": true,
+      "checks": {
+        "all_final_test_effects_positive": true,
+        "analysis_test_count_matches": true,
+        "effect_count_matches_manifest": true,
+        "effect_ids_unique": true,
+        "final_test_group_count_is_24": true,
+        "gradient_prompt_count_matches_manifest": true,
+        "gradient_prompt_ids_unique": true,
+        "manifest_effect_hash_matches": true,
+        "manifest_gradient_hash_matches": true,
+        "provenance_commit_is_frozen_protocol_commit": true,
+        "split_counts_match_protocol": true
+      },
+      "final_test_groups": 24,
+      "final_test_observed_delta_range": [
+        1.2185420272875738,
+        1.7282008223418472
+      ],
+      "manifest": {
+        "capture_seconds": 818.2740298749995,
+        "device": "mps",
+        "dose_fraction": 0.05,
+        "dose_l2": 95.42455444335938,
+        "effects_sha256": "e85ae714d090811c6fa85ee39e9ea03884a27435ddb1c44e35b2003c8eb90282",
+        "gradient_sha256": "fa30d2c4dc7802d54f3d13ed38d33bfff5b769e8ffb84aa3f6bec2912c0abdb2",
+        "layer": 24,
+        "model": {
+          "family": "SmolLM2",
+          "layers": [
+            8,
+            16,
+            24
+          ],
+          "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+          "name": "smollm2-1.7b",
+          "revision": "31b70e2e869a7173562077fd711b654946d38674"
+        },
+        "n_effects": 3744,
+        "n_final_prompts_gradient": 576,
+        "protocol_sha256": "074880f373d95180775037e1806f8fc90b8e0d6f60c82db6c8b90a39e7633fb4",
+        "provenance": {
+          "dirty_worktree": false,
+          "git_commit": "c312911951d963271a28ce7b88d21011b8f0b773",
+          "packages": {
+            "numpy": "2.5.3",
+            "scikit-learn": "1.9.1",
+            "torch": "2.14.0",
+            "transformers": "4.57.6"
+          },
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "python": "3.12.14",
+          "source_sha256": "65202dd6c98b4f387dafef2c064677e73aa2471826fb5c6bdab6d0707e8a27eb"
+        },
+        "source_activation_sha256": "cf285b62562b608a43b968c7d08a6beb2bec40d592fd00cd376c5871ed1601de",
+        "source_dataset_sha256": "5bd46eb6a67372f17be7a24f8d0620f8e12a4153f40c0bf8e2c88e20fe764cea"
+      },
+      "split_counts": {
+        "calibration": 432,
+        "final_test": 1728,
+        "train": 1152,
+        "validation": 432
+      }
+    }
+  }
+}

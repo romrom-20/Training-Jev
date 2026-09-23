@@ -9,7 +9,7 @@ language model with a small probabilistic readout, evaluates calibration and tra
 and tests interventions on the original model. The code and a completed local pilot
 are included. **There is no demonstrated advantage over independent linear probes yet.**
 
-[Results](results/pilot/README.md) · [Research proposal](docs/funding-brief.md) ·
+[Results](results/pilot/README.md) · [Research plan](docs/research-plan.md) ·
 [Prior art](docs/prior-art.md) · [Protocol](docs/protocol.md) · [24 GB compute guide](docs/compute.md)
 
 ## Latest research update — 23 September 2026
@@ -28,6 +28,24 @@ one-word constraint restores valid-label output for SmolLM2, but not 90% task ac
 That narrow result overlaps established format-following research, so no LessWrong
 post is planned. See the [008 results](results/task-ladder-v1/README.md) and
 [009 results and prior-work review](results/response-policy-control-v1/README.md).
+
+Experiment 010 tested whether a small readout could forecast prompt-level effects. It
+missed its preregistered improvement rule; a model-specific gradient reference
+predicted the score changes much better. Experiment 011 then found that, on mixed
+reviews, the three aspect directions were aligned and their shared component
+reproduced almost all of the positive-minus-negative score increase. Its strict
+residual-specificity rule failed on the norm-matched random control in SmolLM2. The
+[audited result bundles](results/prompt-effect-forecast-v1/README.md) and
+[component-control report](results/shared-residual-steering-v1/README.md) retain both
+the failed gates and measured effects.
+
+Experiment 012 is now testing whether this shared score shift carries to three other
+frozen task structures, against a norm-matched random direction. Existing literature
+already covers behavior-level side-effect forecasting and general steering geometry;
+these small-model experiments are local diagnostics, not a new method claim. A
+positive result would motivate naturalistic data and answer-remapping tests before a
+field-level claim. **The aim is a reliable empirical contribution, not a funding
+pitch.**
 
 ## What has actually run
 
@@ -134,13 +152,12 @@ docs/compute.md          Measured pilot and practical 24 GB memory constraints
 results/pilot/           Reviewable results, data, manifests and offline report
 ```
 
-## Contributing and support
+## Contributing
 
 We welcome careful reproductions, harder property families, matched-budget baselines
-and negative results. See [CONTRIBUTING.md](CONTRIBUTING.md). The funding brief is a
-technical starting point for an application; it does not claim external validation,
-traction or an existing grant. Researcher background and funder-specific requirements
-still need to come from the applicant.
+and negative results. See [CONTRIBUTING.md](CONTRIBUTING.md). The research plan
+prioritizes frozen comparisons, complete negative results, and laptop-sized experiments
+that can be independently checked.
 
 MIT-licensed code. Model weights retain their upstream license. Citation metadata is
 in [CITATION.cff](CITATION.cff).
