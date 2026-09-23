@@ -145,11 +145,13 @@ Interpret mapped changes semantically only if unsteered next-token accuracy reac
 
 """ + ("**The full semantic-mapping rule passed.**" if all(x["semantic_mapping_robustness_gate_pass"] for x in analysis.values()) else "**The full semantic-mapping rule did not pass.**") + """
 
+Qwen is the clean result: unsteered next-token accuracy is 100% under both mappings, but the shared intervention moves the fixed A-minus-B margin toward A in both. Once the meaning of A flips, the semantic positive-minus-negative effect changes from +0.206 to −0.290. That is identifier following in this task, despite perfect baseline task accuracy. SmolLM2's A-minus-B effect consistently favors B, but its reversed-mapping baseline accuracy is 87.5%, below the frozen 90% competence gate, so its semantic interpretation remains unresolved.
+
 ![Shared, native and random intervention effect under both answer mappings](answer-encoding-effects.png)
 
 Semantic margins are oriented positive-minus-negative under the current mapping. A semantic effect should remain positive when A and B swap meanings. If the semantic effect reverses while the A-minus-B effect retains its sign, the intervention follows an answer identifier. The full per-mapping results retain both orientations.
 
-This is a small-model replication/control of an issue already studied directly by Gao et al. ([Cross-Encoding Steering Evaluation](https://arxiv.org/html/2608.22985v1)). It uses 144 simple synthetic prompts and a next-token score; it does not establish generative behavior or a new method. Protocol: [`013-answer-encoding-control.md`](../../docs/experiments/013-answer-encoding-control.md).
+This is a small-model replication/control of an issue already studied directly by Gao et al. ([Cross-Encoding Steering Evaluation](https://arxiv.org/html/2608.22985v1)). It uses 144 simple synthetic prompts and a next-token score; it does not establish generative behavior or a new method. It is a useful warning against reading a positive-label logit change as semantic sentiment control. Protocol: [`013-answer-encoding-control.md`](../../docs/experiments/013-answer-encoding-control.md).
 
 Reproduce the analysis and package from local captures:
 

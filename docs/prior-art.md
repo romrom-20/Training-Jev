@@ -240,3 +240,23 @@ directions while changing answer mappings, and show that score gains can follow 
 identifiers rather than semantic labels. Experiment 013 is a smaller-scale replication
 of this necessary control. Until remapping and naturalistic task checks pass, the 011–012
 pattern is an interesting local candidate-score effect, not a field-level claim.
+## Answer-remapping result and publication decision
+
+Experiment 013 directly tested the interpretation suggested by Gao et al.'s
+[Cross-Encoding Steering Evaluation](https://arxiv.org/html/2608.22985v1). On 144
+isolated-clause prompts, Qwen2.5-1.5B solved both A/B semantic mappings perfectly
+before steering. Under the fixed intervention, the A-minus-B score change stayed
+positive after the meanings of A and B were swapped, so the semantic positive-minus-
+negative change flipped sign. This is identifier following on this task, not a semantic
+sentiment effect. SmolLM2 showed a consistent preference for B, but its reversed-map
+unsteered accuracy was 87.5%, below the prespecified competence gate; its semantic
+interpretation remains unresolved.
+
+This is a useful small-model replication of a result already demonstrated at broader
+scale, not a new steering principle. Across 010–013, the strongest local observation is
+that a shared direction can cause a large cross-task candidate-token shift, but the
+answer-remapping test shows why that score alone cannot establish what behavior is
+controlled. The prompts are synthetic and the endpoint is next-token scoring. **The
+current evidence does not justify a LessWrong research post.** An independent
+naturalistic aspect-sentiment dataset with answer remapping and generated-behavior
+evaluation is needed before reconsidering.

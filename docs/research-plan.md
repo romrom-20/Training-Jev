@@ -182,6 +182,25 @@ effect stays positive in both models and mappings will we treat this as evidence
 semantic score control. The preregistered protocol is
 [`013-answer-encoding-control.md`](experiments/013-answer-encoding-control.md).
 
-The result is interesting enough to continue, but novelty and external relevance remain
-unresolved. No LessWrong post is drafted until answer remapping is tested and at least
-one naturalistic independent task replicates the effect.
+Experiment 013 passed the 90% unsteered competence gate for Qwen2.5-1.5B under both
+answer mappings (100% each). With the intervention fixed, its A-minus-B score change
+stayed positive while the semantic positive-minus-negative effect flipped from +0.206
+to −0.290. The strongest interpretation is that the intervention followed A, not the
+current positive-sentiment meaning. SmolLM2 showed a fixed preference for B, but its
+reversed-map accuracy was 87.5%, below the frozen gate; treat that as descriptive. The
+[013 results bundle](../results/answer-encoding-control-v1/README.md) includes the
+random controls and all per-example scores.
+
+## Publication decision after experiments 010–013
+
+There is a clear local result: a large candidate-logit shift follows the component
+shared across the three directions, survives three other synthetic task structures,
+and in Qwen follows a fixed answer token after the meanings of A and B are swapped.
+However, recent work already directly demonstrates answer-identifier following under
+cross-encoding evaluation ([Gao et al. 2026](https://arxiv.org/html/2608.22985v1)),
+and the remaining result is based on synthetic prompts and next-token scores. **Do not
+write a LessWrong research post yet.** A worthwhile next experiment would use an
+independent natural aspect-sentiment dataset, verify unsteered competence under each
+mapping, and evaluate actual generated behavior as well as candidate-token scores.
+Only revisit posting if that produces a finding beyond the known answer-encoding
+effect.

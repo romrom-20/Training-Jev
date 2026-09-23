@@ -48,11 +48,19 @@ candidate-token scores, not evidence of generative behavior. The
 [012 bundle](results/cross-task-shared-shift-v1/README.md) includes all outcomes and
 audits.
 
-The nearest prior work directly tests whether steering gains follow semantic labels or
-answer identifiers after remapping. Experiment 013 is now running that required
-control on the smaller model families. Until it and a naturalistic replication are
-complete, the finding remains a local result rather than a field-level claim. **The aim
-is a reliable empirical contribution, not a funding pitch.**
+Experiment 013 tested the same intervention after swapping which meaning A and B
+represented. Qwen kept 100% unsteered accuracy under both mappings, yet its steering
+effect followed the fixed A token and reversed semantic polarity when the mapping
+changed. SmolLM2 showed a similar identifier preference, but its reversed-map baseline
+accuracy was only 87.5%, below the frozen gate. This agrees with direct prior work on
+cross-encoding steering; it is a careful small-model replication, not a new field
+finding. See the [013 results](results/answer-encoding-control-v1/README.md).
+
+**LessWrong decision: not yet.** The current headline is already established in recent
+literature, the main task is synthetic, and no generated behavior or naturalistic
+sentiment outcome has been tested. The next worthwhile empirical step would be an
+independent aspect-labeled dataset with the same answer-remapping controls. **The aim is
+a reliable empirical contribution, not a funding pitch.**
 
 ## What has actually run
 

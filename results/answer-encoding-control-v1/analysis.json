@@ -1,0 +1,130 @@
+{
+  "qwen-1.5b": {
+    "mappings": {
+      "positive_is_A": {
+        "baseline_mapped_next_token_accuracy": 1.0,
+        "baseline_valid_a_or_b_rate": 1.0,
+        "competence_gate_pass": true,
+        "condition_effects": {
+          "native": {
+            "mean_identifier_ab_delta": 0.20503375265333387,
+            "mean_semantic_margin_delta": 0.20503375265333387,
+            "n": 432
+          },
+          "random": {
+            "mean_identifier_ab_delta": 0.1503467559814453,
+            "mean_semantic_margin_delta": 0.1503467559814453,
+            "n": 144
+          },
+          "shared": {
+            "mean_identifier_ab_delta": 0.2057617505391439,
+            "mean_semantic_margin_delta": 0.2057617505391439,
+            "n": 144
+          },
+          "shared_minus_random": {
+            "group_bootstrap_95_ci": [
+              0.04272782802581787,
+              0.06819755501217312
+            ],
+            "mean_semantic_margin_delta": 0.05541499455769857
+          }
+        }
+      },
+      "positive_is_B": {
+        "baseline_mapped_next_token_accuracy": 1.0,
+        "baseline_valid_a_or_b_rate": 1.0,
+        "competence_gate_pass": true,
+        "condition_effects": {
+          "native": {
+            "mean_identifier_ab_delta": 0.28950707117716473,
+            "mean_semantic_margin_delta": -0.28950707117716473,
+            "n": 432
+          },
+          "random": {
+            "mean_identifier_ab_delta": 0.06024018923441569,
+            "mean_semantic_margin_delta": -0.06024018923441569,
+            "n": 144
+          },
+          "shared": {
+            "mean_identifier_ab_delta": 0.28990960121154785,
+            "mean_semantic_margin_delta": -0.28990960121154785,
+            "n": 144
+          },
+          "shared_minus_random": {
+            "group_bootstrap_95_ci": [
+              -0.2524883879555596,
+              -0.20698624187045628
+            ],
+            "mean_semantic_margin_delta": -0.22966941197713217
+          }
+        }
+      }
+    },
+    "model": "qwen-1.5b",
+    "semantic_mapping_robustness_gate_pass": false
+  },
+  "smollm2-1.7b": {
+    "mappings": {
+      "positive_is_A": {
+        "baseline_mapped_next_token_accuracy": 1.0,
+        "baseline_valid_a_or_b_rate": 1.0,
+        "competence_gate_pass": true,
+        "condition_effects": {
+          "native": {
+            "mean_identifier_ab_delta": -0.04351671536763509,
+            "mean_semantic_margin_delta": -0.04351671536763509,
+            "n": 432
+          },
+          "random": {
+            "mean_identifier_ab_delta": 0.08226672808329265,
+            "mean_semantic_margin_delta": 0.08226672808329265,
+            "n": 144
+          },
+          "shared": {
+            "mean_identifier_ab_delta": -0.04367494583129883,
+            "mean_semantic_margin_delta": -0.04367494583129883,
+            "n": 144
+          },
+          "shared_minus_random": {
+            "group_bootstrap_95_ci": [
+              -0.1268850432501899,
+              -0.1250401175684399
+            ],
+            "mean_semantic_margin_delta": -0.12594167391459146
+          }
+        }
+      },
+      "positive_is_B": {
+        "baseline_mapped_next_token_accuracy": 0.875,
+        "baseline_valid_a_or_b_rate": 1.0,
+        "competence_gate_pass": false,
+        "condition_effects": {
+          "native": {
+            "mean_identifier_ab_delta": -0.03469133377075195,
+            "mean_semantic_margin_delta": 0.03469133377075195,
+            "n": 432
+          },
+          "random": {
+            "mean_identifier_ab_delta": 0.08391149838765462,
+            "mean_semantic_margin_delta": -0.08391149838765462,
+            "n": 144
+          },
+          "shared": {
+            "mean_identifier_ab_delta": -0.03489820162455241,
+            "mean_semantic_margin_delta": 0.03489820162455241,
+            "n": 144
+          },
+          "shared_minus_random": {
+            "group_bootstrap_95_ci": [
+              0.11828398704528809,
+              0.1193714009390937
+            ],
+            "mean_semantic_margin_delta": 0.11880970001220703
+          }
+        }
+      }
+    },
+    "model": "smollm2-1.7b",
+    "semantic_mapping_robustness_gate_pass": false
+  }
+}
