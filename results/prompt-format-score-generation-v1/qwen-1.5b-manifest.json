@@ -1,0 +1,41 @@
+{
+  "candidate_token_ids": {
+    "negative": 42224,
+    "positive": 30487
+  },
+  "dataset_xml_sha256": "f21509cfa37e16534cd5b2da043be487355b64ef48fe8d6aaacaeca6b49cc0fb",
+  "device": "mps",
+  "dtype": "float32",
+  "formats": [
+    "forced_choice",
+    "open_question"
+  ],
+  "model": {
+    "family": "Qwen2.5",
+    "layers": [
+      8,
+      16,
+      24
+    ],
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "name": "qwen-1.5b",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "n_prompts_per_format": 233,
+  "n_sentences": 112,
+  "protocol_sha256": "b8501bd7bb872e51ebdb908c0a6d4ba2cb20f78201a3c0f01b194e500d69a210",
+  "provenance": {
+    "dirty_worktree": false,
+    "git_commit": "e819557ec01b0af9b8330c8a348403b53136890a",
+    "packages": {
+      "numpy": "2.5.3",
+      "scikit-learn": "1.9.1",
+      "torch": "2.14.0",
+      "transformers": "4.57.6"
+    },
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.14",
+    "source_sha256": "4b3e83f6f402d69e72b7b5bd92eb7db8f518424bb93294bb465dc546c2e76cbe"
+  },
+  "runner_sha256": "dba07effaf796bb9282978f414794cca2cc06df8deead36e474e0147a10d81af"
+}

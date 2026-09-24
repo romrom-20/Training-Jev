@@ -398,3 +398,13 @@ consistent with ordinary greedy forced-choice decoding; it does not distinguish 
 internal semantic mechanism. A prompt-format ablation is needed before interpreting
 this agreement further. See the [024 protocol](experiments/024-cross-family-score-generation.md)
 and [audited bundle](../results/cross-family-score-generation-v1/README.md).
+
+Experiment 025 removed the explicit one-word output instruction while keeping the
+same SemEval reviews and aspect questions across Granite, Qwen and SmolLM2. Exact
+one-word compliance fell from 100% to 0%; a unique `positive`/`negative` label was
+extractable from only 12.9%, 39.1% and 65.7% of open responses, respectively. On the
+selected parseable subset, pair/generation agreement fell by 5.1 points (paired
+sentence-bootstrap 95% CI [-8.3, -2.5]), but the frozen 90% parseability gate failed.
+This is a prompt-format sensitivity and a measurement limitation, not evidence of a
+latent-score mechanism. See the [025 protocol](experiments/025-prompt-format-score-generation.md)
+and [audited results](../results/prompt-format-score-generation-v1/README.md).

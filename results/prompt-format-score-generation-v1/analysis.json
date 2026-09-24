@@ -1,0 +1,75 @@
+{
+  "all_models_open_parseable_coverage_at_least_90_percent": false,
+  "bootstrap_reps": 10000,
+  "bootstrap_seed": 20261026,
+  "format_effect_detected": false,
+  "models": {
+    "granite-3.1-2b": {
+      "forced_choice": {
+        "candidate_pair_accuracy": 0.9742489270386266,
+        "exact_one_word_rate": 1.0,
+        "generated_accuracy_among_parseable": 0.9699570815450643,
+        "n_parseable": 233,
+        "n_prompts": 233,
+        "pair_generation_agreement_among_parseable": 0.9957081545064378,
+        "parseable_polarity_rate": 1.0
+      },
+      "open_question": {
+        "candidate_pair_accuracy": 0.9356223175965666,
+        "exact_one_word_rate": 0.0,
+        "generated_accuracy_among_parseable": 0.9666666666666667,
+        "n_parseable": 30,
+        "n_prompts": 233,
+        "pair_generation_agreement_among_parseable": 1.0,
+        "parseable_polarity_rate": 0.12875536480686695
+      }
+    },
+    "qwen-1.5b": {
+      "forced_choice": {
+        "candidate_pair_accuracy": 0.9484978540772532,
+        "exact_one_word_rate": 1.0,
+        "generated_accuracy_among_parseable": 0.9484978540772532,
+        "n_parseable": 233,
+        "n_prompts": 233,
+        "pair_generation_agreement_among_parseable": 1.0,
+        "parseable_polarity_rate": 1.0
+      },
+      "open_question": {
+        "candidate_pair_accuracy": 0.9484978540772532,
+        "exact_one_word_rate": 0.0,
+        "generated_accuracy_among_parseable": 0.989010989010989,
+        "n_parseable": 91,
+        "n_prompts": 233,
+        "pair_generation_agreement_among_parseable": 0.989010989010989,
+        "parseable_polarity_rate": 0.3905579399141631
+      }
+    },
+    "smollm2-1.7b": {
+      "forced_choice": {
+        "candidate_pair_accuracy": 0.9227467811158798,
+        "exact_one_word_rate": 1.0,
+        "generated_accuracy_among_parseable": 0.9227467811158798,
+        "n_parseable": 233,
+        "n_prompts": 233,
+        "pair_generation_agreement_among_parseable": 1.0,
+        "parseable_polarity_rate": 1.0
+      },
+      "open_question": {
+        "candidate_pair_accuracy": 0.871244635193133,
+        "exact_one_word_rate": 0.0,
+        "generated_accuracy_among_parseable": 0.9934640522875817,
+        "n_parseable": 153,
+        "n_prompts": 233,
+        "pair_generation_agreement_among_parseable": 0.9150326797385621,
+        "parseable_polarity_rate": 0.6566523605150214
+      }
+    }
+  },
+  "n_paired_sentences": 106,
+  "noncausal_observational_test": true,
+  "open_minus_forced_pair_generation_agreement": -0.051094890510948905,
+  "paired_sentence_bootstrap_95_ci": [
+    -0.08267858154421345,
+    -0.025
+  ]
+}

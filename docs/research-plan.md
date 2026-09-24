@@ -359,3 +359,21 @@ format ablation on the same review sentences: compare explicit one-word choices 
 a natural open question across the three local model families. This will test whether
 the score/generation match depends on answer-format constraints. Avoid presenting the
 current agreement as surprising until that condition is checked.
+
+Experiment 025 paired the explicit one-word prompt with an open sentiment question
+on the same 233 SemEval items across Granite, Qwen, and SmolLM2. Exact one-word
+compliance fell from 100% to 0% in all three models. The open responses contained a
+unique positive/negative word on only 12.9% of Granite outputs, 39.1% of Qwen, and
+65.7% of SmolLM2. On that selected parseable subset, open-minus-forced candidate/
+generation agreement was -5.1 percentage points (sentence-bootstrap 95% CI
+[-8.3, -2.5]), but the frozen coverage rule failed, so this contrast is descriptive.
+This shows how strongly output-format instructions govern the measurement; it does
+not establish a cross-family latent-score relationship. The
+[`025 audited bundle`](../results/prompt-format-score-generation-v1/README.md)
+contains outcomes and audit.
+
+**LessWrong decision: wait.** The format effect is expected, and open-answer polarity
+was mostly not extractable using the predeclared rule. A next study would need a
+behavior-first outcome for natural completions, with an independently validated
+polarity evaluator and enough baseline errors to test whether score shifts predict
+behavioral changes. The current line does not support a novelty claim.
