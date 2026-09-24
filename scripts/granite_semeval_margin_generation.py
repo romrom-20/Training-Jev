@@ -78,6 +78,7 @@ def collect(offline=False):
     if len({row["id"] for row in records}) != len(stimuli):
         raise ValueError("Duplicate or missing stimulus IDs")
 
+    ROOT.mkdir(parents=True, exist_ok=True)
     write_json(ROOT / "outcomes.json", records)
     write_json(
         ROOT / "manifest.json",
