@@ -31,9 +31,9 @@ in the published result bundle.
 ## Frozen intervention and prompts
 
 Use the same wording and token-scoring endpoint as experiments 015–017:
-`Review: {sentence}` followed by the question `What is the sentiment about {food,
-service, or price/value}? Reply with exactly one word: positive or negative.` Treat each
-eligible sentence separately, without adding surrounding review sentences. Use the
+`Review: {sentence}` followed by the mapped question `What is the sentiment about
+{food/menu, service/staff, or price}? Reply with exactly one word: positive or negative.`
+Treat each eligible sentence separately, without adding surrounding review sentences. Use the
 cached training-only mixed-review format-0 directions for Qwen2.5-1.5B and
 SmolLM2-1.7B. Recompute those same three directions independently at layers 16 and 24;
 do not use TripR text, labels or outcomes to fit or select directions. Normalize and
