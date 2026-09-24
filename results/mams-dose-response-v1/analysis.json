@@ -1,0 +1,252 @@
+{
+  "cross_model_any_practical_dose_pass": false,
+  "cross_model_positive_ratio_trend_pass": false,
+  "qwen-1.5b": {
+    "any_practical_dose_pass": false,
+    "doses": {
+      "0.0125": {
+        "baseline_accuracy": 0.7887323943661971,
+        "baseline_valid_label_rate": 1.0,
+        "generic_native_shift_mean_logits": 0.5958692883688308,
+        "n_sentences": 35,
+        "native_minus_random_specificity_mean_logits": 0.002650088355654761,
+        "practical_specificity_gate_at_dose": false,
+        "ratio_95_ci": [
+          0.00199376217768354,
+          0.007368229558202755
+        ],
+        "specificity_95_ci": [
+          0.001173058237348283,
+          0.00442341532026018
+        ],
+        "specificity_fraction_of_generic_shift": 0.004447432360391111,
+        "steered_accuracy_by_condition": {
+          "native": 0.7887323943661971,
+          "random": 0.7887323943661971,
+          "shared": 0.7887323943661971
+        }
+      },
+      "0.0250": {
+        "baseline_accuracy": 0.7887323943661971,
+        "baseline_valid_label_rate": 1.0,
+        "generic_native_shift_mean_logits": 1.193187538025871,
+        "n_sentences": 35,
+        "native_minus_random_specificity_mean_logits": 0.005052866254534036,
+        "practical_specificity_gate_at_dose": false,
+        "ratio_95_ci": [
+          0.001871091044944616,
+          0.007002436382448752
+        ],
+        "specificity_95_ci": [
+          0.00221382617950439,
+          0.0084607035773141
+        ],
+        "specificity_fraction_of_generic_shift": 0.004234762846160801,
+        "steered_accuracy_by_condition": {
+          "native": 0.8028169014084507,
+          "random": 0.7887323943661971,
+          "shared": 0.8028169014084507
+        }
+      },
+      "0.0500": {
+        "baseline_accuracy": 0.7887323943661971,
+        "baseline_valid_label_rate": 1.0,
+        "generic_native_shift_mean_logits": 2.388694066849966,
+        "n_sentences": 35,
+        "native_minus_random_specificity_mean_logits": 0.009029878888811389,
+        "practical_specificity_gate_at_dose": false,
+        "ratio_95_ci": [
+          0.0016161164319287787,
+          0.006285088491220764
+        ],
+        "specificity_95_ci": [
+          0.003785751206534258,
+          0.015216409138270794
+        ],
+        "specificity_fraction_of_generic_shift": 0.003780257595196914,
+        "steered_accuracy_by_condition": {
+          "native": 0.8028169014084507,
+          "random": 0.7887323943661971,
+          "shared": 0.8028169014084507
+        }
+      },
+      "0.1000": {
+        "baseline_accuracy": 0.7887323943661971,
+        "baseline_valid_label_rate": 1.0,
+        "generic_native_shift_mean_logits": 4.755609413934133,
+        "n_sentences": 35,
+        "native_minus_random_specificity_mean_logits": 0.013168225969587064,
+        "practical_specificity_gate_at_dose": false,
+        "ratio_95_ci": [
+          0.0010405403399514168,
+          0.004694611645352894
+        ],
+        "specificity_95_ci": [
+          0.004880896295819981,
+          0.022580142021179216
+        ],
+        "specificity_fraction_of_generic_shift": 0.0027689881197988245,
+        "steered_accuracy_by_condition": {
+          "native": 0.784037558685446,
+          "random": 0.7887323943661971,
+          "shared": 0.7887323943661971
+        }
+      },
+      "0.2000": {
+        "baseline_accuracy": 0.7887323943661971,
+        "baseline_valid_label_rate": 1.0,
+        "generic_native_shift_mean_logits": 9.175124265277196,
+        "n_sentences": 35,
+        "native_minus_random_specificity_mean_logits": 0.0051873388744535735,
+        "practical_specificity_gate_at_dose": false,
+        "ratio_95_ci": [
+          -0.0005507911585920119,
+          0.001673368923446232
+        ],
+        "specificity_95_ci": [
+          -0.005019266945975168,
+          0.01569912444977531
+        ],
+        "specificity_fraction_of_generic_shift": 0.0005653698766876434,
+        "steered_accuracy_by_condition": {
+          "native": 0.7652582159624414,
+          "random": 0.7887323943661971,
+          "shared": 0.7605633802816901
+        }
+      }
+    },
+    "model": "qwen-1.5b",
+    "ratio_vs_log2_dose_slope": {
+      "point_estimate": -0.0009229899693768918,
+      "sentence_bootstrap_95_ci": [
+        -0.0015156832111598698,
+        -0.0004394165373088597
+      ],
+      "trend_gate_pass": false
+    }
+  },
+  "smollm2-1.7b": {
+    "any_practical_dose_pass": false,
+    "doses": {
+      "0.0125": {
+        "baseline_accuracy": 0.7323943661971831,
+        "baseline_valid_label_rate": 1.0,
+        "generic_native_shift_mean_logits": 0.35773449246845546,
+        "n_sentences": 35,
+        "native_minus_random_specificity_mean_logits": 0.0003071376255580368,
+        "practical_specificity_gate_at_dose": false,
+        "ratio_95_ci": [
+          0.0006353448901816736,
+          0.0010609050080360996
+        ],
+        "specificity_95_ci": [
+          0.00022706712995256917,
+          0.00038178443908691513
+        ],
+        "specificity_fraction_of_generic_shift": 0.0008585630740796397,
+        "steered_accuracy_by_condition": {
+          "native": 0.704225352112676,
+          "random": 0.7323943661971831,
+          "shared": 0.704225352112676
+        }
+      },
+      "0.0250": {
+        "baseline_accuracy": 0.7323943661971831,
+        "baseline_valid_label_rate": 1.0,
+        "generic_native_shift_mean_logits": 0.7120651684110127,
+        "n_sentences": 35,
+        "native_minus_random_specificity_mean_logits": 0.0005972816830589669,
+        "practical_specificity_gate_at_dose": false,
+        "ratio_95_ci": [
+          0.0006162331881052926,
+          0.0010409540257501483
+        ],
+        "specificity_95_ci": [
+          0.0004382142566499277,
+          0.000745010603041876
+        ],
+        "specificity_fraction_of_generic_shift": 0.0008388019939127377,
+        "steered_accuracy_by_condition": {
+          "native": 0.7323943661971831,
+          "random": 0.7323943661971831,
+          "shared": 0.7323943661971831
+        }
+      },
+      "0.0500": {
+        "baseline_accuracy": 0.7323943661971831,
+        "baseline_valid_label_rate": 1.0,
+        "generic_native_shift_mean_logits": 1.410198967040531,
+        "n_sentences": 35,
+        "native_minus_random_specificity_mean_logits": 0.0011269523983909926,
+        "practical_specificity_gate_at_dose": false,
+        "ratio_95_ci": [
+          0.000580202100781747,
+          0.0009972672966813965
+        ],
+        "specificity_95_ci": [
+          0.000813779717399956,
+          0.0014149939446222166
+        ],
+        "specificity_fraction_of_generic_shift": 0.0007991442517902528,
+        "steered_accuracy_by_condition": {
+          "native": 0.7230046948356808,
+          "random": 0.7323943661971831,
+          "shared": 0.7323943661971831
+        }
+      },
+      "0.1000": {
+        "baseline_accuracy": 0.7323943661971831,
+        "baseline_valid_label_rate": 1.0,
+        "generic_native_shift_mean_logits": 2.7625366816445003,
+        "n_sentences": 35,
+        "native_minus_random_specificity_mean_logits": 0.002000404539562403,
+        "practical_specificity_gate_at_dose": false,
+        "ratio_95_ci": [
+          0.000509568208689681,
+          0.0009182112429253235
+        ],
+        "specificity_95_ci": [
+          0.0014020085334777832,
+          0.0025607017108372236
+        ],
+        "specificity_fraction_of_generic_shift": 0.0007241187249581024,
+        "steered_accuracy_by_condition": {
+          "native": 0.6713615023474179,
+          "random": 0.7323943661971831,
+          "shared": 0.6619718309859155
+        }
+      },
+      "0.2000": {
+        "baseline_accuracy": 0.7323943661971831,
+        "baseline_valid_label_rate": 1.0,
+        "generic_native_shift_mean_logits": 5.281829652332124,
+        "n_sentences": 35,
+        "native_minus_random_specificity_mean_logits": 0.003118592216855003,
+        "practical_specificity_gate_at_dose": false,
+        "ratio_95_ci": [
+          0.00038297773055800873,
+          0.0007797799833922981
+        ],
+        "specificity_95_ci": [
+          0.002018584183284214,
+          0.004180831227983746
+        ],
+        "specificity_fraction_of_generic_shift": 0.0005904378637955559,
+        "steered_accuracy_by_condition": {
+          "native": 0.5492957746478874,
+          "random": 0.704225352112676,
+          "shared": 0.5492957746478874
+        }
+      }
+    },
+    "model": "smollm2-1.7b",
+    "ratio_vs_log2_dose_slope": {
+      "point_estimate": -6.509336895228033e-05,
+      "sentence_bootstrap_95_ci": [
+        -8.229874041991618e-05,
+        -4.6410234197657996e-05
+      ],
+      "trend_gate_pass": false
+    }
+  }
+}

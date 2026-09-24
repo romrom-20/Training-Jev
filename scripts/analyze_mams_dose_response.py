@@ -46,15 +46,18 @@ def analyze_model(root, model):
             "baseline_valid_label_rate": float(
                 np.mean([row["valid_polarity_token"] for row in baseline])
             ),
-            "native_steered_accuracy_mean": float(
-                np.mean(
-                    [
-                        row["steered_strict_correct"]
-                        for row in effects
-                        if row["condition"] == "native"
-                    ]
+            "steered_accuracy_by_condition": {
+                condition: float(
+                    np.mean(
+                        [
+                            row["steered_strict_correct"]
+                            for row in effects
+                            if row["condition"] == condition
+                        ]
+                    )
                 )
-            ),
+                for condition in ("native", "shared", "random")
+            },
         }
 
     ids = sorted(set.intersection(*(set(caches[d]["groups"]) for d in DOSES)))

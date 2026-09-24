@@ -67,12 +67,26 @@ service or price labels, so that conflict slice remains descriptive. The benchma
 76% positive-labeled; positive steering raises aggregate accuracy slightly while
 reducing accuracy on negative cases. See the [014 results and audit](results/natural-aspect-selectivity-v1/README.md).
 
-**LessWrong decision: still not yet.** The natural-language test supports generic
-sentiment-score movement more than aspect-specific control, and its cleanest conflict
-subset is small. That makes this a useful negative/diagnostic result, not yet the
-unexpected finding I would want to explain publicly. The next valuable step is another
-independent dataset with substantially more within-review polarity conflicts, while
-keeping the already-frozen directions and endpoint. **The aim is a reliable empirical
+Experiment 015 used MAMS, a benchmark designed with multiple aspects and differing
+polarities in the same review. Across 35 eligible test sentences, 71 queries and 18
+conflict sentences, the frozen directions produced a positive target-matched residual
+in both models: +0.00903 logits for Qwen and +0.00113 for SmolLM2, both above zero under
+sentence bootstrap. Yet these were only 0.38% and 0.08% of the generic sentiment shift,
+far below the prespecified 5% practical threshold. Experiment 016 tested five doses
+(1.25%–20%) on the same held-out sentences. The specificity fraction fell with dose in
+both models (bootstrap slope CI entirely below zero), and no dose met the practical
+threshold. At 20%, SmolLM2 strict answer accuracy fell from 73.2% to 54.9%. See the
+[015 result bundle](results/mams-aspect-selectivity-v1/README.md) and
+[016 dose-response bundle](results/mams-dose-response-v1/README.md).
+
+The MAMS result is a small, consistent score-level residual paired with a clear
+failure of useful selectivity: stronger intervention mostly amplifies generic valence
+and eventually damages answers. It is more informative than the SemEval transfer alone,
+but 35 sentences in one dataset and two small instruction models do not establish a
+general mechanism or a field-level result. **LessWrong decision: not yet.** The next test
+should localize where the residual appears (layers 8, 16 and 24 already have cached
+training activations), then seek an independent natural benchmark with more within-review
+polarity conflicts before making a broader claim. **The aim is a reliable empirical
 contribution, not a funding pitch.**
 
 ## What has actually run

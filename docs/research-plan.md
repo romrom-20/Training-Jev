@@ -207,9 +207,27 @@ general positive bias. Full rows, manifests and checksums are in the
 
 The curiosity-driven question therefore got a useful but not exciting answer: the
 synthetic directions transfer as a sentiment-score bias, while practically meaningful
-aspect selectivity does not replicate across these two small models. Do not write a
-LessWrong post yet. The next useful test would keep the directions fixed but use an
-independent benchmark with many more within-review polarity conflicts, followed by a
-second model-family replication. Revisit writing only if this produces a clear,
-surprising effect or a well-supported explanation for the selectivity failure, beyond
-known answer-encoding confounds.
+aspect selectivity remains very small. Experiment 015 then moved the frozen directions
+to MAMS-ACSA, designed to include reviews with different polarities across aspects.
+Across 35 eligible sentences and 18 conflict sentences, both models showed a positive
+native-minus-random aspect-specific score residual (+0.00903 logits for Qwen, +0.00113
+for SmolLM2), but these were only 0.38% and 0.08% of the generic shifts. Both missed
+the 5% practical gate. See the [015 bundle](../results/mams-aspect-selectivity-v1/README.md).
+
+Experiment 016 tested whether dose could reveal a stronger aspect-specific component.
+Across 1.25%–20% of the training activation norm, the specificity fraction decreased
+with dose in both models; both sentence-bootstrap slope intervals were below zero. No
+dose crossed the 5% threshold. At 20%, SmolLM2 accuracy dropped from 73.2% to 54.9%.
+This exploratory follow-up reuses the same MAMS sentences and is not an independent
+replication. See the [016 bundle](../results/mams-dose-response-v1/README.md).
+
+The result is an empirical asymmetry worth probing: target-matched residuals are
+detectable on a conflict-rich benchmark, but dose amplifies generic valence faster than
+target specificity. It is too small and too benchmark-bound to call a field result.
+The next experiment should compare layers 8, 16 and 24 using the cached training
+activations, with per-layer direction norms and identical MAMS prompts and controls.
+Layer choice is known to affect steering; the useful question here is whether the
+aspect-specific fraction, rather than overall steering efficacy, varies by layer. If a
+layer shows a larger residual, confirm it on a separately preregistered benchmark before
+interpreting it. LessWrong remains premature until that result is both practically
+meaningful and independently replicated, or a robust failure mechanism is established.

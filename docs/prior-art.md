@@ -275,3 +275,28 @@ does not yet add a sufficiently surprising mechanism or a strong naturalistic ef
 **The current evidence does not justify a LessWrong post.** Reconsider after an
 independent dataset supplies many more same-review polarity conflicts and a replicated
 specificity effect or a compelling failure mechanism.
+
+## Conflict-rich transfer and intervention dose
+
+Jiang et al.'s [MAMS benchmark](https://aclanthology.org/D19-1654/) deliberately
+constructs multi-aspect reviews whose aspect polarities can disagree, making it a
+stronger stress test for aspect binding than the small conflict slice in SemEval-2014.
+Experiments 015–016 transfer the already-trained directions to its category-level test
+annotations; they do not train on MAMS text. On 35 eligible reviews, the native-minus-
+random diagonal/off-diagonal score contrast is positive in both small models, including
+the 18 conflict reviews, but the full-slice estimate is only 0.08%–0.38% of the broad
+positive-score movement. The five-dose follow-up finds that this fraction declines
+with dose in both models and remains far below the preregistered practical threshold.
+At the largest dose, answer accuracy also falls sharply for SmolLM2. The direction and
+size of these estimates are specific to the mapped food/service/price categories, the
+two instruction checkpoints and the next-token polarity-score endpoint.
+
+Layer choice is a plausible mechanism to test next, but is not itself a novelty claim.
+Stoehr et al.'s [Activation Scaling for Steering and Interpreting Language
+Models](https://arxiv.org/abs/2410.04962) explicitly studies intervention points across
+layers and optimizes where to intervene. The local open question is narrower: whether
+the *fraction of a steering effect that is target-aspect-specific* varies by layer on
+human-annotated conflicting reviews, after matching dose to each layer's training
+activation norm. Layers 8, 16 and 24 are already cached for both current models. A
+layer-wise result would be exploratory until it survives a new benchmark and model
+family; selecting whichever layer looks best on MAMS would be post-selection.
