@@ -320,3 +320,18 @@ scores, not sampled generations. The result warrants a narrowly scoped research 
 if all limitations remain explicit; it does not establish a general layer mechanism.
 See the [018 preregistration](experiments/018-independent-tripadvisor-layer16.md) and
 [audited result bundle](../results/tripr-layer-confirmation-v1/README.md).
+
+Experiment 019 tested which part of the layer-16 direction carries this specificity.
+Across the same 187 TripR sentences, its orthogonal aspect residual exceeded both the
+shared sentiment projection and a norm-matched random residual in Qwen and SmolLM2.
+Residual-minus-random specificity was +0.01472 logits (95% paired sentence-bootstrap
+CI [+0.00468, +0.02514]) for Qwen and +0.00449 ([+0.00319, +0.00580]) for SmolLM2;
+the shared component produced broad polarity shifts but negligible selectivity. This
+is a suggestive natural-review follow-up to the project's earlier synthetic
+shared/residual decomposition (011), not a novel decomposition technique or an
+independent replication. It reuses the 018 reviews and compares against only one random
+residual draw per model, so random-control sampling variation is not reflected in the
+sentence intervals. A preregistered multi-seed random-residual ensemble is the next
+check before treating this as a robust mechanism. Results are in the
+[019 protocol](experiments/019-tripr-shared-residual-layer16.md) and
+[audited bundle](../results/tripr-component-decomposition-v1/README.md).

@@ -104,8 +104,13 @@ the endpoint is next-token sentiment scores at one dose on one independent resta
 corpus. The asymmetric effect and the much larger generic shifts at layer 24 are
 interesting enough for a carefully scoped LessWrong research post, provided it centers
 the small-model limits and the failed cross-model practical gate. **LessWrong decision:
-worth drafting, not a strong mechanistic or field-level claim.** See the
-[018 protocol and audited result bundle](results/tripr-layer-confirmation-v1/README.md).
+worth drafting as a bounded result, not as a strong mechanistic claim.** A component
+follow-up (019) found that the layer-16 aspect residual beats both the shared sentiment
+component and a norm-matched random residual in both models; the residual itself causes
+almost no generic sentiment shift. That is a more compelling mechanism lead, but the
+random control uses one draw and 019 reuses the 018 reviews, so a multi-seed control test
+is underway before strengthening the claim. See the [018 results](results/tripr-layer-confirmation-v1/README.md)
+and [019 decomposition](results/tripr-component-decomposition-v1/README.md).
 
 ## What has actually run
 

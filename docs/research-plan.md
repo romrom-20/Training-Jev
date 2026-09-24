@@ -253,7 +253,24 @@ This cross-benchmark confirmation makes a narrowly framed LessWrong research pos
 worth drafting: the result is surprising enough to discuss as a replicated layer-
 localization pattern, especially its model asymmetry, while the failed SmolLM2 practical
 gate and score-only endpoint must remain central. It does not support a general
-mechanistic claim. Before making that claim, test a third architecture family and
-separate layer-specific aspect selectivity from layer-specific generic amplification;
-then test whether score changes predict generated responses under a fixed prompt and
-answer-encoding control. Keep the current directions frozen and publish all outcomes.
+mechanistic claim.
+
+Experiment 019 decomposes each layer-16 direction into a shared sentiment projection
+and an orthogonal residual, then compares both with norm-matched random residuals on
+the same 187 TripR sentences. The residual-specificity contrast passed its frozen rule
+in both models: residual minus shared was +0.02797 logits for Qwen (95% paired CI
+[+0.02105, +0.03547]) and +0.00655 for SmolLM2 ([+0.00565, +0.00746]); residual minus
+random residual was +0.01472 ([+0.00468, +0.02514]) and +0.00449 ([+0.00319, +0.00580]),
+respectively. The shared component generated the broad polarity shift but essentially
+no aspect selectivity. The residual had near-zero generic shift. The pattern is
+mechanistically suggestive, but the study reuses the 018 benchmark, and each model has
+only one norm-matched random-residual draw; its sentence-bootstrap intervals do not
+capture variation across random controls. See the
+[019 preregistration](experiments/019-tripr-shared-residual-layer16.md) and
+[audited bundle](../results/tripr-component-decomposition-v1/README.md).
+
+The next test should repeat the random-residual control across a frozen seed ensemble
+and test whether the learned residual beats the control distribution in both models.
+Only after that control-geometry check should we draft around the mechanism lead; a
+third architecture family and a generated-response endpoint remain necessary before a
+general claim. Keep directions frozen and publish all control seeds, not only the mean.

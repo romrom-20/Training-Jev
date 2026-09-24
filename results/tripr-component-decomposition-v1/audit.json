@@ -1,0 +1,205 @@
+{
+  "checks_passed": true,
+  "experiment": 19,
+  "models": {
+    "qwen-1.5b": {
+      "checks": {
+        "baseline_hash_matches": true,
+        "baseline_matches_experiment_018": true,
+        "baseline_prompt_ids_match": true,
+        "clean_capture_commit": true,
+        "component_norms_match_definition": true,
+        "conflict_count_matches": true,
+        "dataset_hash_matches": true,
+        "dataset_helper_hash_matches": true,
+        "decomposition_code_hash_matches": true,
+        "direction_helper_hash_matches": true,
+        "effect_ids_unique": true,
+        "effects_hash_matches": true,
+        "factorial_complete": true,
+        "layer_and_dose_match_protocol": true,
+        "local_device": true,
+        "prompt_count_matches": true,
+        "protocol_hash_matches": true,
+        "review_text_absent": true,
+        "runner_hash_matches": true,
+        "sentence_count_matches": true,
+        "source_activation_hash_matches": true
+      },
+      "manifest": {
+        "baseline_sha256": "83990b643f5272116172a05d3f9995ba18cfe77dffdd79ff63991ac86bc2be41",
+        "component_l2_norms": {
+          "native": [
+            1.0000001192092896,
+            1.000000238418579,
+            0.9999998211860657
+          ],
+          "random_residual": [
+            0.28698763251304626,
+            0.3321631848812103,
+            0.3691009283065796
+          ],
+          "residual": [
+            0.28698763251304626,
+            0.33216315507888794,
+            0.3691009283065796
+          ],
+          "shared": [
+            0.9579343795776367,
+            0.9432221055030823,
+            0.9293893575668335
+          ]
+        },
+        "conditions": [
+          "native",
+          "shared",
+          "residual",
+          "random_residual"
+        ],
+        "dataset_helper_sha256": "44fefcd5e61099a5da4e880d69f14f3d280f08f8e2cfb05e0474b85bf5b87b95",
+        "dataset_xml_sha256": "3d5d5e24cf57d617266bf048968a69baaad0087945a4ec20a7c19a6e82de8e2d",
+        "decomposition_code_sha256": "b48d1e5341dff0ea857e863d8f16c7144d31f0ab5671926e08c7efbc34a44595",
+        "device": "mps",
+        "direction_helper_sha256": "44a8bbdb58ca29fa02e797998f6633f40560bca88f2dbdba2c4af56c0081b857",
+        "dose_fraction_of_training_activation_norm": 0.05,
+        "dose_l2": 2.4411304473876956,
+        "dtype": "float32",
+        "effects_sha256": "2bbe51ce4395e1898385d68368dce0c6427ab54bab0b2a3781818c5dc59e624d",
+        "layer": 16,
+        "model": {
+          "family": "Qwen2.5",
+          "layers": [
+            8,
+            16,
+            24
+          ],
+          "model": "Qwen/Qwen2.5-1.5B-Instruct",
+          "name": "qwen-1.5b",
+          "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+        },
+        "n_conflict_sentences": 29,
+        "n_prompts": 385,
+        "n_sentences": 187,
+        "protocol_sha256": "6cc2b5e54bfad3f66662f0521ee4625d624d86745ab19576f808c99ef6d1c73c",
+        "provenance": {
+          "dirty_worktree": false,
+          "git_commit": "5f519831028a734c0d59cbef872667a45d6db20d",
+          "packages": {
+            "numpy": "2.5.3",
+            "scikit-learn": "1.9.1",
+            "torch": "2.14.0",
+            "transformers": "4.57.6"
+          },
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "python": "3.12.14",
+          "source_sha256": "37a4cc649cddeb1cf2a09e0c95ab642b6addbe5871cac7170613d55d840ca72b"
+        },
+        "random_residual_seed": 20261001,
+        "runner_sha256": "fc66f8fe6626d6c8cc651ebaec2722b3edf271b6e2e44cbca4428b792501f9d2",
+        "source_activation_sha256": "0d14bf5864b41ae377b3f43010c214e5904ea644a0f2e7526a5207828e1e837e",
+        "source_dataset_sha256": "f5c29870f94cde2726a5c0f7d6a07d10846811d3e039a6cd2f720501b8c066d3",
+        "source_manifest_activation_sha256": "0d14bf5864b41ae377b3f43010c214e5904ea644a0f2e7526a5207828e1e837e"
+      }
+    },
+    "smollm2-1.7b": {
+      "checks": {
+        "baseline_hash_matches": true,
+        "baseline_matches_experiment_018": true,
+        "baseline_prompt_ids_match": true,
+        "clean_capture_commit": true,
+        "component_norms_match_definition": true,
+        "conflict_count_matches": true,
+        "dataset_hash_matches": true,
+        "dataset_helper_hash_matches": true,
+        "decomposition_code_hash_matches": true,
+        "direction_helper_hash_matches": true,
+        "effect_ids_unique": true,
+        "effects_hash_matches": true,
+        "factorial_complete": true,
+        "layer_and_dose_match_protocol": true,
+        "local_device": true,
+        "prompt_count_matches": true,
+        "protocol_hash_matches": true,
+        "review_text_absent": true,
+        "runner_hash_matches": true,
+        "sentence_count_matches": true,
+        "source_activation_hash_matches": true
+      },
+      "manifest": {
+        "baseline_sha256": "0e389fecabb1013e663823772b2c8c6b07b599ea475d1c2d7cce11f0a9e76b3b",
+        "component_l2_norms": {
+          "native": [
+            1.0000001192092896,
+            1.000000238418579,
+            1.0
+          ],
+          "random_residual": [
+            0.302070677280426,
+            0.2727043032646179,
+            0.2633386552333832
+          ],
+          "residual": [
+            0.302070677280426,
+            0.2727043032646179,
+            0.2633386552333832
+          ],
+          "shared": [
+            0.9532856941223145,
+            0.9620983004570007,
+            0.9647035002708435
+          ]
+        },
+        "conditions": [
+          "native",
+          "shared",
+          "residual",
+          "random_residual"
+        ],
+        "dataset_helper_sha256": "44fefcd5e61099a5da4e880d69f14f3d280f08f8e2cfb05e0474b85bf5b87b95",
+        "dataset_xml_sha256": "3d5d5e24cf57d617266bf048968a69baaad0087945a4ec20a7c19a6e82de8e2d",
+        "decomposition_code_sha256": "b48d1e5341dff0ea857e863d8f16c7144d31f0ab5671926e08c7efbc34a44595",
+        "device": "mps",
+        "direction_helper_sha256": "44a8bbdb58ca29fa02e797998f6633f40560bca88f2dbdba2c4af56c0081b857",
+        "dose_fraction_of_training_activation_norm": 0.05,
+        "dose_l2": 12.453827285766602,
+        "dtype": "float32",
+        "effects_sha256": "4231e08285e4636cbfa5e167d5dfac6c2908d4f6f3b9f48e0fc0b429cba7c96a",
+        "layer": 16,
+        "model": {
+          "family": "SmolLM2",
+          "layers": [
+            8,
+            16,
+            24
+          ],
+          "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+          "name": "smollm2-1.7b",
+          "revision": "31b70e2e869a7173562077fd711b654946d38674"
+        },
+        "n_conflict_sentences": 29,
+        "n_prompts": 385,
+        "n_sentences": 187,
+        "protocol_sha256": "6cc2b5e54bfad3f66662f0521ee4625d624d86745ab19576f808c99ef6d1c73c",
+        "provenance": {
+          "dirty_worktree": false,
+          "git_commit": "5f519831028a734c0d59cbef872667a45d6db20d",
+          "packages": {
+            "numpy": "2.5.3",
+            "scikit-learn": "1.9.1",
+            "torch": "2.14.0",
+            "transformers": "4.57.6"
+          },
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "python": "3.12.14",
+          "source_sha256": "37a4cc649cddeb1cf2a09e0c95ab642b6addbe5871cac7170613d55d840ca72b"
+        },
+        "random_residual_seed": 20261001,
+        "runner_sha256": "fc66f8fe6626d6c8cc651ebaec2722b3edf271b6e2e44cbca4428b792501f9d2",
+        "source_activation_sha256": "cf285b62562b608a43b968c7d08a6beb2bec40d592fd00cd376c5871ed1601de",
+        "source_dataset_sha256": "5bd46eb6a67372f17be7a24f8d0620f8e12a4153f40c0bf8e2c88e20fe764cea",
+        "source_manifest_activation_sha256": "cf285b62562b608a43b968c7d08a6beb2bec40d592fd00cd376c5871ed1601de"
+      }
+    }
+  },
+  "same_capture_commit": true
+}
