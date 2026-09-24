@@ -1,0 +1,168 @@
+{
+  "analysis_type": "descriptive; sentence-cluster bootstrap intervals are exploratory",
+  "audit": {
+    "checks": {
+      "expected_factorial_complete": true,
+      "frozen_source_gate_passed": true,
+      "open_candidate_margins_reproduce_025": true,
+      "raw_text_absent": true,
+      "same_model_item_ids_and_gold_as_025": true
+    },
+    "checks_passed": true
+  },
+  "bootstrap": {
+    "repetitions": 10000,
+    "seed": 20261024
+  },
+  "experiment": 27,
+  "limitation": "A single judge was evaluated on source reviews, not human-labeled generated answers. Low agreement can reflect judge distribution shift, generation errors, or both.",
+  "models": {
+    "granite-3.1-2b": {
+      "by_category": {
+        "food": {
+          "gold_positive_rate": 0.8,
+          "judge_accuracy_all_items": 0.5333333333333333,
+          "judge_parseability": 0.9809523809523809,
+          "n": 105
+        },
+        "price": {
+          "gold_positive_rate": 0.6779661016949152,
+          "judge_accuracy_all_items": 0.6440677966101694,
+          "judge_parseability": 1.0,
+          "n": 59
+        },
+        "service": {
+          "gold_positive_rate": 0.782608695652174,
+          "judge_accuracy_all_items": 0.4492753623188406,
+          "judge_parseability": 1.0,
+          "n": 69
+        }
+      },
+      "candidate_judge_agreement_among_parseable": 0.5194805194805194,
+      "candidate_judge_agreement_sentence_bootstrap_95_ci": [
+        0.4537356268199806,
+        0.5862068965517241
+      ],
+      "candidate_minus_judge_accuracy_paired_sentence_bootstrap_95_ci": [
+        0.32635983263598334,
+        0.47161572052401746
+      ],
+      "candidate_pair_accuracy": 0.9356223175965666,
+      "gold_by_judge_confusion_with_unparsed": [
+        [
+          17,
+          38,
+          0
+        ],
+        [
+          68,
+          108,
+          2
+        ]
+      ],
+      "gold_positive_rate": 0.7639484978540773,
+      "judge_accuracy_all_items": 0.5364806866952789,
+      "judge_parseability": 0.9914163090128756,
+      "judge_positive_rate_among_parseable": 0.6320346320346321,
+      "n": 233
+    },
+    "qwen-1.5b": {
+      "by_category": {
+        "food": {
+          "gold_positive_rate": 0.8,
+          "judge_accuracy_all_items": 0.8761904761904762,
+          "judge_parseability": 1.0,
+          "n": 105
+        },
+        "price": {
+          "gold_positive_rate": 0.6779661016949152,
+          "judge_accuracy_all_items": 0.576271186440678,
+          "judge_parseability": 1.0,
+          "n": 59
+        },
+        "service": {
+          "gold_positive_rate": 0.782608695652174,
+          "judge_accuracy_all_items": 0.9130434782608695,
+          "judge_parseability": 1.0,
+          "n": 69
+        }
+      },
+      "candidate_judge_agreement_among_parseable": 0.7939914163090128,
+      "candidate_judge_agreement_sentence_bootstrap_95_ci": [
+        0.7374947033898306,
+        0.8478260869565217
+      ],
+      "candidate_minus_judge_accuracy_paired_sentence_bootstrap_95_ci": [
+        0.0858369098712447,
+        0.19047619047619047
+      ],
+      "candidate_pair_accuracy": 0.9484978540772532,
+      "gold_by_judge_confusion_with_unparsed": [
+        [
+          40,
+          15,
+          0
+        ],
+        [
+          29,
+          149,
+          0
+        ]
+      ],
+      "gold_positive_rate": 0.7639484978540773,
+      "judge_accuracy_all_items": 0.8111587982832618,
+      "judge_parseability": 1.0,
+      "judge_positive_rate_among_parseable": 0.703862660944206,
+      "n": 233
+    },
+    "smollm2-1.7b": {
+      "by_category": {
+        "food": {
+          "gold_positive_rate": 0.8,
+          "judge_accuracy_all_items": 0.9523809523809523,
+          "judge_parseability": 1.0,
+          "n": 105
+        },
+        "price": {
+          "gold_positive_rate": 0.6779661016949152,
+          "judge_accuracy_all_items": 0.6610169491525424,
+          "judge_parseability": 1.0,
+          "n": 59
+        },
+        "service": {
+          "gold_positive_rate": 0.782608695652174,
+          "judge_accuracy_all_items": 0.927536231884058,
+          "judge_parseability": 0.9710144927536232,
+          "n": 69
+        }
+      },
+      "candidate_judge_agreement_among_parseable": 0.8008658008658008,
+      "candidate_judge_agreement_sentence_bootstrap_95_ci": [
+        0.7400881057268722,
+        0.8552631578947368
+      ],
+      "candidate_minus_judge_accuracy_paired_sentence_bootstrap_95_ci": [
+        -0.06356608366390196,
+        0.06034482758620696
+      ],
+      "candidate_pair_accuracy": 0.871244635193133,
+      "gold_by_judge_confusion_with_unparsed": [
+        [
+          32,
+          21,
+          2
+        ],
+        [
+          7,
+          171,
+          0
+        ]
+      ],
+      "gold_positive_rate": 0.7639484978540773,
+      "judge_accuracy_all_items": 0.871244635193133,
+      "judge_parseability": 0.9914163090128756,
+      "judge_positive_rate_among_parseable": 0.8311688311688312,
+      "n": 233
+    }
+  }
+}

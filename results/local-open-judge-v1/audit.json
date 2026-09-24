@@ -1,0 +1,10 @@
+{
+  "checks": {
+    "expected_factorial_complete": true,
+    "frozen_source_gate_passed": true,
+    "open_candidate_margins_reproduce_025": true,
+    "raw_text_absent": true,
+    "same_model_item_ids_and_gold_as_025": true
+  },
+  "checks_passed": true
+}

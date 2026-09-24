@@ -1,5 +1,6 @@
 """Run experiment 027's conditional open-answer judge phase."""
 
+import argparse
 import gc
 import hashlib
 import json
@@ -93,9 +94,9 @@ def summarize(rows):
     }
 
 
-def run():
-    if OUT.exists():
-        raise FileExistsError(f"Refusing to overwrite {OUT}")
+def run(output=OUT):
+    if output.exists():
+        raise FileExistsError(f"Refusing to overwrite {output}")
     screen = json.loads(SCREEN.read_text())
     if not screen["frozen_gate_passed"]:
         raise RuntimeError("Conditional phase forbidden: source-label gate failed")
@@ -179,8 +180,8 @@ def run():
         raise ValueError("Incomplete conditional judge factorial")
     if any(key in row for row in rows for key in ("answer", "text", "user", "review")):
         raise ValueError("Generated or source text leaked to result rows")
-    OUT.mkdir(parents=True)
-    (OUT / "analysis.json").write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
+    output.mkdir(parents=True)
+    (output / "analysis.json").write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
     audit = {
         "checks": {
             "frozen_source_label_gate_passed": bool(screen["frozen_gate_passed"]),
@@ -199,9 +200,11 @@ def run():
         }
     }
     audit["checks_passed"] = all(audit["checks"].values())
-    (OUT / "audit.json").write_text(json.dumps(audit, indent=2, sort_keys=True) + "\n")
+    (output / "audit.json").write_text(json.dumps(audit, indent=2, sort_keys=True) + "\n")
     print(json.dumps(summary, indent=2), flush=True)
 
 
 if __name__ == "__main__":
-    run()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--output", type=Path, default=OUT)
+    run(parser.parse_args().output)

@@ -387,3 +387,18 @@ from 025 were scored and no substantive generation claim follows. See the
 [`evaluator-feasibility pilot`](../results/freeform-evaluator-feasibility-v1/README.md).
 The next step needs either human-labeled short aspect summaries or a local judge that
 passes a frozen, held-out semantic validation before its outputs are used.
+
+Experiment 027 tested that next route. A cached Qwen2.5-3B judge passed the source
+SemEval screen (96.1% accuracy, 98.2% negative recall), so the frozen protocol's
+conditional phase ran on the same 233 prompts and three model families. Against
+review-level gold labels, judge-estimated open-answer accuracy was 53.6% for Granite,
+81.1% for Qwen2.5-1.5B, and 87.1% for SmolLM2. Candidate-pair accuracy was 93.6%,
+94.8%, and 87.1%. All 699 candidate margins exactly reproduced experiment 025; the
+score/judge accuracy gap was +32.6 to +47.2 points for Granite and +8.6 to +19.0 for
+Qwen under exploratory sentence-cluster bootstrap intervals, while SmolLM2's interval
+crossed zero. The key caveat is that source-text judge validation does not validate
+judging model-written answers. This could be judge distribution shift, genuine answer
+errors, or both. The full audit and limitations are in the
+[`027 result bundle`](../results/local-open-judge-v1/README.md). The next discriminating
+step is a second, independently validated judge or blinded human coding on a small
+stratified sample. No publication decision follows from 027.
