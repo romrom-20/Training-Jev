@@ -322,3 +322,24 @@ beneficial generated-answer effect. A more useful pivot is to identify prompts w
 the model itself is uncertain about the target aspect, then preregister a test with
 adequate baseline headroom and a behavior-first outcome. Avoid escalating dose alone:
 the current dose range only produced a harmful answer change.
+
+Experiment 023 checked whether candidate-pair scores track generated labels on a
+different benchmark before intervention. On 233 SemEval aspect prompts, the pairwise
+margin selected the same label as greedy generation on 232/233 prompts (99.6%,
+sentence-bootstrap 95% CI [98.7%, 100%]); candidate-pair and generated accuracies
+were 97.4% and 97.0%. All-vocabulary top-1 accuracy was 72.1%, showing why it should
+not be conflated with forced-choice pair accuracy. The label-free absolute-margin
+error AUC was 0.70 across seven errors; the initially specified gold-aligned AUC was
+invalid because it used the reference label and has been replaced via the documented
+[analysis amendment](experiments/023-analysis-amendment.md). This is an observational
+result for one model and one constrained sentiment task. Rank-calibration and
+verbalized-probability research already study relationships between confidence
+signals and generated answer quality, so the result does not establish a new
+measurement principle. See the [`023 audited bundle`](../results/granite-semeval-margin-generation-v1/README.md).
+
+**LessWrong decision: wait.** The finding is a useful measurement check, but near-
+perfect agreement is expected for explicit two-label prompts, and the relevant
+confidence/generation relationship has prior work. Next, test the same frozen prompt
+set on the already cached Qwen and SmolLM2 families. If candidate-pair/generation
+agreement varies across families, investigate answer formatting and label-token
+calibration before making any broader claim.

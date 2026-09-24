@@ -1,0 +1,51 @@
+{
+  "analysis_code_sha256": "2be86d40b2dd7607c92ae4ea34d5842e27bd716e481f31e0dec894d3630f10f5",
+  "checks": {
+    "analysis_recomputes": true,
+    "clean_capture_commit": true,
+    "dataset_and_protocol_hashes": true,
+    "frozen_stimulus_filter_and_unique_ids": true,
+    "model_checkpoint_and_local_device": true,
+    "raw_review_and_generation_text_absent": true,
+    "runner_hash_matches": true
+  },
+  "checks_passed": true,
+  "experiment": 23,
+  "manifest": {
+    "candidate_token_ids": {
+      "negative": 15272,
+      "positive": 18502
+    },
+    "dataset": "SemEval-2014 Restaurants test gold subset",
+    "dataset_repository": "https://github.com/HSLCY/ABSA-BERT-pair",
+    "dataset_xml_sha256": "f21509cfa37e16534cd5b2da043be487355b64ef48fe8d6aaacaeca6b49cc0fb",
+    "device": "mps",
+    "dtype": "float32",
+    "model": {
+      "family": "Granite3.1",
+      "layers": [
+        23
+      ],
+      "model": "ibm-granite/granite-3.1-2b-instruct",
+      "name": "granite-3.1-2b",
+      "revision": "bbc2aed595bd38bd770263dc3ab831db9794441d"
+    },
+    "n_prompts": 233,
+    "n_sentences": 112,
+    "protocol_sha256": "e6e8b994da7f92a2a2b411fd3e8655f55b1e84fdb7ad38fb6a26807c614dbb01",
+    "provenance": {
+      "dirty_worktree": false,
+      "git_commit": "cf1933fdefb886b5880c96e80ef1b1da4fcfa9c4",
+      "packages": {
+        "numpy": "2.5.3",
+        "scikit-learn": "1.9.1",
+        "torch": "2.14.0",
+        "transformers": "4.57.6"
+      },
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "python": "3.12.14",
+      "source_sha256": "4b3e83f6f402d69e72b7b5bd92eb7db8f518424bb93294bb465dc546c2e76cbe"
+    },
+    "runner_sha256": "5beaafdff77257fbadde173c54f7cdbd01e40544909058daff8356bed299c075"
+  }
+}

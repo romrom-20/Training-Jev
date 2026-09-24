@@ -368,3 +368,24 @@ improve generated decisions and did not beat random residuals. This is a local n
 for one model, one benchmark subset and greedy decoding, not evidence that internal
 representations can never affect behavior. See the [022 frozen protocol](experiments/022-granite-generated-dose-response.md)
 and [audited bundle](../results/granite-tripr-generation-dose-response-v1/README.md).
+
+Experiment 023 tested whether the positive-versus-negative candidate logit margin
+predicts the label Granite generates on another restaurant-review set. On 233 SemEval
+aspect prompts, candidate-pair decisions and generated labels agreed on 232 (99.6%,
+sentence-bootstrap 95% CI [98.7%, 100%]); their respective gold accuracies were 97.4%
+and 97.0%. Unrestricted vocabulary top-1 was lower at 72.1%. This contrast is a useful
+measurement warning: forced-choice pair accuracy is not all-vocabulary next-token
+accuracy. The result is observational and expected to be high for a prompt that
+explicitly asks for one of two labels; it does not show that a margin intervention
+controls generation.
+
+The broader relationship between uncertainty scores and generated answer quality
+already has direct prior work, including Huang et al.'s [rank-calibration framework](https://aclanthology.org/2024.emnlp-main.18/),
+and Wang et al.'s [calibration of verbalized probabilities](https://arxiv.org/abs/2410.06707).
+These studies are adjacent rather than exact replications of the same-token-pair
+comparison. The project's independent SemEval result is therefore a useful sanity
+check, not a novelty claim. Also, an initial secondary error-AUC used a gold-aligned
+margin and thus leaked the reference label; the corrected label-free absolute-margin
+AUC is 0.70 over seven errors, with no interval. The correction is documented in the
+[analysis amendment](experiments/023-analysis-amendment.md). See the [023 protocol](experiments/023-granite-score-generation-alignment.md)
+and [audited bundle](../results/granite-semeval-margin-generation-v1/README.md).

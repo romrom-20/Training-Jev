@@ -84,10 +84,10 @@ def main():
         f"- Exact one-word generation rate: {result['generated_exact_one_word_rate']:.1%}.",
         f"- Candidate-pair accuracy: {result['candidate_pair_accuracy']:.1%}; generated accuracy: {result['generated_strict_accuracy']:.1%}; unrestricted next-token top-1 accuracy: {result['all_vocabulary_top1_accuracy']:.1%}.",
         f"- Candidate-pair/generation agreement: {result['candidate_pair_generation_agreement']:.1%} (sentence-bootstrap 95% CI [{result['candidate_pair_generation_agreement_sentence_bootstrap_95_ci'][0]:.1%}, {result['candidate_pair_generation_agreement_sentence_bootstrap_95_ci'][1]:.1%}]).",
-        f"- Generation errors: {result['n_generation_errors']}; secondary error-detection AUC: {result['gold_aligned_margin_error_detection_auc_secondary']}.",
+        f"- Generation errors: {result['n_generation_errors']}; exploratory error-detection AUC using negative absolute candidate margin: {result['absolute_margin_error_detection_auc_secondary']:.3f} (no interval; seven errors).",
         f"- Frozen measurement gate: {'PASS' if result['primary_measurement_gate_passed'] else 'FAIL'}.",
         "",
-        "See the [frozen protocol](../../docs/experiments/023-granite-score-generation-alignment.md), analysis, audit, and data attribution.",
+        "The original protocol's gold-aligned error score used the reference label; the corrected label-free absolute-margin analysis is documented in the [analysis amendment](../../docs/experiments/023-analysis-amendment.md). See also the [frozen protocol](../../docs/experiments/023-granite-score-generation-alignment.md), audit, and data attribution.",
         "",
     ]
     (args.output / "README.md").write_text("\n".join(lines))

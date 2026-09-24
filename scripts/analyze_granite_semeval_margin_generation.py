@@ -47,10 +47,12 @@ def analyze(root=ROOT):
     all_top1_correct = np.asarray(
         [row["all_vocabulary_top1_correct"] for row in outcomes], dtype=int
     )
-    gold_aligned_margin = np.where(labels == 1, margins, -margins)
+    # Absolute pairwise margin is available at prediction time. A gold-aligned
+    # margin would encode correctness directly and is therefore not a valid
+    # predictor of generation error.
     error_auc = None
     if len(set(1 - generated_correct)) == 2:
-        error_auc = float(roc_auc_score(1 - generated_correct, -gold_aligned_margin))
+        error_auc = float(roc_auc_score(1 - generated_correct, -np.abs(margins)))
     validity = float(np.mean([row["generated_valid_exact_one_word"] for row in outcomes]))
     primary_pass = validity >= 0.95 and ci[0] > 0.5
     result = {
@@ -62,7 +64,7 @@ def analyze(root=ROOT):
         "all_vocabulary_top1_accuracy": float(np.mean(all_top1_correct)),
         "candidate_pair_generation_agreement": float(np.mean(agreement)) if len(agreement) else None,
         "candidate_pair_generation_agreement_sentence_bootstrap_95_ci": ci,
-        "gold_aligned_margin_error_detection_auc_secondary": error_auc,
+        "absolute_margin_error_detection_auc_secondary": error_auc,
         "n_generation_errors": int(np.sum(1 - generated_correct)),
         "n_valid_generations": len(valid),
         "primary_measurement_gate_passed": primary_pass,

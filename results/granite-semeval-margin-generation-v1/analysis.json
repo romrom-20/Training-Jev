@@ -1,0 +1,29 @@
+{
+  "absolute_margin_error_detection_auc_secondary": 0.7003792667509481,
+  "all_vocabulary_top1_accuracy": 0.721030042918455,
+  "bootstrap_reps": 10000,
+  "bootstrap_seed": 20261024,
+  "candidate_pair_accuracy": 0.9742489270386266,
+  "candidate_pair_generation_agreement": 0.9957081545064378,
+  "candidate_pair_generation_agreement_sentence_bootstrap_95_ci": [
+    0.9869565217391304,
+    1.0
+  ],
+  "generated_exact_one_word_rate": 1.0,
+  "generated_strict_accuracy": 0.9699570815450643,
+  "manifest_model": {
+    "family": "Granite3.1",
+    "layers": [
+      23
+    ],
+    "model": "ibm-granite/granite-3.1-2b-instruct",
+    "name": "granite-3.1-2b",
+    "revision": "bbc2aed595bd38bd770263dc3ab831db9794441d"
+  },
+  "n_generation_errors": 7,
+  "n_prompts": 233,
+  "n_sentences": 112,
+  "n_valid_generations": 233,
+  "noncausal_observational_test": true,
+  "primary_measurement_gate_passed": true
+}
