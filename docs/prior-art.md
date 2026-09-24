@@ -1,6 +1,6 @@
 # Prior art and the actual research gap
 
-Literature check: **22 September 2026**. Primary abstracts were inspected in ego-browser;
+Literature check: **22 and 24 September 2026**. Primary abstracts were inspected in ego-browser;
 Torrielli et al.'s v2 paper and the original Activation Oracles article were also read.
 This is a targeted search, not an exhaustive novelty review. Publication dates below
 refer to first public versions unless specified. Reported results belong to their authors.
@@ -135,6 +135,12 @@ donor interventions improve our controls but do not bypass this conceptual limit
 (July 2026) constructs conflict cases where correctness and self-judgment separate,
 showing that transfer alone does not establish the intended semantics of a readout.
 Its controlled-disagreement logic is relevant to the interpretation of our probes.
+
+**[Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena — Zheng et al.](https://arxiv.org/abs/2306.05685)**
+(NeurIPS 2023) evaluates LLM judges against human preferences and documents position,
+verbosity and self-enhancement biases. Our source-screened local judges extend none
+of that general evaluator methodology; cross-judge agreement here is a diagnostic,
+not an accuracy guarantee for generated sentiment text.
 
 **[Forecasting Side Effects of Activation Steering — Ong et al.](https://arxiv.org/abs/2608.11227)**
 (2026) studies structured cross-effects and forecasts them from unsteered representations.

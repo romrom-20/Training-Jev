@@ -402,3 +402,18 @@ errors, or both. The full audit and limitations are in the
 [`027 result bundle`](../results/local-open-judge-v1/README.md). The next discriminating
 step is a second, independently validated judge or blinded human coding on a small
 stratified sample. No publication decision follows from 027.
+
+Experiment 028 ran the preregistered cross-family check. A cached Phi-3 Mini judge
+passed the same source-label gate (94.4% accuracy, 98.2% negative recall). Its
+agreement with the Qwen judge on open answers was 59.3% for Granite, 94.1% for Qwen,
+and 72.7% for SmolLM (sentence-cluster intervals are in the
+[`028 bundle`](../results/independent-judge-check-v1/README.md)). Both judges put
+Granite answers near chance against review-level gold; for Qwen their labels were
+highly consistent but only 78–81% accurate; SmolLM agreement was intermediate.
+Candidate-pair scores still matched experiment 025 exactly. This is evidence that
+semantic evaluation of open answers is target-dependent, and that judge agreement
+can be strong without high correctness. It is not yet evidence that answer text is
+wrong, because neither judge saw a human-labeled answer benchmark. LLM-as-a-judge
+biases are prior art; we should not frame the evaluation problem itself as new.
+The next discriminating experiment is a blinded human-coded sample, stratified by
+target and by judge disagreement. LessWrong remains a wait.

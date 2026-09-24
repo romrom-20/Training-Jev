@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "699_unique_rows_and_no_raw_text": true,
+    "dataset_and_runner_hashes_match": true,
+    "frozen_protocol_hash_matches": true,
+    "judge_revision_matches_protocol": true,
+    "margins_and_gold_match_experiment_025": true,
+    "phi_source_gate_recomputed": true,
+    "qwen_labels_match_experiment_027": true,
+    "same_source_screen_items_as_qwen": true,
+    "target_revisions_match_experiment_025": true
+  },
+  "checks_passed": true
+}
