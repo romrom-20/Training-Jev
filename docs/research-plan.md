@@ -377,3 +377,13 @@ was mostly not extractable using the predeclared rule. A next study would need a
 behavior-first outcome for natural completions, with an independently validated
 polarity evaluator and enough baseline errors to test whether score shifts predict
 behavioral changes. The current line does not support a novelty claim.
+
+An exploratory feasibility check trained a small aspect-aware TF-IDF classifier on
+MAMS-ATSA train, then evaluated it on MAMS validation/test and SemEval restaurant
+aspects. It reached 0.793 macro-F1 on MAMS test and 0.786 on SemEval, with 0.709
+negative recall on SemEval. That is too weak to label open generations reliably, and
+source-review transfer does not validate generated-answer judging anyway. No outputs
+from 025 were scored and no substantive generation claim follows. See the
+[`evaluator-feasibility pilot`](../results/freeform-evaluator-feasibility-v1/README.md).
+The next step needs either human-labeled short aspect summaries or a local judge that
+passes a frozen, held-out semantic validation before its outputs are used.
