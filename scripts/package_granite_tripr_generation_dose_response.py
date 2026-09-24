@@ -27,7 +27,7 @@ def audit(analysis):
     outcomes = json.loads((folder / "outcomes.json").read_text())
     baseline = json.loads((folder / "baseline.json").read_text())
     manifest = json.loads((folder / "manifest.json").read_text())
-    stimuli, labels, _ = load_tripr()
+    stimuli, labels, _ = load_tripr(TRIPR_DATA)
     conflicts = {sid for sid, aspects in labels.items() if len(set(aspects.values())) > 1}
     expected_ids = {row["id"] for row in stimuli if row["sentence_id"] in conflicts}
     expected_count = len(DOSES) * len(expected_ids) * (len(CONTROL_SEEDS) + 1)

@@ -305,3 +305,20 @@ See the [`021 audited bundle`](../results/granite-tripr-residual-transfer-v1/REA
 **LessWrong decision: wait.** The useful next experiment is a preregistered generated-
 decision dose response with matched random residuals, reporting candidate-pair and
 all-vocabulary accuracy separately. Do not write up this result as behavioral control.
+
+Experiment 022 ran that dose response on the same 63 conflict prompts with 20
+random-residual seeds at 10%, 20%, and 40% of the training activation norm. At the
+primary 40% dose, trained steering flipped one answer and harmed it; it corrected
+none. Strict accuracy fell from 90.5% to 88.9%, while the random-control mean utility
+was also negative. Trained-minus-random utility was -0.00862 (nested 95% CI
+[-0.04052, +0.01724], rank p=0.9048). The lower doses produced the same harmful flip.
+The behavioral gate failed, with perfect one-word validity but no evidence that
+learned residuals beat random ones. This bounds the tested steering range; it does
+not show that the representation has no behavioral role. See the
+[`022 audited bundle`](../results/granite-tripr-generation-dose-response-v1/README.md).
+
+**LessWrong decision: wait.** Neither the 5% test nor this 10–40% escalation found a
+beneficial generated-answer effect. A more useful pivot is to identify prompts where
+the model itself is uncertain about the target aspect, then preregister a test with
+adequate baseline headroom and a behavior-first outcome. Avoid escalating dose alone:
+the current dose range only produced a harmful answer change.

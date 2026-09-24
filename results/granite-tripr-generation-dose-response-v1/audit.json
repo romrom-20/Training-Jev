@@ -1,0 +1,79 @@
+{
+  "analysis_code_sha256": "33637b5f1c4fdf5fb2bdb106ca177d885c8e8da4ffc4faf919430db29e419e39",
+  "checks": {
+    "all_queries_present_per_arm": true,
+    "analysis_recomputes": true,
+    "complete_prompt_dose_seed_factorial": true,
+    "frozen_doses_and_seed_set": true,
+    "local_inference_and_clean_capture": true,
+    "no_text_or_generated_answers_saved": true,
+    "pinned_model_and_layer": true,
+    "protocol_and_runner_hashes": true,
+    "training_activations_match_021": true,
+    "tripr_and_021_baseline_hashes": true
+  },
+  "checks_passed": true,
+  "experiment": 22,
+  "manifest": {
+    "baseline_generation_sha256": "5df9e3d8ec0919e0afe6d4722d5110ebadb4de98abf4436b940d87b65addd60b",
+    "control_seeds": [
+      20261101,
+      20261102,
+      20261103,
+      20261104,
+      20261105,
+      20261106,
+      20261107,
+      20261108,
+      20261109,
+      20261110,
+      20261111,
+      20261112,
+      20261113,
+      20261114,
+      20261115,
+      20261116,
+      20261117,
+      20261118,
+      20261119,
+      20261120
+    ],
+    "dataset_xml_sha256": "3d5d5e24cf57d617266bf048968a69baaad0087945a4ec20a7c19a6e82de8e2d",
+    "device": "mps",
+    "dose_fractions": [
+      0.1,
+      0.2,
+      0.4
+    ],
+    "dtype": "float32",
+    "layer": 23,
+    "model": {
+      "family": "Granite3.1",
+      "layers": [
+        23
+      ],
+      "model": "ibm-granite/granite-3.1-2b-instruct",
+      "name": "granite-3.1-2b",
+      "revision": "bbc2aed595bd38bd770263dc3ab831db9794441d"
+    },
+    "n_conflict_queries": 63,
+    "n_conflict_sentences": 29,
+    "n_random_seeds": 20,
+    "protocol_sha256": "30ee7e2c9585aad9be60c72e33d5d56f6afe5303753f40540c85c5bc0c36dc9a",
+    "provenance": {
+      "dirty_worktree": false,
+      "git_commit": "e471e55fa5301357814bb1bcfff330a223ecc518",
+      "packages": {
+        "numpy": "2.5.3",
+        "scikit-learn": "1.9.1",
+        "torch": "2.14.0",
+        "transformers": "4.57.6"
+      },
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "python": "3.12.14",
+      "source_sha256": "4b3e83f6f402d69e72b7b5bd92eb7db8f518424bb93294bb465dc546c2e76cbe"
+    },
+    "runner_sha256": "88d5ad57f3a5613ce92d7525021d5fa83296f57edbaaf7406a7a41a9daa36a9d",
+    "training_activation_sha256": "33a123b10644fc8cd3009276aa627b625bb77e5380f6e2fffda18a2505d64e93"
+  }
+}

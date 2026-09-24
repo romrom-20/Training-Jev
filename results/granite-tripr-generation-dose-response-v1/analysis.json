@@ -1,0 +1,133 @@
+{
+  "baseline_generated_accuracy": 0.9047619047619048,
+  "behavioral_gate_passed": false,
+  "dose_results": {
+    "0.1": {
+      "behavioral_gate": false,
+      "nested_sentence_seed_bootstrap_95_ci": [
+        -0.04913793103448276,
+        0.005172413793103448
+      ],
+      "random_seed_mean_utility_change": -0.0034482758620689655,
+      "random_seed_monte_carlo_one_sided_p": 1.0,
+      "random_seed_utility_by_seed": {
+        "20261101": -0.017241379310344827,
+        "20261102": 0.0,
+        "20261103": 0.0,
+        "20261104": 0.0,
+        "20261105": 0.0,
+        "20261106": 0.0,
+        "20261107": 0.0,
+        "20261108": -0.017241379310344827,
+        "20261109": -0.017241379310344827,
+        "20261110": 0.0,
+        "20261111": -0.017241379310344827,
+        "20261112": 0.0,
+        "20261113": 0.0,
+        "20261114": 0.0,
+        "20261115": 0.0,
+        "20261116": 0.0,
+        "20261117": 0.0,
+        "20261118": 0.0,
+        "20261119": 0.0,
+        "20261120": 0.0
+      },
+      "trained_accuracy_gains": 0,
+      "trained_accuracy_harms": 1,
+      "trained_exact_one_word_rate": 1.0,
+      "trained_generated_strict_accuracy": 0.8888888888888888,
+      "trained_label_flips_vs_baseline": 1,
+      "trained_mean_utility_change": -0.017241379310344827,
+      "trained_minus_random_utility": -0.013793103448275862
+    },
+    "0.2": {
+      "behavioral_gate": false,
+      "nested_sentence_seed_bootstrap_95_ci": [
+        -0.04396551724137931,
+        0.011206896551724138
+      ],
+      "random_seed_mean_utility_change": -0.00603448275862069,
+      "random_seed_monte_carlo_one_sided_p": 0.9047619047619048,
+      "random_seed_utility_by_seed": {
+        "20261101": -0.017241379310344827,
+        "20261102": 0.0,
+        "20261103": 0.0,
+        "20261104": 0.0,
+        "20261105": 0.0,
+        "20261106": 0.0,
+        "20261107": -0.017241379310344827,
+        "20261108": -0.034482758620689655,
+        "20261109": -0.017241379310344827,
+        "20261110": -0.017241379310344827,
+        "20261111": -0.017241379310344827,
+        "20261112": 0.017241379310344827,
+        "20261113": 0.0,
+        "20261114": 0.0,
+        "20261115": -0.017241379310344827,
+        "20261116": -0.034482758620689655,
+        "20261117": 0.0,
+        "20261118": 0.0,
+        "20261119": 0.017241379310344827,
+        "20261120": 0.017241379310344827
+      },
+      "trained_accuracy_gains": 0,
+      "trained_accuracy_harms": 1,
+      "trained_exact_one_word_rate": 1.0,
+      "trained_generated_strict_accuracy": 0.8888888888888888,
+      "trained_label_flips_vs_baseline": 1,
+      "trained_mean_utility_change": -0.017241379310344827,
+      "trained_minus_random_utility": -0.011206896551724138
+    },
+    "0.4": {
+      "behavioral_gate": false,
+      "nested_sentence_seed_bootstrap_95_ci": [
+        -0.04051724137931034,
+        0.017241379310344827
+      ],
+      "random_seed_mean_utility_change": -0.008620689655172414,
+      "random_seed_monte_carlo_one_sided_p": 0.9047619047619048,
+      "random_seed_utility_by_seed": {
+        "20261101": -0.017241379310344827,
+        "20261102": -0.034482758620689655,
+        "20261103": 0.017241379310344827,
+        "20261104": -0.017241379310344827,
+        "20261105": 0.0,
+        "20261106": 0.0,
+        "20261107": -0.017241379310344827,
+        "20261108": -0.034482758620689655,
+        "20261109": -0.017241379310344827,
+        "20261110": -0.017241379310344827,
+        "20261111": -0.017241379310344827,
+        "20261112": 0.017241379310344827,
+        "20261113": -0.017241379310344827,
+        "20261114": -0.017241379310344827,
+        "20261115": -0.017241379310344827,
+        "20261116": -0.017241379310344827,
+        "20261117": 0.0,
+        "20261118": 0.0,
+        "20261119": 0.017241379310344827,
+        "20261120": 0.017241379310344827
+      },
+      "trained_accuracy_gains": 0,
+      "trained_accuracy_harms": 1,
+      "trained_exact_one_word_rate": 1.0,
+      "trained_generated_strict_accuracy": 0.8888888888888888,
+      "trained_label_flips_vs_baseline": 1,
+      "trained_mean_utility_change": -0.017241379310344827,
+      "trained_minus_random_utility": -0.008620689655172414
+    }
+  },
+  "layer": 23,
+  "model": {
+    "family": "Granite3.1",
+    "layers": [
+      23
+    ],
+    "model": "ibm-granite/granite-3.1-2b-instruct",
+    "name": "granite-3.1-2b",
+    "revision": "bbc2aed595bd38bd770263dc3ab831db9794441d"
+  },
+  "n_queries": 63,
+  "n_sentences": 29,
+  "primary_dose_fraction": "0.4"
+}

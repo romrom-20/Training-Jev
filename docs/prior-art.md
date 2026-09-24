@@ -357,3 +357,14 @@ original gate. This is evidence of a candidate-score effect that is not robust t
 seed ensemble and does not translate to observed answer flips at this dose. It does
 not support a behavioral or general cross-family claim. See the [021 protocol](experiments/021-granite-tripr-residual-transfer.md)
 and [audited bundle](../results/granite-tripr-residual-transfer-v1/README.md).
+
+Experiment 022 tested whether larger doses convert the Granite candidate-score signal
+into generated answer changes. At the preregistered primary dose (40% of the training
+activation norm), the learned residual flipped one answer and harmed it, with no
+corrections; strict accuracy fell from 90.5% to 88.9%. Trained-minus-random utility
+was -0.00862 (nested 95% interval [-0.04052, +0.01724], rank p=0.9048). The 10% and
+20% doses produced the same harmful flip. Thus the tested intervention did not
+improve generated decisions and did not beat random residuals. This is a local null
+for one model, one benchmark subset and greedy decoding, not evidence that internal
+representations can never affect behavior. See the [022 frozen protocol](experiments/022-granite-generated-dose-response.md)
+and [audited bundle](../results/granite-tripr-generation-dose-response-v1/README.md).
