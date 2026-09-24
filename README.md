@@ -92,13 +92,20 @@ post-hoc, uses one benchmark and does not clear the practical threshold. See the
 
 The MAMS result is a small, consistent score-level residual paired with a clear
 failure of useful selectivity: stronger intervention mostly amplifies generic valence
-and eventually damages answers; the layer sweep gives a potentially interesting,
-model-specific wrinkle. Still, 35 sentences in one dataset and two small instruction
-models do not establish a general mechanism or field-level result. **LessWrong decision:
-not yet.** The next test should lock layer 16 before outcomes and evaluate it on an
-independent benchmark with more within-review polarity conflicts, keeping every prompt,
-control and model result. The aim is a reliable empirical contribution, not a funding
-pitch.
+and eventually damages answers. Experiment 018 is a preregistered independent
+confirmation using 187 sentences from TripR-2020Large and 385 aspect queries. The
+layer-16 specificity fraction
+exceeded layer 24 in both models: by 12.22 percentage points for Qwen (95% sentence
+bootstrap CI [+7.94, +19.37]) and 0.84 points for SmolLM2 ([+0.69, +0.98]). At layer 16,
+native directions beat matched random controls in both models, but only Qwen exceeded
+the 5% practical threshold (12.36% vs 0.91% for SmolLM2). This replicates a directional
+layer-localization pattern, not useful selectivity across models or a behavioral effect;
+the endpoint is next-token sentiment scores at one dose on one independent restaurant
+corpus. The asymmetric effect and the much larger generic shifts at layer 24 are
+interesting enough for a carefully scoped LessWrong research post, provided it centers
+the small-model limits and the failed cross-model practical gate. **LessWrong decision:
+worth drafting, not a strong mechanistic or field-level claim.** See the
+[018 protocol and audited result bundle](results/tripr-layer-confirmation-v1/README.md).
 
 ## What has actually run
 

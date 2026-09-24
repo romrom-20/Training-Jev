@@ -305,5 +305,18 @@ differences were +1.30 percentage points for SmolLM2 (95% CI [+1.07, +1.52]) and
 points for Qwen ([-1.85, +5.31]). The SmolLM2 fraction at layer 16 is 1.38% of its
 generic shift, still below the frozen 5% criterion. The comparison is unadjusted and
 uses the same benchmark that suggested it, so it is only a candidate localization
-hypothesis. Layer 16 must be frozen before a larger independent benchmark and model-family
-test; the current results do not establish a general layer effect.
+hypothesis.
+
+Experiment 018 then froze layers 16 and 24 before testing on the independent
+TripR-2020Large restaurant review collection. Across 187 eligible sentences (385
+queries, 29 polarity conflicts), layer 16 had a larger specificity fraction than layer
+24 in both models: +12.22 percentage points for Qwen (95% paired sentence-bootstrap CI
+[+7.94, +19.37]) and +0.84 for SmolLM2 ([+0.69, +0.98]). Native layer-16 directions
+also exceeded matched random controls in both. Yet the 5% practical threshold passed
+only for Qwen (12.36%); SmolLM2 remained at 0.91%. Thus the localization pattern
+replicated directionally across this benchmark and these two checkpoints, while useful
+selectivity did not replicate across models. The intervention changed candidate-token
+scores, not sampled generations. The result warrants a narrowly scoped research post
+if all limitations remain explicit; it does not establish a general layer mechanism.
+See the [018 preregistration](experiments/018-independent-tripadvisor-layer16.md) and
+[audited result bundle](../results/tripr-layer-confirmation-v1/README.md).

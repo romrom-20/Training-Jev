@@ -235,10 +235,25 @@ or uninformative there. The possible localization is model-specific: only SmolLM
 post-hoc interval excluded zero. Pairwise comparisons were not preregistered or
 multiplicity-adjusted. See the [017 bundle](../results/mams-layer-selectivity-v1/README.md).
 
-This is more interesting than the 014–016 dose result, but it still rests on one small
-benchmark slice and two small models, and remains below the practical selectivity
-threshold. LessWrong is still premature. The next experiment should lock layer 16 and
-its 5%-of-layer-training-norm dose before outcomes, then evaluate the same endpoint on
-an independent conflict-rich benchmark. Keep all per-model results and controls. A
-third architecture family would be necessary before treating layer-specific aspect
-binding as a general property.
+Experiment 018 preregistered the layer-16 versus layer-24 comparison on independent
+TripR-2020Large reviews, using 187 sentences, 385 mapped aspect queries and 29
+cross-aspect polarity conflicts. The layer-16 specificity fraction exceeded layer 24
+in both models: +12.22 percentage points for Qwen (95% paired sentence-bootstrap CI
+[+7.94, +19.37]) and +0.84 points for SmolLM2 ([+0.69, +0.98]). At layer 16, both
+native directions also beat their random controls. However, the absolute practical
+gate passed only for Qwen: specificity accounted for 12.36% of its generic shift,
+versus 0.91% for SmolLM2. Layer 24 created especially large generic score shifts,
+which shrink the fraction even where absolute residuals remain positive. This confirms
+a directional localization pattern, but not practically useful cross-model selectivity
+or a change in generated answers. See the
+[018 protocol](experiments/018-independent-tripadvisor-layer16.md) and
+[audited bundle](../results/tripr-layer-confirmation-v1/README.md).
+
+This cross-benchmark confirmation makes a narrowly framed LessWrong research post
+worth drafting: the result is surprising enough to discuss as a replicated layer-
+localization pattern, especially its model asymmetry, while the failed SmolLM2 practical
+gate and score-only endpoint must remain central. It does not support a general
+mechanistic claim. Before making that claim, test a third architecture family and
+separate layer-specific aspect selectivity from layer-specific generic amplification;
+then test whether score changes predict generated responses under a fixed prompt and
+answer-encoding control. Keep the current directions frozen and publish all outcomes.

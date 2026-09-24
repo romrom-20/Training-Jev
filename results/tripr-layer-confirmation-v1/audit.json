@@ -1,0 +1,369 @@
+{
+  "analysis_code_sha256": "859d2902b46b86cad947e9fb9cf28bff6b79f64be98a24d423b819fc765685c1",
+  "cells": {
+    "16": {
+      "qwen-1.5b": {
+        "checks": {
+          "analysis_recomputes": true,
+          "baseline_hash_matches": true,
+          "baseline_ids_unique": true,
+          "capture_commit_clean": true,
+          "dataset_hash_matches": true,
+          "dose_fraction_matches_protocol": true,
+          "effect_ids_unique": true,
+          "effects_hash_matches": true,
+          "factorial_matches": true,
+          "helper_hash_matches": true,
+          "layer_matches_directory": true,
+          "local_device": true,
+          "prompts_match_frozen_filter": true,
+          "protocol_hash_matches": true,
+          "review_text_absent": true,
+          "runner_hash_matches": true,
+          "source_activation_hash_matches": true,
+          "source_dataset_hash_matches": true,
+          "source_repository_matches": true,
+          "source_revision_matches": true
+        },
+        "manifest": {
+          "baseline_sha256": "83990b643f5272116172a05d3f9995ba18cfe77dffdd79ff63991ac86bc2be41",
+          "candidate_token_ids": {
+            "negative": 42224,
+            "positive": 30487
+          },
+          "capture_helper_sha256": "1cc11dd60cff40ababdc688196ee422508c51d31d2aa11113bb0515777fbc189",
+          "category_crosswalk": {
+            "*#PRICES": 2,
+            "FOOD#QUALITY": 0,
+            "FOOD#STYLE_OPTIONS": 0,
+            "SERVICE#GENERAL": 1
+          },
+          "control_seed": 20260930,
+          "dataset": "TripR-2020Large manually annotated restaurant reviews",
+          "dataset_license": "CC BY-SA 4.0",
+          "dataset_repository": "https://github.com/ari-dasci/OD-TripR-2020Large",
+          "dataset_repository_revision": "2e3f56f8f3691019139bdec36db0b6115ed7b191",
+          "dataset_xml_sha256": "3d5d5e24cf57d617266bf048968a69baaad0087945a4ec20a7c19a6e82de8e2d",
+          "device": "mps",
+          "dose_fraction_of_training_activation_norm": 0.05,
+          "dose_l2": 2.4411304473876956,
+          "dtype": "float32",
+          "effects_sha256": "0b2456f3e09770f94f6f75a3a09787df6131baba0eec81e81e3cddb8371d8de9",
+          "layer": 16,
+          "model": {
+            "family": "Qwen2.5",
+            "layers": [
+              8,
+              16,
+              24
+            ],
+            "model": "Qwen/Qwen2.5-1.5B-Instruct",
+            "name": "qwen-1.5b",
+            "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+          },
+          "n_gold_prompts": 385,
+          "n_polarity_conflict_sentences": 29,
+          "n_sentences": 187,
+          "prompt_category_names": {
+            "0": "food/menu",
+            "1": "service/staff",
+            "2": "price"
+          },
+          "protocol_sha256": "9305a87d0a15e15bf076db5f43a764cb2c3607d39b1bdffa61c38234d56698a4",
+          "provenance": {
+            "dirty_worktree": false,
+            "git_commit": "7e89e23302a92b91286eed151b15f052aa75d6d1",
+            "packages": {
+              "numpy": "2.5.3",
+              "scikit-learn": "1.9.1",
+              "torch": "2.14.0",
+              "transformers": "4.57.6"
+            },
+            "platform": "macOS-26.6.2-arm64-arm-64bit",
+            "python": "3.12.14",
+            "source_sha256": "65202dd6c98b4f387dafef2c064677e73aa2471826fb5c6bdab6d0707e8a27eb"
+          },
+          "runner_sha256": "44fefcd5e61099a5da4e880d69f14f3d280f08f8e2cfb05e0474b85bf5b87b95",
+          "source_activation_sha256": "0d14bf5864b41ae377b3f43010c214e5904ea644a0f2e7526a5207828e1e837e",
+          "source_dataset_sha256": "f5c29870f94cde2726a5c0f7d6a07d10846811d3e039a6cd2f720501b8c066d3",
+          "source_manifest_activation_sha256": "0d14bf5864b41ae377b3f43010c214e5904ea644a0f2e7526a5207828e1e837e"
+        }
+      },
+      "smollm2-1.7b": {
+        "checks": {
+          "analysis_recomputes": true,
+          "baseline_hash_matches": true,
+          "baseline_ids_unique": true,
+          "capture_commit_clean": true,
+          "dataset_hash_matches": true,
+          "dose_fraction_matches_protocol": true,
+          "effect_ids_unique": true,
+          "effects_hash_matches": true,
+          "factorial_matches": true,
+          "helper_hash_matches": true,
+          "layer_matches_directory": true,
+          "local_device": true,
+          "prompts_match_frozen_filter": true,
+          "protocol_hash_matches": true,
+          "review_text_absent": true,
+          "runner_hash_matches": true,
+          "source_activation_hash_matches": true,
+          "source_dataset_hash_matches": true,
+          "source_repository_matches": true,
+          "source_revision_matches": true
+        },
+        "manifest": {
+          "baseline_sha256": "0e389fecabb1013e663823772b2c8c6b07b599ea475d1c2d7cce11f0a9e76b3b",
+          "candidate_token_ids": {
+            "negative": 17728,
+            "positive": 16185
+          },
+          "capture_helper_sha256": "1cc11dd60cff40ababdc688196ee422508c51d31d2aa11113bb0515777fbc189",
+          "category_crosswalk": {
+            "*#PRICES": 2,
+            "FOOD#QUALITY": 0,
+            "FOOD#STYLE_OPTIONS": 0,
+            "SERVICE#GENERAL": 1
+          },
+          "control_seed": 20260930,
+          "dataset": "TripR-2020Large manually annotated restaurant reviews",
+          "dataset_license": "CC BY-SA 4.0",
+          "dataset_repository": "https://github.com/ari-dasci/OD-TripR-2020Large",
+          "dataset_repository_revision": "2e3f56f8f3691019139bdec36db0b6115ed7b191",
+          "dataset_xml_sha256": "3d5d5e24cf57d617266bf048968a69baaad0087945a4ec20a7c19a6e82de8e2d",
+          "device": "mps",
+          "dose_fraction_of_training_activation_norm": 0.05,
+          "dose_l2": 12.453827285766602,
+          "dtype": "float32",
+          "effects_sha256": "0419da57c885efb0b5a7a4e899b2b4347713a61946fdc91c33869fe2011443a4",
+          "layer": 16,
+          "model": {
+            "family": "SmolLM2",
+            "layers": [
+              8,
+              16,
+              24
+            ],
+            "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+            "name": "smollm2-1.7b",
+            "revision": "31b70e2e869a7173562077fd711b654946d38674"
+          },
+          "n_gold_prompts": 385,
+          "n_polarity_conflict_sentences": 29,
+          "n_sentences": 187,
+          "prompt_category_names": {
+            "0": "food/menu",
+            "1": "service/staff",
+            "2": "price"
+          },
+          "protocol_sha256": "9305a87d0a15e15bf076db5f43a764cb2c3607d39b1bdffa61c38234d56698a4",
+          "provenance": {
+            "dirty_worktree": false,
+            "git_commit": "7e89e23302a92b91286eed151b15f052aa75d6d1",
+            "packages": {
+              "numpy": "2.5.3",
+              "scikit-learn": "1.9.1",
+              "torch": "2.14.0",
+              "transformers": "4.57.6"
+            },
+            "platform": "macOS-26.6.2-arm64-arm-64bit",
+            "python": "3.12.14",
+            "source_sha256": "65202dd6c98b4f387dafef2c064677e73aa2471826fb5c6bdab6d0707e8a27eb"
+          },
+          "runner_sha256": "44fefcd5e61099a5da4e880d69f14f3d280f08f8e2cfb05e0474b85bf5b87b95",
+          "source_activation_sha256": "cf285b62562b608a43b968c7d08a6beb2bec40d592fd00cd376c5871ed1601de",
+          "source_dataset_sha256": "5bd46eb6a67372f17be7a24f8d0620f8e12a4153f40c0bf8e2c88e20fe764cea",
+          "source_manifest_activation_sha256": "cf285b62562b608a43b968c7d08a6beb2bec40d592fd00cd376c5871ed1601de"
+        }
+      }
+    },
+    "24": {
+      "qwen-1.5b": {
+        "checks": {
+          "analysis_recomputes": true,
+          "baseline_hash_matches": true,
+          "baseline_ids_unique": true,
+          "capture_commit_clean": true,
+          "dataset_hash_matches": true,
+          "dose_fraction_matches_protocol": true,
+          "effect_ids_unique": true,
+          "effects_hash_matches": true,
+          "factorial_matches": true,
+          "helper_hash_matches": true,
+          "layer_matches_directory": true,
+          "local_device": true,
+          "prompts_match_frozen_filter": true,
+          "protocol_hash_matches": true,
+          "review_text_absent": true,
+          "runner_hash_matches": true,
+          "source_activation_hash_matches": true,
+          "source_dataset_hash_matches": true,
+          "source_repository_matches": true,
+          "source_revision_matches": true
+        },
+        "manifest": {
+          "baseline_sha256": "83990b643f5272116172a05d3f9995ba18cfe77dffdd79ff63991ac86bc2be41",
+          "candidate_token_ids": {
+            "negative": 42224,
+            "positive": 30487
+          },
+          "capture_helper_sha256": "1cc11dd60cff40ababdc688196ee422508c51d31d2aa11113bb0515777fbc189",
+          "category_crosswalk": {
+            "*#PRICES": 2,
+            "FOOD#QUALITY": 0,
+            "FOOD#STYLE_OPTIONS": 0,
+            "SERVICE#GENERAL": 1
+          },
+          "control_seed": 20260930,
+          "dataset": "TripR-2020Large manually annotated restaurant reviews",
+          "dataset_license": "CC BY-SA 4.0",
+          "dataset_repository": "https://github.com/ari-dasci/OD-TripR-2020Large",
+          "dataset_repository_revision": "2e3f56f8f3691019139bdec36db0b6115ed7b191",
+          "dataset_xml_sha256": "3d5d5e24cf57d617266bf048968a69baaad0087945a4ec20a7c19a6e82de8e2d",
+          "device": "mps",
+          "dose_fraction_of_training_activation_norm": 0.05,
+          "dose_l2": 6.437084960937501,
+          "dtype": "float32",
+          "effects_sha256": "cec1ef41d41d9263262632eb124b073cbcac427b3e0436aea842f482a09f0b3b",
+          "layer": 24,
+          "model": {
+            "family": "Qwen2.5",
+            "layers": [
+              8,
+              16,
+              24
+            ],
+            "model": "Qwen/Qwen2.5-1.5B-Instruct",
+            "name": "qwen-1.5b",
+            "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+          },
+          "n_gold_prompts": 385,
+          "n_polarity_conflict_sentences": 29,
+          "n_sentences": 187,
+          "prompt_category_names": {
+            "0": "food/menu",
+            "1": "service/staff",
+            "2": "price"
+          },
+          "protocol_sha256": "9305a87d0a15e15bf076db5f43a764cb2c3607d39b1bdffa61c38234d56698a4",
+          "provenance": {
+            "dirty_worktree": false,
+            "git_commit": "7e89e23302a92b91286eed151b15f052aa75d6d1",
+            "packages": {
+              "numpy": "2.5.3",
+              "scikit-learn": "1.9.1",
+              "torch": "2.14.0",
+              "transformers": "4.57.6"
+            },
+            "platform": "macOS-26.6.2-arm64-arm-64bit",
+            "python": "3.12.14",
+            "source_sha256": "65202dd6c98b4f387dafef2c064677e73aa2471826fb5c6bdab6d0707e8a27eb"
+          },
+          "runner_sha256": "44fefcd5e61099a5da4e880d69f14f3d280f08f8e2cfb05e0474b85bf5b87b95",
+          "source_activation_sha256": "0d14bf5864b41ae377b3f43010c214e5904ea644a0f2e7526a5207828e1e837e",
+          "source_dataset_sha256": "f5c29870f94cde2726a5c0f7d6a07d10846811d3e039a6cd2f720501b8c066d3",
+          "source_manifest_activation_sha256": "0d14bf5864b41ae377b3f43010c214e5904ea644a0f2e7526a5207828e1e837e"
+        }
+      },
+      "smollm2-1.7b": {
+        "checks": {
+          "analysis_recomputes": true,
+          "baseline_hash_matches": true,
+          "baseline_ids_unique": true,
+          "capture_commit_clean": true,
+          "dataset_hash_matches": true,
+          "dose_fraction_matches_protocol": true,
+          "effect_ids_unique": true,
+          "effects_hash_matches": true,
+          "factorial_matches": true,
+          "helper_hash_matches": true,
+          "layer_matches_directory": true,
+          "local_device": true,
+          "prompts_match_frozen_filter": true,
+          "protocol_hash_matches": true,
+          "review_text_absent": true,
+          "runner_hash_matches": true,
+          "source_activation_hash_matches": true,
+          "source_dataset_hash_matches": true,
+          "source_repository_matches": true,
+          "source_revision_matches": true
+        },
+        "manifest": {
+          "baseline_sha256": "0e389fecabb1013e663823772b2c8c6b07b599ea475d1c2d7cce11f0a9e76b3b",
+          "candidate_token_ids": {
+            "negative": 17728,
+            "positive": 16185
+          },
+          "capture_helper_sha256": "1cc11dd60cff40ababdc688196ee422508c51d31d2aa11113bb0515777fbc189",
+          "category_crosswalk": {
+            "*#PRICES": 2,
+            "FOOD#QUALITY": 0,
+            "FOOD#STYLE_OPTIONS": 0,
+            "SERVICE#GENERAL": 1
+          },
+          "control_seed": 20260930,
+          "dataset": "TripR-2020Large manually annotated restaurant reviews",
+          "dataset_license": "CC BY-SA 4.0",
+          "dataset_repository": "https://github.com/ari-dasci/OD-TripR-2020Large",
+          "dataset_repository_revision": "2e3f56f8f3691019139bdec36db0b6115ed7b191",
+          "dataset_xml_sha256": "3d5d5e24cf57d617266bf048968a69baaad0087945a4ec20a7c19a6e82de8e2d",
+          "device": "mps",
+          "dose_fraction_of_training_activation_norm": 0.05,
+          "dose_l2": 95.42455444335938,
+          "dtype": "float32",
+          "effects_sha256": "6dd8cfe0141497956776b82fe7de275875e9d489764f7d116b7445837f7da644",
+          "layer": 24,
+          "model": {
+            "family": "SmolLM2",
+            "layers": [
+              8,
+              16,
+              24
+            ],
+            "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+            "name": "smollm2-1.7b",
+            "revision": "31b70e2e869a7173562077fd711b654946d38674"
+          },
+          "n_gold_prompts": 385,
+          "n_polarity_conflict_sentences": 29,
+          "n_sentences": 187,
+          "prompt_category_names": {
+            "0": "food/menu",
+            "1": "service/staff",
+            "2": "price"
+          },
+          "protocol_sha256": "9305a87d0a15e15bf076db5f43a764cb2c3607d39b1bdffa61c38234d56698a4",
+          "provenance": {
+            "dirty_worktree": false,
+            "git_commit": "7e89e23302a92b91286eed151b15f052aa75d6d1",
+            "packages": {
+              "numpy": "2.5.3",
+              "scikit-learn": "1.9.1",
+              "torch": "2.14.0",
+              "transformers": "4.57.6"
+            },
+            "platform": "macOS-26.6.2-arm64-arm-64bit",
+            "python": "3.12.14",
+            "source_sha256": "65202dd6c98b4f387dafef2c064677e73aa2471826fb5c6bdab6d0707e8a27eb"
+          },
+          "runner_sha256": "44fefcd5e61099a5da4e880d69f14f3d280f08f8e2cfb05e0474b85bf5b87b95",
+          "source_activation_sha256": "cf285b62562b608a43b968c7d08a6beb2bec40d592fd00cd376c5871ed1601de",
+          "source_dataset_sha256": "5bd46eb6a67372f17be7a24f8d0620f8e12a4153f40c0bf8e2c88e20fe764cea",
+          "source_manifest_activation_sha256": "cf285b62562b608a43b968c7d08a6beb2bec40d592fd00cd376c5871ed1601de"
+        }
+      }
+    }
+  },
+  "checks_passed": true,
+  "dataset_license": "CC BY-SA 4.0",
+  "dataset_repository": "https://github.com/ari-dasci/OD-TripR-2020Large",
+  "dataset_repository_revision": "2e3f56f8f3691019139bdec36db0b6115ed7b191",
+  "dataset_xml_sha256": "3d5d5e24cf57d617266bf048968a69baaad0087945a4ec20a7c19a6e82de8e2d",
+  "full_analysis_recomputes": true,
+  "n_conflict_sentences": 29,
+  "n_prompts": 385,
+  "n_sentences": 187,
+  "protocol_sha256": "9305a87d0a15e15bf076db5f43a764cb2c3607d39b1bdffa61c38234d56698a4",
+  "runner_sha256": "44fefcd5e61099a5da4e880d69f14f3d280f08f8e2cfb05e0474b85bf5b87b95",
+  "same_capture_commit": true
+}

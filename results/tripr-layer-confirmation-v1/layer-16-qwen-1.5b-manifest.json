@@ -1,0 +1,63 @@
+{
+  "model": {
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "layers": [
+      8,
+      16,
+      24
+    ],
+    "family": "Qwen2.5",
+    "name": "qwen-1.5b"
+  },
+  "device": "mps",
+  "dtype": "float32",
+  "layer": 16,
+  "dose_fraction_of_training_activation_norm": 0.05,
+  "dose_l2": 2.4411304473876956,
+  "candidate_token_ids": {
+    "positive": 30487,
+    "negative": 42224
+  },
+  "dataset": "TripR-2020Large manually annotated restaurant reviews",
+  "dataset_repository": "https://github.com/ari-dasci/OD-TripR-2020Large",
+  "dataset_repository_revision": "2e3f56f8f3691019139bdec36db0b6115ed7b191",
+  "dataset_license": "CC BY-SA 4.0",
+  "dataset_xml_sha256": "3d5d5e24cf57d617266bf048968a69baaad0087945a4ec20a7c19a6e82de8e2d",
+  "n_gold_prompts": 385,
+  "n_sentences": 187,
+  "n_polarity_conflict_sentences": 29,
+  "category_crosswalk": {
+    "FOOD#QUALITY": 0,
+    "FOOD#STYLE_OPTIONS": 0,
+    "SERVICE#GENERAL": 1,
+    "*#PRICES": 2
+  },
+  "prompt_category_names": {
+    "0": "food/menu",
+    "1": "service/staff",
+    "2": "price"
+  },
+  "control_seed": 20260930,
+  "source_dataset_sha256": "f5c29870f94cde2726a5c0f7d6a07d10846811d3e039a6cd2f720501b8c066d3",
+  "source_activation_sha256": "0d14bf5864b41ae377b3f43010c214e5904ea644a0f2e7526a5207828e1e837e",
+  "source_manifest_activation_sha256": "0d14bf5864b41ae377b3f43010c214e5904ea644a0f2e7526a5207828e1e837e",
+  "protocol_sha256": "9305a87d0a15e15bf076db5f43a764cb2c3607d39b1bdffa61c38234d56698a4",
+  "runner_sha256": "44fefcd5e61099a5da4e880d69f14f3d280f08f8e2cfb05e0474b85bf5b87b95",
+  "capture_helper_sha256": "1cc11dd60cff40ababdc688196ee422508c51d31d2aa11113bb0515777fbc189",
+  "baseline_sha256": "83990b643f5272116172a05d3f9995ba18cfe77dffdd79ff63991ac86bc2be41",
+  "effects_sha256": "0b2456f3e09770f94f6f75a3a09787df6131baba0eec81e81e3cddb8371d8de9",
+  "provenance": {
+    "python": "3.12.14",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "git_commit": "7e89e23302a92b91286eed151b15f052aa75d6d1",
+    "dirty_worktree": false,
+    "source_sha256": "65202dd6c98b4f387dafef2c064677e73aa2471826fb5c6bdab6d0707e8a27eb",
+    "packages": {
+      "torch": "2.14.0",
+      "transformers": "4.57.6",
+      "numpy": "2.5.3",
+      "scikit-learn": "1.9.1"
+    }
+  }
+}
