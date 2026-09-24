@@ -343,3 +343,19 @@ confidence/generation relationship has prior work. Next, test the same frozen pr
 set on the already cached Qwen and SmolLM2 families. If candidate-pair/generation
 agreement varies across families, investigate answer formatting and label-token
 calibration before making any broader claim.
+
+Experiment 024 ran the same SemEval prompts through Qwen2.5-1.5B and SmolLM2-1.7B.
+Both produced exact one-word labels on all 233 prompts; the candidate-pair choice
+matched every generated label in both models (100%, sentence-bootstrap interval
+[100%, 100%]). Their candidate-pair, generated and all-vocabulary accuracies were
+identical within each model: 94.8% for Qwen and 92.3% for SmolLM2. This strongly
+suggests the agreement follows from this explicit forced-choice prompt and greedy
+decoding, rather than revealing a new internal mechanism. It is a useful replication
+of the measurement sanity check, not a novel result. See the
+[`024 audited bundle`](../results/cross-family-score-generation-v1/README.md).
+
+**LessWrong decision: wait.** The next discriminating experiment is a paired prompt-
+format ablation on the same review sentences: compare explicit one-word choices with
+a natural open question across the three local model families. This will test whether
+the score/generation match depends on answer-format constraints. Avoid presenting the
+current agreement as surprising until that condition is checked.

@@ -1,0 +1,44 @@
+{
+  "bootstrap_reps": 10000,
+  "bootstrap_seed": 20261025,
+  "cross_family_replication_passed": true,
+  "models": {
+    "qwen-1.5b": {
+      "absolute_margin_error_detection_auc_secondary": 0.8883861236802413,
+      "all_vocabulary_top1_accuracy": 0.9484978540772532,
+      "candidate_pair_accuracy": 0.9484978540772532,
+      "candidate_pair_generation_agreement": 1.0,
+      "candidate_pair_generation_agreement_sentence_bootstrap_95_ci": [
+        1.0,
+        1.0
+      ],
+      "generated_exact_one_word_rate": 1.0,
+      "generated_strict_accuracy": 0.9484978540772532,
+      "measurement_gate_passed": true,
+      "n_generation_errors": 12,
+      "n_prompts": 233
+    },
+    "smollm2-1.7b": {
+      "absolute_margin_error_detection_auc_secondary": 0.7645994832041343,
+      "all_vocabulary_top1_accuracy": 0.9227467811158798,
+      "candidate_pair_accuracy": 0.9227467811158798,
+      "candidate_pair_generation_agreement": 1.0,
+      "candidate_pair_generation_agreement_sentence_bootstrap_95_ci": [
+        1.0,
+        1.0
+      ],
+      "generated_exact_one_word_rate": 1.0,
+      "generated_strict_accuracy": 0.9227467811158798,
+      "measurement_gate_passed": true,
+      "n_generation_errors": 18,
+      "n_prompts": 233
+    }
+  },
+  "n_sentences": 112,
+  "noncausal_observational_test": true,
+  "paired_sentence_bootstrap_difference_95_ci": [
+    0.0,
+    0.0
+  ],
+  "smollm2_minus_qwen_agreement_difference": 0.0
+}

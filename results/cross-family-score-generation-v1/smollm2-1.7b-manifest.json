@@ -1,0 +1,38 @@
+{
+  "candidate_token_ids": {
+    "negative": 17728,
+    "positive": 16185
+  },
+  "dataset": "SemEval-2014 Restaurants test gold subset",
+  "dataset_xml_sha256": "f21509cfa37e16534cd5b2da043be487355b64ef48fe8d6aaacaeca6b49cc0fb",
+  "device": "mps",
+  "dtype": "float32",
+  "model": {
+    "family": "SmolLM2",
+    "layers": [
+      8,
+      16,
+      24
+    ],
+    "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+    "name": "smollm2-1.7b",
+    "revision": "31b70e2e869a7173562077fd711b654946d38674"
+  },
+  "n_prompts": 233,
+  "n_sentences": 112,
+  "protocol_sha256": "801858940400829492a9b9596ce2b105ec5586fa3b2f2ff6c6dc213e3e1031d5",
+  "provenance": {
+    "dirty_worktree": false,
+    "git_commit": "ff71181800823ce87039e517a547d949f18265a9",
+    "packages": {
+      "numpy": "2.5.3",
+      "scikit-learn": "1.9.1",
+      "torch": "2.14.0",
+      "transformers": "4.57.6"
+    },
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.14",
+    "source_sha256": "4b3e83f6f402d69e72b7b5bd92eb7db8f518424bb93294bb465dc546c2e76cbe"
+  },
+  "runner_sha256": "e13459cebebdf617566ba5bf39fa8ef9f2bf04cfa60887dd4e6ec9339e59d27a"
+}

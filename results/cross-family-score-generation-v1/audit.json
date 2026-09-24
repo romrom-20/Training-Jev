@@ -1,0 +1,14 @@
+{
+  "analysis_code_sha256": "36d56fce40ef34efaf00b8583f3946f6830e860653dc8958889c4073698a5e79",
+  "checks": {
+    "analysis_recomputes": true,
+    "clean_local_capture": true,
+    "complete_prompt_sets": true,
+    "frozen_dataset_hash": true,
+    "no_review_or_generated_text": true,
+    "pinned_models_layers_and_revisions": true,
+    "protocol_runner_hashes": true
+  },
+  "checks_passed": true,
+  "experiment": 24
+}

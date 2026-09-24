@@ -389,3 +389,12 @@ margin and thus leaked the reference label; the corrected label-free absolute-ma
 AUC is 0.70 over seven errors, with no interval. The correction is documented in the
 [analysis amendment](experiments/023-analysis-amendment.md). See the [023 protocol](experiments/023-granite-score-generation-alignment.md)
 and [audited bundle](../results/granite-semeval-margin-generation-v1/README.md).
+
+Experiment 024 repeated the same score/generation comparison on Qwen2.5-1.5B and
+SmolLM2-1.7B. All 466 generations were exact one-word labels, and pairwise candidate
+choices matched generations in every case. Both models' pairwise and unrestricted
+top-token predictions also had identical correctness on every prompt. The result is
+consistent with ordinary greedy forced-choice decoding; it does not distinguish an
+internal semantic mechanism. A prompt-format ablation is needed before interpreting
+this agreement further. See the [024 protocol](experiments/024-cross-family-score-generation.md)
+and [audited bundle](../results/cross-family-score-generation-v1/README.md).
