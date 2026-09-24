@@ -32,7 +32,7 @@ def collect(offline=False):
         raise FileExistsError(f"Refusing to overwrite {ROOT}; remove or rename it first")
     baseline_path = ROOT_021 / "evaluation" / "generation.json"
     baseline = json.loads(baseline_path.read_text())
-    stimuli, labels, _ = tripr.load_tripr()
+    stimuli, labels, _ = tripr.load_tripr(tripr.DATA)
     conflict_ids = {sid for sid, aspects in labels.items() if len(set(aspects.values())) > 1}
     conflict_stimuli = [row for row in stimuli if row["sentence_id"] in conflict_ids]
     if len(conflict_stimuli) != 63 or len(conflict_ids) != 29:
