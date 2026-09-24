@@ -1,4 +1,4 @@
-"""Frozen Qwen2/Llama targets; explicit block hooks avoid hidden-state index ambiguity."""
+"""Frozen decoder-only targets; explicit block hooks avoid hidden-state ambiguity."""
 
 import time
 
@@ -34,8 +34,10 @@ def load_target(config, device="auto", offline=False):
         .to(device)
         .eval()
     )
-    if model.config.model_type not in ("qwen2", "llama") or not hasattr(model.model, "layers"):
-        raise ValueError("Only Qwen2 and Llama decoder blocks are validated by this adapter")
+    if model.config.model_type not in ("qwen2", "llama", "granite") or not hasattr(
+        model.model, "layers"
+    ):
+        raise ValueError("Only Qwen2, Llama, and Granite decoder blocks are validated")
     model.requires_grad_(False)
     if tokenizer.pad_token_id is None:
         tokenizer.pad_token = tokenizer.eos_token

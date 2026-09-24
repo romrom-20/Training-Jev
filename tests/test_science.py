@@ -1,8 +1,11 @@
+from types import SimpleNamespace
+
 import numpy as np
 import pytest
 import torch
 from transformers import Qwen2Config, Qwen2ForCausalLM
 
+from latent_decisions import target as target_adapter
 from latent_decisions.data import make_dataset, validate_splits
 from latent_decisions.metrics import cluster_mean_ci, fit_temperature, metrics, sigmoid
 from latent_decisions.probes import BilinearProbe, Standardizer, expand, fit_probe, predict
@@ -148,3 +151,37 @@ def test_left_padding_and_intervention_at_block_output():
     assert observed
     assert not torch.allclose(edited, plain)
     assert len(model.model.layers[0]._forward_hooks) == 0
+
+
+def test_granite_decoder_adapter_contract(monkeypatch):
+    class FakeTokenizer:
+        pad_token_id = None
+        eos_token = "</s>"
+        pad_token = None
+
+    class FakeModel:
+        config = SimpleNamespace(model_type="granite")
+        model = SimpleNamespace(layers=[object()])
+
+        def to(self, _device):
+            return self
+
+        def eval(self):
+            return self
+
+        def requires_grad_(self, _requires_grad):
+            return self
+
+    tokenizer = FakeTokenizer()
+    model = FakeModel()
+    monkeypatch.setattr(target_adapter.AutoTokenizer, "from_pretrained", lambda *a, **k: tokenizer)
+    monkeypatch.setattr(target_adapter.AutoModelForCausalLM, "from_pretrained", lambda *a, **k: model)
+
+    loaded_model, loaded_tokenizer, device = target_adapter.load_target(
+        {"model": "fake/granite", "revision": "0"}, device="cpu", offline=True
+    )
+
+    assert loaded_model is model
+    assert loaded_tokenizer is tokenizer
+    assert tokenizer.pad_token == tokenizer.eos_token
+    assert device == "cpu"
