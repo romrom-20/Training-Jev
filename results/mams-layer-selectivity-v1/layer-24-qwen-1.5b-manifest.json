@@ -1,0 +1,58 @@
+{
+  "model": {
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "layers": [
+      8,
+      16,
+      24
+    ],
+    "family": "Qwen2.5",
+    "name": "qwen-1.5b"
+  },
+  "device": "mps",
+  "dtype": "float32",
+  "layer": 24,
+  "layer_index_in_cached_activations": 2,
+  "dose_fraction_of_training_activation_norm": 0.05,
+  "dose_l2": 6.437084960937501,
+  "candidate_token_ids": {
+    "positive": 30487,
+    "negative": 42224
+  },
+  "dataset": "MAMS-ACSA official test split",
+  "dataset_repository_revision": "cddcdb0f423b3fdb2c76b70744737abed3a00d17",
+  "mams_xml_sha256": "cc0dc3c5b711653daa9ac886c6517d3ebf8752954b73715692d7765fec4a57f5",
+  "n_gold_prompts": 71,
+  "n_sentences": 35,
+  "n_polarity_conflict_sentences": 18,
+  "category_source_mapping": {
+    "food": 0,
+    "menu": 0,
+    "service": 1,
+    "staff": 1,
+    "price": 2
+  },
+  "control_seed": 20260930,
+  "source_dataset_sha256": "f5c29870f94cde2726a5c0f7d6a07d10846811d3e039a6cd2f720501b8c066d3",
+  "source_activation_sha256": "0d14bf5864b41ae377b3f43010c214e5904ea644a0f2e7526a5207828e1e837e",
+  "source_manifest_activation_sha256": "0d14bf5864b41ae377b3f43010c214e5904ea644a0f2e7526a5207828e1e837e",
+  "protocol_sha256": "c166bc286ddbff664ea209580d5d3760df68366376d3b06163016a7c48ebb687",
+  "runner_sha256": "44a8bbdb58ca29fa02e797998f6633f40560bca88f2dbdba2c4af56c0081b857",
+  "capture_helper_sha256": "1cc11dd60cff40ababdc688196ee422508c51d31d2aa11113bb0515777fbc189",
+  "baseline_sha256": "4c6d856613905611af90a12ca36018e88cf37935e7a55a94c02a55b5f665d514",
+  "effects_sha256": "fde2d0c0199982d6c75a028eb558a23e6d52ed7d88468417c579596f26523987",
+  "provenance": {
+    "python": "3.12.14",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "git_commit": "7e551e959653d41ee078725b74239d14abf1256a",
+    "dirty_worktree": false,
+    "source_sha256": "65202dd6c98b4f387dafef2c064677e73aa2471826fb5c6bdab6d0707e8a27eb",
+    "packages": {
+      "torch": "2.14.0",
+      "transformers": "4.57.6",
+      "numpy": "2.5.3",
+      "scikit-learn": "1.9.1"
+    }
+  }
+}

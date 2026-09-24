@@ -223,11 +223,22 @@ replication. See the [016 bundle](../results/mams-dose-response-v1/README.md).
 
 The result is an empirical asymmetry worth probing: target-matched residuals are
 detectable on a conflict-rich benchmark, but dose amplifies generic valence faster than
-target specificity. It is too small and too benchmark-bound to call a field result.
-The next experiment should compare layers 8, 16 and 24 using the cached training
-activations, with per-layer direction norms and identical MAMS prompts and controls.
-Layer choice is known to affect steering; the useful question here is whether the
-aspect-specific fraction, rather than overall steering efficacy, varies by layer. If a
-layer shows a larger residual, confirm it on a separately preregistered benchmark before
-interpreting it. LessWrong remains premature until that result is both practically
-meaningful and independently replicated, or a robust failure mechanism is established.
+target specificity. Experiment 017 compared layers 8, 16 and 24 using cached training
+activations, per-layer norm-matched doses and the same MAMS prompts and controls. No
+layer passed the 5% practical gate. An explicitly post-hoc paired comparison found that
+SmolLM2's layer-16 residual exceeded layer 24 by +0.00903 logits (95% sentence-bootstrap
+CI [+0.00722, +0.01094]), including +0.01013 on the 18 conflict reviews. For the
+specificity fraction, the paired layer-16 minus layer-24 difference was +1.30 percentage
+points for SmolLM2 (95% CI [+1.07, +1.52]) and +1.33 points for Qwen ([-1.85, +5.31]).
+Layer 8 had near-zero or negative generic sentiment shift, making the fraction undefined
+or uninformative there. The possible localization is model-specific: only SmolLM2's
+post-hoc interval excluded zero. Pairwise comparisons were not preregistered or
+multiplicity-adjusted. See the [017 bundle](../results/mams-layer-selectivity-v1/README.md).
+
+This is more interesting than the 014–016 dose result, but it still rests on one small
+benchmark slice and two small models, and remains below the practical selectivity
+threshold. LessWrong is still premature. The next experiment should lock layer 16 and
+its 5%-of-layer-training-norm dose before outcomes, then evaluate the same endpoint on
+an independent conflict-rich benchmark. Keep all per-model results and controls. A
+third architecture family would be necessary before treating layer-specific aspect
+binding as a general property.

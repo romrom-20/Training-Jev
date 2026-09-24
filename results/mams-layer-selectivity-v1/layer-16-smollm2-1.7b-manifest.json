@@ -1,0 +1,58 @@
+{
+  "model": {
+    "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+    "revision": "31b70e2e869a7173562077fd711b654946d38674",
+    "layers": [
+      8,
+      16,
+      24
+    ],
+    "family": "SmolLM2",
+    "name": "smollm2-1.7b"
+  },
+  "device": "mps",
+  "dtype": "float32",
+  "layer": 16,
+  "layer_index_in_cached_activations": 1,
+  "dose_fraction_of_training_activation_norm": 0.05,
+  "dose_l2": 12.453827285766602,
+  "candidate_token_ids": {
+    "positive": 16185,
+    "negative": 17728
+  },
+  "dataset": "MAMS-ACSA official test split",
+  "dataset_repository_revision": "cddcdb0f423b3fdb2c76b70744737abed3a00d17",
+  "mams_xml_sha256": "cc0dc3c5b711653daa9ac886c6517d3ebf8752954b73715692d7765fec4a57f5",
+  "n_gold_prompts": 71,
+  "n_sentences": 35,
+  "n_polarity_conflict_sentences": 18,
+  "category_source_mapping": {
+    "food": 0,
+    "menu": 0,
+    "service": 1,
+    "staff": 1,
+    "price": 2
+  },
+  "control_seed": 20260930,
+  "source_dataset_sha256": "5bd46eb6a67372f17be7a24f8d0620f8e12a4153f40c0bf8e2c88e20fe764cea",
+  "source_activation_sha256": "cf285b62562b608a43b968c7d08a6beb2bec40d592fd00cd376c5871ed1601de",
+  "source_manifest_activation_sha256": "cf285b62562b608a43b968c7d08a6beb2bec40d592fd00cd376c5871ed1601de",
+  "protocol_sha256": "c166bc286ddbff664ea209580d5d3760df68366376d3b06163016a7c48ebb687",
+  "runner_sha256": "44a8bbdb58ca29fa02e797998f6633f40560bca88f2dbdba2c4af56c0081b857",
+  "capture_helper_sha256": "1cc11dd60cff40ababdc688196ee422508c51d31d2aa11113bb0515777fbc189",
+  "baseline_sha256": "4f12da4f8e32607390bed17581684e080c71f9ae48bd8d64e52743b2fd622e77",
+  "effects_sha256": "c55ebbf35f8ba50ebdfec221e1aedb555d0c55b28346b160dbdb2da74b749947",
+  "provenance": {
+    "python": "3.12.14",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "git_commit": "7e551e959653d41ee078725b74239d14abf1256a",
+    "dirty_worktree": false,
+    "source_sha256": "65202dd6c98b4f387dafef2c064677e73aa2471826fb5c6bdab6d0707e8a27eb",
+    "packages": {
+      "torch": "2.14.0",
+      "transformers": "4.57.6",
+      "numpy": "2.5.3",
+      "scikit-learn": "1.9.1"
+    }
+  }
+}

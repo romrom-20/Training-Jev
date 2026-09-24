@@ -79,15 +79,26 @@ threshold. At 20%, SmolLM2 strict answer accuracy fell from 73.2% to 54.9%. See 
 [015 result bundle](results/mams-aspect-selectivity-v1/README.md) and
 [016 dose-response bundle](results/mams-dose-response-v1/README.md).
 
+Experiment 017 compared layers 8, 16 and 24 at a dose matched to each layer's training
+activation norm. No layer reached 5% specificity. SmolLM2 nevertheless showed a sharp
+layer dependence: its layer-16 residual was 0.01016 logits (1.38% of the generic shift),
+versus 0.00113 (0.08%) at layer 24. A post-hoc paired difference was +0.00903 logits
+(95% CI [+0.00722, +0.01094]) on all 35 reviews and +0.01013 on the 18 conflict reviews.
+The paired specificity-fraction difference was +1.30 percentage points for SmolLM2
+(95% CI [+1.07, +1.52]) and +1.33 points for Qwen ([-1.85, +5.31]). This is a candidate
+model-specific localization signal, not a replicated layer effect: the comparison was
+post-hoc, uses one benchmark and does not clear the practical threshold. See the
+[017 audit and all-layer results](results/mams-layer-selectivity-v1/README.md).
+
 The MAMS result is a small, consistent score-level residual paired with a clear
 failure of useful selectivity: stronger intervention mostly amplifies generic valence
-and eventually damages answers. It is more informative than the SemEval transfer alone,
-but 35 sentences in one dataset and two small instruction models do not establish a
-general mechanism or a field-level result. **LessWrong decision: not yet.** The next test
-should localize where the residual appears (layers 8, 16 and 24 already have cached
-training activations), then seek an independent natural benchmark with more within-review
-polarity conflicts before making a broader claim. **The aim is a reliable empirical
-contribution, not a funding pitch.**
+and eventually damages answers; the layer sweep gives a potentially interesting,
+model-specific wrinkle. Still, 35 sentences in one dataset and two small instruction
+models do not establish a general mechanism or field-level result. **LessWrong decision:
+not yet.** The next test should lock layer 16 before outcomes and evaluate it on an
+independent benchmark with more within-review polarity conflicts, keeping every prompt,
+control and model result. The aim is a reliable empirical contribution, not a funding
+pitch.
 
 ## What has actually run
 

@@ -11,7 +11,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
-from analyze_mams_layer_selectivity import analyze_cell
+from analyze_mams_layer_selectivity import analyze, analyze_cell
 from mams_aspect_selectivity import DATA, MODELS, REPOSITORY_REVISION, load_mams
 from mams_layer_selectivity import LAYERS, PROTOCOL
 from prompt_effect_forecast import sha
@@ -31,6 +31,7 @@ def audit(root, source_root, data_path, analysis):
         for source in range(3)
     }
     commits = set()
+    full_analysis_matches = analyze(root) == analysis
     report = {
         "checks_passed": True,
         "dataset_sha256": sha(data_path),
@@ -40,6 +41,7 @@ def audit(root, source_root, data_path, analysis):
         "n_polarity_conflict_sentences": conflicts,
         "analysis_code_sha256": sha(ANALYZER),
         "runner_sha256": sha(RUNNER),
+        "full_analysis_recomputes": full_analysis_matches,
         "layers": {},
     }
     for layer in LAYERS:
@@ -92,7 +94,7 @@ def audit(root, source_root, data_path, analysis):
             commits.add(manifest["provenance"]["git_commit"])
             report["layers"][key][model] = {"checks": checks, "manifest": manifest}
     report["same_capture_commit"] = len(commits) == 1
-    report["checks_passed"] &= len(commits) == 1
+    report["checks_passed"] &= len(commits) == 1 and full_analysis_matches
     if not report["checks_passed"]:
         raise ValueError("017 integrity audit failed")
     return report
@@ -104,8 +106,20 @@ def plot(analysis, path):
     fig, axes = plt.subplots(1, 2, figsize=(10.6, 4.6))
     for model in MODELS:
         rows = [analysis[model][str(layer)] for layer in LAYERS]
-        ratio = np.asarray([row["specificity_fraction_of_generic_shift"] for row in rows]) * 100
-        ratio_ci = np.asarray([row["ratio_95_ci"] for row in rows]).T * 100
+        ratio = np.asarray(
+            [
+                np.nan
+                if row["specificity_fraction_of_generic_shift"] is None
+                else row["specificity_fraction_of_generic_shift"]
+                for row in rows
+            ]
+        ) * 100
+        ratio_ci = np.asarray(
+            [
+                [np.nan, np.nan] if row["ratio_95_ci"] is None else row["ratio_95_ci"]
+                for row in rows
+            ]
+        ).T * 100
         axes[0].errorbar(
             LAYERS,
             ratio,
@@ -186,14 +200,41 @@ def main():
         for layer in LAYERS:
             row = analysis[model][str(layer)]
             low, high = row["specificity_95_ci"]
+            ratio = row["specificity_fraction_of_generic_shift"]
+            ratio_text = (
+                f"{ratio:.3%} of generic shift"
+                if ratio is not None
+                else "ratio undefined (no reliable positive generic shift)"
+            )
             lines.append(
                 f"- **{model}, layer {layer}:** baseline {row['baseline_accuracy']:.1%}; "
                 f"generic shift {row['generic_native_shift_mean_logits']:+.4f}; "
                 f"specificity {row['native_minus_random_specificity_mean_logits']:+.6f} "
                 f"logits (95% CI [{low:+.6f}, {high:+.6f}]); "
-                f"{row['specificity_fraction_of_generic_shift']:.3%} of generic shift; "
+                f"{ratio_text}; "
                 f"practical gate {row['practical_layer_gate']}."
             )
+    smol_difference = analysis["post_hoc_pairwise_layer_differences"][
+        "smollm2-1.7b"
+    ]["16_minus_24"]
+    qwen_difference = analysis["post_hoc_pairwise_layer_differences"]["qwen-1.5b"]
+    smol_low, smol_high = smol_difference["sentence_bootstrap_95_ci"]
+    conflict_low, conflict_high = smol_difference[
+        "conflict_sentence_bootstrap_95_ci"
+    ]
+    qwen_low, qwen_high = qwen_difference["16_minus_24"][
+        "sentence_bootstrap_95_ci"
+    ]
+    smol_ratio_difference = smol_difference["specificity_fraction_difference"]
+    smol_ratio_low, smol_ratio_high = smol_difference[
+        "specificity_fraction_difference_95_ci"
+    ]
+    qwen_ratio_difference = qwen_difference["16_minus_24"][
+        "specificity_fraction_difference"
+    ]
+    qwen_ratio_low, qwen_ratio_high = qwen_difference["16_minus_24"][
+        "specificity_fraction_difference_95_ci"
+    ]
     readme = f"""# MAMS layer selectivity (experiment 017)
 
 ## Result
@@ -203,6 +244,10 @@ This exploratory sweep applies training-only directions derived separately at la
 {chr(10).join(lines)}
 
 No layer was selected after seeing results. The practical gate is frozen at at least 5% specificity relative to generic shift, positive specificity interval and above-chance baseline accuracy. This is one benchmark and two model families; any layer-dependent signal needs independent confirmation.
+
+An explicitly **post-hoc, unadjusted** paired comparison found a layer-16 minus layer-24 specificity difference of {smol_difference['mean_specificity_difference_logits']:+.6f} logits for SmolLM2 (sentence-bootstrap 95% CI [{smol_low:+.6f}, {smol_high:+.6f}]); on the 18 conflict sentences the difference was {smol_difference['conflict_mean_difference_logits']:+.6f} (95% CI [{conflict_low:+.6f}, {conflict_high:+.6f}]). Qwen's same all-sentence contrast was {qwen_difference['16_minus_24']['mean_specificity_difference_logits']:+.6f} (95% CI [{qwen_low:+.6f}, {qwen_high:+.6f}]). These post-hoc comparisons were not preregistered and do not establish a cross-model layer effect; the SmolLM2 pattern needs a locked independent replication.
+
+For the preregistered relative endpoint, the paired layer-16 minus layer-24 specificity-fraction difference was {smol_ratio_difference * 100:+.2f} percentage points in SmolLM2 (95% CI [{smol_ratio_low * 100:+.2f}, {smol_ratio_high * 100:+.2f}]) and {qwen_ratio_difference * 100:+.2f} points in Qwen (95% CI [{qwen_ratio_low * 100:+.2f}, {qwen_ratio_high * 100:+.2f}]). This ratio comparison is also post-hoc and unadjusted; only the SmolLM2 interval excludes zero.
 
 ![Specificity fraction and absolute target-matched effect by layer](layer-selectivity.png)
 

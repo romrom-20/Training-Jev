@@ -291,12 +291,19 @@ At the largest dose, answer accuracy also falls sharply for SmolLM2. The directi
 size of these estimates are specific to the mapped food/service/price categories, the
 two instruction checkpoints and the next-token polarity-score endpoint.
 
-Layer choice is a plausible mechanism to test next, but is not itself a novelty claim.
+Layer choice is a plausible mechanism to test, but is not itself a novelty claim.
 Stoehr et al.'s [Activation Scaling for Steering and Interpreting Language
 Models](https://arxiv.org/abs/2410.04962) explicitly studies intervention points across
 layers and optimizes where to intervene. The local open question is narrower: whether
 the *fraction of a steering effect that is target-aspect-specific* varies by layer on
 human-annotated conflicting reviews, after matching dose to each layer's training
-activation norm. Layers 8, 16 and 24 are already cached for both current models. A
-layer-wise result would be exploratory until it survives a new benchmark and model
-family; selecting whichever layer looks best on MAMS would be post-selection.
+activation norm. Experiment 017 finds no practically useful layer in either model. A
+post-hoc paired contrast on the same 35 MAMS reviews shows SmolLM2 layer 16 exceeds
+layer 24 by +0.00903 logits (95% CI [+0.00722, +0.01094]), including the 18 conflict
+reviews, while Qwen's raw-score difference is uncertain. Paired specificity-fraction
+differences were +1.30 percentage points for SmolLM2 (95% CI [+1.07, +1.52]) and +1.33
+points for Qwen ([-1.85, +5.31]). The SmolLM2 fraction at layer 16 is 1.38% of its
+generic shift, still below the frozen 5% criterion. The comparison is unadjusted and
+uses the same benchmark that suggested it, so it is only a candidate localization
+hypothesis. Layer 16 must be frozen before a larger independent benchmark and model-family
+test; the current results do not establish a general layer effect.
