@@ -185,8 +185,8 @@ def main():
         "",
         "This third-family study trains food/service/value directions on synthetic training rows, then applies their layer-23 shared and residual components to TripR-2020Large. It uses 20 norm-matched random residual seeds on the 29 polarity-conflict sentences and a greedy exact-answer check. Review and generated text are omitted from this package.",
         "",
-        f"- Full-set baseline strict accuracy: {result['baseline_strict_accuracy_all']:.1%}.",
-        f"- Conflict-set baseline strict accuracy: {result['baseline_strict_accuracy_conflicts']:.1%}.",
+        f"- Full-set baseline all-vocabulary next-token top-1 accuracy: {result['baseline_strict_accuracy_all']:.1%}; positive-vs-negative candidate-pair accuracy: {result['baseline_candidate_pair_accuracy_all']:.1%}.",
+        f"- Conflict-set baseline all-vocabulary next-token top-1 accuracy: {result['baseline_strict_accuracy_conflicts']:.1%}; positive-vs-negative candidate-pair accuracy: {result['baseline_candidate_pair_accuracy_conflicts']:.1%}.",
         f"- Conflict trained residual specificity: {result['conflict_trained_residual_specificity_mean']:+.6f} logits.",
         f"- Conflict random-seed mean: {result['conflict_random_seed_specificity_mean']:+.6f}; trained-minus-control {result['conflict_trained_minus_random_mean']:+.6f} (95% nested CI [{ci[0]:+.6f}, {ci[1]:+.6f}]).",
         f"- Monte Carlo rank p: {result['conflict_monte_carlo_one_sided_p']:.4f}; score gate: {'PASS' if result['score_gate'] else 'FAIL'}.",
@@ -198,11 +198,22 @@ def main():
         lines.append(
             f"- **{condition}:** exact one-word rate {row['exact_one_word_rate']:.1%}; strict gold accuracy {row['strict_gold_accuracy']:.1%} (n={row['n']})."
         )
+    lines.extend(
+        [
+            "",
+            "Paired behavior changes from baseline:",
+        ]
+    )
+    for condition in ("trained_residual", "random_residual"):
+        row = result["generated_answer_paired_comparisons"][condition]
+        lines.append(
+            f"- **{condition}:** {row['label_flips']} of {row['paired_n']} generated labels flipped; {row['accuracy_gains']} accuracy gains and {row['accuracy_harms']} harms."
+        )
     lines += [
         "",
         "![Granite score and generation results](granite-residual-transfer.png)",
         "",
-        "This tests one checkpoint from a third family, at one layer and dose, on the reused TripR benchmark. It is not by itself a general cross-model result. The [protocol](../../docs/experiments/021-granite-tripr-residual-transfer.md), per-seed outcomes, provenance, and integrity checks are included.",
+        "The preregistered score gate remains failed: the one-sided random-seed rank was p=0.1429. The protocol's baseline-accuracy gate used all-vocabulary top-1; candidate-pair accuracy is also reported as a post hoc diagnostic because it is closer to the score endpoint. This tests one checkpoint from a third family, at one layer and dose, on the reused TripR benchmark. It is not by itself a general cross-model result. The [protocol](../../docs/experiments/021-granite-tripr-residual-transfer.md), per-seed outcomes, provenance, and integrity checks are included.",
         "",
     ]
     (args.output / "README.md").write_text("\n".join(lines))

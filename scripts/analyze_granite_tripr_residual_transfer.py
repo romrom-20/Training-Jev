@@ -47,6 +47,12 @@ def analyze(root):
     baseline_accuracy = float(np.mean([row["strict_correct"] for row in baseline]))
     conflict_baseline = [row for row in baseline if row["sentence_id"] in all_conflict_ids]
     conflict_accuracy = float(np.mean([row["strict_correct"] for row in conflict_baseline]))
+    all_candidate_pair_accuracy = float(
+        np.mean([(row["margin"] > 0) == bool(row["label"]) for row in baseline])
+    )
+    conflict_candidate_pair_accuracy = float(
+        np.mean([(row["margin"] > 0) == bool(row["label"]) for row in conflict_baseline])
+    )
 
     contrasts = {
         condition: sentence_contrasts(effects, condition) for condition in CONDITIONS
@@ -111,6 +117,45 @@ def analyze(root):
             "strict_gold_accuracy": float(np.mean([row["strict_correct"] for row in rows])),
         }
 
+    generation_by_condition = {
+        condition: {row["id"]: row for row in generations if row["condition"] == condition}
+        for condition in ("baseline", "trained_residual", "random_residual")
+    }
+    labels = {row["id"]: row["label"] for row in generation_by_condition["baseline"].values()}
+
+    def generated_label(row):
+        if not row["valid_exact_one_word"]:
+            return None
+        return labels[row["id"]] if row["strict_correct"] else 1 - labels[row["id"]]
+
+    generation_comparisons = {}
+    for condition in ("trained_residual", "random_residual"):
+        paired = [
+            (generation_by_condition["baseline"][stimulus_id], row)
+            for stimulus_id, row in generation_by_condition[condition].items()
+        ]
+        flips = [
+            (baseline_row, treatment_row)
+            for baseline_row, treatment_row in paired
+            if generated_label(baseline_row) != generated_label(treatment_row)
+        ]
+        gains = [
+            (baseline_row, treatment_row)
+            for baseline_row, treatment_row in paired
+            if not baseline_row["strict_correct"] and treatment_row["strict_correct"]
+        ]
+        harms = [
+            (baseline_row, treatment_row)
+            for baseline_row, treatment_row in paired
+            if baseline_row["strict_correct"] and not treatment_row["strict_correct"]
+        ]
+        generation_comparisons[condition] = {
+            "paired_n": len(paired),
+            "label_flips": len(flips),
+            "accuracy_gains": len(gains),
+            "accuracy_harms": len(harms),
+        }
+
     result = {
         "model": MODEL,
         "layer": manifest["layer"],
@@ -120,6 +165,8 @@ def analyze(root):
         "n_conflict_queries": manifest["n_conflict_queries"],
         "baseline_strict_accuracy_all": baseline_accuracy,
         "baseline_strict_accuracy_conflicts": conflict_accuracy,
+        "baseline_candidate_pair_accuracy_all": all_candidate_pair_accuracy,
+        "baseline_candidate_pair_accuracy_conflicts": conflict_candidate_pair_accuracy,
         "score_specificity_by_condition": full_specificity,
         "conflict_trained_residual_specificity_mean": trained_mean,
         "conflict_random_seed_specificity_mean": random_mean,
@@ -130,6 +177,7 @@ def analyze(root):
         "random_seed_specificity_by_seed": {str(seed): value for seed, value in seed_means.items()},
         "score_gate": score_gate,
         "generated_answer_behavior": gen_summary,
+        "generated_answer_paired_comparisons": generation_comparisons,
         "generation_tested_target_matched_directions_only": True,
     }
     write_json(folder / "analysis.json", result)

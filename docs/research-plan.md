@@ -288,3 +288,20 @@ generated-response outcome. The next informative study is a third architecture f
 with its own frozen training-only directions and a generated-answer endpoint, while
 retaining norm-matched random-seed controls. That can distinguish a portable mechanism
 from model-specific geometry. Keep all seeds and per-model outcomes.
+
+Experiment 021 carried that test to Granite 3.1 2B using synthetic-training-only
+directions, a depth-matched layer, 20 random residual controls, and generated answers.
+On 29 TripR conflict sentences, trained-residual specificity exceeded the random-seed
+mean by +0.13629 logits (nested 95% CI [+0.02338, +0.25195]), but its random-seed rank
+was p=0.1429, so the preregistered control gate failed. At the 5% dose, no generated
+label changed in either the trained or random condition; generated strict accuracy
+was 90.5% throughout. A post hoc diagnostic found 88.9% positive-vs-negative
+candidate-pair accuracy on conflicts, while the preregistered all-vocabulary top-1
+accuracy was 44.4%. The measurement distinction is material: the former matches the
+score endpoint, but it was not the frozen gate. This is a score-level lead with wide
+seed variation and no observed behavioral change, not evidence of robust transfer.
+See the [`021 audited bundle`](../results/granite-tripr-residual-transfer-v1/README.md).
+
+**LessWrong decision: wait.** The useful next experiment is a preregistered generated-
+decision dose response with matched random residuals, reporting candidate-pair and
+all-vocabulary accuracy separately. Do not write up this result as behavioral control.

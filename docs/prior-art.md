@@ -345,3 +345,15 @@ This leaves a model-specific score-level lead on a reused dataset, not a portabl
 mechanism. A third architecture and generated-response endpoint are needed before a
 general claim; see the [020 protocol](experiments/020-tripr-residual-control-seeds.md)
 and [audited bundle](../results/tripr-residual-control-seeds-v1/README.md).
+
+Experiment 021 adds a third-family test on Granite 3.1 2B. Its trained layer-23
+residual specificity exceeded the 20-seed random mean on TripR conflict prompts by
++0.13629 logits (nested 95% interval [+0.02338, +0.25195]), but two or more random
+seeds reached or exceeded the trained score (Monte Carlo p=0.1429). At the preregistered
+5% dose, learned and random residuals changed none of 63 generated labels; all three
+conditions had 90.5% strict accuracy. A post hoc candidate-pair accuracy diagnostic
+was 88.9% on conflicts, despite the all-vocabulary top-1 metric of 44.4% used by the
+original gate. This is evidence of a candidate-score effect that is not robust to the
+seed ensemble and does not translate to observed answer flips at this dose. It does
+not support a behavioral or general cross-family claim. See the [021 protocol](experiments/021-granite-tripr-residual-transfer.md)
+and [audited bundle](../results/granite-tripr-residual-transfer-v1/README.md).

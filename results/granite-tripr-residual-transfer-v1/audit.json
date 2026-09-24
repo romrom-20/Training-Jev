@@ -1,0 +1,94 @@
+{
+  "analysis_code_sha256": "c4219dbf78cbea1f40314d1d82fc308277837ecae3f19d91194e540f65ac27ab",
+  "checks": {
+    "all_random_control_seeds_present": true,
+    "all_score_conditions_present": true,
+    "analysis_recomputes": true,
+    "baseline_count_matches": true,
+    "clean_capture_commit": true,
+    "dose_matches_protocol": true,
+    "expected_conflict_counts": true,
+    "generated_output_factorial_complete": true,
+    "granite_40_layer_depth_and_layer_match_protocol": true,
+    "local_device": true,
+    "pinned_third_family_model": true,
+    "protocol_hash_matches": true,
+    "raw_review_and_generation_text_absent": true,
+    "runner_hash_matches": true,
+    "training_activation_hash_matches": true,
+    "training_activations_shape_matches": true,
+    "training_data_hash_matches": true,
+    "training_rows_match_frozen_filter": true,
+    "tripr_data_hash_matches": true,
+    "tripr_prompt_filter_matches": true
+  },
+  "checks_passed": true,
+  "experiment": 21,
+  "model_manifest": {
+    "control_seeds": [
+      20261101,
+      20261102,
+      20261103,
+      20261104,
+      20261105,
+      20261106,
+      20261107,
+      20261108,
+      20261109,
+      20261110,
+      20261111,
+      20261112,
+      20261113,
+      20261114,
+      20261115,
+      20261116,
+      20261117,
+      20261118,
+      20261119,
+      20261120
+    ],
+    "dataset_xml_sha256": "3d5d5e24cf57d617266bf048968a69baaad0087945a4ec20a7c19a6e82de8e2d",
+    "device": "mps",
+    "dose_fraction_of_training_activation_norm": 0.05,
+    "dose_l2": 0.7358852863311768,
+    "dtype": "float32",
+    "layer": 23,
+    "model": {
+      "family": "Granite3.1",
+      "layers": [
+        23
+      ],
+      "model": "ibm-granite/granite-3.1-2b-instruct",
+      "name": "granite-3.1-2b",
+      "revision": "bbc2aed595bd38bd770263dc3ab831db9794441d"
+    },
+    "model_layers": 40,
+    "n_conflict_queries": 63,
+    "n_conflict_sentences": 29,
+    "n_prompts": 385,
+    "n_sentences": 187,
+    "protocol_sha256": "fc697bffceacc255f7a5bc710fde4895db395be6eeecf5636a441f02c81d5a0d",
+    "provenance": {
+      "dirty_worktree": false,
+      "git_commit": "3a13353b93746245bbc577330cbeac14715b3152",
+      "packages": {
+        "numpy": "2.5.3",
+        "scikit-learn": "1.9.1",
+        "torch": "2.14.0",
+        "transformers": "4.57.6"
+      },
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "python": "3.12.14",
+      "source_sha256": "4b3e83f6f402d69e72b7b5bd92eb7db8f518424bb93294bb465dc546c2e76cbe"
+    },
+    "relative_depth": 0.575,
+    "residual_l2_norms": [
+      0.24681642651557922,
+      0.24832051992416382,
+      0.29781270027160645
+    ],
+    "runner_sha256": "974ed41e36912ff5f51bf0b20c3e8134db3e8b1af7b90dae13b3c2121a998d3e",
+    "training_activation_sha256": "33a123b10644fc8cd3009276aa627b625bb77e5380f6e2fffda18a2505d64e93",
+    "training_dataset_sha256": "31935191ec448880db57d5a65f126f07b59ce38d64f58e289c5682e8b30a26d4"
+  }
+}
