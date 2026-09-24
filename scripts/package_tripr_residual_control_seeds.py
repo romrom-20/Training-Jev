@@ -28,14 +28,20 @@ def write_json(path, value):
     path.write_text(json.dumps(value, indent=2, sort_keys=True) + "\n")
 
 
-def audit(root, data_path):
+def audit(root, data_path, analysis):
     stimuli, labels, _ = load_tripr(data_path)
     conflict_ids = {
         sid for sid, groups in labels.items() if len(set(groups.values())) > 1
     }
     prompts = [row for row in stimuli if row["sentence_id"] in conflict_ids]
     prompt_ids = {row["id"] for row in prompts}
-    report = {"experiment": 20, "checks_passed": True, "models": {}}
+    report = {
+        "experiment": 20,
+        "analysis_code_sha256": sha(ANALYZER),
+        "analysis_recomputes": analyze(root) == analysis,
+        "checks_passed": True,
+        "models": {},
+    }
     commits = set()
     for model in MODELS:
         folder = root / model
@@ -85,7 +91,7 @@ def audit(root, data_path):
         report["models"][model] = {"checks": checks, "manifest": manifest}
         report["checks_passed"] &= all(checks.values())
     report["same_capture_commit"] = len(commits) == 1
-    report["checks_passed"] &= len(commits) == 1
+    report["checks_passed"] &= len(commits) == 1 and report["analysis_recomputes"]
     if not report["checks_passed"]:
         raise ValueError("020 capture audit failed")
     return report
@@ -125,7 +131,7 @@ def main():
     if args.output.exists():
         raise FileExistsError(f"Refusing to overwrite {args.output}")
     analysis = analyze(args.root)
-    audit_report = audit(args.root, args.data)
+    audit_report = audit(args.root, args.data, analysis)
     args.output.mkdir(parents=True)
     for model in MODELS:
         for name in ("baseline.json", "effects.json"):

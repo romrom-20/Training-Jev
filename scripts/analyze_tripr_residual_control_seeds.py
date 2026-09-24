@@ -22,8 +22,11 @@ def sentence_contrast(rows):
         diagonal, off = [], []
         for source in range(3):
             source_rows = [row for row in group if row["source"] == source]
-            diagonal.extend(row["margin_delta"] for row in source_rows if row["target"] == source)
-            off.extend(row["margin_delta"] for row in source_rows if row["target"] != source)
+            match = [row["margin_delta"] for row in source_rows if row["target"] == source]
+            other = [row["margin_delta"] for row in source_rows if row["target"] != source]
+            if match and other:
+                diagonal.extend(match)
+                off.extend(other)
         if diagonal and off:
             values[sid] = float(np.mean(diagonal) - np.mean(off))
     return values

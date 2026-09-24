@@ -269,8 +269,22 @@ capture variation across random controls. See the
 [019 preregistration](experiments/019-tripr-shared-residual-layer16.md) and
 [audited bundle](../results/tripr-component-decomposition-v1/README.md).
 
-The next test should repeat the random-residual control across a frozen seed ensemble
-and test whether the learned residual beats the control distribution in both models.
-Only after that control-geometry check should we draft around the mechanism lead; a
-third architecture family and a generated-response endpoint remain necessary before a
-general claim. Keep directions frozen and publish all control seeds, not only the mean.
+Experiment 020 tested the residual on the 29 polarity-conflict TripR sentences against
+20 independent, norm-matched random residual seeds. The trained residual exceeded the
+random-seed mean in Qwen by +0.05685 logits (nested bootstrap 95% CI [+0.01848,
++0.09852]), but one random direction exceeded it, giving a one-sided Monte Carlo rank
+of 0.0952. In SmolLM2, the difference was +0.00920 ([+0.00638, +0.01214]); the trained
+residual exceeded all 20 controls (rank p=0.0476, the smallest possible with 20 seeds).
+The **cross-model control-robustness gate failed**. Sentence-level uncertainty alone
+made Qwen's component advantage look more decisive than its control-seed variability
+supports. SmolLM2's conflict-query baseline accuracy was only 58.7%, so its passing
+gate is still a narrow score-level result. Full controls are in the
+[020 bundle](../results/tripr-residual-control-seeds-v1/README.md).
+
+**LessWrong decision: wait.** The independent layer-localization result is worth a
+careful negative/mixed-results post, but the component mechanism now holds robustly
+against the seed ensemble in only one of two models, on a reused benchmark, with no
+generated-response outcome. The next informative study is a third architecture family
+with its own frozen training-only directions and a generated-answer endpoint, while
+retaining norm-matched random-seed controls. That can distinguish a portable mechanism
+from model-specific geometry. Keep all seeds and per-model outcomes.

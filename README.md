@@ -101,16 +101,18 @@ native directions beat matched random controls in both models, but only Qwen exc
 the 5% practical threshold (12.36% vs 0.91% for SmolLM2). This replicates a directional
 layer-localization pattern, not useful selectivity across models or a behavioral effect;
 the endpoint is next-token sentiment scores at one dose on one independent restaurant
-corpus. The asymmetric effect and the much larger generic shifts at layer 24 are
-interesting enough for a carefully scoped LessWrong research post, provided it centers
-the small-model limits and the failed cross-model practical gate. **LessWrong decision:
-worth drafting as a bounded result, not as a strong mechanistic claim.** A component
-follow-up (019) found that the layer-16 aspect residual beats both the shared sentiment
+corpus. The layer pattern is interesting, but the practical effect is model-dependent.
+A component follow-up (019) found that the layer-16 aspect residual beats both the shared sentiment
 component and a norm-matched random residual in both models; the residual itself causes
 almost no generic sentiment shift. That is a more compelling mechanism lead, but the
-random control uses one draw and 019 reuses the 018 reviews, so a multi-seed control test
-is underway before strengthening the claim. See the [018 results](results/tripr-layer-confirmation-v1/README.md)
-and [019 decomposition](results/tripr-component-decomposition-v1/README.md).
+random control initially used one draw and 019 reuses the 018 reviews. Experiment 020
+tested 20 controls on conflict sentences: SmolLM2's trained residual beat all 20, but
+Qwen's did not (one random residual scored higher). The cross-model robustness gate
+failed, so the component claim remains mixed. **LessWrong decision: wait** for a third
+architecture and a generated-response test before deciding whether this is a finding
+worth writing up. See the [018 results](results/tripr-layer-confirmation-v1/README.md),
+[019 decomposition](results/tripr-component-decomposition-v1/README.md) and
+[020 seed-ensemble test](results/tripr-residual-control-seeds-v1/README.md).
 
 ## What has actually run
 

@@ -331,7 +331,17 @@ is a suggestive natural-review follow-up to the project's earlier synthetic
 shared/residual decomposition (011), not a novel decomposition technique or an
 independent replication. It reuses the 018 reviews and compares against only one random
 residual draw per model, so random-control sampling variation is not reflected in the
-sentence intervals. A preregistered multi-seed random-residual ensemble is the next
-check before treating this as a robust mechanism. Results are in the
+sentence intervals. Results are in the
 [019 protocol](experiments/019-tripr-shared-residual-layer16.md) and
 [audited bundle](../results/tripr-component-decomposition-v1/README.md).
+
+Experiment 020 then used 20 random residual seeds on the 29 conflict sentences.
+SmolLM2's trained residual exceeded all 20 controls (95% nested sentence/seed bootstrap
+CI for trained-minus-control mean [+0.00638, +0.01214]; rank p=0.0476), but its baseline
+strict accuracy on those prompts was 58.7%. For Qwen, the trained residual exceeded the
+random mean (+0.05685; 95% interval [+0.01848, +0.09852]) but not every control (rank
+p=0.0952; one random draw was larger). The cross-model control-robustness gate failed.
+This leaves a model-specific score-level lead on a reused dataset, not a portable
+mechanism. A third architecture and generated-response endpoint are needed before a
+general claim; see the [020 protocol](experiments/020-tripr-residual-control-seeds.md)
+and [audited bundle](../results/tripr-residual-control-seeds-v1/README.md).

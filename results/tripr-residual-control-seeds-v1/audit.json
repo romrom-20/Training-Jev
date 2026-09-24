@@ -1,0 +1,189 @@
+{
+  "analysis_code_sha256": "745624cad5c15df2b0f12331ebca5c06cb748652812c618a254d23a55a098cae",
+  "analysis_recomputes": true,
+  "checks_passed": true,
+  "experiment": 20,
+  "models": {
+    "qwen-1.5b": {
+      "checks": {
+        "baseline_hash_matches": true,
+        "baseline_matches_018_conflict_slice": true,
+        "clean_capture_commit": true,
+        "dataset_hash_matches": true,
+        "effect_ids_unique": true,
+        "effects_hash_matches": true,
+        "factorial_complete": true,
+        "layer_and_dose_match_protocol": true,
+        "local_device": true,
+        "matched_residual_norms": true,
+        "prompt_ids_match_conflict_filter": true,
+        "protocol_hash_matches": true,
+        "review_text_absent": true,
+        "runner_hash_matches": true,
+        "seed_set_matches_protocol": true,
+        "sentence_count_matches": true,
+        "source_activation_hash_matches": true
+      },
+      "manifest": {
+        "baseline_sha256": "5c7d913cf9ffe41af74b6bd793ca48de3b46216d8e55f8b406135589ae8e10ec",
+        "dataset_xml_sha256": "3d5d5e24cf57d617266bf048968a69baaad0087945a4ec20a7c19a6e82de8e2d",
+        "device": "mps",
+        "dose_fraction_of_training_activation_norm": 0.05,
+        "dose_l2": 2.4411304473876956,
+        "dtype": "float32",
+        "effects_sha256": "fc0ade3c9b3db0b5e78a8d9878b68df68e329b30446c73876ecca6f9d499215c",
+        "layer": 16,
+        "model": {
+          "family": "Qwen2.5",
+          "layers": [
+            8,
+            16,
+            24
+          ],
+          "model": "Qwen/Qwen2.5-1.5B-Instruct",
+          "name": "qwen-1.5b",
+          "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+        },
+        "n_conflict_sentences": 29,
+        "n_prompts": 63,
+        "n_random_control_seeds": 20,
+        "protocol_sha256": "c7fa977d05d223b913da7e3e3b42b625b791b810ca8d461f2d2e4712553d7bc0",
+        "provenance": {
+          "dirty_worktree": false,
+          "git_commit": "08812020b57d89286ab82309b401b3c9dd53118f",
+          "packages": {
+            "numpy": "2.5.3",
+            "scikit-learn": "1.9.1",
+            "torch": "2.14.0",
+            "transformers": "4.57.6"
+          },
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "python": "3.12.14",
+          "source_sha256": "37a4cc649cddeb1cf2a09e0c95ab642b6addbe5871cac7170613d55d840ca72b"
+        },
+        "random_control_seeds": [
+          20261101,
+          20261102,
+          20261103,
+          20261104,
+          20261105,
+          20261106,
+          20261107,
+          20261108,
+          20261109,
+          20261110,
+          20261111,
+          20261112,
+          20261113,
+          20261114,
+          20261115,
+          20261116,
+          20261117,
+          20261118,
+          20261119,
+          20261120
+        ],
+        "residual_l2_norms": [
+          0.28698763251304626,
+          0.33216315507888794,
+          0.3691009283065796
+        ],
+        "runner_sha256": "de6d353318f1c3b2f3e82aaaaa24dbfe7a097e3568d9bd4e82707b49762e5e79",
+        "source_activation_sha256": "0d14bf5864b41ae377b3f43010c214e5904ea644a0f2e7526a5207828e1e837e",
+        "source_dataset_sha256": "f5c29870f94cde2726a5c0f7d6a07d10846811d3e039a6cd2f720501b8c066d3",
+        "source_manifest_activation_sha256": "0d14bf5864b41ae377b3f43010c214e5904ea644a0f2e7526a5207828e1e837e"
+      }
+    },
+    "smollm2-1.7b": {
+      "checks": {
+        "baseline_hash_matches": true,
+        "baseline_matches_018_conflict_slice": true,
+        "clean_capture_commit": true,
+        "dataset_hash_matches": true,
+        "effect_ids_unique": true,
+        "effects_hash_matches": true,
+        "factorial_complete": true,
+        "layer_and_dose_match_protocol": true,
+        "local_device": true,
+        "matched_residual_norms": true,
+        "prompt_ids_match_conflict_filter": true,
+        "protocol_hash_matches": true,
+        "review_text_absent": true,
+        "runner_hash_matches": true,
+        "seed_set_matches_protocol": true,
+        "sentence_count_matches": true,
+        "source_activation_hash_matches": true
+      },
+      "manifest": {
+        "baseline_sha256": "38981b5a0dfd2db4cddca1610d016811459a2515932cd02f15648d6866cb5f63",
+        "dataset_xml_sha256": "3d5d5e24cf57d617266bf048968a69baaad0087945a4ec20a7c19a6e82de8e2d",
+        "device": "mps",
+        "dose_fraction_of_training_activation_norm": 0.05,
+        "dose_l2": 12.453827285766602,
+        "dtype": "float32",
+        "effects_sha256": "aba4623f618f8bd24b85df9fef493d9d01078dc0ba2052758c7d2940ee4f277f",
+        "layer": 16,
+        "model": {
+          "family": "SmolLM2",
+          "layers": [
+            8,
+            16,
+            24
+          ],
+          "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+          "name": "smollm2-1.7b",
+          "revision": "31b70e2e869a7173562077fd711b654946d38674"
+        },
+        "n_conflict_sentences": 29,
+        "n_prompts": 63,
+        "n_random_control_seeds": 20,
+        "protocol_sha256": "c7fa977d05d223b913da7e3e3b42b625b791b810ca8d461f2d2e4712553d7bc0",
+        "provenance": {
+          "dirty_worktree": false,
+          "git_commit": "08812020b57d89286ab82309b401b3c9dd53118f",
+          "packages": {
+            "numpy": "2.5.3",
+            "scikit-learn": "1.9.1",
+            "torch": "2.14.0",
+            "transformers": "4.57.6"
+          },
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "python": "3.12.14",
+          "source_sha256": "37a4cc649cddeb1cf2a09e0c95ab642b6addbe5871cac7170613d55d840ca72b"
+        },
+        "random_control_seeds": [
+          20261101,
+          20261102,
+          20261103,
+          20261104,
+          20261105,
+          20261106,
+          20261107,
+          20261108,
+          20261109,
+          20261110,
+          20261111,
+          20261112,
+          20261113,
+          20261114,
+          20261115,
+          20261116,
+          20261117,
+          20261118,
+          20261119,
+          20261120
+        ],
+        "residual_l2_norms": [
+          0.302070677280426,
+          0.2727043032646179,
+          0.2633386552333832
+        ],
+        "runner_sha256": "de6d353318f1c3b2f3e82aaaaa24dbfe7a097e3568d9bd4e82707b49762e5e79",
+        "source_activation_sha256": "cf285b62562b608a43b968c7d08a6beb2bec40d592fd00cd376c5871ed1601de",
+        "source_dataset_sha256": "5bd46eb6a67372f17be7a24f8d0620f8e12a4153f40c0bf8e2c88e20fe764cea",
+        "source_manifest_activation_sha256": "cf285b62562b608a43b968c7d08a6beb2bec40d592fd00cd376c5871ed1601de"
+      }
+    }
+  },
+  "same_capture_commit": true
+}
