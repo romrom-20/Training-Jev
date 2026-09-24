@@ -1,0 +1,12 @@
+{
+  "checks": {
+    "all_233_ids_unique": true,
+    "expected_model_revision": true,
+    "frozen_gate_recomputed": true,
+    "frozen_protocol_hash_matches": true,
+    "local_mps_capture": true,
+    "no_source_text_or_generated_text": true
+  },
+  "checks_passed": true,
+  "dirty_capture_note": "The frozen protocol was committed before inference. The runner was uncommitted at capture and then had imports normalized for repository lint; the original capture SHA-256 and normalized runner SHA-256 are both recorded in analysis.json."
+}

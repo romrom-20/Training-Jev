@@ -1,0 +1,1685 @@
+{
+  "accuracy": 0.9613733905579399,
+  "confusion_matrix_negative_positive": [
+    [
+      54,
+      1
+    ],
+    [
+      7,
+      170
+    ]
+  ],
+  "dataset_sha256": "f21509cfa37e16534cd5b2da043be487355b64ef48fe8d6aaacaeca6b49cc0fb",
+  "device": "mps",
+  "dtype": "float32",
+  "experiment": 27,
+  "frozen_gate_passed": true,
+  "gate": {
+    "accuracy_at_least": 0.9,
+    "negative_recall_at_least": 0.8
+  },
+  "model": {
+    "family": "Qwen2.5",
+    "layers": [
+      12,
+      24,
+      36
+    ],
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1"
+  },
+  "n": 233,
+  "negative_recall": 0.9818181818181818,
+  "outcomes": [
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "33085939#758010#0|food",
+      "judge_label": 0,
+      "sentence_id": "33085939#758010#0"
+    },
+    {
+      "category": "service",
+      "gold": 0,
+      "id": "33085939#758010#0|service",
+      "judge_label": 0,
+      "sentence_id": "33085939#758010#0"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11313439#692431#0|food",
+      "judge_label": 1,
+      "sentence_id": "11313439#692431#0"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "11313439#692431#0|price",
+      "judge_label": 1,
+      "sentence_id": "11313439#692431#0"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11351513#832512#0|food",
+      "judge_label": 1,
+      "sentence_id": "11351513#832512#0"
+    },
+    {
+      "category": "service",
+      "gold": 0,
+      "id": "11351513#832512#0|service",
+      "judge_label": 0,
+      "sentence_id": "11351513#832512#0"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "32894336#662479#1|food",
+      "judge_label": 1,
+      "sentence_id": "32894336#662479#1"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "32894336#662479#1|service",
+      "judge_label": 1,
+      "sentence_id": "32894336#662479#1"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "11432316#715219#2|service",
+      "judge_label": 1,
+      "sentence_id": "11432316#715219#2"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11432316#715219#2|food",
+      "judge_label": 1,
+      "sentence_id": "11432316#715219#2"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "11559272#409013#0|service",
+      "judge_label": 1,
+      "sentence_id": "11559272#409013#0"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11559272#409013#0|food",
+      "judge_label": 1,
+      "sentence_id": "11559272#409013#0"
+    },
+    {
+      "category": "food",
+      "gold": 0,
+      "id": "11546184#1465600#0|food",
+      "judge_label": 0,
+      "sentence_id": "11546184#1465600#0"
+    },
+    {
+      "category": "price",
+      "gold": 0,
+      "id": "11546184#1465600#0|price",
+      "judge_label": 0,
+      "sentence_id": "11546184#1465600#0"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "32406302#615620#2|food",
+      "judge_label": 1,
+      "sentence_id": "32406302#615620#2"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "32406302#615620#2|price",
+      "judge_label": 1,
+      "sentence_id": "32406302#615620#2"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11302356#1455624#1|food",
+      "judge_label": 1,
+      "sentence_id": "11302356#1455624#1"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "11302356#1455624#1|service",
+      "judge_label": 1,
+      "sentence_id": "11302356#1455624#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11302355#533813#0|food",
+      "judge_label": 1,
+      "sentence_id": "11302355#533813#0"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "11302355#533813#0|service",
+      "judge_label": 1,
+      "sentence_id": "11302355#533813#0"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "35698351#821341#0|food",
+      "judge_label": 1,
+      "sentence_id": "35698351#821341#0"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "35698351#821341#0|price",
+      "judge_label": 1,
+      "sentence_id": "35698351#821341#0"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "33070305#1312437#2|food",
+      "judge_label": 1,
+      "sentence_id": "33070305#1312437#2"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "33070305#1312437#2|price",
+      "judge_label": 1,
+      "sentence_id": "33070305#1312437#2"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11464789#378665#0|food",
+      "judge_label": 1,
+      "sentence_id": "11464789#378665#0"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "11464789#378665#0|price",
+      "judge_label": 1,
+      "sentence_id": "11464789#378665#0"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11359656#1716239#1|food",
+      "judge_label": 1,
+      "sentence_id": "11359656#1716239#1"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "11359656#1716239#1|service",
+      "judge_label": 1,
+      "sentence_id": "11359656#1716239#1"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "11359656#1716239#1|price",
+      "judge_label": 1,
+      "sentence_id": "11359656#1716239#1"
+    },
+    {
+      "category": "service",
+      "gold": 0,
+      "id": "11359797#469087#7|service",
+      "judge_label": 0,
+      "sentence_id": "11359797#469087#7"
+    },
+    {
+      "category": "food",
+      "gold": 0,
+      "id": "11359797#469087#7|food",
+      "judge_label": 0,
+      "sentence_id": "11359797#469087#7"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11602699#875811#1|food",
+      "judge_label": 1,
+      "sentence_id": "11602699#875811#1"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "11602699#875811#1|service",
+      "judge_label": 1,
+      "sentence_id": "11602699#875811#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11488685#420977#1|food",
+      "judge_label": 0,
+      "sentence_id": "11488685#420977#1"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "11488685#420977#1|service",
+      "judge_label": 1,
+      "sentence_id": "11488685#420977#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "32944693#1193404#1|food",
+      "judge_label": 1,
+      "sentence_id": "32944693#1193404#1"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "32944693#1193404#1|price",
+      "judge_label": 1,
+      "sentence_id": "32944693#1193404#1"
+    },
+    {
+      "category": "food",
+      "gold": 0,
+      "id": "35393632#1591698#7|food",
+      "judge_label": 0,
+      "sentence_id": "35393632#1591698#7"
+    },
+    {
+      "category": "price",
+      "gold": 0,
+      "id": "35393632#1591698#7|price",
+      "judge_label": 0,
+      "sentence_id": "35393632#1591698#7"
+    },
+    {
+      "category": "price",
+      "gold": 0,
+      "id": "32935211#1468239#1|price",
+      "judge_label": 1,
+      "sentence_id": "32935211#1468239#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "32935211#1468239#1|food",
+      "judge_label": 1,
+      "sentence_id": "32935211#1468239#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "33069901#1437116#3|food",
+      "judge_label": 1,
+      "sentence_id": "33069901#1437116#3"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "33069901#1437116#3|price",
+      "judge_label": 1,
+      "sentence_id": "33069901#1437116#3"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11359727#487554#2|food",
+      "judge_label": 1,
+      "sentence_id": "11359727#487554#2"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "11359727#487554#2|service",
+      "judge_label": 1,
+      "sentence_id": "11359727#487554#2"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "32944704#492723#0|food",
+      "judge_label": 1,
+      "sentence_id": "32944704#492723#0"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "32944704#492723#0|service",
+      "judge_label": 1,
+      "sentence_id": "32944704#492723#0"
+    },
+    {
+      "category": "food",
+      "gold": 0,
+      "id": "35709141#1107179#1|food",
+      "judge_label": 0,
+      "sentence_id": "35709141#1107179#1"
+    },
+    {
+      "category": "service",
+      "gold": 0,
+      "id": "35709141#1107179#1|service",
+      "judge_label": 0,
+      "sentence_id": "35709141#1107179#1"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "11350496#1560668#3|service",
+      "judge_label": 1,
+      "sentence_id": "11350496#1560668#3"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11350496#1560668#3|food",
+      "judge_label": 1,
+      "sentence_id": "11350496#1560668#3"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "11359618#788741#3|service",
+      "judge_label": 1,
+      "sentence_id": "11359618#788741#3"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11359618#788741#3|food",
+      "judge_label": 1,
+      "sentence_id": "11359618#788741#3"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "33069536#707145#3|service",
+      "judge_label": 1,
+      "sentence_id": "33069536#707145#3"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "33069536#707145#3|price",
+      "judge_label": 1,
+      "sentence_id": "33069536#707145#3"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "36072604#1106889#2|service",
+      "judge_label": 1,
+      "sentence_id": "36072604#1106889#2"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "36072604#1106889#2|food",
+      "judge_label": 1,
+      "sentence_id": "36072604#1106889#2"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "32971013#1044651#2|service",
+      "judge_label": 1,
+      "sentence_id": "32971013#1044651#2"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "32971013#1044651#2|food",
+      "judge_label": 1,
+      "sentence_id": "32971013#1044651#2"
+    },
+    {
+      "category": "price",
+      "gold": 0,
+      "id": "32894669#1075584#0|price",
+      "judge_label": 0,
+      "sentence_id": "32894669#1075584#0"
+    },
+    {
+      "category": "food",
+      "gold": 0,
+      "id": "32894669#1075584#0|food",
+      "judge_label": 0,
+      "sentence_id": "32894669#1075584#0"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "35693136#561234#0|food",
+      "judge_label": 1,
+      "sentence_id": "35693136#561234#0"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "35693136#561234#0|service",
+      "judge_label": 1,
+      "sentence_id": "35693136#561234#0"
+    },
+    {
+      "category": "service",
+      "gold": 0,
+      "id": "11351819#985076#1|service",
+      "judge_label": 0,
+      "sentence_id": "11351819#985076#1"
+    },
+    {
+      "category": "food",
+      "gold": 0,
+      "id": "11351819#985076#1|food",
+      "judge_label": 0,
+      "sentence_id": "11351819#985076#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "32894963#1707639#1|food",
+      "judge_label": 1,
+      "sentence_id": "32894963#1707639#1"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "32894963#1707639#1|price",
+      "judge_label": 1,
+      "sentence_id": "32894963#1707639#1"
+    },
+    {
+      "category": "price",
+      "gold": 0,
+      "id": "11558693#1436895#9|price",
+      "judge_label": 0,
+      "sentence_id": "11558693#1436895#9"
+    },
+    {
+      "category": "food",
+      "gold": 0,
+      "id": "11558693#1436895#9|food",
+      "judge_label": 0,
+      "sentence_id": "11558693#1436895#9"
+    },
+    {
+      "category": "price",
+      "gold": 0,
+      "id": "11350390#802808#2|price",
+      "judge_label": 0,
+      "sentence_id": "11350390#802808#2"
+    },
+    {
+      "category": "food",
+      "gold": 0,
+      "id": "11350390#802808#2|food",
+      "judge_label": 0,
+      "sentence_id": "11350390#802808#2"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11351561#744321#0|food",
+      "judge_label": 1,
+      "sentence_id": "11351561#744321#0"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "11351561#744321#0|service",
+      "judge_label": 1,
+      "sentence_id": "11351561#744321#0"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "33068635#1533725#2|food",
+      "judge_label": 1,
+      "sentence_id": "33068635#1533725#2"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "33068635#1533725#2|service",
+      "judge_label": 1,
+      "sentence_id": "33068635#1533725#2"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "35084984#412657#2|food",
+      "judge_label": 1,
+      "sentence_id": "35084984#412657#2"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "35084984#412657#2|price",
+      "judge_label": 1,
+      "sentence_id": "35084984#412657#2"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "11548230#560890#2|service",
+      "judge_label": 1,
+      "sentence_id": "11548230#560890#2"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11548230#560890#2|food",
+      "judge_label": 1,
+      "sentence_id": "11548230#560890#2"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "35700989#574718#1|service",
+      "judge_label": 1,
+      "sentence_id": "35700989#574718#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "35700989#574718#1|food",
+      "judge_label": 1,
+      "sentence_id": "35700989#574718#1"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "11359618#788741#2|service",
+      "judge_label": 1,
+      "sentence_id": "11359618#788741#2"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "11359618#788741#2|price",
+      "judge_label": 1,
+      "sentence_id": "11359618#788741#2"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11359618#788741#2|food",
+      "judge_label": 1,
+      "sentence_id": "11359618#788741#2"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "32944714#1559783#1|food",
+      "judge_label": 1,
+      "sentence_id": "32944714#1559783#1"
+    },
+    {
+      "category": "service",
+      "gold": 0,
+      "id": "32944714#1559783#1|service",
+      "judge_label": 0,
+      "sentence_id": "32944714#1559783#1"
+    },
+    {
+      "category": "food",
+      "gold": 0,
+      "id": "11546184#1465600#1|food",
+      "judge_label": 0,
+      "sentence_id": "11546184#1465600#1"
+    },
+    {
+      "category": "price",
+      "gold": 0,
+      "id": "11546184#1465600#1|price",
+      "judge_label": 0,
+      "sentence_id": "11546184#1465600#1"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "32894483#1088884#0|service",
+      "judge_label": 1,
+      "sentence_id": "32894483#1088884#0"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "32894483#1088884#0|price",
+      "judge_label": 1,
+      "sentence_id": "32894483#1088884#0"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "32944674#542988#0|food",
+      "judge_label": 1,
+      "sentence_id": "32944674#542988#0"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "32944674#542988#0|price",
+      "judge_label": 1,
+      "sentence_id": "32944674#542988#0"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "32896492#738746#0|food",
+      "judge_label": 1,
+      "sentence_id": "32896492#738746#0"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "32896492#738746#0|price",
+      "judge_label": 1,
+      "sentence_id": "32896492#738746#0"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "33059931#926509#2|price",
+      "judge_label": 1,
+      "sentence_id": "33059931#926509#2"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "33059931#926509#2|food",
+      "judge_label": 1,
+      "sentence_id": "33059931#926509#2"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "33009300#626261#3|service",
+      "judge_label": 1,
+      "sentence_id": "33009300#626261#3"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "33009300#626261#3|food",
+      "judge_label": 1,
+      "sentence_id": "33009300#626261#3"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "11351453#683961#0|service",
+      "judge_label": 1,
+      "sentence_id": "11351453#683961#0"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11351453#683961#0|food",
+      "judge_label": 1,
+      "sentence_id": "11351453#683961#0"
+    },
+    {
+      "category": "service",
+      "gold": 0,
+      "id": "35759841#1360876#1|service",
+      "judge_label": 0,
+      "sentence_id": "35759841#1360876#1"
+    },
+    {
+      "category": "price",
+      "gold": 0,
+      "id": "35759841#1360876#1|price",
+      "judge_label": 0,
+      "sentence_id": "35759841#1360876#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "32892297#645108#1|food",
+      "judge_label": 1,
+      "sentence_id": "32892297#645108#1"
+    },
+    {
+      "category": "price",
+      "gold": 0,
+      "id": "32892297#645108#1|price",
+      "judge_label": 0,
+      "sentence_id": "32892297#645108#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "13383936#420974#1|food",
+      "judge_label": 1,
+      "sentence_id": "13383936#420974#1"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "13383936#420974#1|price",
+      "judge_label": 1,
+      "sentence_id": "13383936#420974#1"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "13383936#420974#1|service",
+      "judge_label": 1,
+      "sentence_id": "13383936#420974#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "32405935#675215#1|food",
+      "judge_label": 1,
+      "sentence_id": "32405935#675215#1"
+    },
+    {
+      "category": "price",
+      "gold": 0,
+      "id": "32405935#675215#1|price",
+      "judge_label": 0,
+      "sentence_id": "32405935#675215#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11461396#699654#0|food",
+      "judge_label": 1,
+      "sentence_id": "11461396#699654#0"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "11461396#699654#0|price",
+      "judge_label": 1,
+      "sentence_id": "11461396#699654#0"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "32485393#1022496#1|food",
+      "judge_label": 1,
+      "sentence_id": "32485393#1022496#1"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "32485393#1022496#1|service",
+      "judge_label": 1,
+      "sentence_id": "32485393#1022496#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "35196520#758440#0|food",
+      "judge_label": 1,
+      "sentence_id": "35196520#758440#0"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "35196520#758440#0|price",
+      "judge_label": 1,
+      "sentence_id": "35196520#758440#0"
+    },
+    {
+      "category": "service",
+      "gold": 0,
+      "id": "15094232#1295193#3|service",
+      "judge_label": 0,
+      "sentence_id": "15094232#1295193#3"
+    },
+    {
+      "category": "food",
+      "gold": 0,
+      "id": "15094232#1295193#3|food",
+      "judge_label": 0,
+      "sentence_id": "15094232#1295193#3"
+    },
+    {
+      "category": "service",
+      "gold": 0,
+      "id": "11302357#835238#1|service",
+      "judge_label": 0,
+      "sentence_id": "11302357#835238#1"
+    },
+    {
+      "category": "food",
+      "gold": 0,
+      "id": "11302357#835238#1|food",
+      "judge_label": 0,
+      "sentence_id": "11302357#835238#1"
+    },
+    {
+      "category": "price",
+      "gold": 0,
+      "id": "11302357#835238#1|price",
+      "judge_label": 0,
+      "sentence_id": "11302357#835238#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "35709451#1061726#4|food",
+      "judge_label": 1,
+      "sentence_id": "35709451#1061726#4"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "35709451#1061726#4|price",
+      "judge_label": 1,
+      "sentence_id": "35709451#1061726#4"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "35709451#1061726#4|service",
+      "judge_label": 1,
+      "sentence_id": "35709451#1061726#4"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "33069536#707145#4|food",
+      "judge_label": 1,
+      "sentence_id": "33069536#707145#4"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "33069536#707145#4|service",
+      "judge_label": 1,
+      "sentence_id": "33069536#707145#4"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "33069536#707145#2|food",
+      "judge_label": 1,
+      "sentence_id": "33069536#707145#2"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "33069536#707145#2|service",
+      "judge_label": 1,
+      "sentence_id": "33069536#707145#2"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "32935729#785247#11|food",
+      "judge_label": 0,
+      "sentence_id": "32935729#785247#11"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "32935729#785247#11|price",
+      "judge_label": 1,
+      "sentence_id": "32935729#785247#11"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11359613#884374#6|food",
+      "judge_label": 1,
+      "sentence_id": "11359613#884374#6"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "11359613#884374#6|service",
+      "judge_label": 1,
+      "sentence_id": "11359613#884374#6"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "33070309#423221#0|food",
+      "judge_label": 1,
+      "sentence_id": "33070309#423221#0"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "33070309#423221#0|service",
+      "judge_label": 1,
+      "sentence_id": "33070309#423221#0"
+    },
+    {
+      "category": "price",
+      "gold": 0,
+      "id": "32936760#1397861#5|price",
+      "judge_label": 0,
+      "sentence_id": "32936760#1397861#5"
+    },
+    {
+      "category": "service",
+      "gold": 0,
+      "id": "32936760#1397861#5|service",
+      "judge_label": 0,
+      "sentence_id": "32936760#1397861#5"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11351664#1238806#5|food",
+      "judge_label": null,
+      "sentence_id": "11351664#1238806#5"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "11351664#1238806#5|price",
+      "judge_label": 1,
+      "sentence_id": "11351664#1238806#5"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "32893040#1716582#1|service",
+      "judge_label": 1,
+      "sentence_id": "32893040#1716582#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "32893040#1716582#1|food",
+      "judge_label": 1,
+      "sentence_id": "32893040#1716582#1"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "32893040#1716582#1|price",
+      "judge_label": 1,
+      "sentence_id": "32893040#1716582#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11351814#1650882#5|food",
+      "judge_label": 1,
+      "sentence_id": "11351814#1650882#5"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "11351814#1650882#5|service",
+      "judge_label": 1,
+      "sentence_id": "11351814#1650882#5"
+    },
+    {
+      "category": "food",
+      "gold": 0,
+      "id": "11639261#426600#0|food",
+      "judge_label": 0,
+      "sentence_id": "11639261#426600#0"
+    },
+    {
+      "category": "price",
+      "gold": 0,
+      "id": "11639261#426600#0|price",
+      "judge_label": 0,
+      "sentence_id": "11639261#426600#0"
+    },
+    {
+      "category": "price",
+      "gold": 0,
+      "id": "12036269#580745#6|price",
+      "judge_label": 0,
+      "sentence_id": "12036269#580745#6"
+    },
+    {
+      "category": "food",
+      "gold": 0,
+      "id": "12036269#580745#6|food",
+      "judge_label": 0,
+      "sentence_id": "12036269#580745#6"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "11351762#644011#3|service",
+      "judge_label": 1,
+      "sentence_id": "11351762#644011#3"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "11351762#644011#3|price",
+      "judge_label": 1,
+      "sentence_id": "11351762#644011#3"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "36244423#1058258#1|service",
+      "judge_label": 1,
+      "sentence_id": "36244423#1058258#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "36244423#1058258#1|food",
+      "judge_label": 1,
+      "sentence_id": "36244423#1058258#1"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "35693216#1233439#1|price",
+      "judge_label": 0,
+      "sentence_id": "35693216#1233439#1"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "35693216#1233439#1|service",
+      "judge_label": 0,
+      "sentence_id": "35693216#1233439#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "32889544#0#0|food",
+      "judge_label": 1,
+      "sentence_id": "32889544#0#0"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "32889544#0#0|price",
+      "judge_label": 1,
+      "sentence_id": "32889544#0#0"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "36216551#1233442#1|service",
+      "judge_label": 1,
+      "sentence_id": "36216551#1233442#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "36216551#1233442#1|food",
+      "judge_label": 1,
+      "sentence_id": "36216551#1233442#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "32408649#945413#3|food",
+      "judge_label": 1,
+      "sentence_id": "32408649#945413#3"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "32408649#945413#3|price",
+      "judge_label": 1,
+      "sentence_id": "32408649#945413#3"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "33106326#864352#1|price",
+      "judge_label": 1,
+      "sentence_id": "33106326#864352#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "33106326#864352#1|food",
+      "judge_label": 1,
+      "sentence_id": "33106326#864352#1"
+    },
+    {
+      "category": "food",
+      "gold": 0,
+      "id": "11538980#453602#1|food",
+      "judge_label": 0,
+      "sentence_id": "11538980#453602#1"
+    },
+    {
+      "category": "service",
+      "gold": 0,
+      "id": "11538980#453602#1|service",
+      "judge_label": 0,
+      "sentence_id": "11538980#453602#1"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "35196527#481646#3|service",
+      "judge_label": 1,
+      "sentence_id": "35196527#481646#3"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "35196527#481646#3|food",
+      "judge_label": 1,
+      "sentence_id": "35196527#481646#3"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "35196527#481646#3|price",
+      "judge_label": 1,
+      "sentence_id": "35196527#481646#3"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "33070605#1232775#3|food",
+      "judge_label": 1,
+      "sentence_id": "33070605#1232775#3"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "33070605#1232775#3|price",
+      "judge_label": 1,
+      "sentence_id": "33070605#1232775#3"
+    },
+    {
+      "category": "price",
+      "gold": 0,
+      "id": "32899414#512291#3|price",
+      "judge_label": 0,
+      "sentence_id": "32899414#512291#3"
+    },
+    {
+      "category": "food",
+      "gold": 0,
+      "id": "32899414#512291#3|food",
+      "judge_label": 0,
+      "sentence_id": "32899414#512291#3"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "32893040#1716582#4|food",
+      "judge_label": 1,
+      "sentence_id": "32893040#1716582#4"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "32893040#1716582#4|price",
+      "judge_label": 1,
+      "sentence_id": "32893040#1716582#4"
+    },
+    {
+      "category": "price",
+      "gold": 0,
+      "id": "35886114#1249751#0|price",
+      "judge_label": 0,
+      "sentence_id": "35886114#1249751#0"
+    },
+    {
+      "category": "food",
+      "gold": 0,
+      "id": "35886114#1249751#0|food",
+      "judge_label": 0,
+      "sentence_id": "35886114#1249751#0"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "32867472#663531#2|service",
+      "judge_label": 1,
+      "sentence_id": "32867472#663531#2"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "32867472#663531#2|price",
+      "judge_label": 1,
+      "sentence_id": "32867472#663531#2"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "35709337#1579632#2|food",
+      "judge_label": 1,
+      "sentence_id": "35709337#1579632#2"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "35709337#1579632#2|service",
+      "judge_label": 1,
+      "sentence_id": "35709337#1579632#2"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11313316#1234433#3|food",
+      "judge_label": 1,
+      "sentence_id": "11313316#1234433#3"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "11313316#1234433#3|price",
+      "judge_label": 1,
+      "sentence_id": "11313316#1234433#3"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11417054#1062693#1|food",
+      "judge_label": 1,
+      "sentence_id": "11417054#1062693#1"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "11417054#1062693#1|service",
+      "judge_label": 1,
+      "sentence_id": "11417054#1062693#1"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "11417054#1062693#1|price",
+      "judge_label": 1,
+      "sentence_id": "11417054#1062693#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "15094232#1295193#0|food",
+      "judge_label": 1,
+      "sentence_id": "15094232#1295193#0"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "15094232#1295193#0|service",
+      "judge_label": 1,
+      "sentence_id": "15094232#1295193#0"
+    },
+    {
+      "category": "price",
+      "gold": 0,
+      "id": "11359717#1138929#5|price",
+      "judge_label": 0,
+      "sentence_id": "11359717#1138929#5"
+    },
+    {
+      "category": "food",
+      "gold": 0,
+      "id": "11359717#1138929#5|food",
+      "judge_label": 0,
+      "sentence_id": "11359717#1138929#5"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "12036269#580745#4|food",
+      "judge_label": 1,
+      "sentence_id": "12036269#580745#4"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "12036269#580745#4|price",
+      "judge_label": 1,
+      "sentence_id": "12036269#580745#4"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11351682#1496136#0|food",
+      "judge_label": 1,
+      "sentence_id": "11351682#1496136#0"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "11351682#1496136#0|service",
+      "judge_label": 1,
+      "sentence_id": "11351682#1496136#0"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11349760#848056#1|food",
+      "judge_label": 1,
+      "sentence_id": "11349760#848056#1"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "11349760#848056#1|service",
+      "judge_label": 1,
+      "sentence_id": "11349760#848056#1"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "11349760#848056#1|price",
+      "judge_label": 1,
+      "sentence_id": "11349760#848056#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "35704115#614067#0|food",
+      "judge_label": 1,
+      "sentence_id": "35704115#614067#0"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "35704115#614067#0|service",
+      "judge_label": 1,
+      "sentence_id": "35704115#614067#0"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "33061498#586991#0|food",
+      "judge_label": 1,
+      "sentence_id": "33061498#586991#0"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "33061498#586991#0|service",
+      "judge_label": 1,
+      "sentence_id": "33061498#586991#0"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11660480#640405#1|food",
+      "judge_label": 1,
+      "sentence_id": "11660480#640405#1"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "11660480#640405#1|service",
+      "judge_label": 1,
+      "sentence_id": "11660480#640405#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "35682567#1590699#1|food",
+      "judge_label": 1,
+      "sentence_id": "35682567#1590699#1"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "35682567#1590699#1|service",
+      "judge_label": 1,
+      "sentence_id": "35682567#1590699#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "35698333#556353#0|food",
+      "judge_label": 1,
+      "sentence_id": "35698333#556353#0"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "35698333#556353#0|price",
+      "judge_label": 1,
+      "sentence_id": "35698333#556353#0"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "11651310#581605#1|service",
+      "judge_label": 1,
+      "sentence_id": "11651310#581605#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11651310#581605#1|food",
+      "judge_label": 1,
+      "sentence_id": "11651310#581605#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11610050#517598#0|food",
+      "judge_label": 1,
+      "sentence_id": "11610050#517598#0"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "11610050#517598#0|service",
+      "judge_label": 1,
+      "sentence_id": "11610050#517598#0"
+    },
+    {
+      "category": "food",
+      "gold": 0,
+      "id": "11570675#1355721#1|food",
+      "judge_label": 0,
+      "sentence_id": "11570675#1355721#1"
+    },
+    {
+      "category": "service",
+      "gold": 0,
+      "id": "11570675#1355721#1|service",
+      "judge_label": 0,
+      "sentence_id": "11570675#1355721#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11463275#424927#1|food",
+      "judge_label": 1,
+      "sentence_id": "11463275#424927#1"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "11463275#424927#1|service",
+      "judge_label": 1,
+      "sentence_id": "11463275#424927#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "35703223#626682#0|food",
+      "judge_label": 1,
+      "sentence_id": "35703223#626682#0"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "35703223#626682#0|price",
+      "judge_label": 1,
+      "sentence_id": "35703223#626682#0"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "35703223#626682#1|food",
+      "judge_label": 1,
+      "sentence_id": "35703223#626682#1"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "35703223#626682#1|price",
+      "judge_label": 1,
+      "sentence_id": "35703223#626682#1"
+    },
+    {
+      "category": "price",
+      "gold": 0,
+      "id": "11351633#565247#3 |price",
+      "judge_label": 0,
+      "sentence_id": "11351633#565247#3 "
+    },
+    {
+      "category": "food",
+      "gold": 0,
+      "id": "11351633#565247#3 |food",
+      "judge_label": 0,
+      "sentence_id": "11351633#565247#3 "
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "35701421#583735#2|service",
+      "judge_label": 1,
+      "sentence_id": "35701421#583735#2"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "35701421#583735#2|food",
+      "judge_label": 1,
+      "sentence_id": "35701421#583735#2"
+    },
+    {
+      "category": "service",
+      "gold": 0,
+      "id": "11351354#412616#1|service",
+      "judge_label": 0,
+      "sentence_id": "11351354#412616#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11351354#412616#1|food",
+      "judge_label": 0,
+      "sentence_id": "11351354#412616#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "32950007#1320096#2|food",
+      "judge_label": 1,
+      "sentence_id": "32950007#1320096#2"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "32950007#1320096#2|service",
+      "judge_label": 1,
+      "sentence_id": "32950007#1320096#2"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "35816071#637243#2|food",
+      "judge_label": 1,
+      "sentence_id": "35816071#637243#2"
+    },
+    {
+      "category": "price",
+      "gold": 1,
+      "id": "35816071#637243#2|price",
+      "judge_label": 1,
+      "sentence_id": "35816071#637243#2"
+    },
+    {
+      "category": "food",
+      "gold": 0,
+      "id": "11349845#1188496#2|food",
+      "judge_label": 0,
+      "sentence_id": "11349845#1188496#2"
+    },
+    {
+      "category": "service",
+      "gold": 0,
+      "id": "11349845#1188496#2|service",
+      "judge_label": 0,
+      "sentence_id": "11349845#1188496#2"
+    },
+    {
+      "category": "service",
+      "gold": 1,
+      "id": "32464595#574909#1|service",
+      "judge_label": 1,
+      "sentence_id": "32464595#574909#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "32464595#574909#1|food",
+      "judge_label": 1,
+      "sentence_id": "32464595#574909#1"
+    },
+    {
+      "category": "food",
+      "gold": 1,
+      "id": "11313290#1139539#1|food",
+      "judge_label": 0,
+      "sentence_id": "11313290#1139539#1"
+    },
+    {
+      "category": "price",
+      "gold": 0,
+      "id": "11313290#1139539#1|price",
+      "judge_label": 0,
+      "sentence_id": "11313290#1139539#1"
+    },
+    {
+      "category": "food",
+      "gold": 0,
+      "id": "11350390#802808#3|food",
+      "judge_label": 0,
+      "sentence_id": "11350390#802808#3"
+    },
+    {
+      "category": "service",
+      "gold": 0,
+      "id": "11350390#802808#3|service",
+      "judge_label": 0,
+      "sentence_id": "11350390#802808#3"
+    }
+  ],
+  "parseability": 0.9957081545064378,
+  "phase": "source_label_screen",
+  "protocol_sha256": "0c5abb66efcdfb7aaf37b2fab44adafad8e7ec809e2f780c11ebaf6ef03b324e",
+  "provenance": {
+    "dirty_worktree": true,
+    "git_commit": "a8d21abba745415500028e80ee5e6be47a14fa49",
+    "packages": {
+      "numpy": "2.5.3",
+      "scikit-learn": "1.9.1",
+      "torch": "2.14.0",
+      "transformers": "4.57.6"
+    },
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.14",
+    "source_sha256": "4b3e83f6f402d69e72b7b5bd92eb7db8f518424bb93294bb465dc546c2e76cbe"
+  },
+  "runner_sha256": "840d192de05133c3a262bd00daab465c81128646762cc8cd5ee089348b8b09f1",
+  "runner_sha256_after_import_normalization": "47d84e25e0b857462ee5ec4929a7524722ad85b92f9a8b8a339bfe001f09b4fa"
+}
