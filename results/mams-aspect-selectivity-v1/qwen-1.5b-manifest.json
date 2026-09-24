@@ -1,0 +1,54 @@
+{
+  "model": {
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "layers": [
+      8,
+      16,
+      24
+    ],
+    "family": "Qwen2.5",
+    "name": "qwen-1.5b"
+  },
+  "device": "mps",
+  "dtype": "float32",
+  "layer": 24,
+  "dose_fraction": 0.05,
+  "dose_l2": 6.437084960937501,
+  "candidate_token_ids": {
+    "positive": 30487,
+    "negative": 42224
+  },
+  "dataset": "MAMS-ACSA official test split",
+  "dataset_repository_revision": "cddcdb0f423b3fdb2c76b70744737abed3a00d17",
+  "mams_xml_sha256": "cc0dc3c5b711653daa9ac886c6517d3ebf8752954b73715692d7765fec4a57f5",
+  "n_gold_prompts": 71,
+  "n_sentences": 35,
+  "n_polarity_conflict_sentences": 18,
+  "category_source_mapping": {
+    "food": 0,
+    "menu": 0,
+    "service": 1,
+    "staff": 1,
+    "price": 2
+  },
+  "source_dataset_sha256": "f5c29870f94cde2726a5c0f7d6a07d10846811d3e039a6cd2f720501b8c066d3",
+  "source_activation_sha256": "0d14bf5864b41ae377b3f43010c214e5904ea644a0f2e7526a5207828e1e837e",
+  "protocol_sha256": "8623fdb257807a950f39381045b11945964e0e5ff726b6296072cf6d8092d9b2",
+  "code_sha256": "16ec64cd5475a1214a675bbaa1278a4a34ec83f39ff3eb44e0693a27e8b6f41e",
+  "baseline_sha256": "4c6d856613905611af90a12ca36018e88cf37935e7a55a94c02a55b5f665d514",
+  "effects_sha256": "3946885950c7e1f1efccca6643a813eef89be9571171545cca5a92da66587304",
+  "provenance": {
+    "python": "3.12.14",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "git_commit": "0b53cc2111fe68c9fcaf85d7047e17dc141c7ada",
+    "dirty_worktree": false,
+    "source_sha256": "65202dd6c98b4f387dafef2c064677e73aa2471826fb5c6bdab6d0707e8a27eb",
+    "packages": {
+      "torch": "2.14.0",
+      "transformers": "4.57.6",
+      "numpy": "2.5.3",
+      "scikit-learn": "1.9.1"
+    }
+  }
+}

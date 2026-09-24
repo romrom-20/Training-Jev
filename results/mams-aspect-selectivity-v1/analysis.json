@@ -1,0 +1,253 @@
+{
+  "cross_model_practical_selectivity_gate_pass": false,
+  "qwen-1.5b": {
+    "baseline_behavior_gate_pass_over_chance": true,
+    "baseline_strict_accuracy": 0.7887323943661971,
+    "baseline_valid_positive_or_negative_rate": 1.0,
+    "effects": {
+      "native_0": {
+        "mean_margin_delta": 2.44637312016017,
+        "mean_strict_accuracy_under_steering": 0.8028169014084507,
+        "n": 71
+      },
+      "native_1": {
+        "mean_margin_delta": 2.389898434491225,
+        "mean_strict_accuracy_under_steering": 0.8028169014084507,
+        "n": 71
+      },
+      "native_2": {
+        "mean_margin_delta": 2.3355807720775337,
+        "mean_strict_accuracy_under_steering": 0.8028169014084507,
+        "n": 71
+      },
+      "random_0": {
+        "mean_margin_delta": -0.012026853964362346,
+        "mean_strict_accuracy_under_steering": 0.7887323943661971,
+        "n": 71
+      },
+      "random_1": {
+        "mean_margin_delta": -0.012032522282130281,
+        "mean_strict_accuracy_under_steering": 0.7887323943661971,
+        "n": 71
+      },
+      "random_2": {
+        "mean_margin_delta": -0.012032361097738777,
+        "mean_strict_accuracy_under_steering": 0.7887323943661971,
+        "n": 71
+      },
+      "shared_0": {
+        "mean_margin_delta": 2.39066408721494,
+        "mean_strict_accuracy_under_steering": 0.8028169014084507,
+        "n": 71
+      },
+      "shared_1": {
+        "mean_margin_delta": 2.3906641140790055,
+        "mean_strict_accuracy_under_steering": 0.8028169014084507,
+        "n": 71
+      },
+      "shared_2": {
+        "mean_margin_delta": 2.390661400808415,
+        "mean_strict_accuracy_under_steering": 0.8028169014084507,
+        "n": 71
+      }
+    },
+    "generic_shift_mean_logits": 2.3906174422429762,
+    "label_balance_and_class_accuracy": {
+      "baseline_accuracy_by_label": {
+        "0": 0.90625,
+        "1": 0.6923076923076923
+      },
+      "positive_label_fraction": 0.5492957746478874,
+      "steered_accuracy_by_label": {
+        "native": {
+          "0": 0.875,
+          "1": 0.7435897435897436
+        },
+        "random": {
+          "0": 0.90625,
+          "1": 0.6923076923076923
+        },
+        "shared": {
+          "0": 0.875,
+          "1": 0.7435897435897436
+        }
+      }
+    },
+    "model": "qwen-1.5b",
+    "n_baseline_prompts": 71,
+    "polarity_conflict_primary_slice": {
+      "n_sentences": 18,
+      "native_minus_random_specificity": 0.015924559699164505,
+      "sentence_bootstrap_95_ci": [
+        0.007716099421183285,
+        0.025624195734659835
+      ]
+    },
+    "polarity_disagreement_subset": {
+      "interpretation": "descriptive only; subset may be small",
+      "n_sentences": 18,
+      "native_diagonal_minus_off_diagonal_mean": 0.015923676667390054
+    },
+    "preregistered_practical_selectivity_gate": false,
+    "primary_native_minus_random_specificity": {
+      "mean_native_minus_random_specificity": 0.009029878888811389,
+      "n_sentences": 35,
+      "sentence_bootstrap_95_ci": [
+        0.003785751206534258,
+        0.015216409138270794
+      ]
+    },
+    "specificity_contrasts": {
+      "native": {
+        "mean_diagonal_minus_off_diagonal": 0.009030160449800042,
+        "n_sentences": 35,
+        "sentence_bootstrap_95_ci": [
+          0.0037883560998099274,
+          0.015211885543096638
+        ]
+      },
+      "random": {
+        "mean_diagonal_minus_off_diagonal": 2.815609886532408e-07,
+        "n_sentences": 35,
+        "sentence_bootstrap_95_ci": [
+          -5.613508678617933e-06,
+          7.385299319312668e-06
+        ]
+      },
+      "shared": {
+        "mean_diagonal_minus_off_diagonal": 2.3978097098214285e-06,
+        "n_sentences": 35,
+        "sentence_bootstrap_95_ci": [
+          -4.4141496930803576e-06,
+          1.3110297066824717e-05
+        ]
+      }
+    },
+    "specificity_fraction_of_generic_shift": 0.0037772161824182054
+  },
+  "smollm2-1.7b": {
+    "baseline_behavior_gate_pass_over_chance": true,
+    "baseline_strict_accuracy": 0.7323943661971831,
+    "baseline_valid_positive_or_negative_rate": 1.0,
+    "effects": {
+      "native_0": {
+        "mean_margin_delta": 1.4349643546091,
+        "mean_strict_accuracy_under_steering": 0.7183098591549296,
+        "n": 71
+      },
+      "native_1": {
+        "mean_margin_delta": 1.3493608555323642,
+        "mean_strict_accuracy_under_steering": 0.7323943661971831,
+        "n": 71
+      },
+      "native_2": {
+        "mean_margin_delta": 1.4473673189190073,
+        "mean_strict_accuracy_under_steering": 0.7183098591549296,
+        "n": 71
+      },
+      "random_0": {
+        "mean_margin_delta": 0.08118504537662989,
+        "mean_strict_accuracy_under_steering": 0.7323943661971831,
+        "n": 71
+      },
+      "random_1": {
+        "mean_margin_delta": 0.0811851528328909,
+        "mean_strict_accuracy_under_steering": 0.7323943661971831,
+        "n": 71
+      },
+      "random_2": {
+        "mean_margin_delta": 0.08118445436719438,
+        "mean_strict_accuracy_under_steering": 0.7323943661971831,
+        "n": 71
+      },
+      "shared_0": {
+        "mean_margin_delta": 1.410692120941592,
+        "mean_strict_accuracy_under_steering": 0.7323943661971831,
+        "n": 71
+      },
+      "shared_1": {
+        "mean_margin_delta": 1.410692376150212,
+        "mean_strict_accuracy_under_steering": 0.7323943661971831,
+        "n": 71
+      },
+      "shared_2": {
+        "mean_margin_delta": 1.410691691116548,
+        "mean_strict_accuracy_under_steering": 0.7323943661971831,
+        "n": 71
+      }
+    },
+    "generic_shift_mean_logits": 1.4105641763534906,
+    "label_balance_and_class_accuracy": {
+      "baseline_accuracy_by_label": {
+        "0": 0.90625,
+        "1": 0.5897435897435898
+      },
+      "positive_label_fraction": 0.5492957746478874,
+      "steered_accuracy_by_label": {
+        "native": {
+          "0": 0.6979166666666666,
+          "1": 0.7435897435897436
+        },
+        "random": {
+          "0": 0.90625,
+          "1": 0.5897435897435898
+        },
+        "shared": {
+          "0": 0.71875,
+          "1": 0.7435897435897436
+        }
+      }
+    },
+    "model": "smollm2-1.7b",
+    "n_baseline_prompts": 71,
+    "polarity_conflict_primary_slice": {
+      "n_sentences": 18,
+      "native_minus_random_specificity": 0.0010399465207700288,
+      "sentence_bootstrap_95_ci": [
+        0.0006111427589699073,
+        0.001414491070641403
+      ]
+    },
+    "polarity_disagreement_subset": {
+      "interpretation": "descriptive only; subset may be small",
+      "n_sentences": 18,
+      "native_diagonal_minus_off_diagonal_mean": 0.0010395933080602493
+    },
+    "preregistered_practical_selectivity_gate": false,
+    "primary_native_minus_random_specificity": {
+      "mean_native_minus_random_specificity": 0.0011269523983909926,
+      "n_sentences": 35,
+      "sentence_bootstrap_95_ci": [
+        0.000813779717399956,
+        0.0014149939446222166
+      ]
+    },
+    "specificity_contrasts": {
+      "native": {
+        "mean_diagonal_minus_off_diagonal": 0.0011268252418154719,
+        "n_sentences": 35,
+        "sentence_bootstrap_95_ci": [
+          0.0008132869856698172,
+          0.0014154609044392818
+        ]
+      },
+      "random": {
+        "mean_diagonal_minus_off_diagonal": -1.27156575520569e-07,
+        "n_sentences": 35,
+        "sentence_bootstrap_95_ci": [
+          -1.435052780877712e-06,
+          1.117161342075893e-06
+        ]
+      },
+      "shared": {
+        "mean_diagonal_minus_off_diagonal": -1.3623918805803571e-08,
+        "n_sentences": 35,
+        "sentence_bootstrap_95_ci": [
+          -1.5125955854143413e-06,
+          1.3487679617745537e-06
+        ]
+      }
+    },
+    "specificity_fraction_of_generic_shift": 0.0007989373452715389
+  }
+}

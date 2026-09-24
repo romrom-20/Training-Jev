@@ -1,0 +1,160 @@
+{
+  "analysis_code_sha256": "8501e6f6e9f91a0f0a76d12ec6d7471c2e9326f7da66ee8f745dbf0a560f4cc2",
+  "checks_passed": true,
+  "dataset_repository_revision": "cddcdb0f423b3fdb2c76b70744737abed3a00d17",
+  "dataset_sha256": "cc0dc3c5b711653daa9ac886c6517d3ebf8752954b73715692d7765fec4a57f5",
+  "models": {
+    "qwen-1.5b": {
+      "checks": {
+        "analysis_recomputes": true,
+        "baseline_hash_matches": true,
+        "baseline_ids_unique": true,
+        "dataset_hash_matches": true,
+        "dataset_revision_matches": true,
+        "effect_ids_match_frozen_factorial": true,
+        "effect_ids_unique": true,
+        "effects_hash_matches": true,
+        "local_device": true,
+        "manifest_capture_commit_clean": true,
+        "no_review_text_in_outcomes": true,
+        "prompt_ids_match_frozen_filter": true,
+        "protocol_hash_matches": true,
+        "runner_hash_matches": true,
+        "source_activation_hash_matches": true,
+        "source_dataset_hash_matches": true
+      },
+      "manifest": {
+        "baseline_sha256": "4c6d856613905611af90a12ca36018e88cf37935e7a55a94c02a55b5f665d514",
+        "candidate_token_ids": {
+          "negative": 42224,
+          "positive": 30487
+        },
+        "category_source_mapping": {
+          "food": 0,
+          "menu": 0,
+          "price": 2,
+          "service": 1,
+          "staff": 1
+        },
+        "code_sha256": "16ec64cd5475a1214a675bbaa1278a4a34ec83f39ff3eb44e0693a27e8b6f41e",
+        "dataset": "MAMS-ACSA official test split",
+        "dataset_repository_revision": "cddcdb0f423b3fdb2c76b70744737abed3a00d17",
+        "device": "mps",
+        "dose_fraction": 0.05,
+        "dose_l2": 6.437084960937501,
+        "dtype": "float32",
+        "effects_sha256": "3946885950c7e1f1efccca6643a813eef89be9571171545cca5a92da66587304",
+        "layer": 24,
+        "mams_xml_sha256": "cc0dc3c5b711653daa9ac886c6517d3ebf8752954b73715692d7765fec4a57f5",
+        "model": {
+          "family": "Qwen2.5",
+          "layers": [
+            8,
+            16,
+            24
+          ],
+          "model": "Qwen/Qwen2.5-1.5B-Instruct",
+          "name": "qwen-1.5b",
+          "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+        },
+        "n_gold_prompts": 71,
+        "n_polarity_conflict_sentences": 18,
+        "n_sentences": 35,
+        "protocol_sha256": "8623fdb257807a950f39381045b11945964e0e5ff726b6296072cf6d8092d9b2",
+        "provenance": {
+          "dirty_worktree": false,
+          "git_commit": "0b53cc2111fe68c9fcaf85d7047e17dc141c7ada",
+          "packages": {
+            "numpy": "2.5.3",
+            "scikit-learn": "1.9.1",
+            "torch": "2.14.0",
+            "transformers": "4.57.6"
+          },
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "python": "3.12.14",
+          "source_sha256": "65202dd6c98b4f387dafef2c064677e73aa2471826fb5c6bdab6d0707e8a27eb"
+        },
+        "source_activation_sha256": "0d14bf5864b41ae377b3f43010c214e5904ea644a0f2e7526a5207828e1e837e",
+        "source_dataset_sha256": "f5c29870f94cde2726a5c0f7d6a07d10846811d3e039a6cd2f720501b8c066d3"
+      }
+    },
+    "smollm2-1.7b": {
+      "checks": {
+        "analysis_recomputes": true,
+        "baseline_hash_matches": true,
+        "baseline_ids_unique": true,
+        "dataset_hash_matches": true,
+        "dataset_revision_matches": true,
+        "effect_ids_match_frozen_factorial": true,
+        "effect_ids_unique": true,
+        "effects_hash_matches": true,
+        "local_device": true,
+        "manifest_capture_commit_clean": true,
+        "no_review_text_in_outcomes": true,
+        "prompt_ids_match_frozen_filter": true,
+        "protocol_hash_matches": true,
+        "runner_hash_matches": true,
+        "source_activation_hash_matches": true,
+        "source_dataset_hash_matches": true
+      },
+      "manifest": {
+        "baseline_sha256": "4f12da4f8e32607390bed17581684e080c71f9ae48bd8d64e52743b2fd622e77",
+        "candidate_token_ids": {
+          "negative": 17728,
+          "positive": 16185
+        },
+        "category_source_mapping": {
+          "food": 0,
+          "menu": 0,
+          "price": 2,
+          "service": 1,
+          "staff": 1
+        },
+        "code_sha256": "16ec64cd5475a1214a675bbaa1278a4a34ec83f39ff3eb44e0693a27e8b6f41e",
+        "dataset": "MAMS-ACSA official test split",
+        "dataset_repository_revision": "cddcdb0f423b3fdb2c76b70744737abed3a00d17",
+        "device": "mps",
+        "dose_fraction": 0.05,
+        "dose_l2": 95.42455444335938,
+        "dtype": "float32",
+        "effects_sha256": "006f80d91ba5cf6c7e167805ce23985b1fd09bb443adda7dc95b08cb555594ea",
+        "layer": 24,
+        "mams_xml_sha256": "cc0dc3c5b711653daa9ac886c6517d3ebf8752954b73715692d7765fec4a57f5",
+        "model": {
+          "family": "SmolLM2",
+          "layers": [
+            8,
+            16,
+            24
+          ],
+          "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+          "name": "smollm2-1.7b",
+          "revision": "31b70e2e869a7173562077fd711b654946d38674"
+        },
+        "n_gold_prompts": 71,
+        "n_polarity_conflict_sentences": 18,
+        "n_sentences": 35,
+        "protocol_sha256": "8623fdb257807a950f39381045b11945964e0e5ff726b6296072cf6d8092d9b2",
+        "provenance": {
+          "dirty_worktree": false,
+          "git_commit": "0b53cc2111fe68c9fcaf85d7047e17dc141c7ada",
+          "packages": {
+            "numpy": "2.5.3",
+            "scikit-learn": "1.9.1",
+            "torch": "2.14.0",
+            "transformers": "4.57.6"
+          },
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "python": "3.12.14",
+          "source_sha256": "65202dd6c98b4f387dafef2c064677e73aa2471826fb5c6bdab6d0707e8a27eb"
+        },
+        "source_activation_sha256": "cf285b62562b608a43b968c7d08a6beb2bec40d592fd00cd376c5871ed1601de",
+        "source_dataset_sha256": "5bd46eb6a67372f17be7a24f8d0620f8e12a4153f40c0bf8e2c88e20fe764cea"
+      }
+    }
+  },
+  "n_conflict_sentences": 18,
+  "n_prompts": 71,
+  "n_sentences": 35,
+  "same_commit_for_both_models": true
+}
