@@ -183,9 +183,13 @@ def write_report(summary: dict, output: Path) -> None:
         )
     else:
         primary = summary["primary_exploratory"]
+        shuffled_prior = summary["descriptive_shuffled_vs_aspect_prior"]
         result = (
             f"Shuffled-minus-natural masked RMSE was {primary['estimate']:.3f} "
             f"(95% cluster interval [{primary['ci95'][0]:.3f}, {primary['ci95'][1]:.3f}]); "
+            f"shuffling slightly improved the score. The shuffled-versus-aspect-only "
+            f"RMSE gain was {shuffled_prior['estimate']:.3f} "
+            f"(95% interval [{shuffled_prior['ci95'][0]:.3f}, {shuffled_prior['ci95'][1]:.3f}]); "
             f"the exploratory order-contribution rule {'passed' if primary['practical_order_gate_passed'] else 'did not pass'}."
         )
     (output / "README.md").write_text(

@@ -1,0 +1,67 @@
+{
+  "experiment": "044-opinion-mask-word-order-control",
+  "interpretation": "adaptive post-result, within-sample mechanism diagnostic; exploratory only",
+  "n_reused_clusters": 217,
+  "n_new_outputs": 651,
+  "n_invalid_outputs": 0,
+  "invalid_rate": 0.0,
+  "grid_resolution": 0.1,
+  "bootstrap_replicates": 10000,
+  "analysis_seed": 20260944,
+  "bootstrap_unit": "shared DimABSA ID, retaining all three languages and both VA dimensions",
+  "score_analysis_performed": true,
+  "run_provenance": {
+    "parent_043_output_sha256": "1e93d359220c533a01f9cccca827f30611a713b70d857a898f59b6560303c7c8",
+    "source_revision": "bdc93be1224106ae7d3eb95739c02a76ed4ae8a1",
+    "source_hashes": {
+      "rus": "912013b49db2bd387076f63ee9df016350180fbac621449121a27dc262d5459b",
+      "ukr": "05fdf7e2dca235261060b785f969315385f962021f171abb85e45638bbadb036",
+      "tat": "c4f1fb5c21f8f06f598c87e489e7adce1a953d4446ad14a60432ae2a13b85ce6"
+    },
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "model_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "device": "mps",
+    "n_grid_candidates": 6561,
+    "output_sha256": "2e6e59ec798b6ef87f63e6088ee5602272396a7f3dd47c8f13f31f82b0387337",
+    "generation_seconds_this_process_only": 1322.9085168750025
+  },
+  "status": "scored",
+  "n_complete_clusters": 217,
+  "primary_exploratory": {
+    "contrast": "opinion_shuffled_rmse_minus_opinion_masked_rmse",
+    "estimate": -0.16459197772775047,
+    "ci95": [
+      -0.3006117057236157,
+      -0.02703608514794556
+    ],
+    "n_clusters": 217,
+    "interpretation": "positive means natural word order has lower RMSE than shuffled",
+    "practical_order_gate_passed": false
+  },
+  "descriptive_shuffled_vs_aspect_prior": {
+    "contrast": "aspect_only_rmse_minus_opinion_shuffled_rmse",
+    "estimate": 2.0094823997634936,
+    "ci95": [
+      1.8541772382997606,
+      2.166414948736074
+    ],
+    "n_clusters": 217
+  },
+  "by_language_rmse_descriptive": {
+    "rus": {
+      "aspect_only_rmse": 4.648033427864281,
+      "opinion_masked_rmse": 2.5881523755169455,
+      "opinion_shuffled_rmse": 2.6467061522241564
+    },
+    "ukr": {
+      "aspect_only_rmse": 4.4137153226401855,
+      "opinion_masked_rmse": 2.7440010815383933,
+      "opinion_shuffled_rmse": 2.438934004507095
+    },
+    "tat": {
+      "aspect_only_rmse": 4.474201316364166,
+      "opinion_masked_rmse": 2.6701262504886145,
+      "opinion_shuffled_rmse": 2.418779827213416
+    }
+  }
+}

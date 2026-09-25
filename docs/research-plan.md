@@ -738,9 +738,37 @@ and the separate [run amendment](experiments/043-run-amendment.md).
 
 After this result, Laya's pinned local typed-choice model selected a
 word-order-shuffle control over free-decoding sensitivity, a second model size,
-and another language sample. Experiment 044 will keep the 043 sample and exact
-masked tokens, deterministically shuffle their whitespace-token order, and test
-whether natural order improves on the same bag of words. This is an adaptive
-follow-up on already observed outcomes, not an independent confirmation; its
-protocol will be committed before the new judgments. LessWrong remains deferred
-until the result survives this diagnostic and an external replication.
+and another language sample. Experiment 044 kept the 043 sample and exact masked
+tokens, deterministically shuffled their whitespace-token order, and compared
+the same bag of words with natural order. This was an adaptive follow-up on
+already observed outcomes, not an independent confirmation.
+
+**Experiment 044 outcome.** Shuffled-minus-natural masked RMSE was −0.165 (95%
+sentence-cluster interval [−0.301, −0.027]), so the registered practical
+natural-order contribution gate did not pass; the estimate instead favors the
+shuffled text slightly. The shuffled condition still beat the aspect-only prior
+descriptively by +2.009 RMSE points (95% interval [+1.854, +2.166]). By language,
+the shuffled text was slightly worse in Russian and noticeably better in
+Ukrainian and Tatar. This is a surprising same-bag comparison, but it is
+post-result, within-sample, constrained-decoder evidence. It does not prove that
+bag-of-words features suffice or that grammar is irrelevant. Prior work has
+already found substantial order robustness in BERT on GLUE tasks ([Sinha et al.,
+2021](https://aclanthology.org/2021.acl-short.27/)), while other studies document
+syntactic context as important for aspect sentiment ([Phan and Ogunbona,
+2020](https://aclanthology.org/2020.acl-main.293/)); this result is a narrow
+interaction of those established themes on continuous VA after opinion masking.
+See the
+[`044 bundle`](../results/opinion-mask-word-order-v1/README.md).
+LessWrong remains deferred pending free-decoding sensitivity and an external
+model or corpus replication.
+
+Laya's next pinned typed-choice decision selected a Qwen-family model-size
+diagnostic. Experiment 045 keeps the 043/044 sample and compares natural versus
+shuffled opinion-masked inputs within Qwen2.5-1.5B using the same finite VA
+grammar. This is an adaptive follow-up to the observed 3B order contrast, not an
+independent replication. Its preregistered protocol, runner, analyzer and tests
+are committed before new judgments; local MPS inference is sized to this
+24-GB MacBook Air. The
+[045 protocol](experiments/045-order-control-model-size.md) records the scope
+and analysis limits. LessWrong remains deferred until model/corpus replication
+and sensitivity to free decoding give us a result worth presenting.
