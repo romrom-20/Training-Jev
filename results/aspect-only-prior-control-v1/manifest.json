@@ -1,0 +1,41 @@
+{
+  "batch_size": 8,
+  "clusters": 234,
+  "device": "mps",
+  "experiment": "038",
+  "exploratory_followup_to": "037",
+  "label_only_outputs": true,
+  "laya_warnings": [
+    "laya: this checkpoint ships invalid temperatures or values outside [0.5, 5]; using choice:11+=0.10058280825614929 -> 0.5. Treat confidence from the affected entries as uncalibrated."
+  ],
+  "models": {
+    "laya": {
+      "id": "convaiinnovations/laya",
+      "package": "laya==0.3.20",
+      "revision": "55cf4c4ebb4ebe31b2550e8bdf3bd21b99753851",
+      "seconds": 5.4004416249808855,
+      "weights_sha256": "891102d372688fc2a094dac56a384bc537b87c63f21f9f3dac0be2b7cbc8d86c"
+    },
+    "phi3-mini": {
+      "id": "microsoft/Phi-3-mini-4k-instruct",
+      "revision": "f39ac1d28e925b323eae81227eaba4464caced4e",
+      "seconds": 45.03466975002084
+    },
+    "qwen2.5-3b": {
+      "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "seconds": 94.8905212089885
+    }
+  },
+  "outcomes": 1170,
+  "parent_prediction_sha256": "e223d2b5eb8386b68d0635c3c8993d95773e9f75cfd476bf3ee78f298f9d0113",
+  "parent_protocol_sha256": "820fa15fb757d75d2191e0dfea022364e371fe6a4eeed6c52317e3d33b6c346f",
+  "parent_stimuli_sha256": "22dea039b2b235f8cfeb09b3f104d811f7097176f4a640d37b6fc3b9ef27d2d6",
+  "predictions_sha256": "9f28a4549e38bb2f944ebc6f4439993d4b3b1ca3c078d8926561bb046f9045a9",
+  "protocol_sha256": "ddbf0c681f3a8444ea0ca607df4519a2399e0684a330235b8b7392b2bddba91c",
+  "raw_review_text_published": false,
+  "runner_sha256": "fefda857eab15c6da0670b068925340bb2621eb239f143e2ee477aabf2cce3e0",
+  "seed": 20260938,
+  "source_revision": "d0df6600b259b6114de23cc5047c7e776cd89750",
+  "stimuli": 234,
+  "stimuli_sha256": "22dea039b2b235f8cfeb09b3f104d811f7097176f4a640d37b6fc3b9ef27d2d6"
+}

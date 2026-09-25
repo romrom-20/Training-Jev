@@ -1,0 +1,208 @@
+{
+  "experiment": "038",
+  "status": "exploratory preregistered follow-up; not independent confirmation",
+  "primary_endpoint": "paired Qwen/Phi forced-binary polarity accuracy gain: natural pre-opinion prefix minus aspect-only prompt",
+  "primary_pooled_context_gain": {
+    "estimate": 0.30982905982905984,
+    "cluster_bootstrap_95_ci": [
+      0.2222222222222222,
+      0.3952991452991453
+    ],
+    "n": 468,
+    "n_sentence_clusters": 234,
+    "bootstrap_reps": 10000,
+    "bootstrap_seed": 20260938
+  },
+  "per_judge": {
+    "qwen2.5-3b": {
+      "natural_prefix_accuracy": {
+        "estimate": 0.7350427350427351,
+        "cluster_bootstrap_95_ci": [
+          0.6794871794871795,
+          0.7905982905982906
+        ],
+        "n": 234,
+        "n_sentence_clusters": 234,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260948
+      },
+      "aspect_only_accuracy": {
+        "estimate": 0.5,
+        "cluster_bootstrap_95_ci": [
+          0.4358974358974359,
+          0.5641025641025641
+        ],
+        "n": 234,
+        "n_sentence_clusters": 234,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260958
+      },
+      "paired_context_gain": {
+        "estimate": 0.23504273504273504,
+        "cluster_bootstrap_95_ci": [
+          0.13247863247863248,
+          0.33760683760683763
+        ],
+        "n": 234,
+        "n_sentence_clusters": 234,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260968
+      }
+    },
+    "phi3-mini": {
+      "natural_prefix_accuracy": {
+        "estimate": 0.7777777777777778,
+        "cluster_bootstrap_95_ci": [
+          0.7222222222222222,
+          0.8290598290598291
+        ],
+        "n": 234,
+        "n_sentence_clusters": 234,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260949
+      },
+      "aspect_only_accuracy": {
+        "estimate": 0.39316239316239315,
+        "cluster_bootstrap_95_ci": [
+          0.32905982905982906,
+          0.45726495726495725
+        ],
+        "n": 234,
+        "n_sentence_clusters": 234,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260959
+      },
+      "paired_context_gain": {
+        "estimate": 0.38461538461538464,
+        "cluster_bootstrap_95_ci": [
+          0.29914529914529914,
+          0.4700854700854701
+        ],
+        "n": 234,
+        "n_sentence_clusters": 234,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260969
+      }
+    }
+  },
+  "abstention_behavior": {
+    "qwen2.5-3b": {
+      "natural_prefix_abstention_rate": {
+        "estimate": 0.782051282051282,
+        "cluster_bootstrap_95_ci": [
+          0.7264957264957265,
+          0.8333333333333334
+        ],
+        "n": 234,
+        "n_sentence_clusters": 234,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260978
+      },
+      "aspect_only_abstention_rate": {
+        "estimate": 1.0,
+        "cluster_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ],
+        "n": 234,
+        "n_sentence_clusters": 234,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260988
+      },
+      "aspect_only_parse_coverage": 1.0
+    },
+    "phi3-mini": {
+      "natural_prefix_abstention_rate": {
+        "estimate": 0.3076923076923077,
+        "cluster_bootstrap_95_ci": [
+          0.25213675213675213,
+          0.36752136752136755
+        ],
+        "n": 234,
+        "n_sentence_clusters": 234,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260979
+      },
+      "aspect_only_abstention_rate": {
+        "estimate": 1.0,
+        "cluster_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ],
+        "n": 234,
+        "n_sentence_clusters": 234,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260989
+      },
+      "aspect_only_parse_coverage": 1.0
+    }
+  },
+  "laya_aspect_only": {
+    "label_counts": {
+      "unclear": 234
+    },
+    "unclear_rate": {
+      "estimate": 1.0,
+      "cluster_bootstrap_95_ci": [
+        1.0,
+        1.0
+      ],
+      "n": 234,
+      "n_sentence_clusters": 234,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20260998
+    },
+    "clear_polarity_coverage": {
+      "estimate": 0.0,
+      "cluster_bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "n": 234,
+      "n_sentence_clusters": 234,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20260999
+    },
+    "polarity_accuracy_when_clear": {
+      "estimate": null,
+      "cluster_bootstrap_95_ci": null,
+      "n": 0
+    }
+  },
+  "per_dataset": {
+    "14lap": {
+      "n": 116,
+      "natural_prefix_accuracy": 0.7931034482758621,
+      "aspect_only_accuracy": 0.46551724137931033,
+      "paired_context_gain": 0.3275862068965517
+    },
+    "14res": {
+      "n": 108,
+      "natural_prefix_accuracy": 0.7592592592592593,
+      "aspect_only_accuracy": 0.4537037037037037,
+      "paired_context_gain": 0.3055555555555556
+    },
+    "15res": {
+      "n": 156,
+      "natural_prefix_accuracy": 0.7692307692307693,
+      "aspect_only_accuracy": 0.4358974358974359,
+      "paired_context_gain": 0.3333333333333333
+    },
+    "16res": {
+      "n": 88,
+      "natural_prefix_accuracy": 0.6818181818181818,
+      "aspect_only_accuracy": 0.4318181818181818,
+      "paired_context_gain": 0.25
+    }
+  },
+  "preregistered_diagnostic_gate_passed": true,
+  "n_stimuli": 234,
+  "n_sentence_clusters": 234,
+  "n_aspect_only_outcomes": 1170,
+  "limitations": [
+    "This follow-up was selected after inspecting Experiment 037 outcomes and is exploratory.",
+    "Aspect-only text is an artificial baseline; it measures target priors and prompt behavior, not natural review understanding.",
+    "The SemEval reviews are old and may have appeared in model pretraining.",
+    "The corpus is small and limited to restaurant/laptop reviews and three local judge systems."
+  ]
+}

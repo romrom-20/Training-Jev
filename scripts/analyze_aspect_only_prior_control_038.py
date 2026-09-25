@@ -1,6 +1,7 @@
 """Compare natural-prefix sentiment predictions with an aspect-only prior baseline."""
 
 import argparse
+import hashlib
 import json
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -234,8 +235,46 @@ def main():
     stimuli = json.loads((args.results / "stimuli.json").read_text())
     control_outcomes = json.loads((args.results / "predictions.json").read_text())
     natural_outcomes = json.loads((args.parent / "predictions.json").read_text())
+    manifest = json.loads((args.results / "manifest.json").read_text())
+    parent_manifest = json.loads((args.parent / "manifest.json").read_text())
     analysis = analyze(stimuli, natural_outcomes, control_outcomes)
     (args.results / "analysis.json").write_text(json.dumps(analysis, indent=2) + "\n")
+    stimulus_ids = {row["id"] for row in stimuli}
+    checks = {
+        "234_frozen_stimuli": len(stimuli) == 234,
+        "balanced_polarity": Counter(row["polarity"] for row in stimuli)
+        == {"positive": 117, "negative": 117},
+        "matches_parent_stimulus_list": stimuli
+        == json.loads((args.parent / "stimuli.json").read_text()),
+        "complete_1170_control_outcomes": len(control_outcomes) == 1170,
+        "manifest_stimuli_hash_matches": manifest["stimuli_sha256"]
+        == hashlib.sha256((args.results / "stimuli.json").read_bytes()).hexdigest(),
+        "manifest_prediction_hash_matches": manifest["predictions_sha256"]
+        == hashlib.sha256((args.results / "predictions.json").read_bytes()).hexdigest(),
+        "manifest_protocol_hash_matches": manifest["protocol_sha256"]
+        == hashlib.sha256(PROTOCOL.read_bytes()).hexdigest(),
+        "parent_prediction_hash_matches": manifest["parent_prediction_sha256"]
+        == hashlib.sha256((args.parent / "predictions.json").read_bytes()).hexdigest()
+        == parent_manifest["predictions_sha256"],
+        "parent_stimulus_hash_matches": manifest["parent_stimuli_sha256"]
+        == hashlib.sha256((args.parent / "stimuli.json").read_bytes()).hexdigest()
+        == parent_manifest["stimuli_sha256"],
+        "source_revision_pinned": manifest["source_revision"]
+        == "d0df6600b259b6114de23cc5047c7e776cd89750",
+        "no_review_text_in_public_stimuli": all(
+            "text" not in row and "sentence" not in row for row in stimuli
+        ),
+        "no_review_text_in_public_outcomes": all(
+            "visible_text" not in row and "sentence" not in row for row in control_outcomes
+        ),
+        "all_outputs_match_frozen_ids": all(row["id"] in stimulus_ids for row in control_outcomes),
+        "preregistered_context_gain_gate_passed": analysis[
+            "preregistered_diagnostic_gate_passed"
+        ],
+    }
+    (args.results / "audit.json").write_text(
+        json.dumps({"checks": checks, "checks_passed": all(checks.values())}, indent=2) + "\n"
+    )
     print(json.dumps(analysis, indent=2), flush=True)
 
 

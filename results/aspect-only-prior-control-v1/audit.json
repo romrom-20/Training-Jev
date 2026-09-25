@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "234_frozen_stimuli": true,
+    "balanced_polarity": true,
+    "matches_parent_stimulus_list": true,
+    "complete_1170_control_outcomes": true,
+    "manifest_stimuli_hash_matches": true,
+    "manifest_prediction_hash_matches": true,
+    "manifest_protocol_hash_matches": true,
+    "parent_prediction_hash_matches": true,
+    "parent_stimulus_hash_matches": true,
+    "source_revision_pinned": true,
+    "no_review_text_in_public_stimuli": true,
+    "no_review_text_in_public_outcomes": true,
+    "all_outputs_match_frozen_ids": true,
+    "preregistered_context_gain_gate_passed": true
+  },
+  "checks_passed": true
+}

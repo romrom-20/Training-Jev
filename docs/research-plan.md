@@ -617,3 +617,23 @@ whether their above-chance polarity signal exceeds the aspect-name baseline. Thi
 exploratory, post-result follow-up separates visible context from target priors;
 it cannot rule out training-data exposure. Its protocol is committed before new
 judgments in [`038-aspect-only-prior-control.md`](experiments/038-aspect-only-prior-control.md).
+
+**Experiment 038 outcome.** Removing all review words reduced forced-binary
+accuracy to 50.0% for Qwen and 39.3% for Phi, compared with 73.5% and 77.8% on the
+natural prefix. The paired pooled context gain was +31.0 points (cluster-bootstrap
+95% CI +22.2 to +39.5); it was positive in each of the four SemEval subsets.
+Both generative judges abstained on every no-text prompt, and Laya returned
+`unclear` on every one. This suggests pre-opinion words carry polarity-predictive
+signal beyond aspect identity, while leaving open context interpretation versus
+memorized completion. The samples are old and benchmark contamination remains
+possible; these repeated restaurant/laptop sets do not establish independent
+generalization. Full results are in the
+[`038 bundle`](../results/aspect-only-prior-control-v1/README.md).
+
+Experiment 039 is the next diagnostic: train a fixed TF-IDF/logistic model on
+three SemEval subsets and evaluate on the fourth, comparing prefix-plus-aspect
+features with aspect-only features. This small non-pretrained baseline can test
+whether context signal transfers across the available subsets without relying on
+LLM pretraining, although the subsets are not fully independent domains. LessWrong
+remains on hold until this and a stronger independent validation clarify the
+interpretation.
