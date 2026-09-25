@@ -677,3 +677,24 @@ short of a field-level claim. The complete
 [`040 result bundle`](../results/trabl-prior-opinion-interference-v1/README.md)
 records all judges and limits. LessWrong remains deferred pending a stronger
 follow-up.
+
+Laya next selected a multilingual replication. Experiment 041 used the 2026
+DimABSA release and found 630 Russian/Ukrainian/Tatar IDs with identical ordered
+VA labels across the three language files. It preregistered a matched test of
+aspect-only, aspect-plus-opinion, full-text, and annotated-opinion-masked inputs
+on 120 sentence clusters. The run completed 1,440 local Qwen judgments, but 48
+outputs (3.33%) failed the registered parser threshold, mostly in the
+aspect-plus-opinion-only condition. The protocol therefore forbids score-based
+analysis; the result is an execution failure, not evidence for or against
+contextual VA inference. See the
+[`041 execution record`](../results/opinion-mask-crosslingual-dimabsa-v1/README.md)
+and its separate parser amendment.
+
+For the next diagnostic, Laya chose a constrained-output feasibility audit.
+Experiment 042 reuses 48 failed and 48 parseable prompts from 041, changes only
+the output contract for both free and constrained decoding, and includes an
+explicit insufficient-evidence response. This adaptive technical audit measures
+format validity and within-model answer stability only; it is not an independent
+replication or a test of VA accuracy. Its
+[protocol](experiments/042-structured-output-feasibility.md) is committed before
+the follow-up judgments.
