@@ -1,0 +1,321 @@
+{
+  "analysis": {
+    "by_judge": {
+      "phi3-mini": {
+        "by_target": {
+          "granite-3.1-2b": {
+            "coverage_32": 0.9828326180257511,
+            "coverage_8": 0.8755364806866953,
+            "label_flip_matrix": {
+              "negative": {
+                "negative": 29,
+                "positive": 67,
+                "unparseable": 1
+              },
+              "positive": {
+                "negative": 17,
+                "positive": 89,
+                "unparseable": 1
+              },
+              "unparseable": {
+                "negative": 8,
+                "positive": 19,
+                "unparseable": 2
+              }
+            },
+            "n_pairs": 233,
+            "parseable_accuracy_vs_review_gold": {
+              "budget_32": 0.9781659388646288,
+              "budget_8": 0.5980392156862745
+            },
+            "strict_accuracy_vs_review_gold": {
+              "budget_32": 0.9613733905579399,
+              "budget_8": 0.5236051502145923,
+              "paired_sentence_cluster_bootstrap": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20260932,
+                "difference_strict_accuracy_32_minus_8": 0.43776824034334766,
+                "n_sentence_clusters": 112,
+                "sentence_cluster_bootstrap_95_ci": [
+                  0.3826086956521739,
+                  0.48936170212765956
+                ]
+              }
+            }
+          },
+          "qwen-1.5b": {
+            "coverage_32": 0.9957081545064378,
+            "coverage_8": 0.9527896995708155,
+            "label_flip_matrix": {
+              "negative": {
+                "negative": 40,
+                "positive": 30,
+                "unparseable": 0
+              },
+              "positive": {
+                "negative": 14,
+                "positive": 138,
+                "unparseable": 0
+              },
+              "unparseable": {
+                "negative": 4,
+                "positive": 6,
+                "unparseable": 1
+              }
+            },
+            "n_pairs": 233,
+            "parseable_accuracy_vs_review_gold": {
+              "budget_32": 0.9612068965517241,
+              "budget_8": 0.8198198198198198
+            },
+            "strict_accuracy_vs_review_gold": {
+              "budget_32": 0.9570815450643777,
+              "budget_8": 0.7811158798283262,
+              "paired_sentence_cluster_bootstrap": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20260933,
+                "difference_strict_accuracy_32_minus_8": 0.1759656652360515,
+                "n_sentence_clusters": 112,
+                "sentence_cluster_bootstrap_95_ci": [
+                  0.1271186440677966,
+                  0.22414888953828155
+                ]
+              }
+            }
+          },
+          "smollm2-1.7b": {
+            "coverage_32": 0.9957081545064378,
+            "coverage_8": 0.9742489270386266,
+            "label_flip_matrix": {
+              "negative": {
+                "negative": 47,
+                "positive": 41,
+                "unparseable": 1
+              },
+              "positive": {
+                "negative": 3,
+                "positive": 135,
+                "unparseable": 0
+              },
+              "unparseable": {
+                "negative": 3,
+                "positive": 3,
+                "unparseable": 0
+              }
+            },
+            "n_pairs": 233,
+            "parseable_accuracy_vs_review_gold": {
+              "budget_32": 0.9612068965517241,
+              "budget_8": 0.8105726872246696
+            },
+            "strict_accuracy_vs_review_gold": {
+              "budget_32": 0.9570815450643777,
+              "budget_8": 0.7896995708154506,
+              "paired_sentence_cluster_bootstrap": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20260934,
+                "difference_strict_accuracy_32_minus_8": 0.16738197424892703,
+                "n_sentence_clusters": 112,
+                "sentence_cluster_bootstrap_95_ci": [
+                  0.1206896551724138,
+                  0.2127659574468085
+                ]
+              }
+            }
+          }
+        },
+        "coverage_32": 0.9914163090128756,
+        "coverage_8": 0.9341917024320457,
+        "label_change_rate": 0.31187410586552217,
+        "n_pairs": 699,
+        "strict_accuracy_vs_review_gold": {
+          "budget_32": 0.9585121602288984,
+          "budget_8": 0.698140200286123,
+          "paired_sentence_cluster_bootstrap": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20260932,
+            "difference_strict_accuracy_32_minus_8": 0.2603719599427754,
+            "n_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.2197962154294032,
+              0.3
+            ]
+          }
+        }
+      },
+      "qwen2.5-3b": {
+        "by_target": {
+          "granite-3.1-2b": {
+            "coverage_32": 1.0,
+            "coverage_8": 0.9914163090128756,
+            "label_flip_matrix": {
+              "negative": {
+                "negative": 18,
+                "positive": 67,
+                "unparseable": 0
+              },
+              "positive": {
+                "negative": 39,
+                "positive": 107,
+                "unparseable": 0
+              },
+              "unparseable": {
+                "negative": 0,
+                "positive": 2,
+                "unparseable": 0
+              }
+            },
+            "n_pairs": 233,
+            "parseable_accuracy_vs_review_gold": {
+              "budget_32": 0.9828326180257511,
+              "budget_8": 0.5411255411255411
+            },
+            "strict_accuracy_vs_review_gold": {
+              "budget_32": 0.9828326180257511,
+              "budget_8": 0.5364806866952789,
+              "paired_sentence_cluster_bootstrap": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20260932,
+                "difference_strict_accuracy_32_minus_8": 0.44635193133047213,
+                "n_sentence_clusters": 112,
+                "sentence_cluster_bootstrap_95_ci": [
+                  0.38095238095238093,
+                  0.5109170305676856
+                ]
+              }
+            }
+          },
+          "qwen-1.5b": {
+            "coverage_32": 1.0,
+            "coverage_8": 1.0,
+            "label_flip_matrix": {
+              "negative": {
+                "negative": 42,
+                "positive": 27,
+                "unparseable": 0
+              },
+              "positive": {
+                "negative": 17,
+                "positive": 147,
+                "unparseable": 0
+              },
+              "unparseable": {
+                "negative": 0,
+                "positive": 0,
+                "unparseable": 0
+              }
+            },
+            "n_pairs": 233,
+            "parseable_accuracy_vs_review_gold": {
+              "budget_32": 0.9570815450643777,
+              "budget_8": 0.8111587982832618
+            },
+            "strict_accuracy_vs_review_gold": {
+              "budget_32": 0.9570815450643777,
+              "budget_8": 0.8111587982832618,
+              "paired_sentence_cluster_bootstrap": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20260933,
+                "difference_strict_accuracy_32_minus_8": 0.1459227467811159,
+                "n_sentence_clusters": 112,
+                "sentence_cluster_bootstrap_95_ci": [
+                  0.09787234042553192,
+                  0.19658119658119658
+                ]
+              }
+            }
+          },
+          "smollm2-1.7b": {
+            "coverage_32": 1.0,
+            "coverage_8": 0.9914163090128756,
+            "label_flip_matrix": {
+              "negative": {
+                "negative": 34,
+                "positive": 5,
+                "unparseable": 0
+              },
+              "positive": {
+                "negative": 23,
+                "positive": 169,
+                "unparseable": 0
+              },
+              "unparseable": {
+                "negative": 1,
+                "positive": 1,
+                "unparseable": 0
+              }
+            },
+            "n_pairs": 233,
+            "parseable_accuracy_vs_review_gold": {
+              "budget_32": 0.9613733905579399,
+              "budget_8": 0.8787878787878788
+            },
+            "strict_accuracy_vs_review_gold": {
+              "budget_32": 0.9613733905579399,
+              "budget_8": 0.871244635193133,
+              "paired_sentence_cluster_bootstrap": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20260934,
+                "difference_strict_accuracy_32_minus_8": 0.09012875536480687,
+                "n_sentence_clusters": 112,
+                "sentence_cluster_bootstrap_95_ci": [
+                  0.047619047619047616,
+                  0.13537117903930132
+                ]
+              }
+            }
+          }
+        },
+        "coverage_32": 1.0,
+        "coverage_8": 0.994277539341917,
+        "label_change_rate": 0.2603719599427754,
+        "n_pairs": 699,
+        "strict_accuracy_vs_review_gold": {
+          "budget_32": 0.9670958512160229,
+          "budget_8": 0.7396280400572246,
+          "paired_sentence_cluster_bootstrap": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20260932,
+            "difference_strict_accuracy_32_minus_8": 0.22746781115879827,
+            "n_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.19290780141843972,
+              0.26262626262626265
+            ]
+          }
+        }
+      }
+    },
+    "qwen_phi_agreement_by_budget": {
+      "32": {
+        "agreement": 0.9913419913419913,
+        "n_both_parseable": 693
+      },
+      "8": {
+        "agreement": 0.7580398162327718,
+        "n_both_parseable": 653
+      }
+    }
+  },
+  "exact_8_token_reproduction": {
+    "phi3-mini": {
+      "exact_8_token_label_agreement": 1.0,
+      "n_label_disagreements": 0,
+      "n_overlap": 699
+    },
+    "qwen2.5-3b": {
+      "exact_8_token_label_agreement": 1.0,
+      "n_label_disagreements": 0,
+      "n_overlap": 699
+    }
+  },
+  "experiment": "032",
+  "limitations": [
+    "Qwen and Phi are automated judges, not answer-level human ground truth.",
+    "Review-level gold is only a proxy for generated-answer meaning.",
+    "The answer texts and items are exactly those used in experiment 031, so this is judge replication rather than an independent sample replication.",
+    "The length intervention adds semantic content as well as tokens; it does not isolate a generic preference for verbosity."
+  ],
+  "n_paired_judge_target_item_outcomes": 1398,
+  "status": "post-result exploratory robustness follow-up"
+}

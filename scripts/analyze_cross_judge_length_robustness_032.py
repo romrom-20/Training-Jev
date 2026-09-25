@@ -19,7 +19,10 @@ SEED = 20260932
 
 
 def is_correct(label, gold):
-    return label is not None and int(label == "positive") == gold
+    if label is None:
+        return False
+    prediction = label if label in (0, 1) else int(label == "positive")
+    return prediction == gold
 
 
 def paired_accuracy_bootstrap(rows, reps=REPS, seed=SEED):
@@ -59,8 +62,18 @@ def paired_accuracy_bootstrap(rows, reps=REPS, seed=SEED):
     }
 
 
+def normalized_label(label):
+    if label is None:
+        return "unparseable"
+    if label == 1:
+        return "positive"
+    if label == 0:
+        return "negative"
+    return label
+
+
 def label_for_row(row):
-    return "unparseable" if row["judge_label"] is None else row["judge_label"]
+    return normalized_label(row["judge_label"])
 
 
 def join_pairs(predictions):
@@ -156,8 +169,8 @@ def summarize(pairs):
                 "label_flip_matrix": {
                     label: {
                         other: sum(
-                            label_for_row({"judge_label": row["label_8"]}) == label
-                            and label_for_row({"judge_label": row["label_32"]}) == other
+                            normalized_label(row["label_8"]) == label
+                            and normalized_label(row["label_32"]) == other
                             for row in rows
                         )
                         for other in ("positive", "negative", "unparseable")
@@ -184,29 +197,32 @@ def summarize(pairs):
         }
 
     agreement = {}
-    by_key = {(row["judge"], row["model"], row["id"], row["budget"]): row for row in pairs}
-    for budget in (8, 32):
+    by_judge_key = {
+        (row["judge"], row["model"], row["id"]): row
+        for row in pairs
+    }
+    for budget, label_key in ((8, "label_8"), (32, "label_32")):
         common = [
             (model, item_id)
             for model in MODELS
             for item_id in sorted(
-                key[2] for key in by_key if key[0] == "qwen2.5-3b" and key[1] == model and key[3] == budget
+                row["id"] for row in pairs if row["judge"] == "qwen2.5-3b" and row["model"] == model
             )
-            if by_key[("qwen2.5-3b", model, item_id, budget)]["label_8" if budget == 8 else "label_32"]
-            is not None
-            and by_key[("phi3-mini", model, item_id, budget)]["label_8" if budget == 8 else "label_32"]
-            is not None
+            if by_judge_key[("qwen2.5-3b", model, item_id)][label_key] is not None
+            and by_judge_key[("phi3-mini", model, item_id)][label_key] is not None
         ]
         agreement[str(budget)] = {
             "n_both_parseable": len(common),
-            "agreement": sum(
-                by_key[("qwen2.5-3b", model, item_id, budget)]["label_8" if budget == 8 else "label_32"]
-                == by_key[("phi3-mini", model, item_id, budget)]["label_8" if budget == 8 else "label_32"]
-                for model, item_id in common
-            )
-            / len(common)
-            if common
-            else None,
+            "agreement": (
+                sum(
+                    by_judge_key[("qwen2.5-3b", model, item_id)][label_key]
+                    == by_judge_key[("phi3-mini", model, item_id)][label_key]
+                    for model, item_id in common
+                )
+                / len(common)
+                if common
+                else None
+            ),
         }
     return {"by_judge": reports, "qwen_phi_agreement_by_budget": agreement}
 

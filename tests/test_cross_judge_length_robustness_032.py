@@ -18,6 +18,9 @@ def test_unparseable_is_not_scored_as_correct():
     assert is_correct(None, 1) is False
     assert is_correct("positive", 1) is True
     assert is_correct("negative", 1) is False
+    assert is_correct(1, 1) is True
+    assert is_correct(0, 0) is True
+    assert is_correct(1, 0) is False
 
 
 def test_paired_cluster_bootstrap_is_one_when_all_pairs_improve():

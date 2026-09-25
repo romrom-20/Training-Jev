@@ -460,3 +460,20 @@ bias is already studied in preference comparisons; the narrower potential
 contribution here is a within-prompt generation-cap intervention on aspect-sentiment
 extraction, if independent evaluation survives. LessWrong remains a wait pending
 cross-engine and ideally human answer-level validation.
+
+Experiment 032 supplied that first cross-engine check on the same answer pairs.
+Qwen2.5-3B and Phi-3 Mini both reproduced their earlier 8-token labels exactly, then
+their review-label-proxy accuracy rose from 74.0% to 96.7% and 69.8% to 95.9%,
+respectively, at 32 tokens. Their mutual agreement rose from 75.8% to 99.1%.
+Every target family moved in the same direction. This strengthens the evaluator
+sensitivity finding, while leaving answer-level correctness unresolved: the review
+label is not gold for the generated text, and both judges are language models. See
+the [`032 result bundle`](../results/cross-judge-length-robustness-v1/README.md).
+
+Experiment 033 now maps a dose-response curve without generating any new target
+answers. It will judge nested prefixes of each exact 32-token continuation at
+4/8/12/16/24/32 tokens, measuring when Laya's ambiguity falls and when Qwen/Phi
+labels agree and stabilize. This can tell us whether the effect appears as soon as
+sentiment evidence arrives or only at longer responses. It remains an evaluator
+consistency result; human answer-level coding and a second domain are still the
+clearest path to deciding whether the result warrants a public write-up.

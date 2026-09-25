@@ -1,0 +1,8 @@
+{
+  "checks": {
+    "complete_1398_paired_labels": true,
+    "no_raw_text_or_token_ids_in_public_predictions": true,
+    "protocol_hash_matches": true
+  },
+  "checks_passed": true
+}

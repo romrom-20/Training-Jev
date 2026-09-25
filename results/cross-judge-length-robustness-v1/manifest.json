@@ -1,0 +1,32 @@
+{
+  "batch_size": 8,
+  "decoding": {
+    "do_sample": false
+  },
+  "device": "mps",
+  "experiment": "032",
+  "followup_to": "031",
+  "max_new_tokens": 4,
+  "mps_available": true,
+  "n_decisions": 2796,
+  "n_unparseable": 56,
+  "phi_model": {
+    "model": "microsoft/Phi-3-mini-4k-instruct",
+    "revision": "f39ac1d28e925b323eae81227eaba4464caced4e"
+  },
+  "predictions_sha256": "54efcff985ec9bc97b2a9480786e523b5484d54ec2e048424310c418b9466e92",
+  "protocol_sha256": "f945d9673d95afafb2a3b07ef2eb5bab4bd425eda72f4ea306f831b02afd8993",
+  "qwen_model": {
+    "family": "Qwen2.5",
+    "layers": [
+      12,
+      24,
+      36
+    ],
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1"
+  },
+  "runner_sha256": "f1e4d14d449d2262043b3ad677ebf6d3954b4dada59b64cb6e2b0e3043f24a39",
+  "source_generation_manifest_sha256": "f070f06b279d5d81553829bd41667003f69b98a6b7a55de75c668e7415e423b7",
+  "torch_version": "2.14.0"
+}
