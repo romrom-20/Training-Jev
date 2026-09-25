@@ -115,7 +115,10 @@ def normalize_predictions(predictions):
                         baseline["gold"],
                         baseline["category"],
                     ):
-                        raise ValueError(f"Mismatched paired metadata for {key}")
+                        raise ValueError(
+                            "Mismatched paired metadata for "
+                            f"{judge}/{model}/{item_id} at {budget} tokens"
+                        )
                     rows.append(row)
     return rows
 
@@ -242,17 +245,88 @@ def series_metrics(rows):
                         - int(qw8["label"] == ph8["label"]),
                     }
                 )
+        target_agreement_by_budget = {}
+        for budget in BUDGETS:
+            joint = []
+            for q in target_rows:
+                if q["judge"] != "qwen2.5-3b" or q["budget"] != budget:
+                    continue
+                p = target_indexed[("phi3-mini", q["id"], budget)]
+                if q["label"] is not None and p["label"] is not None:
+                    joint.append(
+                        {
+                            "sentence_id": q["sentence_id"],
+                            "agreement": int(q["label"] == p["label"]),
+                        }
+                    )
+            target_agreement_by_budget[str(budget)] = paired_bootstrap(
+                joint,
+                lambda r: r["agreement"],
+                seed=SEED + 700 + MODELS.index(model) * 10 + budget,
+            )
         by_target[model] = {
             "n_item_queries": len({r["id"] for r in target_rows if r["budget"] == 8}),
             "paired_agreement_change_12_minus_8": paired_bootstrap(
                 target_effect, lambda r: r["delta"], seed=SEED + 600 + MODELS.index(model)
             ),
-            "agreement_by_budget": {
-                str(budget): by_budget[str(budget)]["qwen_phi_agreement"]
-                for budget in BUDGETS
-            },
+            "agreement_by_budget": target_agreement_by_budget,
         }
-    return {"by_budget": by_budget, "paired_8_to_12_effects": paired_effects, "by_target": by_target}
+
+    # Post-hoc diagnostic: the frozen source corpus is polarity-imbalanced.
+    # Separate class-specific paired accuracy shifts to check whether pooled
+    # gains conceal asymmetric difficulty on negative examples.
+    class_diagnostics = {}
+    for judge in ("qwen2.5-3b", "phi3-mini"):
+        per_class = {}
+        for gold in (0, 1):
+            paired_rows = []
+            by_budget_class = {}
+            for budget in BUDGETS:
+                budget_rows = [
+                    r
+                    for r in rows
+                    if r["judge"] == judge and r["budget"] == budget and r["gold"] == gold
+                ]
+                by_budget_class[str(budget)] = paired_bootstrap(
+                    budget_rows,
+                    lambda r: int(correct(r["label"], gold)),
+                    seed=SEED + 800 + (0 if judge == "qwen2.5-3b" else 100) + gold * 10 + budget,
+                )
+            for model in MODELS:
+                item_ids = sorted(
+                    r["id"]
+                    for r in rows
+                    if r["judge"] == judge
+                    and r["model"] == model
+                    and r["budget"] == 8
+                    and r["gold"] == gold
+                )
+                for item_id in item_ids:
+                    short = indexed[(judge, model, item_id, 8)]
+                    long = indexed[(judge, model, item_id, 12)]
+                    paired_rows.append(
+                        {
+                            "sentence_id": short["sentence_id"],
+                            "delta": int(correct(long["label"], gold))
+                            - int(correct(short["label"], gold)),
+                        }
+                    )
+            per_class["positive" if gold else "negative"] = {
+                "accuracy_by_budget": by_budget_class,
+                "paired_accuracy_change_12_minus_8": paired_bootstrap(
+                    paired_rows,
+                    lambda r: r["delta"],
+                    seed=SEED + 900 + (0 if judge == "qwen2.5-3b" else 100) + gold,
+                ),
+            }
+        class_diagnostics[judge] = per_class
+
+    return {
+        "by_budget": by_budget,
+        "paired_8_to_12_effects": paired_effects,
+        "by_target": by_target,
+        "exploratory_gold_stratified_accuracy": class_diagnostics,
+    }
 
 
 def run(private=PRIVATE, output=OUT):

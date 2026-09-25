@@ -3,6 +3,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parents[1] / "scripts"))
 
+import analyze_tripr_prefix_threshold_034 as analysis
 from analyze_tripr_prefix_threshold_034 import correct, paired_bootstrap
 from run_tripr_prefix_threshold_034 import generated_content
 
@@ -30,3 +31,33 @@ def test_sentence_bootstrap_preserves_clustered_paired_difference():
     assert result["estimate"] == 1
     assert result["sentence_cluster_bootstrap_95_ci"] == [1, 1]
     assert result["n_source_sentence_clusters"] == 2
+
+
+def test_target_agreement_breakdown_uses_target_rows_not_pooled_rows(monkeypatch):
+    monkeypatch.setattr(analysis, "REPS", 20)
+    rows = []
+    for model in analysis.MODELS:
+        for judge in analysis.JUDGES:
+            for budget in analysis.BUDGETS:
+                if judge == "laya":
+                    label = "clear"
+                else:
+                    label = int(judge == "qwen2.5-3b")
+                rows.append(
+                    {
+                        "model": model,
+                        "judge": judge,
+                        "id": "item-1",
+                        "sentence_id": f"sentence-{model}",
+                        "budget": budget,
+                        "label": label,
+                        "gold": 1,
+                        "actual_tokens": budget,
+                    }
+                )
+
+    metrics = analysis.series_metrics(rows)
+    for model in analysis.MODELS:
+        target = metrics["by_target"][model]["agreement_by_budget"]["8"]
+        assert target["n"] == 1
+        assert target["estimate"] == 0

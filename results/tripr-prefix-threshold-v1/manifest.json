@@ -1,0 +1,90 @@
+{
+  "dataset": "OD-TripR-2020Large manually annotated restaurant reviews",
+  "dataset_license": "CC BY-SA 4.0",
+  "dataset_repository": "https://github.com/ari-dasci/OD-TripR-2020Large",
+  "dataset_repository_revision": "2e3f56f8f3691019139bdec36db0b6115ed7b191",
+  "dataset_sha256": "3d5d5e24cf57d617266bf048968a69baaad0087945a4ec20a7c19a6e82de8e2d",
+  "decoding": {
+    "do_sample": false
+  },
+  "device": "mps",
+  "experiment": "034",
+  "generation_batch_size": 4,
+  "generation_budget": 32,
+  "judge_batch_size": 8,
+  "judged_prefix_budgets": [
+    8,
+    12,
+    32
+  ],
+  "laya": {
+    "choice_map_seed": 20260930,
+    "model_id": "convaiinnovations/laya",
+    "package": "0.3.20",
+    "revision": "55cf4c4ebb4ebe31b2550e8bdf3bd21b99753851",
+    "runtime_warnings": [
+      "laya: this checkpoint ships invalid temperatures or values outside [0.5, 5]; using choice:11+=0.10058280825614929 -> 0.5. Treat confidence from the affected entries as uncalibrated."
+    ],
+    "weights_sha256": "891102d372688fc2a094dac56a384bc537b87c63f21f9f3dac0be2b7cbc8d86c"
+  },
+  "mps_available": true,
+  "n_decisions": 10395,
+  "n_generations": 1155,
+  "n_prefixes_per_engine": 3465,
+  "phi_model": {
+    "model": "microsoft/Phi-3-mini-4k-instruct",
+    "revision": "f39ac1d28e925b323eae81227eaba4464caced4e"
+  },
+  "predictions_sha256": "0b37cdc49e21c11fa463a031e909c563114878a2917a7f0639b521468fb0634c",
+  "protocol_sha256": "1be2dbf020ff70cd04a5d7c8c7839c77359f700aed3390830b0e5a9272e74611",
+  "qwen_model": {
+    "family": "Qwen2.5",
+    "layers": [
+      12,
+      24,
+      36
+    ],
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1"
+  },
+  "runner_sha256": "8504e6169c4b749a4d4a7dc2a5f3ef9c7088900442fa9e9375d7385210b61b78",
+  "source_filter": {
+    "polarity_conflicts": 29,
+    "queries": 385,
+    "sentences": 187
+  },
+  "target_models": {
+    "granite-3.1-2b": {
+      "family": "Granite3.1",
+      "layers": [
+        23
+      ],
+      "model": "ibm-granite/granite-3.1-2b-instruct",
+      "name": "granite-3.1-2b",
+      "revision": "bbc2aed595bd38bd770263dc3ab831db9794441d"
+    },
+    "qwen-1.5b": {
+      "family": "Qwen2.5",
+      "layers": [
+        8,
+        16,
+        24
+      ],
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "name": "qwen-1.5b",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+    },
+    "smollm2-1.7b": {
+      "family": "SmolLM2",
+      "layers": [
+        8,
+        16,
+        24
+      ],
+      "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+      "name": "smollm2-1.7b",
+      "revision": "31b70e2e869a7173562077fd711b654946d38674"
+    }
+  },
+  "torch_version": "2.14.0"
+}

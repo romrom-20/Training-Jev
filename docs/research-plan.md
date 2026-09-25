@@ -503,3 +503,36 @@ answer-level annotation of the generations. The primary comparison is the paired
 sentence-clustered 12-minus-8 change in Qwen/Phi agreement. The source filter follows
 experiment 018 and has positive-skewed class balance, so label accuracy remains
 secondary to agreement and Laya-ambiguity outcomes.
+
+**Experiment 034 result.** The pooled Qwen/Phi agreement gain from 8 to 12 tokens
+was +4.2 percentage points (sentence-cluster 95% interval +2.5 to +5.7), while
+Laya mixed/unclear labels fell by 13.9 points. However, the frozen descriptive
+transfer rule requiring a positive change for each target family did not pass:
+the effect was +1.7 points for Granite (interval crosses zero), +10.7 for
+Qwen-1.5B, and 0.0 for SmolLM2. This is partial transfer on another restaurant
+corpus, driven primarily by the Qwen target. A post-hoc class split found that
+the 8→12 binary-judge accuracy gain was much larger on negative source labels
+(Qwen +32.3 points; Phi +28.1) than positive labels (Qwen +6.7; Phi +0.5).
+These negative-source cases came from 64 independent sentences; TripR gold still
+labels the source review, not the generated answer. Treat the class split as a
+lead, not confirmation. See the
+[`034 result bundle`](../results/tripr-prefix-threshold-v1/README.md).
+
+The literature review narrows the question further. The 2025 length-bias paper
+studies pairwise preference and information mass
+([Hu et al.](https://aclanthology.org/2025.findings-emnlp.358/)); a 2026 judge
+bias preprint directly contrasts filler expansions with genuinely more-complete
+truncation pairs ([Soumik](https://arxiv.org/abs/2604.23178)). DABS, an ACL 2026
+aspect-sentiment model, reports that negation and contrast benefit from deeper
+aspect-conditioned reading ([Xia et al.](https://aclanthology.org/2026.acl-long.667/)).
+Thus, neither generic length sensitivity nor negation difficulty is a novelty
+claim. The useful next test is a controlled factorial that moves a known
+polarity clause across the 8/12-word boundary while balancing positive/negative
+labels and direct/negated forms. That can separate simple evidence availability
+from a polarity- or composition-specific judge error without generating another
+large set of target-model answers. Experiment 035 should use Laya, Qwen-3B and
+Phi on identical minimal-contrast texts, with deterministic label gold, the
+template/aspect scaffold as the bootstrap cluster, and a capability gate at
+12 words. Freeze the stimuli and code before judging. LessWrong remains a wait:
+there is a promising asymmetric error pattern but no human-validated natural
+answer result or independent-domain replication.
