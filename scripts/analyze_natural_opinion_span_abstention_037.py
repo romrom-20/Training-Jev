@@ -1,6 +1,7 @@
 """Analyze the preregistered natural opinion-span visibility comparison."""
 
 import argparse
+import hashlib
 import json
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -8,6 +9,8 @@ from pathlib import Path
 import numpy as np
 
 OUT = Path("results/natural-opinion-span-abstention-v1")
+PROTOCOL = Path("docs/experiments/037-natural-opinion-span-abstention.md")
+STIMULI_INDEX = Path("docs/experiments/037-stimuli.json")
 JUDGES = ("qwen2.5-3b", "phi3-mini")
 REPS = 10_000
 SEED = 20260937
@@ -82,6 +85,7 @@ def analyze(stimuli, outcomes):
     by_judge = {judge: [] for judge in JUDGES}
     condition_metrics = {}
     abstention_metrics = {}
+    predictive_prefix_diagnostics = {}
     parse_coverage = {}
     for judge_index, judge in enumerate(JUDGES):
         judge_rows = []
@@ -140,6 +144,26 @@ def analyze(stimuli, outcomes):
             }
         cue_rows = [row for row in judge_rows if row["condition"] == "opinion_visible"]
         absent_rows = [row for row in judge_rows if row["condition"] == "before_opinion"]
+        answered_prefix_rows = [
+            row for row in absent_rows if row["new_label"] in {"positive", "negative"}
+        ]
+        predictive_prefix_diagnostics[judge] = {
+            "forced_binary_polarity_accuracy_before_opinion": bootstrap(
+                absent_rows,
+                lambda sample: np.mean([row["old_label"] == row["polarity"] for row in sample]),
+                seed=SEED + 400 + judge_index,
+            ),
+            "abstention_wrapper_coverage_before_opinion": bootstrap(
+                absent_rows,
+                lambda sample: np.mean([row["new_label"] in {"positive", "negative"} for row in sample]),
+                seed=SEED + 410 + judge_index,
+            ),
+            "abstention_wrapper_polarity_accuracy_when_it_answers": bootstrap(
+                answered_prefix_rows,
+                lambda sample: np.mean([row["new_label"] == row["polarity"] for row in sample]),
+                seed=SEED + 420 + judge_index,
+            ),
+        }
         abstention_metrics[judge] = {
             "recall_before_annotated_opinion": bootstrap(
                 absent_rows,
@@ -221,6 +245,30 @@ def analyze(stimuli, outcomes):
                 lambda sample: np.mean([row["label"] == "insufficient" for row in sample]),
                 seed=SEED + 211,
             )
+    laya_before = [row for row in laya_rows if row["condition"] == "before_opinion"]
+    laya_clear = [row for row in laya_before if row["raw_label"] in {"positive", "negative"}]
+    laya_metrics["before_opinion"]["polarity_coverage"] = bootstrap(
+        laya_before,
+        lambda sample: np.mean([row["raw_label"] in {"positive", "negative"} for row in sample]),
+        seed=SEED + 212,
+    )
+    laya_metrics["before_opinion"]["polarity_accuracy_when_clear"] = bootstrap(
+        laya_clear,
+        lambda sample: np.mean([row["label"] == row["polarity"] for row in sample]),
+        seed=SEED + 213,
+    )
+
+    paired_abstention_gap = []
+    for stimulus_id in sorted(ids):
+        qwen = indexed[("qwen2.5-3b", "abstention", stimulus_id, "before_opinion")]
+        phi = indexed[("phi3-mini", "abstention", stimulus_id, "before_opinion")]
+        paired_abstention_gap.append(
+            {
+                "cluster_id": qwen["cluster_id"],
+                "qwen_minus_phi_abstention": int(qwen["label"] == "insufficient")
+                - int(phi["label"] == "insufficient"),
+            }
+        )
 
     by_dataset = {}
     for dataset in sorted({row["dataset"] for row in primary_rows}):
@@ -247,7 +295,13 @@ def analyze(stimuli, outcomes):
         "primary_change_by_judge": primary_by_judge,
         "condition_metrics": condition_metrics,
         "abstention_metrics": abstention_metrics,
+        "pre_opinion_predictive_polarity_diagnostics": predictive_prefix_diagnostics,
         "parse_coverage": parse_coverage,
+        "paired_qwen_minus_phi_abstention_recall_before_opinion": bootstrap(
+            paired_abstention_gap,
+            lambda sample: np.mean([row["qwen_minus_phi_abstention"] for row in sample]),
+            seed=SEED + 500,
+        ),
         "laya": laya_metrics,
         "per_dataset": by_dataset,
         "preregistered_success_rule_passed": gate,
@@ -269,8 +323,50 @@ def main():
     args = parser.parse_args()
     stimuli = json.loads((args.results / "stimuli.json").read_text())
     outcomes = json.loads((args.results / "predictions.json").read_text())
+    manifest = json.loads((args.results / "manifest.json").read_text())
     analysis = analyze(stimuli, outcomes)
     (args.results / "analysis.json").write_text(json.dumps(analysis, indent=2) + "\n")
+    stimulus_ids = {row["id"] for row in stimuli}
+    checks = {
+        "234_frozen_stimuli": len(stimuli) == 234,
+        "balanced_polarity": Counter(row["polarity"] for row in stimuli)
+        == {"positive": 117, "negative": 117},
+        "balanced_within_dataset": all(
+            Counter(row["polarity"] for row in stimuli if row["dataset"] == dataset)
+            == counts
+            for dataset, counts in {
+                "14res": {"positive": 27, "negative": 27},
+                "14lap": {"positive": 29, "negative": 29},
+                "15res": {"positive": 39, "negative": 39},
+                "16res": {"positive": 22, "negative": 22},
+            }.items()
+        ),
+        "unique_sentence_clusters": len({row["cluster_id"] for row in stimuli}) == 234,
+        "complete_2340_paired_outcomes": len(outcomes) == 2340,
+        "manifest_stimuli_hash_matches": manifest["stimuli_sha256"]
+        == hashlib.sha256((args.results / "stimuli.json").read_bytes()).hexdigest(),
+        "manifest_prediction_hash_matches": manifest["predictions_sha256"]
+        == hashlib.sha256((args.results / "predictions.json").read_bytes()).hexdigest(),
+        "manifest_protocol_hash_matches": manifest["protocol_sha256"]
+        == hashlib.sha256(PROTOCOL.read_bytes()).hexdigest(),
+        "manifest_source_revision_pinned": manifest["source_revision"]
+        == "d0df6600b259b6114de23cc5047c7e776cd89750",
+        "source_hashes_cover_four_test_splits": set(manifest["source_files_sha256"])
+        == {"14res", "14lap", "15res", "16res"},
+        "public_stimuli_match_frozen_identifier_index": stimuli
+        == json.loads(STIMULI_INDEX.read_text()),
+        "no_review_text_in_public_stimuli": all(
+            "text" not in row and "sentence" not in row for row in stimuli
+        ),
+        "no_review_text_in_public_outcomes": all(
+            "visible_text" not in row and "sentence" not in row for row in outcomes
+        ),
+        "all_outputs_match_frozen_ids": all(row["id"] in stimulus_ids for row in outcomes),
+        "preregistered_operational_rule_passed": analysis["preregistered_success_rule_passed"],
+    }
+    (args.results / "audit.json").write_text(
+        json.dumps({"checks": checks, "checks_passed": all(checks.values())}, indent=2) + "\n"
+    )
     print(json.dumps(analysis, indent=2), flush=True)
 
 

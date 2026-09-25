@@ -120,6 +120,9 @@ def test_analyzer_scores_abstention_policy_and_detects_incomplete_join(monkeypat
     result = analysis.analyze(stimuli, outcomes)
     assert result["primary_pooled_change"]["estimate"] == 0.5
     assert result["preregistered_success_rule_passed"]
+    assert result["pre_opinion_predictive_polarity_diagnostics"]["qwen2.5-3b"][
+        "forced_binary_polarity_accuracy_before_opinion"
+    ]["estimate"] == 1.0
     assert result["laya"]["before_opinion"]["abstention_recall"]["estimate"] == 1.0
     with pytest.raises(ValueError, match="Expected"):
         analysis.analyze(stimuli, outcomes[:-1])

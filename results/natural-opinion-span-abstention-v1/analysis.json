@@ -1,0 +1,524 @@
+{
+  "experiment": "037",
+  "primary_endpoint": "paired change in appropriate-decision accuracy from forced-binary to abstention-enabled wrapper, averaged across opinion-span visibility states and Qwen/Phi",
+  "primary_pooled_change": {
+    "estimate": 0.26816239316239315,
+    "cluster_bootstrap_95_ci": [
+      0.24465811965811965,
+      0.2916666666666667
+    ],
+    "n": 936,
+    "n_sentence_clusters": 234,
+    "bootstrap_reps": 10000,
+    "bootstrap_seed": 20260937
+  },
+  "primary_change_by_judge": {
+    "qwen2.5-3b": {
+      "estimate": 0.3803418803418803,
+      "cluster_bootstrap_95_ci": [
+        0.3525641025641026,
+        0.4081196581196581
+      ],
+      "n": 468,
+      "n_sentence_clusters": 234,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20261037
+    },
+    "phi3-mini": {
+      "estimate": 0.15598290598290598,
+      "cluster_bootstrap_95_ci": [
+        0.12606837606837606,
+        0.1858974358974359
+      ],
+      "n": 468,
+      "n_sentence_clusters": 234,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20261038
+    }
+  },
+  "condition_metrics": {
+    "qwen2.5-3b": {
+      "before_opinion": {
+        "forced_binary_appropriate_accuracy": {
+          "estimate": 0.0,
+          "cluster_bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "n": 234,
+          "n_sentence_clusters": 234,
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260957
+        },
+        "abstention_appropriate_accuracy": {
+          "estimate": 0.782051282051282,
+          "cluster_bootstrap_95_ci": [
+            0.7264957264957265,
+            0.8333333333333334
+          ],
+          "n": 234,
+          "n_sentence_clusters": 234,
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260967
+        },
+        "paired_change": {
+          "estimate": 0.782051282051282,
+          "cluster_bootstrap_95_ci": [
+            0.7264957264957265,
+            0.8333333333333334
+          ],
+          "n": 234,
+          "n_sentence_clusters": 234,
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260977
+        }
+      },
+      "opinion_visible": {
+        "forced_binary_appropriate_accuracy": {
+          "estimate": 0.9658119658119658,
+          "cluster_bootstrap_95_ci": [
+            0.9401709401709402,
+            0.9871794871794872
+          ],
+          "n": 234,
+          "n_sentence_clusters": 234,
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260958
+        },
+        "abstention_appropriate_accuracy": {
+          "estimate": 0.9444444444444444,
+          "cluster_bootstrap_95_ci": [
+            0.9145299145299145,
+            0.9700854700854701
+          ],
+          "n": 234,
+          "n_sentence_clusters": 234,
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260968
+        },
+        "paired_change": {
+          "estimate": -0.021367521367521368,
+          "cluster_bootstrap_95_ci": [
+            -0.042735042735042736,
+            0.0
+          ],
+          "n": 234,
+          "n_sentence_clusters": 234,
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260978
+        }
+      }
+    },
+    "phi3-mini": {
+      "before_opinion": {
+        "forced_binary_appropriate_accuracy": {
+          "estimate": 0.0,
+          "cluster_bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "n": 234,
+          "n_sentence_clusters": 234,
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260959
+        },
+        "abstention_appropriate_accuracy": {
+          "estimate": 0.3076923076923077,
+          "cluster_bootstrap_95_ci": [
+            0.24786324786324787,
+            0.36752136752136755
+          ],
+          "n": 234,
+          "n_sentence_clusters": 234,
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260969
+        },
+        "paired_change": {
+          "estimate": 0.3076923076923077,
+          "cluster_bootstrap_95_ci": [
+            0.25213675213675213,
+            0.36752136752136755
+          ],
+          "n": 234,
+          "n_sentence_clusters": 234,
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260979
+        }
+      },
+      "opinion_visible": {
+        "forced_binary_appropriate_accuracy": {
+          "estimate": 0.9615384615384616,
+          "cluster_bootstrap_95_ci": [
+            0.9358974358974359,
+            0.9829059829059829
+          ],
+          "n": 234,
+          "n_sentence_clusters": 234,
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260960
+        },
+        "abstention_appropriate_accuracy": {
+          "estimate": 0.9658119658119658,
+          "cluster_bootstrap_95_ci": [
+            0.9401709401709402,
+            0.9871794871794872
+          ],
+          "n": 234,
+          "n_sentence_clusters": 234,
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260970
+        },
+        "paired_change": {
+          "estimate": 0.004273504273504274,
+          "cluster_bootstrap_95_ci": [
+            -0.008547008547008548,
+            0.021367521367521368
+          ],
+          "n": 234,
+          "n_sentence_clusters": 234,
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260980
+        }
+      }
+    }
+  },
+  "abstention_metrics": {
+    "qwen2.5-3b": {
+      "recall_before_annotated_opinion": {
+        "estimate": 0.782051282051282,
+        "cluster_bootstrap_95_ci": [
+          0.7307692307692307,
+          0.8333333333333334
+        ],
+        "n": 234,
+        "n_sentence_clusters": 234,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260987
+      },
+      "false_abstention_after_opinion": {
+        "estimate": 0.038461538461538464,
+        "cluster_bootstrap_95_ci": [
+          0.017094017094017096,
+          0.0641025641025641
+        ],
+        "n": 234,
+        "n_sentence_clusters": 234,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260997
+      },
+      "cue_visible_polarity_accuracy_forced": {
+        "estimate": 0.9658119658119658,
+        "cluster_bootstrap_95_ci": [
+          0.9401709401709402,
+          0.9871794871794872
+        ],
+        "n": 234,
+        "n_sentence_clusters": 234,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20261007
+      },
+      "cue_visible_polarity_accuracy_abstention": {
+        "estimate": 0.9444444444444444,
+        "cluster_bootstrap_95_ci": [
+          0.9145299145299145,
+          0.9700854700854701
+        ],
+        "n": 234,
+        "n_sentence_clusters": 234,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20261017
+      }
+    },
+    "phi3-mini": {
+      "recall_before_annotated_opinion": {
+        "estimate": 0.3076923076923077,
+        "cluster_bootstrap_95_ci": [
+          0.24786324786324787,
+          0.36752136752136755
+        ],
+        "n": 234,
+        "n_sentence_clusters": 234,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260988
+      },
+      "false_abstention_after_opinion": {
+        "estimate": 0.004273504273504274,
+        "cluster_bootstrap_95_ci": [
+          0.0,
+          0.01282051282051282
+        ],
+        "n": 234,
+        "n_sentence_clusters": 234,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260998
+      },
+      "cue_visible_polarity_accuracy_forced": {
+        "estimate": 0.9615384615384616,
+        "cluster_bootstrap_95_ci": [
+          0.9358974358974359,
+          0.9829059829059829
+        ],
+        "n": 234,
+        "n_sentence_clusters": 234,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20261008
+      },
+      "cue_visible_polarity_accuracy_abstention": {
+        "estimate": 0.9658119658119658,
+        "cluster_bootstrap_95_ci": [
+          0.9401709401709402,
+          0.9871794871794872
+        ],
+        "n": 234,
+        "n_sentence_clusters": 234,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20261018
+      }
+    }
+  },
+  "pre_opinion_predictive_polarity_diagnostics": {
+    "qwen2.5-3b": {
+      "forced_binary_polarity_accuracy_before_opinion": {
+        "estimate": 0.7350427350427351,
+        "cluster_bootstrap_95_ci": [
+          0.6794871794871795,
+          0.7905982905982906
+        ],
+        "n": 234,
+        "n_sentence_clusters": 234,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20261337
+      },
+      "abstention_wrapper_coverage_before_opinion": {
+        "estimate": 0.21794871794871795,
+        "cluster_bootstrap_95_ci": [
+          0.16666666666666666,
+          0.27350427350427353
+        ],
+        "n": 234,
+        "n_sentence_clusters": 234,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20261347
+      },
+      "abstention_wrapper_polarity_accuracy_when_it_answers": {
+        "estimate": 0.8235294117647058,
+        "cluster_bootstrap_95_ci": [
+          0.7058823529411765,
+          0.9215686274509803
+        ],
+        "n": 51,
+        "n_sentence_clusters": 51,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20261357
+      }
+    },
+    "phi3-mini": {
+      "forced_binary_polarity_accuracy_before_opinion": {
+        "estimate": 0.7777777777777778,
+        "cluster_bootstrap_95_ci": [
+          0.7222222222222222,
+          0.8333333333333334
+        ],
+        "n": 234,
+        "n_sentence_clusters": 234,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20261338
+      },
+      "abstention_wrapper_coverage_before_opinion": {
+        "estimate": 0.6923076923076923,
+        "cluster_bootstrap_95_ci": [
+          0.6324786324786325,
+          0.7521367521367521
+        ],
+        "n": 234,
+        "n_sentence_clusters": 234,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20261348
+      },
+      "abstention_wrapper_polarity_accuracy_when_it_answers": {
+        "estimate": 0.808641975308642,
+        "cluster_bootstrap_95_ci": [
+          0.7469135802469136,
+          0.8703703703703703
+        ],
+        "n": 162,
+        "n_sentence_clusters": 162,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20261358
+      }
+    }
+  },
+  "parse_coverage": {
+    "qwen2.5-3b": {
+      "forced_binary": 1.0,
+      "abstention": 1.0
+    },
+    "phi3-mini": {
+      "forced_binary": 1.0,
+      "abstention": 1.0
+    }
+  },
+  "paired_qwen_minus_phi_abstention_recall_before_opinion": {
+    "estimate": 0.47435897435897434,
+    "cluster_bootstrap_95_ci": [
+      0.41025641025641024,
+      0.5384615384615384
+    ],
+    "n": 234,
+    "n_sentence_clusters": 234,
+    "bootstrap_reps": 10000,
+    "bootstrap_seed": 20261437
+  },
+  "laya": {
+    "before_opinion": {
+      "appropriate_accuracy": {
+        "estimate": 0.0811965811965812,
+        "cluster_bootstrap_95_ci": [
+          0.04700854700854701,
+          0.11538461538461539
+        ],
+        "n": 234,
+        "n_sentence_clusters": 234,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20261137
+      },
+      "label_counts": {
+        "negative": 116,
+        "mixed": 69,
+        "positive": 30,
+        "unclear": 19
+      },
+      "abstention_recall": {
+        "estimate": 0.0811965811965812,
+        "cluster_bootstrap_95_ci": [
+          0.04700854700854701,
+          0.11965811965811966
+        ],
+        "n": 234,
+        "n_sentence_clusters": 234,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20261147
+      },
+      "polarity_coverage": {
+        "estimate": 0.6239316239316239,
+        "cluster_bootstrap_95_ci": [
+          0.5641025641025641,
+          0.6837606837606838
+        ],
+        "n": 234,
+        "n_sentence_clusters": 234,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20261149
+      },
+      "polarity_accuracy_when_clear": {
+        "estimate": 0.5547945205479452,
+        "cluster_bootstrap_95_ci": [
+          0.4726027397260274,
+          0.6301369863013698
+        ],
+        "n": 146,
+        "n_sentence_clusters": 146,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20261150
+      }
+    },
+    "opinion_visible": {
+      "appropriate_accuracy": {
+        "estimate": 0.8247863247863247,
+        "cluster_bootstrap_95_ci": [
+          0.7735042735042735,
+          0.8717948717948718
+        ],
+        "n": 234,
+        "n_sentence_clusters": 234,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20261138
+      },
+      "label_counts": {
+        "mixed": 25,
+        "negative": 104,
+        "positive": 101,
+        "unclear": 4
+      },
+      "false_abstention_rate": {
+        "estimate": 0.017094017094017096,
+        "cluster_bootstrap_95_ci": [
+          0.004273504273504274,
+          0.03418803418803419
+        ],
+        "n": 234,
+        "n_sentence_clusters": 234,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20261148
+      }
+    }
+  },
+  "per_dataset": {
+    "14lap": {
+      "n_stimuli": 58,
+      "paired_change": {
+        "estimate": 0.25,
+        "cluster_bootstrap_95_ci": [
+          0.2025862068965517,
+          0.3017241379310345
+        ],
+        "n": 232,
+        "n_sentence_clusters": 58,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20261237
+      }
+    },
+    "14res": {
+      "n_stimuli": 54,
+      "paired_change": {
+        "estimate": 0.26851851851851855,
+        "cluster_bootstrap_95_ci": [
+          0.2175925925925926,
+          0.3148148148148148
+        ],
+        "n": 216,
+        "n_sentence_clusters": 54,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20261238
+      }
+    },
+    "15res": {
+      "n_stimuli": 78,
+      "paired_change": {
+        "estimate": 0.30448717948717946,
+        "cluster_bootstrap_95_ci": [
+          0.2724358974358974,
+          0.33653846153846156
+        ],
+        "n": 312,
+        "n_sentence_clusters": 78,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20261239
+      }
+    },
+    "16res": {
+      "n_stimuli": 44,
+      "paired_change": {
+        "estimate": 0.22727272727272727,
+        "cluster_bootstrap_95_ci": [
+          0.17045454545454544,
+          0.2897727272727273
+        ],
+        "n": 176,
+        "n_sentence_clusters": 44,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20261240
+      }
+    }
+  },
+  "preregistered_success_rule_passed": true,
+  "n_stimuli": 234,
+  "n_sentence_clusters": 234,
+  "n_outcomes": 2340,
+  "limitations": [
+    "The before-span prefix may contain implicit or unannotated evidence; gold only marks visibility of the annotated opinion phrase.",
+    "The wrapper changes the allowed response set and instruction together.",
+    "ASTE-Data-V2 is a small set of SemEval domain test splits, not a random sample of reviews or judges.",
+    "No per-example review text is redistributed because the upstream repository has no explicit license metadata."
+  ]
+}
