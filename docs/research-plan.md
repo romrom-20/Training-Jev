@@ -596,3 +596,24 @@ private because the upstream repository does not state a license. The frozen
 running judgments. The opinion span is an annotation-based evidence marker, not
 proof that preceding prose is impossible to interpret or that humans agree it is
 insufficient.
+
+**Experiment 037 outcome.** Forced-binary Qwen/Phi predicted the full-review
+polarity at 73.5% and 77.8%, respectively, even before the sole ASTE-annotated
+opinion phrase was visible. Thus the registered “insufficient” label was an
+annotation-visibility proxy, not validated evidence of unanswerability. The
+explicit-abstention wrapper's operational score rose by 26.8 points, but it should
+not be read as an epistemic-quality win. More striking, Qwen abstained on 78.2% of
+these prefixes while Phi did so on only 30.8% (paired gap 47.4 points); Laya's
+four-way engine returned `unclear` on 8.1%. The pre-span polarity accuracy could
+come from genuine context, aspect priors, or contamination from these old reviews.
+ABSA already has research on spurious correlations and broad abstention work is
+established, so this is a lead rather than a novelty claim. See the
+[`037 result bundle`](../results/natural-opinion-span-abstention-v1/README.md).
+
+**Experiment 038** freezes an aspect-only control: remove every review word while
+keeping the same aspect query, balanced full-review labels, and wrapper prompts.
+The primary paired comparison reuses 037's natural-prefix predictions and tests
+whether their above-chance polarity signal exceeds the aspect-name baseline. This
+exploratory, post-result follow-up separates visible context from target priors;
+it cannot rule out training-data exposure. Its protocol is committed before new
+judgments in [`038-aspect-only-prior-control.md`](experiments/038-aspect-only-prior-control.md).
