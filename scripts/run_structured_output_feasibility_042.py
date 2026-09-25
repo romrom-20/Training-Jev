@@ -279,7 +279,7 @@ def run(
             row = json.loads(line)
             previous[(row["case_id"], row["lang"], row["source_condition"], row["decoder"])] = row
     jobs = [
-        {**row, "prompt": revised_prompt(row["prompt"]), "decoder": decoder}
+        {**row, "decoder": decoder}
         for row in audit
         for decoder in ("free", "constrained")
     ]
