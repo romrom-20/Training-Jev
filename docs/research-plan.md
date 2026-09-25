@@ -578,3 +578,21 @@ evidence availability from reactions to a constructed missing-cue template. The
 [`036 result bundle`](../results/evidence-aware-abstention-v1/README.md) records the
 full paired analysis and limits. LessWrong remains a wait pending a natural-data
 result that survives benchmark and judge differences.
+
+## Natural opinion-span test: experiment 037
+
+The ASTE literature already annotates target/opinion/sentiment triplets, while
+general abstention benchmarks cover unanswerable questions. A targeted search did
+not locate a paired test asking aspect judges to classify natural excerpts just
+before versus after their human-annotated target-linked opinion phrase. That narrow
+gap is provisional, not a novelty claim. Experiment 037 freezes 234 balanced
+single-triplet SemEval test sentences across restaurant and laptop splits. Each
+aspect remains visible while its opinion span is withheld or revealed. Two local
+generative judges receive matched forced-binary and abstention wrappers; Laya's
+typed four-way decision is the independent engine comparison. Raw review text stays
+private because the upstream repository does not state a license. The frozen
+[protocol](experiments/037-natural-opinion-span-abstention.md) and
+[identifier/span manifest](experiments/037-stimuli.json) must be committed before
+running judgments. The opinion span is an annotation-based evidence marker, not
+proof that preceding prose is impossible to interpret or that humans agree it is
+insufficient.
