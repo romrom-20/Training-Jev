@@ -1,0 +1,10 @@
+{
+  "checks": {
+    "all_judges_cover_all_stimuli_and_prefixes": true,
+    "balanced_192_positive_192_negative_stimuli": true,
+    "binary_judges_are_invariant_on_identical_late_8_word_inputs": true,
+    "complete_2304_judgment_factorial": true,
+    "protocol_hash_matches": true
+  },
+  "checks_passed": true
+}

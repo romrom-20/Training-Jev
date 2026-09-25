@@ -536,3 +536,29 @@ template/aspect scaffold as the bootstrap cluster, and a capability gate at
 12 words. Freeze the stimuli and code before judging. LessWrong remains a wait:
 there is a promising asymmetric error pattern but no human-validated natural
 answer result or independent-domain replication.
+
+**Experiment 035 outcome.** The preregistered late-minus-early accuracy
+difference-in-differences was +61.2 points (scaffold-cluster 95% interval
++58.6 to +63.5), but the frozen full-answer capability gate failed: pooled
+12-word binary accuracy was 87.8%, below 90%. Do not treat the large contrast as
+confirmatory. The failure exposed two distinct problems. First, Qwen labeled
+“not bad” positive in only 4/96 cases; Laya was mixed on many of those cases,
+while Phi labeled all positive, so this phrase was not a defensible binary gold
+condition. Second, when the late eight-word input had no polarity clue, Qwen
+defaulted negative on 44/48 identical prefixes, and Phi failed the one-word
+format on 41/48. Laya gave different decoded labels on repeated identical text
+because the randomized key map changed by stimulus ID, a confound for its
+no-cue breakdown. These are useful evaluator-behavior diagnostics but not a
+validated natural-answer finding. Full analysis and limitations are in the
+[`035 result bundle`](../results/cue-position-polarity-v1/README.md).
+
+The next preregistered question is whether forced binary judges can abstain
+appropriately when a short prefix contains no aspect-polarity evidence. Reuse
+only the known-clear 035 direct good/bad and negative “not good” sentences,
+exclude the pragmatic “not bad” construction, and add an explicit
+`insufficient evidence` option for Qwen/Phi. Score a decision as correct when
+the cue is absent and the judge abstains, or when the cue is visible and it
+returns the deterministic polarity. Compare against the exact same forced
+binary judgments already collected and Laya's four-way outputs, with Laya's key
+mapping held fixed for identical prefixes. This tests a practical response to
+the observed failure mode; it does not generalize beyond short controlled text.

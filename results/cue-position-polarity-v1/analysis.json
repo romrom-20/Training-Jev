@@ -1,0 +1,915 @@
+{
+  "analysis": {
+    "accuracy_by_judge_polarity_form_position_and_prefix": {
+      "laya": {
+        "negative": {
+          "direct": {
+            "early": {
+              "12": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20260957,
+                "cluster_bootstrap_95_ci": [
+                  0.9375,
+                  1.0
+                ],
+                "estimate": 0.9791666666666666,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              },
+              "8": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20260953,
+                "cluster_bootstrap_95_ci": [
+                  0.9375,
+                  1.0
+                ],
+                "estimate": 0.9791666666666666,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              }
+            },
+            "late": {
+              "12": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20260959,
+                "cluster_bootstrap_95_ci": [
+                  1.0,
+                  1.0
+                ],
+                "estimate": 1.0,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              },
+              "8": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20260955,
+                "cluster_bootstrap_95_ci": [
+                  0.0,
+                  0.0
+                ],
+                "estimate": 0.0,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              }
+            }
+          },
+          "negated": {
+            "early": {
+              "12": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20260961,
+                "cluster_bootstrap_95_ci": [
+                  0.8958333333333334,
+                  1.0
+                ],
+                "estimate": 0.9583333333333334,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              },
+              "8": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20260957,
+                "cluster_bootstrap_95_ci": [
+                  1.0,
+                  1.0
+                ],
+                "estimate": 1.0,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              }
+            },
+            "late": {
+              "12": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20260963,
+                "cluster_bootstrap_95_ci": [
+                  1.0,
+                  1.0
+                ],
+                "estimate": 1.0,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              },
+              "8": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20260959,
+                "cluster_bootstrap_95_ci": [
+                  0.0,
+                  0.0625
+                ],
+                "estimate": 0.020833333333333332,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              }
+            }
+          }
+        },
+        "positive": {
+          "direct": {
+            "early": {
+              "12": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20260977,
+                "cluster_bootstrap_95_ci": [
+                  0.8541666666666666,
+                  1.0
+                ],
+                "estimate": 0.9375,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              },
+              "8": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20260973,
+                "cluster_bootstrap_95_ci": [
+                  0.7708333333333334,
+                  0.9583333333333334
+                ],
+                "estimate": 0.875,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              }
+            },
+            "late": {
+              "12": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20260979,
+                "cluster_bootstrap_95_ci": [
+                  1.0,
+                  1.0
+                ],
+                "estimate": 1.0,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              },
+              "8": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20260975,
+                "cluster_bootstrap_95_ci": [
+                  0.020833333333333332,
+                  0.16666666666666666
+                ],
+                "estimate": 0.08333333333333333,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              }
+            }
+          },
+          "negated": {
+            "early": {
+              "12": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20260981,
+                "cluster_bootstrap_95_ci": [
+                  0.4166666666666667,
+                  0.7083333333333334
+                ],
+                "estimate": 0.5625,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              },
+              "8": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20260977,
+                "cluster_bootstrap_95_ci": [
+                  0.375,
+                  0.6666666666666666
+                ],
+                "estimate": 0.5208333333333334,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              }
+            },
+            "late": {
+              "12": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20260983,
+                "cluster_bootstrap_95_ci": [
+                  0.4583333333333333,
+                  0.75
+                ],
+                "estimate": 0.6041666666666666,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              },
+              "8": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20260979,
+                "cluster_bootstrap_95_ci": [
+                  0.020833333333333332,
+                  0.18802083333332575
+                ],
+                "estimate": 0.10416666666666667,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              }
+            }
+          }
+        }
+      },
+      "phi3-mini": {
+        "negative": {
+          "direct": {
+            "early": {
+              "12": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261157,
+                "cluster_bootstrap_95_ci": [
+                  1.0,
+                  1.0
+                ],
+                "estimate": 1.0,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              },
+              "8": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261153,
+                "cluster_bootstrap_95_ci": [
+                  1.0,
+                  1.0
+                ],
+                "estimate": 1.0,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              }
+            },
+            "late": {
+              "12": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261159,
+                "cluster_bootstrap_95_ci": [
+                  1.0,
+                  1.0
+                ],
+                "estimate": 1.0,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              },
+              "8": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261155,
+                "cluster_bootstrap_95_ci": [
+                  0.0625,
+                  0.25
+                ],
+                "estimate": 0.14583333333333334,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              }
+            }
+          },
+          "negated": {
+            "early": {
+              "12": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261161,
+                "cluster_bootstrap_95_ci": [
+                  1.0,
+                  1.0
+                ],
+                "estimate": 1.0,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              },
+              "8": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261157,
+                "cluster_bootstrap_95_ci": [
+                  1.0,
+                  1.0
+                ],
+                "estimate": 1.0,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              }
+            },
+            "late": {
+              "12": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261163,
+                "cluster_bootstrap_95_ci": [
+                  1.0,
+                  1.0
+                ],
+                "estimate": 1.0,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              },
+              "8": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261159,
+                "cluster_bootstrap_95_ci": [
+                  0.0625,
+                  0.25
+                ],
+                "estimate": 0.14583333333333334,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              }
+            }
+          }
+        },
+        "positive": {
+          "direct": {
+            "early": {
+              "12": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261177,
+                "cluster_bootstrap_95_ci": [
+                  1.0,
+                  1.0
+                ],
+                "estimate": 1.0,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              },
+              "8": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261173,
+                "cluster_bootstrap_95_ci": [
+                  1.0,
+                  1.0
+                ],
+                "estimate": 1.0,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              }
+            },
+            "late": {
+              "12": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261179,
+                "cluster_bootstrap_95_ci": [
+                  1.0,
+                  1.0
+                ],
+                "estimate": 1.0,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              },
+              "8": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261175,
+                "cluster_bootstrap_95_ci": [
+                  0.0,
+                  0.0
+                ],
+                "estimate": 0.0,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              }
+            }
+          },
+          "negated": {
+            "early": {
+              "12": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261181,
+                "cluster_bootstrap_95_ci": [
+                  1.0,
+                  1.0
+                ],
+                "estimate": 1.0,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              },
+              "8": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261177,
+                "cluster_bootstrap_95_ci": [
+                  1.0,
+                  1.0
+                ],
+                "estimate": 1.0,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              }
+            },
+            "late": {
+              "12": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261183,
+                "cluster_bootstrap_95_ci": [
+                  1.0,
+                  1.0
+                ],
+                "estimate": 1.0,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              },
+              "8": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261179,
+                "cluster_bootstrap_95_ci": [
+                  0.0,
+                  0.0
+                ],
+                "estimate": 0.0,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              }
+            }
+          }
+        }
+      },
+      "qwen2.5-3b": {
+        "negative": {
+          "direct": {
+            "early": {
+              "12": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261057,
+                "cluster_bootstrap_95_ci": [
+                  1.0,
+                  1.0
+                ],
+                "estimate": 1.0,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              },
+              "8": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261053,
+                "cluster_bootstrap_95_ci": [
+                  1.0,
+                  1.0
+                ],
+                "estimate": 1.0,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              }
+            },
+            "late": {
+              "12": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261059,
+                "cluster_bootstrap_95_ci": [
+                  1.0,
+                  1.0
+                ],
+                "estimate": 1.0,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              },
+              "8": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261055,
+                "cluster_bootstrap_95_ci": [
+                  0.8333333333333334,
+                  0.9791666666666666
+                ],
+                "estimate": 0.9166666666666666,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              }
+            }
+          },
+          "negated": {
+            "early": {
+              "12": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261061,
+                "cluster_bootstrap_95_ci": [
+                  1.0,
+                  1.0
+                ],
+                "estimate": 1.0,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              },
+              "8": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261057,
+                "cluster_bootstrap_95_ci": [
+                  1.0,
+                  1.0
+                ],
+                "estimate": 1.0,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              }
+            },
+            "late": {
+              "12": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261063,
+                "cluster_bootstrap_95_ci": [
+                  1.0,
+                  1.0
+                ],
+                "estimate": 1.0,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              },
+              "8": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261059,
+                "cluster_bootstrap_95_ci": [
+                  0.8333333333333334,
+                  0.9791666666666666
+                ],
+                "estimate": 0.9166666666666666,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              }
+            }
+          }
+        },
+        "positive": {
+          "direct": {
+            "early": {
+              "12": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261077,
+                "cluster_bootstrap_95_ci": [
+                  0.9375,
+                  1.0
+                ],
+                "estimate": 0.9791666666666666,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              },
+              "8": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261073,
+                "cluster_bootstrap_95_ci": [
+                  1.0,
+                  1.0
+                ],
+                "estimate": 1.0,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              }
+            },
+            "late": {
+              "12": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261079,
+                "cluster_bootstrap_95_ci": [
+                  0.9375,
+                  1.0
+                ],
+                "estimate": 0.9791666666666666,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              },
+              "8": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261075,
+                "cluster_bootstrap_95_ci": [
+                  0.020833333333333332,
+                  0.16666666666666666
+                ],
+                "estimate": 0.08333333333333333,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              }
+            }
+          },
+          "negated": {
+            "early": {
+              "12": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261081,
+                "cluster_bootstrap_95_ci": [
+                  0.0,
+                  0.14583333333333334
+                ],
+                "estimate": 0.0625,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              },
+              "8": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261077,
+                "cluster_bootstrap_95_ci": [
+                  0.125,
+                  0.3541666666666667
+                ],
+                "estimate": 0.22916666666666666,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              }
+            },
+            "late": {
+              "12": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261083,
+                "cluster_bootstrap_95_ci": [
+                  0.0,
+                  0.0625
+                ],
+                "estimate": 0.020833333333333332,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              },
+              "8": {
+                "bootstrap_reps": 10000,
+                "bootstrap_seed": 20261079,
+                "cluster_bootstrap_95_ci": [
+                  0.020833333333333332,
+                  0.16666666666666666
+                ],
+                "estimate": 0.08333333333333333,
+                "n": 48,
+                "n_scaffold_aspect_clusters": 48
+              }
+            }
+          }
+        }
+      }
+    },
+    "binary_accuracy_by_judge_position_and_prefix": {
+      "phi3-mini": {
+        "early": {
+          "12": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261587,
+            "cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ],
+            "estimate": 1.0,
+            "n": 192,
+            "n_scaffold_aspect_clusters": 48
+          },
+          "8": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261583,
+            "cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ],
+            "estimate": 1.0,
+            "n": 192,
+            "n_scaffold_aspect_clusters": 48
+          }
+        },
+        "late": {
+          "12": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261597,
+            "cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ],
+            "estimate": 1.0,
+            "n": 192,
+            "n_scaffold_aspect_clusters": 48
+          },
+          "8": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261593,
+            "cluster_bootstrap_95_ci": [
+              0.03125,
+              0.125
+            ],
+            "estimate": 0.07291666666666667,
+            "n": 192,
+            "n_scaffold_aspect_clusters": 48
+          }
+        }
+      },
+      "qwen2.5-3b": {
+        "early": {
+          "12": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261567,
+            "cluster_bootstrap_95_ci": [
+              0.7395833333333334,
+              0.78125
+            ],
+            "estimate": 0.7604166666666666,
+            "n": 192,
+            "n_scaffold_aspect_clusters": 48
+          },
+          "8": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261563,
+            "cluster_bootstrap_95_ci": [
+              0.78125,
+              0.8385416666666666
+            ],
+            "estimate": 0.8072916666666666,
+            "n": 192,
+            "n_scaffold_aspect_clusters": 48
+          }
+        },
+        "late": {
+          "12": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261577,
+            "cluster_bootstrap_95_ci": [
+              0.734375,
+              0.765625
+            ],
+            "estimate": 0.75,
+            "n": 192,
+            "n_scaffold_aspect_clusters": 48
+          },
+          "8": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261573,
+            "cluster_bootstrap_95_ci": [
+              0.5,
+              0.5
+            ],
+            "estimate": 0.5,
+            "n": 192,
+            "n_scaffold_aspect_clusters": 48
+          }
+        }
+      }
+    },
+    "capability_check": {
+      "early_eight_word_accuracy_at_least_85_percent": true,
+      "twelve_word_accuracy_at_least_90_percent": false
+    },
+    "capability_check_passed": false,
+    "identical_no_cue_prefixes_yield_same_judge_label": {
+      "laya": false,
+      "phi3-mini": true,
+      "qwen2.5-3b": true
+    },
+    "laya_mixed_unclear_by_position_and_prefix": {
+      "early": {
+        "12": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20261447,
+          "cluster_bootstrap_95_ci": [
+            0.09375,
+            0.19270833333333334
+          ],
+          "estimate": 0.140625,
+          "n": 192,
+          "n_scaffold_aspect_clusters": 48
+        },
+        "8": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20261443,
+          "cluster_bootstrap_95_ci": [
+            0.11458333333333333,
+            0.19791666666666666
+          ],
+          "estimate": 0.15625,
+          "n": 192,
+          "n_scaffold_aspect_clusters": 48
+        }
+      },
+      "late": {
+        "12": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20261457,
+          "cluster_bootstrap_95_ci": [
+            0.0625,
+            0.13541666666666666
+          ],
+          "estimate": 0.09895833333333333,
+          "n": 192,
+          "n_scaffold_aspect_clusters": 48
+        },
+        "8": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20261453,
+          "cluster_bootstrap_95_ci": [
+            0.8385416666666666,
+            0.9479166666666666
+          ],
+          "estimate": 0.8958333333333334,
+          "n": 192,
+          "n_scaffold_aspect_clusters": 48
+        }
+      }
+    },
+    "no_cue_late_8_word_response_distribution": {
+      "laya": {
+        "n_identical_aspect_prefixes": 48,
+        "one_response_per_identical_prefix_counts": {
+          "mixed": 30,
+          "positive": 3,
+          "unclear": 15
+        }
+      },
+      "phi3-mini": {
+        "n_identical_aspect_prefixes": 48,
+        "one_response_per_identical_prefix_counts": {
+          "0": 7,
+          "None": 41
+        }
+      },
+      "qwen2.5-3b": {
+        "n_identical_aspect_prefixes": 48,
+        "one_response_per_identical_prefix_counts": {
+          "0": 44,
+          "1": 4
+        }
+      }
+    },
+    "overall_binary_accuracy_by_prefix": {
+      "12": {
+        "binary_accuracy": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20261547,
+          "cluster_bootstrap_95_ci": [
+            0.87109375,
+            0.8841145833333334
+          ],
+          "estimate": 0.8776041666666666,
+          "n": 768,
+          "n_scaffold_aspect_clusters": 48
+        },
+        "binary_parse_coverage": {
+          "phi3-mini": 1.0,
+          "qwen2.5-3b": 1.0
+        },
+        "early_accuracy": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20261557,
+          "cluster_bootstrap_95_ci": [
+            0.8697916666666666,
+            0.890625
+          ],
+          "estimate": 0.8802083333333334,
+          "n": 384,
+          "n_scaffold_aspect_clusters": 48
+        }
+      },
+      "8": {
+        "binary_accuracy": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20261543,
+          "cluster_bootstrap_95_ci": [
+            0.5807291666666666,
+            0.6119791666666666
+          ],
+          "estimate": 0.5950520833333334,
+          "n": 768,
+          "n_scaffold_aspect_clusters": 48
+        },
+        "binary_parse_coverage": {
+          "phi3-mini": 0.5729166666666666,
+          "qwen2.5-3b": 1.0
+        },
+        "early_accuracy": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20261553,
+          "cluster_bootstrap_95_ci": [
+            0.890625,
+            0.9192708333333334
+          ],
+          "estimate": 0.9036458333333334,
+          "n": 384,
+          "n_scaffold_aspect_clusters": 48
+        }
+      }
+    },
+    "primary_by_binary_judge": {
+      "phi3-mini": {
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260937,
+        "cluster_bootstrap_95_ci": [
+          0.875,
+          0.96875
+        ],
+        "estimate": 0.9270833333333334,
+        "n": 384,
+        "n_scaffold_aspect_clusters": 48
+      },
+      "qwen2.5-3b": {
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260936,
+        "cluster_bootstrap_95_ci": [
+          0.265625,
+          0.3333333333333333
+        ],
+        "estimate": 0.296875,
+        "n": 384,
+        "n_scaffold_aspect_clusters": 48
+      }
+    },
+    "primary_endpoint": "binary accuracy improvement 8-to-12 late minus binary accuracy improvement 8-to-12 early, equal-weight pooled over Qwen/Phi",
+    "primary_late_minus_early_difference_in_differences": {
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20260935,
+      "cluster_bootstrap_95_ci": [
+        0.5859375,
+        0.6354166666666666
+      ],
+      "estimate": 0.6119791666666666,
+      "n": 768,
+      "n_scaffold_aspect_clusters": 48
+    }
+  },
+  "clusters": 48,
+  "design": "controlled cue-position \u00d7 polarity \u00d7 expression-form factorial",
+  "experiment": "035",
+  "limitations": [
+    "The texts are short deterministic templates, not natural generated answers.",
+    "Gold follows the intended ordinary-language meaning of good/bad and not good/not bad; pragmatics may differ from this construction.",
+    "The two binary evaluators are fixed model families, not a random sample of judges.",
+    "The late condition changes clause order as well as cue position; the estimand is the full cue-placement intervention."
+  ],
+  "outcomes": 2304,
+  "stimuli": 384
+}

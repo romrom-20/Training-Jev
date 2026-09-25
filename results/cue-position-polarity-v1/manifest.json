@@ -1,0 +1,37 @@
+{
+  "batch_size": 8,
+  "budgets_whitespace_words": [
+    8,
+    12
+  ],
+  "device": "mps",
+  "experiment": "035",
+  "judgments": 2304,
+  "models": {
+    "laya": {
+      "id": "convaiinnovations/laya",
+      "package": "laya==0.3.20",
+      "revision": "55cf4c4ebb4ebe31b2550e8bdf3bd21b99753851",
+      "seconds": 14.972294542007148,
+      "weights_sha256": "891102d372688fc2a094dac56a384bc537b87c63f21f9f3dac0be2b7cbc8d86c"
+    },
+    "phi3-mini": {
+      "id": "microsoft/Phi-3-mini-4k-instruct",
+      "revision": "f39ac1d28e925b323eae81227eaba4464caced4e",
+      "seconds": 108.02212874998804
+    },
+    "qwen2.5-3b": {
+      "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "seconds": 184.6331220420543
+    }
+  },
+  "predictions_sha256": "14bfffb2e561db17f7a95ac4a2b5f5934639f3fb7e839e5778fd6dda0f20ce85",
+  "protocol_sha256": "eebeafdab83927d1155c6100e18b48777513241c35e8567ca28009fb32db8bc3",
+  "scaffold_clusters": 48,
+  "seed": 20260935,
+  "stimuli": 384,
+  "stimuli_sha256": "5b68f5d4dff58953536a41612b1933a9bc9639a13f242a93c35de72b42aa5054",
+  "warnings": [
+    "laya: this checkpoint ships invalid temperatures or values outside [0.5, 5]; using choice:11+=0.10058280825614929 -> 0.5. Treat confidence from the affected entries as uncalibrated."
+  ]
+}

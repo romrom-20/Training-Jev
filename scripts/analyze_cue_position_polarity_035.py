@@ -180,6 +180,46 @@ def analyze(stimuli, outcomes):
                 seed=SEED + 610 + budget,
             ),
         }
+    binary_position_metrics = {}
+    for judge_index, judge in enumerate(BINARIES):
+        binary_position_metrics[judge] = {}
+        for position in ("early", "late"):
+            binary_position_metrics[judge][position] = {}
+            for budget in BUDGETS:
+                subset = [
+                    row
+                    for row in long_rows
+                    if row["judge"] == judge
+                    and row["position"] == position
+                    and row["budget"] == budget
+                ]
+                binary_position_metrics[judge][position][str(budget)] = cluster_bootstrap(
+                    subset,
+                    mean_accuracy,
+                    seed=SEED + 620 + judge_index * 20 + (0 if position == "early" else 10) + budget,
+                )
+
+    no_cue_responses = {}
+    no_cue_duplicate_input_consistency = {}
+    for judge in JUDGES:
+        responses = [
+            row
+            for row in long_rows
+            if row["judge"] == judge and row["position"] == "late" and row["budget"] == 8
+        ]
+        grouped = defaultdict(list)
+        for row in responses:
+            grouped[row["cluster_id"]].append(row["label"])
+        no_cue_responses[judge] = {
+            "one_response_per_identical_prefix_counts": {
+                str(label): sum(labels[0] == label for labels in grouped.values())
+                for label in sorted({labels[0] for labels in grouped.values()}, key=str)
+            },
+            "n_identical_aspect_prefixes": len(grouped),
+        }
+        no_cue_duplicate_input_consistency[judge] = all(
+            len(set(labels)) == 1 for labels in grouped.values()
+        )
     capability = {
         "twelve_word_accuracy_at_least_90_percent": by_budget["12"]["binary_accuracy"]["estimate"]
         >= 0.90,
@@ -191,7 +231,10 @@ def analyze(stimuli, outcomes):
         "primary_late_minus_early_difference_in_differences": primary,
         "primary_by_binary_judge": per_judge_primary,
         "accuracy_by_judge_polarity_form_position_and_prefix": cells,
+        "binary_accuracy_by_judge_position_and_prefix": binary_position_metrics,
         "laya_mixed_unclear_by_position_and_prefix": laya_ambiguity,
+        "no_cue_late_8_word_response_distribution": no_cue_responses,
+        "identical_no_cue_prefixes_yield_same_judge_label": no_cue_duplicate_input_consistency,
         "overall_binary_accuracy_by_prefix": by_budget,
         "capability_check": capability,
         "capability_check_passed": all(capability.values()),
@@ -241,6 +284,7 @@ def run(private=PRIVATE, output=OUT):
     public_manifest["predictions_sha256"] = hashlib.sha256(public_outcomes_path.read_bytes()).hexdigest()
     public_manifest["stimuli_sha256"] = hashlib.sha256(public_stimuli_path.read_bytes()).hexdigest()
     (output / "manifest.json").write_text(json.dumps(public_manifest, indent=2, sort_keys=True) + "\n")
+    (output / "analysis.json").write_text(json.dumps(analysis, indent=2, sort_keys=True) + "\n")
     audit = {
         "checks": {
             "complete_2304_judgment_factorial": len(public_outcomes) == 2304,
@@ -250,6 +294,10 @@ def run(private=PRIVATE, output=OUT):
                 == 768
                 for judge in JUDGES
             ),
+            "binary_judges_are_invariant_on_identical_late_8_word_inputs": all(
+                analysis["analysis"]["identical_no_cue_prefixes_yield_same_judge_label"][judge]
+                for judge in BINARIES
+            ),
             "protocol_hash_matches": hashlib.sha256(PROTOCOL.read_bytes()).hexdigest()
             == manifest["protocol_sha256"],
         }
@@ -258,6 +306,16 @@ def run(private=PRIVATE, output=OUT):
     (output / "audit.json").write_text(json.dumps(audit, indent=2, sort_keys=True) + "\n")
     if not audit["checks_passed"]:
         raise ValueError("Experiment 035 output audit failed")
+    (output / "README.md").write_text(
+        "# Experiment 035 result\n\n"
+        "This controlled cue-position × polarity × expression-form experiment uses "
+        "384 deterministic stimuli and 2,304 local judge outcomes. The preregistered "
+        "analysis is in [`analysis.json`](analysis.json); exact synthetic text is in "
+        "[`stimuli.json`](stimuli.json), label-only judgments in "
+        "[`predictions.json`](predictions.json), and provenance/audit in "
+        "[`manifest.json`](manifest.json) and [`audit.json`](audit.json). See the "
+        "[frozen protocol](../../docs/experiments/035-cue-position-polarity.md).\n"
+    )
     print(json.dumps(analysis, indent=2), flush=True)
 
 
