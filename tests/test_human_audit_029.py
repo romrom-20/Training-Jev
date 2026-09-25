@@ -4,12 +4,21 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parents[1] / "scripts"))
 
 from analyze_human_audit_029 import sentence_bootstrap
-from natural_aspect_selectivity import DATA, load_stimuli
 from prepare_human_audit_029 import QUOTAS, select_sample
 
 
-def test_frozen_human_audit_sample_is_reproducible_and_sentence_unique():
-    stimuli = load_stimuli(DATA)
+def test_human_audit_sample_is_reproducible_and_sentence_unique():
+    # Keep this unit test independent of the private SemEval dataset in .context.
+    stimuli = [
+        {
+            "id": f"{category}-{label}-{index}",
+            "sentence_id": f"sentence-{category}-{label}-{index}",
+            "category": category,
+            "label": label,
+        }
+        for (category, label), quota in QUOTAS.items()
+        for index in range(quota + 2)
+    ]
     first = select_sample(stimuli)
     second = select_sample(stimuli)
     assert [row["id"] for row in first] == [row["id"] for row in second]
