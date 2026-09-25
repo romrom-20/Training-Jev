@@ -415,5 +415,9 @@ semantic evaluation of open answers is target-dependent, and that judge agreemen
 can be strong without high correctness. It is not yet evidence that answer text is
 wrong, because neither judge saw a human-labeled answer benchmark. LLM-as-a-judge
 biases are prior art; we should not frame the evaluation problem itself as new.
-The next discriminating experiment is a blinded human-coded sample, stratified by
-target and by judge disagreement. LessWrong remains a wait.
+The next check is now experiment 030: run the local, open-weights Laya typed-decision
+engine on the full 233-item source screen and the 60 paired generations. This follows
+the user's request to test a decision engine before asking for manual labels. Laya's
+predictions remain automated judgments, so they will test cross-engine robustness,
+not resolve answer-level truth. Human labels remain a later option if the three
+engines expose a specific, decision-relevant disagreement. LessWrong remains a wait.
