@@ -631,9 +631,10 @@ generalization. Full results are in the
 [`038 bundle`](../results/aspect-only-prior-control-v1/README.md).
 
 Experiment 039 is the next diagnostic: train a fixed TF-IDF/logistic model on
-three SemEval subsets and evaluate on the fourth, comparing prefix-plus-aspect
-features with aspect-only features. This small non-pretrained baseline can test
+three SemEval subsets and evaluate on the fourth, comparing aspect-masked prefix
+features with aspect-only features. This small non-pretrained baseline tests
 whether context signal transfers across the available subsets without relying on
-LLM pretraining, although the subsets are not fully independent domains. LessWrong
-remains on hold until this and a stronger independent validation clarify the
-interpretation.
+LLM pretraining, although the subsets are not fully independent domains. The
+[frozen protocol](experiments/039-cross-subset-context-lexical-baseline.md) requires
+a 5-point gain and a positive cluster interval; LessWrong remains on hold until
+this and stronger independent validation clarify the interpretation.
