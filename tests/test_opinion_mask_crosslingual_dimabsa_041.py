@@ -91,7 +91,10 @@ def test_rejects_overlapping_opinion_annotations():
 
 def test_parses_only_valid_json_va_pairs():
     assert parse_va('{"valence": 6.25, "arousal": 4}') == [6.25, 4.0]
+    assert parse_va('```json\n{"valence": 6.25, "arousal": 4}\n```') == [6.25, 4.0]
     assert parse_va("valence is 6 and arousal is 4") is None
+    assert parse_va('Here is the answer: {"valence": 6, "arousal": 4}') is None
+    assert parse_va('```json\n{"valence": 6, "arousal": 4}\n``` extra') is None
     assert parse_va('{"valence": 10, "arousal": 4}') is None
     assert parse_va('{"valence": null, "arousal": 4}') is None
 

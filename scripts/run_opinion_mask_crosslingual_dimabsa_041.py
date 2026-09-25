@@ -210,8 +210,16 @@ def make_jobs(cases: list[dict]) -> list[dict]:
 
 
 def parse_va(text: str) -> list[float] | None:
+    text = text.strip()
+    if text.startswith("```"):
+        lines = text.splitlines()
+        if len(lines) < 3 or lines[0].strip().lower() not in ("```", "```json"):
+            return None
+        if lines[-1].strip() != "```":
+            return None
+        text = "\n".join(lines[1:-1]).strip()
     try:
-        decoded = json.loads(text.strip())
+        decoded = json.loads(text)
     except json.JSONDecodeError:
         return None
     if not isinstance(decoded, dict) or not {"valence", "arousal"} <= decoded.keys():
@@ -235,7 +243,11 @@ def run(jobs: list[dict], output: Path, device: str, batch_size: int) -> dict:
     if output.exists():
         for line in output.read_text().splitlines():
             row = json.loads(line)
+            row["prediction"] = parse_va(row["raw"])
             prior[(row["case_id"], row["lang"], row["condition"])] = row
+        output.write_text(
+            "".join(json.dumps(row, ensure_ascii=False) + "\n" for row in prior.values())
+        )
     remaining = [
         job
         for job in jobs
