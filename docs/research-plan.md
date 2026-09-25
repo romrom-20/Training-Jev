@@ -494,3 +494,12 @@ with an answer-level validation set or blinded human coding. The relevant litera
 already covers preference-evaluation length bias; a potential contribution would
 need to stay narrow to generation-cap sensitivity in short semantic extraction and
 must show that the resolution point transfers.
+
+Experiment 034 freezes the first transfer test on TripR-2020Large: 385 filtered
+aspect queries across 187 annotated review sentences, using the same three target
+families and the same Laya, Qwen and Phi evaluators at nested 8/12/32-token prefixes.
+This is an independent restaurant-review corpus, not an unrelated domain or
+answer-level annotation of the generations. The primary comparison is the paired
+sentence-clustered 12-minus-8 change in Qwen/Phi agreement. The source filter follows
+experiment 018 and has positive-skewed class balance, so label accuracy remains
+secondary to agreement and Laya-ambiguity outcomes.
