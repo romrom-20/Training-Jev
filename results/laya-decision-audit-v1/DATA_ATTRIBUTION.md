@@ -1,0 +1,3 @@
+# Data and model attribution
+
+Source aspect labels are from SemEval-2014 Task 4 restaurant annotations ([official task page](https://alt.qcri.org/semeval2014/task4/)); see the [upstream data note](../local-open-judge-v1/DATA_ATTRIBUTION.md) for the frozen XML source. The decision model is `convaiinnovations/laya`, Apache-2.0, at revision `55cf4c4ebb4ebe31b2550e8bdf3bd21b99753851` ([model card](https://huggingface.co/convaiinnovations/laya)). The `laya==0.3.20` package is pinned in `pyproject.toml` and `uv.lock`. This bundle contains IDs, labels, and probability outputs only; no review or generated-answer text.

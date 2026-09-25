@@ -1,0 +1,1293 @@
+{
+  "experiment": "030",
+  "source_screen": {
+    "n": 233,
+    "four_way_counts": {
+      "negative": 47,
+      "positive": 158,
+      "mixed": 23,
+      "unclear": 5
+    },
+    "clear_polarity_coverage": 0.8798283261802575,
+    "clear_polarity_accuracy": 0.9463414634146341,
+    "strict_binary_accuracy_all_items": 0.8326180257510729,
+    "negative_recall_all_negative_items": 0.7636363636363637,
+    "always_positive_baseline": 0.7639484978540773,
+    "by_aspect": {
+      "food": {
+        "n": 105,
+        "four_way_counts": {
+          "negative": 20,
+          "positive": 76,
+          "mixed": 7,
+          "unclear": 2
+        },
+        "clear_polarity_coverage": 0.9142857142857143,
+        "clear_polarity_accuracy": 0.9375,
+        "negative_recall_all_negative_items": 0.8095238095238095
+      },
+      "service": {
+        "n": 69,
+        "four_way_counts": {
+          "negative": 15,
+          "positive": 52,
+          "mixed": 2
+        },
+        "clear_polarity_coverage": 0.9710144927536232,
+        "clear_polarity_accuracy": 0.9850746268656716,
+        "negative_recall_all_negative_items": 0.9333333333333333
+      },
+      "price": {
+        "n": 59,
+        "four_way_counts": {
+          "negative": 12,
+          "positive": 30,
+          "mixed": 14,
+          "unclear": 3
+        },
+        "clear_polarity_coverage": 0.711864406779661,
+        "clear_polarity_accuracy": 0.9047619047619048,
+        "negative_recall_all_negative_items": 0.5789473684210527
+      }
+    }
+  },
+  "per_target_generated_answers": {
+    "granite-3.1-2b": {
+      "n": 20,
+      "exact_answer_state_diversity": {
+        "unique_aspect_answer_inputs": 14,
+        "largest_duplicate_cluster": 4
+      },
+      "laya_four_way_counts": {
+        "positive": 6,
+        "negative": 9,
+        "mixed": 4,
+        "unclear": 1
+      },
+      "laya_four_way_proportions": {
+        "positive": {
+          "estimate": 0.3,
+          "sentence_cluster_bootstrap_95_ci": [
+            0.1,
+            0.5
+          ],
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20261050
+        },
+        "negative": {
+          "estimate": 0.45,
+          "sentence_cluster_bootstrap_95_ci": [
+            0.25,
+            0.65
+          ],
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20261050
+        },
+        "mixed": {
+          "estimate": 0.2,
+          "sentence_cluster_bootstrap_95_ci": [
+            0.05,
+            0.4
+          ],
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20261050
+        },
+        "unclear": {
+          "estimate": 0.05,
+          "sentence_cluster_bootstrap_95_ci": [
+            0.0,
+            0.15
+          ],
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20261050
+        }
+      },
+      "laya_clear_polarity_coverage": 0.75,
+      "laya_clear_polarity_coverage_bootstrap": {
+        "estimate": 0.75,
+        "sentence_cluster_bootstrap_95_ci": [
+          0.55,
+          0.9
+        ],
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20261030
+      },
+      "laya_strict_accuracy_against_review_gold": 0.4,
+      "automated_signals_against_review_gold": {
+        "laya": {
+          "n_scored": 15,
+          "coverage_of_20": 0.75,
+          "accuracy_against_review_gold": 0.5333333333333333,
+          "accuracy_sentence_cluster_bootstrap": {
+            "estimate": 0.5333333333333333,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.28551587301587317,
+              0.7857142857142857
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261030
+          },
+          "accuracy_duplicate_input_cluster_sensitivity": {
+            "estimate": 0.5333333333333333,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.3333333333333333,
+              0.8333333333333334
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261060
+          }
+        },
+        "qwen2_5_3b": {
+          "n_scored": 20,
+          "coverage_of_20": 1.0,
+          "accuracy_against_review_gold": 0.55,
+          "accuracy_sentence_cluster_bootstrap": {
+            "estimate": 0.55,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.35,
+              0.75
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261030
+          },
+          "accuracy_duplicate_input_cluster_sensitivity": {
+            "estimate": 0.55,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.36666666666666664,
+              0.7777777777777778
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261060
+          }
+        },
+        "phi3_mini": {
+          "n_scored": 19,
+          "coverage_of_20": 0.95,
+          "accuracy_against_review_gold": 0.631578947368421,
+          "accuracy_sentence_cluster_bootstrap": {
+            "estimate": 0.631578947368421,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.4117647058823529,
+              0.8421052631578947
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261030
+          },
+          "accuracy_duplicate_input_cluster_sensitivity": {
+            "estimate": 0.631578947368421,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.4444444444444444,
+              0.9230769230769231
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261060
+          }
+        },
+        "candidate_pair": {
+          "n_scored": 20,
+          "coverage_of_20": 1.0,
+          "accuracy_against_review_gold": 1.0,
+          "accuracy_sentence_cluster_bootstrap": {
+            "estimate": 1.0,
+            "sentence_cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261030
+          },
+          "accuracy_duplicate_input_cluster_sensitivity": {
+            "estimate": 1.0,
+            "sentence_cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261060
+          }
+        }
+      },
+      "laya_agreement": {
+        "qwen2_5_3b": {
+          "n_both_binary": 15,
+          "coverage_of_20": 0.75,
+          "agreement": 1.0,
+          "agreement_sentence_cluster_bootstrap": {
+            "estimate": 1.0,
+            "sentence_cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261040
+          },
+          "agreement_duplicate_input_cluster_sensitivity": {
+            "estimate": 1.0,
+            "sentence_cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261070
+          }
+        },
+        "phi3_mini": {
+          "n_both_binary": 15,
+          "coverage_of_20": 0.75,
+          "agreement": 0.6,
+          "agreement_sentence_cluster_bootstrap": {
+            "estimate": 0.6,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.35294117647058826,
+              0.8461538461538461
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261040
+          },
+          "agreement_duplicate_input_cluster_sensitivity": {
+            "estimate": 0.6,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.23076923076923078,
+              0.875
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261070
+          }
+        },
+        "candidate_pair": {
+          "n_both_binary": 15,
+          "coverage_of_20": 0.75,
+          "agreement": 0.5333333333333333,
+          "agreement_sentence_cluster_bootstrap": {
+            "estimate": 0.5333333333333333,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.2727272727272727,
+              0.7857142857142857
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261040
+          },
+          "agreement_duplicate_input_cluster_sensitivity": {
+            "estimate": 0.5333333333333333,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.33303571428571455,
+              0.8333333333333334
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261070
+          }
+        }
+      },
+      "mean_laya_reported_confidence": 0.512135,
+      "disagreements": [
+        {
+          "id": "35698351#821341#0|price",
+          "category": "price",
+          "gold": 1,
+          "laya_label": "positive",
+          "laya_probabilities": {
+            "mixed": 0.2586,
+            "positive": 0.4809,
+            "negative": 0.2119,
+            "unclear": 0.0485
+          },
+          "qwen_label": 1,
+          "phi_label": 0,
+          "candidate_pair_prediction": 1
+        },
+        {
+          "id": "11351633#565247#3 |price",
+          "category": "price",
+          "gold": 0,
+          "laya_label": "positive",
+          "laya_probabilities": {
+            "mixed": 0.2607,
+            "positive": 0.3553,
+            "negative": 0.2026,
+            "unclear": 0.1814
+          },
+          "qwen_label": 1,
+          "phi_label": 0,
+          "candidate_pair_prediction": 0
+        },
+        {
+          "id": "11302355#533813#0|service",
+          "category": "service",
+          "gold": 1,
+          "laya_label": "negative",
+          "laya_probabilities": {
+            "mixed": 0.2321,
+            "positive": 0.1532,
+            "negative": 0.5164,
+            "unclear": 0.0982
+          },
+          "qwen_label": 0,
+          "phi_label": 0,
+          "candidate_pair_prediction": 1
+        },
+        {
+          "id": "11558693#1436895#9|food",
+          "category": "food",
+          "gold": 0,
+          "laya_label": "mixed",
+          "laya_probabilities": {
+            "mixed": 0.342,
+            "positive": 0.2947,
+            "negative": 0.2955,
+            "unclear": 0.0678
+          },
+          "qwen_label": 1,
+          "phi_label": 1,
+          "candidate_pair_prediction": 0
+        },
+        {
+          "id": "33085939#758010#0|service",
+          "category": "service",
+          "gold": 0,
+          "laya_label": "mixed",
+          "laya_probabilities": {
+            "mixed": 0.3416,
+            "positive": 0.3248,
+            "negative": 0.2584,
+            "unclear": 0.0752
+          },
+          "qwen_label": 1,
+          "phi_label": null,
+          "candidate_pair_prediction": 0
+        },
+        {
+          "id": "33069536#707145#3|price",
+          "category": "price",
+          "gold": 1,
+          "laya_label": "positive",
+          "laya_probabilities": {
+            "mixed": 0.2607,
+            "positive": 0.3553,
+            "negative": 0.2026,
+            "unclear": 0.1814
+          },
+          "qwen_label": 1,
+          "phi_label": 0,
+          "candidate_pair_prediction": 1
+        },
+        {
+          "id": "11651310#581605#1|food",
+          "category": "food",
+          "gold": 1,
+          "laya_label": "negative",
+          "laya_probabilities": {
+            "negative": 0.7237,
+            "unclear": 0.1368,
+            "mixed": 0.0816,
+            "positive": 0.0578
+          },
+          "qwen_label": 0,
+          "phi_label": 1,
+          "candidate_pair_prediction": 1
+        },
+        {
+          "id": "11350496#1560668#3|service",
+          "category": "service",
+          "gold": 1,
+          "laya_label": "negative",
+          "laya_probabilities": {
+            "negative": 0.7111,
+            "unclear": 0.1244,
+            "mixed": 0.1014,
+            "positive": 0.0631
+          },
+          "qwen_label": 0,
+          "phi_label": 0,
+          "candidate_pair_prediction": 1
+        },
+        {
+          "id": "11548230#560890#2|service",
+          "category": "service",
+          "gold": 1,
+          "laya_label": "negative",
+          "laya_probabilities": {
+            "negative": 0.7111,
+            "unclear": 0.1244,
+            "mixed": 0.1014,
+            "positive": 0.0631
+          },
+          "qwen_label": 0,
+          "phi_label": 0,
+          "candidate_pair_prediction": 1
+        },
+        {
+          "id": "11351762#644011#3|price",
+          "category": "price",
+          "gold": 1,
+          "laya_label": "mixed",
+          "laya_probabilities": {
+            "negative": 0.2082,
+            "unclear": 0.2179,
+            "mixed": 0.4148,
+            "positive": 0.1591
+          },
+          "qwen_label": 1,
+          "phi_label": 0,
+          "candidate_pair_prediction": 1
+        },
+        {
+          "id": "36072604#1106889#2|food",
+          "category": "food",
+          "gold": 1,
+          "laya_label": "mixed",
+          "laya_probabilities": {
+            "negative": 0.166,
+            "unclear": 0.2294,
+            "mixed": 0.4842,
+            "positive": 0.1204
+          },
+          "qwen_label": 1,
+          "phi_label": 1,
+          "candidate_pair_prediction": 1
+        },
+        {
+          "id": "32405935#675215#1|food",
+          "category": "food",
+          "gold": 1,
+          "laya_label": "unclear",
+          "laya_probabilities": {
+            "negative": 0.1317,
+            "unclear": 0.4782,
+            "mixed": 0.3225,
+            "positive": 0.0676
+          },
+          "qwen_label": 1,
+          "phi_label": 1,
+          "candidate_pair_prediction": 1
+        },
+        {
+          "id": "11359717#1138929#5|price",
+          "category": "price",
+          "gold": 0,
+          "laya_label": "positive",
+          "laya_probabilities": {
+            "unclear": 0.083,
+            "mixed": 0.2768,
+            "positive": 0.4916,
+            "negative": 0.1486
+          },
+          "qwen_label": 1,
+          "phi_label": 0,
+          "candidate_pair_prediction": 0
+        },
+        {
+          "id": "32894669#1075584#0|price",
+          "category": "price",
+          "gold": 0,
+          "laya_label": "positive",
+          "laya_probabilities": {
+            "positive": 0.5235,
+            "negative": 0.1202,
+            "unclear": 0.0623,
+            "mixed": 0.294
+          },
+          "qwen_label": 1,
+          "phi_label": 0,
+          "candidate_pair_prediction": 0
+        }
+      ]
+    },
+    "qwen-1.5b": {
+      "n": 20,
+      "exact_answer_state_diversity": {
+        "unique_aspect_answer_inputs": 17,
+        "largest_duplicate_cluster": 2
+      },
+      "laya_four_way_counts": {
+        "positive": 3,
+        "negative": 5,
+        "mixed": 10,
+        "unclear": 2
+      },
+      "laya_four_way_proportions": {
+        "positive": {
+          "estimate": 0.15,
+          "sentence_cluster_bootstrap_95_ci": [
+            0.0,
+            0.3
+          ],
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20261051
+        },
+        "negative": {
+          "estimate": 0.25,
+          "sentence_cluster_bootstrap_95_ci": [
+            0.1,
+            0.45
+          ],
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20261051
+        },
+        "mixed": {
+          "estimate": 0.5,
+          "sentence_cluster_bootstrap_95_ci": [
+            0.3,
+            0.7
+          ],
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20261051
+        },
+        "unclear": {
+          "estimate": 0.1,
+          "sentence_cluster_bootstrap_95_ci": [
+            0.0,
+            0.25
+          ],
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20261051
+        }
+      },
+      "laya_clear_polarity_coverage": 0.4,
+      "laya_clear_polarity_coverage_bootstrap": {
+        "estimate": 0.4,
+        "sentence_cluster_bootstrap_95_ci": [
+          0.2,
+          0.6
+        ],
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20261031
+      },
+      "laya_strict_accuracy_against_review_gold": 0.3,
+      "automated_signals_against_review_gold": {
+        "laya": {
+          "n_scored": 8,
+          "coverage_of_20": 0.4,
+          "accuracy_against_review_gold": 0.75,
+          "accuracy_sentence_cluster_bootstrap": {
+            "estimate": 0.75,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.4,
+              1.0
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261030
+          },
+          "accuracy_duplicate_input_cluster_sensitivity": {
+            "estimate": 0.75,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.4,
+              1.0
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261061
+          }
+        },
+        "qwen2_5_3b": {
+          "n_scored": 20,
+          "coverage_of_20": 1.0,
+          "accuracy_against_review_gold": 0.8,
+          "accuracy_sentence_cluster_bootstrap": {
+            "estimate": 0.8,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.6,
+              0.95
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261030
+          },
+          "accuracy_duplicate_input_cluster_sensitivity": {
+            "estimate": 0.8,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.6111111111111112,
+              0.9523809523809523
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261061
+          }
+        },
+        "phi3_mini": {
+          "n_scored": 20,
+          "coverage_of_20": 1.0,
+          "accuracy_against_review_gold": 0.8,
+          "accuracy_sentence_cluster_bootstrap": {
+            "estimate": 0.8,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.6,
+              0.95
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261030
+          },
+          "accuracy_duplicate_input_cluster_sensitivity": {
+            "estimate": 0.8,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.6190476190476191,
+              0.9523809523809523
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261061
+          }
+        },
+        "candidate_pair": {
+          "n_scored": 20,
+          "coverage_of_20": 1.0,
+          "accuracy_against_review_gold": 1.0,
+          "accuracy_sentence_cluster_bootstrap": {
+            "estimate": 1.0,
+            "sentence_cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261030
+          },
+          "accuracy_duplicate_input_cluster_sensitivity": {
+            "estimate": 1.0,
+            "sentence_cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261061
+          }
+        }
+      },
+      "laya_agreement": {
+        "qwen2_5_3b": {
+          "n_both_binary": 8,
+          "coverage_of_20": 0.4,
+          "agreement": 0.875,
+          "agreement_sentence_cluster_bootstrap": {
+            "estimate": 0.875,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.6,
+              1.0
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261041
+          },
+          "agreement_duplicate_input_cluster_sensitivity": {
+            "estimate": 0.875,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.6,
+              1.0
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261071
+          }
+        },
+        "phi3_mini": {
+          "n_both_binary": 8,
+          "coverage_of_20": 0.4,
+          "agreement": 0.625,
+          "agreement_sentence_cluster_bootstrap": {
+            "estimate": 0.625,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.25,
+              1.0
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261041
+          },
+          "agreement_duplicate_input_cluster_sensitivity": {
+            "estimate": 0.625,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.25,
+              1.0
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261071
+          }
+        },
+        "candidate_pair": {
+          "n_both_binary": 8,
+          "coverage_of_20": 0.4,
+          "agreement": 0.75,
+          "agreement_sentence_cluster_bootstrap": {
+            "estimate": 0.75,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.4,
+              1.0
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261041
+          },
+          "agreement_duplicate_input_cluster_sensitivity": {
+            "estimate": 0.75,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.4,
+              1.0
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261071
+          }
+        }
+      },
+      "mean_laya_reported_confidence": 0.42484500000000003,
+      "disagreements": [
+        {
+          "id": "11302355#533813#0|service",
+          "category": "service",
+          "gold": 1,
+          "laya_label": "mixed",
+          "laya_probabilities": {
+            "mixed": 0.3253,
+            "positive": 0.2004,
+            "negative": 0.3061,
+            "unclear": 0.1682
+          },
+          "qwen_label": 1,
+          "phi_label": 1,
+          "candidate_pair_prediction": 1
+        },
+        {
+          "id": "35698351#821341#0|price",
+          "category": "price",
+          "gold": 1,
+          "laya_label": "positive",
+          "laya_probabilities": {
+            "mixed": 0.2586,
+            "positive": 0.4809,
+            "negative": 0.2119,
+            "unclear": 0.0485
+          },
+          "qwen_label": 1,
+          "phi_label": 0,
+          "candidate_pair_prediction": 1
+        },
+        {
+          "id": "33069536#707145#3|price",
+          "category": "price",
+          "gold": 1,
+          "laya_label": "mixed",
+          "laya_probabilities": {
+            "mixed": 0.3644,
+            "positive": 0.2611,
+            "negative": 0.2329,
+            "unclear": 0.1416
+          },
+          "qwen_label": 0,
+          "phi_label": 0,
+          "candidate_pair_prediction": 1
+        },
+        {
+          "id": "33085939#758010#0|service",
+          "category": "service",
+          "gold": 0,
+          "laya_label": "mixed",
+          "laya_probabilities": {
+            "mixed": 0.3521,
+            "positive": 0.2904,
+            "negative": 0.2238,
+            "unclear": 0.1336
+          },
+          "qwen_label": 1,
+          "phi_label": 1,
+          "candidate_pair_prediction": 0
+        },
+        {
+          "id": "11351819#985076#1|service",
+          "category": "service",
+          "gold": 0,
+          "laya_label": "positive",
+          "laya_probabilities": {
+            "mixed": 0.3884,
+            "positive": 0.3962,
+            "negative": 0.1301,
+            "unclear": 0.0852
+          },
+          "qwen_label": 1,
+          "phi_label": 0,
+          "candidate_pair_prediction": 0
+        },
+        {
+          "id": "36072604#1106889#2|food",
+          "category": "food",
+          "gold": 1,
+          "laya_label": "mixed",
+          "laya_probabilities": {
+            "negative": 0.166,
+            "unclear": 0.2294,
+            "mixed": 0.4842,
+            "positive": 0.1204
+          },
+          "qwen_label": 1,
+          "phi_label": 1,
+          "candidate_pair_prediction": 1
+        },
+        {
+          "id": "11548230#560890#2|service",
+          "category": "service",
+          "gold": 1,
+          "laya_label": "mixed",
+          "laya_probabilities": {
+            "negative": 0.157,
+            "unclear": 0.1325,
+            "mixed": 0.4031,
+            "positive": 0.3073
+          },
+          "qwen_label": 1,
+          "phi_label": 1,
+          "candidate_pair_prediction": 1
+        },
+        {
+          "id": "32405935#675215#1|food",
+          "category": "food",
+          "gold": 1,
+          "laya_label": "mixed",
+          "laya_probabilities": {
+            "negative": 0.2755,
+            "unclear": 0.2413,
+            "mixed": 0.3282,
+            "positive": 0.1549
+          },
+          "qwen_label": 1,
+          "phi_label": 1,
+          "candidate_pair_prediction": 1
+        },
+        {
+          "id": "32406302#615620#2|food",
+          "category": "food",
+          "gold": 1,
+          "laya_label": "mixed",
+          "laya_probabilities": {
+            "negative": 0.1694,
+            "unclear": 0.1148,
+            "mixed": 0.4133,
+            "positive": 0.3025
+          },
+          "qwen_label": 1,
+          "phi_label": 1,
+          "candidate_pair_prediction": 1
+        },
+        {
+          "id": "11350496#1560668#3|service",
+          "category": "service",
+          "gold": 1,
+          "laya_label": "mixed",
+          "laya_probabilities": {
+            "negative": 0.157,
+            "unclear": 0.1325,
+            "mixed": 0.4031,
+            "positive": 0.3073
+          },
+          "qwen_label": 1,
+          "phi_label": 1,
+          "candidate_pair_prediction": 1
+        },
+        {
+          "id": "11351762#644011#3|price",
+          "category": "price",
+          "gold": 1,
+          "laya_label": "mixed",
+          "laya_probabilities": {
+            "negative": 0.2793,
+            "unclear": 0.2534,
+            "mixed": 0.3293,
+            "positive": 0.138
+          },
+          "qwen_label": 0,
+          "phi_label": 0,
+          "candidate_pair_prediction": 1
+        },
+        {
+          "id": "11651310#581605#1|food",
+          "category": "food",
+          "gold": 1,
+          "laya_label": "mixed",
+          "laya_probabilities": {
+            "negative": 0.166,
+            "unclear": 0.2294,
+            "mixed": 0.4842,
+            "positive": 0.1204
+          },
+          "qwen_label": 1,
+          "phi_label": 1,
+          "candidate_pair_prediction": 1
+        },
+        {
+          "id": "11359797#469087#7|food",
+          "category": "food",
+          "gold": 0,
+          "laya_label": "unclear",
+          "laya_probabilities": {
+            "unclear": 0.3628,
+            "mixed": 0.1505,
+            "positive": 0.1382,
+            "negative": 0.3485
+          },
+          "qwen_label": 0,
+          "phi_label": 0,
+          "candidate_pair_prediction": 0
+        },
+        {
+          "id": "11359717#1138929#5|price",
+          "category": "price",
+          "gold": 0,
+          "laya_label": "unclear",
+          "laya_probabilities": {
+            "unclear": 0.3222,
+            "mixed": 0.3139,
+            "positive": 0.1519,
+            "negative": 0.2121
+          },
+          "qwen_label": 0,
+          "phi_label": 0,
+          "candidate_pair_prediction": 0
+        },
+        {
+          "id": "32894669#1075584#0|price",
+          "category": "price",
+          "gold": 0,
+          "laya_label": "positive",
+          "laya_probabilities": {
+            "positive": 0.311,
+            "negative": 0.2232,
+            "unclear": 0.2275,
+            "mixed": 0.2384
+          },
+          "qwen_label": 0,
+          "phi_label": 0,
+          "candidate_pair_prediction": 0
+        }
+      ]
+    },
+    "smollm2-1.7b": {
+      "n": 20,
+      "exact_answer_state_diversity": {
+        "unique_aspect_answer_inputs": 6,
+        "largest_duplicate_cluster": 6
+      },
+      "laya_four_way_counts": {
+        "positive": 11,
+        "negative": 6,
+        "mixed": 3,
+        "unclear": 0
+      },
+      "laya_four_way_proportions": {
+        "positive": {
+          "estimate": 0.55,
+          "sentence_cluster_bootstrap_95_ci": [
+            0.35,
+            0.75
+          ],
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20261052
+        },
+        "negative": {
+          "estimate": 0.3,
+          "sentence_cluster_bootstrap_95_ci": [
+            0.1,
+            0.5
+          ],
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20261052
+        },
+        "mixed": {
+          "estimate": 0.15,
+          "sentence_cluster_bootstrap_95_ci": [
+            0.0,
+            0.3
+          ],
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20261052
+        },
+        "unclear": {
+          "estimate": 0.0,
+          "sentence_cluster_bootstrap_95_ci": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20261052
+        }
+      },
+      "laya_clear_polarity_coverage": 0.85,
+      "laya_clear_polarity_coverage_bootstrap": {
+        "estimate": 0.85,
+        "sentence_cluster_bootstrap_95_ci": [
+          0.7,
+          1.0
+        ],
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20261032
+      },
+      "laya_strict_accuracy_against_review_gold": 0.75,
+      "automated_signals_against_review_gold": {
+        "laya": {
+          "n_scored": 17,
+          "coverage_of_20": 0.85,
+          "accuracy_against_review_gold": 0.8823529411764706,
+          "accuracy_sentence_cluster_bootstrap": {
+            "estimate": 0.8823529411764706,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.7058823529411765,
+              1.0
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261030
+          },
+          "accuracy_duplicate_input_cluster_sensitivity": {
+            "estimate": 0.8823529411764706,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.6666666666666666,
+              1.0
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261062
+          }
+        },
+        "qwen2_5_3b": {
+          "n_scored": 19,
+          "coverage_of_20": 0.95,
+          "accuracy_against_review_gold": 0.8421052631578947,
+          "accuracy_sentence_cluster_bootstrap": {
+            "estimate": 0.8421052631578947,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.6666666666666666,
+              1.0
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261030
+          },
+          "accuracy_duplicate_input_cluster_sensitivity": {
+            "estimate": 0.8421052631578947,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.625,
+              1.0
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261062
+          }
+        },
+        "phi3_mini": {
+          "n_scored": 19,
+          "coverage_of_20": 0.95,
+          "accuracy_against_review_gold": 0.8421052631578947,
+          "accuracy_sentence_cluster_bootstrap": {
+            "estimate": 0.8421052631578947,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.65,
+              1.0
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261030
+          },
+          "accuracy_duplicate_input_cluster_sensitivity": {
+            "estimate": 0.8421052631578947,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.625,
+              1.0
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261062
+          }
+        },
+        "candidate_pair": {
+          "n_scored": 20,
+          "coverage_of_20": 1.0,
+          "accuracy_against_review_gold": 1.0,
+          "accuracy_sentence_cluster_bootstrap": {
+            "estimate": 1.0,
+            "sentence_cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261030
+          },
+          "accuracy_duplicate_input_cluster_sensitivity": {
+            "estimate": 1.0,
+            "sentence_cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261062
+          }
+        }
+      },
+      "laya_agreement": {
+        "qwen2_5_3b": {
+          "n_both_binary": 17,
+          "coverage_of_20": 0.85,
+          "agreement": 1.0,
+          "agreement_sentence_cluster_bootstrap": {
+            "estimate": 1.0,
+            "sentence_cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261042
+          },
+          "agreement_duplicate_input_cluster_sensitivity": {
+            "estimate": 1.0,
+            "sentence_cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261072
+          }
+        },
+        "phi3_mini": {
+          "n_both_binary": 17,
+          "coverage_of_20": 0.85,
+          "agreement": 0.7647058823529411,
+          "agreement_sentence_cluster_bootstrap": {
+            "estimate": 0.7647058823529411,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.5497115384615388,
+              0.9444444444444444
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261042
+          },
+          "agreement_duplicate_input_cluster_sensitivity": {
+            "estimate": 0.7647058823529411,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.3333333333333333,
+              1.0
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261072
+          }
+        },
+        "candidate_pair": {
+          "n_both_binary": 17,
+          "coverage_of_20": 0.85,
+          "agreement": 0.8823529411764706,
+          "agreement_sentence_cluster_bootstrap": {
+            "estimate": 0.8823529411764706,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.7058823529411765,
+              1.0
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261042
+          },
+          "agreement_duplicate_input_cluster_sensitivity": {
+            "estimate": 0.8823529411764706,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.6666666666666666,
+              1.0
+            ],
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261072
+          }
+        }
+      },
+      "mean_laya_reported_confidence": 0.441075,
+      "disagreements": [
+        {
+          "id": "33085939#758010#0|service",
+          "category": "service",
+          "gold": 0,
+          "laya_label": "mixed",
+          "laya_probabilities": {
+            "mixed": 0.3458,
+            "positive": 0.1025,
+            "negative": 0.2346,
+            "unclear": 0.3171
+          },
+          "qwen_label": null,
+          "phi_label": null,
+          "candidate_pair_prediction": 0
+        },
+        {
+          "id": "35698351#821341#0|price",
+          "category": "price",
+          "gold": 1,
+          "laya_label": "positive",
+          "laya_probabilities": {
+            "mixed": 0.2904,
+            "positive": 0.3564,
+            "negative": 0.1964,
+            "unclear": 0.1568
+          },
+          "qwen_label": 1,
+          "phi_label": 0,
+          "candidate_pair_prediction": 1
+        },
+        {
+          "id": "33069536#707145#3|price",
+          "category": "price",
+          "gold": 1,
+          "laya_label": "positive",
+          "laya_probabilities": {
+            "mixed": 0.2904,
+            "positive": 0.3564,
+            "negative": 0.1964,
+            "unclear": 0.1568
+          },
+          "qwen_label": 1,
+          "phi_label": 0,
+          "candidate_pair_prediction": 1
+        },
+        {
+          "id": "11351633#565247#3 |price",
+          "category": "price",
+          "gold": 0,
+          "laya_label": "positive",
+          "laya_probabilities": {
+            "mixed": 0.2902,
+            "positive": 0.3566,
+            "negative": 0.1961,
+            "unclear": 0.1571
+          },
+          "qwen_label": 1,
+          "phi_label": 0,
+          "candidate_pair_prediction": 0
+        },
+        {
+          "id": "11351762#644011#3|price",
+          "category": "price",
+          "gold": 1,
+          "laya_label": "mixed",
+          "laya_probabilities": {
+            "negative": 0.2044,
+            "unclear": 0.1985,
+            "mixed": 0.4278,
+            "positive": 0.1694
+          },
+          "qwen_label": 1,
+          "phi_label": 0,
+          "candidate_pair_prediction": 1
+        },
+        {
+          "id": "11359717#1138929#5|price",
+          "category": "price",
+          "gold": 0,
+          "laya_label": "mixed",
+          "laya_probabilities": {
+            "unclear": 0.1879,
+            "mixed": 0.3613,
+            "positive": 0.2982,
+            "negative": 0.1525
+          },
+          "qwen_label": 1,
+          "phi_label": 0,
+          "candidate_pair_prediction": 0
+        },
+        {
+          "id": "32894669#1075584#0|price",
+          "category": "price",
+          "gold": 0,
+          "laya_label": "positive",
+          "laya_probabilities": {
+            "positive": 0.3864,
+            "negative": 0.1572,
+            "unclear": 0.164,
+            "mixed": 0.2925
+          },
+          "qwen_label": 1,
+          "phi_label": 0,
+          "candidate_pair_prediction": 0
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Laya is an automated decision engine, not a human reference annotator.",
+    "Review-level gold is only a proxy for meaning of generated answers.",
+    "The 20-item generated-answer sample is stratified; intervals are descriptive.",
+    "Model-card calibration results do not validate confidence on aspect sentiment.",
+    "Post-hoc inspection found some targets repeat identical aspect-answer inputs; the duplicate-input cluster sensitivity is exploratory."
+  ]
+}

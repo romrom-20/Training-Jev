@@ -1,0 +1,3963 @@
+[
+  {
+    "phase": "source",
+    "id": "33085939#758010#0|food",
+    "sentence_id": "33085939#758010#0",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "mixed": 0.1575,
+      "positive": 0.1173,
+      "negative": 0.6687,
+      "unclear": 0.0564
+    },
+    "laya_confidence": 0.6687,
+    "laya_choice_entropy_confidence": 0.2975
+  },
+  {
+    "phase": "source",
+    "id": "33085939#758010#0|service",
+    "sentence_id": "33085939#758010#0",
+    "category": "service",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "mixed": 0.1368,
+      "positive": 0.1928,
+      "negative": 0.6151,
+      "unclear": 0.0553
+    },
+    "laya_confidence": 0.6151,
+    "laya_choice_entropy_confidence": 0.2436
+  },
+  {
+    "phase": "source",
+    "id": "11351513#832512#0|food",
+    "sentence_id": "11351513#832512#0",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "mixed": 0.1831,
+      "positive": 0.1529,
+      "negative": 0.6015,
+      "unclear": 0.0625
+    },
+    "laya_confidence": 0.6015,
+    "laya_choice_entropy_confidence": 0.223
+  },
+  {
+    "phase": "source",
+    "id": "11351513#832512#0|service",
+    "sentence_id": "11351513#832512#0",
+    "category": "service",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "mixed": 0.0892,
+      "positive": 0.0893,
+      "negative": 0.7663,
+      "unclear": 0.0552
+    },
+    "laya_confidence": 0.7663,
+    "laya_choice_entropy_confidence": 0.4263
+  },
+  {
+    "phase": "source",
+    "id": "11432316#715219#2|service",
+    "sentence_id": "11432316#715219#2",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.2465,
+      "positive": 0.6298,
+      "negative": 0.0704,
+      "unclear": 0.0533
+    },
+    "laya_confidence": 0.6298,
+    "laya_choice_entropy_confidence": 0.2935
+  },
+  {
+    "phase": "source",
+    "id": "11546184#1465600#0|price",
+    "sentence_id": "11546184#1465600#0",
+    "category": "price",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "mixed": 0.2619,
+      "positive": 0.1294,
+      "negative": 0.5291,
+      "unclear": 0.0795
+    },
+    "laya_confidence": 0.5291,
+    "laya_choice_entropy_confidence": 0.1678
+  },
+  {
+    "phase": "source",
+    "id": "11302355#533813#0|food",
+    "sentence_id": "11302355#533813#0",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.1825,
+      "positive": 0.7237,
+      "negative": 0.05,
+      "unclear": 0.0438
+    },
+    "laya_confidence": 0.7237,
+    "laya_choice_entropy_confidence": 0.4004
+  },
+  {
+    "phase": "source",
+    "id": "11302355#533813#0|service",
+    "sentence_id": "11302355#533813#0",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.232,
+      "positive": 0.6497,
+      "negative": 0.0666,
+      "unclear": 0.0517
+    },
+    "laya_confidence": 0.6497,
+    "laya_choice_entropy_confidence": 0.3128
+  },
+  {
+    "phase": "source",
+    "id": "35698351#821341#0|price",
+    "sentence_id": "35698351#821341#0",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.2758,
+      "positive": 0.5454,
+      "negative": 0.1099,
+      "unclear": 0.069
+    },
+    "laya_confidence": 0.5454,
+    "laya_choice_entropy_confidence": 0.1972
+  },
+  {
+    "phase": "source",
+    "id": "11359656#1716239#1|price",
+    "sentence_id": "11359656#1716239#1",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.2215,
+      "positive": 0.6803,
+      "negative": 0.0512,
+      "unclear": 0.047
+    },
+    "laya_confidence": 0.6803,
+    "laya_choice_entropy_confidence": 0.3566
+  },
+  {
+    "phase": "source",
+    "id": "11488685#420977#1|service",
+    "sentence_id": "11488685#420977#1",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.2483,
+      "positive": 0.5274,
+      "negative": 0.1428,
+      "unclear": 0.0814
+    },
+    "laya_confidence": 0.5274,
+    "laya_choice_entropy_confidence": 0.1593
+  },
+  {
+    "phase": "source",
+    "id": "35393632#1591698#7|price",
+    "sentence_id": "35393632#1591698#7",
+    "category": "price",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "mixed": 0.2076,
+      "positive": 0.1008,
+      "negative": 0.5324,
+      "unclear": 0.1593
+    },
+    "laya_confidence": 0.5324,
+    "laya_choice_entropy_confidence": 0.1446
+  },
+  {
+    "phase": "source",
+    "id": "33069536#707145#3|service",
+    "sentence_id": "33069536#707145#3",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.1249,
+      "positive": 0.7777,
+      "negative": 0.0516,
+      "unclear": 0.0458
+    },
+    "laya_confidence": 0.7777,
+    "laya_choice_entropy_confidence": 0.4593
+  },
+  {
+    "phase": "source",
+    "id": "33069536#707145#3|price",
+    "sentence_id": "33069536#707145#3",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.305,
+      "positive": 0.4182,
+      "negative": 0.1474,
+      "unclear": 0.1294
+    },
+    "laya_confidence": 0.4182,
+    "laya_choice_entropy_confidence": 0.0813
+  },
+  {
+    "phase": "source",
+    "id": "32971013#1044651#2|service",
+    "sentence_id": "32971013#1044651#2",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.192,
+      "positive": 0.7011,
+      "negative": 0.0517,
+      "unclear": 0.0551
+    },
+    "laya_confidence": 0.7011,
+    "laya_choice_entropy_confidence": 0.3661
+  },
+  {
+    "phase": "source",
+    "id": "32894669#1075584#0|food",
+    "sentence_id": "32894669#1075584#0",
+    "category": "food",
+    "gold": 0,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.296,
+      "positive": 0.3829,
+      "negative": 0.2536,
+      "unclear": 0.0674
+    },
+    "laya_confidence": 0.3829,
+    "laya_choice_entropy_confidence": 0.0928
+  },
+  {
+    "phase": "source",
+    "id": "11351819#985076#1|service",
+    "sentence_id": "11351819#985076#1",
+    "category": "service",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "mixed": 0.0507,
+      "positive": 0.0299,
+      "negative": 0.8777,
+      "unclear": 0.0417
+    },
+    "laya_confidence": 0.8777,
+    "laya_choice_entropy_confidence": 0.637
+  },
+  {
+    "phase": "source",
+    "id": "11558693#1436895#9|food",
+    "sentence_id": "11558693#1436895#9",
+    "category": "food",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "mixed": 0.1272,
+      "positive": 0.0589,
+      "negative": 0.7472,
+      "unclear": 0.0668
+    },
+    "laya_confidence": 0.7472,
+    "laya_choice_entropy_confidence": 0.4031
+  },
+  {
+    "phase": "source",
+    "id": "11350390#802808#2|price",
+    "sentence_id": "11350390#802808#2",
+    "category": "price",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "mixed": 0.0672,
+      "positive": 0.0361,
+      "negative": 0.8337,
+      "unclear": 0.063
+    },
+    "laya_confidence": 0.8337,
+    "laya_choice_entropy_confidence": 0.5477
+  },
+  {
+    "phase": "source",
+    "id": "11350390#802808#2|food",
+    "sentence_id": "11350390#802808#2",
+    "category": "food",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "mixed": 0.0565,
+      "positive": 0.0311,
+      "negative": 0.8646,
+      "unclear": 0.0478
+    },
+    "laya_confidence": 0.8646,
+    "laya_choice_entropy_confidence": 0.6094
+  },
+  {
+    "phase": "source",
+    "id": "33068635#1533725#2|food",
+    "sentence_id": "33068635#1533725#2",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.2601,
+      "positive": 0.6395,
+      "negative": 0.0603,
+      "unclear": 0.0402
+    },
+    "laya_confidence": 0.6395,
+    "laya_choice_entropy_confidence": 0.3258
+  },
+  {
+    "phase": "source",
+    "id": "33068635#1533725#2|service",
+    "sentence_id": "33068635#1533725#2",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.2415,
+      "positive": 0.6519,
+      "negative": 0.0639,
+      "unclear": 0.0426
+    },
+    "laya_confidence": 0.6519,
+    "laya_choice_entropy_confidence": 0.3274
+  },
+  {
+    "phase": "source",
+    "id": "35084984#412657#2|food",
+    "sentence_id": "35084984#412657#2",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.1643,
+      "positive": 0.7487,
+      "negative": 0.041,
+      "unclear": 0.046
+    },
+    "laya_confidence": 0.7487,
+    "laya_choice_entropy_confidence": 0.433
+  },
+  {
+    "phase": "source",
+    "id": "11548230#560890#2|food",
+    "sentence_id": "11548230#560890#2",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.2381,
+      "positive": 0.6214,
+      "negative": 0.079,
+      "unclear": 0.0615
+    },
+    "laya_confidence": 0.6214,
+    "laya_choice_entropy_confidence": 0.2718
+  },
+  {
+    "phase": "source",
+    "id": "35700989#574718#1|service",
+    "sentence_id": "35700989#574718#1",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.2066,
+      "positive": 0.7075,
+      "negative": 0.0519,
+      "unclear": 0.034
+    },
+    "laya_confidence": 0.7075,
+    "laya_choice_entropy_confidence": 0.3947
+  },
+  {
+    "phase": "source",
+    "id": "35700989#574718#1|food",
+    "sentence_id": "35700989#574718#1",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.2855,
+      "positive": 0.5191,
+      "negative": 0.1367,
+      "unclear": 0.0587
+    },
+    "laya_confidence": 0.5191,
+    "laya_choice_entropy_confidence": 0.1801
+  },
+  {
+    "phase": "source",
+    "id": "11359618#788741#2|service",
+    "sentence_id": "11359618#788741#2",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.1357,
+      "positive": 0.7995,
+      "negative": 0.0349,
+      "unclear": 0.0299
+    },
+    "laya_confidence": 0.7995,
+    "laya_choice_entropy_confidence": 0.5153
+  },
+  {
+    "phase": "source",
+    "id": "11359618#788741#2|price",
+    "sentence_id": "11359618#788741#2",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.2748,
+      "positive": 0.5184,
+      "negative": 0.1322,
+      "unclear": 0.0745
+    },
+    "laya_confidence": 0.5184,
+    "laya_choice_entropy_confidence": 0.1657
+  },
+  {
+    "phase": "source",
+    "id": "32894483#1088884#0|price",
+    "sentence_id": "32894483#1088884#0",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "mixed",
+    "laya_probabilities": {
+      "mixed": 0.3783,
+      "positive": 0.3728,
+      "negative": 0.1676,
+      "unclear": 0.0813
+    },
+    "laya_confidence": 0.3783,
+    "laya_choice_entropy_confidence": 0.1063
+  },
+  {
+    "phase": "source",
+    "id": "32944674#542988#0|food",
+    "sentence_id": "32944674#542988#0",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.1925,
+      "positive": 0.7215,
+      "negative": 0.0486,
+      "unclear": 0.0373
+    },
+    "laya_confidence": 0.7215,
+    "laya_choice_entropy_confidence": 0.4067
+  },
+  {
+    "phase": "source",
+    "id": "32896492#738746#0|food",
+    "sentence_id": "32896492#738746#0",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.1512,
+      "positive": 0.7659,
+      "negative": 0.0428,
+      "unclear": 0.0401
+    },
+    "laya_confidence": 0.7659,
+    "laya_choice_entropy_confidence": 0.4562
+  },
+  {
+    "phase": "source",
+    "id": "32896492#738746#0|price",
+    "sentence_id": "32896492#738746#0",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.1531,
+      "positive": 0.7472,
+      "negative": 0.0572,
+      "unclear": 0.0425
+    },
+    "laya_confidence": 0.7472,
+    "laya_choice_entropy_confidence": 0.4208
+  },
+  {
+    "phase": "source",
+    "id": "13383936#420974#1|food",
+    "sentence_id": "13383936#420974#1",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.3468,
+      "positive": 0.5255,
+      "negative": 0.0668,
+      "unclear": 0.0608
+    },
+    "laya_confidence": 0.5255,
+    "laya_choice_entropy_confidence": 0.2379
+  },
+  {
+    "phase": "source",
+    "id": "35709451#1061726#4|food",
+    "sentence_id": "35709451#1061726#4",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.3253,
+      "positive": 0.4879,
+      "negative": 0.1053,
+      "unclear": 0.0815
+    },
+    "laya_confidence": 0.4879,
+    "laya_choice_entropy_confidence": 0.1655
+  },
+  {
+    "phase": "source",
+    "id": "33069536#707145#4|service",
+    "sentence_id": "33069536#707145#4",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.155,
+      "positive": 0.791,
+      "negative": 0.0243,
+      "unclear": 0.0298
+    },
+    "laya_confidence": 0.791,
+    "laya_choice_entropy_confidence": 0.5172
+  },
+  {
+    "phase": "source",
+    "id": "32935729#785247#11|food",
+    "sentence_id": "32935729#785247#11",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.1267,
+      "positive": 0.721,
+      "negative": 0.0906,
+      "unclear": 0.0618
+    },
+    "laya_confidence": 0.721,
+    "laya_choice_entropy_confidence": 0.3601
+  },
+  {
+    "phase": "source",
+    "id": "11359613#884374#6|service",
+    "sentence_id": "11359613#884374#6",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.3041,
+      "positive": 0.5562,
+      "negative": 0.0827,
+      "unclear": 0.057
+    },
+    "laya_confidence": 0.5562,
+    "laya_choice_entropy_confidence": 0.237
+  },
+  {
+    "phase": "source",
+    "id": "11351664#1238806#5|price",
+    "sentence_id": "11351664#1238806#5",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.352,
+      "positive": 0.5125,
+      "negative": 0.0821,
+      "unclear": 0.0534
+    },
+    "laya_confidence": 0.5125,
+    "laya_choice_entropy_confidence": 0.2269
+  },
+  {
+    "phase": "source",
+    "id": "32893040#1716582#1|food",
+    "sentence_id": "32893040#1716582#1",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.122,
+      "positive": 0.8132,
+      "negative": 0.0348,
+      "unclear": 0.03
+    },
+    "laya_confidence": 0.8132,
+    "laya_choice_entropy_confidence": 0.5333
+  },
+  {
+    "phase": "source",
+    "id": "32893040#1716582#1|price",
+    "sentence_id": "32893040#1716582#1",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "mixed",
+    "laya_probabilities": {
+      "mixed": 0.3309,
+      "positive": 0.2761,
+      "negative": 0.2259,
+      "unclear": 0.1671
+    },
+    "laya_confidence": 0.3309,
+    "laya_choice_entropy_confidence": 0.0216
+  },
+  {
+    "phase": "source",
+    "id": "11351814#1650882#5|food",
+    "sentence_id": "11351814#1650882#5",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "mixed",
+    "laya_probabilities": {
+      "mixed": 0.37,
+      "positive": 0.3582,
+      "negative": 0.1669,
+      "unclear": 0.1049
+    },
+    "laya_confidence": 0.37,
+    "laya_choice_entropy_confidence": 0.0832
+  },
+  {
+    "phase": "source",
+    "id": "12036269#580745#6|price",
+    "sentence_id": "12036269#580745#6",
+    "category": "price",
+    "gold": 0,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.3199,
+      "positive": 0.352,
+      "negative": 0.2332,
+      "unclear": 0.0948
+    },
+    "laya_confidence": 0.352,
+    "laya_choice_entropy_confidence": 0.0658
+  },
+  {
+    "phase": "source",
+    "id": "12036269#580745#6|food",
+    "sentence_id": "12036269#580745#6",
+    "category": "food",
+    "gold": 0,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.2214,
+      "positive": 0.4774,
+      "negative": 0.1997,
+      "unclear": 0.1015
+    },
+    "laya_confidence": 0.4774,
+    "laya_choice_entropy_confidence": 0.105
+  },
+  {
+    "phase": "source",
+    "id": "35693216#1233439#1|service",
+    "sentence_id": "35693216#1233439#1",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "mixed": 0.1906,
+      "positive": 0.1666,
+      "negative": 0.5212,
+      "unclear": 0.1216
+    },
+    "laya_confidence": 0.5212,
+    "laya_choice_entropy_confidence": 0.1269
+  },
+  {
+    "phase": "source",
+    "id": "11538980#453602#1|food",
+    "sentence_id": "11538980#453602#1",
+    "category": "food",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "mixed": 0.1145,
+      "positive": 0.0697,
+      "negative": 0.7438,
+      "unclear": 0.072
+    },
+    "laya_confidence": 0.7438,
+    "laya_choice_entropy_confidence": 0.3916
+  },
+  {
+    "phase": "source",
+    "id": "32899414#512291#3|price",
+    "sentence_id": "32899414#512291#3",
+    "category": "price",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "mixed": 0.1992,
+      "positive": 0.081,
+      "negative": 0.4751,
+      "unclear": 0.2447
+    },
+    "laya_confidence": 0.4751,
+    "laya_choice_entropy_confidence": 0.1177
+  },
+  {
+    "phase": "source",
+    "id": "35709337#1579632#2|food",
+    "sentence_id": "35709337#1579632#2",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.2393,
+      "positive": 0.6162,
+      "negative": 0.0927,
+      "unclear": 0.0518
+    },
+    "laya_confidence": 0.6162,
+    "laya_choice_entropy_confidence": 0.2684
+  },
+  {
+    "phase": "source",
+    "id": "15094232#1295193#0|food",
+    "sentence_id": "15094232#1295193#0",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.2423,
+      "positive": 0.646,
+      "negative": 0.0599,
+      "unclear": 0.0519
+    },
+    "laya_confidence": 0.646,
+    "laya_choice_entropy_confidence": 0.3163
+  },
+  {
+    "phase": "source",
+    "id": "15094232#1295193#0|service",
+    "sentence_id": "15094232#1295193#0",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.1848,
+      "positive": 0.7245,
+      "negative": 0.048,
+      "unclear": 0.0427
+    },
+    "laya_confidence": 0.7245,
+    "laya_choice_entropy_confidence": 0.4042
+  },
+  {
+    "phase": "source",
+    "id": "11570675#1355721#1|service",
+    "sentence_id": "11570675#1355721#1",
+    "category": "service",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "mixed": 0.0495,
+      "positive": 0.0231,
+      "negative": 0.9004,
+      "unclear": 0.027
+    },
+    "laya_confidence": 0.9004,
+    "laya_choice_entropy_confidence": 0.6914
+  },
+  {
+    "phase": "source",
+    "id": "35703223#626682#0|food",
+    "sentence_id": "35703223#626682#0",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.2072,
+      "positive": 0.6239,
+      "negative": 0.0881,
+      "unclear": 0.0808
+    },
+    "laya_confidence": 0.6239,
+    "laya_choice_entropy_confidence": 0.2514
+  },
+  {
+    "phase": "source",
+    "id": "35703223#626682#1|food",
+    "sentence_id": "35703223#626682#1",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.2749,
+      "positive": 0.5784,
+      "negative": 0.0877,
+      "unclear": 0.0589
+    },
+    "laya_confidence": 0.5784,
+    "laya_choice_entropy_confidence": 0.2411
+  },
+  {
+    "phase": "source",
+    "id": "11351633#565247#3 |price",
+    "sentence_id": "11351633#565247#3 ",
+    "category": "price",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "mixed": 0.0592,
+      "positive": 0.0646,
+      "negative": 0.8052,
+      "unclear": 0.071
+    },
+    "laya_confidence": 0.8052,
+    "laya_choice_entropy_confidence": 0.4903
+  },
+  {
+    "phase": "source",
+    "id": "11351633#565247#3 |food",
+    "sentence_id": "11351633#565247#3 ",
+    "category": "food",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "mixed": 0.0549,
+      "positive": 0.0693,
+      "negative": 0.8118,
+      "unclear": 0.064
+    },
+    "laya_confidence": 0.8118,
+    "laya_choice_entropy_confidence": 0.5027
+  },
+  {
+    "phase": "source",
+    "id": "35701421#583735#2|service",
+    "sentence_id": "35701421#583735#2",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.1941,
+      "positive": 0.697,
+      "negative": 0.0592,
+      "unclear": 0.0496
+    },
+    "laya_confidence": 0.697,
+    "laya_choice_entropy_confidence": 0.3608
+  },
+  {
+    "phase": "source",
+    "id": "32950007#1320096#2|service",
+    "sentence_id": "32950007#1320096#2",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.2863,
+      "positive": 0.5239,
+      "negative": 0.1324,
+      "unclear": 0.0574
+    },
+    "laya_confidence": 0.5239,
+    "laya_choice_entropy_confidence": 0.186
+  },
+  {
+    "phase": "source",
+    "id": "35816071#637243#2|price",
+    "sentence_id": "35816071#637243#2",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.2539,
+      "positive": 0.5793,
+      "negative": 0.1062,
+      "unclear": 0.0605
+    },
+    "laya_confidence": 0.5793,
+    "laya_choice_entropy_confidence": 0.2265
+  },
+  {
+    "phase": "source",
+    "id": "11349845#1188496#2|food",
+    "sentence_id": "11349845#1188496#2",
+    "category": "food",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "mixed": 0.094,
+      "positive": 0.0696,
+      "negative": 0.7423,
+      "unclear": 0.0941
+    },
+    "laya_confidence": 0.7423,
+    "laya_choice_entropy_confidence": 0.3859
+  },
+  {
+    "phase": "source",
+    "id": "32464595#574909#1|food",
+    "sentence_id": "32464595#574909#1",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "mixed": 0.2052,
+      "positive": 0.6762,
+      "negative": 0.0667,
+      "unclear": 0.052
+    },
+    "laya_confidence": 0.6762,
+    "laya_choice_entropy_confidence": 0.3336
+  },
+  {
+    "phase": "source",
+    "id": "11313439#692431#0|food",
+    "sentence_id": "11313439#692431#0",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0317,
+      "unclear": 0.0392,
+      "mixed": 0.1662,
+      "positive": 0.7629
+    },
+    "laya_confidence": 0.7629,
+    "laya_choice_entropy_confidence": 0.4655
+  },
+  {
+    "phase": "source",
+    "id": "11313439#692431#0|price",
+    "sentence_id": "11313439#692431#0",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.1564,
+      "unclear": 0.0959,
+      "mixed": 0.2611,
+      "positive": 0.4866
+    },
+    "laya_confidence": 0.4866,
+    "laya_choice_entropy_confidence": 0.1228
+  },
+  {
+    "phase": "source",
+    "id": "32406302#615620#2|food",
+    "sentence_id": "32406302#615620#2",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0513,
+      "unclear": 0.0675,
+      "mixed": 0.1687,
+      "positive": 0.7125
+    },
+    "laya_confidence": 0.7125,
+    "laya_choice_entropy_confidence": 0.368
+  },
+  {
+    "phase": "source",
+    "id": "35698351#821341#0|food",
+    "sentence_id": "35698351#821341#0",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0455,
+      "unclear": 0.0331,
+      "mixed": 0.2168,
+      "positive": 0.7046
+    },
+    "laya_confidence": 0.7046,
+    "laya_choice_entropy_confidence": 0.4002
+  },
+  {
+    "phase": "source",
+    "id": "11464789#378665#0|food",
+    "sentence_id": "11464789#378665#0",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0571,
+      "unclear": 0.0805,
+      "mixed": 0.2728,
+      "positive": 0.5896
+    },
+    "laya_confidence": 0.5896,
+    "laya_choice_entropy_confidence": 0.2555
+  },
+  {
+    "phase": "source",
+    "id": "11464789#378665#0|price",
+    "sentence_id": "11464789#378665#0",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0647,
+      "unclear": 0.1261,
+      "mixed": 0.2793,
+      "positive": 0.5298
+    },
+    "laya_confidence": 0.5298,
+    "laya_choice_entropy_confidence": 0.184
+  },
+  {
+    "phase": "source",
+    "id": "11359797#469087#7|service",
+    "sentence_id": "11359797#469087#7",
+    "category": "service",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "negative": 0.9155,
+      "unclear": 0.0285,
+      "mixed": 0.0353,
+      "positive": 0.0207
+    },
+    "laya_confidence": 0.9155,
+    "laya_choice_entropy_confidence": 0.7255
+  },
+  {
+    "phase": "source",
+    "id": "11602699#875811#1|service",
+    "sentence_id": "11602699#875811#1",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.033,
+      "unclear": 0.0381,
+      "mixed": 0.137,
+      "positive": 0.7919
+    },
+    "laya_confidence": 0.7919,
+    "laya_choice_entropy_confidence": 0.4993
+  },
+  {
+    "phase": "source",
+    "id": "11488685#420977#1|food",
+    "sentence_id": "11488685#420977#1",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "unclear",
+    "laya_probabilities": {
+      "negative": 0.3201,
+      "unclear": 0.4413,
+      "mixed": 0.159,
+      "positive": 0.0796
+    },
+    "laya_confidence": 0.4413,
+    "laya_choice_entropy_confidence": 0.1204
+  },
+  {
+    "phase": "source",
+    "id": "32944693#1193404#1|price",
+    "sentence_id": "32944693#1193404#1",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "mixed",
+    "laya_probabilities": {
+      "negative": 0.0468,
+      "unclear": 0.044,
+      "mixed": 0.6147,
+      "positive": 0.2945
+    },
+    "laya_confidence": 0.6147,
+    "laya_choice_entropy_confidence": 0.322
+  },
+  {
+    "phase": "source",
+    "id": "33069901#1437116#3|food",
+    "sentence_id": "33069901#1437116#3",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.029,
+      "unclear": 0.0297,
+      "mixed": 0.1257,
+      "positive": 0.8157
+    },
+    "laya_confidence": 0.8157,
+    "laya_choice_entropy_confidence": 0.5427
+  },
+  {
+    "phase": "source",
+    "id": "35709141#1107179#1|food",
+    "sentence_id": "35709141#1107179#1",
+    "category": "food",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "negative": 0.8477,
+      "unclear": 0.0695,
+      "mixed": 0.0439,
+      "positive": 0.0389
+    },
+    "laya_confidence": 0.8477,
+    "laya_choice_entropy_confidence": 0.5752
+  },
+  {
+    "phase": "source",
+    "id": "11350496#1560668#3|service",
+    "sentence_id": "11350496#1560668#3",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0361,
+      "unclear": 0.0269,
+      "mixed": 0.0905,
+      "positive": 0.8465
+    },
+    "laya_confidence": 0.8465,
+    "laya_choice_entropy_confidence": 0.5848
+  },
+  {
+    "phase": "source",
+    "id": "11350496#1560668#3|food",
+    "sentence_id": "11350496#1560668#3",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0388,
+      "unclear": 0.0346,
+      "mixed": 0.1255,
+      "positive": 0.801
+    },
+    "laya_confidence": 0.801,
+    "laya_choice_entropy_confidence": 0.5089
+  },
+  {
+    "phase": "source",
+    "id": "36072604#1106889#2|service",
+    "sentence_id": "36072604#1106889#2",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0947,
+      "unclear": 0.0719,
+      "mixed": 0.3979,
+      "positive": 0.4356
+    },
+    "laya_confidence": 0.4356,
+    "laya_choice_entropy_confidence": 0.1769
+  },
+  {
+    "phase": "source",
+    "id": "36072604#1106889#2|food",
+    "sentence_id": "36072604#1106889#2",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "mixed",
+    "laya_probabilities": {
+      "negative": 0.1431,
+      "unclear": 0.1284,
+      "mixed": 0.4536,
+      "positive": 0.2749
+    },
+    "laya_confidence": 0.4536,
+    "laya_choice_entropy_confidence": 0.0944
+  },
+  {
+    "phase": "source",
+    "id": "11351819#985076#1|food",
+    "sentence_id": "11351819#985076#1",
+    "category": "food",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "negative": 0.9453,
+      "unclear": 0.0264,
+      "mixed": 0.0163,
+      "positive": 0.0119
+    },
+    "laya_confidence": 0.9453,
+    "laya_choice_entropy_confidence": 0.8058
+  },
+  {
+    "phase": "source",
+    "id": "32894963#1707639#1|price",
+    "sentence_id": "32894963#1707639#1",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "mixed",
+    "laya_probabilities": {
+      "negative": 0.113,
+      "unclear": 0.0878,
+      "mixed": 0.4113,
+      "positive": 0.388
+    },
+    "laya_confidence": 0.4113,
+    "laya_choice_entropy_confidence": 0.1397
+  },
+  {
+    "phase": "source",
+    "id": "11548230#560890#2|service",
+    "sentence_id": "11548230#560890#2",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0355,
+      "unclear": 0.0298,
+      "mixed": 0.1429,
+      "positive": 0.7918
+    },
+    "laya_confidence": 0.7918,
+    "laya_choice_entropy_confidence": 0.505
+  },
+  {
+    "phase": "source",
+    "id": "11359618#788741#2|food",
+    "sentence_id": "11359618#788741#2",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0839,
+      "unclear": 0.1159,
+      "mixed": 0.2459,
+      "positive": 0.5543
+    },
+    "laya_confidence": 0.5543,
+    "laya_choice_entropy_confidence": 0.1851
+  },
+  {
+    "phase": "source",
+    "id": "35759841#1360876#1|price",
+    "sentence_id": "35759841#1360876#1",
+    "category": "price",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "negative": 0.7359,
+      "unclear": 0.098,
+      "mixed": 0.1175,
+      "positive": 0.0486
+    },
+    "laya_confidence": 0.7359,
+    "laya_choice_entropy_confidence": 0.3855
+  },
+  {
+    "phase": "source",
+    "id": "32892297#645108#1|price",
+    "sentence_id": "32892297#645108#1",
+    "category": "price",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "negative": 0.4605,
+      "unclear": 0.0878,
+      "mixed": 0.3863,
+      "positive": 0.0654
+    },
+    "laya_confidence": 0.4605,
+    "laya_choice_entropy_confidence": 0.1947
+  },
+  {
+    "phase": "source",
+    "id": "32405935#675215#1|food",
+    "sentence_id": "32405935#675215#1",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0665,
+      "unclear": 0.0525,
+      "mixed": 0.2161,
+      "positive": 0.6649
+    },
+    "laya_confidence": 0.6649,
+    "laya_choice_entropy_confidence": 0.3237
+  },
+  {
+    "phase": "source",
+    "id": "32405935#675215#1|price",
+    "sentence_id": "32405935#675215#1",
+    "category": "price",
+    "gold": 0,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.126,
+      "unclear": 0.097,
+      "mixed": 0.2294,
+      "positive": 0.5476
+    },
+    "laya_confidence": 0.5476,
+    "laya_choice_entropy_confidence": 0.1669
+  },
+  {
+    "phase": "source",
+    "id": "11461396#699654#0|food",
+    "sentence_id": "11461396#699654#0",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0278,
+      "unclear": 0.0255,
+      "mixed": 0.0944,
+      "positive": 0.8524
+    },
+    "laya_confidence": 0.8524,
+    "laya_choice_entropy_confidence": 0.6019
+  },
+  {
+    "phase": "source",
+    "id": "32485393#1022496#1|food",
+    "sentence_id": "32485393#1022496#1",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0569,
+      "unclear": 0.0788,
+      "mixed": 0.2357,
+      "positive": 0.6286
+    },
+    "laya_confidence": 0.6286,
+    "laya_choice_entropy_confidence": 0.2817
+  },
+  {
+    "phase": "source",
+    "id": "32485393#1022496#1|service",
+    "sentence_id": "32485393#1022496#1",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0695,
+      "unclear": 0.0653,
+      "mixed": 0.2337,
+      "positive": 0.6315
+    },
+    "laya_confidence": 0.6315,
+    "laya_choice_entropy_confidence": 0.2833
+  },
+  {
+    "phase": "source",
+    "id": "35196520#758440#0|food",
+    "sentence_id": "35196520#758440#0",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0333,
+      "unclear": 0.0334,
+      "mixed": 0.1623,
+      "positive": 0.7709
+    },
+    "laya_confidence": 0.7709,
+    "laya_choice_entropy_confidence": 0.4787
+  },
+  {
+    "phase": "source",
+    "id": "15094232#1295193#3|food",
+    "sentence_id": "15094232#1295193#3",
+    "category": "food",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "negative": 0.7391,
+      "unclear": 0.1,
+      "mixed": 0.1122,
+      "positive": 0.0488
+    },
+    "laya_confidence": 0.7391,
+    "laya_choice_entropy_confidence": 0.3894
+  },
+  {
+    "phase": "source",
+    "id": "35709451#1061726#4|price",
+    "sentence_id": "35709451#1061726#4",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.253,
+      "unclear": 0.2322,
+      "mixed": 0.2261,
+      "positive": 0.2888
+    },
+    "laya_confidence": 0.2888,
+    "laya_choice_entropy_confidence": 0.0034
+  },
+  {
+    "phase": "source",
+    "id": "35709451#1061726#4|service",
+    "sentence_id": "35709451#1061726#4",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.1096,
+      "unclear": 0.1078,
+      "mixed": 0.3783,
+      "positive": 0.4043
+    },
+    "laya_confidence": 0.4043,
+    "laya_choice_entropy_confidence": 0.1226
+  },
+  {
+    "phase": "source",
+    "id": "33070309#423221#0|service",
+    "sentence_id": "33070309#423221#0",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0569,
+      "unclear": 0.0514,
+      "mixed": 0.2184,
+      "positive": 0.6733
+    },
+    "laya_confidence": 0.6733,
+    "laya_choice_entropy_confidence": 0.3405
+  },
+  {
+    "phase": "source",
+    "id": "11351664#1238806#5|food",
+    "sentence_id": "11351664#1238806#5",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0559,
+      "unclear": 0.042,
+      "mixed": 0.3182,
+      "positive": 0.5839
+    },
+    "laya_confidence": 0.5839,
+    "laya_choice_entropy_confidence": 0.2982
+  },
+  {
+    "phase": "source",
+    "id": "32893040#1716582#1|service",
+    "sentence_id": "32893040#1716582#1",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0191,
+      "unclear": 0.0208,
+      "mixed": 0.1026,
+      "positive": 0.8575
+    },
+    "laya_confidence": 0.8575,
+    "laya_choice_entropy_confidence": 0.6238
+  },
+  {
+    "phase": "source",
+    "id": "11639261#426600#0|food",
+    "sentence_id": "11639261#426600#0",
+    "category": "food",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "negative": 0.3641,
+      "unclear": 0.1831,
+      "mixed": 0.2313,
+      "positive": 0.2215
+    },
+    "laya_confidence": 0.3641,
+    "laya_choice_entropy_confidence": 0.0253
+  },
+  {
+    "phase": "source",
+    "id": "11351762#644011#3|price",
+    "sentence_id": "11351762#644011#3",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "mixed",
+    "laya_probabilities": {
+      "negative": 0.2059,
+      "unclear": 0.2117,
+      "mixed": 0.3432,
+      "positive": 0.2392
+    },
+    "laya_confidence": 0.3432,
+    "laya_choice_entropy_confidence": 0.0166
+  },
+  {
+    "phase": "source",
+    "id": "36244423#1058258#1|service",
+    "sentence_id": "36244423#1058258#1",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.1011,
+      "unclear": 0.0918,
+      "mixed": 0.2696,
+      "positive": 0.5375
+    },
+    "laya_confidence": 0.5375,
+    "laya_choice_entropy_confidence": 0.1791
+  },
+  {
+    "phase": "source",
+    "id": "35693216#1233439#1|price",
+    "sentence_id": "35693216#1233439#1",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "negative": 0.6085,
+      "unclear": 0.2138,
+      "mixed": 0.1231,
+      "positive": 0.0546
+    },
+    "laya_confidence": 0.6085,
+    "laya_choice_entropy_confidence": 0.2435
+  },
+  {
+    "phase": "source",
+    "id": "32893040#1716582#4|food",
+    "sentence_id": "32893040#1716582#4",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0243,
+      "unclear": 0.0252,
+      "mixed": 0.1555,
+      "positive": 0.795
+    },
+    "laya_confidence": 0.795,
+    "laya_choice_entropy_confidence": 0.5276
+  },
+  {
+    "phase": "source",
+    "id": "35886114#1249751#0|price",
+    "sentence_id": "35886114#1249751#0",
+    "category": "price",
+    "gold": 0,
+    "model": null,
+    "laya_label": "unclear",
+    "laya_probabilities": {
+      "negative": 0.2017,
+      "unclear": 0.4861,
+      "mixed": 0.238,
+      "positive": 0.0742
+    },
+    "laya_confidence": 0.4861,
+    "laya_choice_entropy_confidence": 0.1285
+  },
+  {
+    "phase": "source",
+    "id": "32867472#663531#2|price",
+    "sentence_id": "32867472#663531#2",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0613,
+      "unclear": 0.0548,
+      "mixed": 0.3262,
+      "positive": 0.5577
+    },
+    "laya_confidence": 0.5577,
+    "laya_choice_entropy_confidence": 0.2632
+  },
+  {
+    "phase": "source",
+    "id": "35709337#1579632#2|service",
+    "sentence_id": "35709337#1579632#2",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0441,
+      "unclear": 0.035,
+      "mixed": 0.2839,
+      "positive": 0.637
+    },
+    "laya_confidence": 0.637,
+    "laya_choice_entropy_confidence": 0.351
+  },
+  {
+    "phase": "source",
+    "id": "11417054#1062693#1|food",
+    "sentence_id": "11417054#1062693#1",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0456,
+      "unclear": 0.0512,
+      "mixed": 0.1448,
+      "positive": 0.7584
+    },
+    "laya_confidence": 0.7584,
+    "laya_choice_entropy_confidence": 0.4356
+  },
+  {
+    "phase": "source",
+    "id": "11359717#1138929#5|food",
+    "sentence_id": "11359717#1138929#5",
+    "category": "food",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "negative": 0.9197,
+      "unclear": 0.0401,
+      "mixed": 0.0235,
+      "positive": 0.0167
+    },
+    "laya_confidence": 0.9197,
+    "laya_choice_entropy_confidence": 0.7385
+  },
+  {
+    "phase": "source",
+    "id": "12036269#580745#4|food",
+    "sentence_id": "12036269#580745#4",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.1141,
+      "unclear": 0.0506,
+      "mixed": 0.1238,
+      "positive": 0.7115
+    },
+    "laya_confidence": 0.7115,
+    "laya_choice_entropy_confidence": 0.3511
+  },
+  {
+    "phase": "source",
+    "id": "11349760#848056#1|service",
+    "sentence_id": "11349760#848056#1",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0814,
+      "unclear": 0.0634,
+      "mixed": 0.2953,
+      "positive": 0.5599
+    },
+    "laya_confidence": 0.5599,
+    "laya_choice_entropy_confidence": 0.2325
+  },
+  {
+    "phase": "source",
+    "id": "35704115#614067#0|food",
+    "sentence_id": "35704115#614067#0",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0563,
+      "unclear": 0.0565,
+      "mixed": 0.2011,
+      "positive": 0.6861
+    },
+    "laya_confidence": 0.6861,
+    "laya_choice_entropy_confidence": 0.347
+  },
+  {
+    "phase": "source",
+    "id": "33061498#586991#0|food",
+    "sentence_id": "33061498#586991#0",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0623,
+      "unclear": 0.0449,
+      "mixed": 0.2929,
+      "positive": 0.5999
+    },
+    "laya_confidence": 0.5999,
+    "laya_choice_entropy_confidence": 0.2942
+  },
+  {
+    "phase": "source",
+    "id": "33061498#586991#0|service",
+    "sentence_id": "33061498#586991#0",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.067,
+      "unclear": 0.0357,
+      "mixed": 0.1825,
+      "positive": 0.7147
+    },
+    "laya_confidence": 0.7147,
+    "laya_choice_entropy_confidence": 0.3864
+  },
+  {
+    "phase": "source",
+    "id": "11660480#640405#1|food",
+    "sentence_id": "11660480#640405#1",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0629,
+      "unclear": 0.0451,
+      "mixed": 0.4283,
+      "positive": 0.4637
+    },
+    "laya_confidence": 0.4637,
+    "laya_choice_entropy_confidence": 0.2546
+  },
+  {
+    "phase": "source",
+    "id": "35682567#1590699#1|food",
+    "sentence_id": "35682567#1590699#1",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0706,
+      "unclear": 0.0495,
+      "mixed": 0.2177,
+      "positive": 0.6621
+    },
+    "laya_confidence": 0.6621,
+    "laya_choice_entropy_confidence": 0.3213
+  },
+  {
+    "phase": "source",
+    "id": "35698333#556353#0|food",
+    "sentence_id": "35698333#556353#0",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0384,
+      "unclear": 0.0384,
+      "mixed": 0.2598,
+      "positive": 0.6634
+    },
+    "laya_confidence": 0.6634,
+    "laya_choice_entropy_confidence": 0.3704
+  },
+  {
+    "phase": "source",
+    "id": "11651310#581605#1|food",
+    "sentence_id": "11651310#581605#1",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0497,
+      "unclear": 0.0422,
+      "mixed": 0.172,
+      "positive": 0.7362
+    },
+    "laya_confidence": 0.7362,
+    "laya_choice_entropy_confidence": 0.4151
+  },
+  {
+    "phase": "source",
+    "id": "11351354#412616#1|service",
+    "sentence_id": "11351354#412616#1",
+    "category": "service",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "negative": 0.6212,
+      "unclear": 0.1156,
+      "mixed": 0.18,
+      "positive": 0.0833
+    },
+    "laya_confidence": 0.6212,
+    "laya_choice_entropy_confidence": 0.2348
+  },
+  {
+    "phase": "source",
+    "id": "11351354#412616#1|food",
+    "sentence_id": "11351354#412616#1",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "negative": 0.7234,
+      "unclear": 0.1028,
+      "mixed": 0.1272,
+      "positive": 0.0465
+    },
+    "laya_confidence": 0.7234,
+    "laya_choice_entropy_confidence": 0.3701
+  },
+  {
+    "phase": "source",
+    "id": "32950007#1320096#2|food",
+    "sentence_id": "32950007#1320096#2",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.065,
+      "unclear": 0.055,
+      "mixed": 0.3926,
+      "positive": 0.4874
+    },
+    "laya_confidence": 0.4874,
+    "laya_choice_entropy_confidence": 0.2392
+  },
+  {
+    "phase": "source",
+    "id": "32464595#574909#1|service",
+    "sentence_id": "32464595#574909#1",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "negative": 0.0646,
+      "unclear": 0.0521,
+      "mixed": 0.247,
+      "positive": 0.6364
+    },
+    "laya_confidence": 0.6364,
+    "laya_choice_entropy_confidence": 0.3047
+  },
+  {
+    "phase": "source",
+    "id": "11350390#802808#3|food",
+    "sentence_id": "11350390#802808#3",
+    "category": "food",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "negative": 0.3547,
+      "unclear": 0.2403,
+      "mixed": 0.2993,
+      "positive": 0.1057
+    },
+    "laya_confidence": 0.3547,
+    "laya_choice_entropy_confidence": 0.0558
+  },
+  {
+    "phase": "source",
+    "id": "32894336#662479#1|food",
+    "sentence_id": "32894336#662479#1",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.0274,
+      "mixed": 0.2036,
+      "positive": 0.7449,
+      "negative": 0.0241
+    },
+    "laya_confidence": 0.7449,
+    "laya_choice_entropy_confidence": 0.4721
+  },
+  {
+    "phase": "source",
+    "id": "11559272#409013#0|service",
+    "sentence_id": "11559272#409013#0",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.0349,
+      "mixed": 0.0974,
+      "positive": 0.8397,
+      "negative": 0.0281
+    },
+    "laya_confidence": 0.8397,
+    "laya_choice_entropy_confidence": 0.5738
+  },
+  {
+    "phase": "source",
+    "id": "11546184#1465600#0|food",
+    "sentence_id": "11546184#1465600#0",
+    "category": "food",
+    "gold": 0,
+    "model": null,
+    "laya_label": "mixed",
+    "laya_probabilities": {
+      "unclear": 0.1203,
+      "mixed": 0.5565,
+      "positive": 0.1451,
+      "negative": 0.1781
+    },
+    "laya_confidence": 0.5565,
+    "laya_choice_entropy_confidence": 0.1572
+  },
+  {
+    "phase": "source",
+    "id": "32406302#615620#2|price",
+    "sentence_id": "32406302#615620#2",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.2097,
+      "mixed": 0.206,
+      "positive": 0.5364,
+      "negative": 0.0478
+    },
+    "laya_confidence": 0.5364,
+    "laya_choice_entropy_confidence": 0.183
+  },
+  {
+    "phase": "source",
+    "id": "11302356#1455624#1|food",
+    "sentence_id": "11302356#1455624#1",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.022,
+      "mixed": 0.1752,
+      "positive": 0.7853,
+      "negative": 0.0176
+    },
+    "laya_confidence": 0.7853,
+    "laya_choice_entropy_confidence": 0.5313
+  },
+  {
+    "phase": "source",
+    "id": "11302356#1455624#1|service",
+    "sentence_id": "11302356#1455624#1",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.0235,
+      "mixed": 0.1435,
+      "positive": 0.8129,
+      "negative": 0.0202
+    },
+    "laya_confidence": 0.8129,
+    "laya_choice_entropy_confidence": 0.5573
+  },
+  {
+    "phase": "source",
+    "id": "11359656#1716239#1|service",
+    "sentence_id": "11359656#1716239#1",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.0247,
+      "mixed": 0.2276,
+      "positive": 0.7237,
+      "negative": 0.024
+    },
+    "laya_confidence": 0.7237,
+    "laya_choice_entropy_confidence": 0.4576
+  },
+  {
+    "phase": "source",
+    "id": "11359797#469087#7|food",
+    "sentence_id": "11359797#469087#7",
+    "category": "food",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "unclear": 0.0997,
+      "mixed": 0.149,
+      "positive": 0.1145,
+      "negative": 0.6369
+    },
+    "laya_confidence": 0.6369,
+    "laya_choice_entropy_confidence": 0.2433
+  },
+  {
+    "phase": "source",
+    "id": "11602699#875811#1|food",
+    "sentence_id": "11602699#875811#1",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.0323,
+      "mixed": 0.1277,
+      "positive": 0.8151,
+      "negative": 0.0249
+    },
+    "laya_confidence": 0.8151,
+    "laya_choice_entropy_confidence": 0.5438
+  },
+  {
+    "phase": "source",
+    "id": "32944693#1193404#1|food",
+    "sentence_id": "32944693#1193404#1",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.0219,
+      "mixed": 0.3496,
+      "positive": 0.6102,
+      "negative": 0.0183
+    },
+    "laya_confidence": 0.6102,
+    "laya_choice_entropy_confidence": 0.4044
+  },
+  {
+    "phase": "source",
+    "id": "35393632#1591698#7|food",
+    "sentence_id": "35393632#1591698#7",
+    "category": "food",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "unclear": 0.1734,
+      "mixed": 0.1123,
+      "positive": 0.1246,
+      "negative": 0.5896
+    },
+    "laya_confidence": 0.5896,
+    "laya_choice_entropy_confidence": 0.1917
+  },
+  {
+    "phase": "source",
+    "id": "32935211#1468239#1|price",
+    "sentence_id": "32935211#1468239#1",
+    "category": "price",
+    "gold": 0,
+    "model": null,
+    "laya_label": "mixed",
+    "laya_probabilities": {
+      "unclear": 0.0441,
+      "mixed": 0.643,
+      "positive": 0.2012,
+      "negative": 0.1117
+    },
+    "laya_confidence": 0.643,
+    "laya_choice_entropy_confidence": 0.2866
+  },
+  {
+    "phase": "source",
+    "id": "33069901#1437116#3|price",
+    "sentence_id": "33069901#1437116#3",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.0373,
+      "mixed": 0.1977,
+      "positive": 0.7263,
+      "negative": 0.0388
+    },
+    "laya_confidence": 0.7263,
+    "laya_choice_entropy_confidence": 0.4219
+  },
+  {
+    "phase": "source",
+    "id": "11359727#487554#2|food",
+    "sentence_id": "11359727#487554#2",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.0663,
+      "mixed": 0.2206,
+      "positive": 0.659,
+      "negative": 0.0541
+    },
+    "laya_confidence": 0.659,
+    "laya_choice_entropy_confidence": 0.3176
+  },
+  {
+    "phase": "source",
+    "id": "32944704#492723#0|food",
+    "sentence_id": "32944704#492723#0",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.0515,
+      "mixed": 0.1716,
+      "positive": 0.7414,
+      "negative": 0.0356
+    },
+    "laya_confidence": 0.7414,
+    "laya_choice_entropy_confidence": 0.426
+  },
+  {
+    "phase": "source",
+    "id": "32944704#492723#0|service",
+    "sentence_id": "32944704#492723#0",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.0395,
+      "mixed": 0.1654,
+      "positive": 0.7603,
+      "negative": 0.0348
+    },
+    "laya_confidence": 0.7603,
+    "laya_choice_entropy_confidence": 0.4586
+  },
+  {
+    "phase": "source",
+    "id": "11359618#788741#3|food",
+    "sentence_id": "11359618#788741#3",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.044,
+      "mixed": 0.2383,
+      "positive": 0.6804,
+      "negative": 0.0373
+    },
+    "laya_confidence": 0.6804,
+    "laya_choice_entropy_confidence": 0.3769
+  },
+  {
+    "phase": "source",
+    "id": "32971013#1044651#2|food",
+    "sentence_id": "32971013#1044651#2",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.0538,
+      "mixed": 0.3459,
+      "positive": 0.558,
+      "negative": 0.0424
+    },
+    "laya_confidence": 0.558,
+    "laya_choice_entropy_confidence": 0.2903
+  },
+  {
+    "phase": "source",
+    "id": "35693136#561234#0|food",
+    "sentence_id": "35693136#561234#0",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.0431,
+      "mixed": 0.1787,
+      "positive": 0.7456,
+      "negative": 0.0326
+    },
+    "laya_confidence": 0.7456,
+    "laya_choice_entropy_confidence": 0.4419
+  },
+  {
+    "phase": "source",
+    "id": "35693136#561234#0|service",
+    "sentence_id": "35693136#561234#0",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.0407,
+      "mixed": 0.1851,
+      "positive": 0.7403,
+      "negative": 0.0339
+    },
+    "laya_confidence": 0.7403,
+    "laya_choice_entropy_confidence": 0.4375
+  },
+  {
+    "phase": "source",
+    "id": "35084984#412657#2|price",
+    "sentence_id": "35084984#412657#2",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "mixed",
+    "laya_probabilities": {
+      "unclear": 0.1444,
+      "mixed": 0.4081,
+      "positive": 0.3628,
+      "negative": 0.0847
+    },
+    "laya_confidence": 0.4081,
+    "laya_choice_entropy_confidence": 0.1185
+  },
+  {
+    "phase": "source",
+    "id": "11546184#1465600#1|food",
+    "sentence_id": "11546184#1465600#1",
+    "category": "food",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "unclear": 0.1354,
+      "mixed": 0.2727,
+      "positive": 0.1191,
+      "negative": 0.4728
+    },
+    "laya_confidence": 0.4728,
+    "laya_choice_entropy_confidence": 0.1108
+  },
+  {
+    "phase": "source",
+    "id": "11546184#1465600#1|price",
+    "sentence_id": "11546184#1465600#1",
+    "category": "price",
+    "gold": 0,
+    "model": null,
+    "laya_label": "unclear",
+    "laya_probabilities": {
+      "unclear": 0.3382,
+      "mixed": 0.2598,
+      "positive": 0.1191,
+      "negative": 0.2829
+    },
+    "laya_confidence": 0.3382,
+    "laya_choice_entropy_confidence": 0.0424
+  },
+  {
+    "phase": "source",
+    "id": "32894483#1088884#0|service",
+    "sentence_id": "32894483#1088884#0",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.0456,
+      "mixed": 0.2066,
+      "positive": 0.7141,
+      "negative": 0.0337
+    },
+    "laya_confidence": 0.7141,
+    "laya_choice_entropy_confidence": 0.4076
+  },
+  {
+    "phase": "source",
+    "id": "33059931#926509#2|price",
+    "sentence_id": "33059931#926509#2",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.0207,
+      "mixed": 0.0962,
+      "positive": 0.8607,
+      "negative": 0.0224
+    },
+    "laya_confidence": 0.8607,
+    "laya_choice_entropy_confidence": 0.6251
+  },
+  {
+    "phase": "source",
+    "id": "33009300#626261#3|food",
+    "sentence_id": "33009300#626261#3",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.052,
+      "mixed": 0.172,
+      "positive": 0.7386,
+      "negative": 0.0373
+    },
+    "laya_confidence": 0.7386,
+    "laya_choice_entropy_confidence": 0.4207
+  },
+  {
+    "phase": "source",
+    "id": "11351453#683961#0|service",
+    "sentence_id": "11351453#683961#0",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "mixed",
+    "laya_probabilities": {
+      "unclear": 0.0376,
+      "mixed": 0.5384,
+      "positive": 0.3817,
+      "negative": 0.0424
+    },
+    "laya_confidence": 0.5384,
+    "laya_choice_entropy_confidence": 0.3088
+  },
+  {
+    "phase": "source",
+    "id": "32892297#645108#1|food",
+    "sentence_id": "32892297#645108#1",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "mixed",
+    "laya_probabilities": {
+      "unclear": 0.0891,
+      "mixed": 0.4952,
+      "positive": 0.2837,
+      "negative": 0.132
+    },
+    "laya_confidence": 0.4952,
+    "laya_choice_entropy_confidence": 0.1429
+  },
+  {
+    "phase": "source",
+    "id": "13383936#420974#1|price",
+    "sentence_id": "13383936#420974#1",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "mixed",
+    "laya_probabilities": {
+      "unclear": 0.26,
+      "mixed": 0.3212,
+      "positive": 0.2471,
+      "negative": 0.1716
+    },
+    "laya_confidence": 0.3212,
+    "laya_choice_entropy_confidence": 0.0168
+  },
+  {
+    "phase": "source",
+    "id": "13383936#420974#1|service",
+    "sentence_id": "13383936#420974#1",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.22,
+      "mixed": 0.2489,
+      "positive": 0.4466,
+      "negative": 0.0846
+    },
+    "laya_confidence": 0.4466,
+    "laya_choice_entropy_confidence": 0.0997
+  },
+  {
+    "phase": "source",
+    "id": "11461396#699654#0|price",
+    "sentence_id": "11461396#699654#0",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.0215,
+      "mixed": 0.1487,
+      "positive": 0.8068,
+      "negative": 0.023
+    },
+    "laya_confidence": 0.8068,
+    "laya_choice_entropy_confidence": 0.5486
+  },
+  {
+    "phase": "source",
+    "id": "11302357#835238#1|food",
+    "sentence_id": "11302357#835238#1",
+    "category": "food",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "unclear": 0.1719,
+      "mixed": 0.2332,
+      "positive": 0.0823,
+      "negative": 0.5126
+    },
+    "laya_confidence": 0.5126,
+    "laya_choice_entropy_confidence": 0.1414
+  },
+  {
+    "phase": "source",
+    "id": "11302357#835238#1|price",
+    "sentence_id": "11302357#835238#1",
+    "category": "price",
+    "gold": 0,
+    "model": null,
+    "laya_label": "mixed",
+    "laya_probabilities": {
+      "unclear": 0.1956,
+      "mixed": 0.4717,
+      "positive": 0.0667,
+      "negative": 0.266
+    },
+    "laya_confidence": 0.4717,
+    "laya_choice_entropy_confidence": 0.1298
+  },
+  {
+    "phase": "source",
+    "id": "33069536#707145#4|food",
+    "sentence_id": "33069536#707145#4",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.036,
+      "mixed": 0.1519,
+      "positive": 0.7851,
+      "negative": 0.0269
+    },
+    "laya_confidence": 0.7851,
+    "laya_choice_entropy_confidence": 0.4999
+  },
+  {
+    "phase": "source",
+    "id": "33070309#423221#0|food",
+    "sentence_id": "33070309#423221#0",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.0427,
+      "mixed": 0.1633,
+      "positive": 0.7622,
+      "negative": 0.0319
+    },
+    "laya_confidence": 0.7622,
+    "laya_choice_entropy_confidence": 0.4609
+  },
+  {
+    "phase": "source",
+    "id": "32936760#1397861#5|service",
+    "sentence_id": "32936760#1397861#5",
+    "category": "service",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "unclear": 0.1852,
+      "mixed": 0.2575,
+      "positive": 0.2683,
+      "negative": 0.289
+    },
+    "laya_confidence": 0.289,
+    "laya_choice_entropy_confidence": 0.0093
+  },
+  {
+    "phase": "source",
+    "id": "36244423#1058258#1|food",
+    "sentence_id": "36244423#1058258#1",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.0533,
+      "mixed": 0.1442,
+      "positive": 0.7629,
+      "negative": 0.0396
+    },
+    "laya_confidence": 0.7629,
+    "laya_choice_entropy_confidence": 0.4447
+  },
+  {
+    "phase": "source",
+    "id": "32889544#0#0|price",
+    "sentence_id": "32889544#0#0",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "mixed",
+    "laya_probabilities": {
+      "unclear": 0.2282,
+      "mixed": 0.3794,
+      "positive": 0.1813,
+      "negative": 0.2111
+    },
+    "laya_confidence": 0.3794,
+    "laya_choice_entropy_confidence": 0.0314
+  },
+  {
+    "phase": "source",
+    "id": "32408649#945413#3|food",
+    "sentence_id": "32408649#945413#3",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.0193,
+      "mixed": 0.1236,
+      "positive": 0.8401,
+      "negative": 0.017
+    },
+    "laya_confidence": 0.8401,
+    "laya_choice_entropy_confidence": 0.603
+  },
+  {
+    "phase": "source",
+    "id": "33106326#864352#1|price",
+    "sentence_id": "33106326#864352#1",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "mixed",
+    "laya_probabilities": {
+      "unclear": 0.0761,
+      "mixed": 0.5142,
+      "positive": 0.3495,
+      "negative": 0.0601
+    },
+    "laya_confidence": 0.5142,
+    "laya_choice_entropy_confidence": 0.2249
+  },
+  {
+    "phase": "source",
+    "id": "11538980#453602#1|service",
+    "sentence_id": "11538980#453602#1",
+    "category": "service",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "unclear": 0.2034,
+      "mixed": 0.0874,
+      "positive": 0.0565,
+      "negative": 0.6527
+    },
+    "laya_confidence": 0.6527,
+    "laya_choice_entropy_confidence": 0.2947
+  },
+  {
+    "phase": "source",
+    "id": "35196527#481646#3|service",
+    "sentence_id": "35196527#481646#3",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.0259,
+      "mixed": 0.1009,
+      "positive": 0.8523,
+      "negative": 0.0208
+    },
+    "laya_confidence": 0.8523,
+    "laya_choice_entropy_confidence": 0.6083
+  },
+  {
+    "phase": "source",
+    "id": "35196527#481646#3|food",
+    "sentence_id": "35196527#481646#3",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.0499,
+      "mixed": 0.2101,
+      "positive": 0.6875,
+      "negative": 0.0525
+    },
+    "laya_confidence": 0.6875,
+    "laya_choice_entropy_confidence": 0.3582
+  },
+  {
+    "phase": "source",
+    "id": "35196527#481646#3|price",
+    "sentence_id": "35196527#481646#3",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.1235,
+      "mixed": 0.3787,
+      "positive": 0.3815,
+      "negative": 0.1163
+    },
+    "laya_confidence": 0.3815,
+    "laya_choice_entropy_confidence": 0.1027
+  },
+  {
+    "phase": "source",
+    "id": "32899414#512291#3|food",
+    "sentence_id": "32899414#512291#3",
+    "category": "food",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "unclear": 0.2322,
+      "mixed": 0.197,
+      "positive": 0.0737,
+      "negative": 0.4972
+    },
+    "laya_confidence": 0.4972,
+    "laya_choice_entropy_confidence": 0.1354
+  },
+  {
+    "phase": "source",
+    "id": "35886114#1249751#0|food",
+    "sentence_id": "35886114#1249751#0",
+    "category": "food",
+    "gold": 0,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.1868,
+      "mixed": 0.2792,
+      "positive": 0.3201,
+      "negative": 0.2138
+    },
+    "laya_confidence": 0.3201,
+    "laya_choice_entropy_confidence": 0.016
+  },
+  {
+    "phase": "source",
+    "id": "11313316#1234433#3|food",
+    "sentence_id": "11313316#1234433#3",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.2007,
+      "mixed": 0.2474,
+      "positive": 0.4239,
+      "negative": 0.128
+    },
+    "laya_confidence": 0.4239,
+    "laya_choice_entropy_confidence": 0.066
+  },
+  {
+    "phase": "source",
+    "id": "11313316#1234433#3|price",
+    "sentence_id": "11313316#1234433#3",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "mixed",
+    "laya_probabilities": {
+      "unclear": 0.3047,
+      "mixed": 0.3326,
+      "positive": 0.2158,
+      "negative": 0.1469
+    },
+    "laya_confidence": 0.3326,
+    "laya_choice_entropy_confidence": 0.0327
+  },
+  {
+    "phase": "source",
+    "id": "11359717#1138929#5|price",
+    "sentence_id": "11359717#1138929#5",
+    "category": "price",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "unclear": 0.2341,
+      "mixed": 0.1971,
+      "positive": 0.142,
+      "negative": 0.4267
+    },
+    "laya_confidence": 0.4267,
+    "laya_choice_entropy_confidence": 0.0618
+  },
+  {
+    "phase": "source",
+    "id": "12036269#580745#4|price",
+    "sentence_id": "12036269#580745#4",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.0496,
+      "mixed": 0.1436,
+      "positive": 0.7434,
+      "negative": 0.0633
+    },
+    "laya_confidence": 0.7434,
+    "laya_choice_entropy_confidence": 0.4063
+  },
+  {
+    "phase": "source",
+    "id": "11351682#1496136#0|service",
+    "sentence_id": "11351682#1496136#0",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.0324,
+      "mixed": 0.1786,
+      "positive": 0.7564,
+      "negative": 0.0326
+    },
+    "laya_confidence": 0.7564,
+    "laya_choice_entropy_confidence": 0.4652
+  },
+  {
+    "phase": "source",
+    "id": "11660480#640405#1|service",
+    "sentence_id": "11660480#640405#1",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.0235,
+      "mixed": 0.2715,
+      "positive": 0.6768,
+      "negative": 0.0282
+    },
+    "laya_confidence": 0.6768,
+    "laya_choice_entropy_confidence": 0.4179
+  },
+  {
+    "phase": "source",
+    "id": "35682567#1590699#1|service",
+    "sentence_id": "35682567#1590699#1",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.0292,
+      "mixed": 0.1027,
+      "positive": 0.8465,
+      "negative": 0.0215
+    },
+    "laya_confidence": 0.8465,
+    "laya_choice_entropy_confidence": 0.5956
+  },
+  {
+    "phase": "source",
+    "id": "11570675#1355721#1|food",
+    "sentence_id": "11570675#1355721#1",
+    "category": "food",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "unclear": 0.1183,
+      "mixed": 0.1023,
+      "positive": 0.0665,
+      "negative": 0.7129
+    },
+    "laya_confidence": 0.7129,
+    "laya_choice_entropy_confidence": 0.3456
+  },
+  {
+    "phase": "source",
+    "id": "35703223#626682#1|price",
+    "sentence_id": "35703223#626682#1",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.0635,
+      "mixed": 0.3532,
+      "positive": 0.5432,
+      "negative": 0.0401
+    },
+    "laya_confidence": 0.5432,
+    "laya_choice_entropy_confidence": 0.2764
+  },
+  {
+    "phase": "source",
+    "id": "35701421#583735#2|food",
+    "sentence_id": "35701421#583735#2",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "unclear": 0.0459,
+      "mixed": 0.1852,
+      "positive": 0.7104,
+      "negative": 0.0584
+    },
+    "laya_confidence": 0.7104,
+    "laya_choice_entropy_confidence": 0.3777
+  },
+  {
+    "phase": "source",
+    "id": "11349845#1188496#2|service",
+    "sentence_id": "11349845#1188496#2",
+    "category": "service",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "unclear": 0.1045,
+      "mixed": 0.1107,
+      "positive": 0.0819,
+      "negative": 0.7029
+    },
+    "laya_confidence": 0.7029,
+    "laya_choice_entropy_confidence": 0.3274
+  },
+  {
+    "phase": "source",
+    "id": "11313290#1139539#1|food",
+    "sentence_id": "11313290#1139539#1",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "mixed",
+    "laya_probabilities": {
+      "unclear": 0.2335,
+      "mixed": 0.3442,
+      "positive": 0.1998,
+      "negative": 0.2225
+    },
+    "laya_confidence": 0.3442,
+    "laya_choice_entropy_confidence": 0.0169
+  },
+  {
+    "phase": "source",
+    "id": "32894336#662479#1|service",
+    "sentence_id": "32894336#662479#1",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.7716,
+      "negative": 0.039,
+      "unclear": 0.0534,
+      "mixed": 0.136
+    },
+    "laya_confidence": 0.7716,
+    "laya_choice_entropy_confidence": 0.4557
+  },
+  {
+    "phase": "source",
+    "id": "11432316#715219#2|food",
+    "sentence_id": "11432316#715219#2",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.6428,
+      "negative": 0.0793,
+      "unclear": 0.1124,
+      "mixed": 0.1655
+    },
+    "laya_confidence": 0.6428,
+    "laya_choice_entropy_confidence": 0.2581
+  },
+  {
+    "phase": "source",
+    "id": "11559272#409013#0|food",
+    "sentence_id": "11559272#409013#0",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.8705,
+      "negative": 0.0331,
+      "unclear": 0.0478,
+      "mixed": 0.0486
+    },
+    "laya_confidence": 0.8705,
+    "laya_choice_entropy_confidence": 0.6206
+  },
+  {
+    "phase": "source",
+    "id": "33070305#1312437#2|food",
+    "sentence_id": "33070305#1312437#2",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.7086,
+      "negative": 0.07,
+      "unclear": 0.0736,
+      "mixed": 0.1477
+    },
+    "laya_confidence": 0.7086,
+    "laya_choice_entropy_confidence": 0.3473
+  },
+  {
+    "phase": "source",
+    "id": "33070305#1312437#2|price",
+    "sentence_id": "33070305#1312437#2",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.6493,
+      "negative": 0.1315,
+      "unclear": 0.0942,
+      "mixed": 0.125
+    },
+    "laya_confidence": 0.6493,
+    "laya_choice_entropy_confidence": 0.2572
+  },
+  {
+    "phase": "source",
+    "id": "11359656#1716239#1|food",
+    "sentence_id": "11359656#1716239#1",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.7094,
+      "negative": 0.0491,
+      "unclear": 0.0621,
+      "mixed": 0.1793
+    },
+    "laya_confidence": 0.7094,
+    "laya_choice_entropy_confidence": 0.3707
+  },
+  {
+    "phase": "source",
+    "id": "32935211#1468239#1|food",
+    "sentence_id": "32935211#1468239#1",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.433,
+      "negative": 0.0876,
+      "unclear": 0.0948,
+      "mixed": 0.3845
+    },
+    "laya_confidence": 0.433,
+    "laya_choice_entropy_confidence": 0.1584
+  },
+  {
+    "phase": "source",
+    "id": "11359727#487554#2|service",
+    "sentence_id": "11359727#487554#2",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.5718,
+      "negative": 0.1036,
+      "unclear": 0.1255,
+      "mixed": 0.1992
+    },
+    "laya_confidence": 0.5718,
+    "laya_choice_entropy_confidence": 0.1803
+  },
+  {
+    "phase": "source",
+    "id": "35709141#1107179#1|service",
+    "sentence_id": "35709141#1107179#1",
+    "category": "service",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "positive": 0.0647,
+      "negative": 0.8218,
+      "unclear": 0.0613,
+      "mixed": 0.0522
+    },
+    "laya_confidence": 0.8218,
+    "laya_choice_entropy_confidence": 0.5212
+  },
+  {
+    "phase": "source",
+    "id": "11359618#788741#3|service",
+    "sentence_id": "11359618#788741#3",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.7255,
+      "negative": 0.0446,
+      "unclear": 0.0566,
+      "mixed": 0.1734
+    },
+    "laya_confidence": 0.7255,
+    "laya_choice_entropy_confidence": 0.3957
+  },
+  {
+    "phase": "source",
+    "id": "32894669#1075584#0|price",
+    "sentence_id": "32894669#1075584#0",
+    "category": "price",
+    "gold": 0,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.5122,
+      "negative": 0.1627,
+      "unclear": 0.1199,
+      "mixed": 0.2051
+    },
+    "laya_confidence": 0.5122,
+    "laya_choice_entropy_confidence": 0.1218
+  },
+  {
+    "phase": "source",
+    "id": "32894963#1707639#1|food",
+    "sentence_id": "32894963#1707639#1",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.8519,
+      "negative": 0.0492,
+      "unclear": 0.044,
+      "mixed": 0.0549
+    },
+    "laya_confidence": 0.8519,
+    "laya_choice_entropy_confidence": 0.5806
+  },
+  {
+    "phase": "source",
+    "id": "11558693#1436895#9|price",
+    "sentence_id": "11558693#1436895#9",
+    "category": "price",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "positive": 0.1757,
+      "negative": 0.5477,
+      "unclear": 0.1513,
+      "mixed": 0.1253
+    },
+    "laya_confidence": 0.5477,
+    "laya_choice_entropy_confidence": 0.1479
+  },
+  {
+    "phase": "source",
+    "id": "11351561#744321#0|food",
+    "sentence_id": "11351561#744321#0",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "unclear",
+    "laya_probabilities": {
+      "positive": 0.1869,
+      "negative": 0.1542,
+      "unclear": 0.4103,
+      "mixed": 0.2487
+    },
+    "laya_confidence": 0.4103,
+    "laya_choice_entropy_confidence": 0.0527
+  },
+  {
+    "phase": "source",
+    "id": "11351561#744321#0|service",
+    "sentence_id": "11351561#744321#0",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.6603,
+      "negative": 0.0488,
+      "unclear": 0.0828,
+      "mixed": 0.2081
+    },
+    "laya_confidence": 0.6603,
+    "laya_choice_entropy_confidence": 0.3116
+  },
+  {
+    "phase": "source",
+    "id": "32944714#1559783#1|food",
+    "sentence_id": "32944714#1559783#1",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.5609,
+      "negative": 0.0714,
+      "unclear": 0.0556,
+      "mixed": 0.312
+    },
+    "laya_confidence": 0.5609,
+    "laya_choice_entropy_confidence": 0.252
+  },
+  {
+    "phase": "source",
+    "id": "32944714#1559783#1|service",
+    "sentence_id": "32944714#1559783#1",
+    "category": "service",
+    "gold": 0,
+    "model": null,
+    "laya_label": "mixed",
+    "laya_probabilities": {
+      "positive": 0.2786,
+      "negative": 0.1723,
+      "unclear": 0.0847,
+      "mixed": 0.4644
+    },
+    "laya_confidence": 0.4644,
+    "laya_choice_entropy_confidence": 0.1168
+  },
+  {
+    "phase": "source",
+    "id": "32944674#542988#0|price",
+    "sentence_id": "32944674#542988#0",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.3243,
+      "negative": 0.2993,
+      "unclear": 0.202,
+      "mixed": 0.1744
+    },
+    "laya_confidence": 0.3243,
+    "laya_choice_entropy_confidence": 0.0233
+  },
+  {
+    "phase": "source",
+    "id": "33059931#926509#2|food",
+    "sentence_id": "33059931#926509#2",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.7999,
+      "negative": 0.0443,
+      "unclear": 0.0555,
+      "mixed": 0.1003
+    },
+    "laya_confidence": 0.7999,
+    "laya_choice_entropy_confidence": 0.4894
+  },
+  {
+    "phase": "source",
+    "id": "33009300#626261#3|service",
+    "sentence_id": "33009300#626261#3",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.8202,
+      "negative": 0.0347,
+      "unclear": 0.0619,
+      "mixed": 0.0831
+    },
+    "laya_confidence": 0.8202,
+    "laya_choice_entropy_confidence": 0.5252
+  },
+  {
+    "phase": "source",
+    "id": "11351453#683961#0|food",
+    "sentence_id": "11351453#683961#0",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.6213,
+      "negative": 0.0547,
+      "unclear": 0.0806,
+      "mixed": 0.2434
+    },
+    "laya_confidence": 0.6213,
+    "laya_choice_entropy_confidence": 0.2775
+  },
+  {
+    "phase": "source",
+    "id": "35759841#1360876#1|service",
+    "sentence_id": "35759841#1360876#1",
+    "category": "service",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "positive": 0.1323,
+      "negative": 0.6822,
+      "unclear": 0.1103,
+      "mixed": 0.0752
+    },
+    "laya_confidence": 0.6822,
+    "laya_choice_entropy_confidence": 0.303
+  },
+  {
+    "phase": "source",
+    "id": "35196520#758440#0|price",
+    "sentence_id": "35196520#758440#0",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.674,
+      "negative": 0.0592,
+      "unclear": 0.093,
+      "mixed": 0.1738
+    },
+    "laya_confidence": 0.674,
+    "laya_choice_entropy_confidence": 0.3087
+  },
+  {
+    "phase": "source",
+    "id": "15094232#1295193#3|service",
+    "sentence_id": "15094232#1295193#3",
+    "category": "service",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "positive": 0.0612,
+      "negative": 0.8523,
+      "unclear": 0.0451,
+      "mixed": 0.0414
+    },
+    "laya_confidence": 0.8523,
+    "laya_choice_entropy_confidence": 0.5826
+  },
+  {
+    "phase": "source",
+    "id": "11302357#835238#1|service",
+    "sentence_id": "11302357#835238#1",
+    "category": "service",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "positive": 0.0848,
+      "negative": 0.7797,
+      "unclear": 0.0718,
+      "mixed": 0.0637
+    },
+    "laya_confidence": 0.7797,
+    "laya_choice_entropy_confidence": 0.4463
+  },
+  {
+    "phase": "source",
+    "id": "33069536#707145#2|food",
+    "sentence_id": "33069536#707145#2",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.6974,
+      "negative": 0.0949,
+      "unclear": 0.0708,
+      "mixed": 0.137
+    },
+    "laya_confidence": 0.6974,
+    "laya_choice_entropy_confidence": 0.3259
+  },
+  {
+    "phase": "source",
+    "id": "33069536#707145#2|service",
+    "sentence_id": "33069536#707145#2",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.4118,
+      "negative": 0.0942,
+      "unclear": 0.1623,
+      "mixed": 0.3316
+    },
+    "laya_confidence": 0.4118,
+    "laya_choice_entropy_confidence": 0.0989
+  },
+  {
+    "phase": "source",
+    "id": "32935729#785247#11|price",
+    "sentence_id": "32935729#785247#11",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.3386,
+      "negative": 0.1512,
+      "unclear": 0.2573,
+      "mixed": 0.2529
+    },
+    "laya_confidence": 0.3386,
+    "laya_choice_entropy_confidence": 0.0267
+  },
+  {
+    "phase": "source",
+    "id": "11359613#884374#6|food",
+    "sentence_id": "11359613#884374#6",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "mixed",
+    "laya_probabilities": {
+      "positive": 0.376,
+      "negative": 0.0723,
+      "unclear": 0.0869,
+      "mixed": 0.4648
+    },
+    "laya_confidence": 0.4648,
+    "laya_choice_entropy_confidence": 0.1877
+  },
+  {
+    "phase": "source",
+    "id": "32936760#1397861#5|price",
+    "sentence_id": "32936760#1397861#5",
+    "category": "price",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "positive": 0.1513,
+      "negative": 0.3327,
+      "unclear": 0.3316,
+      "mixed": 0.1844
+    },
+    "laya_confidence": 0.3327,
+    "laya_choice_entropy_confidence": 0.0408
+  },
+  {
+    "phase": "source",
+    "id": "11351814#1650882#5|service",
+    "sentence_id": "11351814#1650882#5",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.5419,
+      "negative": 0.0606,
+      "unclear": 0.085,
+      "mixed": 0.3124
+    },
+    "laya_confidence": 0.5419,
+    "laya_choice_entropy_confidence": 0.2246
+  },
+  {
+    "phase": "source",
+    "id": "11639261#426600#0|price",
+    "sentence_id": "11639261#426600#0",
+    "category": "price",
+    "gold": 0,
+    "model": null,
+    "laya_label": "unclear",
+    "laya_probabilities": {
+      "positive": 0.2234,
+      "negative": 0.1769,
+      "unclear": 0.3265,
+      "mixed": 0.2733
+    },
+    "laya_confidence": 0.3265,
+    "laya_choice_entropy_confidence": 0.0181
+  },
+  {
+    "phase": "source",
+    "id": "11351762#644011#3|service",
+    "sentence_id": "11351762#644011#3",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.659,
+      "negative": 0.0863,
+      "unclear": 0.0994,
+      "mixed": 0.1552
+    },
+    "laya_confidence": 0.659,
+    "laya_choice_entropy_confidence": 0.2751
+  },
+  {
+    "phase": "source",
+    "id": "32889544#0#0|food",
+    "sentence_id": "32889544#0#0",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.472,
+      "negative": 0.0867,
+      "unclear": 0.1303,
+      "mixed": 0.3111
+    },
+    "laya_confidence": 0.472,
+    "laya_choice_entropy_confidence": 0.1379
+  },
+  {
+    "phase": "source",
+    "id": "36216551#1233442#1|service",
+    "sentence_id": "36216551#1233442#1",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.3612,
+      "negative": 0.2631,
+      "unclear": 0.1753,
+      "mixed": 0.2004
+    },
+    "laya_confidence": 0.3612,
+    "laya_choice_entropy_confidence": 0.0287
+  },
+  {
+    "phase": "source",
+    "id": "36216551#1233442#1|food",
+    "sentence_id": "36216551#1233442#1",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.4214,
+      "negative": 0.2523,
+      "unclear": 0.1703,
+      "mixed": 0.1561
+    },
+    "laya_confidence": 0.4214,
+    "laya_choice_entropy_confidence": 0.0601
+  },
+  {
+    "phase": "source",
+    "id": "32408649#945413#3|price",
+    "sentence_id": "32408649#945413#3",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "mixed",
+    "laya_probabilities": {
+      "positive": 0.3468,
+      "negative": 0.0748,
+      "unclear": 0.087,
+      "mixed": 0.4914
+    },
+    "laya_confidence": 0.4914,
+    "laya_choice_entropy_confidence": 0.19
+  },
+  {
+    "phase": "source",
+    "id": "33106326#864352#1|food",
+    "sentence_id": "33106326#864352#1",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "mixed",
+    "laya_probabilities": {
+      "positive": 0.325,
+      "negative": 0.0786,
+      "unclear": 0.0908,
+      "mixed": 0.5057
+    },
+    "laya_confidence": 0.5057,
+    "laya_choice_entropy_confidence": 0.1865
+  },
+  {
+    "phase": "source",
+    "id": "33070605#1232775#3|food",
+    "sentence_id": "33070605#1232775#3",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.6114,
+      "negative": 0.0608,
+      "unclear": 0.0708,
+      "mixed": 0.2569
+    },
+    "laya_confidence": 0.6114,
+    "laya_choice_entropy_confidence": 0.2731
+  },
+  {
+    "phase": "source",
+    "id": "33070605#1232775#3|price",
+    "sentence_id": "33070605#1232775#3",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.621,
+      "negative": 0.1014,
+      "unclear": 0.0717,
+      "mixed": 0.2059
+    },
+    "laya_confidence": 0.621,
+    "laya_choice_entropy_confidence": 0.2482
+  },
+  {
+    "phase": "source",
+    "id": "32893040#1716582#4|price",
+    "sentence_id": "32893040#1716582#4",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.5318,
+      "negative": 0.0489,
+      "unclear": 0.0664,
+      "mixed": 0.3529
+    },
+    "laya_confidence": 0.5318,
+    "laya_choice_entropy_confidence": 0.2563
+  },
+  {
+    "phase": "source",
+    "id": "32867472#663531#2|service",
+    "sentence_id": "32867472#663531#2",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.787,
+      "negative": 0.0585,
+      "unclear": 0.0703,
+      "mixed": 0.0842
+    },
+    "laya_confidence": 0.787,
+    "laya_choice_entropy_confidence": 0.4593
+  },
+  {
+    "phase": "source",
+    "id": "11417054#1062693#1|service",
+    "sentence_id": "11417054#1062693#1",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.8621,
+      "negative": 0.0402,
+      "unclear": 0.0484,
+      "mixed": 0.0493
+    },
+    "laya_confidence": 0.8621,
+    "laya_choice_entropy_confidence": 0.6018
+  },
+  {
+    "phase": "source",
+    "id": "11417054#1062693#1|price",
+    "sentence_id": "11417054#1062693#1",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.7853,
+      "negative": 0.0971,
+      "unclear": 0.0633,
+      "mixed": 0.0544
+    },
+    "laya_confidence": 0.7853,
+    "laya_choice_entropy_confidence": 0.4595
+  },
+  {
+    "phase": "source",
+    "id": "11351682#1496136#0|food",
+    "sentence_id": "11351682#1496136#0",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.7862,
+      "negative": 0.0524,
+      "unclear": 0.0562,
+      "mixed": 0.1052
+    },
+    "laya_confidence": 0.7862,
+    "laya_choice_entropy_confidence": 0.4645
+  },
+  {
+    "phase": "source",
+    "id": "11349760#848056#1|food",
+    "sentence_id": "11349760#848056#1",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.7003,
+      "negative": 0.0517,
+      "unclear": 0.0602,
+      "mixed": 0.1879
+    },
+    "laya_confidence": 0.7003,
+    "laya_choice_entropy_confidence": 0.361
+  },
+  {
+    "phase": "source",
+    "id": "11349760#848056#1|price",
+    "sentence_id": "11349760#848056#1",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.4946,
+      "negative": 0.1892,
+      "unclear": 0.1031,
+      "mixed": 0.2132
+    },
+    "laya_confidence": 0.4946,
+    "laya_choice_entropy_confidence": 0.115
+  },
+  {
+    "phase": "source",
+    "id": "35704115#614067#0|service",
+    "sentence_id": "35704115#614067#0",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.7358,
+      "negative": 0.0574,
+      "unclear": 0.067,
+      "mixed": 0.1398
+    },
+    "laya_confidence": 0.7358,
+    "laya_choice_entropy_confidence": 0.3897
+  },
+  {
+    "phase": "source",
+    "id": "35698333#556353#0|price",
+    "sentence_id": "35698333#556353#0",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "mixed",
+    "laya_probabilities": {
+      "positive": 0.219,
+      "negative": 0.1395,
+      "unclear": 0.2792,
+      "mixed": 0.3624
+    },
+    "laya_confidence": 0.3624,
+    "laya_choice_entropy_confidence": 0.0396
+  },
+  {
+    "phase": "source",
+    "id": "11651310#581605#1|service",
+    "sentence_id": "11651310#581605#1",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.7662,
+      "negative": 0.0443,
+      "unclear": 0.0629,
+      "mixed": 0.1266
+    },
+    "laya_confidence": 0.7662,
+    "laya_choice_entropy_confidence": 0.4389
+  },
+  {
+    "phase": "source",
+    "id": "11610050#517598#0|food",
+    "sentence_id": "11610050#517598#0",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.6203,
+      "negative": 0.111,
+      "unclear": 0.1254,
+      "mixed": 0.1434
+    },
+    "laya_confidence": 0.6203,
+    "laya_choice_entropy_confidence": 0.2216
+  },
+  {
+    "phase": "source",
+    "id": "11610050#517598#0|service",
+    "sentence_id": "11610050#517598#0",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.3562,
+      "negative": 0.1663,
+      "unclear": 0.2224,
+      "mixed": 0.2551
+    },
+    "laya_confidence": 0.3562,
+    "laya_choice_entropy_confidence": 0.027
+  },
+  {
+    "phase": "source",
+    "id": "11463275#424927#1|food",
+    "sentence_id": "11463275#424927#1",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.736,
+      "negative": 0.0465,
+      "unclear": 0.0572,
+      "mixed": 0.1603
+    },
+    "laya_confidence": 0.736,
+    "laya_choice_entropy_confidence": 0.4045
+  },
+  {
+    "phase": "source",
+    "id": "11463275#424927#1|service",
+    "sentence_id": "11463275#424927#1",
+    "category": "service",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.6209,
+      "negative": 0.0782,
+      "unclear": 0.0972,
+      "mixed": 0.2037
+    },
+    "laya_confidence": 0.6209,
+    "laya_choice_entropy_confidence": 0.2455
+  },
+  {
+    "phase": "source",
+    "id": "35703223#626682#0|price",
+    "sentence_id": "35703223#626682#0",
+    "category": "price",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.4959,
+      "negative": 0.1933,
+      "unclear": 0.1517,
+      "mixed": 0.1592
+    },
+    "laya_confidence": 0.4959,
+    "laya_choice_entropy_confidence": 0.1026
+  },
+  {
+    "phase": "source",
+    "id": "35816071#637243#2|food",
+    "sentence_id": "35816071#637243#2",
+    "category": "food",
+    "gold": 1,
+    "model": null,
+    "laya_label": "positive",
+    "laya_probabilities": {
+      "positive": 0.7573,
+      "negative": 0.0641,
+      "unclear": 0.0561,
+      "mixed": 0.1225
+    },
+    "laya_confidence": 0.7573,
+    "laya_choice_entropy_confidence": 0.419
+  },
+  {
+    "phase": "source",
+    "id": "11313290#1139539#1|price",
+    "sentence_id": "11313290#1139539#1",
+    "category": "price",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "positive": 0.1521,
+      "negative": 0.403,
+      "unclear": 0.346,
+      "mixed": 0.0989
+    },
+    "laya_confidence": 0.403,
+    "laya_choice_entropy_confidence": 0.0993
+  },
+  {
+    "phase": "source",
+    "id": "11350390#802808#3|service",
+    "sentence_id": "11350390#802808#3",
+    "category": "service",
+    "gold": 0,
+    "model": null,
+    "laya_label": "negative",
+    "laya_probabilities": {
+      "positive": 0.1632,
+      "negative": 0.429,
+      "unclear": 0.1785,
+      "mixed": 0.2292
+    },
+    "laya_confidence": 0.429,
+    "laya_choice_entropy_confidence": 0.0592
+  }
+]

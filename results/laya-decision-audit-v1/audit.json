@@ -1,0 +1,17 @@
+{
+  "experiment": "030",
+  "n_source_reviews": 233,
+  "n_generated_answers": 60,
+  "model_revision": "55cf4c4ebb4ebe31b2550e8bdf3bd21b99753851",
+  "laya_package_version": "0.3.20",
+  "device": "mps",
+  "protocol_sha256": "77b677f802d9aa3f6ce508dc0088b55e5ea9666a30e31e06970f848c53e535a2",
+  "runner_sha256": "0b592d7c219129af995619dc8eb24a59e45aa93295de6c0977d8a91c9f80e006",
+  "private_answer_key_sha256": "b495035233d34784f4cc3b42ed444b2fe297ebe57b0fd9e682df776ea7dbac46",
+  "runtime_warnings": [
+    "laya: this checkpoint ships invalid temperatures or values outside [0.5, 5]; using choice:11+=0.10058280825614929 -> 0.5. Treat confidence from the affected entries as uncalibrated."
+  ],
+  "confidence_interpretation": "Descriptive only; no domain calibration validation was run.",
+  "raw_generated_text_in_bundle": false,
+  "unique_sampled_source_sentences": 20
+}

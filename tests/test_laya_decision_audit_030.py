@@ -38,3 +38,19 @@ def test_bootstrap_resamples_source_sentences_and_is_deterministic():
     second = bootstrap_ratio(rows, numerator, lambda row: 1, reps=500, seed=8)
     assert first == second
     assert first["estimate"] == 2 / 3
+
+
+def test_bootstrap_ratio_excludes_rows_outside_eligibility_denominator():
+    rows = [
+        {"sentence_id": "s1", "eligible": True, "agree": True},
+        {"sentence_id": "s2", "eligible": False, "agree": True},
+    ]
+    result = bootstrap_ratio(
+        rows,
+        lambda row: int(row["agree"]),
+        lambda row: int(row["eligible"]),
+        reps=500,
+        seed=3,
+    )
+    assert result["estimate"] == 1.0
+    assert result["sentence_cluster_bootstrap_95_ci"][1] <= 1.0

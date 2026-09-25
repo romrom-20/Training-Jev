@@ -6,6 +6,7 @@ import hashlib
 import json
 import os
 import random
+import warnings
 from collections import defaultdict
 from pathlib import Path
 
@@ -13,7 +14,7 @@ os.environ.setdefault("USE_TF", "0")
 
 import torch
 from huggingface_hub import snapshot_download
-from natural_aspect_selectivity import DATA, load_stimuli
+from natural_aspect_selectivity import DATA, QUESTIONS, load_stimuli
 
 PROTOCOL = Path("docs/experiments/030-laya-decision-audit.md")
 PRIVATE = Path(".context/human-coding-029/private-key.json")
@@ -66,7 +67,10 @@ def parse_jobs(stimuli):
         raise ValueError("Private answer key includes an item outside the frozen SemEval set")
     source_jobs = []
     for item in stimuli:
-        review = item["user"].split("\n", maxsplit=1)[0].removeprefix("Review: ")
+        suffix = (
+            f"\n{QUESTIONS[item['category']]} Reply with exactly one word: positive or negative."
+        )
+        review = item["user"].removeprefix("Review: ").removesuffix(suffix)
         source_jobs.append(
             {
                 "phase": "source",
@@ -152,7 +156,12 @@ def run(output=OUT, batch_size=8, device="mps"):
     if not torch.backends.mps.is_available() and device == "mps":
         raise RuntimeError("MPS is unavailable; explicitly rerun with --device cpu")
     print(f"Loading {MODEL_ID}@{MODEL_REVISION} on {device}", flush=True)
-    agent = laya.load(str(model_path), device=device)
+    with warnings.catch_warnings(record=True) as captured_warnings:
+        warnings.simplefilter("always")
+        agent = laya.load(str(model_path), device=device)
+    runtime_warnings = [str(item.message) for item in captured_warnings]
+    for warning in runtime_warnings:
+        print(f"Laya runtime warning: {warning}", flush=True)
     outcomes = infer_jobs(agent, all_jobs, mappings, batch_size=batch_size)
     if len(outcomes) != len(all_jobs):
         raise ValueError("Incomplete Laya outcomes")
@@ -183,6 +192,7 @@ def run(output=OUT, batch_size=8, device="mps"):
         ),
         "torch_version": torch.__version__,
         "mps_available": torch.backends.mps.is_available(),
+        "runtime_warnings": runtime_warnings,
     }
     (output / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
     del agent

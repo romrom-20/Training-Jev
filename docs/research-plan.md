@@ -415,9 +415,28 @@ semantic evaluation of open answers is target-dependent, and that judge agreemen
 can be strong without high correctness. It is not yet evidence that answer text is
 wrong, because neither judge saw a human-labeled answer benchmark. LLM-as-a-judge
 biases are prior art; we should not frame the evaluation problem itself as new.
-The next check is now experiment 030: run the local, open-weights Laya typed-decision
-engine on the full 233-item source screen and the 60 paired generations. This follows
-the user's request to test a decision engine before asking for manual labels. Laya's
-predictions remain automated judgments, so they will test cross-engine robustness,
-not resolve answer-level truth. Human labels remain a later option if the three
-engines expose a specific, decision-relevant disagreement. LessWrong remains a wait.
+Experiment 030 used the local open-weights Laya decision engine on all 233 source
+reviews and 60 paired generations. Source-review clear-polarity coverage was 88.0%;
+conditional accuracy was 94.6%, but strict all-item accuracy was 83.3% and negative
+recall was 76.4%, equal to the always-positive accuracy baseline. Performance also
+varied by aspect: price coverage was 71.2% and negative recall 57.9%, compared with
+97.1% coverage and 93.3% negative recall for service. This cautions against treating
+the high clear-only accuracy as a general validation gate.
+
+On the 20-item answer sample, Laya marked 10/20 Qwen answers mixed and only gave
+clear binary polarity for 8/20; clear-answer accuracy against review gold was 75.0%
+(8 items). It gave binary polarity for 15/20 Granite answers (53.3% clear-only
+accuracy) and 17/20 SmolLM answers (88.2%). On rows where both gave binary polarity,
+Laya agreed with Qwen's judge on 39/40 cases across targets, but coverage ranged
+from 40% to 85% and agreement with Phi was lower. This points to binary judges
+collapsing some answers Laya regards as mixed, but it does not show which reading is
+right. The result is especially tentative because the generated-answer set is
+stratified and SmolLM repeated identical aspect-answer inputs six times. Full metrics
+and an explicitly post-hoc duplicate-input sensitivity check are in the
+[`030 result bundle`](../results/laya-decision-audit-v1/README.md).
+
+The lead is now a concrete annotation question: do humans also mark a substantial
+share of Qwen completions as mixed, and are the binary judges wrong on those cases?
+Laya is an automated judge with uneven source performance, so the answer needs
+human-coded outputs or a larger independent validation set. LessWrong remains a
+wait.
