@@ -199,6 +199,7 @@ Some responses did not provide parseable numeric JSON, concentrated in the aspec
 The public test split and labels are not blind. The three versions share IDs and gold labels and are treated as aligned clusters, not independent replications. Annotated-opinion masking leaves implicit and unannotated evaluative cues. This is one Qwen2.5-3B checkpoint and does not establish a property of LLMs generally. No source sentences or item-level derivatives are redistributed here.
 
 - Aggregate execution record: `summary.json`
+- Aggregate hardware/model/runtime provenance appears in `summary.json` when a private run-metadata file is available.
 - Protocol: `docs/experiments/041-opinion-mask-crosslingual-dimabsa.md`
 - Parser amendment: `docs/experiments/041-analysis-amendment.md`
 - Per-item prompts and model outputs remain local in ignored `.context/`.
@@ -236,8 +237,12 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--predictions", type=Path, default=Path(".context/exp041-private-predictions.jsonl"))
     parser.add_argument("--out", type=Path, default=Path("results/opinion-mask-crosslingual-dimabsa-v1"))
+    parser.add_argument("--run-metadata", type=Path, default=Path(".context/exp041-run-metadata.json"))
     args = parser.parse_args()
-    write_report(analyze(load_predictions(args.predictions)), args.out)
+    summary = analyze(load_predictions(args.predictions))
+    if args.run_metadata.exists():
+        summary["execution_metadata"] = json.loads(args.run_metadata.read_text())
+    write_report(summary, args.out)
 
 
 if __name__ == "__main__":

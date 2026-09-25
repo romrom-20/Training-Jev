@@ -1,0 +1,35 @@
+{
+  "experiment": "041-opinion-mask-crosslingual-dimabsa",
+  "status": "protocol_execution_failure",
+  "reason": "invalid output rate exceeded the preregistered 2% threshold",
+  "n_selected_clusters": 120,
+  "n_expected_outputs": 1440,
+  "n_invalid_outputs": 48,
+  "invalid_rate": 0.03333333333333333,
+  "invalid_by_condition": {
+    "aspect_only": 0,
+    "aspect_opinion": 47,
+    "full_text": 0,
+    "opinion_masked": 1
+  },
+  "n_complete_clusters": 77,
+  "score_analysis_performed": false,
+  "analysis_seed": 20260941,
+  "execution_metadata": {
+    "run_date": "2026-09-25",
+    "device": "mps",
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "model_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "source_revision": "bdc93be1224106ae7d3eb95739c02a76ed4ae8a1",
+    "source_sha256": {
+      "rus": "912013b49db2bd387076f63ee9df016350180fbac621449121a27dc262d5459b",
+      "ukr": "05fdf7e2dca235261060b785f969315385f962021f171abb85e45638bbadb036",
+      "tat": "c4f1fb5c21f8f06f598c87e489e7adce1a953d4446ad14a60432ae2a13b85ce6"
+    },
+    "prediction_jsonl_sha256": "8056a1fd91f56d0700e10968ec8c55cc0fc3ffb1de73a98375df5d21f428a9c8",
+    "generation_seconds_after_parser_amendment": 3492.121501332964,
+    "generation_time_scope": "excludes model loading and the initial 60 cached outputs from the paused pre-amendment process",
+    "initial_cached_outputs_reused": 60,
+    "output_count": 1440
+  }
+}
