@@ -1,0 +1,15 @@
+{
+  "checks": {
+    "234_frozen_stimuli": true,
+    "234_complete_oof_predictions": true,
+    "balanced_sentiment": true,
+    "manifest_stimuli_hash_matches": true,
+    "manifest_prediction_hash_matches": true,
+    "manifest_protocol_hash_matches": true,
+    "source_revision_pinned": true,
+    "no_review_text_in_public_artifacts": true,
+    "all_4_held_out_subsets_present": true
+  },
+  "checks_passed": true,
+  "preregistered_diagnostic_gate_passed": false
+}

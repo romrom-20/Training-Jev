@@ -1,0 +1,128 @@
+{
+  "experiment": "039",
+  "primary_endpoint": "paired out-of-fold accuracy difference: aspect-masked pre-opinion context minus aspect-only TF-IDF/logistic baseline",
+  "accuracy": {
+    "aspect_only": {
+      "estimate": 0.49145299145299143,
+      "cluster_bootstrap_95_ci": [
+        0.42735042735042733,
+        0.5555555555555556
+      ],
+      "n": 234,
+      "n_sentence_clusters": 234,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20260939
+    },
+    "masked_context": {
+      "estimate": 0.5256410256410257,
+      "cluster_bootstrap_95_ci": [
+        0.46153846153846156,
+        0.5897435897435898
+      ],
+      "n": 234,
+      "n_sentence_clusters": 234,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20260940
+    },
+    "context_plus_aspect": {
+      "estimate": 0.5128205128205128,
+      "cluster_bootstrap_95_ci": [
+        0.44871794871794873,
+        0.5769230769230769
+      ],
+      "n": 234,
+      "n_sentence_clusters": 234,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20260941
+    }
+  },
+  "paired_differences": {
+    "masked_context_minus_aspect_only": {
+      "estimate": 0.03418803418803419,
+      "cluster_bootstrap_95_ci": [
+        -0.05555555555555555,
+        0.12393162393162394
+      ],
+      "n": 234,
+      "n_sentence_clusters": 234,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20260939
+    },
+    "context_plus_aspect_minus_aspect_only": {
+      "estimate": 0.021367521367521368,
+      "cluster_bootstrap_95_ci": [
+        -0.05128205128205128,
+        0.09401709401709402
+      ],
+      "n": 234,
+      "n_sentence_clusters": 234,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20260949
+    },
+    "context_plus_aspect_minus_masked_context": {
+      "estimate": -0.01282051282051282,
+      "cluster_bootstrap_95_ci": [
+        -0.0811965811965812,
+        0.05555555555555555
+      ],
+      "n": 234,
+      "n_sentence_clusters": 234,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20260950
+    }
+  },
+  "per_held_out_subset": {
+    "14lap": {
+      "n": 58,
+      "accuracy": {
+        "aspect_only": 0.4827586206896552,
+        "masked_context": 0.5,
+        "context_plus_aspect": 0.4827586206896552
+      },
+      "masked_context_minus_aspect_only": 0.017241379310344827
+    },
+    "14res": {
+      "n": 54,
+      "accuracy": {
+        "aspect_only": 0.5370370370370371,
+        "masked_context": 0.5185185185185185,
+        "context_plus_aspect": 0.46296296296296297
+      },
+      "masked_context_minus_aspect_only": -0.018518518518518517
+    },
+    "15res": {
+      "n": 78,
+      "accuracy": {
+        "aspect_only": 0.46153846153846156,
+        "masked_context": 0.5512820512820513,
+        "context_plus_aspect": 0.5384615384615384
+      },
+      "masked_context_minus_aspect_only": 0.08974358974358974
+    },
+    "16res": {
+      "n": 44,
+      "accuracy": {
+        "aspect_only": 0.5,
+        "masked_context": 0.5227272727272727,
+        "context_plus_aspect": 0.5681818181818182
+      },
+      "masked_context_minus_aspect_only": 0.022727272727272728
+    }
+  },
+  "macro_subset_accuracy": {
+    "aspect_only": 0.4953335298162884,
+    "masked_context": 0.5231319606319607,
+    "context_plus_aspect": 0.5130912350739937
+  },
+  "chance_accuracy": 0.5,
+  "preregistered_diagnostic_gate_passed": false,
+  "n_stimuli": 234,
+  "n_sentence_clusters": 234,
+  "n_out_of_fold_predictions": 234,
+  "limitations": [
+    "The four SemEval subsets are small and related; three are restaurant sets, and only 14lap is a different product domain.",
+    "The held-out fold is a dataset split, not an independently collected corpus.",
+    "Cluster intervals are conditional on the four fitted training-fold models and do not estimate training-set variation.",
+    "Review text and opinion annotations are not redistributed due missing upstream license metadata."
+  ]
+}

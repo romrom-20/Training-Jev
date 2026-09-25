@@ -192,10 +192,19 @@ def main():
         ),
         "all_4_held_out_subsets_present": set(analysis["per_held_out_subset"])
         == {"14res", "14lap", "15res", "16res"},
-        "primary_diagnostic_gate_passed": analysis["preregistered_diagnostic_gate_passed"],
     }
     (args.results / "audit.json").write_text(
-        json.dumps({"checks": checks, "checks_passed": all(checks.values())}, indent=2) + "\n"
+        json.dumps(
+            {
+                "checks": checks,
+                "checks_passed": all(checks.values()),
+                "preregistered_diagnostic_gate_passed": analysis[
+                    "preregistered_diagnostic_gate_passed"
+                ],
+            },
+            indent=2,
+        )
+        + "\n"
     )
     print(json.dumps(analysis, indent=2), flush=True)
 
