@@ -32,6 +32,12 @@ def test_finite_trie_returns_only_next_tokens_for_valid_candidate_prefixes():
         allowed_next_tokens([9], sequences)
 
 
+def test_finite_trie_allows_eos_padding_after_a_completed_batch_row():
+    sequences = [[1, 2, 9], [1, 3, 9]]
+    assert allowed_next_tokens([1, 2, 9], sequences) == [9]
+    assert allowed_next_tokens([1, 2, 9, 9, 9], sequences) == [9]
+
+
 def test_parser_accepts_only_the_two_registered_response_shapes():
     assert parse_response('{"status":"estimate","valence":5,"arousal":3}') == {
         "status": "estimate",

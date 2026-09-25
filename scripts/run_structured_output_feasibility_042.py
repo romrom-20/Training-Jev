@@ -70,6 +70,13 @@ def candidate_token_sequences(tokenizer) -> list[list[int]]:
 
 
 def allowed_next_tokens(generated: list[int], sequences: list[list[int]]) -> list[int]:
+    terminal = sequences[0][-1]
+    if any(
+        len(sequence) <= len(generated) and generated[: len(sequence)] == sequence
+        for sequence in sequences
+    ):
+        # Transformers pads finished rows with EOS while other batch members continue.
+        return [terminal]
     allowed = sorted(
         {
             sequence[len(generated)]
