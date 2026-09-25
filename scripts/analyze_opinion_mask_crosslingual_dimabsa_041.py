@@ -111,7 +111,26 @@ def analyze(predictions: dict) -> dict:
     complete, invalid = _complete_cases(predictions)
     invalid_rate = invalid / expected_count
     if invalid_rate > 0.02:
-        raise ValueError(f"Invalid output rate {invalid_rate:.3%} exceeds the preregistered 2% stop gate")
+        invalid_by_condition = {
+            condition: sum(
+                row["condition"] == condition and row["prediction"] is None
+                for row in predictions.values()
+            )
+            for condition in CONDITIONS
+        }
+        return {
+            "experiment": "041-opinion-mask-crosslingual-dimabsa",
+            "status": "protocol_execution_failure",
+            "reason": "invalid output rate exceeded the preregistered 2% threshold",
+            "n_selected_clusters": len(_case_ids(predictions)),
+            "n_expected_outputs": expected_count,
+            "n_invalid_outputs": invalid,
+            "invalid_rate": invalid_rate,
+            "invalid_by_condition": invalid_by_condition,
+            "n_complete_clusters": len(complete),
+            "score_analysis_performed": False,
+            "analysis_seed": SEED,
+        }
     if len(complete) < 100:
         raise ValueError(f"Only {len(complete)} complete aligned clusters")
 
@@ -162,6 +181,31 @@ def analyze(predictions: dict) -> dict:
 def write_report(summary: dict, out: Path) -> None:
     out.mkdir(parents=True, exist_ok=True)
     (out / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
+    if summary.get("status") == "protocol_execution_failure":
+        by_condition = ", ".join(
+            f"{condition}: {count}"
+            for condition, count in summary["invalid_by_condition"].items()
+        )
+        text = f"""# Experiment 041: opinion-mask cross-lingual DimABSA
+
+## Execution outcome
+
+The preregistered comparison was **not analyzed** because {summary['n_invalid_outputs']}/{summary['n_expected_outputs']} outputs were invalid ({summary['invalid_rate']:.2%}), exceeding the 2% stop threshold. Invalid counts by condition: {by_condition}. There were {summary['n_complete_clusters']} fully parseable aligned sentence clusters, but the protocol's coverage gate failed, so no RMSE, confidence interval, language contrast, or score-based claim is reported.
+
+Some responses did not provide parseable numeric JSON, concentrated in the aspect-plus-opinion-only condition. Those responses remain invalid; they were not converted to scores or retried. This is a prompt/output feasibility failure for the registered design, not evidence for or against residual context effects.
+
+## Limits and files
+
+The public test split and labels are not blind. The three versions share IDs and gold labels and are treated as aligned clusters, not independent replications. Annotated-opinion masking leaves implicit and unannotated evaluative cues. This is one Qwen2.5-3B checkpoint and does not establish a property of LLMs generally. No source sentences or item-level derivatives are redistributed here.
+
+- Aggregate execution record: `summary.json`
+- Protocol: `docs/experiments/041-opinion-mask-crosslingual-dimabsa.md`
+- Parser amendment: `docs/experiments/041-analysis-amendment.md`
+- Per-item prompts and model outputs remain local in ignored `.context/`.
+"""
+        (out / "README.md").write_text(text)
+        return
+
     p = summary["primary"]
     s = summary["secondary_descriptive"]
     text = f"""# Experiment 041: opinion-mask cross-lingual DimABSA

@@ -117,3 +117,24 @@ def test_cluster_bootstrap_keeps_language_versions_together():
     )
     assert result["estimate"] == 1.0
     assert result["n_clusters"] == 2
+
+
+def test_invalid_output_gate_returns_coverage_only_without_scoring():
+    predictions = {}
+    for i in range(120):
+        case_id = f"case-{i:03}"
+        for lang in LANGS:
+            for condition in CONDITIONS:
+                invalid = condition == "aspect_opinion" and i < 29
+                predictions[(case_id, lang, condition)] = {
+                    "case_id": case_id,
+                    "lang": lang,
+                    "condition": condition,
+                    "gold": [7.0, 6.0],
+                    "prediction": None if invalid else [7.0, 6.0],
+                }
+    summary = analysis.analyze(predictions)
+    assert summary["status"] == "protocol_execution_failure"
+    assert summary["invalid_by_condition"]["aspect_opinion"] == 29 * len(LANGS)
+    assert summary["score_analysis_performed"] is False
+    assert "primary" not in summary
