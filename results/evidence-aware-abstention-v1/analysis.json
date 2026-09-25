@@ -1,0 +1,300 @@
+{
+  "analysis": {
+    "appropriate_accuracy_by_binary_judge": {
+      "phi3-mini": {
+        "abstention_enabled_appropriate_accuracy": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20261147,
+          "cluster_bootstrap_95_ci": [
+            0.9817708333333334,
+            1.0
+          ],
+          "estimate": 0.9921875,
+          "n": 384,
+          "n_scaffold_aspect_clusters": 48
+        },
+        "forced_binary_appropriate_accuracy": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20261137,
+          "cluster_bootstrap_95_ci": [
+            0.75,
+            0.75
+          ],
+          "estimate": 0.75,
+          "n": 384,
+          "n_scaffold_aspect_clusters": 48
+        }
+      },
+      "qwen2.5-3b": {
+        "abstention_enabled_appropriate_accuracy": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20261146,
+          "cluster_bootstrap_95_ci": [
+            0.9583333333333334,
+            0.9869791666666666
+          ],
+          "estimate": 0.9739583333333334,
+          "n": 384,
+          "n_scaffold_aspect_clusters": 48
+        },
+        "forced_binary_appropriate_accuracy": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20261136,
+          "cluster_bootstrap_95_ci": [
+            0.7369791666666666,
+            0.75
+          ],
+          "estimate": 0.7447916666666666,
+          "n": 384,
+          "n_scaffold_aspect_clusters": 48
+        }
+      }
+    },
+    "appropriate_accuracy_by_judge": {
+      "laya": {
+        "new_appropriate_decision_accuracy": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260976,
+          "cluster_bootstrap_95_ci": [
+            0.78125,
+            0.8541666666666666
+          ],
+          "estimate": 0.8177083333333334,
+          "n": 384,
+          "n_scaffold_aspect_clusters": 48
+        }
+      },
+      "phi3-mini": {
+        "new_appropriate_decision_accuracy": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260978,
+          "cluster_bootstrap_95_ci": [
+            0.9817708333333334,
+            1.0
+          ],
+          "estimate": 0.9921875,
+          "n": 384,
+          "n_scaffold_aspect_clusters": 48
+        }
+      },
+      "qwen2.5-3b": {
+        "new_appropriate_decision_accuracy": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260977,
+          "cluster_bootstrap_95_ci": [
+            0.9583333333333334,
+            0.9869791666666666
+          ],
+          "estimate": 0.9739583333333334,
+          "n": 384,
+          "n_scaffold_aspect_clusters": 48
+        }
+      }
+    },
+    "laya_identical_no_cue_prefix_consistency": {
+      "consistent_clusters": 48,
+      "total_clusters": 48
+    },
+    "no_cue_abstention_and_visible_false_abstention": {
+      "laya": {
+        "appropriate_insufficient_on_late_8": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260946,
+          "cluster_bootstrap_95_ci": [
+            0.22916666666666666,
+            0.5208333333333334
+          ],
+          "estimate": 0.375,
+          "n": 96,
+          "n_scaffold_aspect_clusters": 48
+        },
+        "false_insufficient_on_visible_cue": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260956,
+          "cluster_bootstrap_95_ci": [
+            0.0,
+            0.024305555555555556
+          ],
+          "estimate": 0.010416666666666666,
+          "n": 288,
+          "n_scaffold_aspect_clusters": 48
+        }
+      },
+      "phi3-mini": {
+        "appropriate_insufficient_on_late_8": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260948,
+          "cluster_bootstrap_95_ci": [
+            1.0,
+            1.0
+          ],
+          "estimate": 1.0,
+          "n": 96,
+          "n_scaffold_aspect_clusters": 48
+        },
+        "false_insufficient_on_visible_cue": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260958,
+          "cluster_bootstrap_95_ci": [
+            0.0,
+            0.024305555555555556
+          ],
+          "estimate": 0.010416666666666666,
+          "n": 288,
+          "n_scaffold_aspect_clusters": 48
+        }
+      },
+      "qwen2.5-3b": {
+        "appropriate_insufficient_on_late_8": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260947,
+          "cluster_bootstrap_95_ci": [
+            1.0,
+            1.0
+          ],
+          "estimate": 1.0,
+          "n": 96,
+          "n_scaffold_aspect_clusters": 48
+        },
+        "false_insufficient_on_visible_cue": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260957,
+          "cluster_bootstrap_95_ci": [
+            0.017361111111111112,
+            0.05555555555555555
+          ],
+          "estimate": 0.034722222222222224,
+          "n": 288,
+          "n_scaffold_aspect_clusters": 48
+        }
+      }
+    },
+    "parse_coverage": {
+      "laya": {
+        "all_decisions": 1.0,
+        "no_cue_late_8": 1.0
+      },
+      "phi3-mini": {
+        "all_decisions": 1.0,
+        "no_cue_late_8": 1.0
+      },
+      "qwen2.5-3b": {
+        "all_decisions": 1.0,
+        "no_cue_late_8": 1.0
+      }
+    },
+    "preregistered_success_rule_passed": true,
+    "primary_change_by_binary_judge": {
+      "phi3-mini": {
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20261037,
+        "cluster_bootstrap_95_ci": [
+          0.23177083333333334,
+          0.25
+        ],
+        "estimate": 0.2421875,
+        "n": 384,
+        "n_scaffold_aspect_clusters": 48
+      },
+      "qwen2.5-3b": {
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20261036,
+        "cluster_bootstrap_95_ci": [
+          0.21614583333333334,
+          0.2421875
+        ],
+        "estimate": 0.22916666666666666,
+        "n": 384,
+        "n_scaffold_aspect_clusters": 48
+      }
+    },
+    "primary_endpoint": "paired change in appropriate-decision accuracy from forced binary to explicit abstention, pooled equally over Qwen/Phi",
+    "primary_pooled_change": {
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20260936,
+      "cluster_bootstrap_95_ci": [
+        0.22786458333333334,
+        0.24348958333333334
+      ],
+      "estimate": 0.23567708333333334,
+      "n": 768,
+      "n_scaffold_aspect_clusters": 48
+    },
+    "visible_cue_polarity_accuracy": {
+      "laya": {
+        "labeled_coverage": 0.9652777777777778,
+        "strict_polarity_accuracy": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260966,
+          "cluster_bootstrap_95_ci": [
+            0.9409722222222222,
+            0.9861111111111112
+          ],
+          "estimate": 0.9652777777777778,
+          "n": 288,
+          "n_scaffold_aspect_clusters": 48
+        }
+      },
+      "phi3-mini": {
+        "forced_binary_polarity_accuracy": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260973,
+          "cluster_bootstrap_95_ci": [
+            1.0,
+            1.0
+          ],
+          "estimate": 1.0,
+          "n": 288,
+          "n_scaffold_aspect_clusters": 48
+        },
+        "labeled_coverage": 0.9895833333333334,
+        "strict_polarity_accuracy": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260968,
+          "cluster_bootstrap_95_ci": [
+            0.9756944444444444,
+            1.0
+          ],
+          "estimate": 0.9895833333333334,
+          "n": 288,
+          "n_scaffold_aspect_clusters": 48
+        }
+      },
+      "qwen2.5-3b": {
+        "forced_binary_polarity_accuracy": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260972,
+          "cluster_bootstrap_95_ci": [
+            0.9826388888888888,
+            1.0
+          ],
+          "estimate": 0.9930555555555556,
+          "n": 288,
+          "n_scaffold_aspect_clusters": 48
+        },
+        "labeled_coverage": 0.9652777777777778,
+        "strict_polarity_accuracy": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260967,
+          "cluster_bootstrap_95_ci": [
+            0.9444444444444444,
+            0.9826388888888888
+          ],
+          "estimate": 0.9652777777777778,
+          "n": 288,
+          "n_scaffold_aspect_clusters": 48
+        }
+      }
+    }
+  },
+  "clusters": 48,
+  "experiment": "036",
+  "limitations": [
+    "The sample is a balanced subset of short deterministic review templates, not natural generated answers.",
+    "The expected insufficient label for late-8 prefixes follows the constructed omission of every polarity cue.",
+    "The judges are fixed model families; results do not estimate the distribution of evaluator models.",
+    "The new prompt changes both allowed labels and abstention instructions relative to the forced-binary baseline."
+  ],
+  "new_judgment_outcomes": 1152,
+  "stimuli": 192
+}

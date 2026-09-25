@@ -562,3 +562,19 @@ returns the deterministic polarity. Compare against the exact same forced
 binary judgments already collected and Laya's four-way outputs, with Laya's key
 mapping held fixed for identical prefixes. This tests a practical response to
 the observed failure mode; it does not generalize beyond short controlled text.
+
+**Experiment 036 outcome.** Adding an explicit `insufficient` decision to Qwen2.5-3B
+and Phi-3 Mini improved appropriate decisions by 23.6 percentage points on the
+paired controlled prefixes (scaffold-cluster 95% CI +22.8 to +24.3); both abstained
+on all 96 no-cue prefixes. Cue-visible polarity accuracy fell by 2.8 points for Qwen
+and 1.0 for Phi. The preregistered operational rule passed. Laya returned its mapped
+abstention label on only 37.5% of the same no-cue cases, despite consistent behavior
+on identical text. This wrapper result remains synthetic: the response set and
+instruction both changed, and the evidence-free case was engineered by truncation.
+General evidence sufficiency and abstention are already active topics, including
+RAG/unanswerable-QA settings. The next useful test is natural text with explicit
+human annotations for both aspect and opinion-evidence spans, to distinguish actual
+evidence availability from reactions to a constructed missing-cue template. The
+[`036 result bundle`](../results/evidence-aware-abstention-v1/README.md) records the
+full paired analysis and limits. LessWrong remains a wait pending a natural-data
+result that survives benchmark and judge differences.

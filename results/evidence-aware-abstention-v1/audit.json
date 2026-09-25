@@ -1,0 +1,10 @@
+{
+  "checks": {
+    "balanced_96_positive_96_negative_stimuli": true,
+    "complete_1152_new_judgments": true,
+    "each_judge_has_384_paired_decisions": true,
+    "experiment_035_direct_subset_only": true,
+    "protocol_hash_matches": true
+  },
+  "checks_passed": true
+}
