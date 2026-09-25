@@ -1,0 +1,9 @@
+{
+  "checks": {
+    "complete_699_pairs": true,
+    "no_raw_text_or_token_ids_in_public_predictions": true,
+    "pairwise_prefix_and_eos_checks": true,
+    "protocol_hash_matches": true
+  },
+  "checks_passed": true
+}

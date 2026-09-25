@@ -1,0 +1,238 @@
+{
+  "analysis": {
+    "by_target": {
+      "granite-3.1-2b": {
+        "ambiguous_rate_on_cap_hit_pairs_32": 0.08583690987124463,
+        "ambiguous_rate_on_cap_hit_pairs_8": 0.45064377682403434,
+        "cap_hit_rate_at_8": 1.0,
+        "capped_at_32": 214,
+        "capped_at_8": 233,
+        "four_way_transition_counts": {
+          "mixed": {
+            "mixed": 8,
+            "negative": 27,
+            "positive": 63,
+            "unclear": 2
+          },
+          "negative": {
+            "mixed": 0,
+            "negative": 14,
+            "positive": 52,
+            "unclear": 0
+          },
+          "positive": {
+            "mixed": 7,
+            "negative": 12,
+            "positive": 41,
+            "unclear": 2
+          },
+          "unclear": {
+            "mixed": 0,
+            "negative": 0,
+            "positive": 4,
+            "unclear": 1
+          }
+        },
+        "label_change_rate_among_cap_hit_pairs": 0.7253218884120172,
+        "labels_all_pairs_32": {
+          "mixed": 15,
+          "negative": 53,
+          "positive": 160,
+          "unclear": 5
+        },
+        "labels_all_pairs_8": {
+          "mixed": 100,
+          "negative": 66,
+          "positive": 62,
+          "unclear": 5
+        },
+        "n_items": 233,
+        "naturally_ended_at_8_negative_control": {
+          "four_way_labels_32": {},
+          "four_way_labels_8": {},
+          "label_change_count": 0,
+          "n": 0
+        },
+        "primary_cap_hit_effect": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260931,
+          "difference_ambiguous_32_minus_8": -0.3648068669527897,
+          "n_pairs": 233,
+          "n_source_sentence_clusters": 112,
+          "sentence_cluster_bootstrap_95_ci": [
+            -0.4329004329004329,
+            -0.2974137931034483
+          ]
+        },
+        "secondary_strict_binary_accuracy_vs_review_gold": {
+          "budget_32": 0.8969957081545065,
+          "budget_8": 0.26609442060085836
+        }
+      },
+      "qwen-1.5b": {
+        "ambiguous_rate_on_cap_hit_pairs_32": 0.1630901287553648,
+        "ambiguous_rate_on_cap_hit_pairs_8": 0.6137339055793991,
+        "cap_hit_rate_at_8": 1.0,
+        "capped_at_32": 229,
+        "capped_at_8": 233,
+        "four_way_transition_counts": {
+          "mixed": {
+            "mixed": 28,
+            "negative": 15,
+            "positive": 84,
+            "unclear": 2
+          },
+          "negative": {
+            "mixed": 1,
+            "negative": 27,
+            "positive": 3,
+            "unclear": 0
+          },
+          "positive": {
+            "mixed": 6,
+            "negative": 7,
+            "positive": 46,
+            "unclear": 0
+          },
+          "unclear": {
+            "mixed": 1,
+            "negative": 9,
+            "positive": 4,
+            "unclear": 0
+          }
+        },
+        "label_change_rate_among_cap_hit_pairs": 0.5665236051502146,
+        "labels_all_pairs_32": {
+          "mixed": 36,
+          "negative": 58,
+          "positive": 137,
+          "unclear": 2
+        },
+        "labels_all_pairs_8": {
+          "mixed": 129,
+          "negative": 31,
+          "positive": 59,
+          "unclear": 14
+        },
+        "n_items": 233,
+        "naturally_ended_at_8_negative_control": {
+          "four_way_labels_32": {},
+          "four_way_labels_8": {},
+          "label_change_count": 0,
+          "n": 0
+        },
+        "primary_cap_hit_effect": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260931,
+          "difference_ambiguous_32_minus_8": -0.45064377682403434,
+          "n_pairs": 233,
+          "n_source_sentence_clusters": 112,
+          "sentence_cluster_bootstrap_95_ci": [
+            -0.5238095238095238,
+            -0.37871184088806675
+          ]
+        },
+        "secondary_strict_binary_accuracy_vs_review_gold": {
+          "budget_32": 0.8025751072961373,
+          "budget_8": 0.34334763948497854
+        }
+      },
+      "smollm2-1.7b": {
+        "ambiguous_rate_on_cap_hit_pairs_32": 0.13304721030042918,
+        "ambiguous_rate_on_cap_hit_pairs_8": 0.30042918454935624,
+        "cap_hit_rate_at_8": 1.0,
+        "capped_at_32": 117,
+        "capped_at_8": 233,
+        "four_way_transition_counts": {
+          "mixed": {
+            "mixed": 20,
+            "negative": 11,
+            "positive": 34,
+            "unclear": 0
+          },
+          "negative": {
+            "mixed": 1,
+            "negative": 30,
+            "positive": 1,
+            "unclear": 0
+          },
+          "positive": {
+            "mixed": 7,
+            "negative": 10,
+            "positive": 114,
+            "unclear": 0
+          },
+          "unclear": {
+            "mixed": 3,
+            "negative": 2,
+            "positive": 0,
+            "unclear": 0
+          }
+        },
+        "label_change_rate_among_cap_hit_pairs": 0.296137339055794,
+        "labels_all_pairs_32": {
+          "mixed": 31,
+          "negative": 53,
+          "positive": 149
+        },
+        "labels_all_pairs_8": {
+          "mixed": 65,
+          "negative": 32,
+          "positive": 131,
+          "unclear": 5
+        },
+        "n_items": 233,
+        "naturally_ended_at_8_negative_control": {
+          "four_way_labels_32": {},
+          "four_way_labels_8": {},
+          "label_change_count": 0,
+          "n": 0
+        },
+        "primary_cap_hit_effect": {
+          "bootstrap_reps": 10000,
+          "bootstrap_seed": 20260931,
+          "difference_ambiguous_32_minus_8": -0.16738197424892703,
+          "n_pairs": 233,
+          "n_source_sentence_clusters": 112,
+          "sentence_cluster_bootstrap_95_ci": [
+            -0.22608695652173913,
+            -0.11158798283261803
+          ]
+        },
+        "secondary_strict_binary_accuracy_vs_review_gold": {
+          "budget_32": 0.8454935622317596,
+          "budget_8": 0.6394849785407726
+        }
+      }
+    },
+    "pooled_across_targets": {
+      "ambiguous_rate_on_cap_hit_pairs_32": 0.12732474964234622,
+      "ambiguous_rate_on_cap_hit_pairs_8": 0.45493562231759654,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20260931,
+      "difference_ambiguous_32_minus_8": -0.32761087267525035,
+      "label_change_rate_among_cap_hit_pairs": 0.5293276108726752,
+      "n_pairs": 699,
+      "n_source_sentence_clusters": 112,
+      "sentence_cluster_bootstrap_95_ci": [
+        -0.36909871244635195,
+        -0.28649696263332636
+      ]
+    }
+  },
+  "experiment": "031",
+  "limitations": [
+    "Laya is an automated evaluator, not human answer-level ground truth.",
+    "The causal treatment is a decoding cap; any effect is specific to these checkpoints, prompts, and task.",
+    "The benchmark has 233 items from a limited restaurant-review domain, with repeated sentence clusters handled in the bootstrap.",
+    "Review-level gold is only a proxy for the meaning of generated answers.",
+    "Length and additional generated content change together, so the result does not isolate verbosity preference from semantic completion."
+  ],
+  "n_paired_item_target_outcomes": 699,
+  "primary_endpoint": "P(Laya label in {mixed, unclear} at 32) - P(same at 8), among pairs whose 8-token generation hit cap",
+  "reproducibility_against_030": {
+    "exact_label_agreement": 1.0,
+    "n_label_disagreements": 0,
+    "n_matching_experiment_030_rows": 60
+  }
+}

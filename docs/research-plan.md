@@ -440,3 +440,23 @@ share of Qwen completions as mixed, and are the binary judges wrong on those cas
 Laya is an automated judge with uneven source performance, so the answer needs
 human-coded outputs or a larger independent validation set. LessWrong remains a
 wait.
+
+Experiment 031 tested whether the 8-token cap itself made open answers look mixed or
+incomplete to Laya. Every one of the 699 short answers hit the cap. On the same
+prompts, the mixed/unclear fraction fell from 45.5% at 8 tokens to 12.7% at 32
+(paired difference −32.8 points; sentence-cluster interval −36.9 to −28.6), with
+the same direction on Granite, Qwen and SmolLM2. The eight-token Laya results
+reproduced experiment 030 on all 60 overlap rows. This makes generation censoring a
+plausible contributor to 030's ambiguous labels, but Laya is still only one
+automated evaluator and 560/699 of the 32-token answers hit that cap too. The result
+is therefore a strong lead, not a validated interpretation or novelty claim. See the
+[`031 result bundle`](../results/answer-length-censoring-v1/README.md).
+
+The next discriminating test runs Qwen2.5-3B and Phi-3 Mini on the exact same 8- and
+32-token texts. It asks whether their paired polarity judgments also move with the
+cap and whether any movement aligns with the review-level proxy. This is a
+post-result robustness follow-up, not a second confirmatory test. LLM-judge length
+bias is already studied in preference comparisons; the narrower potential
+contribution here is a within-prompt generation-cap intervention on aspect-sentiment
+extraction, if independent evaluation survives. LessWrong remains a wait pending
+cross-engine and ideally human answer-level validation.
