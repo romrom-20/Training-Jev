@@ -140,7 +140,7 @@ document.querySelector('#csv').onclick=()=>download('labels.csv','blind_id,code\
             "category": item["category"],
             "gold": item["label"],
         }
-        for item in {r["stimulus"]["id"]: r for r in rows}.values()
+        for item in {r["stimulus"]["id"]: r["stimulus"] for r in rows}.values()
     ]
     manifest = {
         "experiment": "029",
