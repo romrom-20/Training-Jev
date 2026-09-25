@@ -1,0 +1,267 @@
+{
+  "experiment": "042-structured-output-feasibility",
+  "interpretation": "adaptive technical audit; no gold-score analysis or confirmatory inference",
+  "n_prompts": 96,
+  "n_generations": 192,
+  "prompt_group_counts": {
+    "prior_invalid": 48,
+    "prior_valid_control": 48
+  },
+  "valid_control_language_counts": {
+    "rus": 16,
+    "tat": 16,
+    "ukr": 16
+  },
+  "invalid_by_decoder": {
+    "free": 0,
+    "constrained": 0
+  },
+  "valid_rate_by_decoder": {
+    "free": 1.0,
+    "constrained": 1.0
+  },
+  "status_counts_by_prior_validity_and_decoder": {
+    "prior_invalid:free": {
+      "estimate": 0,
+      "insufficient": 48,
+      "invalid": 0
+    },
+    "prior_invalid:constrained": {
+      "estimate": 0,
+      "insufficient": 48,
+      "invalid": 0
+    },
+    "prior_valid_control:free": {
+      "estimate": 1,
+      "insufficient": 47,
+      "invalid": 0
+    },
+    "prior_valid_control:constrained": {
+      "estimate": 1,
+      "insufficient": 47,
+      "invalid": 0
+    }
+  },
+  "status_counts_by_language_condition_and_decoder": {
+    "dimensions": [
+      "lang",
+      "source_condition",
+      "decoder"
+    ],
+    "cells": [
+      {
+        "lang": "rus",
+        "source_condition": "aspect_opinion",
+        "decoder": "constrained",
+        "n": 19,
+        "estimate": 1,
+        "insufficient": 18,
+        "invalid": 0
+      },
+      {
+        "lang": "rus",
+        "source_condition": "aspect_opinion",
+        "decoder": "free",
+        "n": 19,
+        "estimate": 1,
+        "insufficient": 18,
+        "invalid": 0
+      },
+      {
+        "lang": "tat",
+        "source_condition": "aspect_opinion",
+        "decoder": "constrained",
+        "n": 58,
+        "estimate": 0,
+        "insufficient": 58,
+        "invalid": 0
+      },
+      {
+        "lang": "tat",
+        "source_condition": "aspect_opinion",
+        "decoder": "free",
+        "n": 58,
+        "estimate": 0,
+        "insufficient": 58,
+        "invalid": 0
+      },
+      {
+        "lang": "tat",
+        "source_condition": "opinion_masked",
+        "decoder": "constrained",
+        "n": 1,
+        "estimate": 0,
+        "insufficient": 1,
+        "invalid": 0
+      },
+      {
+        "lang": "tat",
+        "source_condition": "opinion_masked",
+        "decoder": "free",
+        "n": 1,
+        "estimate": 0,
+        "insufficient": 1,
+        "invalid": 0
+      },
+      {
+        "lang": "ukr",
+        "source_condition": "aspect_opinion",
+        "decoder": "constrained",
+        "n": 18,
+        "estimate": 0,
+        "insufficient": 18,
+        "invalid": 0
+      },
+      {
+        "lang": "ukr",
+        "source_condition": "aspect_opinion",
+        "decoder": "free",
+        "n": 18,
+        "estimate": 0,
+        "insufficient": 18,
+        "invalid": 0
+      }
+    ]
+  },
+  "status_counts_by_group_language_and_decoder": {
+    "dimensions": [
+      "group",
+      "lang",
+      "decoder"
+    ],
+    "cells": [
+      {
+        "group": "prior_invalid",
+        "lang": "rus",
+        "decoder": "constrained",
+        "n": 3,
+        "estimate": 0,
+        "insufficient": 3,
+        "invalid": 0
+      },
+      {
+        "group": "prior_invalid",
+        "lang": "rus",
+        "decoder": "free",
+        "n": 3,
+        "estimate": 0,
+        "insufficient": 3,
+        "invalid": 0
+      },
+      {
+        "group": "prior_invalid",
+        "lang": "tat",
+        "decoder": "constrained",
+        "n": 43,
+        "estimate": 0,
+        "insufficient": 43,
+        "invalid": 0
+      },
+      {
+        "group": "prior_invalid",
+        "lang": "tat",
+        "decoder": "free",
+        "n": 43,
+        "estimate": 0,
+        "insufficient": 43,
+        "invalid": 0
+      },
+      {
+        "group": "prior_invalid",
+        "lang": "ukr",
+        "decoder": "constrained",
+        "n": 2,
+        "estimate": 0,
+        "insufficient": 2,
+        "invalid": 0
+      },
+      {
+        "group": "prior_invalid",
+        "lang": "ukr",
+        "decoder": "free",
+        "n": 2,
+        "estimate": 0,
+        "insufficient": 2,
+        "invalid": 0
+      },
+      {
+        "group": "prior_valid_control",
+        "lang": "rus",
+        "decoder": "constrained",
+        "n": 16,
+        "estimate": 1,
+        "insufficient": 15,
+        "invalid": 0
+      },
+      {
+        "group": "prior_valid_control",
+        "lang": "rus",
+        "decoder": "free",
+        "n": 16,
+        "estimate": 1,
+        "insufficient": 15,
+        "invalid": 0
+      },
+      {
+        "group": "prior_valid_control",
+        "lang": "tat",
+        "decoder": "constrained",
+        "n": 16,
+        "estimate": 0,
+        "insufficient": 16,
+        "invalid": 0
+      },
+      {
+        "group": "prior_valid_control",
+        "lang": "tat",
+        "decoder": "free",
+        "n": 16,
+        "estimate": 0,
+        "insufficient": 16,
+        "invalid": 0
+      },
+      {
+        "group": "prior_valid_control",
+        "lang": "ukr",
+        "decoder": "constrained",
+        "n": 16,
+        "estimate": 0,
+        "insufficient": 16,
+        "invalid": 0
+      },
+      {
+        "group": "prior_valid_control",
+        "lang": "ukr",
+        "decoder": "free",
+        "n": 16,
+        "estimate": 0,
+        "insufficient": 16,
+        "invalid": 0
+      }
+    ]
+  },
+  "free_vs_constrained_numeric_agreement_on_valid_controls": {
+    "n_numeric_pairs": 1,
+    "exact_pair_matches": 1,
+    "exact_match_rate": 1.0,
+    "mean_absolute_change": {
+      "valence": 0.0,
+      "arousal": 0.0
+    }
+  },
+  "run_provenance": {
+    "dataset_revision": "bdc93be1224106ae7d3eb95739c02a76ed4ae8a1",
+    "source_hashes": {
+      "rus": "912013b49db2bd387076f63ee9df016350180fbac621449121a27dc262d5459b",
+      "ukr": "05fdf7e2dca235261060b785f969315385f962021f171abb85e45638bbadb036",
+      "tat": "c4f1fb5c21f8f06f598c87e489e7adce1a953d4446ad14a60432ae2a13b85ce6"
+    },
+    "source_prediction_sha256": "8056a1fd91f56d0700e10968ec8c55cc0fc3ffb1de73a98375df5d21f428a9c8",
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "model_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "device": "mps",
+    "protocol_sha256": "5b02d8b8a3771a19d1b8d14d0248f2235ea9e2ca0555b1d218b47a73aea8c069",
+    "private_output_sha256": "553a623142b4223c9c765866a2f1af25328d79b8a368f59071d2965af6e54382",
+    "runtime_note": "Outputs span resumed generation segments; cumulative wall time was not retained."
+  }
+}

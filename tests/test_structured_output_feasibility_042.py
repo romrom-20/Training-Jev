@@ -91,4 +91,8 @@ def test_aggregate_reports_prior_validity_groups_without_score_analysis():
     result = analysis.analyze(rows)
     assert result["interpretation"].startswith("adaptive technical audit")
     assert result["n_generations"] == 192
+    stratified = result["status_counts_by_language_condition_and_decoder"]
+    assert stratified["dimensions"] == ["lang", "source_condition", "decoder"]
+    assert len(stratified["cells"]) == 6
+    assert sum(cell["n"] for cell in stratified["cells"]) == 192
     assert "gold_accuracy" not in result

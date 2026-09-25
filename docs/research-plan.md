@@ -698,3 +698,27 @@ format validity and within-model answer stability only; it is not an independent
 replication or a test of VA accuracy. Its
 [protocol](experiments/042-structured-output-feasibility.md) is committed before
 the follow-up judgments.
+
+**Experiment 042 outcome.** Both free and finite-choice decoding returned valid
+syntax on all 96 prompts. Yet both returned `insufficient` for all 48 prior-invalid
+prompts and for 47 of 48 prior-valid controls; only one paired control produced a
+numeric estimate, identical across decoders. This is a prompt-and-response-policy
+collapse on a selected aspect-plus-opinion-only sample, not evidence that the
+model detects its uncertainty. Gold VA scores were not analyzed. See the
+[`042 diagnostic bundle`](../results/structured-output-feasibility-v1/README.md).
+
+Laya's next typed-choice decision selected a larger, stricter-decoding rerun of
+041's primary question. The scoped literature includes DimABSA's 2026 multilingual
+continuous-VA benchmark, established target-opinion linking work, and a recent
+causal study of confidence-driven abstention on factual multiple-choice tasks;
+none directly settles whether opinion-masked context helps this target-level
+continuous estimate. Experiment 043 therefore excludes all 041 IDs, uses the
+largest near-balanced disjoint sample the remaining valence strata allow (217
+clusters), and tests only aspect-only versus opinion-masked inputs. A finite
+one-decimal VA grammar removes the abstention option that collapsed in 042 and
+limits outputs to valid scores. It does not preserve the original free-generation
+distribution, so any finding is explicitly conditional on this constrained
+decoder. The [043 protocol](experiments/043-expanded-opinion-mask-repair.md),
+runner, analysis code, and tests are committed before its target-model run.
+LessWrong remains deferred until a result looks empirically worthwhile after
+this experiment and suitable follow-up.

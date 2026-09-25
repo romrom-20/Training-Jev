@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -78,6 +79,26 @@ def _control_agreement(rows: list[dict]) -> dict:
     }
 
 
+def _cell_counts(rows: list[dict], fields: tuple[str, ...]) -> dict:
+    cells = defaultdict(Counter)
+    for row in rows:
+        key = tuple(row[field] for field in fields) + (row["decoder"],)
+        cells[key][row["response"]["status"] if row["response"] is not None else "invalid"] += 1
+    return {
+        "dimensions": [*fields, "decoder"],
+        "cells": [
+            {
+                **dict(zip((*fields, "decoder"), key)),
+                "n": sum(counts.values()),
+                "estimate": counts.get("estimate", 0),
+                "insufficient": counts.get("insufficient", 0),
+                "invalid": counts.get("invalid", 0),
+            }
+            for key, counts in sorted(cells.items())
+        ],
+    }
+
+
 def analyze(rows: list[dict]) -> dict:
     if len(rows) != 192:
         raise ValueError("Analysis requires the complete fixed audit set")
@@ -111,6 +132,12 @@ def analyze(rows: list[dict]) -> dict:
             decoder: 1 - invalid_by_decoder[decoder] / 96 for decoder in DECODERS
         },
         "status_counts_by_prior_validity_and_decoder": _status_counts(rows),
+        "status_counts_by_language_condition_and_decoder": _cell_counts(
+            rows, ("lang", "source_condition")
+        ),
+        "status_counts_by_group_language_and_decoder": _cell_counts(
+            rows, ("group", "lang")
+        ),
         "free_vs_constrained_numeric_agreement_on_valid_controls": _control_agreement(rows),
     }
 
@@ -140,6 +167,8 @@ The audit covers 48 prompts that failed the Experiment 041 response parser and 4
 
 For the prior-invalid prompts, free generation yielded {free_invalid['estimate']} estimate objects, {free_invalid['insufficient']} explicit insufficient objects, and {free_invalid['invalid']} invalid responses. Constrained generation yielded {constrained_invalid['estimate']} estimates, {constrained_invalid['insufficient']} insufficient objects, and {constrained_invalid['invalid']} invalid responses. {agreement}
 
+The JSON summary also reports response counts by source condition, language, and prior-validity group. Those are descriptive cells from this selected audit, not inferential comparisons.
+
 ## Interpretation
 
 This is an adaptive technical audit selected on Experiment 041 parser outcomes. It does not measure VA accuracy and does not establish that an `insufficient` response is correct. The constrained decoder can alter numeric content; the comparison is descriptive and no score-versus-gold analysis was performed. The constrained choices use integer VA candidates and are not a general structured-generation benchmark.
@@ -158,7 +187,26 @@ def main() -> None:
     parser.add_argument("--predictions", type=Path, default=Path(".context/exp042-private-predictions.jsonl"))
     parser.add_argument("--out", type=Path, default=Path("results/structured-output-feasibility-v1"))
     args = parser.parse_args()
-    write_report(analyze(load_rows(args.predictions)), args.out)
+    rows = load_rows(args.predictions)
+    summary = analyze(rows)
+    summary["run_provenance"] = {
+        "dataset_revision": "bdc93be1224106ae7d3eb95739c02a76ed4ae8a1",
+        "source_hashes": {
+            "rus": "912013b49db2bd387076f63ee9df016350180fbac621449121a27dc262d5459b",
+            "ukr": "05fdf7e2dca235261060b785f969315385f962021f171abb85e45638bbadb036",
+            "tat": "c4f1fb5c21f8f06f598c87e489e7adce1a953d4446ad14a60432ae2a13b85ce6",
+        },
+        "source_prediction_sha256": "8056a1fd91f56d0700e10968ec8c55cc0fc3ffb1de73a98375df5d21f428a9c8",
+        "model": "Qwen/Qwen2.5-3B-Instruct",
+        "model_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+        "device": "mps",
+        "protocol_sha256": hashlib.sha256(
+            Path("docs/experiments/042-structured-output-feasibility.md").read_bytes()
+        ).hexdigest(),
+        "private_output_sha256": hashlib.sha256(args.predictions.read_bytes()).hexdigest(),
+        "runtime_note": "Outputs span resumed generation segments; cumulative wall time was not retained.",
+    }
+    write_report(summary, args.out)
 
 
 if __name__ == "__main__":
