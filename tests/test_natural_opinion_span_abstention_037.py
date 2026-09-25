@@ -1,3 +1,4 @@
+import hashlib
 import sys
 from collections import Counter
 from pathlib import Path
@@ -7,18 +8,37 @@ import pytest
 sys.path.insert(0, str(Path(__file__).parents[1] / "scripts"))
 
 import analyze_natural_opinion_span_abstention_037 as analysis
+import run_natural_opinion_span_abstention_037 as experiment
 from run_natural_opinion_span_abstention_037 import (
     PUBLIC_STIMULUS_KEYS,
     decode_laya_choice,
     laya_map_key,
-    load_source_items,
     make_jobs,
     parse_label,
 )
 
 
-def test_frozen_selection_balances_domains_and_polarities_without_public_text():
-    selected = load_source_items()
+@pytest.fixture
+def selected_items(tmp_path, monkeypatch):
+    # Exercise the frozen selector without requiring private source data in .context.
+    negative_counts = {"14res": 27, "14lap": 29, "15res": 39, "16res": 22}
+    hashes = {}
+    for dataset in experiment.DATASETS:
+        rows = []
+        for index in range(negative_counts[dataset]):
+            rows.append("The meal was awful today .####[([1], [3], 'NEG')]")
+            rows.append("The meal was excellent today .####[([1], [3], 'POS')]")
+        path = tmp_path / experiment.SOURCE_FILES[dataset]
+        path.write_text("\n".join(rows) + "\n", encoding="utf-8")
+        hashes[dataset] = hashlib.sha256(path.read_bytes()).hexdigest()
+
+    monkeypatch.setattr(experiment, "SOURCE_DIR", tmp_path)
+    monkeypatch.setattr(experiment, "SOURCE_SHA256", hashes)
+    return experiment.load_source_items()
+
+
+def test_frozen_selection_balances_domains_and_polarities_without_public_text(selected_items):
+    selected = selected_items
     assert len(selected) == 234
     assert Counter((row["dataset"], row["polarity"]) for row in selected) == {
         ("14res", "positive"): 27,
@@ -35,8 +55,8 @@ def test_frozen_selection_balances_domains_and_polarities_without_public_text():
     assert len({row["cluster_id"] for row in public_rows}) == 234
 
 
-def test_prefix_pair_hides_then_reveals_complete_annotated_opinion_span():
-    selected = load_source_items()
+def test_prefix_pair_hides_then_reveals_complete_annotated_opinion_span(selected_items):
+    selected = selected_items
     jobs = make_jobs(selected)
     assert len(jobs) == 468
     for item in selected:
@@ -51,8 +71,8 @@ def test_prefix_pair_hides_then_reveals_complete_annotated_opinion_span():
         assert visible["expected_decision"] == item["polarity"]
 
 
-def test_laya_mapping_key_reuses_same_aspect_and_visible_prefix():
-    rows = make_jobs(load_source_items())
+def test_laya_mapping_key_reuses_same_aspect_and_visible_prefix(selected_items):
+    rows = make_jobs(selected_items)
     keyed = {}
     for row in rows:
         key = laya_map_key(row)
