@@ -638,3 +638,28 @@ LLM pretraining, although the subsets are not fully independent domains. The
 [frozen protocol](experiments/039-cross-subset-context-lexical-baseline.md) requires
 a 5-point gain and a positive cluster interval; LessWrong remains on hold until
 this and stronger independent validation clarify the interpretation.
+
+**Experiment 039 outcome.** The non-pretrained cross-subset model reached 52.6%
+with target-masked context and 49.1% with aspect-only features; the paired gain
+was 3.4 points (95% sentence-cluster interval −5.6 to +12.4), so its registered
+gate failed. The low-training lexical baseline does not explain the 73–78% local
+LLM result, but the small, related folds leave training volume, domain shift and
+pretraining exposure unresolved. Full details are in the
+[`039 bundle`](../results/lexical-context-generalization-v1/README.md).
+
+For the next choice, Laya's pinned local typed-choice engine selected independent
+corpus replication over an in-domain lexical baseline, token-order intervention,
+and human sufficiency calibration. A source audit found a useful, more specific
+test in TRABL, a 2026 travel-review dataset with two annotators and aspect,
+opinion-span, polarity and evidence annotations. Existing work already studies
+mixed-aspect sentiment and target-specific context, so the idea is not framed as
+a new task: among 48 test reviews with exact annotator agreement on one positive
+and one negative target, Experiment 040 tests whether the earlier target's
+opinion cue is copied onto the later target before that later opinion span is
+visible, and whether deleting the earlier cue changes that behavior. This
+sequential intervention uses a second dataset family and 48 review clusters; it
+is still an exploratory benchmark test, not an independent human replication.
+The [frozen protocol](experiments/040-trabl-prior-opinion-interference.md),
+[selection metadata](experiments/040-stimuli.json), runner and tests are committed
+before any new target-model judgments. LessWrong remains deferred until the
+experiment runs and a result survives suitable follow-up.

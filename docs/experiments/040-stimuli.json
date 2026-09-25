@@ -1,0 +1,2162 @@
+[
+  {
+    "id": "trabl-review-0096-pos",
+    "cluster_id": "trabl-review-0096",
+    "source_rows": [
+      96,
+      97
+    ],
+    "role": "earlier",
+    "category": "public transport options nearby",
+    "gold": "positive",
+    "aspect_span": [
+      0,
+      4
+    ],
+    "opinion_span": [
+      11,
+      43
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0096-neg",
+    "cluster_id": "trabl-review-0096",
+    "source_rows": [
+      96,
+      97
+    ],
+    "role": "later",
+    "category": "property staff and service support",
+    "gold": "negative",
+    "aspect_span": [
+      161,
+      178
+    ],
+    "opinion_span": [
+      179,
+      209
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      11,
+      43
+    ]
+  },
+  {
+    "id": "trabl-review-0112-neg",
+    "cluster_id": "trabl-review-0112",
+    "source_rows": [
+      112,
+      113
+    ],
+    "role": "earlier",
+    "category": "beach trip",
+    "gold": "negative",
+    "aspect_span": [
+      222,
+      229
+    ],
+    "opinion_span": [
+      230,
+      238
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0112-pos",
+    "cluster_id": "trabl-review-0112",
+    "source_rows": [
+      112,
+      113
+    ],
+    "role": "later",
+    "category": "value for money",
+    "gold": "positive",
+    "aspect_span": [
+      280,
+      289
+    ],
+    "opinion_span": [
+      290,
+      299
+    ],
+    "prior_gold": "negative",
+    "prior_opinion_span": [
+      230,
+      238
+    ]
+  },
+  {
+    "id": "trabl-review-0130-pos",
+    "cluster_id": "trabl-review-0130",
+    "source_rows": [
+      130,
+      131
+    ],
+    "role": "earlier",
+    "category": "area quietness",
+    "gold": "positive",
+    "aspect_span": [
+      4,
+      8
+    ],
+    "opinion_span": [
+      13,
+      31
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0130-neg",
+    "cluster_id": "trabl-review-0130",
+    "source_rows": [
+      130,
+      131
+    ],
+    "role": "later",
+    "category": "access to the beach",
+    "gold": "negative",
+    "aspect_span": [
+      152,
+      164
+    ],
+    "opinion_span": [
+      165,
+      183
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      13,
+      31
+    ]
+  },
+  {
+    "id": "trabl-review-0158-pos",
+    "cluster_id": "trabl-review-0158",
+    "source_rows": [
+      158,
+      159
+    ],
+    "role": "earlier",
+    "category": "housekeeping clean",
+    "gold": "positive",
+    "aspect_span": [
+      11,
+      15
+    ],
+    "opinion_span": [
+      20,
+      41
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0158-neg",
+    "cluster_id": "trabl-review-0158",
+    "source_rows": [
+      158,
+      159
+    ],
+    "role": "later",
+    "category": "breakfast (by property)",
+    "gold": "negative",
+    "aspect_span": [
+      130,
+      139
+    ],
+    "opinion_span": [
+      144,
+      156
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      20,
+      41
+    ]
+  },
+  {
+    "id": "trabl-review-0168-pos",
+    "cluster_id": "trabl-review-0168",
+    "source_rows": [
+      168,
+      169
+    ],
+    "role": "earlier",
+    "category": "housekeeping clean",
+    "gold": "positive",
+    "aspect_span": [
+      15,
+      23
+    ],
+    "opinion_span": [
+      27,
+      37
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0168-neg",
+    "cluster_id": "trabl-review-0168",
+    "source_rows": [
+      168,
+      169
+    ],
+    "role": "later",
+    "category": "bathroom",
+    "gold": "negative",
+    "aspect_span": [
+      225,
+      235
+    ],
+    "opinion_span": [
+      240,
+      269
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      27,
+      37
+    ]
+  },
+  {
+    "id": "trabl-review-0178-pos",
+    "cluster_id": "trabl-review-0178",
+    "source_rows": [
+      178,
+      179
+    ],
+    "role": "earlier",
+    "category": "connection to the airport",
+    "gold": "positive",
+    "aspect_span": [
+      15,
+      23
+    ],
+    "opinion_span": [
+      39,
+      63
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0178-neg",
+    "cluster_id": "trabl-review-0178",
+    "source_rows": [
+      178,
+      179
+    ],
+    "role": "later",
+    "category": "area quietness",
+    "gold": "negative",
+    "aspect_span": [
+      412,
+      426
+    ],
+    "opinion_span": [
+      447,
+      468
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      39,
+      63
+    ]
+  },
+  {
+    "id": "trabl-review-0184-pos",
+    "cluster_id": "trabl-review-0184",
+    "source_rows": [
+      184,
+      185
+    ],
+    "role": "earlier",
+    "category": "central location",
+    "gold": "positive",
+    "aspect_span": [
+      11,
+      19
+    ],
+    "opinion_span": [
+      24,
+      35
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0184-neg",
+    "cluster_id": "trabl-review-0184",
+    "source_rows": [
+      184,
+      185
+    ],
+    "role": "later",
+    "category": "bed",
+    "gold": "negative",
+    "aspect_span": [
+      180,
+      183
+    ],
+    "opinion_span": [
+      188,
+      196
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      24,
+      35
+    ]
+  },
+  {
+    "id": "trabl-review-0200-neg",
+    "cluster_id": "trabl-review-0200",
+    "source_rows": [
+      200,
+      201
+    ],
+    "role": "earlier",
+    "category": "housekeeping clean",
+    "gold": "negative",
+    "aspect_span": [
+      204,
+      211
+    ],
+    "opinion_span": [
+      212,
+      223
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0200-pos",
+    "cluster_id": "trabl-review-0200",
+    "source_rows": [
+      200,
+      201
+    ],
+    "role": "later",
+    "category": "housekeeping clean",
+    "gold": "positive",
+    "aspect_span": [
+      419,
+      430
+    ],
+    "opinion_span": [
+      431,
+      447
+    ],
+    "prior_gold": "negative",
+    "prior_opinion_span": [
+      212,
+      223
+    ]
+  },
+  {
+    "id": "trabl-review-0280-pos",
+    "cluster_id": "trabl-review-0280",
+    "source_rows": [
+      280,
+      281
+    ],
+    "role": "earlier",
+    "category": "property staff and service support",
+    "gold": "positive",
+    "aspect_span": [
+      99,
+      105
+    ],
+    "opinion_span": [
+      110,
+      157
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0280-neg",
+    "cluster_id": "trabl-review-0280",
+    "source_rows": [
+      280,
+      281
+    ],
+    "role": "later",
+    "category": "airconditioning",
+    "gold": "negative",
+    "aspect_span": [
+      182,
+      197
+    ],
+    "opinion_span": [
+      198,
+      210
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      110,
+      157
+    ]
+  },
+  {
+    "id": "trabl-review-0300-pos",
+    "cluster_id": "trabl-review-0300",
+    "source_rows": [
+      300,
+      301
+    ],
+    "role": "earlier",
+    "category": "central location",
+    "gold": "positive",
+    "aspect_span": [
+      67,
+      75
+    ],
+    "opinion_span": [
+      80,
+      84
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0300-neg",
+    "cluster_id": "trabl-review-0300",
+    "source_rows": [
+      300,
+      301
+    ],
+    "role": "later",
+    "category": "property facilities",
+    "gold": "negative",
+    "aspect_span": [
+      126,
+      134
+    ],
+    "opinion_span": [
+      135,
+      159
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      80,
+      84
+    ]
+  },
+  {
+    "id": "trabl-review-0318-pos",
+    "cluster_id": "trabl-review-0318",
+    "source_rows": [
+      318,
+      319
+    ],
+    "role": "earlier",
+    "category": "property staff and service support",
+    "gold": "positive",
+    "aspect_span": [
+      239,
+      245
+    ],
+    "opinion_span": [
+      250,
+      263
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0318-neg",
+    "cluster_id": "trabl-review-0318",
+    "source_rows": [
+      318,
+      319
+    ],
+    "role": "later",
+    "category": "swimming pool",
+    "gold": "negative",
+    "aspect_span": [
+      513,
+      534
+    ],
+    "opinion_span": [
+      535,
+      560
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      250,
+      263
+    ]
+  },
+  {
+    "id": "trabl-review-0362-pos",
+    "cluster_id": "trabl-review-0362",
+    "source_rows": [
+      362,
+      363
+    ],
+    "role": "earlier",
+    "category": "bed",
+    "gold": "positive",
+    "aspect_span": [
+      244,
+      247
+    ],
+    "opinion_span": [
+      248,
+      258
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0362-neg",
+    "cluster_id": "trabl-review-0362",
+    "source_rows": [
+      362,
+      363
+    ],
+    "role": "later",
+    "category": "area quietness",
+    "gold": "negative",
+    "aspect_span": [
+      374,
+      384
+    ],
+    "opinion_span": [
+      413,
+      446
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      248,
+      258
+    ]
+  },
+  {
+    "id": "trabl-review-0390-pos",
+    "cluster_id": "trabl-review-0390",
+    "source_rows": [
+      390,
+      391
+    ],
+    "role": "earlier",
+    "category": "breakfast (by property)",
+    "gold": "positive",
+    "aspect_span": [
+      94,
+      103
+    ],
+    "opinion_span": [
+      108,
+      117
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0390-neg",
+    "cluster_id": "trabl-review-0390",
+    "source_rows": [
+      390,
+      391
+    ],
+    "role": "later",
+    "category": "dinner",
+    "gold": "negative",
+    "aspect_span": [
+      245,
+      251
+    ],
+    "opinion_span": [
+      252,
+      346
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      108,
+      117
+    ]
+  },
+  {
+    "id": "trabl-review-0398-pos",
+    "cluster_id": "trabl-review-0398",
+    "source_rows": [
+      398,
+      399
+    ],
+    "role": "earlier",
+    "category": "property staff and service support",
+    "gold": "positive",
+    "aspect_span": [
+      76,
+      81
+    ],
+    "opinion_span": [
+      86,
+      97
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0398-neg",
+    "cluster_id": "trabl-review-0398",
+    "source_rows": [
+      398,
+      399
+    ],
+    "role": "later",
+    "category": "restaurant",
+    "gold": "negative",
+    "aspect_span": [
+      270,
+      280
+    ],
+    "opinion_span": [
+      302,
+      320
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      86,
+      97
+    ]
+  },
+  {
+    "id": "trabl-review-0402-pos",
+    "cluster_id": "trabl-review-0402",
+    "source_rows": [
+      402,
+      403
+    ],
+    "role": "earlier",
+    "category": "property staff and service support",
+    "gold": "positive",
+    "aspect_span": [
+      52,
+      57
+    ],
+    "opinion_span": [
+      62,
+      75
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0402-neg",
+    "cluster_id": "trabl-review-0402",
+    "source_rows": [
+      402,
+      403
+    ],
+    "role": "later",
+    "category": "bed",
+    "gold": "negative",
+    "aspect_span": [
+      117,
+      120
+    ],
+    "opinion_span": [
+      125,
+      139
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      62,
+      75
+    ]
+  },
+  {
+    "id": "trabl-review-0438-pos",
+    "cluster_id": "trabl-review-0438",
+    "source_rows": [
+      438,
+      439
+    ],
+    "role": "earlier",
+    "category": "central location",
+    "gold": "positive",
+    "aspect_span": [
+      11,
+      19
+    ],
+    "opinion_span": [
+      23,
+      32
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0438-neg",
+    "cluster_id": "trabl-review-0438",
+    "source_rows": [
+      438,
+      439
+    ],
+    "role": "later",
+    "category": "housekeeping clean",
+    "gold": "negative",
+    "aspect_span": [
+      61,
+      69
+    ],
+    "opinion_span": [
+      73,
+      81
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      23,
+      32
+    ]
+  },
+  {
+    "id": "trabl-review-0454-pos",
+    "cluster_id": "trabl-review-0454",
+    "source_rows": [
+      454,
+      455
+    ],
+    "role": "earlier",
+    "category": "bed",
+    "gold": "positive",
+    "aspect_span": [
+      29,
+      42
+    ],
+    "opinion_span": [
+      48,
+      60
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0454-neg",
+    "cluster_id": "trabl-review-0454",
+    "source_rows": [
+      454,
+      455
+    ],
+    "role": "later",
+    "category": "area quietness",
+    "gold": "negative",
+    "aspect_span": [
+      338,
+      348
+    ],
+    "opinion_span": [
+      349,
+      375
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      48,
+      60
+    ]
+  },
+  {
+    "id": "trabl-review-0462-pos",
+    "cluster_id": "trabl-review-0462",
+    "source_rows": [
+      462,
+      463
+    ],
+    "role": "earlier",
+    "category": "check-in/check-out",
+    "gold": "positive",
+    "aspect_span": [
+      84,
+      106
+    ],
+    "opinion_span": [
+      110,
+      129
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0462-neg",
+    "cluster_id": "trabl-review-0462",
+    "source_rows": [
+      462,
+      463
+    ],
+    "role": "later",
+    "category": "parking",
+    "gold": "negative",
+    "aspect_span": [
+      251,
+      257
+    ],
+    "opinion_span": [
+      261,
+      282
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      110,
+      129
+    ]
+  },
+  {
+    "id": "trabl-review-0470-pos",
+    "cluster_id": "trabl-review-0470",
+    "source_rows": [
+      470,
+      471
+    ],
+    "role": "earlier",
+    "category": "bathroom comfort",
+    "gold": "positive",
+    "aspect_span": [
+      11,
+      18
+    ],
+    "opinion_span": [
+      23,
+      27
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0470-neg",
+    "cluster_id": "trabl-review-0470",
+    "source_rows": [
+      470,
+      471
+    ],
+    "role": "later",
+    "category": "room amenities",
+    "gold": "negative",
+    "aspect_span": [
+      83,
+      88
+    ],
+    "opinion_span": [
+      93,
+      101
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      23,
+      27
+    ]
+  },
+  {
+    "id": "trabl-review-0482-pos",
+    "cluster_id": "trabl-review-0482",
+    "source_rows": [
+      482,
+      483
+    ],
+    "role": "earlier",
+    "category": "central location",
+    "gold": "positive",
+    "aspect_span": [
+      11,
+      19
+    ],
+    "opinion_span": [
+      24,
+      97
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0482-neg",
+    "cluster_id": "trabl-review-0482",
+    "source_rows": [
+      482,
+      483
+    ],
+    "role": "later",
+    "category": "room comfort",
+    "gold": "negative",
+    "aspect_span": [
+      405,
+      409
+    ],
+    "opinion_span": [
+      414,
+      460
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      24,
+      97
+    ]
+  },
+  {
+    "id": "trabl-review-0494-pos",
+    "cluster_id": "trabl-review-0494",
+    "source_rows": [
+      494,
+      495
+    ],
+    "role": "earlier",
+    "category": "property staff and service support",
+    "gold": "positive",
+    "aspect_span": [
+      59,
+      85
+    ],
+    "opinion_span": [
+      90,
+      113
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0494-neg",
+    "cluster_id": "trabl-review-0494",
+    "source_rows": [
+      494,
+      495
+    ],
+    "role": "later",
+    "category": "property staff and service support",
+    "gold": "negative",
+    "aspect_span": [
+      155,
+      163
+    ],
+    "opinion_span": [
+      173,
+      228
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      90,
+      113
+    ]
+  },
+  {
+    "id": "trabl-review-0498-pos",
+    "cluster_id": "trabl-review-0498",
+    "source_rows": [
+      498,
+      499
+    ],
+    "role": "earlier",
+    "category": "access to the beach",
+    "gold": "positive",
+    "aspect_span": [
+      166,
+      174
+    ],
+    "opinion_span": [
+      178,
+      194
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0498-neg",
+    "cluster_id": "trabl-review-0498",
+    "source_rows": [
+      498,
+      499
+    ],
+    "role": "later",
+    "category": "area quietness",
+    "gold": "negative",
+    "aspect_span": [
+      363,
+      387
+    ],
+    "opinion_span": [
+      392,
+      408
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      178,
+      194
+    ]
+  },
+  {
+    "id": "trabl-review-0522-pos",
+    "cluster_id": "trabl-review-0522",
+    "source_rows": [
+      522,
+      523
+    ],
+    "role": "earlier",
+    "category": "parking",
+    "gold": "positive",
+    "aspect_span": [
+      197,
+      204
+    ],
+    "opinion_span": [
+      205,
+      226
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0522-neg",
+    "cluster_id": "trabl-review-0522",
+    "source_rows": [
+      522,
+      523
+    ],
+    "role": "later",
+    "category": "room amenities",
+    "gold": "negative",
+    "aspect_span": [
+      405,
+      409
+    ],
+    "opinion_span": [
+      435,
+      462
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      205,
+      226
+    ]
+  },
+  {
+    "id": "trabl-review-0528-neg",
+    "cluster_id": "trabl-review-0528",
+    "source_rows": [
+      528,
+      529
+    ],
+    "role": "earlier",
+    "category": "bathroom",
+    "gold": "negative",
+    "aspect_span": [
+      216,
+      222
+    ],
+    "opinion_span": [
+      223,
+      228
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0528-pos",
+    "cluster_id": "trabl-review-0528",
+    "source_rows": [
+      528,
+      529
+    ],
+    "role": "later",
+    "category": "room comfort",
+    "gold": "positive",
+    "aspect_span": [
+      268,
+      278
+    ],
+    "opinion_span": [
+      285,
+      304
+    ],
+    "prior_gold": "negative",
+    "prior_opinion_span": [
+      223,
+      228
+    ]
+  },
+  {
+    "id": "trabl-review-0530-pos",
+    "cluster_id": "trabl-review-0530",
+    "source_rows": [
+      530,
+      531
+    ],
+    "role": "earlier",
+    "category": "property staff and service support",
+    "gold": "positive",
+    "aspect_span": [
+      210,
+      218
+    ],
+    "opinion_span": [
+      223,
+      236
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0530-neg",
+    "cluster_id": "trabl-review-0530",
+    "source_rows": [
+      530,
+      531
+    ],
+    "role": "later",
+    "category": "breakfast (by property)",
+    "gold": "negative",
+    "aspect_span": [
+      445,
+      454
+    ],
+    "opinion_span": [
+      469,
+      529
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      223,
+      236
+    ]
+  },
+  {
+    "id": "trabl-review-0536-pos",
+    "cluster_id": "trabl-review-0536",
+    "source_rows": [
+      536,
+      537
+    ],
+    "role": "earlier",
+    "category": "bathroom",
+    "gold": "positive",
+    "aspect_span": [
+      105,
+      113
+    ],
+    "opinion_span": [
+      118,
+      122
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0536-neg",
+    "cluster_id": "trabl-review-0536",
+    "source_rows": [
+      536,
+      537
+    ],
+    "role": "later",
+    "category": "room amenities",
+    "gold": "negative",
+    "aspect_span": [
+      235,
+      249
+    ],
+    "opinion_span": [
+      250,
+      269
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      118,
+      122
+    ]
+  },
+  {
+    "id": "trabl-review-0540-pos",
+    "cluster_id": "trabl-review-0540",
+    "source_rows": [
+      540,
+      541
+    ],
+    "role": "earlier",
+    "category": "bed",
+    "gold": "positive",
+    "aspect_span": [
+      99,
+      107
+    ],
+    "opinion_span": [
+      112,
+      117
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0540-neg",
+    "cluster_id": "trabl-review-0540",
+    "source_rows": [
+      540,
+      541
+    ],
+    "role": "later",
+    "category": "bathroom",
+    "gold": "negative",
+    "aspect_span": [
+      211,
+      219
+    ],
+    "opinion_span": [
+      226,
+      234
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      112,
+      117
+    ]
+  },
+  {
+    "id": "trabl-review-0578-pos",
+    "cluster_id": "trabl-review-0578",
+    "source_rows": [
+      578,
+      579
+    ],
+    "role": "earlier",
+    "category": "central location",
+    "gold": "positive",
+    "aspect_span": [
+      38,
+      55
+    ],
+    "opinion_span": [
+      59,
+      63
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0578-neg",
+    "cluster_id": "trabl-review-0578",
+    "source_rows": [
+      578,
+      579
+    ],
+    "role": "later",
+    "category": "kitchen",
+    "gold": "negative",
+    "aspect_span": [
+      112,
+      130
+    ],
+    "opinion_span": [
+      135,
+      152
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      59,
+      63
+    ]
+  },
+  {
+    "id": "trabl-review-0606-pos",
+    "cluster_id": "trabl-review-0606",
+    "source_rows": [
+      606,
+      607
+    ],
+    "role": "earlier",
+    "category": "",
+    "gold": "positive",
+    "aspect_span": [
+      11,
+      17
+    ],
+    "opinion_span": [
+      21,
+      32
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0606-neg",
+    "cluster_id": "trabl-review-0606",
+    "source_rows": [
+      606,
+      607
+    ],
+    "role": "later",
+    "category": "room comfort",
+    "gold": "negative",
+    "aspect_span": [
+      105,
+      115
+    ],
+    "opinion_span": [
+      120,
+      128
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      21,
+      32
+    ]
+  },
+  {
+    "id": "trabl-review-0660-pos",
+    "cluster_id": "trabl-review-0660",
+    "source_rows": [
+      660,
+      661
+    ],
+    "role": "earlier",
+    "category": "central location",
+    "gold": "positive",
+    "aspect_span": [
+      11,
+      19
+    ],
+    "opinion_span": [
+      23,
+      30
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0660-neg",
+    "cluster_id": "trabl-review-0660",
+    "source_rows": [
+      660,
+      661
+    ],
+    "role": "later",
+    "category": "balcony",
+    "gold": "negative",
+    "aspect_span": [
+      173,
+      180
+    ],
+    "opinion_span": [
+      192,
+      266
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      23,
+      30
+    ]
+  },
+  {
+    "id": "trabl-review-0688-pos",
+    "cluster_id": "trabl-review-0688",
+    "source_rows": [
+      688,
+      689
+    ],
+    "role": "earlier",
+    "category": "breakfast (by property)",
+    "gold": "positive",
+    "aspect_span": [
+      99,
+      108
+    ],
+    "opinion_span": [
+      113,
+      124
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0688-neg",
+    "cluster_id": "trabl-review-0688",
+    "source_rows": [
+      688,
+      689
+    ],
+    "role": "later",
+    "category": "bathroom",
+    "gold": "negative",
+    "aspect_span": [
+      272,
+      280
+    ],
+    "opinion_span": [
+      281,
+      291
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      113,
+      124
+    ]
+  },
+  {
+    "id": "trabl-review-0700-pos",
+    "cluster_id": "trabl-review-0700",
+    "source_rows": [
+      700,
+      701
+    ],
+    "role": "earlier",
+    "category": "wifi connection",
+    "gold": "positive",
+    "aspect_span": [
+      135,
+      139
+    ],
+    "opinion_span": [
+      140,
+      155
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0700-neg",
+    "cluster_id": "trabl-review-0700",
+    "source_rows": [
+      700,
+      701
+    ],
+    "role": "later",
+    "category": "bathroom",
+    "gold": "negative",
+    "aspect_span": [
+      226,
+      230
+    ],
+    "opinion_span": [
+      247,
+      258
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      140,
+      155
+    ]
+  },
+  {
+    "id": "trabl-review-0706-pos",
+    "cluster_id": "trabl-review-0706",
+    "source_rows": [
+      706,
+      707
+    ],
+    "role": "earlier",
+    "category": "property facilities",
+    "gold": "positive",
+    "aspect_span": [
+      212,
+      225
+    ],
+    "opinion_span": [
+      230,
+      246
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0706-neg",
+    "cluster_id": "trabl-review-0706",
+    "source_rows": [
+      706,
+      707
+    ],
+    "role": "later",
+    "category": "property staff and service support",
+    "gold": "negative",
+    "aspect_span": [
+      281,
+      293
+    ],
+    "opinion_span": [
+      294,
+      316
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      230,
+      246
+    ]
+  },
+  {
+    "id": "trabl-review-0718-pos",
+    "cluster_id": "trabl-review-0718",
+    "source_rows": [
+      718,
+      719
+    ],
+    "role": "earlier",
+    "category": "central location",
+    "gold": "positive",
+    "aspect_span": [
+      104,
+      112
+    ],
+    "opinion_span": [
+      113,
+      122
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0718-neg",
+    "cluster_id": "trabl-review-0718",
+    "source_rows": [
+      718,
+      719
+    ],
+    "role": "later",
+    "category": "bathroom",
+    "gold": "negative",
+    "aspect_span": [
+      165,
+      173
+    ],
+    "opinion_span": [
+      174,
+      191
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      113,
+      122
+    ]
+  },
+  {
+    "id": "trabl-review-0736-pos",
+    "cluster_id": "trabl-review-0736",
+    "source_rows": [
+      736,
+      737
+    ],
+    "role": "earlier",
+    "category": "property facilities",
+    "gold": "positive",
+    "aspect_span": [
+      145,
+      157
+    ],
+    "opinion_span": [
+      162,
+      187
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0736-neg",
+    "cluster_id": "trabl-review-0736",
+    "source_rows": [
+      736,
+      737
+    ],
+    "role": "later",
+    "category": "bathroom",
+    "gold": "negative",
+    "aspect_span": [
+      292,
+      307
+    ],
+    "opinion_span": [
+      337,
+      377
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      162,
+      187
+    ]
+  },
+  {
+    "id": "trabl-review-0766-pos",
+    "cluster_id": "trabl-review-0766",
+    "source_rows": [
+      766,
+      767
+    ],
+    "role": "earlier",
+    "category": "bar",
+    "gold": "positive",
+    "aspect_span": [
+      42,
+      66
+    ],
+    "opinion_span": [
+      72,
+      85
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0766-neg",
+    "cluster_id": "trabl-review-0766",
+    "source_rows": [
+      766,
+      767
+    ],
+    "role": "later",
+    "category": "reception",
+    "gold": "negative",
+    "aspect_span": [
+      189,
+      198
+    ],
+    "opinion_span": [
+      217,
+      261
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      72,
+      85
+    ]
+  },
+  {
+    "id": "trabl-review-0774-pos",
+    "cluster_id": "trabl-review-0774",
+    "source_rows": [
+      774,
+      775
+    ],
+    "role": "earlier",
+    "category": "property staff and service support",
+    "gold": "positive",
+    "aspect_span": [
+      143,
+      158
+    ],
+    "opinion_span": [
+      159,
+      200
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0774-neg",
+    "cluster_id": "trabl-review-0774",
+    "source_rows": [
+      774,
+      775
+    ],
+    "role": "later",
+    "category": "room amenities",
+    "gold": "negative",
+    "aspect_span": [
+      340,
+      350
+    ],
+    "opinion_span": [
+      351,
+      366
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      159,
+      200
+    ]
+  },
+  {
+    "id": "trabl-review-0776-pos",
+    "cluster_id": "trabl-review-0776",
+    "source_rows": [
+      776,
+      777
+    ],
+    "role": "earlier",
+    "category": "property staff and service support",
+    "gold": "positive",
+    "aspect_span": [
+      11,
+      16
+    ],
+    "opinion_span": [
+      22,
+      47
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0776-neg",
+    "cluster_id": "trabl-review-0776",
+    "source_rows": [
+      776,
+      777
+    ],
+    "role": "later",
+    "category": "breakfast (by property)",
+    "gold": "negative",
+    "aspect_span": [
+      73,
+      82
+    ],
+    "opinion_span": [
+      87,
+      138
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      22,
+      47
+    ]
+  },
+  {
+    "id": "trabl-review-0792-pos",
+    "cluster_id": "trabl-review-0792",
+    "source_rows": [
+      792,
+      793
+    ],
+    "role": "earlier",
+    "category": "property staff and service support",
+    "gold": "positive",
+    "aspect_span": [
+      11,
+      15
+    ],
+    "opinion_span": [
+      20,
+      40
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0792-neg",
+    "cluster_id": "trabl-review-0792",
+    "source_rows": [
+      792,
+      793
+    ],
+    "role": "later",
+    "category": "kitchen",
+    "gold": "negative",
+    "aspect_span": [
+      92,
+      99
+    ],
+    "opinion_span": [
+      100,
+      112
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      20,
+      40
+    ]
+  },
+  {
+    "id": "trabl-review-0798-pos",
+    "cluster_id": "trabl-review-0798",
+    "source_rows": [
+      798,
+      799
+    ],
+    "role": "earlier",
+    "category": "bathroom",
+    "gold": "positive",
+    "aspect_span": [
+      137,
+      145
+    ],
+    "opinion_span": [
+      151,
+      155
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0798-neg",
+    "cluster_id": "trabl-review-0798",
+    "source_rows": [
+      798,
+      799
+    ],
+    "role": "later",
+    "category": "reception",
+    "gold": "negative",
+    "aspect_span": [
+      347,
+      361
+    ],
+    "opinion_span": [
+      365,
+      411
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      151,
+      155
+    ]
+  },
+  {
+    "id": "trabl-review-0806-pos",
+    "cluster_id": "trabl-review-0806",
+    "source_rows": [
+      806,
+      807
+    ],
+    "role": "earlier",
+    "category": "room amenities",
+    "gold": "positive",
+    "aspect_span": [
+      182,
+      186
+    ],
+    "opinion_span": [
+      190,
+      202
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0806-neg",
+    "cluster_id": "trabl-review-0806",
+    "source_rows": [
+      806,
+      807
+    ],
+    "role": "later",
+    "category": "room amenities",
+    "gold": "negative",
+    "aspect_span": [
+      570,
+      596
+    ],
+    "opinion_span": [
+      613,
+      621
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      190,
+      202
+    ]
+  },
+  {
+    "id": "trabl-review-0816-pos",
+    "cluster_id": "trabl-review-0816",
+    "source_rows": [
+      816,
+      817
+    ],
+    "role": "earlier",
+    "category": "property staff and service support",
+    "gold": "positive",
+    "aspect_span": [
+      45,
+      50
+    ],
+    "opinion_span": [
+      51,
+      59
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0816-neg",
+    "cluster_id": "trabl-review-0816",
+    "source_rows": [
+      816,
+      817
+    ],
+    "role": "later",
+    "category": "value for money",
+    "gold": "negative",
+    "aspect_span": [
+      601,
+      606
+    ],
+    "opinion_span": [
+      630,
+      642
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      51,
+      59
+    ]
+  },
+  {
+    "id": "trabl-review-0830-pos",
+    "cluster_id": "trabl-review-0830",
+    "source_rows": [
+      830,
+      831
+    ],
+    "role": "earlier",
+    "category": "central location",
+    "gold": "positive",
+    "aspect_span": [
+      15,
+      23
+    ],
+    "opinion_span": [
+      41,
+      50
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0830-neg",
+    "cluster_id": "trabl-review-0830",
+    "source_rows": [
+      830,
+      831
+    ],
+    "role": "later",
+    "category": "room cleanliness",
+    "gold": "negative",
+    "aspect_span": [
+      442,
+      453
+    ],
+    "opinion_span": [
+      454,
+      495
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      41,
+      50
+    ]
+  },
+  {
+    "id": "trabl-review-0842-pos",
+    "cluster_id": "trabl-review-0842",
+    "source_rows": [
+      842,
+      843
+    ],
+    "role": "earlier",
+    "category": "central location",
+    "gold": "positive",
+    "aspect_span": [
+      15,
+      23
+    ],
+    "opinion_span": [
+      27,
+      31
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0842-neg",
+    "cluster_id": "trabl-review-0842",
+    "source_rows": [
+      842,
+      843
+    ],
+    "role": "later",
+    "category": "room cleanliness",
+    "gold": "negative",
+    "aspect_span": [
+      40,
+      45
+    ],
+    "opinion_span": [
+      140,
+      166
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      27,
+      31
+    ]
+  },
+  {
+    "id": "trabl-review-0850-pos",
+    "cluster_id": "trabl-review-0850",
+    "source_rows": [
+      850,
+      851
+    ],
+    "role": "earlier",
+    "category": "property staff and service support",
+    "gold": "positive",
+    "aspect_span": [
+      56,
+      72
+    ],
+    "opinion_span": [
+      77,
+      86
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0850-neg",
+    "cluster_id": "trabl-review-0850",
+    "source_rows": [
+      850,
+      851
+    ],
+    "role": "later",
+    "category": "room amenities",
+    "gold": "negative",
+    "aspect_span": [
+      166,
+      175
+    ],
+    "opinion_span": [
+      180,
+      186
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      77,
+      86
+    ]
+  },
+  {
+    "id": "trabl-review-0858-pos",
+    "cluster_id": "trabl-review-0858",
+    "source_rows": [
+      858,
+      859
+    ],
+    "role": "earlier",
+    "category": "property staff and service support",
+    "gold": "positive",
+    "aspect_span": [
+      136,
+      141
+    ],
+    "opinion_span": [
+      147,
+      159
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0858-neg",
+    "cluster_id": "trabl-review-0858",
+    "source_rows": [
+      858,
+      859
+    ],
+    "role": "later",
+    "category": "room amenities",
+    "gold": "negative",
+    "aspect_span": [
+      383,
+      390
+    ],
+    "opinion_span": [
+      391,
+      400
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      147,
+      159
+    ]
+  },
+  {
+    "id": "trabl-review-0870-neg",
+    "cluster_id": "trabl-review-0870",
+    "source_rows": [
+      870,
+      871
+    ],
+    "role": "earlier",
+    "category": "family rooms",
+    "gold": "negative",
+    "aspect_span": [
+      257,
+      261
+    ],
+    "opinion_span": [
+      266,
+      280
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0870-pos",
+    "cluster_id": "trabl-review-0870",
+    "source_rows": [
+      870,
+      871
+    ],
+    "role": "later",
+    "category": "property staff and service support",
+    "gold": "positive",
+    "aspect_span": [
+      358,
+      363
+    ],
+    "opinion_span": [
+      369,
+      394
+    ],
+    "prior_gold": "negative",
+    "prior_opinion_span": [
+      266,
+      280
+    ]
+  },
+  {
+    "id": "trabl-review-0886-pos",
+    "cluster_id": "trabl-review-0886",
+    "source_rows": [
+      886,
+      887
+    ],
+    "role": "earlier",
+    "category": "24 hour front desk",
+    "gold": "positive",
+    "aspect_span": [
+      64,
+      73
+    ],
+    "opinion_span": [
+      77,
+      86
+    ],
+    "prior_gold": null,
+    "prior_opinion_span": null
+  },
+  {
+    "id": "trabl-review-0886-neg",
+    "cluster_id": "trabl-review-0886",
+    "source_rows": [
+      886,
+      887
+    ],
+    "role": "later",
+    "category": "airconditioning",
+    "gold": "negative",
+    "aspect_span": [
+      217,
+      233
+    ],
+    "opinion_span": [
+      234,
+      245
+    ],
+    "prior_gold": "positive",
+    "prior_opinion_span": [
+      77,
+      86
+    ]
+  }
+]
