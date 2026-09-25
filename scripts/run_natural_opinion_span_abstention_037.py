@@ -178,6 +178,12 @@ def laya_map_key(row):
     return f"{row['aspect']}\t{row['visible_text']}"
 
 
+def decode_laya_choice(choice, mapping):
+    if choice not in mapping:
+        raise ValueError(f"Laya returned unknown choice key: {choice}")
+    return mapping[choice]
+
+
 def run_laya(jobs):
     import laya
 
@@ -204,10 +210,13 @@ def run_laya(jobs):
             batch_size=BATCH_SIZE,
             sort_by_length=True,
         )
-        reverse = {key: label for label, key in mapping.items()}
         outcomes.extend(
             {key: row[key] for key in OUTCOME_KEYS}
-            | {"judge": "laya", "wrapper": "four_way", "label": reverse[result["answers"]["polarity"]["choice"]]}
+            | {
+                "judge": "laya",
+                "wrapper": "four_way",
+                "label": decode_laya_choice(result["answers"]["polarity"]["choice"], mapping),
+            }
             for row, result in zip(group, results)
         )
         print(f"037 Laya: {len(outcomes)}/{len(jobs)}", flush=True)

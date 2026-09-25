@@ -9,6 +9,7 @@ sys.path.insert(0, str(Path(__file__).parents[1] / "scripts"))
 import analyze_natural_opinion_span_abstention_037 as analysis
 from run_natural_opinion_span_abstention_037 import (
     PUBLIC_STIMULUS_KEYS,
+    decode_laya_choice,
     laya_map_key,
     load_source_items,
     make_jobs,
@@ -57,6 +58,9 @@ def test_laya_mapping_key_reuses_same_aspect_and_visible_prefix():
         key = laya_map_key(row)
         keyed.setdefault(key, set()).add((row["aspect"], row["visible_text"]))
     assert all(len(values) == 1 for values in keyed.values())
+    assert decode_laya_choice("B", {"A": "negative", "B": "unclear"}) == "unclear"
+    with pytest.raises(ValueError, match="unknown choice"):
+        decode_laya_choice("E", {"A": "positive"})
 
 
 def test_label_parsers_are_strict_about_allowed_output_sets():
