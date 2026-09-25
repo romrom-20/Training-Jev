@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "96_frozen_target_trials": true,
+    "48_review_clusters": true,
+    "balanced_opposite_labels": true,
+    "48_later_targets": true,
+    "1680_complete_predictions": true,
+    "protocol_hash_matches": true,
+    "stimulus_hash_matches": true,
+    "prediction_hash_matches": true,
+    "analysis_hash_matches": true,
+    "laya_triage_hash_recorded": true,
+    "frozen_selection_hash_matches": true,
+    "dataset_revision_pinned": true,
+    "no_review_text_in_public_rows": true
+  },
+  "checks_passed": true,
+  "primary_diagnostic_gate_passed": false
+}

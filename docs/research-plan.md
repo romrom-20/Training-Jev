@@ -663,3 +663,17 @@ The [frozen protocol](experiments/040-trabl-prior-opinion-interference.md),
 [selection metadata](experiments/040-stimuli.json), runner and tests are committed
 before any new target-model judgments. LessWrong remains deferred until the
 experiment runs and a result survives suitable follow-up.
+
+**Experiment 040 outcome.** The preregistered Qwen later-target opposite-prior
+copy-rate contrast was +2.1 points (95% review-cluster interval 0.0 to +6.3),
+below the 5-point gate and without a strictly positive interval. The targeted
+sentiment-copy hypothesis did not pass. A predeclared secondary did show that
+Phi-3 Mini's polarity accuracy on natural prefixes was 83.3% versus 57.3% on
+aspect-only input (paired gain +26.0 points, 95% interval +16.7 to +35.4); Qwen's
+gain was smaller and uncertain. This strengthens the independent-corpus
+pre-opinion signal for one model, but the small, selected TRABL test set, possible
+source-review exposure, and lack of human sufficiency labels keep the result
+short of a field-level claim. The complete
+[`040 result bundle`](../results/trabl-prior-opinion-interference-v1/README.md)
+records all judges and limits. LessWrong remains deferred pending a stronger
+follow-up.

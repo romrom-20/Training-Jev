@@ -107,12 +107,16 @@ def analyze(stimuli, predictions):
     for group, rows in rows_by_group.items():
         judge, wrapper, condition = group
         covered = [row for row in rows if row["label"] in {"positive", "negative"}]
+        correctness = [row | {"correct": int(row["label"] == row["gold"])} for row in rows]
         summary["/".join(group)] = {
             "n": len(rows),
             "coverage": len(covered) / len(rows) if rows else None,
             "abstention_or_nonbinary_rate": 1 - len(covered) / len(rows) if rows else None,
             "accuracy_all_trials": float(
                 np.mean([row["label"] == row["gold"] for row in rows])
+            ),
+            "accuracy_all_trials_cluster_bootstrap": cluster_bootstrap(
+                correctness, lambda sample: np.mean([row["correct"] for row in sample]), SEED + 1
             ),
             "accuracy_when_binary": (
                 float(np.mean([row["label"] == row["gold"] for row in covered]))
@@ -123,6 +127,7 @@ def analyze(stimuli, predictions):
         }
 
     paired_accuracy = {}
+    paired_accuracy_differences = {}
     for judge, wrapper in (
         ("laya", "four_way"),
         ("qwen2.5-3b", "forced_binary"),
@@ -136,16 +141,51 @@ def analyze(stimuli, predictions):
             for row in rows:
                 clusters[row["cluster_id"]].append(row)
             complete = [
-                int(
-                    len(cluster_rows) == 2
-                    and all(row["label"] == row["gold"] for row in cluster_rows)
-                )
-                for cluster_rows in clusters.values()
+                {
+                    "cluster_id": cluster_id,
+                    "both_correct": int(
+                        len(cluster_rows) == 2
+                        and all(row["label"] == row["gold"] for row in cluster_rows)
+                    ),
+                }
+                for cluster_id, cluster_rows in clusters.items()
             ]
             paired_accuracy[f"{judge}/{wrapper}/{condition}"] = {
-                "both_opposite_aspects_correct_rate": float(np.mean(complete)),
-                "n_review_clusters": len(clusters),
+                "both_opposite_aspects_correct_rate": cluster_bootstrap(
+                    complete,
+                    lambda sample: np.mean([row["both_correct"] for row in sample]),
+                    SEED + 2,
+                ),
             }
+        for first_condition, second_condition in (
+            ("natural_prefix", "aspect_only"),
+            ("opinion_visible", "natural_prefix"),
+        ):
+            first = {
+                row["id"]: row
+                for row in rows_by_group[(judge, wrapper, first_condition)]
+            }
+            second = {
+                row["id"]: row
+                for row in rows_by_group[(judge, wrapper, second_condition)]
+            }
+            differences = []
+            for stimulus in stimuli:
+                left, right = first[stimulus["id"]], second[stimulus["id"]]
+                differences.append(
+                    {
+                        "cluster_id": stimulus["cluster_id"],
+                        "difference": int(left["label"] == left["gold"])
+                        - int(right["label"] == right["gold"]),
+                    }
+                )
+            paired_accuracy_differences[
+                f"{judge}/{wrapper}/{first_condition}_minus_{second_condition}"
+            ] = cluster_bootstrap(
+                differences,
+                lambda sample: np.mean([row["difference"] for row in sample]),
+                SEED + 3,
+            )
 
     copy_rate = {}
     for judge, wrapper in (
@@ -191,6 +231,21 @@ def analyze(stimuli, predictions):
         primary["natural_coverage"] = float(np.mean([row["natural_covered"] for row in paired_rows]))
         primary["deleted_coverage"] = float(np.mean([row["deleted_covered"] for row in paired_rows]))
         primary["paired_cluster_rows"] = len(paired_rows)
+        primary["natural_accuracy_cluster_bootstrap"] = cluster_bootstrap(
+            [row | {"correct": row["natural_correct"]} for row in paired_rows],
+            lambda sample: np.mean([row["correct"] for row in sample]),
+            SEED + 4,
+        )
+        primary["deleted_accuracy_cluster_bootstrap"] = cluster_bootstrap(
+            [row | {"correct": row["deleted_correct"]} for row in paired_rows],
+            lambda sample: np.mean([row["correct"] for row in sample]),
+            SEED + 5,
+        )
+        primary["natural_minus_deleted_accuracy_cluster_bootstrap"] = cluster_bootstrap(
+            [row | {"difference": row["natural_correct"] - row["deleted_correct"]} for row in paired_rows],
+            lambda sample: np.mean([row["difference"] for row in sample]),
+            SEED + 6,
+        )
         primary["gate_passed"] = (
             primary["estimate"] >= 0.05 and primary["cluster_bootstrap_95_ci"][0] > 0
         )
@@ -203,6 +258,7 @@ def analyze(stimuli, predictions):
         "later_target_copy_rate_contrasts": copy_rate,
         "condition_metrics": summary,
         "paired_review_metrics": paired_accuracy,
+        "paired_accuracy_differences": paired_accuracy_differences,
         "n_target_trials": len(stimuli),
         "n_review_clusters": len({row["cluster_id"] for row in stimuli}),
         "n_later_target_trials": sum(row["role"] == "later" for row in stimuli),
@@ -226,7 +282,13 @@ def main():
     predictions = json.loads((args.results / "predictions.json").read_text())
     manifest = json.loads((args.results / "manifest.json").read_text())
     analysis = analyze(stimuli, predictions)
-    (args.results / "analysis.json").write_text(json.dumps(analysis, indent=2) + "\n")
+    analysis_path = args.results / "analysis.json"
+    analysis_path.write_text(json.dumps(analysis, indent=2) + "\n")
+    manifest["analyzer_sha256"] = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+    manifest["analysis_sha256"] = hashlib.sha256(analysis_path.read_bytes()).hexdigest()
+    (args.results / "manifest.json").write_text(
+        json.dumps(manifest, indent=2, sort_keys=True) + "\n"
+    )
     check_map = {
         "96_frozen_target_trials": len(stimuli) == 96,
         "48_review_clusters": len({row["cluster_id"] for row in stimuli}) == 48,
@@ -240,6 +302,10 @@ def main():
         == hashlib.sha256((args.results / "stimuli.json").read_bytes()).hexdigest(),
         "prediction_hash_matches": manifest["predictions_sha256"]
         == hashlib.sha256((args.results / "predictions.json").read_bytes()).hexdigest(),
+        "analysis_hash_matches": manifest["analysis_sha256"]
+        == hashlib.sha256(analysis_path.read_bytes()).hexdigest(),
+        "laya_triage_hash_recorded": manifest["laya_triage_trace_sha256"]
+        == "f6728865fd43d3b55ad3825c1a3b54733093389236d84130bb3401b2d1c9fb51",
         "frozen_selection_hash_matches": hashlib.sha256(STIMULI.read_bytes()).hexdigest()
         == "7abd6a1ab5d4f86190cfd727f452042953d4e030f39d335a88cec17f37db997b",
         "dataset_revision_pinned": manifest["dataset_revision"] == SOURCE_REVISION,

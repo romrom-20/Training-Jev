@@ -1,0 +1,939 @@
+{
+  "experiment": "040",
+  "primary_endpoint": "Qwen2.5-3B forced-binary later-target opposite-prior copy rate: natural prefix minus prior-opinion-deleted prefix",
+  "primary_diagnostic_gate_passed": false,
+  "later_target_copy_rate_contrasts": {
+    "qwen2.5-3b/forced_binary": {
+      "estimate": 0.020833333333333332,
+      "cluster_bootstrap_95_ci": [
+        0.0,
+        0.0625
+      ],
+      "n_trials": 48,
+      "n_review_clusters": 48,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20260940,
+      "natural_copy_rate": 0.2708333333333333,
+      "deleted_copy_rate": 0.25,
+      "natural_accuracy": 0.7291666666666666,
+      "deleted_accuracy": 0.75,
+      "natural_coverage": 1.0,
+      "deleted_coverage": 1.0,
+      "paired_cluster_rows": 48,
+      "natural_accuracy_cluster_bootstrap": {
+        "estimate": 0.7291666666666666,
+        "cluster_bootstrap_95_ci": [
+          0.6041666666666666,
+          0.8541666666666666
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260944
+      },
+      "deleted_accuracy_cluster_bootstrap": {
+        "estimate": 0.75,
+        "cluster_bootstrap_95_ci": [
+          0.625,
+          0.875
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260945
+      },
+      "natural_minus_deleted_accuracy_cluster_bootstrap": {
+        "estimate": -0.020833333333333332,
+        "cluster_bootstrap_95_ci": [
+          -0.0625,
+          0.0
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260946
+      },
+      "gate_passed": false
+    },
+    "phi3-mini/forced_binary": {
+      "estimate": -0.0625,
+      "cluster_bootstrap_95_ci": [
+        -0.14583333333333334,
+        0.0
+      ],
+      "n_trials": 48,
+      "n_review_clusters": 48,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20260940,
+      "natural_copy_rate": 0.25,
+      "deleted_copy_rate": 0.3125,
+      "natural_accuracy": 0.75,
+      "deleted_accuracy": 0.6875,
+      "natural_coverage": 1.0,
+      "deleted_coverage": 1.0,
+      "paired_cluster_rows": 48,
+      "natural_accuracy_cluster_bootstrap": {
+        "estimate": 0.75,
+        "cluster_bootstrap_95_ci": [
+          0.625,
+          0.875
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260944
+      },
+      "deleted_accuracy_cluster_bootstrap": {
+        "estimate": 0.6875,
+        "cluster_bootstrap_95_ci": [
+          0.5625,
+          0.8125
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260945
+      },
+      "natural_minus_deleted_accuracy_cluster_bootstrap": {
+        "estimate": 0.0625,
+        "cluster_bootstrap_95_ci": [
+          0.0,
+          0.14583333333333334
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260946
+      },
+      "gate_passed": false
+    },
+    "laya/four_way": {
+      "estimate": -0.08333333333333333,
+      "cluster_bootstrap_95_ci": [
+        -0.1875,
+        0.0
+      ],
+      "n_trials": 48,
+      "n_review_clusters": 48,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20260940,
+      "natural_copy_rate": 0.125,
+      "deleted_copy_rate": 0.20833333333333334,
+      "natural_accuracy": 0.6666666666666666,
+      "deleted_accuracy": 0.625,
+      "natural_coverage": 0.7916666666666666,
+      "deleted_coverage": 0.8333333333333334,
+      "paired_cluster_rows": 48,
+      "natural_accuracy_cluster_bootstrap": {
+        "estimate": 0.6666666666666666,
+        "cluster_bootstrap_95_ci": [
+          0.5416666666666666,
+          0.7916666666666666
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260944
+      },
+      "deleted_accuracy_cluster_bootstrap": {
+        "estimate": 0.625,
+        "cluster_bootstrap_95_ci": [
+          0.4791666666666667,
+          0.75
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260945
+      },
+      "natural_minus_deleted_accuracy_cluster_bootstrap": {
+        "estimate": 0.041666666666666664,
+        "cluster_bootstrap_95_ci": [
+          -0.10416666666666667,
+          0.1875
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260946
+      },
+      "gate_passed": false
+    }
+  },
+  "condition_metrics": {
+    "laya/four_way/aspect_only": {
+      "n": 96,
+      "coverage": 0.010416666666666666,
+      "abstention_or_nonbinary_rate": 0.9895833333333334,
+      "accuracy_all_trials": 0.010416666666666666,
+      "accuracy_all_trials_cluster_bootstrap": {
+        "estimate": 0.010416666666666666,
+        "cluster_bootstrap_95_ci": [
+          0.0,
+          0.03125
+        ],
+        "n_trials": 96,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260941
+      },
+      "accuracy_when_binary": 1.0,
+      "label_counts": {
+        "unclear": 94,
+        "negative": 1,
+        "mixed": 1
+      }
+    },
+    "laya/four_way/natural_prefix": {
+      "n": 96,
+      "coverage": 0.7604166666666666,
+      "abstention_or_nonbinary_rate": 0.23958333333333337,
+      "accuracy_all_trials": 0.625,
+      "accuracy_all_trials_cluster_bootstrap": {
+        "estimate": 0.625,
+        "cluster_bootstrap_95_ci": [
+          0.53125,
+          0.71875
+        ],
+        "n_trials": 96,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260941
+      },
+      "accuracy_when_binary": 0.821917808219178,
+      "label_counts": {
+        "positive": 31,
+        "mixed": 16,
+        "unclear": 7,
+        "negative": 42
+      }
+    },
+    "laya/four_way/opinion_visible": {
+      "n": 96,
+      "coverage": 0.90625,
+      "abstention_or_nonbinary_rate": 0.09375,
+      "accuracy_all_trials": 0.84375,
+      "accuracy_all_trials_cluster_bootstrap": {
+        "estimate": 0.84375,
+        "cluster_bootstrap_95_ci": [
+          0.7604166666666666,
+          0.9166666666666666
+        ],
+        "n_trials": 96,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260941
+      },
+      "accuracy_when_binary": 0.9310344827586207,
+      "label_counts": {
+        "positive": 40,
+        "negative": 47,
+        "mixed": 5,
+        "unclear": 4
+      }
+    },
+    "qwen2.5-3b/forced_binary/aspect_only": {
+      "n": 96,
+      "coverage": 1.0,
+      "abstention_or_nonbinary_rate": 0.0,
+      "accuracy_all_trials": 0.59375,
+      "accuracy_all_trials_cluster_bootstrap": {
+        "estimate": 0.59375,
+        "cluster_bootstrap_95_ci": [
+          0.5104166666666666,
+          0.6770833333333334
+        ],
+        "n_trials": 96,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260941
+      },
+      "accuracy_when_binary": 0.59375,
+      "label_counts": {
+        "negative": 33,
+        "positive": 63
+      }
+    },
+    "qwen2.5-3b/forced_binary/natural_prefix": {
+      "n": 96,
+      "coverage": 1.0,
+      "abstention_or_nonbinary_rate": 0.0,
+      "accuracy_all_trials": 0.65625,
+      "accuracy_all_trials_cluster_bootstrap": {
+        "estimate": 0.65625,
+        "cluster_bootstrap_95_ci": [
+          0.5729166666666666,
+          0.7395833333333334
+        ],
+        "n_trials": 96,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260941
+      },
+      "accuracy_when_binary": 0.65625,
+      "label_counts": {
+        "negative": 63,
+        "positive": 33
+      }
+    },
+    "qwen2.5-3b/forced_binary/opinion_visible": {
+      "n": 96,
+      "coverage": 1.0,
+      "abstention_or_nonbinary_rate": 0.0,
+      "accuracy_all_trials": 0.8125,
+      "accuracy_all_trials_cluster_bootstrap": {
+        "estimate": 0.8125,
+        "cluster_bootstrap_95_ci": [
+          0.7395833333333334,
+          0.875
+        ],
+        "n_trials": 96,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260941
+      },
+      "accuracy_when_binary": 0.8125,
+      "label_counts": {
+        "positive": 34,
+        "negative": 62
+      }
+    },
+    "qwen2.5-3b/abstention/aspect_only": {
+      "n": 96,
+      "coverage": 0.0,
+      "abstention_or_nonbinary_rate": 1.0,
+      "accuracy_all_trials": 0.0,
+      "accuracy_all_trials_cluster_bootstrap": {
+        "estimate": 0.0,
+        "cluster_bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "n_trials": 96,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260941
+      },
+      "accuracy_when_binary": null,
+      "label_counts": {
+        "insufficient": 96
+      }
+    },
+    "qwen2.5-3b/abstention/natural_prefix": {
+      "n": 96,
+      "coverage": 0.125,
+      "abstention_or_nonbinary_rate": 0.875,
+      "accuracy_all_trials": 0.07291666666666667,
+      "accuracy_all_trials_cluster_bootstrap": {
+        "estimate": 0.07291666666666667,
+        "cluster_bootstrap_95_ci": [
+          0.03125,
+          0.125
+        ],
+        "n_trials": 96,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260941
+      },
+      "accuracy_when_binary": 0.5833333333333334,
+      "label_counts": {
+        "insufficient": 84,
+        "negative": 5,
+        "positive": 7
+      }
+    },
+    "qwen2.5-3b/abstention/opinion_visible": {
+      "n": 96,
+      "coverage": 0.375,
+      "abstention_or_nonbinary_rate": 0.625,
+      "accuracy_all_trials": 0.34375,
+      "accuracy_all_trials_cluster_bootstrap": {
+        "estimate": 0.34375,
+        "cluster_bootstrap_95_ci": [
+          0.25,
+          0.4479166666666667
+        ],
+        "n_trials": 96,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260941
+      },
+      "accuracy_when_binary": 0.9166666666666666,
+      "label_counts": {
+        "positive": 23,
+        "negative": 13,
+        "insufficient": 60
+      }
+    },
+    "phi3-mini/forced_binary/aspect_only": {
+      "n": 96,
+      "coverage": 1.0,
+      "abstention_or_nonbinary_rate": 0.0,
+      "accuracy_all_trials": 0.5729166666666666,
+      "accuracy_all_trials_cluster_bootstrap": {
+        "estimate": 0.5729166666666666,
+        "cluster_bootstrap_95_ci": [
+          0.5,
+          0.6458333333333334
+        ],
+        "n_trials": 96,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260941
+      },
+      "accuracy_when_binary": 0.5729166666666666,
+      "label_counts": {
+        "negative": 69,
+        "positive": 27
+      }
+    },
+    "phi3-mini/forced_binary/natural_prefix": {
+      "n": 96,
+      "coverage": 1.0,
+      "abstention_or_nonbinary_rate": 0.0,
+      "accuracy_all_trials": 0.8333333333333334,
+      "accuracy_all_trials_cluster_bootstrap": {
+        "estimate": 0.8333333333333334,
+        "cluster_bootstrap_95_ci": [
+          0.7604166666666666,
+          0.90625
+        ],
+        "n_trials": 96,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260941
+      },
+      "accuracy_when_binary": 0.8333333333333334,
+      "label_counts": {
+        "negative": 46,
+        "positive": 50
+      }
+    },
+    "phi3-mini/forced_binary/opinion_visible": {
+      "n": 96,
+      "coverage": 1.0,
+      "abstention_or_nonbinary_rate": 0.0,
+      "accuracy_all_trials": 0.8958333333333334,
+      "accuracy_all_trials_cluster_bootstrap": {
+        "estimate": 0.8958333333333334,
+        "cluster_bootstrap_95_ci": [
+          0.8333333333333334,
+          0.9479166666666666
+        ],
+        "n_trials": 96,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260941
+      },
+      "accuracy_when_binary": 0.8958333333333334,
+      "label_counts": {
+        "positive": 48,
+        "negative": 48
+      }
+    },
+    "phi3-mini/abstention/aspect_only": {
+      "n": 96,
+      "coverage": 0.11458333333333333,
+      "abstention_or_nonbinary_rate": 0.8854166666666666,
+      "accuracy_all_trials": 0.09375,
+      "accuracy_all_trials_cluster_bootstrap": {
+        "estimate": 0.09375,
+        "cluster_bootstrap_95_ci": [
+          0.041666666666666664,
+          0.15625
+        ],
+        "n_trials": 96,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260941
+      },
+      "accuracy_when_binary": 0.8181818181818182,
+      "label_counts": {
+        "positive": 6,
+        "insufficient": 85,
+        "negative": 5
+      }
+    },
+    "phi3-mini/abstention/natural_prefix": {
+      "n": 96,
+      "coverage": 0.8125,
+      "abstention_or_nonbinary_rate": 0.1875,
+      "accuracy_all_trials": 0.5833333333333334,
+      "accuracy_all_trials_cluster_bootstrap": {
+        "estimate": 0.5833333333333334,
+        "cluster_bootstrap_95_ci": [
+          0.5104166666666666,
+          0.65625
+        ],
+        "n_trials": 96,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260941
+      },
+      "accuracy_when_binary": 0.717948717948718,
+      "label_counts": {
+        "positive": 47,
+        "insufficient": 18,
+        "negative": 31
+      }
+    },
+    "phi3-mini/abstention/opinion_visible": {
+      "n": 96,
+      "coverage": 0.9895833333333334,
+      "abstention_or_nonbinary_rate": 0.01041666666666663,
+      "accuracy_all_trials": 0.7916666666666666,
+      "accuracy_all_trials_cluster_bootstrap": {
+        "estimate": 0.7916666666666666,
+        "cluster_bootstrap_95_ci": [
+          0.71875,
+          0.8645833333333334
+        ],
+        "n_trials": 96,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260941
+      },
+      "accuracy_when_binary": 0.8,
+      "label_counts": {
+        "positive": 57,
+        "negative": 38,
+        "insufficient": 1
+      }
+    },
+    "laya/four_way/prior_opinion_deleted": {
+      "n": 48,
+      "coverage": 0.8333333333333334,
+      "abstention_or_nonbinary_rate": 0.16666666666666663,
+      "accuracy_all_trials": 0.625,
+      "accuracy_all_trials_cluster_bootstrap": {
+        "estimate": 0.625,
+        "cluster_bootstrap_95_ci": [
+          0.4791666666666667,
+          0.75
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260941
+      },
+      "accuracy_when_binary": 0.75,
+      "label_counts": {
+        "positive": 7,
+        "negative": 33,
+        "unclear": 2,
+        "mixed": 6
+      }
+    },
+    "qwen2.5-3b/forced_binary/prior_opinion_deleted": {
+      "n": 48,
+      "coverage": 1.0,
+      "abstention_or_nonbinary_rate": 0.0,
+      "accuracy_all_trials": 0.75,
+      "accuracy_all_trials_cluster_bootstrap": {
+        "estimate": 0.75,
+        "cluster_bootstrap_95_ci": [
+          0.625,
+          0.875
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260941
+      },
+      "accuracy_when_binary": 0.75,
+      "label_counts": {
+        "positive": 8,
+        "negative": 40
+      }
+    },
+    "qwen2.5-3b/abstention/prior_opinion_deleted": {
+      "n": 48,
+      "coverage": 0.14583333333333334,
+      "abstention_or_nonbinary_rate": 0.8541666666666666,
+      "accuracy_all_trials": 0.041666666666666664,
+      "accuracy_all_trials_cluster_bootstrap": {
+        "estimate": 0.041666666666666664,
+        "cluster_bootstrap_95_ci": [
+          0.0,
+          0.10416666666666667
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260941
+      },
+      "accuracy_when_binary": 0.2857142857142857,
+      "label_counts": {
+        "insufficient": 41,
+        "negative": 3,
+        "positive": 4
+      }
+    },
+    "phi3-mini/forced_binary/prior_opinion_deleted": {
+      "n": 48,
+      "coverage": 1.0,
+      "abstention_or_nonbinary_rate": 0.0,
+      "accuracy_all_trials": 0.6875,
+      "accuracy_all_trials_cluster_bootstrap": {
+        "estimate": 0.6875,
+        "cluster_bootstrap_95_ci": [
+          0.5416666666666666,
+          0.8125
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260941
+      },
+      "accuracy_when_binary": 0.6875,
+      "label_counts": {
+        "positive": 13,
+        "negative": 35
+      }
+    },
+    "phi3-mini/abstention/prior_opinion_deleted": {
+      "n": 48,
+      "coverage": 0.8333333333333334,
+      "abstention_or_nonbinary_rate": 0.16666666666666663,
+      "accuracy_all_trials": 0.3958333333333333,
+      "accuracy_all_trials_cluster_bootstrap": {
+        "estimate": 0.3958333333333333,
+        "cluster_bootstrap_95_ci": [
+          0.2708333333333333,
+          0.5416666666666666
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260941
+      },
+      "accuracy_when_binary": 0.475,
+      "label_counts": {
+        "positive": 19,
+        "negative": 21,
+        "insufficient": 8
+      }
+    }
+  },
+  "paired_review_metrics": {
+    "laya/four_way/aspect_only": {
+      "both_opposite_aspects_correct_rate": {
+        "estimate": 0.0,
+        "cluster_bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260942
+      }
+    },
+    "laya/four_way/natural_prefix": {
+      "both_opposite_aspects_correct_rate": {
+        "estimate": 0.375,
+        "cluster_bootstrap_95_ci": [
+          0.25,
+          0.5208333333333334
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260942
+      }
+    },
+    "laya/four_way/opinion_visible": {
+      "both_opposite_aspects_correct_rate": {
+        "estimate": 0.7291666666666666,
+        "cluster_bootstrap_95_ci": [
+          0.6041666666666666,
+          0.8541666666666666
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260942
+      }
+    },
+    "qwen2.5-3b/forced_binary/aspect_only": {
+      "both_opposite_aspects_correct_rate": {
+        "estimate": 0.2916666666666667,
+        "cluster_bootstrap_95_ci": [
+          0.16666666666666666,
+          0.4166666666666667
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260942
+      }
+    },
+    "qwen2.5-3b/forced_binary/natural_prefix": {
+      "both_opposite_aspects_correct_rate": {
+        "estimate": 0.3958333333333333,
+        "cluster_bootstrap_95_ci": [
+          0.25,
+          0.5416666666666666
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260942
+      }
+    },
+    "qwen2.5-3b/forced_binary/opinion_visible": {
+      "both_opposite_aspects_correct_rate": {
+        "estimate": 0.625,
+        "cluster_bootstrap_95_ci": [
+          0.4791666666666667,
+          0.75
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260942
+      }
+    },
+    "qwen2.5-3b/abstention/aspect_only": {
+      "both_opposite_aspects_correct_rate": {
+        "estimate": 0.0,
+        "cluster_bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260942
+      }
+    },
+    "qwen2.5-3b/abstention/natural_prefix": {
+      "both_opposite_aspects_correct_rate": {
+        "estimate": 0.0,
+        "cluster_bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260942
+      }
+    },
+    "qwen2.5-3b/abstention/opinion_visible": {
+      "both_opposite_aspects_correct_rate": {
+        "estimate": 0.14583333333333334,
+        "cluster_bootstrap_95_ci": [
+          0.0625,
+          0.25
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260942
+      }
+    },
+    "phi3-mini/forced_binary/aspect_only": {
+      "both_opposite_aspects_correct_rate": {
+        "estimate": 0.22916666666666666,
+        "cluster_bootstrap_95_ci": [
+          0.125,
+          0.3541666666666667
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260942
+      }
+    },
+    "phi3-mini/forced_binary/natural_prefix": {
+      "both_opposite_aspects_correct_rate": {
+        "estimate": 0.6875,
+        "cluster_bootstrap_95_ci": [
+          0.5625,
+          0.8125
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260942
+      }
+    },
+    "phi3-mini/forced_binary/opinion_visible": {
+      "both_opposite_aspects_correct_rate": {
+        "estimate": 0.7916666666666666,
+        "cluster_bootstrap_95_ci": [
+          0.6666666666666666,
+          0.8958333333333334
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260942
+      }
+    },
+    "phi3-mini/abstention/aspect_only": {
+      "both_opposite_aspects_correct_rate": {
+        "estimate": 0.0,
+        "cluster_bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260942
+      }
+    },
+    "phi3-mini/abstention/natural_prefix": {
+      "both_opposite_aspects_correct_rate": {
+        "estimate": 0.25,
+        "cluster_bootstrap_95_ci": [
+          0.125,
+          0.375
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260942
+      }
+    },
+    "phi3-mini/abstention/opinion_visible": {
+      "both_opposite_aspects_correct_rate": {
+        "estimate": 0.5833333333333334,
+        "cluster_bootstrap_95_ci": [
+          0.4375,
+          0.7083333333333334
+        ],
+        "n_trials": 48,
+        "n_review_clusters": 48,
+        "bootstrap_reps": 10000,
+        "bootstrap_seed": 20260942
+      }
+    }
+  },
+  "paired_accuracy_differences": {
+    "laya/four_way/natural_prefix_minus_aspect_only": {
+      "estimate": 0.6145833333333334,
+      "cluster_bootstrap_95_ci": [
+        0.5208333333333334,
+        0.7083333333333334
+      ],
+      "n_trials": 96,
+      "n_review_clusters": 48,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20260943
+    },
+    "laya/four_way/opinion_visible_minus_natural_prefix": {
+      "estimate": 0.21875,
+      "cluster_bootstrap_95_ci": [
+        0.125,
+        0.3125
+      ],
+      "n_trials": 96,
+      "n_review_clusters": 48,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20260943
+    },
+    "qwen2.5-3b/forced_binary/natural_prefix_minus_aspect_only": {
+      "estimate": 0.0625,
+      "cluster_bootstrap_95_ci": [
+        -0.052083333333333336,
+        0.17708333333333334
+      ],
+      "n_trials": 96,
+      "n_review_clusters": 48,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20260943
+    },
+    "qwen2.5-3b/forced_binary/opinion_visible_minus_natural_prefix": {
+      "estimate": 0.15625,
+      "cluster_bootstrap_95_ci": [
+        0.08333333333333333,
+        0.23984374999999622
+      ],
+      "n_trials": 96,
+      "n_review_clusters": 48,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20260943
+    },
+    "qwen2.5-3b/abstention/natural_prefix_minus_aspect_only": {
+      "estimate": 0.07291666666666667,
+      "cluster_bootstrap_95_ci": [
+        0.03125,
+        0.125
+      ],
+      "n_trials": 96,
+      "n_review_clusters": 48,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20260943
+    },
+    "qwen2.5-3b/abstention/opinion_visible_minus_natural_prefix": {
+      "estimate": 0.2708333333333333,
+      "cluster_bootstrap_95_ci": [
+        0.17708333333333334,
+        0.375
+      ],
+      "n_trials": 96,
+      "n_review_clusters": 48,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20260943
+    },
+    "phi3-mini/forced_binary/natural_prefix_minus_aspect_only": {
+      "estimate": 0.2604166666666667,
+      "cluster_bootstrap_95_ci": [
+        0.16666666666666666,
+        0.3541666666666667
+      ],
+      "n_trials": 96,
+      "n_review_clusters": 48,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20260943
+    },
+    "phi3-mini/forced_binary/opinion_visible_minus_natural_prefix": {
+      "estimate": 0.0625,
+      "cluster_bootstrap_95_ci": [
+        0.010416666666666666,
+        0.125
+      ],
+      "n_trials": 96,
+      "n_review_clusters": 48,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20260943
+    },
+    "phi3-mini/abstention/natural_prefix_minus_aspect_only": {
+      "estimate": 0.4895833333333333,
+      "cluster_bootstrap_95_ci": [
+        0.3958333333333333,
+        0.5729166666666666
+      ],
+      "n_trials": 96,
+      "n_review_clusters": 48,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20260943
+    },
+    "phi3-mini/abstention/opinion_visible_minus_natural_prefix": {
+      "estimate": 0.20833333333333334,
+      "cluster_bootstrap_95_ci": [
+        0.11458333333333333,
+        0.3020833333333333
+      ],
+      "n_trials": 96,
+      "n_review_clusters": 48,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20260943
+    }
+  },
+  "n_target_trials": 96,
+  "n_review_clusters": 48,
+  "n_later_target_trials": 48,
+  "n_predictions": 1680,
+  "limitations": [
+    "The 48 clusters are selected from one test split, and the paired set may not represent travel reviews generally.",
+    "TRABL annotations began from LLM suggestions followed by human correction; exact annotator agreement reduces but does not remove label noise.",
+    "Deleting an opinion phrase changes fluency as well as sentiment-bearing content.",
+    "An annotated opinion phrase is not a complete boundary for all evidence supporting a sentiment.",
+    "The source reviews may have appeared in model pretraining even though the dataset release is recent.",
+    "Laya and Phi are secondary checks; one local model is the registered primary judge."
+  ]
+}

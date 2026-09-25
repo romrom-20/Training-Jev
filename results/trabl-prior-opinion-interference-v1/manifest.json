@@ -1,0 +1,47 @@
+{
+  "analysis_sha256": "977d26366a3acd7bf8e7fa7cd9f16314a02ab4fc3875fb24a257487a74ad43e6",
+  "analyzer_sha256": "4e053a19133d9991a12458dea7c6509ee5dbaab990fc8b597efabb37a2e29bd1",
+  "batch_size": 8,
+  "data_license": "CC BY-SA 4.0; non-commercial research use per dataset card",
+  "dataset": "Booking-com/absa-dataset",
+  "dataset_revision": "e9329d05a722000eb7cabaab97c59049d52b94fd",
+  "dataset_url": "https://huggingface.co/datasets/Booking-com/absa-dataset",
+  "device": "mps",
+  "experiment": "040",
+  "figure_sha256": "e431ca54b32d621a8385af6a9a0fdf19d9e55cfb1ad0ed8b7624e746f752c616",
+  "jobs_per_condition_set": 336,
+  "laya_triage_trace_sha256": "f6728865fd43d3b55ad3825c1a3b54733093389236d84130bb3401b2d1c9fb51",
+  "laya_warnings": [
+    "laya: this checkpoint ships invalid temperatures or values outside [0.5, 5]; using choice:11+=0.10058280825614929 -> 0.5. Treat confidence from the affected entries as uncalibrated."
+  ],
+  "models": {
+    "laya": {
+      "id": "convaiinnovations/laya",
+      "package": "laya==0.3.20",
+      "revision": "55cf4c4ebb4ebe31b2550e8bdf3bd21b99753851",
+      "seconds": 11.171214165980928,
+      "weights_sha256": "891102d372688fc2a094dac56a384bc537b87c63f21f9f3dac0be2b7cbc8d86c"
+    },
+    "phi3-mini": {
+      "id": "microsoft/Phi-3-mini-4k-instruct",
+      "revision": "f39ac1d28e925b323eae81227eaba4464caced4e",
+      "seconds": 272.98532241699286
+    },
+    "qwen2.5-3b": {
+      "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "seconds": 497.5178216249915
+    }
+  },
+  "outcomes": 1680,
+  "plotter_sha256": "22958169e105dfbbc5c9e56a31db4394b3e12a467c394242025920856f11e674",
+  "predictions_sha256": "3b2c6d43edfe03b637c9dfa13e8a37e4ee2b21e22408c22e0f2397da1edc630a",
+  "preparation_sha256": "2f6f945c3a72cc2bf3b88cf717316ddef84679cec1b44a58a2350d705adf355e",
+  "protocol_sha256": "491a366a8bac8b3b43f65980b33c03017777b4ef2a21247f134c41c6572735e5",
+  "raw_review_text_published": false,
+  "review_clusters": 48,
+  "runner_sha256": "65bf551b0f249d5b837e9a1f61b91b282b24b20040ab07f08db631767d976904",
+  "seed": 20260940,
+  "source_file_sha256": "3632412d3e8003364ed67e6877777bb51a474f30917037d36a8f7cedbd1e7884",
+  "stimuli": 96,
+  "stimuli_sha256": "7abd6a1ab5d4f86190cfd727f452042953d4e030f39d335a88cec17f37db997b"
+}
