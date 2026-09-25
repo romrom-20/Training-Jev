@@ -1,0 +1,75 @@
+{
+  "budgets": [
+    4,
+    12,
+    16,
+    24
+  ],
+  "device": "mps",
+  "experiment": "033",
+  "laya": {
+    "choice_map_seed": 20260930,
+    "model_id": "convaiinnovations/laya",
+    "package": "0.3.20",
+    "revision": "55cf4c4ebb4ebe31b2550e8bdf3bd21b99753851",
+    "runtime_warnings": [
+      "laya: this checkpoint ships invalid temperatures or values outside [0.5, 5]; using choice:11+=0.10058280825614929 -> 0.5. Treat confidence from the affected entries as uncalibrated."
+    ],
+    "weights_sha256": "891102d372688fc2a094dac56a384bc537b87c63f21f9f3dac0be2b7cbc8d86c"
+  },
+  "mps_available": true,
+  "n_decisions": 8388,
+  "n_prefixes_per_judge": 2796,
+  "phi_model": {
+    "model": "microsoft/Phi-3-mini-4k-instruct",
+    "revision": "f39ac1d28e925b323eae81227eaba4464caced4e"
+  },
+  "predictions_sha256": "3ec1aeb97cd341a19fb8566b2ba1451b9d1cc80b4e1d96b44a96d6f42007e6c7",
+  "protocol_sha256": "b87fbf3013a293f7495b6e2a612c86fb06895b150e406c4888453cea8a43fd27",
+  "qwen_model": {
+    "family": "Qwen2.5",
+    "layers": [
+      12,
+      24,
+      36
+    ],
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1"
+  },
+  "runner_sha256": "f95b33016b9b043cf03963a52bfd5a8f3556f5b8823924f1b0499c7262d0c644",
+  "status": "post-result dose-response follow-up",
+  "target_models": {
+    "granite-3.1-2b": {
+      "family": "Granite3.1",
+      "layers": [
+        23
+      ],
+      "model": "ibm-granite/granite-3.1-2b-instruct",
+      "name": "granite-3.1-2b",
+      "revision": "bbc2aed595bd38bd770263dc3ab831db9794441d"
+    },
+    "qwen-1.5b": {
+      "family": "Qwen2.5",
+      "layers": [
+        8,
+        16,
+        24
+      ],
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "name": "qwen-1.5b",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+    },
+    "smollm2-1.7b": {
+      "family": "SmolLM2",
+      "layers": [
+        8,
+        16,
+        24
+      ],
+      "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+      "name": "smollm2-1.7b",
+      "revision": "31b70e2e869a7173562077fd711b654946d38674"
+    }
+  },
+  "torch_version": "2.14.0"
+}

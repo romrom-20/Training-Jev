@@ -1,0 +1,1437 @@
+{
+  "analysis": {
+    "by_budget": {
+      "12": {
+        "actual_tokens_in_prefix": {
+          "max": 12,
+          "mean": 11.696709585121603,
+          "reused_eos_completed_text_fraction": 0.0844062947067239
+        },
+        "laya": {
+          "four_way_counts": {
+            "mixed": 221,
+            "negative": 179,
+            "positive": 284,
+            "unclear": 15
+          },
+          "mixed_unclear_rate": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20260945,
+            "estimate": 0.3376251788268956,
+            "n": 699,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.28840579710144926,
+              0.3888888888888889
+            ]
+          },
+          "n": 699
+        },
+        "phi3_mini": {
+          "coverage": 0.9699570815450643,
+          "strict_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261245,
+            "estimate": 0.8912732474964234,
+            "n": 699,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.8603964960811433,
+              0.9198325818076456
+            ]
+          }
+        },
+        "qwen2_5_3b": {
+          "coverage": 0.9957081545064378,
+          "strict_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261145,
+            "estimate": 0.8898426323319027,
+            "n": 699,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.8585858585858586,
+              0.9187675070028011
+            ]
+          }
+        },
+        "qwen_phi_agreement": {
+          "agreement": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261045,
+            "estimate": 0.9262536873156342,
+            "n": 678,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9048316251830161,
+              0.9464285714285714
+            ]
+          },
+          "n_both_parseable": 678
+        }
+      },
+      "16": {
+        "actual_tokens_in_prefix": {
+          "max": 16,
+          "mean": 15.359084406294707,
+          "reused_eos_completed_text_fraction": 0.0844062947067239
+        },
+        "laya": {
+          "four_way_counts": {
+            "mixed": 176,
+            "negative": 166,
+            "positive": 345,
+            "unclear": 12
+          },
+          "mixed_unclear_rate": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20260949,
+            "estimate": 0.26895565092989987,
+            "n": 699,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.22510822510822512,
+              0.31330686083904963
+            ]
+          },
+          "n": 699
+        },
+        "phi3_mini": {
+          "coverage": 0.9814020028612304,
+          "strict_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261249,
+            "estimate": 0.9256080114449213,
+            "n": 699,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.8955650929899857,
+              0.9517730496453901
+            ]
+          }
+        },
+        "qwen2_5_3b": {
+          "coverage": 0.9971387696709585,
+          "strict_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261149,
+            "estimate": 0.9456366237482118,
+            "n": 699,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9206349206349206,
+              0.9672364672364673
+            ]
+          }
+        },
+        "qwen_phi_agreement": {
+          "agreement": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261049,
+            "estimate": 0.9751824817518249,
+            "n": 685,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9631811487481591,
+              0.9858161051172322
+            ]
+          },
+          "n_both_parseable": 685
+        }
+      },
+      "24": {
+        "actual_tokens_in_prefix": {
+          "max": 24,
+          "mean": 22.642346208869814,
+          "reused_eos_completed_text_fraction": 0.09871244635193133
+        },
+        "laya": {
+          "four_way_counts": {
+            "mixed": 108,
+            "negative": 166,
+            "positive": 412,
+            "unclear": 13
+          },
+          "mixed_unclear_rate": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20260957,
+            "estimate": 0.17310443490701002,
+            "n": 699,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.13682678311499272,
+              0.21159420289855072
+            ]
+          },
+          "n": 699
+        },
+        "phi3_mini": {
+          "coverage": 0.9856938483547926,
+          "strict_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261257,
+            "estimate": 0.9513590844062947,
+            "n": 699,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9252873563218391,
+              0.9728183118741058
+            ]
+          }
+        },
+        "qwen2_5_3b": {
+          "coverage": 0.9971387696709585,
+          "strict_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261157,
+            "estimate": 0.9585121602288984,
+            "n": 699,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9344729344729344,
+              0.9789937941703878
+            ]
+          }
+        },
+        "qwen_phi_agreement": {
+          "agreement": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261057,
+            "estimate": 0.9898107714701602,
+            "n": 687,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9821421918245689,
+              0.9970414201183432
+            ]
+          },
+          "n_both_parseable": 687
+        }
+      },
+      "32": {
+        "actual_tokens_in_prefix": {
+          "max": 32,
+          "mean": 29.454935622317596,
+          "reused_eos_completed_text_fraction": 0.1988555078683834
+        },
+        "laya": {
+          "four_way_counts": {
+            "mixed": 82,
+            "negative": 164,
+            "positive": 446,
+            "unclear": 7
+          },
+          "mixed_unclear_rate": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20260965,
+            "estimate": 0.12732474964234622,
+            "n": 699,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.09626436781609195,
+              0.16081998474446985
+            ]
+          },
+          "n": 699
+        },
+        "phi3_mini": {
+          "coverage": 0.9914163090128756,
+          "strict_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261265,
+            "estimate": 0.9585121602288984,
+            "n": 699,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9336219336219336,
+              0.9799713876967096
+            ]
+          }
+        },
+        "qwen2_5_3b": {
+          "coverage": 1.0,
+          "strict_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261165,
+            "estimate": 0.9670958512160229,
+            "n": 699,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9430190058479533,
+              0.9859353023909986
+            ]
+          }
+        },
+        "qwen_phi_agreement": {
+          "agreement": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261065,
+            "estimate": 0.9913419913419913,
+            "n": 693,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9826086956521739,
+              0.9985294117647059
+            ]
+          },
+          "n_both_parseable": 693
+        }
+      },
+      "4": {
+        "actual_tokens_in_prefix": {
+          "max": 4,
+          "mean": 4.0,
+          "reused_eos_completed_text_fraction": 0.0
+        },
+        "laya": {
+          "four_way_counts": {
+            "mixed": 3,
+            "unclear": 696
+          },
+          "mixed_unclear_rate": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20260937,
+            "estimate": 1.0,
+            "n": 699,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "n": 699
+        },
+        "phi3_mini": {
+          "coverage": 0.703862660944206,
+          "strict_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261237,
+            "estimate": 0.44206008583690987,
+            "n": 699,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.4069264069264069,
+              0.47639484978540775
+            ]
+          }
+        },
+        "qwen2_5_3b": {
+          "coverage": 1.0,
+          "strict_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261137,
+            "estimate": 0.6151645207439199,
+            "n": 699,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.5773023548555463,
+              0.6535102083812151
+            ]
+          }
+        },
+        "qwen_phi_agreement": {
+          "agreement": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261037,
+            "estimate": 1.0,
+            "n": 492,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "n_both_parseable": 492
+        }
+      },
+      "8": {
+        "actual_tokens_in_prefix": {
+          "max": 8,
+          "mean": 8.0,
+          "reused_eos_completed_text_fraction": 0.0
+        },
+        "laya": {
+          "four_way_counts": {
+            "mixed": 294,
+            "negative": 129,
+            "positive": 252,
+            "unclear": 24
+          },
+          "mixed_unclear_rate": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20260941,
+            "estimate": 0.45493562231759654,
+            "n": 699,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.41209367812969705,
+              0.4971014492753623
+            ]
+          },
+          "n": 699
+        },
+        "phi3_mini": {
+          "coverage": 0.9341917024320457,
+          "strict_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261241,
+            "estimate": 0.698140200286123,
+            "n": 699,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.663768115942029,
+              0.7330508474576272
+            ]
+          }
+        },
+        "qwen2_5_3b": {
+          "coverage": 0.994277539341917,
+          "strict_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261141,
+            "estimate": 0.7396280400572246,
+            "n": 699,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.7041806612927302,
+              0.7748917748917749
+            ]
+          }
+        },
+        "qwen_phi_agreement": {
+          "agreement": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261041,
+            "estimate": 0.7580398162327718,
+            "n": 653,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.7283582089552239,
+              0.7883457760222614
+            ]
+          },
+          "n_both_parseable": 653
+        }
+      }
+    },
+    "by_target": {
+      "granite-3.1-2b": {
+        "12": {
+          "laya_mixed_unclear_rate": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20260945,
+            "estimate": 0.2832618025751073,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.22312966906059406,
+              0.3463487783403033
+            ]
+          },
+          "phi_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20263945,
+            "estimate": 0.8369098712446352,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.7863247863247863,
+              0.8836206896551724
+            ]
+          },
+          "phi_coverage": 0.9527896995708155,
+          "qwen_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20262945,
+            "estimate": 0.8025751072961373,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.7424892703862661,
+              0.8589743589743589
+            ]
+          },
+          "qwen_coverage": 1.0,
+          "qwen_phi_agreement": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261945,
+            "estimate": 0.8063063063063063,
+            "n": 222,
+            "n_source_sentence_clusters": 111,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.7488789237668162,
+              0.8603603603603603
+            ]
+          }
+        },
+        "16": {
+          "laya_mixed_unclear_rate": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20260949,
+            "estimate": 0.2703862660944206,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.21120689655172414,
+              0.33191489361702126
+            ]
+          },
+          "phi_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20263949,
+            "estimate": 0.8798283261802575,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.8318965517241379,
+              0.9227467811158798
+            ]
+          },
+          "phi_coverage": 0.9570815450643777,
+          "qwen_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20262949,
+            "estimate": 0.927038626609442,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.8913043478260869,
+              0.9578059071729957
+            ]
+          },
+          "qwen_coverage": 0.9957081545064378,
+          "qwen_phi_agreement": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261949,
+            "estimate": 0.9506726457399103,
+            "n": 223,
+            "n_source_sentence_clusters": 111,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9174311926605505,
+              0.9777777777777777
+            ]
+          }
+        },
+        "24": {
+          "laya_mixed_unclear_rate": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20260957,
+            "estimate": 0.13733905579399142,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.08973577235772358,
+              0.1888412017167382
+            ]
+          },
+          "phi_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20263957,
+            "estimate": 0.9356223175965666,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.8986784140969163,
+              0.9662482714604829
+            ]
+          },
+          "phi_coverage": 0.9570815450643777,
+          "qwen_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20262957,
+            "estimate": 0.9699570815450643,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9478260869565217,
+              0.9913419913419913
+            ]
+          },
+          "qwen_coverage": 0.9957081545064378,
+          "qwen_phi_agreement": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261957,
+            "estimate": 0.990990990990991,
+            "n": 222,
+            "n_source_sentence_clusters": 110,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9772727272727273,
+              1.0
+            ]
+          }
+        },
+        "32": {
+          "laya_mixed_unclear_rate": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20260965,
+            "estimate": 0.08583690987124463,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.04680851063829787,
+              0.12875536480686695
+            ]
+          },
+          "phi_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20263965,
+            "estimate": 0.9613733905579399,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9316239316239316,
+              0.9869565217391304
+            ]
+          },
+          "phi_coverage": 0.9828326180257511,
+          "qwen_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20262965,
+            "estimate": 0.9828326180257511,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9653679653679653,
+              0.9957805907172996
+            ]
+          },
+          "qwen_coverage": 1.0,
+          "qwen_phi_agreement": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261965,
+            "estimate": 0.9956331877729258,
+            "n": 229,
+            "n_source_sentence_clusters": 111,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9867241887905605,
+              1.0
+            ]
+          }
+        },
+        "4": {
+          "laya_mixed_unclear_rate": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20260937,
+            "estimate": 1.0,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "phi_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20263937,
+            "estimate": 0.44206008583690987,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.4067796610169492,
+              0.47639484978540775
+            ]
+          },
+          "phi_coverage": 0.703862660944206,
+          "qwen_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20262937,
+            "estimate": 0.6738197424892703,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.618421052631579,
+              0.728448275862069
+            ]
+          },
+          "qwen_coverage": 1.0,
+          "qwen_phi_agreement": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261937,
+            "estimate": 1.0,
+            "n": 164,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "8": {
+          "laya_mixed_unclear_rate": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20260941,
+            "estimate": 0.45064377682403434,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.3891213389121339,
+              0.5130434782608696
+            ]
+          },
+          "phi_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20263941,
+            "estimate": 0.5236051502145923,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.4765957446808511,
+              0.5696341328003551
+            ]
+          },
+          "phi_coverage": 0.8755364806866953,
+          "qwen_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20262941,
+            "estimate": 0.5364806866952789,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.47391304347826085,
+              0.6008407869585602
+            ]
+          },
+          "qwen_coverage": 0.9914163090128756,
+          "qwen_phi_agreement": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261941,
+            "estimate": 0.5931372549019608,
+            "n": 204,
+            "n_source_sentence_clusters": 111,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.5314009661835749,
+              0.6538461538461539
+            ]
+          }
+        }
+      },
+      "qwen-1.5b": {
+        "12": {
+          "laya_mixed_unclear_rate": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261045,
+            "estimate": 0.39914163090128757,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.3333333333333333,
+              0.4658119658119658
+            ]
+          },
+          "phi_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20264045,
+            "estimate": 0.9012875536480687,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.8595744680851064,
+              0.9391370223978919
+            ]
+          },
+          "phi_coverage": 0.9914163090128756,
+          "qwen_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20263045,
+            "estimate": 0.9184549356223176,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.8793103448275862,
+              0.9531914893617022
+            ]
+          },
+          "qwen_coverage": 1.0,
+          "qwen_phi_agreement": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20262045,
+            "estimate": 0.9783549783549783,
+            "n": 231,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9572649572649573,
+              0.9956331877729258
+            ]
+          }
+        },
+        "16": {
+          "laya_mixed_unclear_rate": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261049,
+            "estimate": 0.2918454935622318,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.2288135593220339,
+              0.3565217391304348
+            ]
+          },
+          "phi_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20264049,
+            "estimate": 0.9484978540772532,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9110169491525424,
+              0.9787234042553191
+            ]
+          },
+          "phi_coverage": 0.9957081545064378,
+          "qwen_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20263049,
+            "estimate": 0.9527896995708155,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9184549356223176,
+              0.982532751091703
+            ]
+          },
+          "qwen_coverage": 1.0,
+          "qwen_phi_agreement": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20262049,
+            "estimate": 0.9827586206896551,
+            "n": 232,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9653679653679653,
+              0.9957264957264957
+            ]
+          }
+        },
+        "24": {
+          "laya_mixed_unclear_rate": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261057,
+            "estimate": 0.2145922746781116,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.16379310344827586,
+              0.2672413793103448
+            ]
+          },
+          "phi_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20264057,
+            "estimate": 0.9656652360515021,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9372384937238494,
+              0.9872353948791922
+            ]
+          },
+          "phi_coverage": 1.0,
+          "qwen_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20263057,
+            "estimate": 0.9527896995708155,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9181034482758621,
+              0.982532751091703
+            ]
+          },
+          "qwen_coverage": 1.0,
+          "qwen_phi_agreement": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20262057,
+            "estimate": 0.9785407725321889,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9572649572649573,
+              0.9956896551724138
+            ]
+          }
+        },
+        "32": {
+          "laya_mixed_unclear_rate": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261065,
+            "estimate": 0.1630901287553648,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.11353711790393013,
+              0.21645021645021645
+            ]
+          },
+          "phi_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20264065,
+            "estimate": 0.9570815450643777,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9234042553191489,
+              0.9830508474576272
+            ]
+          },
+          "phi_coverage": 0.9957081545064378,
+          "qwen_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20263065,
+            "estimate": 0.9570815450643777,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9267241379310345,
+              0.9827586206896551
+            ]
+          },
+          "qwen_coverage": 1.0,
+          "qwen_phi_agreement": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20262065,
+            "estimate": 0.9956896551724138,
+            "n": 232,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9868421052631579,
+              1.0
+            ]
+          }
+        },
+        "4": {
+          "laya_mixed_unclear_rate": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261037,
+            "estimate": 1.0,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "phi_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20264037,
+            "estimate": 0.44206008583690987,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.4067796610169492,
+              0.47639484978540775
+            ]
+          },
+          "phi_coverage": 0.703862660944206,
+          "qwen_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20263037,
+            "estimate": 0.6652360515021459,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.6118143459915611,
+              0.7186147186147186
+            ]
+          },
+          "qwen_coverage": 1.0,
+          "qwen_phi_agreement": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20262037,
+            "estimate": 1.0,
+            "n": 164,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "8": {
+          "laya_mixed_unclear_rate": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261041,
+            "estimate": 0.6137339055793991,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.5497835497835498,
+              0.6767241379310345
+            ]
+          },
+          "phi_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20264041,
+            "estimate": 0.7811158798283262,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.7359307359307359,
+              0.8268398268398268
+            ]
+          },
+          "phi_coverage": 0.9527896995708155,
+          "qwen_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20263041,
+            "estimate": 0.8111587982832618,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.7587719298245614,
+              0.8595744680851064
+            ]
+          },
+          "qwen_coverage": 1.0,
+          "qwen_phi_agreement": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20262041,
+            "estimate": 0.9414414414414415,
+            "n": 222,
+            "n_source_sentence_clusters": 111,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9098712446351931,
+              0.96875
+            ]
+          }
+        }
+      },
+      "smollm2-1.7b": {
+        "12": {
+          "laya_mixed_unclear_rate": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261145,
+            "estimate": 0.33047210300429186,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.2672413793103448,
+              0.39655172413793105
+            ]
+          },
+          "phi_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20264145,
+            "estimate": 0.9356223175965666,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.8945147679324894,
+              0.9700854700854701
+            ]
+          },
+          "phi_coverage": 0.9656652360515021,
+          "qwen_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20263145,
+            "estimate": 0.9484978540772532,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9117647058823529,
+              0.9787234042553191
+            ]
+          },
+          "qwen_coverage": 0.9871244635193133,
+          "qwen_phi_agreement": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20262145,
+            "estimate": 0.9911111111111112,
+            "n": 225,
+            "n_source_sentence_clusters": 109,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9775759503898518,
+              1.0
+            ]
+          }
+        },
+        "16": {
+          "laya_mixed_unclear_rate": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261149,
+            "estimate": 0.2446351931330472,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.19130434782608696,
+              0.3
+            ]
+          },
+          "phi_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20264149,
+            "estimate": 0.9484978540772532,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9117647058823529,
+              0.9787234042553191
+            ]
+          },
+          "phi_coverage": 0.9914163090128756,
+          "qwen_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20263149,
+            "estimate": 0.9570815450643777,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9194915254237288,
+              0.9870689655172413
+            ]
+          },
+          "qwen_coverage": 0.9957081545064378,
+          "qwen_phi_agreement": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20262149,
+            "estimate": 0.991304347826087,
+            "n": 230,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9778761061946902,
+              1.0
+            ]
+          }
+        },
+        "24": {
+          "laya_mixed_unclear_rate": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261157,
+            "estimate": 0.16738197424892703,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.11637931034482758,
+              0.22414888953828155
+            ]
+          },
+          "phi_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20264157,
+            "estimate": 0.9527896995708155,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.922077922077922,
+              0.9786324786324786
+            ]
+          },
+          "phi_coverage": 1.0,
+          "qwen_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20263157,
+            "estimate": 0.9527896995708155,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9217391304347826,
+              0.9788135593220338
+            ]
+          },
+          "qwen_coverage": 0.9957081545064378,
+          "qwen_phi_agreement": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20262157,
+            "estimate": 1.0,
+            "n": 232,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "32": {
+          "laya_mixed_unclear_rate": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261165,
+            "estimate": 0.13304721030042918,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.08695652173913043,
+              0.1826086956521739
+            ]
+          },
+          "phi_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20264165,
+            "estimate": 0.9570815450643777,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9267241379310345,
+              0.9828344521477568
+            ]
+          },
+          "phi_coverage": 0.9957081545064378,
+          "qwen_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20263165,
+            "estimate": 0.9613733905579399,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9276595744680851,
+              0.9871794871794872
+            ]
+          },
+          "qwen_coverage": 1.0,
+          "qwen_phi_agreement": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20262165,
+            "estimate": 0.9827586206896551,
+            "n": 232,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.9652173913043478,
+              0.9957627118644068
+            ]
+          }
+        },
+        "4": {
+          "laya_mixed_unclear_rate": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261137,
+            "estimate": 1.0,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "phi_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20264137,
+            "estimate": 0.44206008583690987,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.4069264069264069,
+              0.47619047619047616
+            ]
+          },
+          "phi_coverage": 0.703862660944206,
+          "qwen_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20263137,
+            "estimate": 0.5064377682403434,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.4721030042918455,
+              0.5423728813559322
+            ]
+          },
+          "qwen_coverage": 1.0,
+          "qwen_phi_agreement": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20262137,
+            "estimate": 1.0,
+            "n": 164,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "8": {
+          "laya_mixed_unclear_rate": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20261141,
+            "estimate": 0.30042918454935624,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.24369747899159663,
+              0.3577586206896552
+            ]
+          },
+          "phi_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20264141,
+            "estimate": 0.7896995708154506,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.7457627118644068,
+              0.8340425531914893
+            ]
+          },
+          "phi_coverage": 0.9742489270386266,
+          "qwen_accuracy_vs_review_proxy": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20263141,
+            "estimate": 0.871244635193133,
+            "n": 233,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.8247863247863247,
+              0.9141630901287554
+            ]
+          },
+          "qwen_coverage": 0.9914163090128756,
+          "qwen_phi_agreement": {
+            "bootstrap_reps": 10000,
+            "bootstrap_seed": 20262141,
+            "estimate": 0.7268722466960352,
+            "n": 227,
+            "n_source_sentence_clusters": 112,
+            "sentence_cluster_bootstrap_95_ci": [
+              0.6826086956521739,
+              0.7717878721700516
+            ]
+          }
+        }
+      }
+    },
+    "judge_label_stability": {
+      "phi3-mini": {
+        "granite-3.1-2b": {
+          "first_budget_stable_to_32_distribution": {
+            "12": 81,
+            "16": 16,
+            "24": 13,
+            "32": 8,
+            "4": 89,
+            "8": 22
+          },
+          "n_parseable_32_token_endpoints": 229,
+          "stable_by_budget_fraction": {
+            "12": 0.8384279475982532,
+            "16": 0.9082969432314411,
+            "24": 0.9650655021834061,
+            "32": 1.0,
+            "4": 0.388646288209607,
+            "8": 0.4847161572052402
+          }
+        },
+        "qwen-1.5b": {
+          "first_budget_stable_to_32_distribution": {
+            "12": 38,
+            "16": 11,
+            "24": 7,
+            "32": 1,
+            "4": 93,
+            "8": 82
+          },
+          "n_parseable_32_token_endpoints": 232,
+          "stable_by_budget_fraction": {
+            "12": 0.9181034482758621,
+            "16": 0.9655172413793104,
+            "24": 0.9956896551724138,
+            "32": 1.0,
+            "4": 0.40086206896551724,
+            "8": 0.7543103448275862
+          }
+        },
+        "smollm2-1.7b": {
+          "first_budget_stable_to_32_distribution": {
+            "12": 44,
+            "16": 3,
+            "24": 3,
+            "32": 1,
+            "4": 98,
+            "8": 83
+          },
+          "n_parseable_32_token_endpoints": 232,
+          "stable_by_budget_fraction": {
+            "12": 0.9698275862068966,
+            "16": 0.9827586206896551,
+            "24": 0.9956896551724138,
+            "32": 1.0,
+            "4": 0.4224137931034483,
+            "8": 0.7801724137931034
+          }
+        }
+      },
+      "qwen2.5-3b": {
+        "granite-3.1-2b": {
+          "first_budget_stable_to_32_distribution": {
+            "12": 93,
+            "16": 32,
+            "24": 14,
+            "32": 3,
+            "4": 51,
+            "8": 40
+          },
+          "n_parseable_32_token_endpoints": 233,
+          "stable_by_budget_fraction": {
+            "12": 0.7896995708154506,
+            "16": 0.927038626609442,
+            "24": 0.9871244635193133,
+            "32": 1.0,
+            "4": 0.21888412017167383,
+            "8": 0.3905579399141631
+          }
+        },
+        "qwen-1.5b": {
+          "first_budget_stable_to_32_distribution": {
+            "12": 29,
+            "16": 8,
+            "24": 7,
+            "32": 3,
+            "4": 142,
+            "8": 44
+          },
+          "n_parseable_32_token_endpoints": 233,
+          "stable_by_budget_fraction": {
+            "12": 0.9227467811158798,
+            "16": 0.9570815450643777,
+            "24": 0.9871244635193133,
+            "32": 1.0,
+            "4": 0.6094420600858369,
+            "8": 0.7982832618025751
+          }
+        },
+        "smollm2-1.7b": {
+          "first_budget_stable_to_32_distribution": {
+            "12": 23,
+            "16": 1,
+            "24": 2,
+            "32": 6,
+            "4": 92,
+            "8": 109
+          },
+          "n_parseable_32_token_endpoints": 233,
+          "stable_by_budget_fraction": {
+            "12": 0.9613733905579399,
+            "16": 0.9656652360515021,
+            "24": 0.9742489270386266,
+            "32": 1.0,
+            "4": 0.3948497854077253,
+            "8": 0.8626609442060086
+          }
+        }
+      }
+    }
+  },
+  "experiment": "033",
+  "limitations": [
+    "This reuses the exact 233 items and 32-token continuations from 031/032; it is not an independent sample replication.",
+    "Agreement and stability do not establish semantic correctness; review labels are proxies and judges are automated.",
+    "Prefix length adds semantic evidence together with token count and does not isolate generic verbosity bias.",
+    "Later budgets repeat a naturally ended answer when EOS occurred before that prefix boundary."
+  ],
+  "n_item_target_judge_prefix_outcomes": 12582,
+  "primary_endpoint": "Qwen/Phi label agreement among jointly parseable outputs over nested prefix budgets",
+  "reused_label_checks": {
+    "laya": {
+      "exact_label_match_fraction": 1.0,
+      "n_label_mismatches": 0,
+      "n_reused_rows": 1398
+    },
+    "phi3-mini": {
+      "exact_label_match_fraction": 1.0,
+      "n_label_mismatches": 0,
+      "n_reused_rows": 1398
+    },
+    "qwen2.5-3b": {
+      "exact_label_match_fraction": 1.0,
+      "n_label_mismatches": 0,
+      "n_reused_rows": 1398
+    }
+  },
+  "status": "post-result dose-response follow-up"
+}

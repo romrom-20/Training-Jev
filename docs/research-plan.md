@@ -470,10 +470,27 @@ sensitivity finding, while leaving answer-level correctness unresolved: the revi
 label is not gold for the generated text, and both judges are language models. See
 the [`032 result bundle`](../results/cross-judge-length-robustness-v1/README.md).
 
-Experiment 033 now maps a dose-response curve without generating any new target
-answers. It will judge nested prefixes of each exact 32-token continuation at
-4/8/12/16/24/32 tokens, measuring when Laya's ambiguity falls and when Qwen/Phi
-labels agree and stabilize. This can tell us whether the effect appears as soon as
-sentiment evidence arrives or only at longer responses. It remains an evaluator
-consistency result; human answer-level coding and a second domain are still the
-clearest path to deciding whether the result warrants a public write-up.
+Experiment 033 preregistered a dose-response curve over nested prefixes of the same
+32-token continuations, avoiding another target-generation run. The protocol tested
+4/8/12/16/24/32-token checkpoints for Laya ambiguity and Qwen/Phi agreement and
+label stability.
+
+Experiment 033 found a sharp transition between 8 and 12 tokens: Qwen–Phi agreement
+rose from 75.8% to 92.6%, and both judges' accuracy against the review-level proxy
+reached about 89%. Agreement was 97.5% at 16 tokens and about 99% by 24; Laya's
+mixed/unclear rate fell throughout. At four tokens, Qwen/Phi agreed on every jointly
+parseable row while Laya called 99.6% of prefixes unclear/mixed and proxy accuracy
+was only 61.5%/44.2%. This illustrates why agreement alone cannot validate a judge.
+By 12 tokens roughly 90% of each judge's labels matched its own 32-token label at
+every later tested checkpoint. These are post-result repeated-prefix measurements
+on the same 233 items, not independent replication or answer-level ground truth.
+See the [`033 result bundle`](../results/prefix-dose-response-v1/README.md).
+
+**LessWrong decision: wait.** The cap effect is now a compelling local lead, but the
+answer labels are automated and the source-review polarity is not gold for the
+generated answer. Before writing a field-facing post, the next experiment should
+repeat the frozen 8/12/16/32 comparison on an independent aspect-sentiment domain
+with an answer-level validation set or blinded human coding. The relevant literature
+already covers preference-evaluation length bias; a potential contribution would
+need to stay narrow to generation-cap sensitivity in short semantic extraction and
+must show that the resolution point transfers.

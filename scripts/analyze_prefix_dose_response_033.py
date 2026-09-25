@@ -202,6 +202,61 @@ def summarize(rows):
         }
 
     stabilization = {}
+    by_target = {}
+    for model in MODELS:
+        target_budget_reports = {}
+        for budget in BUDGETS:
+            laya_target = [
+                row
+                for row in rows
+                if row["judge"] == "laya" and row["model"] == model and row["budget"] == budget
+            ]
+            qwen_target = [
+                row
+                for row in rows
+                if row["judge"] == "qwen2.5-3b" and row["model"] == model and row["budget"] == budget
+            ]
+            phi_target = [
+                row
+                for row in rows
+                if row["judge"] == "phi3-mini" and row["model"] == model and row["budget"] == budget
+            ]
+            shared = [
+                {
+                    "sentence_id": qwen["sentence_id"],
+                    "agreement": int(qwen["label"] == phi["label"]),
+                }
+                for qwen, phi in zip(qwen_target, phi_target)
+                if qwen["label"] is not None and phi["label"] is not None
+            ]
+            target_budget_reports[str(budget)] = {
+                "laya_mixed_unclear_rate": cluster_interval(
+                    laya_target,
+                    lambda row: int(row["label"] in AMBIGUOUS),
+                    seed=SEED + MODELS.index(model) * 100 + budget,
+                ),
+                "qwen_phi_agreement": cluster_interval(
+                    shared,
+                    lambda row: row["agreement"],
+                    seed=SEED + 1000 + MODELS.index(model) * 100 + budget,
+                ),
+                "qwen_coverage": sum(row["label"] is not None for row in qwen_target)
+                / len(qwen_target),
+                "qwen_accuracy_vs_review_proxy": cluster_interval(
+                    qwen_target,
+                    lambda row: int(is_correct(row["label"], row["gold"])),
+                    seed=SEED + 2000 + MODELS.index(model) * 100 + budget,
+                ),
+                "phi_coverage": sum(row["label"] is not None for row in phi_target)
+                / len(phi_target),
+                "phi_accuracy_vs_review_proxy": cluster_interval(
+                    phi_target,
+                    lambda row: int(is_correct(row["label"], row["gold"])),
+                    seed=SEED + 3000 + MODELS.index(model) * 100 + budget,
+                ),
+            }
+        by_target[model] = target_budget_reports
+
     for judge in ("qwen2.5-3b", "phi3-mini"):
         rows_by_model = {}
         labels_for = defaultdict(dict)
@@ -232,7 +287,11 @@ def summarize(rows):
                 },
             }
         stabilization[judge] = rows_by_model
-    return {"by_budget": by_budget, "judge_label_stability": stabilization}
+    return {
+        "by_budget": by_budget,
+        "by_target": by_target,
+        "judge_label_stability": stabilization,
+    }
 
 
 def run(private=PRIVATE_033, output=OUT):
@@ -269,11 +328,12 @@ def run(private=PRIVATE_033, output=OUT):
     (output / "analysis.json").write_text(json.dumps(analysis, indent=2, sort_keys=True) + "\n")
     audit = {
         "checks": {
-            "complete_4194_nested_prefix_decisions": len(series) == 4194,
+            "complete_12582_nested_prefix_decisions": len(series)
+            == len(JUDGES) * len(MODELS) * 233 * len(BUDGETS),
             "six_unique_prefixes_per_judge_target_item": len(
                 {(r["judge"], r["model"], r["id"], r["budget"]) for r in series}
             )
-            == 4194,
+            == len(JUDGES) * len(MODELS) * 233 * len(BUDGETS),
             "all_reused_labels_match_source_runs": all(
                 row["n_label_mismatches"] == 0
                 for row in analysis["reused_label_checks"].values()

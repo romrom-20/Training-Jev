@@ -1,0 +1,10 @@
+{
+  "checks": {
+    "all_reused_labels_match_source_runs": true,
+    "complete_12582_nested_prefix_decisions": true,
+    "no_answer_text_or_token_ids_in_public_rows": true,
+    "protocol_hash_matches": true,
+    "six_unique_prefixes_per_judge_target_item": true
+  },
+  "checks_passed": true
+}
