@@ -22,22 +22,30 @@ def load_rows(path: Path) -> list[dict]:
     return rows
 
 
-def _cluster_errors(by_key: dict, case_id: str, condition: str) -> np.ndarray:
+def _cluster_errors(by_key: dict, case_id: str, condition: str, dim: int | None = None) -> np.ndarray:
     values = []
     for lang in LANGS:
         row = by_key[(case_id, lang, condition)]
         if row["prediction"] is None:
             raise ValueError("Cannot score invalid predictions")
-        values.extend(
-            (float(row["prediction"][dim]) - float(row["gold"][dim])) ** 2
-            for dim in (0, 1)
-        )
+        dims = (dim,) if dim is not None else (0, 1)
+        values.extend((float(row["prediction"][i]) - float(row["gold"][i])) ** 2 for i in dims)
     return np.asarray(values, dtype=float)
 
 
-def paired_contrast(by_key: dict, case_ids: list[str], condition_a: str, condition_b: str) -> dict:
-    error_a = {case_id: _cluster_errors(by_key, case_id, condition_a) for case_id in case_ids}
-    error_b = {case_id: _cluster_errors(by_key, case_id, condition_b) for case_id in case_ids}
+def paired_contrast(
+    by_key: dict,
+    case_ids: list[str],
+    condition_a: str,
+    condition_b: str,
+    dim: int | None = None,
+) -> dict:
+    error_a = {
+        case_id: _cluster_errors(by_key, case_id, condition_a, dim) for case_id in case_ids
+    }
+    error_b = {
+        case_id: _cluster_errors(by_key, case_id, condition_b, dim) for case_id in case_ids
+    }
 
     def estimate(ids: list[str]) -> float:
         mse_a = np.mean(np.concatenate([error_a[x] for x in ids]))
@@ -101,7 +109,8 @@ def analyze(rows: list[dict], manifest: dict | None = None) -> dict:
             key: manifest[key]
             for key in (
                 "source_revision", "source_hashes", "model", "model_revision", "device",
-                "n_grid_candidates", "output_sha256",
+                "n_grid_candidates", "generation_seconds_this_process_only",
+                "run_code_commit", "output_sha256",
             )
         }
     if invalid_rate > 0.02:
@@ -122,6 +131,10 @@ def analyze(rows: list[dict], manifest: dict | None = None) -> dict:
     primary["registered_support_gate_passed"] = (
         primary["estimate"] >= 0.25 and primary["ci95"][0] > 0
     )
+    dimension_contrasts = {
+        name: paired_contrast(by_key, complete_ids, "aspect_only", "opinion_masked", dim)
+        for name, dim in (("valence", 0), ("arousal", 1))
+    }
     by_language = {}
     for lang in LANGS:
         errors = {condition: [] for condition in CONDITIONS}
@@ -141,6 +154,7 @@ def analyze(rows: list[dict], manifest: dict | None = None) -> dict:
             "status": "scored",
             "score_analysis_performed": True,
             "primary": primary,
+            "dimension_contrasts_descriptive": dimension_contrasts,
             "by_language_descriptive": by_language,
         }
     )
@@ -150,6 +164,12 @@ def analyze(rows: list[dict], manifest: dict | None = None) -> dict:
 def write_report(summary: dict, output: Path) -> None:
     output.mkdir(parents=True, exist_ok=True)
     (output / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
+    runtime = summary.get("run_provenance", {}).get("generation_seconds_this_process_only")
+    runtime_line = (
+        f"Generation took {runtime / 60:.1f} minutes after model load on "
+        f"{summary['run_provenance']['device']}."
+        if runtime is not None else "Generation runtime was not recorded."
+    )
     if summary["status"] == "protocol_execution_failure":
         body = (
             "The preregistered invalid-output gate failed, so VA score comparisons were not run. "
@@ -160,7 +180,9 @@ def write_report(summary: dict, output: Path) -> None:
         body = (
             f"The primary RMSE contrast (aspect-only minus opinion-masked) was "
             f"{primary['estimate']:.3f} (cluster-bootstrap 95% interval "
-            f"[{primary['ci95'][0]:.3f}, {primary['ci95'][1]:.3f}]); the registered "
+            f"[{primary['ci95'][0]:.3f}, {primary['ci95'][1]:.3f}]); valence and arousal "
+            f"contrasts were {summary['dimension_contrasts_descriptive']['valence']['estimate']:.3f} "
+            f"and {summary['dimension_contrasts_descriptive']['arousal']['estimate']:.3f}; the registered "
             f"support gate {'passed' if primary['registered_support_gate_passed'] else 'did not pass'}."
         )
     text = f"""# Experiment 043: expanded opinion-mask repair
@@ -168,6 +190,8 @@ def write_report(summary: dict, output: Path) -> None:
 ## Result
 
 {body}
+
+{runtime_line}
 
 This is a disjoint-item rerun on the same DimABSA release, language files and Qwen model. The 0.1-step constrained output grid ensures values stay in range and parse, but can alter model answers. The bootstrap resamples source IDs with all three aligned language rows kept together. This does not establish independent-corpus or human generalization.
 

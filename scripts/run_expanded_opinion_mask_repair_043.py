@@ -335,7 +335,7 @@ def run(
             stream.flush()
             print(
                 f"043 constrained {min(offset + len(batch), len(remaining))}/{len(remaining)}; "
-                f"total {len(previous)}/1440",
+                f"total {len(previous)}/{len(jobs)}",
                 flush=True,
             )
     generation_seconds = time.monotonic() - generation_started

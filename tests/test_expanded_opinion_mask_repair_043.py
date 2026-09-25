@@ -57,3 +57,26 @@ def test_analysis_stops_without_scoring_when_invalid_threshold_fails():
     assert result["status"] == "protocol_execution_failure"
     assert result["n_invalid_outputs"] == 27
     assert result["score_analysis_performed"] is False
+
+
+def test_analysis_reports_primary_and_predeclared_dimension_contrasts():
+    rows = []
+    for cluster in range(217):
+        for lang in analysis.LANGS:
+            for condition, prediction in (
+                ("aspect_only", [3.0, 3.0]),
+                ("opinion_masked", [5.0, 5.0]),
+            ):
+                rows.append(
+                    {
+                        "case_id": f"case-{cluster}",
+                        "lang": lang,
+                        "condition": condition,
+                        "gold": [5.0, 5.0],
+                        "prediction": prediction,
+                    }
+                )
+    result = analysis.analyze(rows)
+    assert result["primary"]["estimate"] == 2.0
+    assert result["dimension_contrasts_descriptive"]["valence"]["estimate"] == 2.0
+    assert result["dimension_contrasts_descriptive"]["arousal"]["estimate"] == 2.0

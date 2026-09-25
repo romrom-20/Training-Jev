@@ -722,3 +722,25 @@ decoder. The [043 protocol](experiments/043-expanded-opinion-mask-repair.md),
 runner, analysis code, and tests are committed before its target-model run.
 LessWrong remains deferred until a result looks empirically worthwhile after
 this experiment and suitable follow-up.
+
+**Experiment 043 outcome.** The expanded, disjoint-item rerun completed all 1,302
+constrained judgments with no invalid responses. The preregistered primary contrast
+passed: aspect-only minus opinion-masked two-dimensional VA RMSE was +1.845
+(95% source-ID cluster-bootstrap interval [+1.649, +2.043]), above the +0.25
+practical threshold. The direction held descriptively in Russian, Ukrainian and
+Tatar. This is a sizeable result for Qwen2.5-3B on the remaining eligible IDs in
+one public release, but 043's 0.1-grid constrained decoder may change score
+content, and the three languages share IDs and labels. It does not yet establish
+that order/compositional context is doing the work or that the effect transfers
+to another model or corpus. See the
+[`043 aggregate bundle`](../results/expanded-opinion-mask-repair-v1/README.md)
+and the separate [run amendment](experiments/043-run-amendment.md).
+
+After this result, Laya's pinned local typed-choice model selected a
+word-order-shuffle control over free-decoding sensitivity, a second model size,
+and another language sample. Experiment 044 will keep the 043 sample and exact
+masked tokens, deterministically shuffle their whitespace-token order, and test
+whether natural order improves on the same bag of words. This is an adaptive
+follow-up on already observed outcomes, not an independent confirmation; its
+protocol will be committed before the new judgments. LessWrong remains deferred
+until the result survives this diagnostic and an external replication.

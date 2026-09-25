@@ -1,0 +1,76 @@
+{
+  "experiment": "043-expanded-opinion-mask-repair",
+  "interpretation": "held-out-item execution-corrected test on one public benchmark; not an independent corpus replication",
+  "n_selected_clusters": 217,
+  "n_language_target_instances": 651,
+  "n_expected_outputs": 1302,
+  "n_invalid_outputs": 0,
+  "invalid_rate": 0.0,
+  "grid_resolution": 0.1,
+  "analysis_seed": 20260943,
+  "bootstrap_replicates": 10000,
+  "bootstrap_unit": "shared DimABSA ID; resample all languages, conditions and VA dimensions together",
+  "score_analysis_performed": true,
+  "n_complete_clusters": 217,
+  "run_provenance": {
+    "source_revision": "bdc93be1224106ae7d3eb95739c02a76ed4ae8a1",
+    "source_hashes": {
+      "rus": "912013b49db2bd387076f63ee9df016350180fbac621449121a27dc262d5459b",
+      "ukr": "05fdf7e2dca235261060b785f969315385f962021f171abb85e45638bbadb036",
+      "tat": "c4f1fb5c21f8f06f598c87e489e7adce1a953d4446ad14a60432ae2a13b85ce6"
+    },
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "model_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "device": "mps",
+    "n_grid_candidates": 6561,
+    "generation_seconds_this_process_only": 2608.1421433750074,
+    "run_code_commit": "74ab7db8bd4d9bd2a43ab4f98ca57e20ce02a115",
+    "output_sha256": "1e93d359220c533a01f9cccca827f30611a713b70d857a898f59b6560303c7c8"
+  },
+  "status": "scored",
+  "primary": {
+    "contrast": "aspect_only_rmse_minus_opinion_masked_rmse",
+    "estimate": 1.8448904220357432,
+    "ci95": [
+      1.6492695070065846,
+      2.0425320449736892
+    ],
+    "n_clusters": 217,
+    "interpretation": "positive favors non-opinion sentence context over aspect-only input",
+    "registered_support_gate_passed": true
+  },
+  "dimension_contrasts_descriptive": {
+    "valence": {
+      "contrast": "aspect_only_rmse_minus_opinion_masked_rmse",
+      "estimate": 1.7954882232197633,
+      "ci95": [
+        1.541790079401798,
+        2.0528737609616683
+      ],
+      "n_clusters": 217
+    },
+    "arousal": {
+      "contrast": "aspect_only_rmse_minus_opinion_masked_rmse",
+      "estimate": 1.897782867289246,
+      "ci95": [
+        1.7152956406846154,
+        2.0819995863120577
+      ],
+      "n_clusters": 217
+    }
+  },
+  "by_language_descriptive": {
+    "rus": {
+      "aspect_only_rmse": 4.648033427864281,
+      "opinion_masked_rmse": 2.5881523755169455
+    },
+    "ukr": {
+      "aspect_only_rmse": 4.4137153226401855,
+      "opinion_masked_rmse": 2.7440010815383933
+    },
+    "tat": {
+      "aspect_only_rmse": 4.474201316364166,
+      "opinion_masked_rmse": 2.6701262504886145
+    }
+  }
+}
