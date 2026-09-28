@@ -117,3 +117,37 @@ def test_loader_checks_condition_and_unique_rows(tmp_path, monkeypatch):
     path = tmp_path / "outputs.jsonl"
     path.write_text("\n".join(json.dumps(row) for row in rows) + "\n")
     assert len(analyzer.load_rows(path)) == len(rows)
+
+
+def test_post_hoc_same_recipient_contrast_pairs_the_two_donor_controls(monkeypatch):
+    monkeypatch.setattr(shared, "EXPECTED_IDS", 2)
+    category = {}
+    polarity = {}
+    matched = {}
+    for case_id in ("a", "b"):
+        for decoder in shared.DECODERS:
+            matched[(case_id, "opinion_masked", decoder)] = {
+                "case_id": case_id, "condition": "opinion_masked", "decoder": decoder,
+                "gold": [5.0, 5.0], "prediction": [5.0, 5.0],
+            }
+        for permutation in shared.PERMUTATIONS:
+            for decoder in shared.DECODERS:
+                category_offset = 2.0 if decoder == "finite_grid" else 1.0
+                polarity_offset = 3.0 if decoder == "finite_grid" else 1.0
+                for target, offset, condition in (
+                    (category, category_offset, "category_polarity_matched_context"),
+                    (polarity, polarity_offset, "polarity_matched_context"),
+                ):
+                    target[(case_id, permutation, "swapped_context", decoder)] = {
+                        "case_id": case_id, "condition": condition, "permutation": permutation,
+                        "decoder": decoder, "gold": [5.0, 5.0],
+                        "prediction": [5.0 + offset, 5.0 + offset],
+                    }
+    result = analyzer.exploratory_same_recipient_contrast(
+        category, polarity, matched, bootstrap_replicates=40
+    )
+    assert result["status"] == "post_hoc_exploratory"
+    assert result["category_matched_estimate"] == pytest.approx(1.0)
+    assert result["polarity_only_estimate_same_recipients"] == pytest.approx(2.0)
+    assert result["difference"] == pytest.approx(-1.0)
+    assert result["n_recipient_ids"] == 2

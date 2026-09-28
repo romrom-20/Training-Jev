@@ -1098,3 +1098,33 @@ in the ABSA literature. If that control preserves a decoder-specific gap, a post
 about output grammar changing how a small LM uses matched evidence would be
 interesting; if it erases the gap, the post should instead be about a simpler
 polarity-prior effect.
+
+**Experiment 057 outcome: official-category control.** Laya selected an aspect-family
+donor control, implemented with the benchmark's official Task 3 aspect categories
+rather than hand-built phrase groups. On the 184 fresh recipients that belonged to
+non-singleton category/polarity cells (89 negative, 95 positive), Qwen2.5-3B's
+mean finite-minus-free matched-review interaction was +0.107 VA RMSE points
+(95% recipient-bootstrap interval [-0.086, +0.296]) across three distinct donor
+maps; all 1,104 generations were valid. The result does not establish a remaining
+decoder-specific advantage after broad topic matching. In a post-hoc, same-recipient
+comparison, the polarity-only interaction from Experiment 056 was +0.411 on those
+same 184 cases; category-and-polarity matching reduced it by 0.304 (95% paired
+recipient-bootstrap interval [-0.463, -0.143]). That contrast was not preregistered
+and used different donor assignments, so it is diagnostic rather than confirmatory.
+The strongest current interpretation is that broad aspect-topic overlap may account
+for a meaningful part of the earlier donor gap, while an exact-review contribution
+remains unresolved. The data are from one public split, one model family, and contain
+no neutral-valence cases. See the [057 aggregate](../results/category-matched-context-swap-v1/README.md)
+and [frozen protocol](experiments/057-category-matched-context-swap.md).
+
+The literature check narrows what could be new: context denoising has already been
+studied directly in ABSA ([Tian et al., 2024](https://aclanthology.org/2024.findings-naacl.194/)),
+and a SemEval-2026 system reports that LLM-generated sentiment descriptions improve
+Russian VA regression ([Alshawi et al., 2026](https://aclanthology.org/2026.semeval-1.334/)).
+That system studies adding generated descriptions to encoder inputs; it does not test
+whether aspect-category matching explains a decoder-by-context interaction. The next
+test will use the pinned Qwen2.5-1.5B model on the same recipients and donor maps, to
+check whether 057's attenuation transfers across scale before deciding whether a
+more expensive direct topic-match factorial is justified. This is a local research
+triage decision, not a novelty claim. **No LessWrong post has been written or
+published; revisit only after this follow-up.**

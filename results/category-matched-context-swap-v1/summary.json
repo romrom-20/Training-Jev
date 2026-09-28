@@ -1,0 +1,111 @@
+{
+  "experiment": "057-category-matched-context-swap",
+  "interpretation": "adaptive official-category/polarity matched context diagnostic; exploratory",
+  "n_recipient_ids": 184,
+  "n_permutations": 3,
+  "n_new_outputs": 1104,
+  "invalid_swapped_by_decoder": {
+    "finite_grid": 0,
+    "free_greedy": 0
+  },
+  "invalid_free_outputs": 0,
+  "invalid_free_denominator": 552,
+  "invalid_free_rate": 0.0,
+  "analysis_seed": 20260957,
+  "bootstrap_replicates": 10000,
+  "bootstrap_unit": "recipient sentence ID, retaining all three fixed donor assignments",
+  "score_analysis_performed": true,
+  "run_provenance": {
+    "protocol_sha256": "7e0a7863d18f8d0402775a416e6d71e80377a7383dbecccdaa57c72bb117fb25",
+    "source_revision": "bdc93be1224106ae7d3eb95739c02a76ed4ae8a1",
+    "source_sha256": "08a4cc197f068f6fc4c9373f61bfb86a5cd996ef16be3cb516082b434ba92543",
+    "parent_output_sha256": "890a16d6363e72549c7ccad9099dece3ce021ab78ab3d8071acde18774500f5f",
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "model_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "device": "mps",
+    "donor_assignment_sha256": {
+      "1": "3447f446f6ccdb8edbf7d86b3d40a6d88c98bf46b213d6acd3f32590b4672949",
+      "2": "edfd5c94ffdca55adba488d5b573e8bb5cc8fc33db055e9592b19f0221f0b1b8",
+      "3": "9e8b819b02ef7a19033e7ade367b98d64d1e46535446d9495494b46d715faa9b"
+    },
+    "output_sha256": "21e7fe02b43433fa4b61b5dfe790efef38c57e8a0e240e4443ffe40ffb110e31",
+    "generation_seconds_this_process_only": 1821.1074524170253,
+    "n_unique_assignment_maps": 3
+  },
+  "status": "scored",
+  "n_complete_recipient_ids": 184,
+  "per_permutation": {
+    "1": {
+      "matched_review_advantage_by_decoder": {
+        "finite_grid": 0.2089517582020246,
+        "free_greedy": 0.13043298479214327
+      },
+      "finite_minus_free_interaction": 0.07851877340988134
+    },
+    "2": {
+      "matched_review_advantage_by_decoder": {
+        "finite_grid": 0.14079112747262634,
+        "free_greedy": 0.08556747603842618
+      },
+      "finite_minus_free_interaction": 0.05522365143420016
+    },
+    "3": {
+      "matched_review_advantage_by_decoder": {
+        "finite_grid": 0.2318297802322009,
+        "free_greedy": 0.045679129569554444
+      },
+      "finite_minus_free_interaction": 0.18615065066264647
+    }
+  },
+  "mean_matched_review_advantage_by_decoder": {
+    "finite_grid": 0.19385755530228396,
+    "free_greedy": 0.08722653013337463
+  },
+  "mean_primary_interaction": {
+    "contrast": "mean over three permutations of [matched-review advantage(finite) - matched-review advantage(free)]",
+    "estimate": 0.10663102516890932,
+    "ci95": [
+      -0.08614323882847705,
+      0.2964982808222568
+    ],
+    "n_recipient_ids": 184,
+    "confirmatory": false
+  },
+  "permutation_sensitivity": {
+    "range": [
+      0.05522365143420016,
+      0.18615065066264647
+    ],
+    "sample_standard_deviation": 0.06984406779364746,
+    "n_permutations": 3,
+    "inferential_status": "descriptive range across unique fixed donor mappings"
+  },
+  "limitations": [
+    "The 184 eligible cases exclude category-polarity singleton cells.",
+    "The fresh sample has no neutral-valence cases.",
+    "Official category and polarity matching do not control exact aspect identity or relevant words.",
+    "Same public test release and model family; pretraining exposure is possible.",
+    "Bootstrap intervals condition on the fixed cyclic donor mappings."
+  ],
+  "control": {
+    "donors_match_recipient_gold_valence_polarity": true,
+    "donors_match_official_dimabsa_aspect_category": true,
+    "n_category_polarity_groups": 45,
+    "n_unique_assignment_maps": 3
+  },
+  "exploratory_same_recipient_contrast": {
+    "status": "post_hoc_exploratory",
+    "contrast": "category-and-polarity-matched interaction minus polarity-only-matched interaction",
+    "category_matched_estimate": 0.10663102516890932,
+    "polarity_only_estimate_same_recipients": 0.4110014965802747,
+    "difference": -0.30437047141136536,
+    "recipient_bootstrap_ci95": [
+      -0.4629996487259324,
+      -0.14311071734049113
+    ],
+    "n_recipient_ids": 184,
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20260958,
+    "warning": "This same-recipient contrast was not prespecified; do not treat it as confirmatory."
+  }
+}
