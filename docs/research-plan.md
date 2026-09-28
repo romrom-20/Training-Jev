@@ -809,3 +809,11 @@ small, reliable context signal but does not meet the predeclared threshold or
 reproduce most of the Qwen context gain. It does not rule out nonlinear,
 pretrained, aspect-conditioned, or incomplete-annotation explanations. See the
 [`046 aggregate bundle`](../results/masked-context-lexical-baseline-v1/README.md).
+
+Laya's next typed-choice decision selected an unconstrained greedy-generation
+sensitivity test over sparse lexical-feature ablations, repeated permutation
+sampling, and domain transfer. Experiment 047 reuses the 043 test IDs and
+compares only aspect-only with opinion-masked prompts under ordinary free JSON
+generation, with a strict 2% invalid-output gate. This directly checks whether
+the large context effect survives removal of the finite candidate grid; its
+protocol is committed before collecting the new judgments.
