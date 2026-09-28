@@ -840,3 +840,11 @@ preprint examines structural validity versus semantic accuracy in small models
 this aspect-conditioned continuous VA contrast. The
 [`047 bundle`](../results/free-decode-opinion-mask-sensitivity-v1/README.md)
 records the validity gate, primary outcome, and explicitly post-hoc comparison.
+
+Laya's next typed-choice decision selected a Qwen2.5-1.5B matched-decoder
+follow-up. Experiment 048 compares aspect-only and opinion-masked inputs under
+both the finite VA grid and free greedy generation, using the identical 043
+one-decimal prompt in all four cells. This keeps prompt wording fixed while
+testing whether the decoding effect observed in the larger model also appears
+at 1.5B. The matched-prompt protocol, runner, analyzer, and tests are committed
+before the 2,604 new local judgments.
