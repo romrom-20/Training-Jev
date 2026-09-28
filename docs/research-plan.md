@@ -940,3 +940,11 @@ and [VADE / Senti-COCO](https://aclanthology.org/2026.findings-acl.1979/).
 The next Laya choice therefore needs to select among feasible mechanism or
 within-release transfer controls. An independent-corpus replication would first
 require new gold annotation rather than just another local inference run.
+
+After that data audit, Laya selected Experiment 051: repeat the matched 3B factorial
+on all eligible English restaurant cases. This fixes English language, prompt,
+model, and decoding setup while changing product domain relative to 050. It yields
+3,852 local generations, and the preregistered secondary analysis compares the
+restaurant interaction with the 050 laptop interaction using independent source-ID
+bootstrap draws. The [051 protocol](experiments/051-restaurant-domain-decoder-transfer-3b.md),
+runner, analyzer and tests are frozen before the new target-model judgments.
