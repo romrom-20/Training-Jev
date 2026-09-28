@@ -1,0 +1,88 @@
+{
+  "experiment": "054-context-swap-donor-robustness",
+  "interpretation": "adaptive three-assignment robustness diagnostic; exploratory",
+  "n_recipient_ids": 217,
+  "n_permutations": 3,
+  "n_new_outputs": 1302,
+  "invalid_swapped_by_decoder": {
+    "finite_grid": 0,
+    "free_greedy": 0
+  },
+  "invalid_free_outputs": 0,
+  "invalid_free_denominator": 651,
+  "invalid_free_rate": 0.0,
+  "analysis_seed": 20260954,
+  "bootstrap_replicates": 10000,
+  "bootstrap_unit": "recipient sentence ID, retaining all three fixed donor assignments",
+  "score_analysis_performed": true,
+  "run_provenance": {
+    "protocol_sha256": "e095fdb8292766f865d87e56cb69c59f414e9342b37ba5c0fc62a4072e9470a0",
+    "source_revision": "bdc93be1224106ae7d3eb95739c02a76ed4ae8a1",
+    "source_sha256": "08a4cc197f068f6fc4c9373f61bfb86a5cd996ef16be3cb516082b434ba92543",
+    "parent_output_sha256": "890a16d6363e72549c7ccad9099dece3ce021ab78ab3d8071acde18774500f5f",
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "model_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "device": "mps",
+    "donor_assignment_sha256": {
+      "1": "a9eed6764adf37be7f3909ff40cb4c59844d93ee69b05d1c5ff39306f104bc06",
+      "2": "1016ec3cdd1a4b02c09328940a20a68436a8439987a38803cc5c9c671ad4b51d",
+      "3": "5a12c45052f9a15d7f76bb08c79c89976fca3d7996cf5cfed4d7317405669526"
+    },
+    "output_sha256": "193764209b96f59b1c974cdf2ca8010afe9a01104dca07cd2d9b4720e5637ef9",
+    "generation_seconds_this_process_only": 1910.7267665420077
+  },
+  "status": "scored",
+  "n_complete_recipient_ids": 217,
+  "per_permutation": {
+    "1": {
+      "matched_review_advantage_by_decoder": {
+        "finite_grid": 0.5866329137074686,
+        "free_greedy": 0.2051371761682863
+      },
+      "finite_minus_free_interaction": 0.3814957375391823
+    },
+    "2": {
+      "matched_review_advantage_by_decoder": {
+        "finite_grid": 0.5959510802155807,
+        "free_greedy": 0.12420626604068596
+      },
+      "finite_minus_free_interaction": 0.4717448141748948
+    },
+    "3": {
+      "matched_review_advantage_by_decoder": {
+        "finite_grid": 0.6043699783316678,
+        "free_greedy": 0.12725117786116913
+      },
+      "finite_minus_free_interaction": 0.4771188004704987
+    }
+  },
+  "mean_matched_review_advantage_by_decoder": {
+    "finite_grid": 0.5956513240849057,
+    "free_greedy": 0.15219820669004713
+  },
+  "mean_primary_interaction": {
+    "contrast": "mean over three permutations of [matched-review advantage(finite) - matched-review advantage(free)]",
+    "estimate": 0.4434531173948586,
+    "ci95": [
+      0.2774495227216735,
+      0.6112242069686059
+    ],
+    "n_recipient_ids": 217,
+    "confirmatory": false
+  },
+  "permutation_sensitivity": {
+    "range": [
+      0.3814957375391823,
+      0.4771188004704987
+    ],
+    "sample_standard_deviation": 0.053723901767386145,
+    "n_permutations": 3,
+    "inferential_status": "descriptive only; three fixed mappings"
+  },
+  "limitations": [
+    "All donor permutations may change coarse polarity; this design does not control it.",
+    "Intervals condition on the three fixed donor mappings.",
+    "The polarity-balanced subset is not prevalence-representative.",
+    "Public benchmark text may have appeared in model training data."
+  ]
+}

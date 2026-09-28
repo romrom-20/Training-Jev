@@ -1027,3 +1027,26 @@ match swapped donors on coarse gold-valence polarity, to check whether the resul
 survives after controlling that cue. The [053 protocol](experiments/053-counterfactual-review-context-swap.md)
 and [aggregate result](../results/counterfactual-context-swap-v1/README.md) have
 the full details.
+
+**Experiment 054 outcome.** Across three new donor derangements of the same 217
+IDs, finite-grid matched-review advantage was +0.587, +0.596, and +0.604 VA RMSE;
+free-greedy advantage was +0.205, +0.124, and +0.127. The mean decoder interaction
+was +0.443 (95% recipient-bootstrap interval [+0.277, +0.611]); the three fixed
+assignment estimates ranged from +0.381 to +0.477 (descriptive SD 0.054). All
+1,302 outputs were valid. The repeated direction makes a lucky single donor
+assignment less plausible, but these are not three independent test samples and
+all three assignments can still change coarse gold-polarity cues. The bootstrap is
+conditional on the frozen mappings. See the [054 aggregate report](../results/context-swap-donor-robustness-v1/README.md).
+
+**Publication judgment after 053–054.** The pattern is interesting enough to
+consider a narrowly framed LessWrong post: with this public benchmark/model, a
+finite numeric grammar's apparent residual-context benefit is substantially
+larger for the matching review than for unrelated length-matched reviews, and the
+gap persists across three donor assignments. However, the broader idea that
+context matters or should be denoised in ABSA is established, and the mechanism
+test has not yet controlled coarse sentiment polarity. A public post would be
+premature as a claim of novel evidence until a same-polarity donor control checks
+whether the model is following only negative/neutral/positive cues. Revisit after
+that control; if the decoder-specific gap remains, a careful exploratory post
+could be useful, with the public-test and one-model limitations in the first
+paragraph.
