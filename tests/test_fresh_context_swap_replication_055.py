@@ -75,5 +75,6 @@ def test_fresh_analyzer_wraps_frozen_054_scoring(monkeypatch):
                 }
     summary = analyzer.analyze(swapped, matched)
     assert summary["experiment"] == "055-fresh-context-swap-replication"
+    assert summary["analysis_seed"] == 20260955
     assert summary["sample_design"]["valence"] == "108 negative, 109 positive; no neutral cases"
     assert summary["mean_primary_interaction"]["estimate"] == pytest.approx(1.0)

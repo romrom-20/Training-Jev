@@ -1050,3 +1050,27 @@ whether the model is following only negative/neutral/positive cues. Revisit afte
 that control; if the decoder-specific gap remains, a careful exploratory post
 could be useful, with the public-test and one-model limitations in the first
 paragraph.
+
+**Experiment 055 outcome.** On 217 fresh IDs disjoint from 053–054 (108 negative,
+109 positive; neutral cases unavailable), the mean finite-minus-free matched-review
+interaction was +0.411 (95% recipient-bootstrap interval [+0.254, +0.563]). The
+three assignment estimates were +0.468, +0.259, and +0.506; all 1,302 outputs
+were valid. The fresh-sample replication substantially reduces the possibility
+that the first 217 cases alone drove the signal. It remains within the same public
+benchmark and does not control donor/recipient polarity. The first analyzer pass
+used the 054 seed by mistake; after correcting to the registered 055 seed
+20260955, the point estimates were unchanged and the interval was
+[+0.254, +0.563]. See the [analysis-seed correction](experiments/055-analysis-seed-correction.md)
+and [055 aggregate report](../results/fresh-context-swap-replication-v1/README.md).
+
+**Revised LessWrong judgment.** Two non-overlapping laptop samples, three donor
+assignments per sample, and the earlier English/Chinese factorials now support a
+real and repeatable empirical pattern in this one 3B model family. It is now
+plausible material for a narrowly scoped LessWrong research note, rather than
+merely an isolated surprising run. I would still wait for a same-polarity donor
+control before writing, because the current counterfactual can change the
+review's coarse sentiment class and the broader context-denoising idea is already
+in the ABSA literature. If that control preserves a decoder-specific gap, a post
+about output grammar changing how a small LM uses matched evidence would be
+interesting; if it erases the gap, the post should instead be about a simpler
+polarity-prior effect.

@@ -6,14 +6,18 @@ import argparse
 import json
 from pathlib import Path
 
-from analyze_context_swap_donor_robustness_054 import analyze as _analyze
-from analyze_context_swap_donor_robustness_054 import load_rows
+import analyze_context_swap_donor_robustness_054 as shared
+
+shared.SEED = 20260955
+_analyze = shared.analyze
+load_rows = shared.load_rows
 
 
 def analyze(swapped: dict, matched: dict, manifest: dict | None = None) -> dict:
     summary = _analyze(swapped, matched, manifest)
     summary["experiment"] = "055-fresh-context-swap-replication"
     summary["interpretation"] = "adaptive disjoint-sample replication; exploratory"
+    summary["analysis_seed"] = 20260955
     summary["sample_design"] = {
         "n": summary["n_recipient_ids"],
         "selection": "fresh, SHA-256-ranked and disjoint from Exp053/054",
@@ -53,6 +57,8 @@ def write_report(summary: dict, output: Path) -> None:
 The 217 recipient cases are disjoint from the first 217-case sample, with 108 negative- and 109 positive-valence cases. All neutral cases were used in the earlier sample, so this replication does not test neutral cases. Each aspect/gold pair stayed fixed while three length-binned donor reviews were assigned in deterministic derangements. The result uses the same public dataset and model family as the earlier tests.
 
 Donor reviews were not matched by polarity, so coarse-polarity effects remain possible. The intervals condition on the three mappings, and the public test may have appeared in pretraining. No text, item IDs, donor mappings, or individual outputs are published.
+
+The bootstrap seed was corrected to the registered `20260955` after an analyzer-wrapper oversight; see `docs/experiments/055-analysis-seed-correction.md`. Model outputs and point estimates did not change.
 
 - Protocol: `docs/experiments/055-fresh-context-swap-replication.md`
 - Aggregate result and provenance: `summary.json`

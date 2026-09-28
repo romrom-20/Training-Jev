@@ -1,0 +1,94 @@
+{
+  "experiment": "055-fresh-context-swap-replication",
+  "interpretation": "adaptive disjoint-sample replication; exploratory",
+  "n_recipient_ids": 217,
+  "n_permutations": 3,
+  "n_new_outputs": 1302,
+  "invalid_swapped_by_decoder": {
+    "finite_grid": 0,
+    "free_greedy": 0
+  },
+  "invalid_free_outputs": 0,
+  "invalid_free_denominator": 651,
+  "invalid_free_rate": 0.0,
+  "analysis_seed": 20260955,
+  "bootstrap_replicates": 10000,
+  "bootstrap_unit": "recipient sentence ID, retaining all three fixed donor assignments",
+  "score_analysis_performed": true,
+  "run_provenance": {
+    "protocol_sha256": "484ef37dec9e06ea24e033340fa43eff605f8b95a1be465ffdf4e427db37bd9d",
+    "source_revision": "bdc93be1224106ae7d3eb95739c02a76ed4ae8a1",
+    "source_sha256": "08a4cc197f068f6fc4c9373f61bfb86a5cd996ef16be3cb516082b434ba92543",
+    "parent_output_sha256": "890a16d6363e72549c7ccad9099dece3ce021ab78ab3d8071acde18774500f5f",
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "model_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "device": "mps",
+    "donor_assignment_sha256": {
+      "1": "46e4806605955284f95a9da1871ab38d4a9e0f4c9bdc32d129dc35039d990d78",
+      "2": "82dcfb59d4c46f9067c902443b6c09458c9f76aef086284f76118daf767fc0ef",
+      "3": "d75cc518bcdbf13b4e96a80f1d1a851f12926e8a89f2afe2d550f4dc170094e5"
+    },
+    "output_sha256": "b7f8d015512548cc2d6ce471d9355e3350a4ec61dde883918fa075a3deb9386e",
+    "generation_seconds_this_process_only": 2126.136457708024
+  },
+  "status": "scored",
+  "n_complete_recipient_ids": 217,
+  "per_permutation": {
+    "1": {
+      "matched_review_advantage_by_decoder": {
+        "finite_grid": 0.6960122975674068,
+        "free_greedy": 0.22753722767870732
+      },
+      "finite_minus_free_interaction": 0.46847506988869947
+    },
+    "2": {
+      "matched_review_advantage_by_decoder": {
+        "finite_grid": 0.5071391674761165,
+        "free_greedy": 0.24794395533480307
+      },
+      "finite_minus_free_interaction": 0.25919521214131347
+    },
+    "3": {
+      "matched_review_advantage_by_decoder": {
+        "finite_grid": 0.7539314115068034,
+        "free_greedy": 0.2482670404975309
+      },
+      "finite_minus_free_interaction": 0.5056643710092725
+    }
+  },
+  "mean_matched_review_advantage_by_decoder": {
+    "finite_grid": 0.6523609588501089,
+    "free_greedy": 0.24124940783701376
+  },
+  "mean_primary_interaction": {
+    "contrast": "mean over three permutations of [matched-review advantage(finite) - matched-review advantage(free)]",
+    "estimate": 0.41111155101309516,
+    "ci95": [
+      0.2543961673695732,
+      0.5626518735501074
+    ],
+    "n_recipient_ids": 217,
+    "confirmatory": false
+  },
+  "permutation_sensitivity": {
+    "range": [
+      0.25919521214131347,
+      0.5056643710092725
+    ],
+    "sample_standard_deviation": 0.1328709582324658,
+    "n_permutations": 3,
+    "inferential_status": "descriptive only; three fixed mappings"
+  },
+  "limitations": [
+    "Same public dataset and model family; test data may have appeared in pretraining.",
+    "No neutral-valence cases in the fresh disjoint sample.",
+    "Donor mappings are not polarity-matched; coarse-polarity effects remain possible.",
+    "Intervals condition on three fixed donor mappings."
+  ],
+  "sample_design": {
+    "n": 217,
+    "selection": "fresh, SHA-256-ranked and disjoint from Exp053/054",
+    "valence": "108 negative, 109 positive; no neutral cases",
+    "confirmatory": false
+  }
+}
