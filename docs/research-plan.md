@@ -1182,3 +1182,20 @@ new angle is specifically the interaction between decoder choice and matched ver
 cross-category review context, conditional on this benchmark/model. Check whether it
 survives a serialization perturbation and finer donor-score matching before deciding
 whether a LessWrong post would add value. **No post has been written or published.**
+
+**Experiment 062 outcome: JSON key order changes the apparent topic-match effect.**
+The registered arousal-first rerun completed on the same 184 laptop recipients, with
+the same maps and zero invalid outputs. The cross-minus-same-category interaction
+was +0.037 (95% interval [-0.115, +0.193]), versus +0.294 under valence-first JSON;
+the paired order moderation was -0.258 ([-0.449, -0.061]). A post-hoc, coordinate-
+wise decomposition suggests this shift is concentrated in arousal: its moderation
+was -0.447 ([-0.652, -0.235]), while valence moderation was -0.026
+([-0.282, +0.236]). The coordinate audit is exploratory and shares the same
+recipients/maps. General LLM input-order sensitivity is known ([Guan et al., 2025](https://arxiv.org/abs/2502.04134));
+this experiment instead varies output-field order in continuous VA scoring and
+measures its interaction with context match and decoder. The laptop result is now
+too order-sensitive to support the original narrow post on its own. Laya selected
+a fresh recipient replication; the preselected remaining laptop split lacks enough
+negative cases, so Experiment 063 will test the arousal-specific prediction on an
+English restaurant cohort with official aspect categories. No post has been written
+or published.

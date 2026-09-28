@@ -63,6 +63,30 @@ def interaction_by_condition(donors: dict, own: dict, ids: list[str]) -> dict[in
     return estimates
 
 
+def interaction_by_condition_axis(
+    donors: dict, own: dict, ids: list[str], axis: int
+) -> dict[int, float]:
+    """Exploratory one-coordinate version of the registered interaction."""
+    estimates = {}
+    for permutation in shared.PERMUTATIONS:
+        advantages = {}
+        for decoder in shared.DECODERS:
+            donor_errors = []
+            own_errors = []
+            for case_id in ids:
+                donor_row = donors[(case_id, permutation, "swapped_context", decoder)]
+                own_row = own[(case_id, OWN, decoder)]
+                donor_errors.append(
+                    (float(donor_row["prediction"][axis]) - float(donor_row["gold"][axis])) ** 2
+                )
+                own_errors.append(
+                    (float(own_row["prediction"][axis]) - float(own_row["gold"][axis])) ** 2
+                )
+            advantages[decoder] = float(np.sqrt(np.mean(donor_errors)) - np.sqrt(np.mean(own_errors)))
+        estimates[permutation] = advantages["finite_grid"] - advantages["free_greedy"]
+    return estimates
+
+
 def load_valence_first(paths: tuple[Path, Path, Path]) -> tuple[dict, dict, dict]:
     own_rows = [json.loads(line) for line in paths[0].read_text().splitlines() if line.strip()]
     own = {
@@ -178,6 +202,40 @@ def analyze(path: Path, manifest: dict, old_outputs: tuple[Path, Path, Path],
         )
         key_draws[index] = new_difference - old_difference_draw
 
+    # This coordinate-wise decomposition was not preregistered. It is retained
+    # as an explicitly exploratory diagnostic to identify which VA coordinate
+    # carries the registered aggregate moderation.
+    axis_audit = {}
+    axis_rng = np.random.default_rng(20260964)
+    axis_samples = [axis_rng.choice(complete, size=len(complete), replace=True).tolist()
+                    for _ in range(bootstrap_replicates)]
+    for axis, axis_name in ((0, "valence"), (1, "arousal")):
+        old_same_axis = interaction_by_condition_axis(old_same, old_own, complete, axis)
+        old_cross_axis = interaction_by_condition_axis(old_cross, old_own, complete, axis)
+        new_same_axis = interaction_by_condition_axis(same, own, complete, axis)
+        new_cross_axis = interaction_by_condition_axis(cross, own, complete, axis)
+        old_axis_difference = float(np.mean(list(old_cross_axis.values()))
+                                    - np.mean(list(old_same_axis.values())))
+        new_axis_difference = float(np.mean(list(new_cross_axis.values()))
+                                    - np.mean(list(new_same_axis.values())))
+        draws_axis = np.empty(bootstrap_replicates)
+        for index, sample in enumerate(axis_samples):
+            old_diff = float(np.mean(list(interaction_by_condition_axis(
+                old_cross, old_own, sample, axis).values())) - np.mean(list(
+                interaction_by_condition_axis(old_same, old_own, sample, axis).values())))
+            new_diff = float(np.mean(list(interaction_by_condition_axis(
+                cross, own, sample, axis).values())) - np.mean(list(
+                interaction_by_condition_axis(same, own, sample, axis).values())))
+            draws_axis[index] = new_diff - old_diff
+        axis_audit[axis_name] = {
+            "valence_first_cross_minus_same": old_axis_difference,
+            "arousal_first_cross_minus_same": new_axis_difference,
+            "arousal_first_minus_valence_first_moderation": new_axis_difference - old_axis_difference,
+            "paired_ci95": [float(v) for v in np.quantile(draws_axis, [0.025, 0.975])],
+            "bootstrap_seed": 20260964,
+            "inferential_status": "post-hoc exploratory coordinate decomposition",
+        }
+
     summary.update({
         "status": "scored",
         "score_analysis_performed": True,
@@ -217,6 +275,7 @@ def analyze(path: Path, manifest: dict, old_outputs: tuple[Path, Path, Path],
             "n_recipient_ids": len(complete),
             "inferential_status": "same public sample/maps; key-order robustness diagnostic",
         },
+        "exploratory_axis_audit": axis_audit,
     })
     return summary
 
@@ -243,6 +302,8 @@ def write_report(summary: dict, output: Path) -> None:
 {result}
 
 The run reversed only the numeric JSON key order. Same-category and cross-category donors use the same recipients, polarities, assignments, target aspects and own-review baselines. The key-order comparison reuses the already observed valence-first outputs, so it is a registered robustness follow-up rather than independent replication.
+
+The coordinate-wise diagnostic was not preregistered. It suggests that the moderation is concentrated in arousal: the arousal-axis moderation was {summary['exploratory_axis_audit']['arousal']['arousal_first_minus_valence_first_moderation']:.3f} (95% paired recipient-bootstrap interval [{summary['exploratory_axis_audit']['arousal']['paired_ci95'][0]:.3f}, {summary['exploratory_axis_audit']['arousal']['paired_ci95'][1]:.3f}]), while the valence-axis interval included zero. Treat this as hypothesis-generating; Experiment 063 will test it on a separate English restaurant sample.
 
 General output-format sensitivity is already studied; this experiment tests only whether one key-order change alters the continuous-VA decoder-by-topic-match effect on this public laptop split and Qwen2.5 family. Donor categories differ in lexical and semantic content. No text, item IDs, donor maps, or individual predictions are published.
 

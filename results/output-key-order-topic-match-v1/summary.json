@@ -1,0 +1,111 @@
+{
+  "experiment": "062-output-key-order-topic-match",
+  "interpretation": "arousal-first serialization robustness follow-up",
+  "n_recipient_ids": 184,
+  "n_new_outputs": 2576,
+  "invalid_by_condition_decoder": {
+    "category_polarity_matched_context": 0,
+    "cross_category_polarity_matched_context": 0
+  },
+  "invalid_free_outputs": 0,
+  "invalid_free_denominator": 1104,
+  "invalid_free_rate": 0.0,
+  "analysis_seed": 20260962,
+  "bootstrap_seed_key_order_moderation": 20260963,
+  "bootstrap_replicates": 10000,
+  "bootstrap_unit": "recipient sentence ID, retaining all conditions, decoders and fixed mappings",
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "model_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "device": "mps",
+  "protocol_sha256": "111bfcc52cfd27026f74ec83c769e07b06f5d8362dac666edff7de57e8518aac",
+  "parent_output_sha256": {
+    "exp050": "890a16d6363e72549c7ccad9099dece3ce021ab78ab3d8071acde18774500f5f",
+    "exp057": "21e7fe02b43433fa4b61b5dfe790efef38c57e8a0e240e4443ffe40ffb110e31",
+    "exp060": "ab721276ec320c546da2757a16575acc30eb36ce86df3a911402b3e5a91f9d94"
+  },
+  "output_sha256": "30cb805ffc61beb2f67b78a0017a06781117de2b3f546475eb270e7e86655c8f",
+  "score_analysis_performed": true,
+  "status": "scored",
+  "n_complete_recipient_ids": 184,
+  "same_category_interaction": {
+    "estimate": -0.05316787628972689,
+    "ci95": [
+      -0.23675308136581782,
+      0.12908129071091062
+    ]
+  },
+  "cross_category_interaction": {
+    "estimate": -0.016458762771993207,
+    "ci95": [
+      -0.19765918212360173,
+      0.1670386194359836
+    ]
+  },
+  "per_assignment": {
+    "1": {
+      "same_category_interaction": -0.04992219986481983,
+      "cross_category_interaction": -0.000851164407531968,
+      "cross_minus_same": 0.04907103545728786
+    },
+    "2": {
+      "same_category_interaction": -0.038919514644970565,
+      "cross_category_interaction": -0.013464188563060198,
+      "cross_minus_same": 0.025455326081910368
+    },
+    "3": {
+      "same_category_interaction": -0.07066191435939029,
+      "cross_category_interaction": -0.035060935345387456,
+      "cross_minus_same": 0.03560097901400283
+    }
+  },
+  "mean_primary_interaction": {
+    "contrast": "arousal-first cross-category interaction minus same-category interaction",
+    "estimate": 0.036709113517733684,
+    "ci95": [
+      -0.11487155859558626,
+      0.1925156887250886
+    ],
+    "n_recipient_ids": 184,
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20260962,
+    "registered_followup": true,
+    "independent_replication": false
+  },
+  "key_order_moderation": {
+    "contrast": "arousal-first cross-minus-same minus valence-first cross-minus-same",
+    "estimate_arousal_first": 0.036709113517733684,
+    "estimate_valence_first": 0.29421378501851453,
+    "difference": -0.2575046715007808,
+    "ci95": [
+      -0.44885662698015494,
+      -0.06082350082549748
+    ],
+    "bootstrap_seed": 20260963,
+    "n_recipient_ids": 184,
+    "inferential_status": "same public sample/maps; key-order robustness diagnostic"
+  },
+  "exploratory_axis_audit": {
+    "valence": {
+      "valence_first_cross_minus_same": 0.11752799254128093,
+      "arousal_first_cross_minus_same": 0.09181458668323458,
+      "arousal_first_minus_valence_first_moderation": -0.02571340585804635,
+      "paired_ci95": [
+        -0.28171117929974193,
+        0.23573430344525637
+      ],
+      "bootstrap_seed": 20260964,
+      "inferential_status": "post-hoc exploratory coordinate decomposition"
+    },
+    "arousal": {
+      "valence_first_cross_minus_same": 0.44192639685966706,
+      "arousal_first_cross_minus_same": -0.004657899811762345,
+      "arousal_first_minus_valence_first_moderation": -0.4465842966714294,
+      "paired_ci95": [
+        -0.6522241059738727,
+        -0.23506368715296977
+      ],
+      "bootstrap_seed": 20260964,
+      "inferential_status": "post-hoc exploratory coordinate decomposition"
+    }
+  }
+}
