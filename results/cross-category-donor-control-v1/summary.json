@@ -1,0 +1,129 @@
+{
+  "experiment": "060-cross-category-donor-control",
+  "interpretation": "same-recipient category-match versus category-mismatch diagnostic",
+  "n_recipient_ids": 184,
+  "n_permutations": 3,
+  "n_new_outputs": 1104,
+  "invalid_swapped_by_decoder": {
+    "finite_grid": 0,
+    "free_greedy": 0
+  },
+  "invalid_free_outputs": 0,
+  "invalid_free_denominator": 552,
+  "invalid_free_rate": 0.0,
+  "analysis_seed": 20260961,
+  "bootstrap_replicates": 10000,
+  "bootstrap_unit": "recipient sentence ID, retaining all three fixed donor assignments",
+  "score_analysis_performed": true,
+  "run_provenance": {
+    "protocol_sha256": "cfb193ecbdb0a5c58ce815c37d23ef00820f6cd24ec4713ae760d6a1c511aa6d",
+    "source_revision": "bdc93be1224106ae7d3eb95739c02a76ed4ae8a1",
+    "source_sha256": "08a4cc197f068f6fc4c9373f61bfb86a5cd996ef16be3cb516082b434ba92543",
+    "parent_output_sha256": "21e7fe02b43433fa4b61b5dfe790efef38c57e8a0e240e4443ffe40ffb110e31",
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "model_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "device": "mps",
+    "donor_assignment_sha256": {
+      "1": "68f37bfd5b452b5894e4705cc5e519dca8ecba56c496d013d55878d291f45e98",
+      "2": "999a5fefdcff2f7ff49f8b1d34a2c9c9b462bda2010bbb21c493657c0deada80",
+      "3": "f3329002c46c53081b72cf634ffc4ec6ec727c03c297ba21fe9fb65174447ce1"
+    },
+    "output_sha256": "ab721276ec320c546da2757a16575acc30eb36ce86df3a911402b3e5a91f9d94",
+    "generation_seconds_this_process_only": 1814.016289583
+  },
+  "status": "scored",
+  "n_complete_recipient_ids": 184,
+  "per_permutation": {
+    "1": {
+      "matched_review_advantage_by_decoder": {
+        "finite_grid": 0.5070302735631262,
+        "free_greedy": 0.16876935916377578
+      },
+      "finite_minus_free_interaction": 0.33826091439935047
+    },
+    "2": {
+      "matched_review_advantage_by_decoder": {
+        "finite_grid": 0.6062452301788479,
+        "free_greedy": 0.19414995729317175
+      },
+      "finite_minus_free_interaction": 0.41209527288567616
+    },
+    "3": {
+      "matched_review_advantage_by_decoder": {
+        "finite_grid": 0.5484347379104251,
+        "free_greedy": 0.09625649463318009
+      },
+      "finite_minus_free_interaction": 0.452178243277245
+    }
+  },
+  "mean_matched_review_advantage_by_decoder": {
+    "finite_grid": 0.5539034138841331,
+    "free_greedy": 0.1530586036967092
+  },
+  "mean_primary_interaction": {
+    "contrast": "cross-category interaction minus same-category interaction, paired on recipient ID",
+    "estimate": 0.29421378501851453,
+    "ci95": [
+      0.14081733625769302,
+      0.4476192632516972
+    ],
+    "n_recipient_ids": 184,
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20260961,
+    "confirmatory": false
+  },
+  "permutation_sensitivity": {
+    "range": [
+      0.33826091439935047,
+      0.452178243277245
+    ],
+    "sample_standard_deviation": 0.05778597700015264,
+    "n_permutations": 3,
+    "inferential_status": "descriptive only; three fixed mappings"
+  },
+  "limitations": [
+    "The 184-case sample excludes category-polarity singleton cells and contains no neutral targets.",
+    "The same-category comparator was collected earlier, so this is a registered follow-up to an observed result, not a blind replication.",
+    "Cross-category matching changes lexical and semantic content in addition to broad topic.",
+    "One public benchmark split and one model family; pretraining exposure is possible.",
+    "Bootstrap intervals condition on the three fixed assignment sets."
+  ],
+  "control": {
+    "donors_match_recipient_gold_valence_polarity": true,
+    "donors_differ_from_recipient_official_category": true,
+    "same_category_comparator": "Experiment 057, same recipients and own-review predictions",
+    "n_unique_cross_category_assignment_maps": 3
+  },
+  "per_assignment": {
+    "1": {
+      "cross_category_interaction": 0.33826091439935047,
+      "same_category_interaction": 0.07851877340988134,
+      "cross_minus_same": 0.25974214098946913
+    },
+    "2": {
+      "cross_category_interaction": 0.41209527288567616,
+      "same_category_interaction": 0.05522365143420016,
+      "cross_minus_same": 0.356871621451476
+    },
+    "3": {
+      "cross_category_interaction": 0.452178243277245,
+      "same_category_interaction": 0.18615065066264647,
+      "cross_minus_same": 0.2660275926145985
+    }
+  },
+  "category_mismatched_interaction": {
+    "contrast": "mean over three permutations of [matched-review advantage(finite) - matched-review advantage(free)]",
+    "estimate": 0.40084481018742385,
+    "ci95": [
+      0.21841286504851537,
+      0.5807047421703051
+    ],
+    "n_recipient_ids": 184,
+    "confirmatory": false
+  },
+  "category_matched_interaction": {
+    "estimate": 0.10663102516890932,
+    "n_recipient_ids": 184,
+    "source_experiment": "057-category-matched-context-swap"
+  }
+}

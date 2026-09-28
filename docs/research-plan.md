@@ -1161,3 +1161,24 @@ This is more diagnostic than another scale run because 059 found no clear size
 contrast. The assigned choice probability is 0.349 and remains uncalibrated; the
 scientific rationale is the paired same-recipient/category contrast, not the model's
 confidence. See the local ignored Laya trace `.context/laya-research-triage-060.json`.
+
+**Experiment 060 outcome: direct topic-match contrast.** Across the same 184
+recipients, Qwen2.5-3B, and three donor maps, the cross-category interaction was
++0.401 (95% recipient-bootstrap interval [+0.218, +0.581]), compared with +0.107
+for the same-category donors from 057. The preregistered paired cross-minus-same
+difference was +0.294 ([+0.141, +0.448]); each map-level difference was positive
+(+0.260, +0.357, +0.266). All 1,104 new outputs were valid. Since donor polarity,
+recipient, gold, own-review baseline, and decoder were held fixed, this is evidence
+that broad category match moderates the observed decoder-by-context interaction in
+this sample. Category crossings also change lexical and semantic content, and the
+same-category arm was observed earlier, so this does not isolate a causal category
+mechanism or provide independent-corpus replication. See the [060 aggregate](../results/cross-category-donor-control-v1/README.md)
+and [frozen protocol](experiments/060-cross-category-donor-control.md).
+
+This is now an interesting candidate for a narrowly scoped research note, but not
+yet a novelty claim: ABSA context denoising is established, and recent dimensional
+ABSA work already adds generated sentiment descriptions to regression inputs. The
+new angle is specifically the interaction between decoder choice and matched versus
+cross-category review context, conditional on this benchmark/model. Check whether it
+survives a serialization perturbation and finer donor-score matching before deciding
+whether a LessWrong post would add value. **No post has been written or published.**
