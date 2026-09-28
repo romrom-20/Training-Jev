@@ -1,0 +1,76 @@
+{
+  "experiment": "047-free-decode-opinion-mask-sensitivity",
+  "interpretation": "adaptive decoder-sensitivity diagnostic; exploratory only",
+  "n_clusters": 217,
+  "n_outputs": 1302,
+  "n_invalid_outputs": 5,
+  "invalid_rate": 0.0038402457757296467,
+  "invalid_by_condition": {
+    "aspect_only": 1,
+    "opinion_masked": 4
+  },
+  "analysis_seed": 20260947,
+  "bootstrap_replicates": 10000,
+  "bootstrap_unit": "source review ID, retaining all three languages and both VA dimensions",
+  "score_analysis_performed": true,
+  "run_provenance": {
+    "parent_043_output_sha256": "1e93d359220c533a01f9cccca827f30611a713b70d857a898f59b6560303c7c8",
+    "source_revision": "bdc93be1224106ae7d3eb95739c02a76ed4ae8a1",
+    "source_hashes": {
+      "rus": "912013b49db2bd387076f63ee9df016350180fbac621449121a27dc262d5459b",
+      "ukr": "05fdf7e2dca235261060b785f969315385f962021f171abb85e45638bbadb036",
+      "tat": "c4f1fb5c21f8f06f598c87e489e7adce1a953d4446ad14a60432ae2a13b85ce6"
+    },
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "model_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "device": "mps",
+    "max_new_tokens": 40,
+    "output_sha256": "993f0ac6dbec3ee0d48486846909be55583811b0d2c7598442f081742443262c",
+    "generation_seconds_this_process_only": 3212.6768869170337,
+    "invalid_by_condition": {
+      "aspect_only": 1,
+      "opinion_masked": 4
+    }
+  },
+  "status": "scored",
+  "n_complete_clusters": 212,
+  "primary": {
+    "contrast": "RMSE(aspect_only) - RMSE(opinion_masked)",
+    "estimate": 0.17526295245400503,
+    "ci95": [
+      0.02813785129058368,
+      0.3212117524014654
+    ],
+    "n_clusters": 212,
+    "interpretation": "positive means free-decoded masked context improves VA RMSE",
+    "registered_free_decode_gate_passed": false
+  },
+  "by_language_rmse_descriptive": {
+    "rus": {
+      "aspect_only_rmse": 2.27396197550393,
+      "opinion_masked_rmse": 2.1303638740480597
+    },
+    "ukr": {
+      "aspect_only_rmse": 2.2516885173676404,
+      "opinion_masked_rmse": 2.0732817960085352
+    },
+    "tat": {
+      "aspect_only_rmse": 2.3384314308107848,
+      "opinion_masked_rmse": 2.134975420741375
+    }
+  },
+  "posthoc_same_cluster_decoder_comparison": {
+    "interpretation": "exploratory; positive means the 043 finite-grid gain exceeds the 047 free-decode gain",
+    "n_clusters": 212,
+    "qwen_043_finite_grid_gain": 1.847399230362436,
+    "qwen_047_free_decode_gain": 0.17526295245400503,
+    "constrained_minus_free_gain": 1.672136277908431,
+    "ci95": [
+      1.5259313267780568,
+      1.815368312408686
+    ],
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20260948,
+    "warning": "post-hoc secondary; not preregistered, and 047 also changes numeric-format wording"
+  }
+}

@@ -817,3 +817,26 @@ compares only aspect-only with opinion-masked prompts under ordinary free JSON
 generation, with a strict 2% invalid-output gate. This directly checks whether
 the large context effect survives removal of the finite candidate grid; its
 protocol is committed before collecting the new judgments.
+
+**Experiment 047 outcome.** Free greedy generation produced 5 invalid outputs
+out of 1,302 (0.38%), passing the 2% validity gate. On 212 complete source-ID
+clusters, aspect-only minus opinion-masked RMSE was +0.175 (95% cluster interval
+[+0.028, +0.321]). The sign was positive, but the preregistered practical rule
+(estimate at least +0.25 and lower interval bound above zero) did not pass.
+The primary result suggests a smaller context gain under ordinary free output
+than under the finite-grid run, while remaining positive in all three languages
+descriptively.
+
+A post-hoc same-cluster comparison over those 212 IDs found the 043 finite-grid
+gain at +1.847 versus +0.175 for free decoding; the difference was +1.672 (95%
+cluster interval [+1.526, +1.815]). This looks large, but 047 also removed the
+one-decimal precision instruction, so it cannot identify grammar restriction
+alone. Published work already shows that constrained decoding can alter
+semantic accuracy and that output token conventions affect prediction
+([Schall & de Melo, 2025](https://aclanthology.org/2025.ranlp-1.124/);
+[Hamilton & Mimno, 2026](https://aclanthology.org/2026.gem-main.18/)); a recent
+preprint examines structural validity versus semantic accuracy in small models
+([Chavan, 2026](https://arxiv.org/abs/2609.23742)). Those papers do not test
+this aspect-conditioned continuous VA contrast. The
+[`047 bundle`](../results/free-decode-opinion-mask-sensitivity-v1/README.md)
+records the validity gate, primary outcome, and explicitly post-hoc comparison.

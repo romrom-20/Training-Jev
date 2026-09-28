@@ -24,7 +24,20 @@ def load_rows(path: Path) -> dict:
     return by_key
 
 
-def analyze(by_key: dict, manifest: dict | None = None) -> dict:
+def load_parent(path: Path) -> dict:
+    rows = [json.loads(line) for line in path.read_text().splitlines() if line.strip()]
+    by_key = {(row["case_id"], row["lang"], row["condition"]): row for row in rows}
+    expected_conditions = {"aspect_only", "opinion_masked"}
+    if len(rows) != 1302 or len(by_key) != 1302:
+        raise ValueError("Expected 1,302 unique Experiment 043 parent rows")
+    if {row["condition"] for row in rows} != expected_conditions:
+        raise ValueError("Unexpected Experiment 043 parent conditions")
+    if any(row["prediction"] is None for row in rows):
+        raise ValueError("Experiment 043 parent contains invalid scores")
+    return by_key
+
+
+def analyze(by_key: dict, manifest: dict | None = None, parent_043: dict | None = None) -> dict:
     ids = sorted({key[0] for key in by_key})
     if len(ids) != 217:
         raise ValueError(f"Expected 217 frozen IDs; found {len(ids)}")
@@ -139,6 +152,55 @@ def analyze(by_key: dict, manifest: dict | None = None) -> dict:
             "by_language_rmse_descriptive": language_rmse,
         }
     )
+    if parent_043 is not None:
+        expected_parent = {
+            (case_id, lang, condition)
+            for case_id in ids
+            for lang in LANGS
+            for condition in CONDITIONS
+        }
+        if set(parent_043) != expected_parent:
+            raise ValueError("Experiment 043 parent does not match the frozen paired sample")
+        if any(
+            parent_043[(case_id, lang, "aspect_only")]["gold"]
+            != by_key[(case_id, lang, "aspect_only")]["gold"]
+            for case_id in ids for lang in LANGS
+        ):
+            raise ValueError("Experiment 043 and 047 gold VA pairs differ")
+
+        def parent_gain(sample: list[str]) -> float:
+            squared_aspect = []
+            squared_context = []
+            for case_id in sample:
+                for lang in LANGS:
+                    gold = parent_043[(case_id, lang, "aspect_only")]["gold"]
+                    for dim in (0, 1):
+                        squared_aspect.append(
+                            (float(parent_043[(case_id, lang, "aspect_only")]["prediction"][dim]) - float(gold[dim])) ** 2
+                        )
+                        squared_context.append(
+                            (float(parent_043[(case_id, lang, "opinion_masked")]["prediction"][dim]) - float(gold[dim])) ** 2
+                        )
+            return float(np.sqrt(np.mean(squared_aspect)) - np.sqrt(np.mean(squared_context)))
+
+        parent_point = parent_gain(complete_ids)
+        free_point = gain(complete_ids)
+        rng = np.random.default_rng(SEED + 1)
+        interaction_draws = np.empty(BOOTSTRAPS)
+        for index in range(BOOTSTRAPS):
+            sample = rng.choice(complete_ids, size=len(complete_ids), replace=True).tolist()
+            interaction_draws[index] = parent_gain(sample) - gain(sample)
+        summary["posthoc_same_cluster_decoder_comparison"] = {
+            "interpretation": "exploratory; positive means the 043 finite-grid gain exceeds the 047 free-decode gain",
+            "n_clusters": len(complete_ids),
+            "qwen_043_finite_grid_gain": parent_point,
+            "qwen_047_free_decode_gain": free_point,
+            "constrained_minus_free_gain": parent_point - free_point,
+            "ci95": [float(x) for x in np.quantile(interaction_draws, [0.025, 0.975])],
+            "bootstrap_replicates": BOOTSTRAPS,
+            "bootstrap_seed": SEED + 1,
+            "warning": "post-hoc secondary; not preregistered, and 047 also changes numeric-format wording",
+        }
     return summary
 
 
@@ -160,12 +222,23 @@ def write_report(summary: dict, output: Path) -> None:
         )
     runtime = summary.get("run_provenance", {}).get("generation_seconds_this_process_only")
     runtime_text = f"\nGeneration took {runtime / 60:.1f} minutes after model load." if runtime else ""
+    comparison = summary.get("posthoc_same_cluster_decoder_comparison")
+    comparison_text = ""
+    if comparison is not None:
+        comparison_text = (
+            "\n\nAs a post-hoc same-cluster comparison, the Experiment 043 finite-grid gain "
+            f"was {comparison['qwen_043_finite_grid_gain']:.3f}, versus "
+            f"{comparison['qwen_047_free_decode_gain']:.3f} under free decoding; "
+            f"the difference was {comparison['constrained_minus_free_gain']:.3f} "
+            f"(95% interval [{comparison['ci95'][0]:.3f}, {comparison['ci95'][1]:.3f}]). "
+            "This secondary comparison was not preregistered, and the output-format wording changed along with the decoder."
+        )
     (output / "README.md").write_text(
         f"""# Experiment 047: free-decoding sensitivity
 
 ## Result
 
-{result}{runtime_text}
+{result}{runtime_text}{comparison_text}
 
 This adaptive test reuses the 217 source IDs from Experiment 043 and changes the output contract from finite-choice one-decimal VA to ordinary greedy JSON generation. It is a decoder-sensitivity check, not an independent replication. The free prompt/parser can still shape which generations count as valid.
 
@@ -182,10 +255,11 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--predictions", type=Path, default=Path(".context/exp047-private-predictions.jsonl"))
     parser.add_argument("--manifest", type=Path, default=Path(".context/exp047-run-manifest.json"))
+    parser.add_argument("--parent", type=Path, default=Path(".context/exp043-private-predictions.jsonl"))
     parser.add_argument("--out", type=Path, default=Path("results/free-decode-opinion-mask-sensitivity-v1"))
     args = parser.parse_args()
     manifest = json.loads(args.manifest.read_text()) if args.manifest.exists() else None
-    write_report(analyze(load_rows(args.predictions), manifest), args.out)
+    write_report(analyze(load_rows(args.predictions), manifest, load_parent(args.parent)), args.out)
 
 
 if __name__ == "__main__":

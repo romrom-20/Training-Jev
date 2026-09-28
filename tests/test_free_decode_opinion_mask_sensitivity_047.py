@@ -67,6 +67,33 @@ def test_complete_paired_sample_analysis():
     assert result["primary"]["registered_free_decode_gate_passed"] is True
 
 
+def test_posthoc_same_cluster_decoder_comparison_is_separate_from_primary():
+    free = _synthetic_rows()
+    parent = {}
+    for cluster in range(217):
+        case_id = f"case-{cluster}"
+        for lang in analysis.LANGS:
+            for condition, prediction in (
+                ("aspect_only", [3.0, 3.0]),
+                ("opinion_masked", [4.0, 4.0]),
+            ):
+                parent[(case_id, lang, condition)] = {
+                    "case_id": case_id,
+                    "lang": lang,
+                    "condition": condition,
+                    "gold": [5.0, 5.0],
+                    "prediction": prediction,
+                }
+    result = analysis.analyze(free, parent_043=parent)
+    assert result["primary"]["estimate"] == 2.0
+    comparison = result["posthoc_same_cluster_decoder_comparison"]
+    assert comparison["qwen_043_finite_grid_gain"] == 1.0
+    assert comparison["qwen_047_free_decode_gain"] == 2.0
+    assert comparison["constrained_minus_free_gain"] == -1.0
+    assert comparison["ci95"] == [-1.0, -1.0]
+    assert "post-hoc" in comparison["warning"]
+
+
 def test_incomplete_pair_grid_is_rejected():
     rows = _synthetic_rows()
     rows.pop(next(iter(rows)))
