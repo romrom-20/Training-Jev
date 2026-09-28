@@ -797,3 +797,15 @@ studies order robustness and target-linked syntax, so this is a narrow
 mechanistic diagnostic rather than a novel baseline claim. Its
 [protocol](experiments/046-masked-context-lexical-baseline.md), runner, analyzer
 and tests are committed before new held-out scoring.
+
+**Experiment 046 outcome.** The sparse baseline's preregistered aspect-only
+minus masked-context RMSE gain was +0.154 (95% source-ID interval [+0.101,
++0.209]), below the +0.25 practical-gain rule. The direction was positive in
+all three languages descriptively, with most of the total gain on valence
+(0.230 RMSE points) and little on arousal (0.030). Its estimated gain is about
+8% of 043's Qwen gain, a descriptive comparison between different model classes
+and baselines. The test says a simple train-split lexical model recovers a
+small, reliable context signal but does not meet the predeclared threshold or
+reproduce most of the Qwen context gain. It does not rule out nonlinear,
+pretrained, aspect-conditioned, or incomplete-annotation explanations. See the
+[`046 aggregate bundle`](../results/masked-context-lexical-baseline-v1/README.md).

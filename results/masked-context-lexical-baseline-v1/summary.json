@@ -1,0 +1,96 @@
+{
+  "experiment": "046-masked-context-lexical-baseline",
+  "interpretation": "adaptive sparse lexical diagnostic; exploratory only",
+  "n_clusters": 217,
+  "n_predictions": 1302,
+  "analysis_seed": 20260946,
+  "bootstrap_replicates": 10000,
+  "bootstrap_unit": "source review ID, retaining all languages and both VA dimensions",
+  "qwen_043_context_gain_descriptive_anchor": 1.8448904220357432,
+  "score_analysis_performed": true,
+  "run_provenance": {
+    "source_revision": "bdc93be1224106ae7d3eb95739c02a76ed4ae8a1",
+    "source_hashes": {
+      "train": {
+        "rus": "a81c2e737a0ed8e3fcfee48864403a3339ab388b7ed545436f45a11ae878b92a",
+        "ukr": "6c1e4843fb9af233a1103c751b56b99596f724ef9309ff6156f4041e4560bff1",
+        "tat": "1f374e08dfd3fac61d9ca6935e185958f889a24a6690dacec6ff6497d4d54917"
+      },
+      "test": {
+        "rus": "912013b49db2bd387076f63ee9df016350180fbac621449121a27dc262d5459b",
+        "ukr": "05fdf7e2dca235261060b785f969315385f962021f171abb85e45638bbadb036",
+        "tat": "c4f1fb5c21f8f06f598c87e489e7adce1a953d4446ad14a60432ae2a13b85ce6"
+      }
+    },
+    "training_counts": {
+      "rus": {
+        "train_sentence_rows": 1240,
+        "train_aspect_examples": 2487,
+        "test_clusters": 217,
+        "id_overlap": 0,
+        "exact_text_overlap": 0
+      },
+      "ukr": {
+        "train_sentence_rows": 1240,
+        "train_aspect_examples": 2487,
+        "test_clusters": 217,
+        "id_overlap": 0,
+        "exact_text_overlap": 0
+      },
+      "tat": {
+        "train_sentence_rows": 1240,
+        "train_aspect_examples": 2487,
+        "test_clusters": 217,
+        "id_overlap": 0,
+        "exact_text_overlap": 0
+      }
+    },
+    "alpha_grid": [
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0
+    ],
+    "cv_folds_max": 5,
+    "feature_map": "word unigram/bigram TF-IDF + char_wb 2-5gram TF-IDF; multi-output ridge",
+    "n_predictions": 1302,
+    "runtime_seconds": 52.831709082995076,
+    "predictions_sha256": "261827734c61bef61262d377863605f964ccf439c1031281acda2248c7b540fb"
+  },
+  "primary_diagnostic": {
+    "contrast": "rmse(aspect_only) - rmse(masked_context)",
+    "estimate": 0.15412902275258245,
+    "ci95": [
+      0.10098601455317566,
+      0.20938352202716765
+    ],
+    "n_clusters": 217,
+    "registered_lexical_gain_gate_passed": false
+  },
+  "by_language_rmse_descriptive": {
+    "rus": {
+      "aspect_only_rmse": 1.973487427737935,
+      "masked_context_rmse": 1.7908381993987754
+    },
+    "ukr": {
+      "aspect_only_rmse": 1.968382096544313,
+      "masked_context_rmse": 1.8023881125505734
+    },
+    "tat": {
+      "aspect_only_rmse": 1.982075747589302,
+      "masked_context_rmse": 1.86741977330347
+    }
+  },
+  "by_dimension_rmse_descriptive": {
+    "valence": {
+      "aspect_only_rmse": 2.4990254527764315,
+      "masked_context_rmse": 2.269261994022543
+    },
+    "arousal": {
+      "aspect_only_rmse": 1.2463580689836273,
+      "masked_context_rmse": 1.2161787089463174
+    }
+  },
+  "fraction_of_qwen_043_gain_descriptive": 0.08354372753613674
+}

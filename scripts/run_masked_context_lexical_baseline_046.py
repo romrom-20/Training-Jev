@@ -220,7 +220,7 @@ def run(source_dir: Path = Path(".context/dimabsa")) -> dict:
     counts = {}
     for lang in LANGS:
         train = examples[lang]
-        train_ids = {row["id"] for row in train_rows[lang]}
+        train_ids = {row["ID"] for row in train_rows[lang]}
         train_texts = {row["Text"] for row in train_rows[lang]}
         test_source = {row["ID"]: row for row in test_rows[lang]}
         selected_for_lang = [row for row in targets if row["lang"] == lang]
