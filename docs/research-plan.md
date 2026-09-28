@@ -872,3 +872,31 @@ evaluation. The full eligible set gives 3,772 local generations and fits the 24-
 Air setup already used for 048. The [049 protocol](experiments/049-laptop-domain-decoder-transfer.md),
 runner, analyzer and tests are frozen before this transfer run. LessWrong remains
 deferred until the result and any necessary replication are in hand.
+
+**Experiment 049 outcome.** On all 943 eligible English laptop IDs, the finite-grid
+context gain was +0.740 (95% source-ID interval [+0.684, +0.796]) and the free-greedy
+gain was +0.486 ([+0.425, +0.548]); there were no invalid responses. The primary
+interaction was +0.254 ([+0.196, +0.313]), narrowly clearing the preregistered +0.25
+practical threshold with an interval above zero. This direction is consistent with
+048's smaller +0.159 interaction ([+0.064, +0.253]), which missed that practical
+threshold. The result transfers across restaurant-to-laptop domains inside the same
+DimABSA release, but 048's multilingual balanced sample and 049's English laptop
+sample differ in language and valence mix. It is not an independent-corpus
+replication. See the [`049 bundle`](../results/laptop-decoder-transfer-v1/README.md).
+
+This is the first result in this decoder sequence that makes a short LessWrong
+write-up seem plausible: the controlled context contrast changed by decoder under
+identical wording, and its positive direction survived a new product domain. The
+estimated interaction is modest and only just crosses the practical cutoff; existing
+work already studies semantic shifts from constrained decoding and numeric output
+representations. I am deferring a draft until the model-size follow-up, plus any
+same-English domain control needed, clarify whether the effect is robust and whether it
+tracks domain or model scale. Any later post would need to frame this as a narrow
+benchmark finding, not a new general law about constrained decoding.
+
+Laya selected the same English laptop factorial at Qwen2.5-3B as the next test.
+Experiment 050 reuses all 943 IDs, gold VA labels, and prompt bytes from 049, changing
+only model size. Its primary interaction asks whether the 1.5B result repeats at 3B;
+a paired interaction difference between sizes is secondary and descriptive. This
+costs 3,772 local generations on the 24-GB Air. The [050 protocol](experiments/050-laptop-model-size-factorial.md),
+runner, analyzer and tests are frozen before that run.

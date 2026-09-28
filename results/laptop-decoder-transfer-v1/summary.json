@@ -1,0 +1,82 @@
+{
+  "experiment": "049-laptop-domain-decoder-transfer",
+  "interpretation": "adaptive independent-domain transfer test; exploratory",
+  "n_clusters": 943,
+  "n_outputs": 3772,
+  "invalid_by_decoder_condition": {
+    "finite_grid": {
+      "aspect_only": 0,
+      "opinion_masked": 0
+    },
+    "free_greedy": {
+      "aspect_only": 0,
+      "opinion_masked": 0
+    }
+  },
+  "invalid_free_outputs": 0,
+  "invalid_free_rate": 0.0,
+  "analysis_seed": 20260949,
+  "bootstrap_replicates": 10000,
+  "bootstrap_unit": "source sentence ID, retaining both input conditions and VA dimensions",
+  "score_analysis_performed": true,
+  "run_provenance": {
+    "protocol_sha256": "120b7aec50d0f0c7de95d9c95e675a27a2a53648ad9cf49396454bd7ad813c32",
+    "source_revision": "bdc93be1224106ae7d3eb95739c02a76ed4ae8a1",
+    "source_file": "eng_laptop_test_task2.jsonl",
+    "source_sha256": "08a4cc197f068f6fc4c9373f61bfb86a5cd996ef16be3cb516082b434ba92543",
+    "selected_valence_buckets": {
+      "neg": 224,
+      "pos": 689,
+      "neu": 30
+    },
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "device": "mps",
+    "n_grid_candidates": 6561,
+    "invalid_by_decoder_condition": {
+      "finite_grid": {
+        "aspect_only": 0,
+        "opinion_masked": 0
+      },
+      "free_greedy": {
+        "aspect_only": 0,
+        "opinion_masked": 0
+      }
+    },
+    "output_sha256": "62107cb0b33adaf45acc5a0316921dfdab6354beeb006361a8225b87584c050c",
+    "generation_seconds_this_process_only": 3917.0113247919944
+  },
+  "status": "scored",
+  "n_complete_clusters": 943,
+  "context_gain_by_decoder": {
+    "finite_grid": {
+      "estimate": 0.7400566933073023,
+      "ci95": [
+        0.6836048389749555,
+        0.7958654353311193
+      ],
+      "n_clusters": 943,
+      "registered_context_gain_gate_passed": true
+    },
+    "free_greedy": {
+      "estimate": 0.48606321238463757,
+      "ci95": [
+        0.42502983735858463,
+        0.5475213746964539
+      ],
+      "n_clusters": 943,
+      "registered_context_gain_gate_passed": true
+    }
+  },
+  "primary_decoder_interaction": {
+    "contrast": "context_gain(finite_grid) - context_gain(free_greedy)",
+    "estimate": 0.2539934809226647,
+    "ci95": [
+      0.19605145101112736,
+      0.31345569516576566
+    ],
+    "n_clusters": 943,
+    "interpretation": "positive means the finite grid amplifies the opinion-masked context gain",
+    "registered_interaction_gate_passed": true
+  }
+}
