@@ -1051,6 +1051,30 @@ that control; if the decoder-specific gap remains, a careful exploratory post
 could be useful, with the public-test and one-model limitations in the first
 paragraph.
 
+**Experiment 056 outcome: coarse-polarity control.** On the same fresh 217 cases
+as 055, but with each donor constrained to the recipient's negative/positive
+gold-valence class, the mean finite-grid matched-review advantage was +0.592 VA
+RMSE and the free-greedy advantage was +0.156. Their mean interaction was +0.436
+(95% recipient-bootstrap interval [+0.272, +0.599]); the three permutation
+estimates were +0.392, +0.468, and +0.448. All 1,302 outputs were valid. The point
+estimate is close to 055's unstratified fresh-sample estimate (+0.411), though
+the protocols differ and no direct contrast between those estimates was
+registered. This makes coarse polarity alone an unlikely explanation for the
+decoder-specific matched-review gap. The test is still from the same public split
+and 3B model family; exact linguistic mechanism remains open. See the
+[056 aggregate report](../results/polarity-matched-context-swap-v1/README.md).
+
+**LessWrong judgment after 056.** A narrowly framed research note now makes sense.
+The interesting empirical claim is that, for one local 3B instruction model on
+continuous aspect-level VA scoring, finite numeric decoding shows a larger
+own-review advantage than free generation, and the gap persists on two disjoint
+samples, across six donor assignments, and after matching donor polarity. Context
+use and denoising are established topics, so the post should present the
+decoder-by-matched-context interaction as a bounded exploratory result rather
+than claim context sensitivity is new. It should put the single model family,
+public-test exposure, non-neutral fresh replication subset, bootstrap assumptions,
+and prompt-semantics correction up front. No LessWrong post has been published.
+
 **Experiment 055 outcome.** On 217 fresh IDs disjoint from 053–054 (108 negative,
 109 positive; neutral cases unavailable), the mean finite-minus-free matched-review
 interaction was +0.411 (95% recipient-bootstrap interval [+0.254, +0.563]). The

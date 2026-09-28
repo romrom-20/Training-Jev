@@ -1,0 +1,93 @@
+{
+  "experiment": "056-polarity-matched-context-swap",
+  "interpretation": "adaptive coarse-polarity-matched context diagnostic; exploratory",
+  "n_recipient_ids": 217,
+  "n_permutations": 3,
+  "n_new_outputs": 1302,
+  "invalid_swapped_by_decoder": {
+    "finite_grid": 0,
+    "free_greedy": 0
+  },
+  "invalid_free_outputs": 0,
+  "invalid_free_denominator": 651,
+  "invalid_free_rate": 0.0,
+  "analysis_seed": 20260956,
+  "bootstrap_replicates": 10000,
+  "bootstrap_unit": "recipient sentence ID, retaining all three fixed donor assignments",
+  "score_analysis_performed": true,
+  "run_provenance": {
+    "protocol_sha256": "384a958d7ca15aea8b9989cab5cc3b976628a6334630b66bf397983ffccc6272",
+    "source_revision": "bdc93be1224106ae7d3eb95739c02a76ed4ae8a1",
+    "source_sha256": "08a4cc197f068f6fc4c9373f61bfb86a5cd996ef16be3cb516082b434ba92543",
+    "parent_output_sha256": "890a16d6363e72549c7ccad9099dece3ce021ab78ab3d8071acde18774500f5f",
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "model_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "device": "mps",
+    "donor_assignment_sha256": {
+      "1": "07c848a20e3a4b51c0e560ed349995b8c98080ae15d3ae919eae8cb5e721d1c4",
+      "2": "7af2c9560ae6923e6569f61bb90341b7b6b9b69bc7a5294f01310d6265bcbaa0",
+      "3": "9b51872d6fda252eaa01fd53ce53479bc5c0785fc6a94b17499946f9bccbb382"
+    },
+    "output_sha256": "58b45f4efbccd29db286998e2009ecd1bed6d276b9ee3f388866a8bdc1a62858",
+    "generation_seconds_this_process_only": 2175.647111541999
+  },
+  "status": "scored",
+  "n_complete_recipient_ids": 217,
+  "per_permutation": {
+    "1": {
+      "matched_review_advantage_by_decoder": {
+        "finite_grid": 0.5542611816696614,
+        "free_greedy": 0.16251402854198593
+      },
+      "finite_minus_free_interaction": 0.3917471531276755
+    },
+    "2": {
+      "matched_review_advantage_by_decoder": {
+        "finite_grid": 0.6243871307849864,
+        "free_greedy": 0.15610033296213865
+      },
+      "finite_minus_free_interaction": 0.46828679782284777
+    },
+    "3": {
+      "matched_review_advantage_by_decoder": {
+        "finite_grid": 0.5983133329837873,
+        "free_greedy": 0.15020987282165654
+      },
+      "finite_minus_free_interaction": 0.44810346016213076
+    }
+  },
+  "mean_matched_review_advantage_by_decoder": {
+    "finite_grid": 0.5923205484794783,
+    "free_greedy": 0.15627474477526038
+  },
+  "mean_primary_interaction": {
+    "contrast": "mean over three permutations of [matched-review advantage(finite) - matched-review advantage(free)]",
+    "estimate": 0.436045803704218,
+    "ci95": [
+      0.2722905667036621,
+      0.598961296325825
+    ],
+    "n_recipient_ids": 217,
+    "confirmatory": false
+  },
+  "permutation_sensitivity": {
+    "range": [
+      0.3917471531276755,
+      0.46828679782284777
+    ],
+    "sample_standard_deviation": 0.03966887459909327,
+    "n_permutations": 3,
+    "inferential_status": "descriptive only; three fixed mappings"
+  },
+  "limitations": [
+    "Same public dataset and model family; test text may have appeared in pretraining.",
+    "The fresh sample contains negative and positive cases only.",
+    "Polarity matching rules out only this coarse gold-valence cue; other donor differences remain.",
+    "Intervals condition on the three fixed mappings."
+  ],
+  "control": {
+    "donors_match_recipient_gold_valence_polarity": true,
+    "donors_differ_in_exact_review_and_aspect_linkage": true,
+    "polarity_buckets": "negative and positive; no neutral cases"
+  }
+}
