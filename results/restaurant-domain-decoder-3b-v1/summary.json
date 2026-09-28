@@ -1,0 +1,106 @@
+{
+  "experiment": "051-restaurant-domain-decoder-transfer-3b",
+  "interpretation": "adaptive same-language domain transfer; exploratory",
+  "n_restaurant_clusters": 963,
+  "n_laptop_clusters": 943,
+  "n_restaurant_outputs": 3852,
+  "invalid_by_decoder_condition": {
+    "finite_grid": {
+      "aspect_only": 0,
+      "opinion_masked": 0
+    },
+    "free_greedy": {
+      "aspect_only": 0,
+      "opinion_masked": 1
+    }
+  },
+  "invalid_laptop_by_decoder_condition": {
+    "finite_grid": {
+      "aspect_only": 0,
+      "opinion_masked": 0
+    },
+    "free_greedy": {
+      "aspect_only": 0,
+      "opinion_masked": 0
+    }
+  },
+  "invalid_free_outputs": 1,
+  "invalid_free_rate": 0.0005192107995846313,
+  "analysis_seed": 20260951,
+  "bootstrap_replicates": 10000,
+  "bootstrap_unit": "source sentence ID, retaining evidence, decoders and both VA dimensions",
+  "score_analysis_performed": true,
+  "run_provenance": {
+    "protocol_sha256": "fccbee4b05f938704465f0c2b42314dc7a76fe8708976fb5550780ade322f9c0",
+    "source_revision": "bdc93be1224106ae7d3eb95739c02a76ed4ae8a1",
+    "source_file": "eng_restaurant_test_task2.jsonl",
+    "source_sha256": "e90386169422c84ddd42d51029f23934b54724fafe270b65138836067492857d",
+    "selected_valence_buckets": {
+      "pos": 718,
+      "neg": 197,
+      "neu": 48
+    },
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "model_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "device": "mps",
+    "n_grid_candidates": 6561,
+    "invalid_by_decoder_condition": {
+      "finite_grid": {
+        "aspect_only": 0,
+        "opinion_masked": 0
+      },
+      "free_greedy": {
+        "aspect_only": 0,
+        "opinion_masked": 1
+      }
+    },
+    "output_sha256": "3f37ff8d630fde9776552389a8d41a4aab9d9b6ea127e24142337de68fd99ca7",
+    "generation_seconds_this_process_only": 7391.506608500029
+  },
+  "status": "scored",
+  "n_complete_restaurant_clusters": 962,
+  "n_complete_laptop_clusters": 943,
+  "context_gain_by_decoder": {
+    "finite_grid": {
+      "estimate": 2.4282493535441736,
+      "ci95": [
+        2.31721288481563,
+        2.541459065678277
+      ],
+      "n_clusters": 962,
+      "registered_context_gain_gate_passed": true
+    },
+    "free_greedy": {
+      "estimate": -0.3481665792558539,
+      "ci95": [
+        -0.41536693955029486,
+        -0.28077594133886774
+      ],
+      "n_clusters": 962,
+      "registered_context_gain_gate_passed": false
+    }
+  },
+  "primary_decoder_interaction": {
+    "contrast": "context_gain(finite_grid) - context_gain(free_greedy)",
+    "estimate": 2.7764159328000275,
+    "ci95": [
+      2.6794811979156514,
+      2.8724349731611243
+    ],
+    "n_clusters": 962,
+    "registered_interaction_gate_passed": true
+  },
+  "domain_moderation_secondary": {
+    "contrast": "laptop interaction - restaurant interaction",
+    "laptop_interaction": 2.665620036698994,
+    "restaurant_interaction": 2.7764159328000275,
+    "estimate": -0.11079589610103335,
+    "ci95": [
+      -0.24130234668424191,
+      0.02334401257193218
+    ],
+    "n_laptop_clusters": 943,
+    "n_restaurant_clusters": 962,
+    "confirmatory": false
+  }
+}

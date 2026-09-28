@@ -928,18 +928,10 @@ may hinge on the `valence`-first decimal spelling in the grammar. A follow-up sh
 change a surface convention while preserving the numeric task and directly measure
 whether the interaction survives.
 
-After Laya selected an independent continuous-VA corpus as the next direction, a
-targeted corpus audit did not identify a compatible external gold set. The DimABSA
-authors describe their release as the first multilingual DimABSA resource with
-manually annotated, aspect-linked continuous VA scores. The 2026 VADE work adds
-affect-enriched Senti-COCO captions for visual-encoder training, but its Twitter-15
-and Twitter-17 aspect-level evaluation uses categorical polarity, not continuous
-target VA. These resources cannot serve as a direct independent replication without
-changing the endpoint or inventing a mapping. See [DimABSA](https://arxiv.org/abs/2601.23022)
-and [VADE / Senti-COCO](https://aclanthology.org/2026.findings-acl.1979/).
-The next Laya choice therefore needs to select among feasible mechanism or
-within-release transfer controls. An independent-corpus replication would first
-require new gold annotation rather than just another local inference run.
+The first corpus search after Experiment 050 did not locate a compatible external
+gold set. A later audit found a candidate; details and limitations follow after
+Experiment 051's result below. This was a search miss, not evidence that no such
+corpus exists.
 
 After that data audit, Laya selected Experiment 051: repeat the matched 3B factorial
 on all eligible English restaurant cases. This fixes English language, prompt,
@@ -948,3 +940,50 @@ model, and decoding setup while changing product domain relative to 050. It yiel
 restaurant interaction with the 050 laptop interaction using independent source-ID
 bootstrap draws. The [051 protocol](experiments/051-restaurant-domain-decoder-transfer-3b.md),
 runner, analyzer and tests are frozen before the new target-model judgments.
+
+**Experiment 051 outcome.** On 962 complete restaurant source IDs (one of 963 had
+an invalid free-greedy masked-context response), finite-grid context gain was
++2.428 (95% source-ID interval [+2.317, +2.541]) and free-greedy gain was
+−0.348 ([−0.415, −0.281]). The registered interaction was +2.776
+([+2.679, +2.872]), passing the practical gate; the free-output invalid rate was
+1/1,926 = 0.052%, below the 2% withholding threshold. The descriptive laptop-minus-
+restaurant interaction difference was −0.111 (95% independent-domain interval
+[−0.241, +0.023]). This is a close same-release, same-language replication across
+product domains, not independent-corpus evidence; an interval spanning zero does
+not establish domain equivalence.
+
+The output-mode audit repeats the 050 pattern: finite-grid aspect-only outputs were
+(1.0, 1.0) on 892/963 restaurant IDs, and free-greedy aspect-only outputs were
+(5.0, 4.0) on 888/963. The masked-context cells moved away from those respective
+modes. This strengthens the evidence that the decoder changes the model's output
+mode when evidence is absent, while leaving open whether numeric token priors, key
+order, grammar masking, or another mechanism explains it. Recent studies already
+show numeric-token/whitespace sensitivity in constrained classification
+([Hamilton & Mimno, 2025](https://arxiv.org/abs/2502.14969)), broad structured-format
+effects in SLU/NER ([Lepagnol et al., LREC 2026](https://aclanthology.org/2026.lrec-1.593/)),
+and prompt positional effects ([Schilcher et al., Findings 2025](https://aclanthology.org/2025.findings-emnlp.1124/)).
+Therefore a representation follow-up is useful only if it tests the interaction
+between a serialization change and the *value of added opinion evidence* in
+continuous VA scoring, not merely whether surface order changes model outputs.
+See the [`051 aggregate bundle`](../results/restaurant-domain-decoder-3b-v1/README.md).
+
+**Corpus-audit correction and next direction.** A follow-up search found the
+[SIGHAN 2024 dimABSA shared task](https://aclanthology.org/2024.sighan-1.19/), which
+released Chinese restaurant reviews with human aspect/opinion spans and continuous
+1–9 VA targets. Its pinned public repository has 2,000 unique Task 2/3 test IDs,
+ordered input/gold alignment, no ID overlap with either training split or separate
+Task 1 test. Training file hashes and Task 1 hashes are in the [052 protocol](experiments/052-sighan-chinese-decoder-transfer.md).
+An initial span audit found 1,925 candidate IDs; the stricter pairwise opinion-span
+overlap check excludes nine, leaving 1,916 unambiguous targets. This is an external
+release and cross-language replication, but it remains the restaurant domain, the
+test set is public, and language and corpus provenance change together. The 2026
+VADE/Senti-COCO dataset is not a substitute because its aspect-level evaluation uses
+categorical polarity rather than continuous target VA
+([VADE / Senti-COCO](https://aclanthology.org/2026.findings-acl.1979/)).
+
+Laya first favored collecting new human labels; after we found and audited the
+public SIGHAN gold set, its updated choice selected Experiment 052: repeat the 3B
+factorial on all 1,916 eligible IDs (7,664 local generations). The original
+1,925-case estimate included nine rows with overlapping opinion spans. The frozen
+[052 protocol](experiments/052-sighan-chinese-decoder-transfer.md), runner, analyzer,
+and tests are ready before model judgments.
