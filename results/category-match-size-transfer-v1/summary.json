@@ -1,0 +1,112 @@
+{
+  "experiment": "059-category-match-size-transfer",
+  "interpretation": "same-sample, same-map category-match size transfer; exploratory",
+  "n_recipient_ids": 184,
+  "n_permutations": 3,
+  "n_new_outputs": 1104,
+  "invalid_swapped_by_decoder": {
+    "finite_grid": 0,
+    "free_greedy": 0
+  },
+  "invalid_free_outputs": 0,
+  "invalid_free_denominator": 552,
+  "invalid_free_rate": 0.0,
+  "analysis_seed": 20260957,
+  "bootstrap_replicates": 10000,
+  "bootstrap_unit": "recipient sentence ID, retaining all three fixed donor assignments",
+  "score_analysis_performed": true,
+  "run_provenance": {
+    "protocol_sha256": "fb206d8dadd19399c84c78b9131cf69322a05fec1d5992c36697de83b4fc396d",
+    "source_revision": "bdc93be1224106ae7d3eb95739c02a76ed4ae8a1",
+    "source_sha256": "08a4cc197f068f6fc4c9373f61bfb86a5cd996ef16be3cb516082b434ba92543",
+    "parent_output_sha256": "21e7fe02b43433fa4b61b5dfe790efef38c57e8a0e240e4443ffe40ffb110e31",
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "device": "mps",
+    "donor_assignment_sha256": {
+      "1": "3447f446f6ccdb8edbf7d86b3d40a6d88c98bf46b213d6acd3f32590b4672949",
+      "2": "edfd5c94ffdca55adba488d5b573e8bb5cc8fc33db055e9592b19f0221f0b1b8",
+      "3": "9e8b819b02ef7a19033e7ade367b98d64d1e46535446d9495494b46d715faa9b"
+    },
+    "output_sha256": "b594ae23fb785dd40fe7725b8f79d4e36ea8aacaff8bb20edeb0c7dc8edbc9e8",
+    "generation_seconds_this_process_only": 1212.5078837919864,
+    "n_unique_assignment_maps": 3
+  },
+  "status": "scored",
+  "n_complete_recipient_ids": 184,
+  "per_permutation": {
+    "1": {
+      "matched_review_advantage_by_decoder": {
+        "finite_grid": -0.05153655182700012,
+        "free_greedy": -0.051829160918945405
+      },
+      "finite_minus_free_interaction": 0.00029260909194528395
+    },
+    "2": {
+      "matched_review_advantage_by_decoder": {
+        "finite_grid": -0.045127465877178086,
+        "free_greedy": -0.06032452364969387
+      },
+      "finite_minus_free_interaction": 0.015197057772515787
+    },
+    "3": {
+      "matched_review_advantage_by_decoder": {
+        "finite_grid": -0.061569454417759406,
+        "free_greedy": -0.08110583035307606
+      },
+      "finite_minus_free_interaction": 0.019536375935316652
+    }
+  },
+  "mean_matched_review_advantage_by_decoder": {
+    "finite_grid": -0.05274449070731254,
+    "free_greedy": -0.06441983830723845
+  },
+  "mean_primary_interaction": {
+    "contrast": "mean over three permutations of [matched-review advantage(finite) - matched-review advantage(free)]",
+    "estimate": 0.011675347599925908,
+    "ci95": [
+      -0.13860980375338833,
+      0.15721333667512394
+    ],
+    "n_recipient_ids": 184,
+    "confirmatory": false
+  },
+  "permutation_sensitivity": {
+    "range": [
+      0.00029260909194528395,
+      0.019536375935316652
+    ],
+    "sample_standard_deviation": 0.010093684782342972,
+    "n_permutations": 3,
+    "inferential_status": "descriptive range across unique fixed donor mappings"
+  },
+  "limitations": [
+    "The 184 eligible cases exclude category-polarity singleton cells.",
+    "The fresh sample has no neutral-valence cases.",
+    "Official category and polarity matching do not control exact aspect identity or relevant words.",
+    "Same public test release and model family; pretraining exposure is possible.",
+    "Bootstrap intervals condition on the fixed cyclic donor mappings.",
+    "The 1.5B-vs-3B contrast reuses the same public recipients and fixed donor maps; it is not an independent replication."
+  ],
+  "control": {
+    "donors_match_recipient_gold_valence_polarity": true,
+    "donors_match_official_dimabsa_aspect_category": true,
+    "n_category_polarity_groups": 45,
+    "n_unique_assignment_maps": 3
+  },
+  "model_size": "Qwen2.5-1.5B",
+  "cross_size_diagnostic": {
+    "contrast": "1.5B interaction minus 3B interaction; same recipients and donor maps",
+    "estimate_1_5b": 0.011675347599925908,
+    "estimate_3b": 0.10663102516890932,
+    "difference": -0.09495567756898342,
+    "recipient_bootstrap_ci95": [
+      -0.3236032142068017,
+      0.13270432758894277
+    ],
+    "n_recipient_ids": 184,
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20260960,
+    "inferential_status": "cross-size diagnostic; same model family and same public sample"
+  }
+}

@@ -1128,3 +1128,36 @@ check whether 057's attenuation transfers across scale before deciding whether a
 more expensive direct topic-match factorial is justified. This is a local research
 triage decision, not a novelty claim. **No LessWrong post has been written or
 published; revisit only after this follow-up.**
+
+**Experiment 059 outcome: 1.5B size transfer.** Laya selected a second model
+size for the category-matched control. On the same 184 recipients and same three
+donor maps, Qwen2.5-1.5B's finite-minus-free matched-review interaction was
++0.012 (95% recipient-bootstrap interval [-0.139, +0.157]); all 1,104 donor
+outputs and 368 own-review baseline outputs were valid. The corresponding 3B
+estimate on the same rows was +0.107. Their paired size difference was -0.095
+(95% recipient-bootstrap interval [-0.324, +0.133]), which does not resolve a
+size effect. At 1.5B, matched-category donor reviews were slightly better than
+the recipient's own review under both decoders; this is a descriptive outcome,
+not evidence that the donor is generally preferable. Taken together, 057 and 059
+do not support a reliable decoder-specific own-review advantage after official
+category and polarity matching at either tested size. The earlier polarity-only
+signal may depend on topical mismatch, but the category-vs-polarity comparison is
+post-hoc, so a direct randomized same-topic/different-topic control is the next
+useful discriminating test. See the [059 result bundle](../results/category-match-size-transfer-v1/README.md)
+and [preregistered protocol](experiments/059-category-match-size-transfer.md).
+
+**Publication judgment after 057–059.** Do not write a LessWrong post yet. The
+initial decoder-by-context pattern was large, but it becomes small and uncertain
+under category matching and does not clearly differ between 1.5B and 3B. The
+interesting question is now whether topic match itself explains the attenuation;
+test that directly before deciding whether this is a useful post or a bounded
+null result.
+
+Laya's next local triage choice is Experiment 060: compare three polarity-matched
+donor derangements that **must differ in official aspect category** against the
+already completed same-category condition from 057. Reuse the same 184 recipients,
+gold labels, own-review baseline, and Qwen2.5-3B model; generate 1,104 new outputs.
+This is more diagnostic than another scale run because 059 found no clear size
+contrast. The assigned choice probability is 0.349 and remains uncalibrated; the
+scientific rationale is the paired same-recipient/category contrast, not the model's
+confidence. See the local ignored Laya trace `.context/laya-research-triage-060.json`.

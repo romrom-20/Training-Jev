@@ -41,14 +41,13 @@ def load_3b_donors(path: Path) -> dict:
     return category_analyzer.load_rows(path)
 
 
-def load_3b_own(path: Path) -> dict:
+def load_3b_own(path: Path, ids: set[str]) -> dict:
     rows = [json.loads(line) for line in path.read_text().splitlines() if line.strip()]
     keyed = {
         (row["case_id"], row["condition"], row["decoder"]): row
-        for row in rows if row["condition"] == "opinion_masked"
+        for row in rows if row["condition"] == "opinion_masked" and row["case_id"] in ids
     }
-    ids = {key[0] for key in keyed}
-    if len(ids) != 184 or len(keyed) != 184 * 2:
+    if {key[0] for key in keyed} != ids or len(keyed) != len(ids) * 2:
         raise ValueError("Expected 184 paired 3B own-review baselines")
     return keyed
 
@@ -107,8 +106,16 @@ def analyze(path_15: Path, manifest_path: Path, path_3donor: Path,
             path_3own: Path) -> dict:
     manifest = json.loads(manifest_path.read_text())
     donor_15, own_15 = split_1p5b(path_15)
-    donor_3, own_3 = load_3b_donors(path_3donor), load_3b_own(path_3own)
-    summary = category_analyzer.analyze(donor_15, own_15, manifest)
+    donor_3 = load_3b_donors(path_3donor)
+    own_3 = load_3b_own(path_3own, {key[0] for key in donor_3})
+    three_b_manifest = json.loads(Path(".context/exp057-run-manifest.json").read_text())
+    if manifest["donor_assignment_sha256"] != three_b_manifest["donor_assignment_sha256"]:
+        raise ValueError("Cross-size models do not share the frozen donor maps")
+    manifest_for_analysis = dict(manifest)
+    manifest_for_analysis["n_unique_assignment_maps"] = len(
+        set(manifest["donor_assignment_sha256"].values())
+    )
+    summary = category_analyzer.analyze(donor_15, own_15, manifest_for_analysis)
     summary["experiment"] = "059-category-match-size-transfer"
     summary["interpretation"] = "same-sample, same-map category-match size transfer; exploratory"
     summary["model_size"] = "Qwen2.5-1.5B"
