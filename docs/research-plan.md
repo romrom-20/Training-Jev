@@ -962,8 +962,8 @@ show numeric-token/whitespace sensitivity in constrained classification
 ([Hamilton & Mimno, 2025](https://arxiv.org/abs/2502.14969)), broad structured-format
 effects in SLU/NER ([Lepagnol et al., LREC 2026](https://aclanthology.org/2026.lrec-1.593/)),
 and prompt positional effects ([Schilcher et al., Findings 2025](https://aclanthology.org/2025.findings-emnlp.1124/)).
-Therefore a representation follow-up is useful only if it tests the interaction
-between a serialization change and the *value of added opinion evidence* in
+Therefore a representation follow-up is useful only if it tests whether a
+serialization change alters the *value of residual non-opinion review context* in
 continuous VA scoring, not merely whether surface order changes model outputs.
 See the [`051 aggregate bundle`](../results/restaurant-domain-decoder-3b-v1/README.md).
 
@@ -987,3 +987,12 @@ factorial on all 1,916 eligible IDs (7,664 local generations). The original
 1,925-case estimate included nine rows with overlapping opinion spans. The frozen
 [052 protocol](experiments/052-sighan-chinese-decoder-transfer.md), runner, analyzer,
 and tests are ready before model judgments.
+
+**Post-run interpretation correction for 052.** The executed prompt builder sets
+the review-text field to `[NOT PROVIDED]` in `aspect_only`, while `opinion_masked`
+contains the review with all annotated opinion spans replaced by `[MASKED]`. The
+frozen protocol incorrectly described the former as full review text. Therefore the
+registered gain is the effect of *residual non-opinion review context* relative to
+an aspect-only/no-review baseline; it is not the effect of visible opinion evidence.
+The estimates and analysis remain unchanged. Details are in the
+[interpretation correction](experiments/052-interpretation-correction.md).

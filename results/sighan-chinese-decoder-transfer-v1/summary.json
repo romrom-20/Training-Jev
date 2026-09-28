@@ -1,0 +1,344 @@
+{
+  "experiment": "052-sighan-chinese-decoder-transfer",
+  "interpretation": "adaptive independent-release cross-language transfer; exploratory",
+  "n_chinese_clusters": 1916,
+  "n_english_restaurant_clusters": 963,
+  "n_chinese_outputs": 7664,
+  "invalid_by_decoder_condition": {
+    "finite_grid": {
+      "aspect_only": 0,
+      "opinion_masked": 0
+    },
+    "free_greedy": {
+      "aspect_only": 0,
+      "opinion_masked": 1
+    }
+  },
+  "invalid_english_parent_by_decoder_condition": {
+    "finite_grid": {
+      "aspect_only": 0,
+      "opinion_masked": 0
+    },
+    "free_greedy": {
+      "aspect_only": 0,
+      "opinion_masked": 1
+    }
+  },
+  "invalid_free_outputs": 1,
+  "invalid_free_rate": 0.00026096033402922753,
+  "analysis_seed": 20260952,
+  "bootstrap_replicates": 10000,
+  "bootstrap_unit": "source sentence ID, retaining evidence, decoders and both VA dimensions",
+  "condition_semantics_correction": {
+    "aspect_only": "Review-text field is [NOT PROVIDED]; target aspect is supplied.",
+    "opinion_masked": "Full review is supplied with all annotated non-null opinion spans replaced by [MASKED]; target aspect is supplied.",
+    "context_gain_estimand": "RMSE(aspect-only prompt) - RMSE(opinion-masked full-review prompt): utility or harm of residual non-opinion review context.",
+    "does_not_measure": "The effect of visible/unmasked opinion words.",
+    "note": "The frozen protocol's prose incorrectly said aspect_only showed the full review. The executed runner's inherited prompt builder and analyzed rows implement the semantics above; the estimates are unchanged."
+  },
+  "output_mode_counts_posthoc": {
+    "finite_grid": {
+      "aspect_only": [
+        {
+          "va": [
+            1.0,
+            1.0
+          ],
+          "count": 1832
+        },
+        {
+          "va": [
+            4.0,
+            5.0
+          ],
+          "count": 74
+        },
+        {
+          "va": [
+            5.0,
+            4.0
+          ],
+          "count": 6
+        },
+        {
+          "va": [
+            4.0,
+            3.0
+          ],
+          "count": 2
+        },
+        {
+          "va": [
+            4.5,
+            5.0
+          ],
+          "count": 1
+        },
+        {
+          "va": [
+            4.5,
+            4.0
+          ],
+          "count": 1
+        }
+      ],
+      "opinion_masked": [
+        {
+          "va": [
+            5.0,
+            3.0
+          ],
+          "count": 231
+        },
+        {
+          "va": [
+            4.0,
+            3.0
+          ],
+          "count": 215
+        },
+        {
+          "va": [
+            1.0,
+            1.0
+          ],
+          "count": 215
+        },
+        {
+          "va": [
+            5.0,
+            4.0
+          ],
+          "count": 176
+        },
+        {
+          "va": [
+            5.1,
+            4.1
+          ],
+          "count": 172
+        },
+        {
+          "va": [
+            7.0,
+            5.0
+          ],
+          "count": 138
+        },
+        {
+          "va": [
+            6.0,
+            4.0
+          ],
+          "count": 99
+        },
+        {
+          "va": [
+            3.0,
+            2.0
+          ],
+          "count": 87
+        }
+      ]
+    },
+    "free_greedy": {
+      "aspect_only": [
+        {
+          "va": [
+            5.0,
+            4.0
+          ],
+          "count": 1187
+        },
+        {
+          "va": [
+            3.0,
+            4.0
+          ],
+          "count": 526
+        },
+        {
+          "va": [
+            5.0,
+            3.0
+          ],
+          "count": 73
+        },
+        {
+          "va": [
+            7.2,
+            5.1
+          ],
+          "count": 31
+        },
+        {
+          "va": [
+            4.0,
+            5.0
+          ],
+          "count": 24
+        },
+        {
+          "va": [
+            4.0,
+            3.0
+          ],
+          "count": 22
+        },
+        {
+          "va": [
+            7.1,
+            4.1
+          ],
+          "count": 18
+        },
+        {
+          "va": [
+            7.1,
+            5.1
+          ],
+          "count": 12
+        }
+      ],
+      "opinion_masked": [
+        {
+          "va": [
+            5.0,
+            3.0
+          ],
+          "count": 444
+        },
+        {
+          "va": [
+            3.0,
+            2.0
+          ],
+          "count": 367
+        },
+        {
+          "va": [
+            3.0,
+            4.0
+          ],
+          "count": 206
+        },
+        {
+          "va": [
+            4.0,
+            3.0
+          ],
+          "count": 196
+        },
+        {
+          "va": [
+            7.1,
+            4.1
+          ],
+          "count": 180
+        },
+        {
+          "va": [
+            7.1,
+            5.1
+          ],
+          "count": 120
+        },
+        {
+          "va": [
+            7.5,
+            4.0
+          ],
+          "count": 45
+        },
+        {
+          "va": [
+            7.0,
+            4.0
+          ],
+          "count": 39
+        }
+      ]
+    }
+  },
+  "score_analysis_performed": true,
+  "run_provenance": {
+    "protocol_sha256": "679bf9fd850ffc2dbdd0534c2a8f5be0a3d7edbf3f02541feee06249d01bed16",
+    "source_revision": "d43a482039a41fbc26087ef5b26e94ee772d0fb6",
+    "source_files": {
+      "test_input": "SIGHAN2024_dimABSA_Testing_Task2+3_Simplified.txt",
+      "test_gold": "SIGHAN2024_dimABSA_Testing_Task2+3_Simplified_truth.txt"
+    },
+    "source_hashes": {
+      "test_input": "5053608647d06ad88ce21a2aecbef0e29dc58a8220f921561d39d4e9cf86fe28",
+      "test_gold": "6ecc6949d5f77ea34a09826115a0f91327313ae33824a5c373d7322bdbb17108"
+    },
+    "selected_valence_buckets": {
+      "pos": 1442,
+      "neu": 213,
+      "neg": 261
+    },
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "model_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "device": "mps",
+    "n_grid_candidates": 6561,
+    "invalid_by_decoder_condition": {
+      "finite_grid": {
+        "aspect_only": 0,
+        "opinion_masked": 0
+      },
+      "free_greedy": {
+        "aspect_only": 0,
+        "opinion_masked": 1
+      }
+    },
+    "output_sha256": "76671a3330e35fddfd915f15c86b49b90f8113af74041651162b7a81051765fe",
+    "generation_seconds_this_process_only": 14510.812426833028
+  },
+  "status": "scored",
+  "n_complete_chinese_clusters": 1915,
+  "n_complete_english_clusters": 962,
+  "context_gain_by_decoder": {
+    "finite_grid": {
+      "estimate": 2.407176192791827,
+      "ci95": [
+        2.3393630681830766,
+        2.477057200727596
+      ],
+      "n_clusters": 1915,
+      "registered_context_gain_gate_passed": true
+    },
+    "free_greedy": {
+      "estimate": -0.38407853211254905,
+      "ci95": [
+        -0.4256942356307798,
+        -0.3436550134340371
+      ],
+      "n_clusters": 1915,
+      "registered_context_gain_gate_passed": false
+    }
+  },
+  "primary_decoder_interaction": {
+    "contrast": "context_gain(finite_grid) - context_gain(free_greedy)",
+    "estimate": 2.791254724904376,
+    "ci95": [
+      2.7336319112100886,
+      2.8491836829905495
+    ],
+    "n_clusters": 1915,
+    "registered_interaction_gate_passed": true
+  },
+  "cross_release_language_transfer_secondary": {
+    "contrast": "English restaurant interaction - Chinese restaurant interaction",
+    "english_interaction": 2.7764159328000275,
+    "chinese_interaction": 2.791254724904376,
+    "estimate": -0.014838792104348464,
+    "ci95": [
+      -0.12631334591700977,
+      0.09986062161082325
+    ],
+    "n_english_clusters": 962,
+    "n_chinese_clusters": 1915,
+    "confirmatory": false,
+    "interpretation_limit": "Language and source release differ together; this descriptive contrast cannot identify which explains a difference."
+  }
+}

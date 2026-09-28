@@ -84,6 +84,10 @@ def test_analyzer_computes_registered_interaction_and_transfer(monkeypatch):
     assert summary["primary_decoder_interaction"]["estimate"] == pytest.approx(0.5)
     assert summary["primary_decoder_interaction"]["ci95"] == pytest.approx([0.5, 0.5])
     assert summary["cross_release_language_transfer_secondary"]["estimate"] == pytest.approx(-0.25)
+    semantics = summary["condition_semantics_correction"]
+    assert "[NOT PROVIDED]" in semantics["aspect_only"]
+    assert "residual non-opinion" in semantics["context_gain_estimand"]
+    assert "visible/unmasked opinion words" in semantics["does_not_measure"]
 
 
 def test_analyzer_withholds_scores_when_free_invalid_rate_exceeds_gate(monkeypatch):

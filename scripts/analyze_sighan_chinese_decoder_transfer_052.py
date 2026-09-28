@@ -104,6 +104,13 @@ def analyze(chinese: dict, english: dict, manifest: dict | None = None) -> dict:
         "analysis_seed": SEED,
         "bootstrap_replicates": BOOTSTRAPS,
         "bootstrap_unit": "source sentence ID, retaining evidence, decoders and both VA dimensions",
+        "condition_semantics_correction": {
+            "aspect_only": "Review-text field is [NOT PROVIDED]; target aspect is supplied.",
+            "opinion_masked": "Full review is supplied with all annotated non-null opinion spans replaced by [MASKED]; target aspect is supplied.",
+            "context_gain_estimand": "RMSE(aspect-only prompt) - RMSE(opinion-masked full-review prompt): utility or harm of residual non-opinion review context.",
+            "does_not_measure": "The effect of visible/unmasked opinion words.",
+            "note": "The frozen protocol's prose incorrectly said aspect_only showed the full review. The executed runner's inherited prompt builder and analyzed rows implement the semantics above; the estimates are unchanged.",
+        },
         "output_mode_counts_posthoc": _mode_counts(chinese),
         "score_analysis_performed": False,
     }
@@ -244,6 +251,8 @@ def write_report(summary: dict, output: Path) -> None:
 {result}
 
 The test is a public, separately curated Chinese restaurant-review release with human continuous aspect-linked VA labels. It is an external release and cross-language transfer; it is not pretraining-blind, changes language and corpus at once, and remains in the restaurant domain. The English-minus-Chinese secondary interval is descriptive and cannot identify language effects separately from release effects.
+
+**Interpretation correction:** the executed `aspect_only` prompt contains the target aspect and `[NOT PROVIDED]` for review text. The `opinion_masked` prompt contains the full review with all annotated opinion spans replaced by `[MASKED]`. Therefore the registered contrast measures utility or harm from the remaining non-opinion review context; it does not measure the value of visible opinion words. The frozen protocol's prose describing `aspect_only` as showing the complete review was incorrect; see `docs/experiments/052-interpretation-correction.md`. The run and estimates are unchanged.
 
 Post-hoc most common numeric outputs by cell are recorded in `summary.json`. Treat them as exploratory mechanism clues.
 
