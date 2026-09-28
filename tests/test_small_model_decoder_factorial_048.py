@@ -6,7 +6,7 @@ import pytest
 sys.path.insert(0, str(Path(__file__).parents[1] / "scripts"))
 
 import analyze_small_model_decoder_factorial_048 as analysis
-from run_small_model_decoder_factorial_048 import parse_free_va
+from run_small_model_decoder_factorial_048 import homogeneous_batches, parse_free_va
 
 
 def _synthetic_rows(invalid_free=0):
@@ -47,6 +47,17 @@ def test_free_output_parser_accepts_finite_numeric_va_and_rejects_invalid_json()
         '{"valence":10,"arousal":5}',
     ):
         assert parse_free_va(raw) is None
+
+
+def test_inference_batches_do_not_cross_decoder_boundary():
+    rows = [
+        {"decoder": decoder, "index": index}
+        for decoder, count in (("finite_grid", 3), ("free_greedy", 5))
+        for index in range(count)
+    ]
+    batches = list(homogeneous_batches(rows, batch_size=4))
+    assert [len(batch) for batch in batches] == [3, 4, 1]
+    assert all(len({row["decoder"] for row in batch}) == 1 for batch in batches)
 
 
 def test_matched_decoder_analysis_computes_context_gains_and_interaction():

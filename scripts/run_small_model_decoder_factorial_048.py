@@ -167,6 +167,23 @@ def generate_free_batch(model, tokenizer, batch: list[dict], device: str) -> lis
     return tokenizer.batch_decode(generated[:, prompt_width:], skip_special_tokens=True)
 
 
+def homogeneous_batches(rows: list[dict], batch_size: int):
+    """Yield batches without crossing a decoder-arm boundary."""
+    if batch_size < 1:
+        raise ValueError("Batch size must be positive")
+    offset = 0
+    while offset < len(rows):
+        decoder = rows[offset]["decoder"]
+        limit = min(offset + batch_size, len(rows))
+        end = offset
+        while end < limit and rows[end]["decoder"] == decoder:
+            end += 1
+        if end == offset:
+            raise ValueError("Could not construct non-empty homogeneous batch")
+        yield rows[offset:end]
+        offset = end
+
+
 def run(
     source_dir: Path = Path(".context/dimabsa"),
     output: Path = OUT,
@@ -239,11 +256,9 @@ def run(
     started = time.monotonic()
     output.parent.mkdir(parents=True, exist_ok=True)
     with output.open("a", encoding="utf-8") as stream:
-        for offset in range(0, len(remaining), batch_size):
-            batch = remaining[offset : offset + batch_size]
+        processed = 0
+        for batch in homogeneous_batches(remaining, batch_size):
             decoder = batch[0]["decoder"]
-            if any(row["decoder"] != decoder for row in batch):
-                raise ValueError("Batch unexpectedly mixes decoder arms")
             raw_outputs = (
                 generate_finite_batch(model, tokenizer, batch, trie, actual_device)
                 if decoder == "finite_grid"
@@ -264,8 +279,9 @@ def run(
                 previous[key] = row
                 stream.write(json.dumps(row, ensure_ascii=False) + "\n")
             stream.flush()
+            processed += len(batch)
             print(
-                f"048 {min(offset + len(batch), len(remaining))}/{len(remaining)} new; "
+                f"048 {processed}/{len(remaining)} new; "
                 f"total {len(previous)}/{len(jobs)}",
                 flush=True,
             )
