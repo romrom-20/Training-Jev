@@ -1,0 +1,117 @@
+{
+  "experiment": "048-small-model-decoder-factorial",
+  "interpretation": "adaptive matched-prompt decoder comparison; exploratory only",
+  "n_clusters": 217,
+  "n_outputs": 2604,
+  "invalid_by_decoder_condition": {
+    "finite_grid": {
+      "aspect_only": 0,
+      "opinion_masked": 0
+    },
+    "free_greedy": {
+      "aspect_only": 0,
+      "opinion_masked": 0
+    }
+  },
+  "invalid_free_outputs": 0,
+  "invalid_free_rate": 0.0,
+  "analysis_seed": 20260948,
+  "bootstrap_replicates": 10000,
+  "bootstrap_unit": "source review ID, retaining all languages, input conditions, and VA dimensions",
+  "score_analysis_performed": true,
+  "run_provenance": {
+    "parent_043_output_sha256": "1e93d359220c533a01f9cccca827f30611a713b70d857a898f59b6560303c7c8",
+    "source_revision": "bdc93be1224106ae7d3eb95739c02a76ed4ae8a1",
+    "source_hashes": {
+      "rus": "912013b49db2bd387076f63ee9df016350180fbac621449121a27dc262d5459b",
+      "ukr": "05fdf7e2dca235261060b785f969315385f962021f171abb85e45638bbadb036",
+      "tat": "c4f1fb5c21f8f06f598c87e489e7adce1a953d4446ad14a60432ae2a13b85ce6"
+    },
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "device": "mps",
+    "invalid_by_decoder_condition": {
+      "finite_grid": {
+        "aspect_only": 0,
+        "opinion_masked": 0
+      },
+      "free_greedy": {
+        "aspect_only": 0,
+        "opinion_masked": 0
+      }
+    },
+    "output_sha256": "71a1568e6d4db6a7c96077c166566948f570dd440086a4015b5e9c5d6b30d793",
+    "generation_seconds_this_process_only": 1717.1509364169906
+  },
+  "status": "scored",
+  "n_complete_clusters": 217,
+  "context_gain_by_decoder": {
+    "finite_grid": {
+      "estimate": 0.2881913049273046,
+      "ci95": [
+        0.18045139132639565,
+        0.3977042463184147
+      ],
+      "n_clusters": 217,
+      "registered_context_gain_gate_passed": true
+    },
+    "free_greedy": {
+      "estimate": 0.12963442981983375,
+      "ci95": [
+        -0.002438061969564693,
+        0.26390317352333803
+      ],
+      "n_clusters": 217,
+      "registered_context_gain_gate_passed": false
+    }
+  },
+  "primary_decoder_interaction": {
+    "contrast": "context_gain(finite_grid) - context_gain(free_greedy)",
+    "estimate": 0.15855687510747085,
+    "ci95": [
+      0.06398429891566196,
+      0.2530668172298492
+    ],
+    "n_clusters": 217,
+    "interpretation": "positive means the finite grid amplifies the context gain",
+    "registered_interaction_gate_passed": false
+  },
+  "by_language_descriptive": {
+    "rus": {
+      "finite_grid": {
+        "aspect_only_rmse": 2.4539863177952452,
+        "opinion_masked_rmse": 2.1004427885172454,
+        "context_gain": 0.3535435292779998
+      },
+      "free_greedy": {
+        "aspect_only_rmse": 2.2352781041214933,
+        "opinion_masked_rmse": 1.962661364407117,
+        "context_gain": 0.2726167397143764
+      }
+    },
+    "ukr": {
+      "finite_grid": {
+        "aspect_only_rmse": 2.4537459372200625,
+        "opinion_masked_rmse": 2.151169010235848,
+        "context_gain": 0.30257692698421446
+      },
+      "free_greedy": {
+        "aspect_only_rmse": 2.1765196502716058,
+        "opinion_masked_rmse": 2.1703559987454413,
+        "context_gain": 0.006163651526164493
+      }
+    },
+    "tat": {
+      "finite_grid": {
+        "aspect_only_rmse": 2.4123287408471197,
+        "opinion_masked_rmse": 2.2028914806626396,
+        "context_gain": 0.20943726018448006
+      },
+      "free_greedy": {
+        "aspect_only_rmse": 2.202655079880111,
+        "opinion_masked_rmse": 2.087654737773338,
+        "context_gain": 0.1150003421067729
+      }
+    }
+  }
+}

@@ -848,3 +848,27 @@ one-decimal prompt in all four cells. This keeps prompt wording fixed while
 testing whether the decoding effect observed in the larger model also appears
 at 1.5B. The matched-prompt protocol, runner, analyzer, and tests are committed
 before the 2,604 new local judgments.
+
+**Experiment 048 outcome.** With the exact same one-decimal prompt at Qwen2.5-1.5B,
+the finite-grid context gain was +0.288 (95% source-ID interval [+0.180, +0.398]);
+free-greedy gain was +0.130 ([-0.002, +0.264]). The paired interaction was +0.159
+([+0.064, +0.253]): its interval excludes zero, but its point estimate did not reach
+the predeclared +0.25 practical threshold. Both decoder arms had zero invalid outputs.
+This resolves the prompt-wording confound for the 1.5B model, but reuses the same
+217 DimABSA restaurant IDs and does not establish an independent replication. The
+result is compatible with a modest decoder-dependent amplification of context use;
+it does not explain the much larger 3B difference between 043 and 047. Work on
+decoding-based regression already highlights finite numeric tokenizations, rounding,
+and point-estimator choices ([Song & Bahri, TMLR 2025](https://arxiv.org/abs/2501.19383));
+our next step tests transfer before adding another same-sample decoder factor.
+See the [`048 result bundle`](../results/small-model-decoder-factorial-v1/README.md).
+
+Laya's next typed-choice selection chose an independent-domain transfer test.
+Experiment 049 runs the same matched-prompt 2×2 on all 943 eligible English laptop
+test IDs in the pinned DimABSA release, using Qwen2.5-1.5B and the same finite grid
+versus free-greedy comparison. This holds language constant while changing the
+product domain; it is a within-release transfer test, not a second corpus or blind
+evaluation. The full eligible set gives 3,772 local generations and fits the 24-GB
+Air setup already used for 048. The [049 protocol](experiments/049-laptop-domain-decoder-transfer.md),
+runner, analyzer and tests are frozen before this transfer run. LessWrong remains
+deferred until the result and any necessary replication are in hand.
