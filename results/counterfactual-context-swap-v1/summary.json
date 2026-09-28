@@ -1,0 +1,63 @@
+{
+  "experiment": "053-counterfactual-review-context-swap",
+  "interpretation": "adaptive fixed-donor counterfactual diagnostic; exploratory",
+  "n_recipient_ids": 217,
+  "n_new_outputs": 434,
+  "invalid_swapped_by_decoder": {
+    "finite_grid": 0,
+    "free_greedy": 0
+  },
+  "invalid_free_outputs": 0,
+  "invalid_free_rate": 0.0,
+  "bootstrap_unit": "recipient sentence ID, conditional on the frozen donor permutation",
+  "analysis_seed": 20260953,
+  "bootstrap_replicates": 10000,
+  "score_analysis_performed": true,
+  "run_provenance": {
+    "protocol_sha256": "ac85f068e7e2f73b4732d5e85aab7443b6f82c459b4bbaf5c62e83cb83ab0006",
+    "source_revision": "bdc93be1224106ae7d3eb95739c02a76ed4ae8a1",
+    "source_sha256": "08a4cc197f068f6fc4c9373f61bfb86a5cd996ef16be3cb516082b434ba92543",
+    "parent_output_sha256": "890a16d6363e72549c7ccad9099dece3ce021ab78ab3d8071acde18774500f5f",
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "model_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "device": "mps",
+    "donor_assignment_sha256": "f7ce6e93a444dee0869c65dbb237ec68b1095cd0172ff6b192ab85820a8c7b89",
+    "output_sha256": "b2fe3c9fab6b752436be23f713f4a014d0787abd10ca2e6921d97ae5ec9b75eb",
+    "generation_seconds_this_process_only": 614.4216745000449
+  },
+  "status": "scored",
+  "n_complete_recipient_ids": 217,
+  "matched_review_advantage": {
+    "finite_grid": {
+      "matched_review_advantage_rmse": 0.6598116807096694,
+      "ci95": [
+        0.4116501317601055,
+        0.9029700371846189
+      ],
+      "n_recipient_ids": 217
+    },
+    "free_greedy": {
+      "matched_review_advantage_rmse": 0.09703397409442571,
+      "ci95": [
+        -0.039891473137403995,
+        0.22905556915350014
+      ],
+      "n_recipient_ids": 217
+    }
+  },
+  "primary_decoder_interaction": {
+    "contrast": "matched-review advantage(finite_grid) - matched-review advantage(free_greedy)",
+    "estimate": 0.5627777066152437,
+    "ci95": [
+      0.3424483700016852,
+      0.7775911585113532
+    ],
+    "n_recipient_ids": 217,
+    "confirmatory": false
+  },
+  "limitations": [
+    "One deterministic donor permutation; intervals condition on that assignment.",
+    "Polarity-balanced 217-case subset is not prevalence-representative.",
+    "Public benchmark labels and test text may have appeared in model training data."
+  ]
+}

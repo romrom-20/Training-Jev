@@ -996,3 +996,34 @@ registered gain is the effect of *residual non-opinion review context* relative 
 an aspect-only/no-review baseline; it is not the effect of visible opinion evidence.
 The estimates and analysis remain unchanged. Details are in the
 [interpretation correction](experiments/052-interpretation-correction.md).
+
+**Experiment 052 outcome.** On 1,915 complete Chinese IDs, finite-grid context
+gain was +2.407 (95% source-ID interval [+2.339, +2.477]) and free-greedy gain
+was −0.384 ([-0.426, −0.344]); their interaction was +2.791
+([+2.734, +2.849]). The descriptive English-restaurant-minus-Chinese interaction
+difference was −0.015 ([-0.126, +0.100]). One of 3,832 free outputs was invalid,
+below the 2% cutoff. Given the prompt-semantics correction, these findings say
+finite-grid decoding benefits more from residual non-opinion review text than
+free-greedy decoding; they do not show that visible opinion words caused the
+effect. The interaction's near-equality across English and Chinese is suggestive
+but language and data release vary together.
+
+**Experiment 053: counterfactual review context.** Context interventions are
+already established in ABSA: Tian et al. (Findings NAACL 2024) study context
+denoising and warn that removing context can remove useful information. The
+interesting narrower question here is whether the decoder interaction requires
+the correct review for this target. On a preregistered 217-case polarity-balanced
+English laptop subset, replacing each opinion-masked review with a length-binned,
+deterministically assigned review from another case raised finite-grid RMSE by
++0.660 (95% recipient-bootstrap interval [+0.412, +0.903]) relative to the case's
+own review. The free-greedy increase was +0.097 ([-0.040, +0.229]); their
+finite-minus-free difference was +0.563 ([+0.342, +0.778]). There were no invalid
+outputs. This supports the interpretation that the finite-decoder context benefit
+depends on instance-matched text, rather than just adding any similarly sized
+review. It remains an exploratory diagnostic: the intervals condition on one
+donor permutation, the sample is balanced rather than prevalence-representative,
+and the public test may have appeared in pretraining. A stronger next test should
+match swapped donors on coarse gold-valence polarity, to check whether the result
+survives after controlling that cue. The [053 protocol](experiments/053-counterfactual-review-context-swap.md)
+and [aggregate result](../results/counterfactual-context-swap-v1/README.md) have
+the full details.
