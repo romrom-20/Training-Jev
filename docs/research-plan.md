@@ -772,3 +772,28 @@ are committed before new judgments; local MPS inference is sized to this
 [045 protocol](experiments/045-order-control-model-size.md) records the scope
 and analysis limits. LessWrong remains deferred until model/corpus replication
 and sensitivity to free decoding give us a result worth presenting.
+
+**Experiment 045 outcome.** Under Qwen2.5-1.5B, shuffled-minus-natural masked
+RMSE was −0.010 (95% source-ID cluster interval [−0.058, +0.041]), with zero
+invalid outputs. The preregistered ≥0.25 natural-order contribution rule did
+not pass; this interval also rules out an order effect of that practical size
+in this exact sample/model/decoder setup. Unlike the heterogeneous 3B language
+pattern, the 1.5B descriptive language contrasts were all small. This narrows
+the earlier 3B shuffle result to a model-size or run-specific interaction; it
+does not establish equivalence or generalize beyond this shared benchmark and
+finite output grammar. The
+[`045 bundle`](../results/opinion-mask-order-model-size-v1/README.md) records
+the run and provenance.
+
+After 045, Laya's pinned local typed-choice checkpoint selected a sparse lexical
+baseline as the next falsification. Experiment 046 trains independent
+word/character TF-IDF plus ridge VA models on the official Russian, Ukrainian,
+and Tatar training splits, compares aspect-only with opinion-masked text on the
+same frozen 217 held-out sentence IDs, and selects regularization by
+review-grouped cross-validation on training data only. This asks whether a
+small non-pretrained model can recover predictive value from residual words.
+DimABSA already evaluates prompted and fine-tuned VA systems, and prior work
+studies order robustness and target-linked syntax, so this is a narrow
+mechanistic diagnostic rather than a novel baseline claim. Its
+[protocol](experiments/046-masked-context-lexical-baseline.md), runner, analyzer
+and tests are committed before new held-out scoring.

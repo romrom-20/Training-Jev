@@ -1,0 +1,50 @@
+{
+  "experiment": "045-order-control-model-size",
+  "interpretation": "adaptive within-sample Qwen-family model-size follow-up; exploratory only",
+  "n_clusters": 217,
+  "n_outputs": 1302,
+  "n_invalid_outputs": 0,
+  "invalid_rate": 0.0,
+  "grid_resolution": 0.1,
+  "analysis_seed": 20260945,
+  "bootstrap_replicates": 10000,
+  "bootstrap_unit": "shared DimABSA ID; keep all three languages and both VA dimensions together",
+  "score_analysis_performed": true,
+  "run_provenance": {
+    "parent_043_output_sha256": "1e93d359220c533a01f9cccca827f30611a713b70d857a898f59b6560303c7c8",
+    "parent_044_output_sha256": "2e6e59ec798b6ef87f63e6088ee5602272396a7f3dd47c8f13f31f82b0387337",
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "device": "mps",
+    "n_grid_candidates": 6561,
+    "output_sha256": "25180fe7c392c0dd0b714c3d1bd28cf07e6597f1418d3c6b18f156ff0d061bb8",
+    "generation_seconds_this_process_only": 1500.8371364170453
+  },
+  "status": "scored",
+  "n_complete_clusters": 217,
+  "primary_exploratory": {
+    "contrast": "opinion_shuffled_rmse_minus_opinion_masked_rmse",
+    "estimate": -0.009764160483552775,
+    "ci95": [
+      -0.05759221406211664,
+      0.04073538993206165
+    ],
+    "n_clusters": 217,
+    "interpretation": "positive means natural-order context has lower RMSE than shuffled context",
+    "registered_order_gate_passed": false
+  },
+  "by_language_rmse_descriptive": {
+    "rus": {
+      "opinion_masked_rmse": 2.1004427885172454,
+      "opinion_shuffled_rmse": 2.0627881449328664
+    },
+    "ukr": {
+      "opinion_masked_rmse": 2.151169010235848,
+      "opinion_shuffled_rmse": 2.121363356070634
+    },
+    "tat": {
+      "opinion_masked_rmse": 2.2028914806626396,
+      "opinion_shuffled_rmse": 2.2385392702644573
+    }
+  }
+}
