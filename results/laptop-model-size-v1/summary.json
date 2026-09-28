@@ -1,0 +1,102 @@
+{
+  "experiment": "050-laptop-model-size-factorial",
+  "interpretation": "adaptive paired model-size diagnostic; exploratory",
+  "n_clusters": 943,
+  "n_outputs_3b": 3772,
+  "invalid_by_model_decoder_condition": {
+    "qwen-1.5b": {
+      "finite_grid": {
+        "aspect_only": 0,
+        "opinion_masked": 0
+      },
+      "free_greedy": {
+        "aspect_only": 0,
+        "opinion_masked": 0
+      }
+    },
+    "qwen-3b": {
+      "finite_grid": {
+        "aspect_only": 0,
+        "opinion_masked": 0
+      },
+      "free_greedy": {
+        "aspect_only": 0,
+        "opinion_masked": 0
+      }
+    }
+  },
+  "invalid_free_3b_outputs": 0,
+  "invalid_free_3b_rate": 0.0,
+  "analysis_seed": 20260950,
+  "bootstrap_replicates": 10000,
+  "bootstrap_unit": "source sentence ID, retaining all model, decoder, condition and VA cells",
+  "score_analysis_performed": true,
+  "run_provenance": {
+    "protocol_sha256": "c32e01d4126f7e3f1db134cfcc0c3bf9f4c03c57cb9c0ef2128f678ac0ef489b",
+    "parent_049_output_sha256": "62107cb0b33adaf45acc5a0316921dfdab6354beeb006361a8225b87584c050c",
+    "source_revision": "bdc93be1224106ae7d3eb95739c02a76ed4ae8a1",
+    "source_file": "eng_laptop_test_task2.jsonl",
+    "source_sha256": "08a4cc197f068f6fc4c9373f61bfb86a5cd996ef16be3cb516082b434ba92543",
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "model_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "device": "mps",
+    "n_grid_candidates": 6561,
+    "invalid_by_decoder_condition": {
+      "finite_grid": {
+        "aspect_only": 0,
+        "opinion_masked": 0
+      },
+      "free_greedy": {
+        "aspect_only": 0,
+        "opinion_masked": 0
+      }
+    },
+    "output_sha256": "890a16d6363e72549c7ccad9099dece3ce021ab78ab3d8071acde18774500f5f",
+    "generation_seconds_this_process_only": 6808.090544125007
+  },
+  "status": "scored",
+  "n_complete_clusters_3b": 943,
+  "n_complete_clusters_paired_size": 943,
+  "context_gain_3b": {
+    "finite_grid": {
+      "estimate": 2.2987064162367257,
+      "ci95": [
+        2.1926360386470507,
+        2.40080509321713
+      ],
+      "n_clusters": 943,
+      "registered_context_gain_gate_passed": true
+    },
+    "free_greedy": {
+      "estimate": -0.3669136204622685,
+      "ci95": [
+        -0.42529545028164834,
+        -0.30857064646663807
+      ],
+      "n_clusters": 943,
+      "registered_context_gain_gate_passed": false
+    }
+  },
+  "primary_3b_interaction": {
+    "contrast": "context_gain(finite_grid) - context_gain(free_greedy)",
+    "estimate": 2.665620036698994,
+    "ci95": [
+      2.5748415454497984,
+      2.75665398711391
+    ],
+    "n_clusters": 943,
+    "registered_interaction_gate_passed": true
+  },
+  "paired_size_moderation_secondary": {
+    "contrast": "3B decoder interaction - 1.5B decoder interaction",
+    "interaction_1_5b": 0.2539934809226647,
+    "interaction_3b_same_complete_ids": 2.665620036698994,
+    "estimate": 2.4116265557763295,
+    "ci95": [
+      2.3093780315136967,
+      2.515457967668204
+    ],
+    "n_clusters": 943,
+    "confirmatory": false
+  }
+}

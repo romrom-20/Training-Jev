@@ -900,3 +900,43 @@ only model size. Its primary interaction asks whether the 1.5B result repeats at
 a paired interaction difference between sizes is secondary and descriptive. This
 costs 3,772 local generations on the 24-GB Air. The [050 protocol](experiments/050-laptop-model-size-factorial.md),
 runner, analyzer and tests are frozen before that run.
+
+**Experiment 050 outcome.** Qwen2.5-3B completed all 3,772 outputs on the same 943
+English laptop IDs, with zero invalid responses. Its finite-grid context gain was
++2.299 (95% source-ID interval [+2.193, +2.401]), while free-greedy gain was
+−0.367 ([-0.425, −0.309]). The primary interaction was +2.666
+([+2.575, +2.757]), well above the +0.25 registered practical rule. On the same
+complete IDs, the paired 3B-minus-1.5B interaction difference was +2.412
+([+2.309, +2.515]); that model-size comparison is a preregistered secondary,
+descriptive contrast. This is a large model-by-decoder-by-evidence interaction in
+one released test split, not a general improvement from constrained decoding.
+
+A post-run inspection of output marginals adds a strong mechanism clue: the 3B
+finite-grid decoder returned `(1.0, 1.0)` for 829/943 aspect-only prompts, while its
+free decoder returned `(5.0, 4.0)` for 865/943 such prompts. Under the finite grid,
+opinion-masked text moved estimates away from that low-score mode; under free
+decoding it did not help. This is a descriptive, post-hoc pattern, not an additional
+registered endpoint. It suggests the interaction may be driven by how legal numeric
+continuations reshape the model's default score mode, not by a general change in
+sentiment information extraction. See the [`050 aggregate bundle`](../results/laptop-model-size-v1/README.md).
+
+With 050 complete, a short LessWrong post now seems worth considering: the unusually
+large, exactly matched 3B contrast and the stark output-mode shift are a concrete
+failure case for treating constrained JSON as formatting-only. I would still wait
+for one representation-invariance check before drafting, because the current effect
+may hinge on the `valence`-first decimal spelling in the grammar. A follow-up should
+change a surface convention while preserving the numeric task and directly measure
+whether the interaction survives.
+
+After Laya selected an independent continuous-VA corpus as the next direction, a
+targeted corpus audit did not identify a compatible external gold set. The DimABSA
+authors describe their release as the first multilingual DimABSA resource with
+manually annotated, aspect-linked continuous VA scores. The 2026 VADE work adds
+affect-enriched Senti-COCO captions for visual-encoder training, but its Twitter-15
+and Twitter-17 aspect-level evaluation uses categorical polarity, not continuous
+target VA. These resources cannot serve as a direct independent replication without
+changing the endpoint or inventing a mapping. See [DimABSA](https://arxiv.org/abs/2601.23022)
+and [VADE / Senti-COCO](https://aclanthology.org/2026.findings-acl.1979/).
+The next Laya choice therefore needs to select among feasible mechanism or
+within-release transfer controls. An independent-corpus replication would first
+require new gold annotation rather than just another local inference run.
