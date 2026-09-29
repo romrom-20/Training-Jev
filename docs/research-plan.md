@@ -1463,3 +1463,14 @@ size response can be compared within recipient across 0.5B, 1.5B and 3B. Laya ra
 this as the next action (choice B; 0.354, uncalibrated). This is an additional model
 point, not an independent sample; even a monotonic pattern is not a scaling law. See
 [the frozen protocol](experiments/073-qwen05-prefix-size-continuation.md).
+
+**Experiment 073 outcome.** Qwen2.5-0.5B's expected shift was +2.547 valence-first
+but only +0.138 arousal-first. Against the same-recipient Qwen 1.5B result, its
+contrast was +0.551 valence-first and −0.924 arousal-first. The apparent size trend
+therefore continues across the three Qwen sizes for valence-first, but reverses at
+0.5B for arousal-first. The 0.5B conditional distributions also put only 88–91% mass
+on valid 1.0–9.0 one-decimal score strings in the arousal-first arms, versus higher
+support in larger models, making the discrepancy a useful audit target. This is an
+exploratory interaction on reused prompts, not a scaling law. See the
+[073 results](../results/qwen05-prefix-size-continuation-v1/README.md) and
+[protocol](experiments/073-qwen05-prefix-size-continuation.md).

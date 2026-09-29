@@ -1,0 +1,115 @@
+{
+  "experiment": "073-qwen05-prefix-size-continuation",
+  "protocol_sha256": "44047797e01339858173aecfe3f8a4a9dd0f4d29083223bd83e2eafb3aa4d70e",
+  "output_sha256": "31a85689804901b2be8d85aa5a13eba388805574d9c5d10ba9e12f48b6d7d2e1",
+  "reference_071_output_sha256": "a8293a941cde3dd706f75dc069e8eb01ca66b2701c07a05394e2a91b6a631f95",
+  "recipient_ids_sha256": "a14b6300c88940b3ccb6ac6b1b78c78b1cb5e202c4ce945ea3fe8220d36c7ddf",
+  "n_recipients": 64,
+  "n_model_contexts": 256,
+  "invalid_by_order_forced_value": {
+    "valence_first": {
+      "2.0": 0,
+      "8.0": 0
+    },
+    "arousal_first": {
+      "2.0": 0,
+      "8.0": 0
+    }
+  },
+  "invalid_rates_by_order_forced_value": {
+    "valence_first": {
+      "2.0": 0.0,
+      "8.0": 0.0
+    },
+    "arousal_first": {
+      "2.0": 0.0,
+      "8.0": 0.0
+    }
+  },
+  "invalid_gate_passed": true,
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 20260973,
+  "qwen_0_5b_by_order": {
+    "valence_first": {
+      "n_recipients": 64,
+      "expected_score_shift_8_minus_2": {
+        "estimate": 2.5474108300253575,
+        "ci95": [
+          2.450656876229364,
+          2.633983660368139
+        ]
+      },
+      "greedy_score_shift_8_minus_2": {
+        "estimate": 3.15625,
+        "ci95": [
+          2.984375,
+          3.3359375
+        ]
+      },
+      "mean_total_variation_distance": 0.5394410771832612,
+      "mean_wasserstein1_score_points": 2.5479095645608756,
+      "valid_score_string_mass": {
+        "mean_if_first_2": 0.9622684098374392,
+        "mean_if_first_8": 0.9644444355624447
+      }
+    },
+    "arousal_first": {
+      "n_recipients": 64,
+      "expected_score_shift_8_minus_2": {
+        "estimate": 0.13829156677986135,
+        "ci95": [
+          0.0834300037665835,
+          0.19064709761092008
+        ]
+      },
+      "greedy_score_shift_8_minus_2": {
+        "estimate": 0.3359375,
+        "ci95": [
+          0.2734375,
+          0.40625
+        ]
+      },
+      "mean_total_variation_distance": 0.14022448990890746,
+      "mean_wasserstein1_score_points": 0.34622282864848997,
+      "valid_score_string_mass": {
+        "mean_if_first_2": 0.8814133083838321,
+        "mean_if_first_8": 0.9088114621790289
+      }
+    }
+  },
+  "paired_expected_shift_contrasts_vs_071": {
+    "valence_first": {
+      "qwen-0.5b_minus_qwen-1.5b": {
+        "estimate": 0.5512516614147185,
+        "ci95": [
+          0.426161035376472,
+          0.6640874914221765
+        ]
+      },
+      "qwen-0.5b_minus_qwen-3b": {
+        "estimate": 1.7758579346086951,
+        "ci95": [
+          1.6020280683758092,
+          1.946828230991147
+        ]
+      }
+    },
+    "arousal_first": {
+      "qwen-0.5b_minus_qwen-1.5b": {
+        "estimate": -0.9235028249016242,
+        "ci95": [
+          -1.1171105981328955,
+          -0.728613444184628
+        ]
+      },
+      "qwen-0.5b_minus_qwen-3b": {
+        "estimate": 0.3655162796341953,
+        "ci95": [
+          0.1197472390147181,
+          0.6115902872559006
+        ]
+      }
+    }
+  },
+  "interpretation_limit": "Third Qwen2.5 size point on the previously observed public laptop cohort; a three-point family-specific result is not a scaling law."
+}
