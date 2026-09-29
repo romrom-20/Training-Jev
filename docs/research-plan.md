@@ -1493,3 +1493,10 @@ arousal-first, but formatting variants added little mass and did not materially 
 the conditional effect. This strengthens the case for a field-order-by-size
 interaction in this sample, not a mechanism or scaling law. See the
 [074 audit](../results/qwen05-numeric-support-audit-v1/README.md).
+
+Experiment 075 compares the same numeric anchor as an open assistant-prefix value
+versus a user-stated fixed coordinate, with the other axis requested as the target.
+Laya ranked this controlled location test first (choice C; 0.342, uncalibrated).
+It uses both Qwen sizes on the 64 laptop items, with 1,024 contexts. The assistant
+and user arms necessarily differ in schema and wording, which is explicit in the
+protocol: [075](experiments/075-anchor-location-control.md).
