@@ -1,0 +1,159 @@
+{
+  "experiment": "078-qwen15-explicit-target-role-replication",
+  "protocol_sha256": "6050bf1e0fca5c431a3f23143fe3aa1292e11621ac0069ed42511893545c8f25",
+  "input_sha256": "4096a05b35817c69df8d34a046c8902c82020480a8472e138c0bd20393f6245c",
+  "n_rows": 192,
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 20260978,
+  "invalid_rates": {
+    "valence_first": {
+      "prior_assistant/2.0": {
+        "invalid": 0,
+        "n": 24,
+        "rate": 0.0
+      },
+      "prior_assistant/8.0": {
+        "invalid": 0,
+        "n": 24,
+        "rate": 0.0
+      },
+      "prior_user/2.0": {
+        "invalid": 0,
+        "n": 24,
+        "rate": 0.0
+      },
+      "prior_user/8.0": {
+        "invalid": 0,
+        "n": 24,
+        "rate": 0.0
+      }
+    },
+    "arousal_first": {
+      "prior_assistant/2.0": {
+        "invalid": 0,
+        "n": 24,
+        "rate": 0.0
+      },
+      "prior_assistant/8.0": {
+        "invalid": 0,
+        "n": 24,
+        "rate": 0.0
+      },
+      "prior_user/2.0": {
+        "invalid": 0,
+        "n": 24,
+        "rate": 0.0
+      },
+      "prior_user/8.0": {
+        "invalid": 0,
+        "n": 24,
+        "rate": 0.0
+      }
+    }
+  },
+  "results": {
+    "valence_first": {
+      "validity_gate_passed": true,
+      "expected_shift_8_minus_2": {
+        "prior_assistant": {
+          "estimate": 0.8558544310937859,
+          "ci95": [
+            0.7941335703374809,
+            0.9183278310942237
+          ],
+          "n_recipients": 24
+        },
+        "prior_user": {
+          "estimate": 1.3316900589806433,
+          "ci95": [
+            1.249980507893187,
+            1.4122983506345963
+          ],
+          "n_recipients": 24
+        }
+      },
+      "assistant_minus_user_shift": {
+        "estimate": -0.4758356278868576,
+        "ci95": [
+          -0.591995325396496,
+          -0.36444893698173747
+        ],
+        "n_recipients": 24
+      },
+      "greedy_shift_8_minus_2": {
+        "prior_assistant": {
+          "estimate": -0.10833333333333321,
+          "ci95": [
+            -0.25416666666666654,
+            0.025000000000000133
+          ],
+          "n_recipients": 24
+        },
+        "prior_user": {
+          "estimate": 0.7541666666666668,
+          "ci95": [
+            0.4250000000000001,
+            1.1291666666666667
+          ],
+          "n_recipients": 24
+        }
+      },
+      "mean_valid_canonical_mass": {
+        "prior_assistant": 0.9982312097383614,
+        "prior_user": 0.9968193917366358
+      }
+    },
+    "arousal_first": {
+      "validity_gate_passed": true,
+      "expected_shift_8_minus_2": {
+        "prior_assistant": {
+          "estimate": 0.6591617977644916,
+          "ci95": [
+            0.6147234163481008,
+            0.7031077063071911
+          ],
+          "n_recipients": 24
+        },
+        "prior_user": {
+          "estimate": 0.389791504548547,
+          "ci95": [
+            0.34507743769877897,
+            0.43357308011682183
+          ],
+          "n_recipients": 24
+        }
+      },
+      "assistant_minus_user_shift": {
+        "estimate": 0.2693702932159447,
+        "ci95": [
+          0.22672727164784137,
+          0.3118044819096012
+        ],
+        "n_recipients": 24
+      },
+      "greedy_shift_8_minus_2": {
+        "prior_assistant": {
+          "estimate": 0.8083333333333335,
+          "ci95": [
+            0.4750000000000001,
+            1.1791666666666667
+          ],
+          "n_recipients": 24
+        },
+        "prior_user": {
+          "estimate": 0.42500000000000004,
+          "ci95": [
+            0.23750000000000004,
+            0.6625000000000001
+          ],
+          "n_recipients": 24
+        }
+      },
+      "mean_valid_canonical_mass": {
+        "prior_assistant": 0.9993284909284105,
+        "prior_user": 0.9977936758429499
+      }
+    }
+  },
+  "interpretation_boundary": "One 1.5B model on 24 reused public reviews. The within-dialogue source comparison still bundles role with the acknowledgement turn."
+}
