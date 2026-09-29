@@ -1218,4 +1218,7 @@ answer this particular interaction; the test is not a claim that these broader
 phenomena are new. The preflight passed on the pinned source data and maps. The
 frozen protocol is [`064`](experiments/064-sighan-output-key-order-replication.md).
 No LessWrong post will be drafted unless results add a sufficiently clear and
-bounded empirical point.
+bounded empirical point. A separate literature-boundary audit, completed after
+the run began, records close work on reason/score ordering and schema field design;
+it narrows any possible claim to this specific context-match × decoder interaction
+in dimensional affect scoring ([audit](experiments/064-literature-boundary-audit.md)).
