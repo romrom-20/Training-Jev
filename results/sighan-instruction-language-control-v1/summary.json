@@ -1,0 +1,62 @@
+{
+  "experiment": "066-sighan-instruction-language-control",
+  "protocol_sha256": "27dbd3c6d3c234b1fbb3bab7923478b465163048a18fb3fc5d1c00089dffdda5",
+  "output_sha256": "47f47317e1e609a5106d3024ebfad978c28c910ca545719a93dcdadfeb71041f",
+  "exp064_output_sha256": "48f7a8e2fe9d245d7742c7955b6349fe08a3935934f7ff0cd1db01e1eec9ace7",
+  "exp052_baseline_sha256": "76671a3330e35fddfd915f15c86b49b90f8113af74041651162b7a81051765fe",
+  "source_hashes": {
+    "test_input": "5053608647d06ad88ce21a2aecbef0e29dc58a8220f921561d39d4e9cf86fe28",
+    "test_gold": "6ecc6949d5f77ea34a09826115a0f91327313ae33824a5c373d7322bdbb17108"
+  },
+  "status": "scored",
+  "n_recipient_ids_selected": 88,
+  "n_complete_paired_recipient_ids": 81,
+  "n_new_outputs": 2464,
+  "invalid_free_donor_outputs": {
+    "english": 3,
+    "chinese": 3
+  },
+  "invalid_free_donor_denominator": 1056,
+  "invalid_free_donor_rate": {
+    "english": 0.002840909090909091,
+    "chinese": 0.002840909090909091
+  },
+  "primary_endpoint": {
+    "contrast": "Chinese-instruction order moderation minus English-instruction order moderation on identical SIGHAN IDs/maps",
+    "estimate": -0.11827533023888256,
+    "ci95": [
+      -0.5294217858019934,
+      0.2962062069151309
+    ],
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20260966,
+    "bootstrap_unit": "recipient ID; both instruction languages and all cells kept paired"
+  },
+  "language_specific_secondary": {
+    "english": {
+      "aggregate_order_moderation": 0.09562209156378063,
+      "ci95": [
+        -0.27444963532516436,
+        0.45705727749633135
+      ]
+    },
+    "chinese": {
+      "aggregate_order_moderation": -0.02265323867510194,
+      "ci95": [
+        -0.21157569365970288,
+        0.1555444242805738
+      ]
+    }
+  },
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "model_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "device": "mps",
+  "score_analysis_performed": true,
+  "inferential_limits": [
+    "This paired test estimates prompt-language moderation within the selected SIGHAN cohort and Qwen2.5-3B only.",
+    "The translated instructions were not independently rated by a professional translator.",
+    "English condition outputs are reused from prior studies; Chinese condition is newly generated.",
+    "Results cannot isolate the broader English/Chinese benchmark difference, where domain and release also change.",
+    "Cross-category donors change lexical and semantic review content as well as category."
+  ]
+}

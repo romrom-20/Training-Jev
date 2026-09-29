@@ -1283,3 +1283,17 @@ specific to these literal templates. The frozen protocol SHA-256 is
 `27dbd3c6d3c234b1fbb3bab7923478b465163048a18fb3fc5d1c00089dffdda5`. No new
 generation began before this protocol and its runner were frozen. See the
 [Experiment 066 protocol](experiments/066-sighan-instruction-language-control.md).
+
+**Experiment 066 outcome: prompt language did not resolve the SIGHAN contrast.**
+The 2,464-output Chinese-instruction arm completed on MPS in 4,128 seconds;
+there were 3 invalid donor-context free-greedy outputs in each language
+(0.28%), and 81 of 88 selected recipients had complete paired cells. Chinese-
+minus-English order moderation was -0.118 VA-RMSE points (95% paired recipient
+bootstrap interval [-0.529, +0.296]). English and Chinese moderation estimates
+on this same small subset were +0.096 ([-0.274, +0.457]) and -0.023
+([-0.212, +0.156]). The registered interval spans both signs and is wide. This
+does not support an instruction-language explanation, nor does it show
+equivalence. The subset English estimate also illustrates the uncertainty from
+sampling a fraction of the 180-person cohort. The result applies to one model,
+one translated template and this SIGHAN subset. No LessWrong post is warranted
+on the current evidence; see the [066 aggregate bundle](../results/sighan-instruction-language-control-v1/README.md).
