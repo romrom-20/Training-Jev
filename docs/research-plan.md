@@ -1474,3 +1474,11 @@ support in larger models, making the discrepancy a useful audit target. This is 
 exploratory interaction on reused prompts, not a scaling law. See the
 [073 results](../results/qwen05-prefix-size-continuation-v1/README.md) and
 [protocol](experiments/073-qwen05-prefix-size-continuation.md).
+
+Experiment 074 is an audit of a possible support/serialization artifact in the
+0.5B result. It scores complete numeric JSON continuations, including `}`, for the
+canonical one-decimal values and parser-accepted integer/trailing-zero variants, then
+independently checks selected sequence likelihoods. The alternative spellings violate
+the task's formatting instruction and are analyzed separately. Laya ranked this
+24-review support audit highest (choice B; 0.313, uncalibrated). The protocol is
+[074](experiments/074-qwen05-numeric-support-audit.md).
