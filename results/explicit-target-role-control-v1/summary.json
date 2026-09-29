@@ -1,0 +1,159 @@
+{
+  "experiment": "077-explicit-target-role-control",
+  "protocol_sha256": "8f69de2851960ec46de89e01fdc601c97104f376fcd1dabe3a4652f6573991e2",
+  "input_sha256": "c392694b49dd7d660a292e859464e253f265105dd130048369959478bbbd2d6e",
+  "n_rows": 192,
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 20260977,
+  "invalid_rates": {
+    "valence_first": {
+      "prior_assistant/2.0": {
+        "invalid": 0,
+        "n": 24,
+        "rate": 0.0
+      },
+      "prior_assistant/8.0": {
+        "invalid": 0,
+        "n": 24,
+        "rate": 0.0
+      },
+      "prior_user/2.0": {
+        "invalid": 0,
+        "n": 24,
+        "rate": 0.0
+      },
+      "prior_user/8.0": {
+        "invalid": 0,
+        "n": 24,
+        "rate": 0.0
+      }
+    },
+    "arousal_first": {
+      "prior_assistant/2.0": {
+        "invalid": 0,
+        "n": 24,
+        "rate": 0.0
+      },
+      "prior_assistant/8.0": {
+        "invalid": 0,
+        "n": 24,
+        "rate": 0.0
+      },
+      "prior_user/2.0": {
+        "invalid": 0,
+        "n": 24,
+        "rate": 0.0
+      },
+      "prior_user/8.0": {
+        "invalid": 0,
+        "n": 24,
+        "rate": 0.0
+      }
+    }
+  },
+  "results": {
+    "valence_first": {
+      "validity_gate_passed": true,
+      "expected_shift_8_minus_2": {
+        "prior_assistant": {
+          "estimate": 0.9414474900604559,
+          "ci95": [
+            0.8054401931784685,
+            1.0765665086146554
+          ],
+          "n_recipients": 24
+        },
+        "prior_user": {
+          "estimate": 0.6684640586205854,
+          "ci95": [
+            0.5820324672707566,
+            0.7528436883672562
+          ],
+          "n_recipients": 24
+        }
+      },
+      "assistant_minus_user_shift": {
+        "estimate": 0.2729834314398705,
+        "ci95": [
+          0.17843164855587293,
+          0.3693089171719037
+        ],
+        "n_recipients": 24
+      },
+      "greedy_shift_8_minus_2": {
+        "prior_assistant": {
+          "estimate": 3.375,
+          "ci95": [
+            3.0,
+            3.6666666666666665
+          ],
+          "n_recipients": 24
+        },
+        "prior_user": {
+          "estimate": 2.4583333333333335,
+          "ci95": [
+            1.7916666666666667,
+            3.0833333333333335
+          ],
+          "n_recipients": 24
+        }
+      },
+      "mean_valid_canonical_mass": {
+        "prior_assistant": 0.8496675362595512,
+        "prior_user": 0.8386865976398549
+      }
+    },
+    "arousal_first": {
+      "validity_gate_passed": true,
+      "expected_shift_8_minus_2": {
+        "prior_assistant": {
+          "estimate": 1.2021855961292767,
+          "ci95": [
+            1.0817968643377969,
+            1.3269966189015934
+          ],
+          "n_recipients": 24
+        },
+        "prior_user": {
+          "estimate": 0.8217035431984426,
+          "ci95": [
+            0.7052516674848213,
+            0.9343065870618166
+          ],
+          "n_recipients": 24
+        }
+      },
+      "assistant_minus_user_shift": {
+        "estimate": 0.3804820529308341,
+        "ci95": [
+          0.31992583307414973,
+          0.4436622777788846
+        ],
+        "n_recipients": 24
+      },
+      "greedy_shift_8_minus_2": {
+        "prior_assistant": {
+          "estimate": 3.0833333333333335,
+          "ci95": [
+            2.3333333333333335,
+            3.7083333333333335
+          ],
+          "n_recipients": 24
+        },
+        "prior_user": {
+          "estimate": 0.25,
+          "ci95": [
+            -0.16666666666666666,
+            0.7083333333333334
+          ],
+          "n_recipients": 24
+        }
+      },
+      "mean_valid_canonical_mass": {
+        "prior_assistant": 0.9422673033078159,
+        "prior_user": 0.9350563388006584
+      }
+    }
+  },
+  "interpretation_boundary": "24 reused public reviews, one model, and a two-location conversation manipulation. The named-target request diagnoses Experiment 076's invalid response format; it does not isolate a general role effect."
+}
