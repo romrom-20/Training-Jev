@@ -1,0 +1,92 @@
+{
+  "experiment": "064-sighan-output-key-order-replication",
+  "protocol_sha256": "fc37efd2bf3683d80b6ca45812f918a2661d17ff0e31ad1f1f5c616baeb61fda",
+  "output_sha256": "48f7a8e2fe9d245d7742c7955b6349fe08a3935934f7ff0cd1db01e1eec9ace7",
+  "parent_output_sha256": "76671a3330e35fddfd915f15c86b49b90f8113af74041651162b7a81051765fe",
+  "source_hashes": {
+    "test_input": "5053608647d06ad88ce21a2aecbef0e29dc58a8220f921561d39d4e9cf86fe28",
+    "test_gold": "6ecc6949d5f77ea34a09826115a0f91327313ae33824a5c373d7322bdbb17108"
+  },
+  "status": "scored",
+  "interpretation": "cross-release and cross-language replication test on SIGHAN 2024, one model",
+  "n_recipient_ids_selected": 180,
+  "n_complete_recipient_ids": 173,
+  "n_new_outputs": 4680,
+  "invalid_by_order_condition_decoder": {
+    "valence_first": {
+      "opinion_masked": {
+        "finite_grid": 0,
+        "free_greedy": 0
+      },
+      "same_category_context": {
+        "finite_grid": 0,
+        "free_greedy": 2
+      },
+      "cross_category_context": {
+        "finite_grid": 0,
+        "free_greedy": 4
+      }
+    },
+    "arousal_first": {
+      "opinion_masked": {
+        "finite_grid": 0,
+        "free_greedy": 0
+      },
+      "same_category_context": {
+        "finite_grid": 0,
+        "free_greedy": 1
+      },
+      "cross_category_context": {
+        "finite_grid": 0,
+        "free_greedy": 1
+      }
+    }
+  },
+  "invalid_free_donor_outputs": 8,
+  "invalid_free_donor_denominator": 2160,
+  "invalid_free_donor_rate": 0.003703703703703704,
+  "primary_endpoint": {
+    "contrast": "aggregate two-coordinate same-minus-cross context-gain decoder interaction; arousal-first minus valence-first",
+    "direction": "negative follows the preregistered direction",
+    "estimate": -0.07741037377234798,
+    "ci95": [
+      -0.33124720028773097,
+      0.16978101526015876
+    ],
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20260964,
+    "bootstrap_unit": "recipient source ID; all cells and fixed maps retained"
+  },
+  "coordinate_specific_secondary": {
+    "valence": {
+      "same_minus_cross_valence_first": -0.08544444651474237,
+      "same_minus_cross_arousal_first": -0.09160066616738952,
+      "order_moderation": -0.006156219652647149,
+      "order_moderation_ci95": [
+        -0.3090541322191551,
+        0.286141359794783
+      ]
+    },
+    "arousal": {
+      "same_minus_cross_valence_first": 0.050817084442733584,
+      "same_minus_cross_arousal_first": -0.08388551570069146,
+      "order_moderation": -0.13470260014342506,
+      "order_moderation_ci95": [
+        -0.38196272970442285,
+        0.11041136079503748
+      ]
+    }
+  },
+  "n_bootstrap_complete_cases": 173,
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "model_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "device": "mps",
+  "score_analysis_performed": true,
+  "inferential_limits": [
+    "One target model and one laptop; this does not establish model-general behavior.",
+    "SIGHAN 2024 and DimABSA 2026 are separately curated releases, but both are public and pretraining exposure cannot be excluded.",
+    "The Chinese review text is evaluated with the same English-language instruction as the parent experiment.",
+    "Cross-category donors change lexical and semantic content as well as aspect category.",
+    "Finite-grid and free-greedy decoding are operational conditions, not pure causal mechanisms."
+  ]
+}

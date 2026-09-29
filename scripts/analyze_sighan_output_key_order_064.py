@@ -205,8 +205,9 @@ def write_report(summary: dict, output: Path) -> None:
                 f"points (95% recipient-bootstrap interval [{primary['ci95'][0]:.3f}, "
                 f"{primary['ci95'][1]:.3f}]) on {summary['n_complete_recipient_ids']} complete recipients.")
         interpretation = ("This was selected as an independent release and language check after two English DimABSA tests. "
-                          "An interval excluding zero would provide cross-release replication for Qwen2.5-3B; it still "
-                          "would not establish generality across models or eliminate possible pretraining exposure.")
+                          "The interval includes zero, so the registered test does not show that the negative aggregate "
+                          "moderation transfers to SIGHAN. It remains compatible with modest effects in either direction; "
+                          "this alone does not establish a true release or language difference.")
     (output / "README.md").write_text(f"""# Experiment 064: output order × category match on SIGHAN 2024
 
 ## Result

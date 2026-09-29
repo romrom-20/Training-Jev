@@ -1222,3 +1222,28 @@ bounded empirical point. A separate literature-boundary audit, completed after
 the run began, records close work on reason/score ordering and schema field design;
 it narrows any possible claim to this specific context-match × decoder interaction
 in dimensional affect scoring ([audit](experiments/064-literature-boundary-audit.md)).
+
+**Experiment 064 outcome: the aggregate order moderation did not replicate on the
+Chinese release.** The full 4,680-output run completed on MPS in 8,590 seconds.
+Eight of 2,160 donor-context free-greedy outputs were invalid (0.37%, below the
+registered 2% gate); 173 of 180 recipients had complete paired cells. The primary
+aggregate VA order moderation was -0.077 (95% recipient-bootstrap interval
+[-0.331, +0.170]), which includes zero. Secondary coordinate moderations were
+-0.006 for valence and -0.135 for arousal; both intervals include zero. This does
+not provide evidence that the negative all-VA interaction seen in the two English
+DimABSA splits transfers to this SIGHAN setup, but the interval alone does not
+establish a release or language difference. The Chinese reviews were scored with
+English instructions, and language, domain, and annotation-release changes remain
+confounded. Generic output-order sensitivity is already in the literature, so no
+LessWrong post is warranted on this result. See the [064 aggregate bundle](../results/sighan-output-key-order-replication-v1/README.md).
+
+Laya's local agenda triage selected a same-SIGHAN model-size test on
+Qwen2.5-1.5B (choice B, uncalibrated probability 0.357). The 3B data show why
+this is now a useful model-dependence question, but do not predict a positive
+result. Experiment 065 will keep the same 180 recipients and exact donor maps,
+generate both own-review orders for the smaller model, and compare its aggregate
+order moderation with the 3B result on paired IDs. The true workload is 5,040
+new outputs (4,320 donor-context and 720 own-review), since the smaller model
+cannot reuse the 3B own-review baseline. The preselected follow-up is
+[`065`](experiments/065-sighan-order-model-size-replication.md); this remains
+agenda triage, not evidence or a publication decision.
