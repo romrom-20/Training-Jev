@@ -1456,3 +1456,10 @@ so the interesting next test is its dependence on assistant-prefix continuation 
 ordinary user-provided anchor information. The restaurant recipients were drawn from
 the same IDs already used in 051, which limits independent replication. See the
 [072 result bundle](../results/restaurant-prefix-domain-v1/README.md).
+
+Experiment 073 adds Qwen2.5-0.5B to the already observed 64-ID English laptop
+cohort, preserving the same four prefixes and probability scoring so the forced-score
+size response can be compared within recipient across 0.5B, 1.5B and 3B. Laya ranked
+this as the next action (choice B; 0.354, uncalibrated). This is an additional model
+point, not an independent sample; even a monotonic pattern is not a scaling law. See
+[the frozen protocol](experiments/073-qwen05-prefix-size-continuation.md).
