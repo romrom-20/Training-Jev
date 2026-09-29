@@ -1406,3 +1406,29 @@ interesting empirical result so far, but it is one family, one dataset release,
 one prompt, two previously selected cohorts, and an intentionally forced
 assistant prefix. Literature already includes numerical anchoring distributions
 and model differences in anchoring consistency ([Zhang et al., 2025](https://doi.org/10.1007/s42001-025-00435-2)); generic order effects are also established. Do not draft a LessWrong post yet. A third Qwen scale or an independent model-family test should come first.
+
+**Experiment 071 outcome: the small-model continuation pattern appears on a
+fresh English cohort and in a second family.** Laya triage preferred an
+independent compact model. Its top model, Gemma 2, required accepting usage
+terms, so we used the ungated Apache-2.0 SmolLM2-1.7B-Instruct checkpoint and
+compared it with Qwen2.5-1.5B and 3B on the same 64 new English laptop reviews.
+All 768 greedy outputs parsed. Expected high-minus-low second-score shifts were
+positive in both orders for Qwen1.5B (+1.996 valence-first, +1.062 arousal-first)
+and SmolLM2 (+1.814, +1.338). Qwen3B was smaller (+0.772) valence-first and
+unresolved arousal-first (−0.227, interval includes zero). The paired Qwen
+1.5B-minus-3B contrast was +1.225/+1.289 points in the two orders; SmolLM2's
+distribution means were close to Qwen1.5B, though family/template/tokenizer
+differences remain. SmolLM2's greedy shifts were much larger than its
+restricted-distribution means, so decoding changed the apparent effect size.
+The cached scorer matched full-sequence likelihoods within `2.5e-5`. This
+strengthens a bounded scale/family hypothesis but does not isolate model size or
+establish ordinary ratings. See the [071 result bundle](../results/cross-family-prefix-coupling-v1/README.md)
+and [protocol](experiments/071-cross-family-prefix-coupling.md).
+
+**Publication judgment after 071.** A LessWrong note is now a plausible future
+outcome, but I would wait for one more independent-domain replication. Numeric
+anchoring and model-dependent answer distributions are established
+([Zhang et al., 2025](https://doi.org/10.1007/s42001-025-00435-2)); what remains
+interesting here is a specific scale/family interaction in forced
+coordinate-to-coordinate continuation. The artificial prefix, single
+benchmark release, and model-specific templates are large scope limits.

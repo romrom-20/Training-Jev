@@ -1,0 +1,323 @@
+{
+  "experiment": "071-cross-family-prefix-coupling",
+  "protocol_sha256": "b28f850f7604aaa4b5874be83139c84b12eea2e7c31aeab867fa801956c9bd3f",
+  "output_sha256": "a8293a941cde3dd706f75dc069e8eb01ca66b2701c07a05394e2a91b6a631f95",
+  "source_revision": "bdc93be1224106ae7d3eb95739c02a76ed4ae8a1",
+  "source_sha256": "08a4cc197f068f6fc4c9373f61bfb86a5cd996ef16be3cb516082b434ba92543",
+  "recipient_ids_sha256": "a14b6300c88940b3ccb6ac6b1b78c78b1cb5e202c4ce945ea3fe8220d36c7ddf",
+  "n_recipients": 64,
+  "n_models": 3,
+  "n_total_model_contexts": 768,
+  "invalid_by_model_order_forced_value": {
+    "qwen-1.5b": {
+      "valence_first": {
+        "2.0": 0,
+        "8.0": 0
+      },
+      "arousal_first": {
+        "2.0": 0,
+        "8.0": 0
+      }
+    },
+    "qwen-3b": {
+      "valence_first": {
+        "2.0": 0,
+        "8.0": 0
+      },
+      "arousal_first": {
+        "2.0": 0,
+        "8.0": 0
+      }
+    },
+    "smollm2-1.7b": {
+      "valence_first": {
+        "2.0": 0,
+        "8.0": 0
+      },
+      "arousal_first": {
+        "2.0": 0,
+        "8.0": 0
+      }
+    }
+  },
+  "invalid_rates_by_model_order_forced_value": {
+    "qwen-1.5b": {
+      "valence_first": {
+        "2.0": 0.0,
+        "8.0": 0.0
+      },
+      "arousal_first": {
+        "2.0": 0.0,
+        "8.0": 0.0
+      }
+    },
+    "qwen-3b": {
+      "valence_first": {
+        "2.0": 0.0,
+        "8.0": 0.0
+      },
+      "arousal_first": {
+        "2.0": 0.0,
+        "8.0": 0.0
+      }
+    },
+    "smollm2-1.7b": {
+      "valence_first": {
+        "2.0": 0.0,
+        "8.0": 0.0
+      },
+      "arousal_first": {
+        "2.0": 0.0,
+        "8.0": 0.0
+      }
+    }
+  },
+  "invalid_gate_passed": true,
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 20260971,
+  "by_model_and_order": {
+    "qwen-1.5b": {
+      "valence_first": {
+        "n_recipients": 64,
+        "expected_score_shift_8_minus_2": {
+          "estimate": 1.9961591686106388,
+          "ci95": [
+            1.8938152670563102,
+            2.093381597250697
+          ]
+        },
+        "greedy_score_shift_8_minus_2": {
+          "estimate": 1.875,
+          "ci95": [
+            1.765625,
+            1.96875
+          ],
+          "n_complete": 64
+        },
+        "expected_minus_greedy_shift": {
+          "estimate": 0.12115916861063886,
+          "ci95": [
+            0.025878338688055568,
+            0.2210652658742612
+          ]
+        },
+        "mean_total_variation_distance": 0.4501622347853453,
+        "mean_wasserstein1_score_points": 1.9961690399039416,
+        "valid_score_string_mass": {
+          "mean_if_first_2": 0.998412410239931,
+          "mean_if_first_8": 0.9993489953796335
+        }
+      },
+      "arousal_first": {
+        "n_recipients": 64,
+        "expected_score_shift_8_minus_2": {
+          "estimate": 1.0617943916814856,
+          "ci95": [
+            0.8708484381502092,
+            1.253504941845562
+          ]
+        },
+        "greedy_score_shift_8_minus_2": {
+          "estimate": 0.334375,
+          "ci95": [
+            -0.1453125,
+            0.8421875
+          ],
+          "n_complete": 64
+        },
+        "expected_minus_greedy_shift": {
+          "estimate": 0.7274193916814856,
+          "ci95": [
+            0.32787976272819636,
+            1.1146311871750283
+          ]
+        },
+        "mean_total_variation_distance": 0.24222918386844838,
+        "mean_wasserstein1_score_points": 1.1101967884879864,
+        "valid_score_string_mass": {
+          "mean_if_first_2": 0.9995719265038463,
+          "mean_if_first_8": 0.9991914438764707
+        }
+      }
+    },
+    "qwen-3b": {
+      "valence_first": {
+        "n_recipients": 64,
+        "expected_score_shift_8_minus_2": {
+          "estimate": 0.7715528954166622,
+          "ci95": [
+            0.6210880637605178,
+            0.925654146307647
+          ]
+        },
+        "greedy_score_shift_8_minus_2": {
+          "estimate": 0.734375,
+          "ci95": [
+            0.5,
+            0.953125
+          ],
+          "n_complete": 64
+        },
+        "expected_minus_greedy_shift": {
+          "estimate": 0.0371778954166622,
+          "ci95": [
+            -0.08894018585790267,
+            0.1653117327376844
+          ]
+        },
+        "mean_total_variation_distance": 0.49803264595738916,
+        "mean_wasserstein1_score_points": 0.8749420975505297,
+        "valid_score_string_mass": {
+          "mean_if_first_2": 0.9999996904026669,
+          "mean_if_first_8": 0.9999998762189968
+        }
+      },
+      "arousal_first": {
+        "n_recipients": 64,
+        "expected_score_shift_8_minus_2": {
+          "estimate": -0.22722471285433396,
+          "ci95": [
+            -0.4699169079011482,
+            0.017018350527647663
+          ]
+        },
+        "greedy_score_shift_8_minus_2": {
+          "estimate": 0.046875,
+          "ci95": [
+            -0.2734375,
+            0.375
+          ],
+          "n_complete": 64
+        },
+        "expected_minus_greedy_shift": {
+          "estimate": -0.274099712854334,
+          "ci95": [
+            -0.45513701204687806,
+            -0.09974558988825596
+          ]
+        },
+        "mean_total_variation_distance": 0.5054205128803652,
+        "mean_wasserstein1_score_points": 0.9583257534347377,
+        "valid_score_string_mass": {
+          "mean_if_first_2": 0.9999975947711808,
+          "mean_if_first_8": 0.9999907720056931
+        }
+      }
+    },
+    "smollm2-1.7b": {
+      "valence_first": {
+        "n_recipients": 64,
+        "expected_score_shift_8_minus_2": {
+          "estimate": 1.8140847886191964,
+          "ci95": [
+            1.7218503496514714,
+            1.9042885763189212
+          ]
+        },
+        "greedy_score_shift_8_minus_2": {
+          "estimate": 4.015625,
+          "ci95": [
+            3.5,
+            4.546875
+          ],
+          "n_complete": 64
+        },
+        "expected_minus_greedy_shift": {
+          "estimate": -2.2015402113808036,
+          "ci95": [
+            -2.692822661191925,
+            -1.726867415578406
+          ]
+        },
+        "mean_total_variation_distance": 0.368721503631514,
+        "mean_wasserstein1_score_points": 1.8157126985239922,
+        "valid_score_string_mass": {
+          "mean_if_first_2": 0.977826872745009,
+          "mean_if_first_8": 0.9859629725255457
+        }
+      },
+      "arousal_first": {
+        "n_recipients": 64,
+        "expected_score_shift_8_minus_2": {
+          "estimate": 1.3381573409607337,
+          "ci95": [
+            1.267661039982223,
+            1.4085961260748758
+          ]
+        },
+        "greedy_score_shift_8_minus_2": {
+          "estimate": 2.890625,
+          "ci95": [
+            2.546875,
+            3.234375
+          ],
+          "n_complete": 64
+        },
+        "expected_minus_greedy_shift": {
+          "estimate": -1.5524676590392663,
+          "ci95": [
+            -1.8717660650200447,
+            -1.2272545509398243
+          ]
+        },
+        "mean_total_variation_distance": 0.3029455458342277,
+        "mean_wasserstein1_score_points": 1.3387833223747423,
+        "valid_score_string_mass": {
+          "mean_if_first_2": 0.988173654556683,
+          "mean_if_first_8": 0.9921615228499383
+        }
+      }
+    }
+  },
+  "paired_qwen_size_contrast": {
+    "valence_first": {
+      "estimate": 1.2246062731939766,
+      "ci95": [
+        1.0454244422249555,
+        1.4000235035681572
+      ]
+    },
+    "arousal_first": {
+      "estimate": 1.2890191045358197,
+      "ci95": [
+        1.0420623451898956,
+        1.5372943631829492
+      ]
+    }
+  },
+  "smollm2_family_contrasts": {
+    "valence_first": {
+      "smollm2_minus_qwen_1_5b": {
+        "estimate": -0.18207437999144216,
+        "ci95": [
+          -0.28846463862898647,
+          -0.08164988900467206
+        ]
+      },
+      "smollm2_minus_qwen_3b": {
+        "estimate": 1.0425318932025345,
+        "ci95": [
+          0.8671097672937719,
+          1.2126731590600504
+        ]
+      }
+    },
+    "arousal_first": {
+      "smollm2_minus_qwen_1_5b": {
+        "estimate": 0.2763629492792482,
+        "ci95": [
+          0.07592229931852984,
+          0.4785331933085065
+        ]
+      },
+      "smollm2_minus_qwen_3b": {
+        "estimate": 1.5653820538150678,
+        "ci95": [
+          1.3167300689399313,
+          1.8140220396248146
+        ]
+      }
+    }
+  },
+  "interpretation_limit": "Exploratory cross-family/model-scale comparison on one new English laptop cohort with artificial assistant prefixes; family, tokenizer, tuning, and chat template differ."
+}
