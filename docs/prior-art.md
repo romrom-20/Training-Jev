@@ -414,3 +414,53 @@ sentence-bootstrap 95% CI [-8.3, -2.5]), but the frozen 90% parseability gate fa
 This is a prompt-format sensitivity and a measurement limitation, not evidence of a
 latent-score mechanism. See the [025 protocol](experiments/025-prompt-format-score-generation.md)
 and [audited results](../results/prompt-format-score-generation-v1/README.md).
+
+## Anchoring, output order, and rating schemas (29 September 2026)
+
+The recent prefix-coupling series sits inside a busy literature, so the claim has
+to stay narrow.
+
+- [Huang et al. (2025), *An Empirical Study of the Anchoring Effect in LLMs*](https://arxiv.org/abs/2505.15392)
+  tests numerical anchors in estimation prompts, reports shallow-layer effects,
+  and finds common prompting mitigations incomplete. This rules out any claim
+  that LLM anchoring itself is a new finding here.
+- [Kapetanovic et al. (2026), *Anchoring Bias in LLM-as-a-Judge Systems*](https://arxiv.org/abs/2608.25869)
+  studies prior-score metadata in rubric grading with eight models, task-aware
+  intervals, token-probability probes, and categorical validation. It is a
+  close judge-workflow precedent. Its total anchored-metadata contrast adds
+  revision and attempt fields along with the score, so it does not isolate the
+  score field alone. The paper does not test the specific paired
+  valence/arousal forced-coordinate setup used in Experiments 067–076.
+- [Chen et al. (2024), *LLM as a Scorer: The Impact of Output Order on Dialogue Evaluation*](https://arxiv.org/abs/2406.02863)
+  changes the sequence of reason and score output instructions and reports
+  score-distribution changes for some models. Field-order sensitivity in scoring
+  is therefore established; the open question in this project is its interaction
+  with a previously supplied affect coordinate under a fixed one-field schema.
+- [Parikh (2026), *Structured Output Collapses Answer Diversity Across 44 Language Models*](https://arxiv.org/abs/2607.18476)
+  finds that merely requesting JSON changes answer distributions across a large
+  model panel. [Le (2026), *Schema-Key Wording as an Instruction Channel*](https://arxiv.org/abs/2604.14862)
+  reports that schema-key language can affect constrained generation. The first
+  is directly relevant to natural-language format instructions; the second is
+  related but specifically studies schema keys under constrained decoding.
+  Both make output-format controls essential to interpreting Experiment 075.
+- [Li et al. (2026), *Grading Scale Impact on LLM-as-a-Judge*](https://arxiv.org/abs/2601.03444)
+  compares scale choices against human ratings across six benchmarks and reports
+  scale-dependent agreement. Numeric scale design is not a neutral detail.
+- A recent affect-rating study, [*Evaluating Large Language Models as Substitutes for Human Affective Ratings in Naturalistic Paradigms*](https://doi.org/10.1109/TAFFC.2026.3696891),
+  asks models for valence and arousal in naturalistic material and compares them
+  with human ratings. The present series instead intervenes on one requested
+  coordinate and measures the other coordinate's conditional distribution; it
+  is not an affect-rating validity study.
+- Human sequential Likert ratings have long been studied as context-dependent
+  measurements; for example, the [Boston Fed's sequential anchoring study](https://www.bostonfed.org/publications/research-department-working-paper/2013/modeling-anchoring-effects-in-sequential-likert-scale-questions.aspx)
+  models spillover between characteristics rated in sequence. Sequential
+  cross-rating influence is therefore not new in the broad measurement sense.
+
+These sources justify a controlled narrow test, not a novelty claim. Experiment
+076 freezes (A) a same-final-request, same-one-key-schema role-location control
+on 24 previously scored laptop reviews and (B) a 24-sentence transfer probe from
+the SemEval-2014 laptop triplet test set. Part B has no valence/arousal gold
+labels; its only estimand is the paired change under the artificial forced
+prefix. Even a stable result would be a small empirical transfer signal, not a
+general mechanism, an LLM-as-judge deployment conclusion, or evidence of
+human-like anchoring. See the [076 preregistration](experiments/076-schema-and-corpus-controls.md).
