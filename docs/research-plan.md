@@ -1500,3 +1500,14 @@ Laya ranked this controlled location test first (choice C; 0.342, uncalibrated).
 It uses both Qwen sizes on the 64 laptop items, with 1,024 contexts. The assistant
 and user arms necessarily differ in schema and wording, which is explicit in the
 protocol: [075](experiments/075-anchor-location-control.md).
+
+**Experiment 075 outcome.** On Qwen-0.5B, moving the fixed coordinate from the
+active assistant prefix into explicit user text reduced the valence-first expected
+shift from +2.542 to +1.031 and raised the arousal-first shift from +0.115 to +0.654.
+Qwen-1.5B's user-message shifts were smaller in both orders (+0.627/+0.134 versus
++1.996/+1.061 from assistant prefixes). Common alternate numeric spellings did not
+materially change the result. This is a prompt-format interaction on reused items;
+the output schemas differ, so it does not isolate role/location alone. Prior work
+already finds output-order effects in LLM scoring ([Chen et al. 2024](https://arxiv.org/abs/2406.02863)).
+The next useful work is a schema-matched factorial that separates cue location from
+field order and output shape. See the [075 result bundle](../results/anchor-location-control-v1/README.md).

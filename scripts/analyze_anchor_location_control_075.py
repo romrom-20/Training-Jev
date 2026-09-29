@@ -16,16 +16,26 @@ OUT = Path("results/anchor-location-control-v1")
 N_BOOTSTRAPS = 10_000
 
 
-def _distribution(row: dict) -> tuple[np.ndarray, float]:
-    logprobs = np.asarray(row["canonical_logprobs"], dtype=np.float64)
-    if logprobs.shape != (81,) or not np.isfinite(logprobs).all():
-        raise ValueError("Expected 81 finite complete-score log probabilities")
-    mass = float(np.exp(logprobs).sum())
+def _distribution(row: dict, family: str = "canonical") -> tuple[np.ndarray, float]:
+    canonical = np.exp(np.asarray(row["canonical_logprobs"], dtype=np.float64))
+    extended = np.exp(np.asarray(row["extended_logprobs"], dtype=np.float64))
+    integers = np.exp(np.asarray(row["integer_logprobs"], dtype=np.float64))
+    if any(array.shape != (81,) for array in (canonical, extended)) or integers.shape != (9,):
+        raise ValueError("Malformed complete-score probability arrays")
+    if not all(np.isfinite(array).all() for array in (canonical, extended, integers)):
+        raise ValueError("Expected finite complete-score log probabilities")
+    if family == "canonical":
+        probabilities = canonical
+    elif family == "all_parser_forms":
+        probabilities = canonical + extended
+        probabilities[np.arange(0, 81, 10)] += integers
+    else:
+        raise ValueError(f"Unexpected score form family: {family}")
+    mass = float(probabilities.sum())
     if mass <= 0 or mass > 1.0001:
         raise ValueError("Invalid probability mass on complete canonical scores")
-    probabilities = np.exp(logprobs - np.max(logprobs))
-    probabilities /= probabilities.sum()
-    return probabilities, mass
+    normalized = probabilities / mass
+    return normalized, mass
 
 
 def summarize(predictions: Path = runner.OUT, manifest_path: Path = runner.MANIFEST,
@@ -77,23 +87,32 @@ def summarize(predictions: Path = runner.OUT, manifest_path: Path = runner.MANIF
         for order_index, order in enumerate(runner.ORDERS):
             order_data = {}
             arrays = {}
+            expanded_arrays = {}
             greedy_arrays = {}
             for location in ("assistant_prefix", "user_message"):
-                shifts, greedy_shifts, low_masses, high_masses = [], [], [], []
+                shifts, expanded_shifts, greedy_shifts = [], [], []
+                low_masses, high_masses = [], []
+                expanded_low_masses, expanded_high_masses = [], []
                 for case_id in ids:
                     low = index[(model, case_id, location, order, 2.0)]
                     high = index[(model, case_id, location, order, 8.0)]
                     p_low, mass_low = _distribution(low)
                     p_high, mass_high = _distribution(high)
                     shifts.append(float((p_high - p_low) @ values))
+                    p_low_all, mass_low_all = _distribution(low, "all_parser_forms")
+                    p_high_all, mass_high_all = _distribution(high, "all_parser_forms")
+                    expanded_shifts.append(float((p_high_all - p_low_all) @ values))
                     low_masses.append(mass_low)
                     high_masses.append(mass_high)
+                    expanded_low_masses.append(mass_low_all)
+                    expanded_high_masses.append(mass_high_all)
                     if low["greedy_target_score"] is None or high["greedy_target_score"] is None:
                         greedy_shifts.append(np.nan)
                     else:
                         greedy_shifts.append(float(
                             high["greedy_target_score"] - low["greedy_target_score"]))
                 arrays[location] = np.asarray(shifts)
+                expanded_arrays[location] = np.asarray(expanded_shifts)
                 greedy_arrays[location] = np.asarray(greedy_shifts)
                 seed = 20260975 + model_index * 20 + order_index
                 valid_greedy = np.isfinite(greedy_arrays[location])
@@ -101,12 +120,18 @@ def summarize(predictions: Path = runner.OUT, manifest_path: Path = runner.MANIF
                     "n_recipients": len(ids),
                     "expected_score_shift_8_minus_2": bootstrap_mean(
                         arrays[location], seed, bootstrap_replicates),
+                    "expected_score_shift_with_parser_accepted_forms": bootstrap_mean(
+                        expanded_arrays[location], seed, bootstrap_replicates),
                     "greedy_score_shift_8_minus_2": bootstrap_mean(
                         greedy_arrays[location][valid_greedy], seed, bootstrap_replicates),
                     "n_greedy_complete": int(valid_greedy.sum()),
                     "mean_valid_canonical_mass": {
                         "if_anchor_2": float(np.mean(low_masses)),
                         "if_anchor_8": float(np.mean(high_masses)),
+                    },
+                    "mean_mass_with_parser_accepted_forms": {
+                        "if_anchor_2": float(np.mean(expanded_low_masses)),
+                        "if_anchor_8": float(np.mean(expanded_high_masses)),
                     },
                 }
             per_location[model][order] = order_data
@@ -115,6 +140,10 @@ def summarize(predictions: Path = runner.OUT, manifest_path: Path = runner.MANIF
             location_contrasts[model][order] = {
                 "user_message_minus_assistant_prefix_expected_shift": bootstrap_mean(
                     arrays["user_message"] - arrays["assistant_prefix"],
+                    20260975 + model_index * 20 + order_index,
+                    bootstrap_replicates),
+                "user_message_minus_assistant_prefix_expected_shift_with_parser_forms": bootstrap_mean(
+                    expanded_arrays["user_message"] - expanded_arrays["assistant_prefix"],
                     20260975 + model_index * 20 + order_index,
                     bootstrap_replicates),
                 "user_message_minus_assistant_prefix_greedy_shift": bootstrap_mean(
