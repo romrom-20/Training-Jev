@@ -151,6 +151,29 @@ def analyze(predictions: Path, manifest_path: Path, parent: Path = runner.PARENT
         primary_draws[b] = vals["arousal"] - vals["valence"]
     primary = point["arousal"]["moderation"] - point["valence"]["moderation"]
 
+    def all_va_topic_match(sample: np.ndarray, order: str) -> float:
+        effects = {}
+        for condition in CONDITIONS:
+            map_interactions = []
+            for permutation in runner.PERMUTATIONS:
+                gains = {}
+                for decoder in DECODERS:
+                    own_rmse = float(np.sqrt(np.mean(own_error[(order, decoder)][sample, :])))
+                    donor_rmse = float(np.sqrt(np.mean(
+                        error[(order, condition, decoder, permutation)][sample, :]
+                    )))
+                    gains[decoder] = own_rmse - donor_rmse
+                map_interactions.append(gains["finite_grid"] - gains["free_greedy"])
+            effects[condition] = float(np.mean(map_interactions))
+        return effects[runner.SAME] - effects[runner.CROSS]
+
+    all_va_topic = {order: all_va_topic_match(np.arange(n), order) for order in ORDERS}
+    all_va_draws = {
+        order: np.array([all_va_topic_match(sample, order) for sample in indices])
+        for order in ORDERS
+    }
+    all_va_moderation_draws = all_va_draws["arousal_first"] - all_va_draws["valence_first"]
+
     per_assignment = {}
     for permutation in runner.PERMUTATIONS:
         per_assignment[str(permutation)] = {}
@@ -185,7 +208,7 @@ def analyze(predictions: Path, manifest_path: Path, parent: Path = runner.PARENT
         "invalid_free_donor_rate": invalid_free_rate,
         "primary_endpoint": {
             "contrast": "arousal-axis order moderation minus valence-axis order moderation",
-            "direction": "positive follows the Experiment 062 exploratory coordinate pattern",
+            "direction": "negative follows the algebraically matched Experiment 062 coordinate pattern; the protocol's prose direction was sign-reversed",
             "estimate": primary,
             "ci95": [float(v) for v in np.quantile(primary_draws, [0.025, 0.975])],
             "bootstrap_replicates": bootstrap_replicates,
@@ -193,6 +216,21 @@ def analyze(predictions: Path, manifest_path: Path, parent: Path = runner.PARENT
             "bootstrap_unit": "recipient source ID; all cells and fixed maps retained",
         },
         "coordinate_specific_secondary": primary_components,
+        "all_va_secondary": {
+            "topic_match_effect_valence_first": all_va_topic["valence_first"],
+            "topic_match_effect_valence_first_ci95": [float(v) for v in np.quantile(
+                all_va_draws["valence_first"], [0.025, 0.975]
+            )],
+            "topic_match_effect_arousal_first": all_va_topic["arousal_first"],
+            "topic_match_effect_arousal_first_ci95": [float(v) for v in np.quantile(
+                all_va_draws["arousal_first"], [0.025, 0.975]
+            )],
+            "arousal_first_minus_valence_first": all_va_topic["arousal_first"] - all_va_topic["valence_first"],
+            "order_moderation_ci95": [float(v) for v in np.quantile(
+                all_va_moderation_draws, [0.025, 0.975]
+            )],
+            "inferential_status": "secondary aggregate VA result",
+        },
         "per_assignment": per_assignment,
         "analysis_seed": BOOTSTRAP_SEED,
         "model": manifest["model"], "model_revision": manifest["model_revision"],
@@ -220,7 +258,7 @@ def write_report(summary: dict, output: Path) -> None:
     else:
         primary = summary["primary_endpoint"]
         lead = (
-            f"The registered arousal-specific order moderation was {primary['estimate']:.3f} "
+            f"The registered difference between arousal and valence order moderation was {primary['estimate']:.3f} "
             f"VA-RMSE points (95% recipient-bootstrap interval "
             f"[{primary['ci95'][0]:.3f}, {primary['ci95'][1]:.3f}]) on "
             f"{summary['n_complete_recipient_ids']} complete restaurant recipients."
@@ -231,7 +269,11 @@ def write_report(summary: dict, output: Path) -> None:
 
 {lead}
 
-The preregistered primary contrast subtracts valence's JSON-order moderation from arousal's, where order moderation is the change in the same-category-minus-cross-category decoder interaction when moving from valence-first to arousal-first output. Positive estimates follow the exploratory coordinate pattern from Experiment 062. This is a fresh recipient sample within DimABSA's English restaurant split; it is not an independent corpus. Valence-first own-review baselines are reused from Experiment 051. Category crossings also change review content and meaning.
+The preregistered primary contrast subtracts valence's JSON-order moderation from arousal's, where order moderation is the change in the same-category-minus-cross-category context-gain decoder interaction when moving from valence-first to arousal-first output. Its interval includes zero, so the test does not establish stronger order sensitivity for one coordinate. The negative direction follows the algebraically matched coordinate contrast from Experiment 062; the frozen protocol's prose direction was sign-reversed. This is a fresh recipient sample within DimABSA's English restaurant split; it is not an independent corpus. Valence-first own-review baselines are reused from Experiment 051. Category crossings also change review content and meaning.
+
+Coordinate-wise order moderations were {summary['coordinate_specific_secondary']['valence']['order_moderation']:.3f} for valence (95% interval [{summary['coordinate_specific_secondary']['valence']['order_moderation_ci95'][0]:.3f}, {summary['coordinate_specific_secondary']['valence']['order_moderation_ci95'][1]:.3f}]) and {summary['coordinate_specific_secondary']['arousal']['order_moderation']:.3f} for arousal ([{summary['coordinate_specific_secondary']['arousal']['order_moderation_ci95'][0]:.3f}, {summary['coordinate_specific_secondary']['arousal']['order_moderation_ci95'][1]:.3f}]). Both moved in the same direction as Experiment 062's coordinate audit. The preregistered protocol text said a positive primary estimate would follow 062; that prose had the sign reversed relative to its stated formula. See `docs/experiments/063-analysis-sign-audit.md`. These coordinate outcomes are secondary; only the primary coordinate-difference contrast was confirmatory.
+
+The secondary aggregate VA order moderation was {summary['all_va_secondary']['arousal_first_minus_valence_first']:.3f} (95% interval [{summary['all_va_secondary']['order_moderation_ci95'][0]:.3f}, {summary['all_va_secondary']['order_moderation_ci95'][1]:.3f}]). A post-hoc cross-split bootstrap found the same direction in laptop and restaurant reviews; its estimated difference was uncertain. See [`domain comparison`](../domain-order-moderation-audit-v1/README.md). This is a consistency signal within one benchmark release and Qwen2.5-3B, not independent corpus or model replication.
 
 The protocol was frozen before inference. No item text, case IDs, donor maps or individual predictions are released.
 

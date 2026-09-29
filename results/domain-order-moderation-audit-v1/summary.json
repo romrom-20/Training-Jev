@@ -1,0 +1,45 @@
+{
+  "experiment": "063-domain-order-moderation-audit",
+  "status": "post-hoc exploratory domain comparison",
+  "estimand": "restaurant minus laptop difference in (same-minus-cross category decoder interaction, arousal-first minus valence-first), all-VA RMSE",
+  "laptop": {
+    "n_recipient_ids": 184,
+    "estimate": -0.2575046715007808,
+    "ci95": [
+      -0.4485639732923588,
+      -0.0605908293849859
+    ]
+  },
+  "restaurant": {
+    "n_complete_recipient_ids": 172,
+    "estimate": -0.528172405457266,
+    "ci95": [
+      -0.805220596859654,
+      -0.2576059489685825
+    ]
+  },
+  "restaurant_minus_laptop": {
+    "estimate": -0.27066773395648513,
+    "ci95": [
+      -0.6125168003904372,
+      0.06788628571524236
+    ],
+    "bootstrap_replicates": 10000,
+    "seed": 20260965,
+    "resampling": "independent recipient-cluster resampling within each domain; fixed donor maps retained"
+  },
+  "provenance": {
+    "exp050": "890a16d6363e72549c7ccad9099dece3ce021ab78ab3d8071acde18774500f5f",
+    "exp051": "3f37ff8d630fde9776552389a8d41a4aab9d9b6ea127e24142337de68fd99ca7",
+    "exp057": "21e7fe02b43433fa4b61b5dfe790efef38c57e8a0e240e4443ffe40ffb110e31",
+    "exp060": "ab721276ec320c546da2757a16575acc30eb36ce86df3a911402b3e5a91f9d94",
+    "exp062": "30cb805ffc61beb2f67b78a0017a06781117de2b3f546475eb270e7e86655c8f",
+    "exp063": "0640dc9f3894cec1f890c270bea7a1680311345abfb670c97b5b80ad5229f080"
+  },
+  "limits": [
+    "This domain comparison was not preregistered and follows the Experiment 063 outcomes.",
+    "Both sources are splits within the DimABSA release; this is not independent corpus replication.",
+    "Valence-first restaurant own-review baselines are reused from Experiment 051.",
+    "The contrast does not isolate a pure category label or generalize beyond Qwen2.5-3B."
+  ]
+}

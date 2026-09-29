@@ -1199,3 +1199,23 @@ a fresh recipient replication; the preselected remaining laptop split lacks enou
 negative cases, so Experiment 063 will test the arousal-specific prediction on an
 English restaurant cohort with official aspect categories. No post has been written
 or published.
+
+**Experiment 063 outcome: the coordinate-specific primary was inconclusive, while the aggregate order interaction persisted.** On the frozen English restaurant cohort, 4,498 generations produced one invalid donor-context free output (1/2,076, below the 2% gate); 172 of 173 recipients had complete cells. The preregistered difference between arousal and valence order moderation was -0.204 VA-RMSE points (95% recipient-bootstrap interval [-0.487, +0.067]), which includes zero. Secondary coordinate moderations were -0.419 for valence ([-0.764, -0.076]) and -0.623 for arousal ([-0.902, -0.345]); both changed in the same direction as the exploratory 062 audit, so 063 does not support the claim that the output-order interaction is arousal-specific. The secondary all-VA order moderation was -0.528 ([-0.808, -0.254]).
+
+A post-hoc, independent-within-domain bootstrap compared the all-VA order moderation in laptop and restaurant reviews: -0.258 ([-0.449, -0.061]) and -0.528 ([-0.805, -0.258]), respectively. Their difference (-0.271, [-0.613, +0.068]) is uncertain. Thus the effect's direction is consistent across two DimABSA splits, but both remain one release and one model family. The protocol's formula was sound; its final sentence reversed the expected primary sign. This is recorded in the [analysis sign audit](experiments/063-analysis-sign-audit.md), without changing the frozen contrast or estimates. Full aggregates are in the [063 result bundle](../results/output-key-order-restaurant-replication-v1/README.md) and the [post-hoc domain audit](../results/domain-order-moderation-audit-v1/README.md).
+
+**Publication judgment after 062–063.** Do not draft a LessWrong post yet. The order-by-context signal now appears in two domain splits, but the registered coordinate-specific contrast is inconclusive, the aggregate cross-split difference is uncertain, output-order sensitivity itself is well established, and no second model family has been tested. A cross-size replication on the same paired restaurant design is the most useful next step; reconsider writing only if it adds a clear, bounded empirical result. No post has been written or published.
+
+**Experiment 064 preregistration: independent release and language test.** Laya's
+next-action triage selected a separately curated Chinese SIGHAN 2024 release over
+another size run on DimABSA. The frozen test repeats the same/cross-category donor,
+JSON field order, and finite-grid/free-greedy factorial with 180 polarity-balanced
+reviews and 4,680 new Qwen2.5-3B outputs. It reuses the existing valence-first
+own-review baseline, then tests whether the aggregate output-order moderation from
+062–063 transfers across release and language. Prior literature establishes general
+LLM input-order sensitivity and continuous aspect-level VA evaluation, but does not
+answer this particular interaction; the test is not a claim that these broader
+phenomena are new. The preflight passed on the pinned source data and maps. The
+frozen protocol is [`064`](experiments/064-sighan-output-key-order-replication.md).
+No LessWrong post will be drafted unless results add a sufficiently clear and
+bounded empirical point.

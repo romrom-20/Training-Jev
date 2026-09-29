@@ -1,0 +1,145 @@
+{
+  "experiment": "063-output-key-order-restaurant-replication",
+  "status": "scored",
+  "interpretation": "fresh restaurant-domain test of the post-hoc arousal-order interaction",
+  "n_recipient_ids_selected": 173,
+  "n_complete_recipient_ids": 172,
+  "n_new_outputs": 4498,
+  "invalid_by_order_condition_decoder": {
+    "valence_first": {
+      "opinion_masked": {
+        "finite_grid": 0,
+        "free_greedy": 0
+      },
+      "same_category_context": {
+        "finite_grid": 0,
+        "free_greedy": 0
+      },
+      "cross_category_context": {
+        "finite_grid": 0,
+        "free_greedy": 1
+      }
+    },
+    "arousal_first": {
+      "opinion_masked": {
+        "finite_grid": 0,
+        "free_greedy": 0
+      },
+      "same_category_context": {
+        "finite_grid": 0,
+        "free_greedy": 0
+      },
+      "cross_category_context": {
+        "finite_grid": 0,
+        "free_greedy": 0
+      }
+    }
+  },
+  "invalid_free_donor_outputs": 1,
+  "invalid_free_donor_denominator": 2076,
+  "invalid_free_donor_rate": 0.0004816955684007707,
+  "primary_endpoint": {
+    "contrast": "arousal-axis order moderation minus valence-axis order moderation",
+    "direction": "negative follows the algebraically matched Experiment 062 coordinate pattern; the protocol's prose direction was sign-reversed",
+    "estimate": -0.20417156882071558,
+    "ci95": [
+      -0.48704432789213065,
+      0.06712865021637911
+    ],
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20260963,
+    "bootstrap_unit": "recipient source ID; all cells and fixed maps retained"
+  },
+  "coordinate_specific_secondary": {
+    "valence": {
+      "topic_match_effect_valence_first": 0.4454299125611919,
+      "topic_match_effect_arousal_first": 0.026652018180014433,
+      "order_moderation": -0.41877789438117746,
+      "order_moderation_ci95": [
+        -0.7637452325464515,
+        -0.07619294561369865
+      ]
+    },
+    "arousal": {
+      "topic_match_effect_valence_first": 0.6069964862181975,
+      "topic_match_effect_arousal_first": -0.015952976983695542,
+      "order_moderation": -0.622949463201893,
+      "order_moderation_ci95": [
+        -0.9024989690178198,
+        -0.34517715931843285
+      ]
+    }
+  },
+  "all_va_secondary": {
+    "topic_match_effect_valence_first": 0.5311443442119534,
+    "topic_match_effect_valence_first_ci95": [
+      0.320322556181354,
+      0.741506194730536
+    ],
+    "topic_match_effect_arousal_first": 0.0029719387546875142,
+    "topic_match_effect_arousal_first_ci95": [
+      -0.16095778083256898,
+      0.17104100309575274
+    ],
+    "arousal_first_minus_valence_first": -0.528172405457266,
+    "order_moderation_ci95": [
+      -0.8076684637107808,
+      -0.25404151735568725
+    ],
+    "inferential_status": "secondary aggregate VA result"
+  },
+  "per_assignment": {
+    "1": {
+      "valence": {
+        "topic_match_arousal_first": -0.02709516445615323,
+        "topic_match_valence_first": 0.41603478694262286,
+        "order_moderation": -0.4431299513987761
+      },
+      "arousal": {
+        "topic_match_arousal_first": -0.08010474784325661,
+        "topic_match_valence_first": 0.6043124338229697,
+        "order_moderation": -0.6844171816662263
+      }
+    },
+    "2": {
+      "valence": {
+        "topic_match_arousal_first": 0.018744390899847474,
+        "topic_match_valence_first": 0.4819269306114351,
+        "order_moderation": -0.4631825397115876
+      },
+      "arousal": {
+        "topic_match_arousal_first": 0.03953757150073667,
+        "topic_match_valence_first": 0.6711822515806691,
+        "order_moderation": -0.6316446800799325
+      }
+    },
+    "3": {
+      "valence": {
+        "topic_match_arousal_first": 0.08830682809634904,
+        "topic_match_valence_first": 0.4383280201295179,
+        "order_moderation": -0.35002119203316884
+      },
+      "arousal": {
+        "topic_match_arousal_first": -0.007291754608566681,
+        "topic_match_valence_first": 0.5454947732509536,
+        "order_moderation": -0.5527865278595203
+      }
+    }
+  },
+  "analysis_seed": 20260963,
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "model_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "device": "mps",
+  "protocol_sha256": "950689695c6d45001888098973a62eee857e7b7a77768e57e54a6505b806c0b8",
+  "task2_sha256": "e90386169422c84ddd42d51029f23934b54724fafe270b65138836067492857d",
+  "task3_sha256": "a24cd3d6b8b2dd3bcebf5016f2e8bb90736fe2e89671aced73229062ca516f79",
+  "parent_output_sha256": "3f37ff8d630fde9776552389a8d41a4aab9d9b6ea127e24142337de68fd99ca7",
+  "output_sha256": "0640dc9f3894cec1f890c270bea7a1680311345abfb670c97b5b80ad5229f080",
+  "score_analysis_performed": true,
+  "inferential_limits": [
+    "Fresh recipient sample within the English restaurant split, not an independent corpus.",
+    "Restaurant valence-first own-review baselines are reused from Experiment 051.",
+    "Donor-category differences also change lexical and semantic content.",
+    "Coordinate-specific Experiment 062 evidence was exploratory; 063 is the frozen follow-up."
+  ]
+}
