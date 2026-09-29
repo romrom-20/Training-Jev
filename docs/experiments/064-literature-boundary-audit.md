@@ -78,3 +78,21 @@ studies when a final answer is emitted relative to reasoning in a non-autoregres
 architecture; it does not answer this local autoregressive numeric-coordinate
 intervention. This is only an initial literature scan: do not claim priority or
 novelty without a broader search.
+
+## Results boundary after Experiment 068 (2026-09-29)
+
+The controlled prefix effect has now appeared in two disjoint SIGHAN recipient
+samples on the same Qwen2.5-3B revision. In both, forcing arousal to 8.0 rather
+than 2.0 before generating valence lowered the greedy valence continuation by
+about 0.7–0.8 points. The valence-first arm did not resolve in Exp067 and was
+near zero in the fresh food-quality-only Exp068 sample. This is a replication
+of one conditional continuation effect, not replication of a symmetric VA
+coupling or evidence that ordinary JSON field order shifts ratings this way.
+
+The result may merit an empirical note after token-distribution or model-family
+checks, but it does not currently support a broad LessWrong claim: the strongest
+intervention is an artificial forced assistant prefix, only one model family and
+task are covered, the fresh cohort is one category, and adjacent literature
+already studies output order, prompt language, and joint/separate VA prompting.
+The next sensible step is to preserve this bounded result and pause inference
+rather than search the same outputs for additional effects.

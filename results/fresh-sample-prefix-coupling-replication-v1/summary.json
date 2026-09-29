@@ -1,0 +1,96 @@
+{
+  "experiment": "068-fresh-sample-prefix-coupling-replication",
+  "protocol_sha256": "1f3e8ed96343c86ba9fa43d34c8c864d5588efd9f5c2f49a8fd5874ee1ea4d0f",
+  "output_sha256": "873f1ff5b63b5643adb94e480f1e1ee2272d013aea8c991116f4bea26488a2e7",
+  "exp064_output_sha256": "48f7a8e2fe9d245d7742c7955b6349fe08a3935934f7ff0cd1db01e1eec9ace7",
+  "source_hashes": {
+    "test_input": "5053608647d06ad88ce21a2aecbef0e29dc58a8220f921561d39d4e9cf86fe28",
+    "test_gold": "6ecc6949d5f77ea34a09826115a0f91327313ae33824a5c373d7322bdbb17108"
+  },
+  "status": "scored",
+  "n_recipient_ids_selected": 64,
+  "n_complete_four_cell_recipient_ids": 64,
+  "n_new_outputs": 256,
+  "sample": {
+    "n_exp064_ids_excluded": 180,
+    "recipient_ids_sha256": "1e738712d6ec47bb90a5bdd47d676f3b79fcb958b9c0d945d3081428924132bd",
+    "category_polarity_counts": {
+      "neg|\u98df\u7269#\u54c1\u8d28": 32,
+      "pos|\u98df\u7269#\u54c1\u8d28": 32
+    },
+    "polarity_counts": {
+      "neg": 32,
+      "pos": 32
+    }
+  },
+  "invalid_by_order_forced_value": {
+    "valence_first": {
+      "2.0": 0,
+      "8.0": 0
+    },
+    "arousal_first": {
+      "2.0": 0,
+      "8.0": 0
+    }
+  },
+  "invalid_denominator_per_arm": 64,
+  "invalid_rate_by_order_forced_value": {
+    "valence_first": {
+      "2.0": 0.0,
+      "8.0": 0.0
+    },
+    "arousal_first": {
+      "2.0": 0.0,
+      "8.0": 0.0
+    }
+  },
+  "primary_endpoint": {
+    "contrast": "second coordinate after forced first=8.0 minus second coordinate after forced first=2.0; equal-weighted across both field orders",
+    "estimate": -0.4203125,
+    "ci95": [
+      -0.61640625,
+      -0.22578125
+    ],
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20260968,
+    "bootstrap_unit": "fresh recipient ID; four forced-value \u00d7 order cells resampled together"
+  },
+  "order_specific_replication": {
+    "valence_first": {
+      "mean_second_coordinate_if_first_forced_2": 2.625,
+      "mean_second_coordinate_if_first_forced_8": 2.59375,
+      "mean_second_coordinate_shift_8_minus_2": -0.03125,
+      "ci95": [
+        -0.234375,
+        0.171875
+      ],
+      "matches_exp067_estimate_direction": false,
+      "ci_resolves_exp067_direction": false,
+      "prior_exp067_direction": "positive"
+    },
+    "arousal_first": {
+      "mean_second_coordinate_if_first_forced_2": 3.25,
+      "mean_second_coordinate_if_first_forced_8": 2.440625,
+      "mean_second_coordinate_shift_8_minus_2": -0.809375,
+      "ci95": [
+        -1.1203124999999998,
+        -0.509375
+      ],
+      "matches_exp067_estimate_direction": true,
+      "ci_resolves_exp067_direction": true,
+      "prior_exp067_direction": "negative"
+    }
+  },
+  "pattern_resolved_in_fresh_sample": false,
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "model_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "device": "mps",
+  "score_analysis_performed": true,
+  "inferential_limits": [
+    "This fresh sample contains only food-quality target aspects because Experiment 064 exhausted available negative examples in the other preselected categories.",
+    "A forced assistant prefix measures conditional continuation sensitivity, not natural rating behavior.",
+    "The result applies to one model revision and one Chinese prompt template.",
+    "An effect does not show that naturally generated output order caused prior cross-context moderation.",
+    "Public-test pretraining exposure cannot be ruled out."
+  ]
+}

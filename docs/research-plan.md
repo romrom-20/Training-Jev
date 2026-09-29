@@ -1343,3 +1343,21 @@ Its frozen protocol SHA-256 is
 recipient-ID SHA-256 is
 `1e738712d6ec47bb90a5bdd47d676f3b79fcb958b9c0d945d3081428924132bd`. See the
 [Experiment 068 protocol](experiments/068-fresh-sample-prefix-coupling-replication.md).
+
+**Experiment 068 outcome: partial replication on fresh recipients.** All 256
+continuations parsed, with 64/64 recipients complete and no invalid output in
+any arm. The equal-weighted order average was -0.420 points (95% recipient-
+bootstrap interval [-0.616, -0.226]). Arousal-first shifted the later valence
+down by -0.809 points ([-1.120, -0.509]), matching Exp067's -0.688 direction and
+similar magnitude. Valence-first shifted later arousal by -0.031
+([-0.234, +0.172]), so the earlier small positive estimate did not replicate.
+The repeat used fresh IDs, but only food-quality reviews; both tests used the
+same 3B model, Chinese template, greedy decoder and artificial prefix. It
+supports a narrow, order-specific forced-continuation effect for this setup, not
+natural score anchoring or a general model behavior. Laya triage weakly
+preferred stopping further inference and documenting the bounded result
+(0.271; next was token-distribution analysis at 0.266; uncalibrated). I agree:
+the mechanism and model-family generality are still untested. A LessWrong post
+does not make sense yet because the strongest effect is under an intentionally
+forced answer prefix and the relevant adjacent literature already covers broad
+order and joint/separate output effects. See the [068 aggregate bundle](../results/fresh-sample-prefix-coupling-replication-v1/README.md).
