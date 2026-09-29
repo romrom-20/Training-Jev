@@ -1247,3 +1247,39 @@ new outputs (4,320 donor-context and 720 own-review), since the smaller model
 cannot reuse the 3B own-review baseline. The preselected follow-up is
 [`065`](experiments/065-sighan-order-model-size-replication.md); this remains
 agenda triage, not evidence or a publication decision.
+
+**Experiment 065 outcome: no detectable order interaction or size difference on
+SIGHAN.** The 5,040-output 1.5B run completed on MPS in 4,632 seconds with no
+invalid free-greedy donor outputs. On the 173 recipients complete in both sizes,
+the registered 1.5B-minus-3B difference in aggregate order moderation was +0.045
+(95% paired recipient-bootstrap interval [-0.227, +0.336]). The 1.5B moderation
+was -0.032 ([-0.158, +0.090]); the 3B moderation was -0.077 ([-0.335, +0.169]).
+All intervals include zero. This comparison did not detect model-size dependence,
+and neither Chinese estimate replicates the negative aggregate signal from the
+two English DimABSA splits. These results do not establish a true language or
+release difference: the study was not powered or registered as a between-corpus
+contrast, and the Chinese inputs still used English instructions. No LessWrong
+post is warranted on this evidence. See the [065 aggregate bundle](../results/sighan-order-model-size-replication-v1/README.md).
+
+A separate three-cohort bootstrap was then run as a post-hoc audit. It compared
+the SIGHAN 3B moderation (-0.077) with the recipient-count-weighted mean of the
+two English DimABSA estimates (-0.388); the SIGHAN-minus-English difference was
++0.311 (95% independent cohort-bootstrap interval [+0.003, +0.610]). The lower
+bound is only just above zero, and the analysis was motivated by the observed
+SIGHAN result. Since language, domain, release, and recipient cohort all change
+together, this cannot identify a language or release effect. It is a lead for a
+controlled prompt-language test, not a claim of established heterogeneity. See
+the [post-hoc release audit](../results/order-moderation-release-audit-v1/README.md).
+
+**Experiment 066 preregistered: prompt-language control within SIGHAN.** After
+064–065 and the post-hoc audit, local Laya triage weakly selected the English vs
+translated-Chinese instruction comparison (top agenda probability 0.300; the
+nearest alternative was 0.291; these are uncalibrated ranking scores). The
+experiment holds the selected SIGHAN recipients, exact 064 donor maps, model,
+orders and decoders fixed; it uses an 88-ID polarity/category-stratified subset,
+2,464 new Qwen2.5-3B outputs, paired recipient bootstrap and a 2% invalid-output
+gate. The translation was not professionally assessed, so any effect remains
+specific to these literal templates. The frozen protocol SHA-256 is
+`27dbd3c6d3c234b1fbb3bab7923478b465163048a18fb3fc5d1c00089dffdda5`. No new
+generation began before this protocol and its runner were frozen. See the
+[Experiment 066 protocol](experiments/066-sighan-instruction-language-control.md).

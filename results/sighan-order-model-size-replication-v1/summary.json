@@ -1,0 +1,126 @@
+{
+  "experiment": "065-sighan-order-model-size-replication",
+  "protocol_sha256": "544cc2b8ecfd81bf7f340b8eb5891c3eee5eeed1152dfe0fc7111e997e32e881",
+  "output_sha256": "1f4585451e3e149d89b77975671ffafa02e17b48907f4e0a2f897edc87dde6e5",
+  "exp064_output_sha256": "48f7a8e2fe9d245d7742c7955b6349fe08a3935934f7ff0cd1db01e1eec9ace7",
+  "exp052_baseline_sha256": "76671a3330e35fddfd915f15c86b49b90f8113af74041651162b7a81051765fe",
+  "source_hashes": {
+    "test_input": "5053608647d06ad88ce21a2aecbef0e29dc58a8220f921561d39d4e9cf86fe28",
+    "test_gold": "6ecc6949d5f77ea34a09826115a0f91327313ae33824a5c373d7322bdbb17108"
+  },
+  "status": "scored",
+  "interpretation": "same-recipient, same-map model-size comparison on SIGHAN 2024",
+  "n_recipient_ids_selected": 180,
+  "n_complete_paired_recipient_ids": 173,
+  "n_new_outputs": 5040,
+  "invalid_by_order_condition_decoder": {
+    "qwen-1.5b": {
+      "valence_first": {
+        "opinion_masked": {
+          "finite_grid": 0,
+          "free_greedy": 0
+        },
+        "same_category_context": {
+          "finite_grid": 0,
+          "free_greedy": 0
+        },
+        "cross_category_context": {
+          "finite_grid": 0,
+          "free_greedy": 0
+        }
+      },
+      "arousal_first": {
+        "opinion_masked": {
+          "finite_grid": 0,
+          "free_greedy": 0
+        },
+        "same_category_context": {
+          "finite_grid": 0,
+          "free_greedy": 0
+        },
+        "cross_category_context": {
+          "finite_grid": 0,
+          "free_greedy": 0
+        }
+      }
+    },
+    "qwen-3b": {
+      "valence_first": {
+        "opinion_masked": {
+          "finite_grid": 0,
+          "free_greedy": 0
+        },
+        "same_category_context": {
+          "finite_grid": 0,
+          "free_greedy": 2
+        },
+        "cross_category_context": {
+          "finite_grid": 0,
+          "free_greedy": 4
+        }
+      },
+      "arousal_first": {
+        "opinion_masked": {
+          "finite_grid": 0,
+          "free_greedy": 0
+        },
+        "same_category_context": {
+          "finite_grid": 0,
+          "free_greedy": 1
+        },
+        "cross_category_context": {
+          "finite_grid": 0,
+          "free_greedy": 1
+        }
+      }
+    }
+  },
+  "invalid_free_donor_outputs": {
+    "qwen-1.5b": 0,
+    "qwen-3b": 8
+  },
+  "invalid_free_donor_denominator": 2160,
+  "invalid_free_donor_rate": {
+    "qwen-1.5b": 0.0,
+    "qwen-3b": 0.003703703703703704
+  },
+  "primary_endpoint": {
+    "contrast": "Qwen2.5-1.5B aggregate order moderation minus Qwen2.5-3B aggregate order moderation",
+    "estimate": 0.045452963728769405,
+    "ci95": [
+      -0.22703327828853448,
+      0.33640144293486834
+    ],
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20260965,
+    "bootstrap_unit": "recipient source ID; all model/order/decoder/condition/map cells paired"
+  },
+  "model_specific_secondary": {
+    "qwen-1.5b": {
+      "aggregate_order_moderation": -0.03195741004357858,
+      "ci95": [
+        -0.15802916170134884,
+        0.08957665018869176
+      ]
+    },
+    "qwen-3b": {
+      "aggregate_order_moderation": -0.07741037377234798,
+      "ci95": [
+        -0.33548561262447385,
+        0.16899889230143791
+      ]
+    }
+  },
+  "model_revisions": {
+    "qwen-1.5b": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "qwen-3b": "aa8e72537993ba99e69dfaafa59ed015b17504d1"
+  },
+  "device": "mps",
+  "score_analysis_performed": true,
+  "inferential_limits": [
+    "A model-size comparison within one Qwen family does not establish cross-family behavior.",
+    "Both models use the same SIGHAN 2024 public test release and recipient set; pretraining exposure cannot be excluded.",
+    "Both models are evaluated with the same English-language instruction on Chinese input.",
+    "The confidence interval tests a size difference, not whether either model has a nonzero order effect."
+  ]
+}

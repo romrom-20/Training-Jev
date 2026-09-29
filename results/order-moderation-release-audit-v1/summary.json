@@ -1,0 +1,62 @@
+{
+  "experiment": "posthoc-order-moderation-release-audit-064",
+  "status": "exploratory, post-hoc",
+  "estimand": "SIGHAN 3B order moderation minus recipient-count-weighted mean of two English DimABSA split estimates",
+  "estimate_definition": "aggregate all-VA arousal-first minus valence-first change in same-minus-cross finite-minus-free context-gain interaction",
+  "dataset_estimates": {
+    "dimabsa_laptop": {
+      "n_complete_recipient_ids": 184,
+      "estimate": -0.2575046715007808,
+      "ci95": [
+        -0.44675134611188233,
+        -0.06000415867073778
+      ]
+    },
+    "dimabsa_restaurant": {
+      "n_complete_recipient_ids": 172,
+      "estimate": -0.528172405457266,
+      "ci95": [
+        -0.7996578847220065,
+        -0.25241665295015797
+      ]
+    },
+    "sighan_chinese": {
+      "n_complete_recipient_ids": 173,
+      "estimate": -0.07741037377234798,
+      "ci95": [
+        -0.33382474802694734,
+        0.17206575424313603
+      ]
+    }
+  },
+  "sighan_minus_weighted_english": {
+    "estimate": 0.31086634896583576,
+    "ci95": [
+      0.0030980690120970215,
+      0.6099884665939799
+    ],
+    "bootstrap_replicates": 10000,
+    "seed": 20260966,
+    "resampling": "independent recipient-cluster resampling within each of three cohorts; fixed maps retained",
+    "english_weights": {
+      "dimabsa_laptop": 0.5168539325842697,
+      "dimabsa_restaurant": 0.4831460674157303
+    }
+  },
+  "provenance": {
+    "exp050": "890a16d6363e72549c7ccad9099dece3ce021ab78ab3d8071acde18774500f5f",
+    "exp051": "3f37ff8d630fde9776552389a8d41a4aab9d9b6ea127e24142337de68fd99ca7",
+    "exp057": "21e7fe02b43433fa4b61b5dfe790efef38c57e8a0e240e4443ffe40ffb110e31",
+    "exp060": "ab721276ec320c546da2757a16575acc30eb36ce86df3a911402b3e5a91f9d94",
+    "exp062": "30cb805ffc61beb2f67b78a0017a06781117de2b3f546475eb270e7e86655c8f",
+    "exp063": "0640dc9f3894cec1f890c270bea7a1680311345abfb670c97b5b80ad5229f080",
+    "exp052": "76671a3330e35fddfd915f15c86b49b90f8113af74041651162b7a81051765fe",
+    "exp064": "48f7a8e2fe9d245d7742c7955b6349fe08a3935934f7ff0cd1db01e1eec9ace7"
+  },
+  "limits": [
+    "This comparison was not registered and was motivated by the observed 064 outcome.",
+    "SIGHAN differs from DimABSA in language, domain, annotation release, and selected cohort; this does not isolate which factor differs.",
+    "The English mean is a recipient-count-weighted summary of two within-release splits, not a prespecified population estimate.",
+    "All data are public test releases and all estimates use one Qwen2.5-3B setup."
+  ]
+}
