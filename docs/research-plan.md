@@ -1297,3 +1297,20 @@ equivalence. The subset English estimate also illustrates the uncertainty from
 sampling a fraction of the 180-person cohort. The result applies to one model,
 one translated template and this SIGHAN subset. No LessWrong post is warranted
 on the current evidence; see the [066 aggregate bundle](../results/sighan-instruction-language-control-v1/README.md).
+
+**Experiment 067 preregistered: forced-prefix coordinate coupling.** Local Laya
+triage weakly ranked a within-review intervention highest (0.333; next agenda
+choice 0.302, uncalibrated). The initial literature audit ruled out broad
+joint-versus-separate VA prompting as a novelty claim: UKP_Psycontrol at
+SemEval-2026 compared those formats on longitudinal essays. Experiment 067 asks
+a narrower question: does forcing the first JSON VA coordinate to 2.0 versus
+8.0 change the second coordinate generated for the same SIGHAN review? It fixes
+64 hash-selected recipients, reuses the Chinese prompt from 066, adds 256
+free-greedy continuations, and uses a paired recipient bootstrap plus a 2%
+per-arm invalid-output gate. This artificial prefix intervention measures
+conditional continuation sensitivity, not ordinary rating quality or a general
+output-order effect. Its frozen protocol SHA-256 is
+`5b9fa3cf3649b1c935dd4f7ed8b20f1c122bef2a7ca2060903a7928b7645f932`. No
+generation will begin before protocol, code, and tests are frozen in git. See
+the [Experiment 067 protocol](experiments/067-forced-coordinate-prefix-coupling.md)
+and [literature-boundary update](experiments/064-literature-boundary-audit.md).
