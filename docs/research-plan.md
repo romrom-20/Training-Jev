@@ -1361,3 +1361,25 @@ the mechanism and model-family generality are still untested. A LessWrong post
 does not make sense yet because the strongest effect is under an intentionally
 forced answer prefix and the relevant adjacent literature already covers broad
 order and joint/separate output effects. See the [068 aggregate bundle](../results/fresh-sample-prefix-coupling-replication-v1/README.md).
+
+**Experiment 069 outcome: the forced-prefix shift is present beyond greedy
+decoding.** To continue the empirical loop after the Exp068 stop recommendation,
+we scored the conditional one-decimal numeric continuations for the same two
+recipient cohorts. On both cohorts, raising the forced first valence from 2 to 8
+increased the conditional expected next arousal by +0.666 and +0.621 points,
+although greedy score changes were +0.156 and -0.031 and both intervals included
+zero. When arousal came first, the conditional expected next valence fell by
+−0.452 and −0.586, alongside greedy falls of −0.688 and −0.809. The 81-value
+candidate grid captured 99.77%–99.997% of the next-score token probability in
+these prompts. A cached-prefix scorer was checked against full-sequence token
+likelihoods (maximum observed difference `9.3e-5`). The valence-first
+distribution/greedy gap is a useful exploratory observation: greedy decoding
+hid a repeated distributional response in these cohorts. It is not evidence of
+ordinary rating anchoring; the result is post-hoc, one Qwen family, one SIGHAN
+release, and artificial forced prefixes. Zhang et al. (2025) already measure
+numeric answer distributions under low/high anchors, so no broad distributional
+anchoring claim is novel. See the [069 aggregate bundle](../results/prefix-score-distribution-audit-v1/README.md)
+and [frozen audit](experiments/069-prefix-score-distribution-audit.md). No
+LessWrong post is warranted yet. Next, use local Laya triage to choose whether
+to repeat the distribution audit at 1.5B, run a constrained sampling check, or
+stop and document this bounded result.

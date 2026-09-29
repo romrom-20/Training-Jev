@@ -1,0 +1,222 @@
+{
+  "experiment": "069-prefix-score-distribution-audit",
+  "protocol_sha256": "8002336bd83ecb39b8dabf819c74452c7e88c7623b237aa68c8b36f6b536bac1",
+  "output_sha256": "f14a610f30edfde5cfb3d3661051984b24f3d06fac9e8546162aaf94a781d94a",
+  "n_contexts": 512,
+  "n_recipients_per_cohort": 64,
+  "score_support": {
+    "n_values": 81,
+    "min": 1.0,
+    "max": 9.0,
+    "step": 0.1,
+    "normalization": "within 81 canonical one-decimal number strings only"
+  },
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 20260969,
+  "primary_diagnostic": "paired conditional expected-score shift after arousal-first high vs low forced prefix, evaluated separately in both cohorts",
+  "primary_distribution_shift_resolved_in_both_cohorts": true,
+  "posthoc_addendum": "The valid-number support mass and paired expected-minus-greedy contrasts are exploratory additions prompted by the frozen-support interpretation; they do not replace the registered primary endpoint.",
+  "by_cohort_and_order": {
+    "067": {
+      "valence_first": {
+        "n_recipients": 64,
+        "mean_expected_score_if_first_2": 1.8980941815665227,
+        "mean_expected_score_if_first_8": 2.5638250101825317,
+        "expected_score_shift_8_minus_2": {
+          "estimate": 0.6657308286160086,
+          "ci95": [
+            0.5763316060804016,
+            0.7575961217789439
+          ]
+        },
+        "observed_greedy_score_shift_8_minus_2": {
+          "estimate": 0.15625,
+          "ci95": [
+            -0.046875,
+            0.359375
+          ]
+        },
+        "expected_minus_greedy_shift_exploratory": {
+          "estimate": 0.5094808286160085,
+          "ci95": [
+            0.3389257631981701,
+            0.6787108152955503
+          ]
+        },
+        "restricted_distribution_map_shift_8_minus_2": {
+          "estimate": 0.828125,
+          "ci95": [
+            0.640625,
+            1.015625
+          ]
+        },
+        "mean_total_variation_distance": 0.3062929188148655,
+        "mean_wasserstein1_score_points": 0.6658404948897181,
+        "posthoc_valid_score_string_mass": {
+          "mean_if_first_2": 0.999915881342203,
+          "mean_if_first_8": 0.9996441813447057,
+          "high_minus_low": {
+            "estimate": -0.0002716999974972049,
+            "ci95": [
+              -0.0003318961372883988,
+              -0.00021579898651073154
+            ]
+          },
+          "interpretation": "Unnormalized model probability mass on the 81 canonical numeric prefixes; post-hoc support check."
+        },
+        "mean_restricted_entropy_bits_low_prefix": 1.6222573941123013,
+        "mean_restricted_entropy_bits_high_prefix": 1.9770172745817676
+      },
+      "arousal_first": {
+        "n_recipients": 64,
+        "mean_expected_score_if_first_2": 2.816350686481198,
+        "mean_expected_score_if_first_8": 2.364319302545038,
+        "expected_score_shift_8_minus_2": {
+          "estimate": -0.45203138393615955,
+          "ci95": [
+            -0.6073640554163997,
+            -0.28877329998702284
+          ]
+        },
+        "observed_greedy_score_shift_8_minus_2": {
+          "estimate": -0.6875,
+          "ci95": [
+            -0.984375,
+            -0.390625
+          ]
+        },
+        "expected_minus_greedy_shift_exploratory": {
+          "estimate": 0.23546861606384045,
+          "ci95": [
+            -0.03495082598463225,
+            0.5019134157935847
+          ]
+        },
+        "restricted_distribution_map_shift_8_minus_2": {
+          "estimate": -0.703125,
+          "ci95": [
+            -1.03125,
+            -0.40625
+          ]
+        },
+        "mean_total_variation_distance": 0.4030788589011633,
+        "mean_wasserstein1_score_points": 0.771906766597,
+        "posthoc_valid_score_string_mass": {
+          "mean_if_first_2": 0.9994135371143912,
+          "mean_if_first_8": 0.9982512230169474,
+          "high_minus_low": {
+            "estimate": -0.001162314097443707,
+            "ci95": [
+              -0.0015352936652591308,
+              -0.0008249988708400097
+            ]
+          },
+          "interpretation": "Unnormalized model probability mass on the 81 canonical numeric prefixes; post-hoc support check."
+        },
+        "mean_restricted_entropy_bits_low_prefix": 1.9438571350196892,
+        "mean_restricted_entropy_bits_high_prefix": 1.5743622815713825
+      }
+    },
+    "068": {
+      "valence_first": {
+        "n_recipients": 64,
+        "mean_expected_score_if_first_2": 1.9561006665186087,
+        "mean_expected_score_if_first_8": 2.5774209616169523,
+        "expected_score_shift_8_minus_2": {
+          "estimate": 0.6213202950983435,
+          "ci95": [
+            0.5301625690600495,
+            0.7177575645859289
+          ]
+        },
+        "observed_greedy_score_shift_8_minus_2": {
+          "estimate": -0.03125,
+          "ci95": [
+            -0.234375,
+            0.171875
+          ]
+        },
+        "expected_minus_greedy_shift_exploratory": {
+          "estimate": 0.6525702950983435,
+          "ci95": [
+            0.47140075722599895,
+            0.8272713367466665
+          ]
+        },
+        "restricted_distribution_map_shift_8_minus_2": {
+          "estimate": 0.828125,
+          "ci95": [
+            0.671875,
+            1.0
+          ]
+        },
+        "mean_total_variation_distance": 0.27790155835890634,
+        "mean_wasserstein1_score_points": 0.6274609413217419,
+        "posthoc_valid_score_string_mass": {
+          "mean_if_first_2": 0.9999121952669509,
+          "mean_if_first_8": 0.9996423392992495,
+          "high_minus_low": {
+            "estimate": -0.0002698559677014427,
+            "ci95": [
+              -0.0003361896086566406,
+              -0.00021027210576629878
+            ]
+          },
+          "interpretation": "Unnormalized model probability mass on the 81 canonical numeric prefixes; post-hoc support check."
+        },
+        "mean_restricted_entropy_bits_low_prefix": 1.6901983762746298,
+        "mean_restricted_entropy_bits_high_prefix": 2.0018326627252776
+      },
+      "arousal_first": {
+        "n_recipients": 64,
+        "mean_expected_score_if_first_2": 2.8402521281288893,
+        "mean_expected_score_if_first_8": 2.2541760607637547,
+        "expected_score_shift_8_minus_2": {
+          "estimate": -0.5860760673651342,
+          "ci95": [
+            -0.7117194658927058,
+            -0.4595913708706652
+          ]
+        },
+        "observed_greedy_score_shift_8_minus_2": {
+          "estimate": -0.809375,
+          "ci95": [
+            -1.1078125,
+            -0.5
+          ]
+        },
+        "expected_minus_greedy_shift_exploratory": {
+          "estimate": 0.22329893263486586,
+          "ci95": [
+            -0.028461908071036542,
+            0.4645448746416428
+          ]
+        },
+        "restricted_distribution_map_shift_8_minus_2": {
+          "estimate": -0.7484375,
+          "ci95": [
+            -1.046875,
+            -0.4359375
+          ]
+        },
+        "mean_total_variation_distance": 0.3817093878976119,
+        "mean_wasserstein1_score_points": 0.740401798144467,
+        "posthoc_valid_score_string_mass": {
+          "mean_if_first_2": 0.9991674641700263,
+          "mean_if_first_8": 0.9977118036939332,
+          "high_minus_low": {
+            "estimate": -0.0014556604760931,
+            "ci95": [
+              -0.001860994260869247,
+              -0.0010784142044958486
+            ]
+          },
+          "interpretation": "Unnormalized model probability mass on the 81 canonical numeric prefixes; post-hoc support check."
+        },
+        "mean_restricted_entropy_bits_low_prefix": 1.9897273733782712,
+        "mean_restricted_entropy_bits_high_prefix": 1.5984707546778358
+      }
+    }
+  },
+  "interpretation_limit": "This is a post-hoc restricted-support continuation audit, not a new independent confirmation or evidence about ordinary ratings."
+}

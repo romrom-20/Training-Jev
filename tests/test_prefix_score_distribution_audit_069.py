@@ -3,7 +3,7 @@ from __future__ import annotations
 import numpy as np
 import pytest
 from analyze_prefix_score_distribution_audit_069 import bootstrap_mean, validate_distribution
-from run_prefix_score_distribution_audit_069 import candidate_token_ids
+from run_prefix_score_distribution_audit_069 import candidate_token_ids, normalize_score_logprobs
 
 
 class TinyTokenizer:
@@ -32,6 +32,14 @@ def test_candidate_grid_is_exactly_ordered_and_complete() -> None:
 def test_candidate_grid_rejects_unregistered_tokenization() -> None:
     with pytest.raises(ValueError, match="three tokens"):
         candidate_token_ids(BrokenTokenizer())
+
+
+def test_probability_normalization_requires_exact_registered_support() -> None:
+    normalized = normalize_score_logprobs(np.zeros(81))
+    assert normalized.shape == (81,)
+    assert np.isclose(normalized.sum(), 1.0)
+    with pytest.raises(ValueError, match="81 finite"):
+        normalize_score_logprobs(np.zeros(90))
 
 
 def test_distribution_validation_recomputes_normalized_scores() -> None:

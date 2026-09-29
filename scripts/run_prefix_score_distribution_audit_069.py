@@ -67,6 +67,15 @@ def softmax_logprobs(logits: torch.Tensor) -> torch.Tensor:
     return F.log_softmax(logits.float(), dim=-1)
 
 
+def normalize_score_logprobs(logprobs: np.ndarray) -> np.ndarray:
+    values = np.asarray(logprobs, dtype=np.float64)
+    if values.shape != (len(VALUES),) or not np.isfinite(values).all():
+        raise ValueError(f"Expected {len(VALUES)} finite score-grid log probabilities")
+    probabilities = np.exp(values - np.max(values))
+    probabilities /= probabilities.sum()
+    return probabilities
+
+
 def score_grid(model, input_ids: list[int], digit_ids: list[int], dot_id: int,
                decimal_ids: list[int], device: str) -> np.ndarray:
     """Return log P(number string | prefix), before normalization over the grid."""
@@ -102,7 +111,8 @@ def score_grid(model, input_ids: list[int], digit_ids: list[int], dot_id: int,
         decimal_logp = softmax_logprobs(decimal_logits)[:, decimal_ids]
         first_digit_logp = first_logp[digit_ids]
         joint = first_digit_logp[:, None] + dot_logp[:, None] + decimal_logp
-        return joint.reshape(-1).detach().cpu().numpy().astype(np.float64)
+        # Flattening yields 1.0–9.9. Keep only the frozen 1.0–9.0 support.
+        return joint.reshape(-1)[:len(VALUES)].detach().cpu().numpy().astype(np.float64)
 
 
 def load_prediction_rows() -> dict[str, dict[tuple, dict]]:
@@ -210,6 +220,7 @@ def run(source_dir: Path = exp052.SOURCE_DIR, output: Path = OUT,
                 for c in contexts}
     if not set(previous).issubset(expected):
         raise ValueError("Resume artifact contains rows outside frozen contexts")
+    resumed_contexts = len(previous)
     with output.open("a", encoding="utf-8") as stream:
         for index, context in enumerate(contexts, start=1):
             key = (context["cohort"], context["case_id"], context["order"],
@@ -218,8 +229,7 @@ def run(source_dir: Path = exp052.SOURCE_DIR, output: Path = OUT,
                 continue
             logprobs = score_grid(model, context["input_ids"], digit_ids,
                                   dot_id, decimal_ids, actual_device)
-            probs = np.exp(logprobs - np.max(logprobs))
-            probs /= probs.sum()
+            probs = normalize_score_logprobs(logprobs)
             row = {k: context[k] for k in (
                 "cohort", "case_id", "order", "forced_first_value", "decoder",
                 "prompt_sha256", "observed_second",
@@ -243,7 +253,7 @@ def run(source_dir: Path = exp052.SOURCE_DIR, output: Path = OUT,
         "score_grid_size": len(values), "score_value_range": [values[0], values[-1]],
         "score_continuations_per_context": len(values),
         "elapsed_seconds_this_process_only": time.monotonic() - started,
-        "resumed_contexts": len(contexts) - len(expected - set(previous)),
+        "resumed_contexts": resumed_contexts,
         "output_sha256": sha256(output.read_bytes()),
     }
     manifest_path.parent.mkdir(parents=True, exist_ok=True)

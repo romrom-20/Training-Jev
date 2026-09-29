@@ -78,19 +78,23 @@ def summarize(predictions: Path = runner.OUT, manifest_path: Path = runner.MANIF
             raise ValueError(f"Experiment {cohort} must contain 64 recipients")
         for order_index, order in enumerate(runner.ORDERS):
             low_expect, high_expect, greedy_delta, map_delta, tv, w1 = [], [], [], [], [], []
+            low_mass, high_mass = [], []
             for case_id in case_ids:
                 low = index[(cohort, case_id, order, 2.0)]
                 high = index[(cohort, case_id, order, 8.0)]
                 p_low, p_high = low["_probs"], high["_probs"]
                 low_expect.append(float(p_low @ values))
                 high_expect.append(float(p_high @ values))
+                low_mass.append(float(np.exp(np.asarray(low["score_logprobs"])).sum()))
+                high_mass.append(float(np.exp(np.asarray(high["score_logprobs"])).sum()))
                 greedy_delta.append(float(high["observed_second"] - low["observed_second"]))
                 map_delta.append(float(values[int(np.argmax(p_high))] - values[int(np.argmax(p_low))]))
                 tv.append(float(0.5 * np.abs(p_high - p_low).sum()))
                 cdf_delta = np.cumsum(p_high) - np.cumsum(p_low)
                 w1.append(float(np.abs(cdf_delta).sum() * 0.1))
             shift = np.asarray(high_expect) - np.asarray(low_expect)
-            seed = 20260969 + (0 if cohort == "067" else 100) + order_index
+            greedy_delta_array = np.asarray(greedy_delta)
+            seed = runner.BOOTSTRAP_SEED
             paired_arrays[(cohort, order)] = shift
             metrics[cohort][order] = {
                 "n_recipients": len(case_ids),
@@ -99,11 +103,20 @@ def summarize(predictions: Path = runner.OUT, manifest_path: Path = runner.MANIF
                 "expected_score_shift_8_minus_2": bootstrap_mean(
                     shift, seed, bootstrap_replicates),
                 "observed_greedy_score_shift_8_minus_2": bootstrap_mean(
-                    np.asarray(greedy_delta), seed + 10, bootstrap_replicates),
+                    greedy_delta_array, seed, bootstrap_replicates),
+                "expected_minus_greedy_shift_exploratory": bootstrap_mean(
+                    shift - greedy_delta_array, seed, bootstrap_replicates),
                 "restricted_distribution_map_shift_8_minus_2": bootstrap_mean(
-                    np.asarray(map_delta), seed + 20, bootstrap_replicates),
+                    np.asarray(map_delta), seed, bootstrap_replicates),
                 "mean_total_variation_distance": float(np.mean(tv)),
                 "mean_wasserstein1_score_points": float(np.mean(w1)),
+                "posthoc_valid_score_string_mass": {
+                    "mean_if_first_2": float(np.mean(low_mass)),
+                    "mean_if_first_8": float(np.mean(high_mass)),
+                    "high_minus_low": bootstrap_mean(
+                        np.asarray(high_mass) - np.asarray(low_mass), seed, bootstrap_replicates),
+                    "interpretation": "Unnormalized model probability mass on the 81 canonical numeric prefixes; post-hoc support check.",
+                },
                 "mean_restricted_entropy_bits_low_prefix": float(np.mean([
                     -(p * np.log2(np.maximum(p, 1e-300))).sum()
                     for p in (index[(cohort, case_id, order, 2.0)]["_probs"] for case_id in case_ids)
@@ -126,8 +139,10 @@ def summarize(predictions: Path = runner.OUT, manifest_path: Path = runner.MANIF
                            "max": float(values[-1]), "step": 0.1,
                            "normalization": "within 81 canonical one-decimal number strings only"},
         "bootstrap_replicates": bootstrap_replicates,
+        "bootstrap_seed": runner.BOOTSTRAP_SEED,
         "primary_diagnostic": "paired conditional expected-score shift after arousal-first high vs low forced prefix, evaluated separately in both cohorts",
         "primary_distribution_shift_resolved_in_both_cohorts": primary_resolved,
+        "posthoc_addendum": "The valid-number support mass and paired expected-minus-greedy contrasts are exploratory additions prompted by the frozen-support interpretation; they do not replace the registered primary endpoint.",
         "by_cohort_and_order": metrics,
         "interpretation_limit": "This is a post-hoc restricted-support continuation audit, not a new independent confirmation or evidence about ordinary ratings.",
     }
