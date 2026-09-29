@@ -2,6 +2,8 @@
 
 from pathlib import Path
 
+import analyze_schema_corpus_controls_076 as analysis
+import numpy as np
 import run_schema_corpus_controls_076 as exp
 
 
@@ -61,3 +63,10 @@ def test_role_control_parser_requires_exact_target_key():
     }
     assert exp.parse_target(job, "5.4}") == 5.4
     assert exp.parse_target(job, '5.4, "valence": 8.0}') is None
+
+
+def test_score_support_normalizes_expected_value_but_reports_raw_mass():
+    logprobs = np.log(np.full(81, 0.5 / 81.0))
+    expected, mass = analysis._expected({"canonical_logprobs": logprobs.tolist()})
+    assert abs(expected - 5.0) < 1e-12
+    assert abs(mass - 0.5) < 1e-12
