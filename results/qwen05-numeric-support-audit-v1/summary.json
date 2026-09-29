@@ -1,0 +1,298 @@
+{
+  "experiment": "074-qwen05-numeric-support-audit",
+  "protocol_sha256": "373aa9ecb3c4a7b47a831b1b7dc256a0014ab424e33a18fb03e1a340e62b3c77",
+  "output_sha256": "aef9fec63b485345eb59ae85e04adf9e431463a8b4c3e4c4738a32dcf2a57f78",
+  "reference_073_output_sha256": "31a85689804901b2be8d85aa5a13eba388805574d9c5d10ba9e12f48b6d7d2e1",
+  "reference_071_output_sha256": "a8293a941cde3dd706f75dc069e8eb01ca66b2701c07a05394e2a91b6a631f95",
+  "recipient_ids_sha256": "4f03b671acd8aedfce6cef7eefae4c738a80d29fbcd7f30f042d4243fd9e001d",
+  "n_recipients": 24,
+  "n_model_contexts": 192,
+  "candidate_surfaces_per_context": {
+    "canonical": 81,
+    "extended": 81,
+    "integer": 9
+  },
+  "invalid_by_model_order_forced_value": {
+    "qwen-0.5b": {
+      "valence_first": {
+        "2.0": 0,
+        "8.0": 0
+      },
+      "arousal_first": {
+        "2.0": 0,
+        "8.0": 0
+      }
+    },
+    "qwen-1.5b": {
+      "valence_first": {
+        "2.0": 0,
+        "8.0": 0
+      },
+      "arousal_first": {
+        "2.0": 0,
+        "8.0": 0
+      }
+    }
+  },
+  "invalid_rates_by_model_order_forced_value": {
+    "qwen-0.5b": {
+      "valence_first": {
+        "2.0": 0.0,
+        "8.0": 0.0
+      },
+      "arousal_first": {
+        "2.0": 0.0,
+        "8.0": 0.0
+      }
+    },
+    "qwen-1.5b": {
+      "valence_first": {
+        "2.0": 0.0,
+        "8.0": 0.0
+      },
+      "arousal_first": {
+        "2.0": 0.0,
+        "8.0": 0.0
+      }
+    }
+  },
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 20260974,
+  "expected_shift_by_model_and_order": {
+    "qwen-0.5b": {
+      "valence_first": {
+        "canonical": {
+          "estimate": 2.5770565738946534,
+          "ci95": [
+            2.424365877229303,
+            2.7184097810498216
+          ]
+        },
+        "all_parser_forms": {
+          "estimate": 2.5727796811342043,
+          "ci95": [
+            2.4197283165535692,
+            2.714315790690578
+          ]
+        },
+        "original_number_only_from_073": {
+          "estimate": 2.5824846751638924,
+          "ci95": [
+            2.4303437337170157,
+            2.72333818827849
+          ]
+        },
+        "mean_unnormalized_mass_by_form": {
+          "canonical": 0.9592228977434528,
+          "extended": 4.759738901280496e-05,
+          "integer": 0.001534810699759484,
+          "combined": 0.960805305832225
+        }
+      },
+      "arousal_first": {
+        "canonical": {
+          "estimate": 0.11417445994209847,
+          "ci95": [
+            0.0381706809340858,
+            0.19199398651529345
+          ]
+        },
+        "all_parser_forms": {
+          "estimate": 0.11367663194069799,
+          "ci95": [
+            0.03762792286153275,
+            0.19153027391132424
+          ]
+        },
+        "original_number_only_from_073": {
+          "estimate": 0.13789011609589863,
+          "ci95": [
+            0.06187470957797118,
+            0.21619963324513952
+          ]
+        },
+        "mean_unnormalized_mass_by_form": {
+          "canonical": 0.8840940313879653,
+          "extended": 0.0001369479366041492,
+          "integer": 0.0003480730956258024,
+          "combined": 0.8845790524201952
+        }
+      }
+    },
+    "qwen-1.5b": {
+      "valence_first": {
+        "canonical": {
+          "estimate": 2.0084782829014944,
+          "ci95": [
+            1.8294685907655173,
+            2.1726598593395807
+          ]
+        },
+        "all_parser_forms": {
+          "estimate": 2.0084855682407596,
+          "ci95": [
+            1.8294772132239652,
+            2.1726691239009286
+          ]
+        },
+        "original_number_only_from_073": {
+          "estimate": 2.0087702029142114,
+          "ci95": [
+            1.8297635211251049,
+            2.173000989321669
+          ]
+        },
+        "mean_unnormalized_mass_by_form": {
+          "canonical": 0.9975029323991377,
+          "extended": 2.424906088451153e-05,
+          "integer": 1.885373667676706e-05,
+          "combined": 0.997546035196699
+        }
+      },
+      "arousal_first": {
+        "canonical": {
+          "estimate": 1.0120936893980297,
+          "ci95": [
+            0.7413785570738366,
+            1.2908894274534033
+          ]
+        },
+        "all_parser_forms": {
+          "estimate": 1.0126670446409276,
+          "ci95": [
+            0.7418943866860251,
+            1.2914408419225347
+          ]
+        },
+        "original_number_only_from_073": {
+          "estimate": 1.0128581651918809,
+          "ci95": [
+            0.7420563680472972,
+            1.2917116201066872
+          ]
+        },
+        "mean_unnormalized_mass_by_form": {
+          "canonical": 0.9977520081162937,
+          "extended": 2.069215433517321e-05,
+          "integer": 0.00040442302586592914,
+          "combined": 0.9981771232964949
+        }
+      }
+    }
+  },
+  "greedy_shift_by_model_and_order": {
+    "qwen-0.5b": {
+      "valence_first": {
+        "estimate": 3.1875,
+        "ci95": [
+          2.9166666666666665,
+          3.4791666666666665
+        ]
+      },
+      "arousal_first": {
+        "estimate": 0.3333333333333333,
+        "ci95": [
+          0.22916666666666666,
+          0.4166666666666667
+        ]
+      }
+    },
+    "qwen-1.5b": {
+      "valence_first": {
+        "estimate": 1.875,
+        "ci95": [
+          1.6666666666666667,
+          2.0
+        ]
+      },
+      "arousal_first": {
+        "estimate": 0.5499999999999999,
+        "ci95": [
+          -0.25,
+          1.425
+        ]
+      }
+    }
+  },
+  "paired_method_contrasts": {
+    "qwen-0.5b": {
+      "valence_first": {
+        "all_parser_forms_minus_canonical_and_close": {
+          "estimate": -0.004276892760448976,
+          "ci95": [
+            -0.004835088164274073,
+            -0.003778634474269304
+          ]
+        },
+        "canonical_and_close_minus_original_number_only": {
+          "estimate": -0.005428101269239131,
+          "ci95": [
+            -0.00618729993579672,
+            -0.004751648408168962
+          ]
+        }
+      },
+      "arousal_first": {
+        "all_parser_forms_minus_canonical_and_close": {
+          "estimate": -0.0004978280014004873,
+          "ci95": [
+            -0.0006382852238355302,
+            -0.00035262993700036773
+          ]
+        },
+        "canonical_and_close_minus_original_number_only": {
+          "estimate": -0.02371565615380015,
+          "ci95": [
+            -0.027502643368880968,
+            -0.020525232424947488
+          ]
+        }
+      }
+    },
+    "qwen-1.5b": {
+      "valence_first": {
+        "all_parser_forms_minus_canonical_and_close": {
+          "estimate": 7.285339265084012e-06,
+          "ci95": [
+            3.1503242295107446e-06,
+            1.1241018825919784e-05
+          ]
+        },
+        "canonical_and_close_minus_original_number_only": {
+          "estimate": -0.0002919200127166251,
+          "ci95": [
+            -0.0003604286558675576,
+            -0.00022483837182304402
+          ]
+        }
+      },
+      "arousal_first": {
+        "all_parser_forms_minus_canonical_and_close": {
+          "estimate": 0.0005733552428978569,
+          "ci95": [
+            0.00040386140493090114,
+            0.000774415366115384
+          ]
+        },
+        "canonical_and_close_minus_original_number_only": {
+          "estimate": -0.0007644757938513139,
+          "ci95": [
+            -0.0009895486875990333,
+            -0.0005459723953793013
+          ]
+        }
+      }
+    }
+  },
+  "full_sequence_likelihood_validation": {
+    "qwen-0.5b": {
+      "n_checks": 32,
+      "max_abs_logprob_error": 4.1961669921875e-05
+    },
+    "qwen-1.5b": {
+      "n_checks": 32,
+      "max_abs_logprob_error": 6.580352783203125e-05
+    }
+  },
+  "interpretation_limit": "Support audit on 24 previously observed laptop reviews; alternate forms are accepted by the parser but violate one-decimal instructions, and the set still does not enumerate all valid parser outputs."
+}

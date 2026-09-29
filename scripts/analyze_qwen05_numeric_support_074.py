@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 
 import numpy as np
+import run_cross_family_prefix_coupling_071 as exp071
 import run_prefix_score_distribution_audit_069 as exp069
 import run_qwen05_numeric_support_074 as runner
 import run_qwen05_prefix_size_073 as exp073
@@ -83,6 +84,17 @@ def summarize(predictions: Path = runner.OUT, manifest_path: Path = runner.MANIF
     prior_rows = [json.loads(line) for line in exp073.OUT.read_text().splitlines() if line.strip()]
     prior_index = {(row["case_id"], row["order"], float(row["forced_first_value"])): row
                    for row in prior_rows}
+    size_manifest = json.loads(exp071.MANIFEST.read_text())
+    size_hash = sha256(exp071.OUT.read_bytes())
+    if size_manifest.get("output_sha256") != size_hash or size_manifest.get("n_total_model_contexts") != 768:
+        raise ValueError("Experiment 071 comparison artifact is incomplete")
+    size_rows = [json.loads(line) for line in exp071.OUT.read_text().splitlines() if line.strip()]
+    size_index = {
+        (row["model_key"], row["case_id"], row["order"],
+         float(row["forced_first_value"])): row for row in size_rows
+    }
+    if len(size_index) != 768:
+        raise ValueError("Experiment 071 comparison cells are not unique")
 
     invalid = manifest["invalid_by_model_order_forced_value"]
     metrics, method_contrasts = {}, {}
@@ -109,6 +121,8 @@ def summarize(predictions: Path = runner.OUT, manifest_path: Path = runner.MANIF
                     canonical_mass = float(np.exp(row["canonical_logprobs"]).sum())
                     extended_mass = float(np.exp(row["extended_logprobs"]).sum())
                     integer_mass = float(np.exp(row["integer_logprobs"]).sum())
+                    if canonical_mass + extended_mass + integer_mass > 1.0001:
+                        raise ValueError("Disjoint full continuations exceed unit probability mass")
                     mass_rows["canonical"].append(canonical_mass)
                     mass_rows["extended"].append(extended_mass)
                     mass_rows["integer"].append(integer_mass)
@@ -117,7 +131,11 @@ def summarize(predictions: Path = runner.OUT, manifest_path: Path = runner.MANIF
                     None if low["greedy_second_score"] is None or high["greedy_second_score"] is None
                     else float(high["greedy_second_score"] - low["greedy_second_score"])
                 )
-                p_low, p_high = prior_index[(case_id, order, 2.0)], prior_index[(case_id, order, 8.0)]
+                if model == "qwen-0.5b":
+                    p_low, p_high = prior_index[(case_id, order, 2.0)], prior_index[(case_id, order, 8.0)]
+                else:
+                    p_low = size_index[(model, case_id, order, 2.0)]
+                    p_high = size_index[(model, case_id, order, 8.0)]
                 original.append(float((np.exp(p_high["score_logprobs"]) /
                                        np.exp(p_high["score_logprobs"]).sum()) @ values
                                       - (np.exp(p_low["score_logprobs"]) /
@@ -153,6 +171,7 @@ def summarize(predictions: Path = runner.OUT, manifest_path: Path = runner.MANIF
         "protocol_sha256": runner.PROTOCOL_SHA256,
         "output_sha256": output_hash,
         "reference_073_output_sha256": prior_hash,
+        "reference_071_output_sha256": size_hash,
         "recipient_ids_sha256": metadata["recipient_ids_sha256"],
         "n_recipients": len(case_ids), "n_model_contexts": len(rows),
         "candidate_surfaces_per_context": {"canonical": 81, "extended": 81, "integer": 9},

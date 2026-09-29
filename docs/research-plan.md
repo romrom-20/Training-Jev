@@ -1482,3 +1482,14 @@ independently checks selected sequence likelihoods. The alternative spellings vi
 the task's formatting instruction and are analyzed separately. Laya ranked this
 24-review support audit highest (choice B; 0.313, uncalibrated). The protocol is
 [074](experiments/074-qwen05-numeric-support-audit.md).
+
+**Experiment 074 outcome.** The probability-support audit did not remove the
+0.5B order asymmetry. Complete one-decimal JSON continuations, including the closing
+brace, shifted +2.577 valence-first and +0.114 arousal-first; adding common parser-
+accepted alternate spellings changed these to +2.573/+0.114. Full-forward sequence
+checks matched cached scores within 6.6e-5 log probability. On the same 24 reviews,
+1.5B shifted +2.008/+1.012. The 0.5B valid-completion mass remained lower, especially
+arousal-first, but formatting variants added little mass and did not materially move
+the conditional effect. This strengthens the case for a field-order-by-size
+interaction in this sample, not a mechanism or scaling law. See the
+[074 audit](../results/qwen05-numeric-support-audit-v1/README.md).
