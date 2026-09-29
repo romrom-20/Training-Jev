@@ -1,0 +1,274 @@
+{
+  "experiment": "070-prefix-score-distribution-size-transfer",
+  "protocol_sha256": "9c7604f0ef25f64875c568ccbe2966b1f3f3e0fc8f7c565276bf75de59300aeb",
+  "output_sha256": "0671aebe0b4b4c22b868377a2a713388a266ba2736b1de9edf4201370b08f8bd",
+  "parent_069_output_sha256": "f14a610f30edfde5cfb3d3661051984b24f3d06fac9e8546162aaf94a781d94a",
+  "n_contexts": 512,
+  "score_grid_size": 81,
+  "invalid_by_cohort_order_forced_value": {
+    "067": {
+      "valence_first": {
+        "2.0": 0,
+        "8.0": 0
+      },
+      "arousal_first": {
+        "2.0": 0,
+        "8.0": 0
+      }
+    },
+    "068": {
+      "valence_first": {
+        "2.0": 0,
+        "8.0": 0
+      },
+      "arousal_first": {
+        "2.0": 0,
+        "8.0": 0
+      }
+    }
+  },
+  "invalid_rates_by_cohort_order_forced_value": {
+    "067": {
+      "valence_first": {
+        "2.0": 0.0,
+        "8.0": 0.0
+      },
+      "arousal_first": {
+        "2.0": 0.0,
+        "8.0": 0.0
+      }
+    },
+    "068": {
+      "valence_first": {
+        "2.0": 0.0,
+        "8.0": 0.0
+      },
+      "arousal_first": {
+        "2.0": 0.0,
+        "8.0": 0.0
+      }
+    }
+  },
+  "invalid_gate_passed": true,
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 20260970,
+  "by_cohort_and_order": {
+    "067": {
+      "valence_first": {
+        "n_recipients": 64,
+        "expected_score_shift_8_minus_2": {
+          "estimate": 2.8255744955522903,
+          "ci95": [
+            2.685342821096184,
+            2.955216633175505
+          ]
+        },
+        "greedy_score_shift_8_minus_2": {
+          "estimate": 3.125,
+          "ci95": [
+            2.875,
+            3.359375
+          ],
+          "n_complete": 64
+        },
+        "expected_minus_greedy_shift": {
+          "estimate": -0.29942550444770993,
+          "ci95": [
+            -0.48796908302995917,
+            -0.10659368415183822
+          ],
+          "n_complete": 64
+        },
+        "paired_1_5b_minus_3b_expected_shift": {
+          "estimate": 2.1598436669362817,
+          "ci95": [
+            1.968243636951228,
+            2.3370903138752817
+          ]
+        },
+        "mean_total_variation_distance": 0.5785712478056877,
+        "mean_wasserstein1_score_points": 2.8255744955522903,
+        "valid_score_string_mass": {
+          "mean_if_first_2": 0.9968863355735901,
+          "mean_if_first_8": 0.9992226573668499,
+          "high_minus_low": {
+            "estimate": 0.0023363217932598785,
+            "ci95": [
+              0.0021166520900607853,
+              0.0025596657502339488
+            ]
+          }
+        },
+        "restricted_map_shift": {
+          "estimate": 4.15625,
+          "ci95": [
+            3.78125,
+            4.53125
+          ]
+        }
+      },
+      "arousal_first": {
+        "n_recipients": 64,
+        "expected_score_shift_8_minus_2": {
+          "estimate": 1.7855432815663064,
+          "ci95": [
+            1.636680534149452,
+            1.920683850158405
+          ]
+        },
+        "greedy_score_shift_8_minus_2": {
+          "estimate": 2.109375,
+          "ci95": [
+            1.53125,
+            2.65625
+          ],
+          "n_complete": 64
+        },
+        "expected_minus_greedy_shift": {
+          "estimate": -0.32383171843369374,
+          "ci95": [
+            -0.7629438207406749,
+            0.14234608261747267
+          ],
+          "n_complete": 64
+        },
+        "paired_1_5b_minus_3b_expected_shift": {
+          "estimate": 2.2375746655024655,
+          "ci95": [
+            1.9984811022341102,
+            2.4535927357151803
+          ]
+        },
+        "mean_total_variation_distance": 0.3248504811777098,
+        "mean_wasserstein1_score_points": 1.7867358607506805,
+        "valid_score_string_mass": {
+          "mean_if_first_2": 0.9995181497782497,
+          "mean_if_first_8": 0.9994941589574774,
+          "high_minus_low": {
+            "estimate": -2.3990820772284982e-05,
+            "ci95": [
+              -6.747228589206269e-05,
+              2.0205089627222057e-05
+            ]
+          }
+        },
+        "restricted_map_shift": {
+          "estimate": 4.453125,
+          "ci95": [
+            3.609375,
+            5.28125
+          ]
+        }
+      }
+    },
+    "068": {
+      "valence_first": {
+        "n_recipients": 64,
+        "expected_score_shift_8_minus_2": {
+          "estimate": 2.7920006548042657,
+          "ci95": [
+            2.662021091641166,
+            2.917429933020431
+          ]
+        },
+        "greedy_score_shift_8_minus_2": {
+          "estimate": 3.109375,
+          "ci95": [
+            2.890625,
+            3.34375
+          ],
+          "n_complete": 64
+        },
+        "expected_minus_greedy_shift": {
+          "estimate": -0.3173743451957346,
+          "ci95": [
+            -0.5066250838705985,
+            -0.13360372839995105
+          ],
+          "n_complete": 64
+        },
+        "paired_1_5b_minus_3b_expected_shift": {
+          "estimate": 2.170680359705922,
+          "ci95": [
+            2.018243014351538,
+            2.317857077333999
+          ]
+        },
+        "mean_total_variation_distance": 0.5739023173727356,
+        "mean_wasserstein1_score_points": 2.792000654804265,
+        "valid_score_string_mass": {
+          "mean_if_first_2": 0.9966450629292416,
+          "mean_if_first_8": 0.9992307397402529,
+          "high_minus_low": {
+            "estimate": 0.0025856768110112376,
+            "ci95": [
+              0.002342006537750997,
+              0.0028525879134750206
+            ]
+          }
+        },
+        "restricted_map_shift": {
+          "estimate": 4.265625,
+          "ci95": [
+            3.875,
+            4.65625
+          ]
+        }
+      },
+      "arousal_first": {
+        "n_recipients": 64,
+        "expected_score_shift_8_minus_2": {
+          "estimate": 1.8173306429172897,
+          "ci95": [
+            1.683627825035092,
+            1.9486132568308712
+          ]
+        },
+        "greedy_score_shift_8_minus_2": {
+          "estimate": 2.3125,
+          "ci95": [
+            1.765625,
+            2.8441406249999943
+          ],
+          "n_complete": 64
+        },
+        "expected_minus_greedy_shift": {
+          "estimate": -0.4951693570827103,
+          "ci95": [
+            -0.9706905089571948,
+            -0.020830895596306284
+          ],
+          "n_complete": 64
+        },
+        "paired_1_5b_minus_3b_expected_shift": {
+          "estimate": 2.4034067102824235,
+          "ci95": [
+            2.2030248892745585,
+            2.591141598266083
+          ]
+        },
+        "mean_total_variation_distance": 0.3215698134349087,
+        "mean_wasserstein1_score_points": 1.8173306429172902,
+        "valid_score_string_mass": {
+          "mean_if_first_2": 0.9995214708694042,
+          "mean_if_first_8": 0.9994995011740239,
+          "high_minus_low": {
+            "estimate": -2.196969538027782e-05,
+            "ci95": [
+              -6.710453439112761e-05,
+              2.4518760341366296e-05
+            ]
+          }
+        },
+        "restricted_map_shift": {
+          "estimate": 5.15625,
+          "ci95": [
+            4.34375,
+            5.953125
+          ]
+        }
+      }
+    }
+  },
+  "interpretation_limit": "Same-Qwen-family size transfer on reused recipients after observing 3B outcomes; this is neither independent replication nor evidence about ordinary ratings."
+}

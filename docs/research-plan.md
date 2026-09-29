@@ -1383,3 +1383,26 @@ and [frozen audit](experiments/069-prefix-score-distribution-audit.md). No
 LessWrong post is warranted yet. Next, use local Laya triage to choose whether
 to repeat the distribution audit at 1.5B, run a constrained sampling check, or
 stop and document this bounded result.
+
+**Experiment 070 outcome: the smaller sibling follows the forced coordinate in
+both orders.** Laya's next-action triage selected a Qwen2.5-1.5B transfer (choice
+A, 0.418 uncalibrated). We reused the exact two 64-recipient cohorts and 512
+prefix contexts, scored all 81 numeric continuations, and generated one greedy
+continuation per context. All 512 outputs parsed. At 1.5B, the conditional
+expected second score rose by +2.826/+2.792 when valence was first and
++1.786/+1.817 when arousal was first. Its greedy shifts were similarly positive
+(+3.125/+3.109 and +2.109/+2.313). In the paired same-recipient comparison,
+1.5B-minus-3B expected-score shift was +2.16 to +2.40 points in all four
+cohort/order cells, with intervals above zero. In particular, arousal-first
+conditional valence moved positive in 1.5B but negative in 3B. This is a strong
+within-family size difference for an artificial forced-prefix continuation;
+it is not a general model-capability law or ordinary rating effect. The cache
+scorer passed a full-sequence likelihood spot check, and the 81-score support
+contained at least 99.66% of token probability. See the [070 aggregate bundle](../results/prefix-score-distribution-size-transfer-v1/README.md)
+and [protocol](experiments/070-prefix-score-distribution-size-transfer.md).
+
+**Publication judgment after 069–070.** The scale contrast is the most
+interesting empirical result so far, but it is one family, one dataset release,
+one prompt, two previously selected cohorts, and an intentionally forced
+assistant prefix. Literature already includes numerical anchoring distributions
+and model differences in anchoring consistency ([Zhang et al., 2025](https://doi.org/10.1007/s42001-025-00435-2)); generic order effects are also established. Do not draft a LessWrong post yet. A third Qwen scale or an independent model-family test should come first.
