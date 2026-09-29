@@ -1432,3 +1432,14 @@ anchoring and model-dependent answer distributions are established
 interesting here is a specific scale/family interaction in forced
 coordinate-to-coordinate continuation. The artificial prefix, single
 benchmark release, and model-specific templates are large scope limits.
+
+## Experiment 072 preregistration — restaurant prefix/domain check
+
+Experiment 072 checks whether the model-specific forced-prefix response pattern
+from 071 appears on English restaurant reviews, using 64 polarity-balanced IDs and
+the same models, prompts, four prefixes, and full 81-score conditional grid. The
+source split and selected IDs were already scored under other conditions in 051;
+therefore 072 tests new prefix treatments on reused public items and is not an
+independent sample replication. Laya selected this follow-up for agenda triage only
+(probability 0.2842, uncalibrated). Its protocol and runner are
+[`072`](experiments/072-restaurant-prefix-domain-replication.md).
