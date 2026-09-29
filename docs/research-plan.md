@@ -1511,3 +1511,61 @@ the output schemas differ, so it does not isolate role/location alone. Prior wor
 already finds output-order effects in LLM scoring ([Chen et al. 2024](https://arxiv.org/abs/2406.02863)).
 The next useful work is a schema-matched factorial that separates cue location from
 field order and output shape. See the [075 result bundle](../results/anchor-location-control-v1/README.md).
+
+## Forced-coordinate controls, 29 September 2026
+
+The recent anchoring literature makes broad claims untenable. Huang et al.
+(2025) study numerical anchors in LLMs; Kapetanovic et al. (2026) study prior
+score metadata in LLM judges; Chen et al. (2024) study reason/score output
+order; recent structured-output studies show that format and schema language
+can shift answer distributions. These precedents are summarized in the
+[prior-art review](prior-art.md). The remaining question here is narrow:
+whether a forced score on one affect dimension changes the conditional
+distribution for the other dimension differently by field order, anchor
+source, wording, and model size.
+
+**Experiment 076** placed a same-final-request, same-one-key-schema prior-user
+versus prior-assistant control on 24 reused DimABSA reviews and tested the
+assistant-prefix manipulation on 24 SemEval-2014 laptop sentences not used in
+prior recorded model-scoring runs. The fresh set showed strong order moderation for both Qwen sizes.
+Qwen-0.5B's arousal-first expected 8−2 shift was −0.457 (95% recipient
+bootstrap interval [−0.550, −0.358]), versus +0.114 on earlier DimABSA reviews.
+Its valence-first effect stayed high (+2.327). Qwen-1.5B had +0.872/+0.308
+on the fresh corpus, smaller than earlier matched-review values. This is a
+small context-transfer signal; corpus, sample, and sentence style changed
+together, and Part B has no VA gold labels. One Qwen-0.5B prior-user,
+arousal-first role arm failed the 2% output-validity gate: 17/48 outputs used
+the wrong JSON key. Its preregistered role contrast was withheld. See the
+[076 bundle](../results/schema-corpus-controls-v1/README.md).
+
+**Experiment 077** explicitly named the target score and JSON key for Qwen-0.5B
+on the same 24 role-control items. All 192 outputs parsed. Assistant-prior
+minus user-prior expected shift was +0.273 valence-first and +0.380
+arousal-first. This resolves the observed format failure on these prompts but
+retains a role/acknowledgement context difference. See the
+[077 bundle](../results/explicit-target-role-control-v1/README.md).
+
+**Experiment 078** repeated that explicit-target protocol with Qwen-1.5B; all
+192 outputs parsed. Assistant-prior minus user-prior expected shift was
+−0.476 valence-first and +0.269 arousal-first. Thus the direction of the
+role/context contrast differed between the two Qwen sizes for valence-first,
+while it remained positive for arousal-first. This model-by-order pattern is a
+candidate for replication, not a family-wide scaling law: both runs use the
+same 24 reviews, and the chat-role manipulation includes a neutral
+acknowledgement turn in the prior-user condition. See the
+[078 bundle](../results/qwen15-explicit-target-role-v1/README.md).
+
+Laya next selected a wording-by-role factorial. The registered runs already
+contain its cells, so we combined them after the fact rather than rerunning
+duplicate contexts. The resulting post-hoc analysis finds target wording
+changes the assistant-versus-user contrast for both models in some orders, but
+the Qwen-0.5B generic-wording/arousal-first user cell remains invalid and all
+contrasts depending on it are withheld. The full exploratory estimates and
+input hashes are in the
+[factorial analysis](../results/target-wording-role-factorial-v1/README.md).
+
+The most interesting result so far is not a new generic bias: it is that a
+small change in target wording repairs format validity and changes conditional
+score shifts, while the role contrast reverses with field order and model size
+on a small reused set. A larger recipient replication is required before
+deciding whether that interaction is stable or worth a LessWrong post.

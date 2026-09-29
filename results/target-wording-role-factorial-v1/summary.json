@@ -1,0 +1,551 @@
+{
+  "analysis": "post-hoc target-wording-by-anchor-source factorial, Experiments 076\u2013078",
+  "preregistered": false,
+  "analysis_note_sha256": "00b7076a23222a7e1180dd6d73212dc02103e7deb237101494af80522e06c334",
+  "input_sha256": {
+    "generic": "7f38b2486aba6b63ef4195c5c9ed04cd8abfe6254c24a8afaa74491e2ffd4dac",
+    "explicit_0.5b": "c392694b49dd7d660a292e859464e253f265105dd130048369959478bbbd2d6e",
+    "explicit_1.5b": "4096a05b35817c69df8d34a046c8902c82020480a8472e138c0bd20393f6245c"
+  },
+  "n_rows": 768,
+  "n_recipients": 24,
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 20260979,
+  "invalid_rates": {
+    "qwen-0.5b": {
+      "generic": {
+        "valence_first": {
+          "prior_assistant": {
+            "2.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            },
+            "8.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            }
+          },
+          "prior_user": {
+            "2.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            },
+            "8.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            }
+          }
+        },
+        "arousal_first": {
+          "prior_assistant": {
+            "2.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            },
+            "8.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            }
+          },
+          "prior_user": {
+            "2.0": {
+              "invalid": 12,
+              "n": 24,
+              "rate": 0.5
+            },
+            "8.0": {
+              "invalid": 5,
+              "n": 24,
+              "rate": 0.20833333333333334
+            }
+          }
+        }
+      },
+      "explicit": {
+        "valence_first": {
+          "prior_assistant": {
+            "2.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            },
+            "8.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            }
+          },
+          "prior_user": {
+            "2.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            },
+            "8.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            }
+          }
+        },
+        "arousal_first": {
+          "prior_assistant": {
+            "2.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            },
+            "8.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            }
+          },
+          "prior_user": {
+            "2.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            },
+            "8.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            }
+          }
+        }
+      }
+    },
+    "qwen-1.5b": {
+      "generic": {
+        "valence_first": {
+          "prior_assistant": {
+            "2.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            },
+            "8.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            }
+          },
+          "prior_user": {
+            "2.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            },
+            "8.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            }
+          }
+        },
+        "arousal_first": {
+          "prior_assistant": {
+            "2.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            },
+            "8.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            }
+          },
+          "prior_user": {
+            "2.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            },
+            "8.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            }
+          }
+        }
+      },
+      "explicit": {
+        "valence_first": {
+          "prior_assistant": {
+            "2.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            },
+            "8.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            }
+          },
+          "prior_user": {
+            "2.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            },
+            "8.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            }
+          }
+        },
+        "arousal_first": {
+          "prior_assistant": {
+            "2.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            },
+            "8.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            }
+          },
+          "prior_user": {
+            "2.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            },
+            "8.0": {
+              "invalid": 0,
+              "n": 24,
+              "rate": 0.0
+            }
+          }
+        }
+      }
+    }
+  },
+  "results": {
+    "qwen-0.5b": {
+      "valence_first": {
+        "expected_shift_8_minus_2": {
+          "generic": {
+            "prior_assistant": {
+              "estimate": 1.7440075043863867,
+              "ci95": [
+                1.6395216489652527,
+                1.858391685969993
+              ],
+              "n_recipients": 24
+            },
+            "prior_user": {
+              "estimate": 1.328318874851926,
+              "ci95": [
+                1.2408123399860131,
+                1.419646776056894
+              ],
+              "n_recipients": 24
+            }
+          },
+          "explicit": {
+            "prior_assistant": {
+              "estimate": 0.9414474900604559,
+              "ci95": [
+                0.8069092433831164,
+                1.0756195279936869
+              ],
+              "n_recipients": 24
+            },
+            "prior_user": {
+              "estimate": 0.6684640586205854,
+              "ci95": [
+                0.5809801354990213,
+                0.7522623795439768
+              ],
+              "n_recipients": 24
+            }
+          }
+        },
+        "explicit_minus_generic_shift": {
+          "prior_assistant": {
+            "estimate": -0.8025600143259307,
+            "ci95": [
+              -0.8658318099231773,
+              -0.7411964274529961
+            ],
+            "n_recipients": 24
+          },
+          "prior_user": {
+            "estimate": -0.6598548162313403,
+            "ci95": [
+              -0.7156592057194375,
+              -0.6046585630432966
+            ],
+            "n_recipients": 24
+          }
+        },
+        "assistant_minus_user_shift": {
+          "generic": {
+            "estimate": 0.4156886295344607,
+            "ci95": [
+              0.33345278170780535,
+              0.4950783852952877
+            ],
+            "n_recipients": 24
+          },
+          "explicit": {
+            "estimate": 0.2729834314398705,
+            "ci95": [
+              0.17791702735652695,
+              0.3712404308736031
+            ],
+            "n_recipients": 24
+          }
+        },
+        "wording_by_role_difference_in_differences": {
+          "estimate": -0.14270519809459017,
+          "ci95": [
+            -0.20930542786492307,
+            -0.07759377402297679
+          ],
+          "n_recipients": 24
+        }
+      },
+      "arousal_first": {
+        "expected_shift_8_minus_2": {
+          "generic": {
+            "prior_assistant": {
+              "estimate": 1.8049582422941501,
+              "ci95": [
+                1.6607838420651944,
+                1.9477232909001638
+              ],
+              "n_recipients": 24
+            },
+            "prior_user": null
+          },
+          "explicit": {
+            "prior_assistant": {
+              "estimate": 1.2021855961292767,
+              "ci95": [
+                1.0757057353599295,
+                1.3252470658669027
+              ],
+              "n_recipients": 24
+            },
+            "prior_user": {
+              "estimate": 0.8217035431984426,
+              "ci95": [
+                0.705942622781955,
+                0.9370340338964327
+              ],
+              "n_recipients": 24
+            }
+          }
+        },
+        "explicit_minus_generic_shift": {
+          "prior_assistant": {
+            "estimate": -0.6027726461648731,
+            "ci95": [
+              -0.687234174642433,
+              -0.5193941053253
+            ],
+            "n_recipients": 24
+          },
+          "prior_user": null
+        },
+        "assistant_minus_user_shift": {
+          "generic": null,
+          "explicit": {
+            "estimate": 0.3804820529308341,
+            "ci95": [
+              0.31887138145531496,
+              0.44607012554230296
+            ],
+            "n_recipients": 24
+          }
+        },
+        "wording_by_role_difference_in_differences": null
+      }
+    },
+    "qwen-1.5b": {
+      "valence_first": {
+        "expected_shift_8_minus_2": {
+          "generic": {
+            "prior_assistant": {
+              "estimate": 0.6254344508157171,
+              "ci95": [
+                0.5621063944621861,
+                0.6877735623932443
+              ],
+              "n_recipients": 24
+            },
+            "prior_user": {
+              "estimate": 0.9310706243205858,
+              "ci95": [
+                0.8242891611587018,
+                1.038930348131432
+              ],
+              "n_recipients": 24
+            }
+          },
+          "explicit": {
+            "prior_assistant": {
+              "estimate": 0.8558544310937859,
+              "ci95": [
+                0.7942612710561519,
+                0.9178665648515194
+              ],
+              "n_recipients": 24
+            },
+            "prior_user": {
+              "estimate": 1.3316900589806433,
+              "ci95": [
+                1.2509352945995373,
+                1.4128147292379494
+              ],
+              "n_recipients": 24
+            }
+          }
+        },
+        "explicit_minus_generic_shift": {
+          "prior_assistant": {
+            "estimate": 0.23041998027806884,
+            "ci95": [
+              0.14561153227948476,
+              0.3136374579182087
+            ],
+            "n_recipients": 24
+          },
+          "prior_user": {
+            "estimate": 0.4006194346600577,
+            "ci95": [
+              0.3335611079015048,
+              0.46615634806527645
+            ],
+            "n_recipients": 24
+          }
+        },
+        "assistant_minus_user_shift": {
+          "generic": {
+            "estimate": -0.30563617350486866,
+            "ci95": [
+              -0.3759002112553148,
+              -0.23450226454605785
+            ],
+            "n_recipients": 24
+          },
+          "explicit": {
+            "estimate": -0.4758356278868576,
+            "ci95": [
+              -0.5922304450620828,
+              -0.3636167112858931
+            ],
+            "n_recipients": 24
+          }
+        },
+        "wording_by_role_difference_in_differences": {
+          "estimate": -0.1701994543819889,
+          "ci95": [
+            -0.2394395174275877,
+            -0.10127368340789555
+          ],
+          "n_recipients": 24
+        }
+      },
+      "arousal_first": {
+        "expected_shift_8_minus_2": {
+          "generic": {
+            "prior_assistant": {
+              "estimate": 0.03143543451626415,
+              "ci95": [
+                -0.008345473852809397,
+                0.07160847637683232
+              ],
+              "n_recipients": 24
+            },
+            "prior_user": {
+              "estimate": -0.12028951796081015,
+              "ci95": [
+                -0.22106636443722796,
+                -0.025762279596474744
+              ],
+              "n_recipients": 24
+            }
+          },
+          "explicit": {
+            "prior_assistant": {
+              "estimate": 0.6591617977644916,
+              "ci95": [
+                0.615234018871474,
+                0.7037480128524732
+              ],
+              "n_recipients": 24
+            },
+            "prior_user": {
+              "estimate": 0.389791504548547,
+              "ci95": [
+                0.345287468652428,
+                0.4330315805944632
+              ],
+              "n_recipients": 24
+            }
+          }
+        },
+        "explicit_minus_generic_shift": {
+          "prior_assistant": {
+            "estimate": 0.6277263632482275,
+            "ci95": [
+              0.5947695597818656,
+              0.663781591078768
+            ],
+            "n_recipients": 24
+          },
+          "prior_user": {
+            "estimate": 0.5100810225093572,
+            "ci95": [
+              0.4238960191217898,
+              0.5986953544282954
+            ],
+            "n_recipients": 24
+          }
+        },
+        "assistant_minus_user_shift": {
+          "generic": {
+            "estimate": 0.1517249524770743,
+            "ci95": [
+              0.08271638767161145,
+              0.22549058860296436
+            ],
+            "n_recipients": 24
+          },
+          "explicit": {
+            "estimate": 0.2693702932159447,
+            "ci95": [
+              0.22653463619951644,
+              0.3101295129840016
+            ],
+            "n_recipients": 24
+          }
+        },
+        "wording_by_role_difference_in_differences": {
+          "estimate": 0.11764534073887038,
+          "ci95": [
+            0.026821819798131225,
+            0.2067922305853539
+          ],
+          "n_recipients": 24
+        }
+      }
+    }
+  },
+  "interpretation_boundary": "Same 24 items and two fixed models; post-hoc cell contrasts. Generic-wording Qwen-0.5B prior-user/arousal-first cell fails the preregistered validity gate, so dependent contrasts are withheld."
+}
