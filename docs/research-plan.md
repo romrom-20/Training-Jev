@@ -1443,3 +1443,16 @@ therefore 072 tests new prefix treatments on reused public items and is not an
 independent sample replication. Laya selected this follow-up for agenda triage only
 (probability 0.2842, uncalibrated). Its protocol and runner are
 [`072`](experiments/072-restaurant-prefix-domain-replication.md).
+
+**Experiment 072 outcome.** On the restaurant treatment cohort, Qwen 1.5B's
+expected second-score shifts were +1.934/+1.247 (valence-first/arousal-first),
+Qwen 3B's were +0.935/+0.045, and SmolLM2's were +1.836/+1.229. The Qwen
+size contrast remained positive in both orders. Descriptive restaurant-minus-laptop
+intervals from 071 included zero in all six model/order comparisons; this is not an
+equivalence test. SmolLM2's greedy shifts again substantially exceeded its
+restricted-grid expectation, as on laptops. That expected-versus-greedy distinction
+has adjacent prior work, including [Zawistowski 2024](https://arxiv.org/abs/2406.10267),
+so the interesting next test is its dependence on assistant-prefix continuation versus
+ordinary user-provided anchor information. The restaurant recipients were drawn from
+the same IDs already used in 051, which limits independent replication. See the
+[072 result bundle](../results/restaurant-prefix-domain-v1/README.md).
