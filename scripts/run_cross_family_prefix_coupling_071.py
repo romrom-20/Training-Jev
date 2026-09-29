@@ -199,6 +199,7 @@ def run(source_dir: Path = Path(".context/dimabsa"), output: Path = OUT,
                 with torch.inference_mode():
                     generated = model.generate(
                         input_ids=input_tensor,
+                        attention_mask=torch.ones_like(input_tensor),
                         max_new_tokens=exp048.MAX_NEW_TOKENS,
                         do_sample=False,
                         pad_token_id=tokenizer.pad_token_id,
