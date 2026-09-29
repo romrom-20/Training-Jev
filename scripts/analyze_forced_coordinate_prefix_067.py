@@ -101,12 +101,20 @@ def analyze(predictions: Path = runner.OUT, manifest_path: Path = runner.MANIFES
         raise ValueError("No recipient has all four valid forced-prefix cells")
     second_axis = {"valence_first": 1, "arousal_first": 0}
     shifts = {}
+    arm_scores = {}
     for order in runner.ORDERS:
         axis = second_axis[order]
+        arm_scores[order] = {
+            forced: np.array([
+                float(new[(case_id, order, forced, runner.DECODER)]["prediction"][axis])
+                for case_id in complete
+            ])
+            for forced in runner.FORCED_VALUES
+        }
         shifts[order] = np.array([
-            float(new[(case_id, order, 8.0, runner.DECODER)]["prediction"][axis])
-            - float(new[(case_id, order, 2.0, runner.DECODER)]["prediction"][axis])
-            for case_id in complete
+            high - low for high, low in zip(
+                arm_scores[order][8.0], arm_scores[order][2.0], strict=True
+            )
         ])
     order_draws = {order: np.empty(bootstrap_replicates) for order in runner.ORDERS}
     primary_draws = np.empty(bootstrap_replicates)
@@ -153,7 +161,14 @@ def analyze(predictions: Path = runner.OUT, manifest_path: Path = runner.MANIFES
         },
         "order_specific_secondary": {
             order: {
+                "mean_second_coordinate_if_first_forced_2": float(np.mean(arm_scores[order][2.0])),
+                "mean_second_coordinate_if_first_forced_8": float(np.mean(arm_scores[order][8.0])),
                 "mean_second_coordinate_shift_8_minus_2": point_by_order[order],
+                "recipient_shift_sign_counts": {
+                    "lower_after_8": int(np.sum(shifts[order] < 0)),
+                    "unchanged": int(np.sum(shifts[order] == 0)),
+                    "higher_after_8": int(np.sum(shifts[order] > 0)),
+                },
                 "ci95": [float(v) for v in np.quantile(order_draws[order], [0.025, 0.975])],
             } for order in runner.ORDERS
         },
@@ -188,6 +203,8 @@ def write_report(summary: dict, output: Path) -> None:
 {lead}
 
 This is a counterfactual continuation test: the review and user prompt stay fixed, while an assistant output prefix supplies either a low or high first VA score and the model generates the other score. It measures how the continuation responds to a forced prefix, not how accurate a normal score is. The test uses 64 hash-selected SIGHAN reviews and 256 new greedy continuations on Qwen2.5-3B.
+
+The order-specific shifts went in opposite directions: {summary.get('order_specific_secondary', {}).get('valence_first', {}).get('mean_second_coordinate_shift_8_minus_2', float('nan')):+.3f} when valence was first (95% interval [{summary.get('order_specific_secondary', {}).get('valence_first', {}).get('ci95', [float('nan'), float('nan')])[0]:+.3f}, {summary.get('order_specific_secondary', {}).get('valence_first', {}).get('ci95', [float('nan'), float('nan')])[1]:+.3f}]) and {summary.get('order_specific_secondary', {}).get('arousal_first', {}).get('mean_second_coordinate_shift_8_minus_2', float('nan')):+.3f} when arousal was first (95% interval [{summary.get('order_specific_secondary', {}).get('arousal_first', {}).get('ci95', [float('nan'), float('nan')])[0]:+.3f}, {summary.get('order_specific_secondary', {}).get('arousal_first', {}).get('ci95', [float('nan'), float('nan')])[1]:+.3f}]). The pooled primary is therefore an average of asymmetric, potentially different processes; it should not be described as symmetric coordinate anchoring.
 
 The primary contrast and order-specific results are in `summary.json`. Raw review text, IDs, prefixes and model outputs remain private in `.context/`.
 

@@ -1314,3 +1314,32 @@ output-order effect. Its frozen protocol SHA-256 is
 generation will begin before protocol, code, and tests are frozen in git. See
 the [Experiment 067 protocol](experiments/067-forced-coordinate-prefix-coupling.md)
 and [literature-boundary update](experiments/064-literature-boundary-audit.md).
+
+**Experiment 067 outcome: forced prefixes shift the continuation, with an
+order-asymmetric pattern.** All 256 completions parsed, with 64/64 recipients
+complete. Across both orders, the second coordinate shifted -0.266 points when
+the forced first value changed from 2.0 to 8.0 (95% paired recipient-bootstrap
+interval [-0.469, -0.070]). By order, the shift was +0.156 when valence came
+first ([-0.047, +0.359]) and -0.688 when arousal came first ([-0.984, -0.391]).
+The primary average conceals these opposing order-specific movements. This is a
+counterfactual continuation effect for one model and one selected cohort; it
+does not establish natural score anchoring or explain the earlier context/order
+interaction. A fresh-sample replication is needed before treating the pattern as
+reliable. No LessWrong post is warranted on one sample. See the [067 aggregate
+bundle](../results/forced-coordinate-prefix-coupling-v1/README.md).
+
+**Experiment 068 preregistered: fresh-sample replication.** Laya triage selected
+an independent-recipient replication (agenda score 0.285; next was model-size
+transfer at 0.268; uncalibrated). Preflight showed that Exp064 had consumed all
+eligible negative examples in several of the previous category strata, so the
+proposed six-stratum sample was infeasible. The frozen follow-up therefore uses
+64 fresh, polarity-balanced food-quality reviews disjoint from the 180 Exp064
+IDs. It reuses the exact 067 prefixes, Chinese template and 3B model, with 256
+new outputs; it tests within-category sample robustness, not category
+generality. It uses the same 2% per-arm gate and order-specific paired bootstrap.
+No inference begins before its protocol, runner, analyzer and tests are pushed.
+Its frozen protocol SHA-256 is
+`1f3e8ed96343c86ba9fa43d34c8c864d5588efd9f5c2f49a8fd5874ee1ea4d0f`; the
+recipient-ID SHA-256 is
+`1e738712d6ec47bb90a5bdd47d676f3b79fcb958b9c0d945d3081428924132bd`. See the
+[Experiment 068 protocol](experiments/068-fresh-sample-prefix-coupling-replication.md).

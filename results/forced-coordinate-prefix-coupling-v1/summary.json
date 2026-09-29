@@ -1,0 +1,96 @@
+{
+  "experiment": "067-forced-coordinate-prefix-coupling",
+  "protocol_sha256": "5b9fa3cf3649b1c935dd4f7ed8b20f1c122bef2a7ca2060903a7928b7645f932",
+  "output_sha256": "0cfaffa2b5c0da553ddb952f6f969d43d966fc404cce4aed35aefe04f2fc0bf6",
+  "parent_output_sha256": "47f47317e1e609a5106d3024ebfad978c28c910ca545719a93dcdadfeb71041f",
+  "source_hashes": {
+    "test_input": "5053608647d06ad88ce21a2aecbef0e29dc58a8220f921561d39d4e9cf86fe28",
+    "test_gold": "6ecc6949d5f77ea34a09826115a0f91327313ae33824a5c373d7322bdbb17108"
+  },
+  "status": "scored",
+  "n_recipient_ids_selected": 64,
+  "n_complete_four_cell_recipient_ids": 64,
+  "n_new_outputs": 256,
+  "invalid_by_order_forced_value": {
+    "valence_first": {
+      "2.0": 0,
+      "8.0": 0
+    },
+    "arousal_first": {
+      "2.0": 0,
+      "8.0": 0
+    }
+  },
+  "invalid_denominator_per_arm": 64,
+  "invalid_rate_by_order_forced_value": {
+    "valence_first": {
+      "2.0": 0.0,
+      "8.0": 0.0
+    },
+    "arousal_first": {
+      "2.0": 0.0,
+      "8.0": 0.0
+    }
+  },
+  "primary_endpoint": {
+    "contrast": "second coordinate after forced first=8.0 minus second coordinate after forced first=2.0; equal-weighted across both field orders",
+    "estimate": -0.265625,
+    "ci95": [
+      -0.46875,
+      -0.0703125
+    ],
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20260967,
+    "bootstrap_unit": "recipient ID; all four forced-value \u00d7 order cells resampled together"
+  },
+  "order_specific_secondary": {
+    "valence_first": {
+      "mean_second_coordinate_if_first_forced_2": 2.453125,
+      "mean_second_coordinate_if_first_forced_8": 2.609375,
+      "mean_second_coordinate_shift_8_minus_2": 0.15625,
+      "recipient_shift_sign_counts": {
+        "lower_after_8": 17,
+        "unchanged": 21,
+        "higher_after_8": 26
+      },
+      "ci95": [
+        -0.046875,
+        0.359375
+      ]
+    },
+    "arousal_first": {
+      "mean_second_coordinate_if_first_forced_2": 3.203125,
+      "mean_second_coordinate_if_first_forced_8": 2.515625,
+      "mean_second_coordinate_shift_8_minus_2": -0.6875,
+      "recipient_shift_sign_counts": {
+        "lower_after_8": 28,
+        "unchanged": 27,
+        "higher_after_8": 9
+      },
+      "ci95": [
+        -0.984375,
+        -0.390625
+      ]
+    }
+  },
+  "unforced_exp066_context": {
+    "valence_first": {
+      "n_valid_unforced_ids": 64,
+      "mean_unforced_second_coordinate": 2.5390625
+    },
+    "arousal_first": {
+      "n_valid_unforced_ids": 61,
+      "mean_unforced_second_coordinate": 2.444262295081967
+    }
+  },
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "model_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "device": "mps",
+  "score_analysis_performed": true,
+  "inferential_limits": [
+    "A forced assistant prefix measures conditional continuation sensitivity, not natural rating behavior.",
+    "The result applies to one model revision, one Chinese prompt template and this selected SIGHAN cohort.",
+    "An effect does not show that naturally generated output order caused Experiment 064's cross-context moderation.",
+    "The Experiment 066 unforced comparison is secondary and may have fewer valid IDs."
+  ]
+}
